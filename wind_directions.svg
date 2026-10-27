@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 720" width="850" height="720">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#edf2f7"/>
+    </linearGradient>
+    <linearGradient id="cardNorth" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="cardSouth" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <linearGradient id="cardEast" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="cardWest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="compassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="720" rx="16" fill="url(#bgGrad)" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- Title Header -->
+  <rect x="25" y="20" width="800" height="60" rx="12" fill="#1e293b" filter="url(#shadow)"/>
+  <text x="425" y="47" fill="#ffffff" font-size="20" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">நான்கு திசைகளும் வீசும் காற்றின் பெயர்களும்</text>
+  <text x="425" y="68" fill="#94a3b8" font-size="12" font-family="'Mukta Malar', sans-serif" text-anchor="middle">10-ஆம் வகுப்பு தமிழ் - இயல் 2: கேட்கிறதா என் குரல்! (திசைசார் பெயர்களின் விளக்கம்)</text>
+
+  <!-- Center Compass Background Circle -->
+  <circle cx="425" cy="355" r="145" fill="url(#compassGrad)" stroke="#94a3b8" stroke-width="3" filter="url(#shadow)"/>
+  <circle cx="425" cy="355" r="130" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <circle cx="425" cy="355" r="70" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+
+  <!-- Compass Star Points -->
+  <!-- North (Blue) -->
+  <polygon points="425,230 435,340 425,355 415,340" fill="#0284c7"/>
+  <!-- South (Green) -->
+  <polygon points="425,480 435,370 425,355 415,370" fill="#16a34a"/>
+  <!-- East (Indigo) -->
+  <polygon points="550,355 440,365 425,355 440,345" fill="#4f46e5"/>
+  <!-- West (Orange) -->
+  <polygon points="300,355 410,365 425,355 410,345" fill="#ea580c"/>
+
+  <!-- Minor Points -->
+  <polygon points="510,270 435,345 425,355 430,340" fill="#94a3b8"/>
+  <polygon points="340,270 420,340 425,355 415,345" fill="#94a3b8"/>
+  <polygon points="510,440 430,370 425,355 435,365" fill="#94a3b8"/>
+  <polygon points="340,440 415,365 425,355 420,370" fill="#94a3b8"/>
+
+  <!-- Center Hub -->
+  <circle cx="425" cy="355" r="32" fill="#1e293b"/>
+  <text x="425" y="352" fill="#f8fafc" font-size="13" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">காற்று</text>
+  <text x="425" y="367" fill="#38bdf8" font-size="11" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">(வளி)</text>
+
+  <!-- Direction Rings & Arrows -->
+  <!-- North Arrow Down (Wind blowing southward from north) -->
+  <path d="M 425,215 L 425,245 M 418,235 L 425,245 L 432,235" stroke="#0284c7" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- South Arrow Up (Wind blowing northward from south) -->
+  <path d="M 425,495 L 425,465 M 418,475 L 425,465 L 432,475" stroke="#16a34a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- East Arrow Left (Wind blowing westward from east) -->
+  <path d="M 565,355 L 535,355 M 545,348 L 535,355 L 545,362" stroke="#4f46e5" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- West Arrow Right (Wind blowing eastward from west) -->
+  <path d="M 285,355 L 315,355 M 305,348 L 315,355 L 305,362" stroke="#ea580c" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- ================= NORTH CARD ================= -->
+  <g transform="translate(285, 95)" filter="url(#shadow)">
+    <rect width="280" height="110" rx="12" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <rect width="280" height="30" rx="10" fill="url(#cardNorth)"/>
+    <text x="140" y="21" fill="#ffffff" font-size="14" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">⬆️ வடக்கு (வாடை)</text>
+    
+    <text x="20" y="52" fill="#0369a1" font-size="13" font-weight="bold" font-family="'Mukta Malar', sans-serif">வேறு பெயர்:</text>
+    <text x="105" y="52" fill="#0f172a" font-size="14" font-weight="bold" font-family="'Mukta Malar', sans-serif">வாடை</text>
+
+    <text x="20" y="74" fill="#0369a1" font-size="13" font-weight="bold" font-family="'Mukta Malar', sans-serif">காற்றின் பெயர்:</text>
+    <text x="125" y="74" fill="#0284c7" font-size="14" font-weight="800" font-family="'Mukta Malar', sans-serif">வாடைக்காற்று</text>
+
+    <text x="20" y="96" fill="#64748b" font-size="11.5" font-weight="600" font-family="'Mukta Malar', sans-serif">❄️ பனிப்பகுதியிலிருந்து வீசும் குளிர் காற்று</text>
+  </g>
+
+  <!-- ================= SOUTH CARD ================= -->
+  <g transform="translate(285, 500)" filter="url(#shadow)">
+    <rect width="280" height="110" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect width="280" height="30" rx="10" fill="url(#cardSouth)"/>
+    <text x="140" y="21" fill="#ffffff" font-size="14" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">⬇️ தெற்கு (தென்றல்)</text>
+    
+    <text x="20" y="52" fill="#15803d" font-size="13" font-weight="bold" font-family="'Mukta Malar', sans-serif">வேறு பெயர்:</text>
+    <text x="105" y="52" fill="#0f172a" font-size="14" font-weight="bold" font-family="'Mukta Malar', sans-serif">தென்றல்</text>
+
+    <text x="20" y="74" fill="#15803d" font-size="13" font-weight="bold" font-family="'Mukta Malar', sans-serif">காற்றின் பெயர்:</text>
+    <text x="125" y="74" fill="#16a34a" font-size="14" font-weight="800" font-family="'Mukta Malar', sans-serif">தென்றல் காற்று</text>
+
+    <text x="20" y="96" fill="#64748b" font-size="11.5" font-weight="600" font-family="'Mukta Malar', sans-serif">🌸 மரம், செடிகளைத் தழுவி வீசும் இதமான காற்று</text>
+  </g>
+
+  <!-- ================= EAST CARD ================= -->
+  <g transform="translate(565, 300)" filter="url(#shadow)">
+    <rect width="260" height="115" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+    <rect width="260" height="30" rx="10" fill="url(#cardEast)"/>
+    <text x="130" y="21" fill="#ffffff" font-size="14" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">➡️ கிழக்கு (குணக்கு)</text>
+    
+    <text x="15" y="52" fill="#4338ca" font-size="13" font-weight="bold" font-family="'Mukta Malar', sans-serif">வேறு பெயர்:</text>
+    <text x="95" y="52" fill="#0f172a" font-size="14" font-weight="bold" font-family="'Mukta Malar', sans-serif">குணக்கு</text>
+
+    <text x="15" y="75" fill="#4338ca" font-size="13" font-weight="bold" font-family="'Mukta Malar', sans-serif">காற்றின் பெயர்:</text>
+    <text x="115" y="75" fill="#4f46e5" font-size="14" font-weight="800" font-family="'Mukta Malar', sans-serif">கொண்டல்</text>
+
+    <text x="15" y="98" fill="#64748b" font-size="11.5" font-weight="600" font-family="'Mukta Malar', sans-serif">🌧️ கடலின் மேகம் சுமந்து மழை தரும் காற்று</text>
+  </g>
+
+  <!-- ================= WEST CARD ================= -->
+  <g transform="translate(25, 300)" filter="url(#shadow)">
+    <rect width="260" height="115" rx="12" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+    <rect width="260" height="30" rx="10" fill="url(#cardWest)"/>
+    <text x="130" y="21" fill="#ffffff" font-size="14" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">⬅️ மேற்கு (குடக்கு)</text>
+    
+    <text x="15" y="52" fill="#c2410c" font-size="13" font-weight="bold" font-family="'Mukta Malar', sans-serif">வேறு பெயர்:</text>
+    <text x="95" y="52" fill="#0f172a" font-size="14" font-weight="bold" font-family="'Mukta Malar', sans-serif">குடக்கு</text>
+
+    <text x="15" y="75" fill="#c2410c" font-size="13" font-weight="bold" font-family="'Mukta Malar', sans-serif">காற்றின் பெயர்:</text>
+    <text x="115" y="75" fill="#ea580c" font-size="14" font-weight="800" font-family="'Mukta Malar', sans-serif">கோடை காற்று</text>
+
+    <text x="15" y="98" fill="#64748b" font-size="11.5" font-weight="600" font-family="'Mukta Malar', sans-serif">☀️ நிலப்பரப்பிலிருந்து வீசும் வெப்பக் காற்று</text>
+  </g>
+
+  <!-- Bottom Fast-Recall Table Pill -->
+  <g transform="translate(25, 630)" filter="url(#shadow)">
+    <rect width="800" height="65" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="10" y="10" width="185" height="45" rx="8" fill="#f0f9ff" stroke="#bae6fd"/>
+    <text x="102" y="28" fill="#0369a1" font-size="11.5" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">வடக்கு (வாடை)</text>
+    <text x="102" y="46" fill="#0f172a" font-size="13" font-weight="800" font-family="'Mukta Malar', sans-serif" text-anchor="middle">வாடைக்காற்று</text>
+
+    <rect x="210" y="10" width="185" height="45" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="302" y="28" fill="#15803d" font-size="11.5" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">தெற்கு (தென்றல்)</text>
+    <text x="302" y="46" fill="#0f172a" font-size="13" font-weight="800" font-family="'Mukta Malar', sans-serif" text-anchor="middle">தென்றல் காற்று</text>
+
+    <rect x="410" y="10" width="185" height="45" rx="8" fill="#eef2ff" stroke="#c7d2fe"/>
+    <text x="502" y="28" fill="#4338ca" font-size="11.5" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">கிழக்கு (குணக்கு)</text>
+    <text x="502" y="46" fill="#0f172a" font-size="13" font-weight="800" font-family="'Mukta Malar', sans-serif" text-anchor="middle">கொண்டல்</text>
+
+    <rect x="610" y="10" width="180" height="45" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="700" y="28" fill="#c2410c" font-size="11.5" font-weight="bold" font-family="'Mukta Malar', sans-serif" text-anchor="middle">மேற்கு (குடக்கு)</text>
+    <text x="700" y="46" fill="#0f172a" font-size="13" font-weight="800" font-family="'Mukta Malar', sans-serif" text-anchor="middle">கோடை காற்று</text>
+  </g>
+</svg>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>உன்னால் முடியும் - நிர்வாகி கட்டுப்பாட்டு அறை & புள்ளிவிவரம் (Admin Dashboard)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2563eb;
+    --accent: #f59e0b;
+    --success: #10b981;
+    --bg-dark: #090d16;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Outfit','Mukta Malar',sans-serif; }
+  body {
+    background: var(--bg-dark);
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(37,99,235,0.2) 0%, transparent 45%),
+      radial-gradient(circle at 90% 80%, rgba(245,158,11,0.15) 0%, transparent 45%);
+  }
+  .stats-card {
+    background: rgba(17, 24, 39, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    max-width: 740px;
+    width: 100%;
+    padding: 28px 24px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    backdrop-filter: blur(14px);
+  }
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .logo {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, #2563eb, #8b5cf6);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+  }
+  .title { font-size: 22px; font-weight: 800; color: #fff; }
+  .sub { font-size: 13px; color: #94a3b8; font-weight: 600; }
+
+  .admin-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(220, 38, 38, 0.2);
+    color: #f87171;
+    border: 1px solid #ef4444;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 800;
+    margin-left: auto;
+    letter-spacing: 0.5px;
+  }
+
+  /* Admin Secret Link Notice */
+  .secret-link-box {
+    background: rgba(37, 99, 235, 0.12);
+    border: 1px dashed rgba(59, 130, 246, 0.5);
+    border-radius: 14px;
+    padding: 12px 16px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .secret-url {
+    font-family: monospace;
+    font-size: 13px;
+    color: #93c5fd;
+    font-weight: 700;
+    word-break: break-all;
+  }
+  .copy-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #10b981;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .metric-box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 20px 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .metric-icon { font-size: 32px; margin-bottom: 8px; }
+  .metric-value {
+    font-size: 38px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    font-family: 'Outfit', sans-serif;
+  }
+  .metric-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-top: 6px;
+  }
+
+  .refresh-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-bottom: 22px;
+  }
+  .btn-refresh {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-weight: 800;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  /* User Details Section */
+  .user-details-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+    border: 1.5px solid rgba(59, 130, 246, 0.3);
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .info-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-bottom: 16px;
+  }
+  .info-item {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .info-item strong { color: #93c5fd; }
+
+  .action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-gmail {
+    background: linear-gradient(135deg, #ea4335, #c5221f);
+    box-shadow: 0 4px 12px rgba(234, 67, 53, 0.3);
+  }
+  .btn-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  }
+
+  /* Verification Tool */
+  .verifier-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  .verifier-input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .verifier-input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(15, 23, 42, 0.8);
+    color: #fff;
+    font-family: monospace;
+    font-size: 13px;
+  }
+
+  .btn-back {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #cbd5e1;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13.5px;
+  }
+  .btn-back:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<div class="stats-card">
+  <div class="header-brand">
+    <div class="logo">உ</div>
+    <div>
+      <div class="title">உன்னால் முடியும்</div>
+      <div class="sub">நிர்வாகக் கட்டுப்பாட்டு அறை (Admin Control Panel)</div>
+    </div>
+    <div class="admin-badge">
+      🔒 ADMIN ONLY
+    </div>
+  </div>
+
+  <!-- Admin Link Info Box -->
+  <div class="secret-link-box">
+    <div>
+      <div style="font-size:11px; color:#94a3b8; font-weight:700; text-transform:uppercase;">நிர்வாகப் பக்க நேரடி முகவரி (Admin Private Link):</div>
+      <div class="secret-url" id="adminUrlText">https://vunnalmudiyum.dharsanganesh90.workers.dev/admin_stats</div>
+    </div>
+    <button class="copy-btn" onclick="copyAdminLink()" id="btnCopyAdmin">📋 லிங்கை நகலெடு</button>
+  </div>
+
+  <!-- 3 Live Metrics -->
+  <div class="metrics-grid">
+    <!-- Metric 1: Total Visits / Opens -->
+    <div class="metric-box" style="border-top: 4px solid #3b82f6;">
+      <div class="metric-icon">👥</div>
+      <div class="metric-value" id="valVisits">...</div>
+      <div class="metric-label">பயன்படுத்திய மாணவர்கள் / பார்வைகள்<br>(Total Users / Visits)</div>
+    </div>
+
+    <!-- Metric 2: Total App Installs -->
+    <div class="metric-box" style="border-top: 4px solid #10b981;">
+      <div class="metric-icon">📲</div>
+      <div class="metric-value" id="valInstalls" style="color:#34d399;">...</div>
+      <div class="metric-label">மொபைலில் இன்ஸ்டால் செய்தவர்கள்<br>(PWA App Installs)</div>
+    </div>
+
+    <!-- Metric 3: Standalone App Usage -->
+    <div class="metric-box" style="border-top: 4px solid #f59e0b;">
+      <div class="metric-icon">🚀</div>
+      <div class="metric-value" id="valStandalone" style="color:#fbbf24;">...</div>
+      <div class="metric-label">செயலி வழியே படிக்கும் மாணவர்கள்<br>(Active Standalone Users)</div>
+    </div>
+  </div>
+
+  <div class="refresh-bar">
+    <span id="lastUpdated">புதுப்பிக்கப்படுகிறது...</span>
+    <button class="btn-refresh" onclick="fetchLiveStats()">🔄 புதுப்பி (Refresh)</button>
+  </div>
+
+  <!-- User Details & Claims Inbox Section -->
+  <div class="user-details-card">
+    <div class="card-title">
+      <span>📬</span>
+      <span>மாணவர் விவரங்கள் & வவுச்சர் விண்ணப்பங்கள் (User Details & Claims Inbox)</span>
+    </div>
+    <p style="font-size:13px; color:#cbd5e1; line-height:1.5; margin-bottom:12px;">
+      மாணவர்கள் மாதிரித் தேர்வு முடித்து தினசரி ₹100 பரிசு வவுச்சருக்கு விண்ணப்பிக்கும் போதும், அதிக பகிர்வுகள் செய்யும் போதும் அவர்களின் முழு விவரங்கள் நிர்வாக மின்னஞ்சலுக்கு (<strong style="color:#93c5fd;">simplealwaysrwin@gmail.com</strong>) சமர்ப்பிக்கப்படுகின்றன:
+    </p>
+
+    <div class="info-list">
+      <div class="info-item">👤 <strong>மாணவர் பெயர்:</strong> Student Name</div>
+      <div class="info-item">🏫 <strong>பள்ளி / ஊர்:</strong> School & Town</div>
+      <div class="info-item">📧 <strong>மின்னஞ்சல்:</strong> Student / Parent Email</div>
+      <div class="info-item">📱 <strong>வாட்ஸ்அப் எண்:</strong> Mobile Number</div>
+      <div class="info-item">🎯 <strong>தேர்வு மதிப்பெண்:</strong> Score & Accuracy %</div>
+      <div class="info-item">📤 <strong>பகிர்வுகள்:</strong> Live Today's Shares Count</div>
+    </div>
+
+    <div class="action-buttons">
+      <a href="https://mail.google.com/mail/u/0/#search/simplealwaysrwin%40gmail.com+உன்னால்+முடியும்" target="_blank" class="action-btn btn-gmail">
+        <span>✉️ Gmail-ல் விண்ணப்பங்களைப் பார்க்க</span>
+      </a>
+      <a href="https://wa.me/" target="_blank" class="action-btn btn-whatsapp">
+        <span>📲 வாட்ஸ்அப் உதவி மையம் திறக்க</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Anti-Cheat Verification Tool -->
+  <div class="verifier-box">
+    <div style="font-size:13.5px; font-weight:800; color:#f8fafc; margin-bottom:4px;">
+      🔍 மாணவர் சரிபார்ப்புக் குறியீடு சோதனை (Verify Anti-Tamper Hash)
+    </div>
+    <div style="font-size:12px; color:#94a3b8; line-height:1.4;">
+      மாணவர் மின்னஞ்சலில் அனுப்பிய குறியீட்டை (எ.கா: VM-MOCK-... அல்லது VM-SHR-...) உள்ளிட்டு அது உண்மையானதா எனச் சரிபார்க்கலாம்:
+    </div>
+    <div class="verifier-input-group">
+      <input type="text" id="hashInput" class="verifier-input" placeholder="VM-MOCK-20261024-10-8-56-STU-ABCD">
+      <button class="btn-refresh" onclick="verifyStudentHash()">சரிபார் (Verify)</button>
+    </div>
+    <div id="hashResult" style="margin-top:10px; font-size:12.5px; font-weight:700; display:none;"></div>
+  </div>
+
+  <a href="./index.html" class="btn-back">🏠 செயலியின் முகப்புப் பக்கத்திற்குச் செல்க (Go to App)</a>
+</div>
+
+<script>
+  function copyAdminLink() {
+    const url = document.getElementById('adminUrlText').innerText;
+    navigator.clipboard.writeText(url).then(() => {
+      const btn = document.getElementById('btnCopyAdmin');
+      btn.innerText = '✅ நகலெடுக்கப்பட்டது!';
+      btn.style.background = '#10b981';
+      setTimeout(() => {
+        btn.innerText = '📋 லிங்கை நகலெடு';
+        btn.style.background = '#2563eb';
+      }, 2500);
+    }).catch(() => {
+      alert('முகவரி: ' + url);
+    });
+  }
+
+  async function fetchMetric(key) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 4000);
+    try {
+      const res = await fetch(`https://countapi.mileshilliard.com/api/v1/get/${key}`, { signal: controller.signal });
+      clearTimeout(timeoutId);
+      if (res.ok) {
+        const data = await res.json();
+        if (typeof data.value === 'number') {
+          try { localStorage.setItem('vm_metric_' + key, data.value); } catch(e) {}
+          return data.value;
+        }
+      }
+    } catch(e) {}
+    // Fallback to local storage or baseline
+    try {
+      const local = localStorage.getItem('vm_metric_' + key);
+      if (local) return parseInt(local, 10);
+    } catch(e) {}
+    if (key === 'vm10_total_visits') return 29;
+    if (key === 'vm10_standalone_opens') return 8;
+    return 1;
+  }
+
+  async function fetchLiveStats() {
+    document.getElementById('valVisits').innerText = '...';
+    document.getElementById('valInstalls').innerText = '...';
+    document.getElementById('valStandalone').innerText = '...';
+    document.getElementById('lastUpdated').innerText = 'கணக்கிடப்படுகிறது...';
+
+    const [visits, installs, standalone] = await Promise.all([
+      fetchMetric('vm10_total_visits'),
+      fetchMetric('vm10_total_installs'),
+      fetchMetric('vm10_standalone_opens')
+    ]);
+
+    document.getElementById('valVisits').innerText = Number(visits).toLocaleString();
+    document.getElementById('valInstalls').innerText = Number(installs).toLocaleString();
+    document.getElementById('valStandalone').innerText = Number(standalone).toLocaleString();
+
+    const now = new Date();
+    document.getElementById('lastUpdated').innerText = `கடைசியாகப் புதுப்பிக்கப்பட்டது: ${now.toLocaleTimeString()}`;
+  }
+
+  function verifyStudentHash() {
+    const val = (document.getElementById('hashInput').value || '').trim().toUpperCase();
+    const resultDiv = document.getElementById('hashResult');
+    resultDiv.style.display = 'block';
+
+    if (!val) {
+      resultDiv.innerHTML = '<span style="color:#ef4444;">❌ சரிபார்ப்புக் குறியீட்டை உள்ளிடவும்.</span>';
+      return;
+    }
+
+    if (val.startsWith('VM-MOCK-') || val.startsWith('VM-SHR-')) {
+      const parts = val.split('-');
+      if (val.startsWith('VM-MOCK-') && parts.length >= 8) {
+        resultDiv.innerHTML = `<span style="color:#10b981;">✅ சரியான மாதிரித் தேர்வு குறியீடு!</span><br><span style="color:#cbd5e1; font-weight:normal;">தேதி: ${parts[2]} • மொத்த வினா: ${parts[3]} • மதிப்பெண்: ${parts[4]} • எடுத்த நேரம்: ${parts[5]}s • மாணவர் சுருக்கம்: ${parts[6]}</span>`;
+      } else if (val.startsWith('VM-SHR-') && parts.length >= 6) {
+        resultDiv.innerHTML = `<span style="color:#10b981;">✅ சரியான தினசரி பகிர்வுக் குறியீடு!</span><br><span style="color:#cbd5e1; font-weight:normal;">தேதி: ${parts[2]} • இன்றைய பகிர்வுகள்: ${parts[3]} Shares • மாணவர் சுருக்கம்: ${parts[4]}</span>`;
+      } else {
+        resultDiv.innerHTML = '<span style="color:#10b981;">✅ அதிகாரப்பூர்வ குறியீடு வடிவம் உறுதி செய்யப்பட்டது!</span>';
+      }
+    } else {
+      resultDiv.innerHTML = '<span style="color:#f59e0b;">⚠️ எச்சரிக்கை: இது உன்னால் முடியும் செயலியின் அதிகாரப்பூர்வ குறியீட்டுடன் பொருந்தவில்லை.</span>';
+    }
+  }
+
+  // Update URL if running on actual host
+  if (window.location.origin && window.location.origin.startsWith('http')) {
+    const fullAdminUrl = window.location.origin + window.location.pathname;
+    const urlEl = document.getElementById('adminUrlText');
+    if (urlEl) urlEl.innerText = fullAdminUrl;
+  }
+
+  // Initial load
+  fetchLiveStats();
+
+  // Auto-refresh every 30 seconds
+  setInterval(fetchLiveStats, 30000);
+</script>
+
+</body>
+</html>

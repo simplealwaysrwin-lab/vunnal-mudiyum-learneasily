@@ -1,0 +1,41 @@
+{
+  "name": "உன்னால் முடியும் - 10-ஆம் வகுப்பு வழிகாட்டி",
+  "short_name": "உன்னால் முடியும்",
+  "id": "vunnal-mudiyum-app",
+  "description": "10-ஆம் வகுப்பு மாணவர்களுக்கான முழுமையான ஆஃப்லைன் டிஜிட்டல் வழிகாட்டி & வினா-விடை வங்கி",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#2563eb",
+  "theme_color": "#2563eb",
+  "categories": ["education"],
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/share_poster.jpg",
+      "sizes": "1080x1080",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "images/og_banner.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+}

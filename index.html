@@ -3,6 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<script>
+  // 1. Instant Redirect from Cloudflare Workers to official GitHub Pages
+  if (window.location.hostname && window.location.hostname.indexOf('workers.dev') !== -1) {
+    var target = 'https://simplealwaysrwin-lab.github.io/vunnal-mudiyum-learneasily/' + window.location.search + window.location.hash;
+    window.location.replace(target);
+  }
+
+  // 2. Global Universal Image Fallback: Handles both root (...jpg) and subfolder (images/...jpg) on GitHub Pages
+  window.addEventListener('error', function(e) {
+    if (e.target && e.target.tagName === 'IMG') {
+      var src = e.target.getAttribute('src') || '';
+      if (src.indexOf('images/') !== -1 && !e.target.dataset.fallbackRetried) {
+        e.target.dataset.fallbackRetried = '1';
+        var parts = src.split('images/');
+        e.target.src = parts[parts.length - 1];
+      }
+    }
+  }, true);
+</script>
 <meta name="theme-color" content="#2563eb">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -68,7 +87,7 @@
 <script>
   // Build tracker
   (function() {
-    const CURRENT_BUILD = '20261026_v14';
+    const CURRENT_BUILD = '20261027_v15';
     try {
       localStorage.setItem('vm_build_ver', CURRENT_BUILD);
     } catch(e) {}
@@ -77,38 +96,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Serif+Tamil:wght@600;700;800&display=swap" rel="stylesheet">
-<script src="data_tamil_u1.js?v=20261026_v14"></script>
-<script src="data_tamil_u2.js?v=20261026_v14"></script>
-<script src="data_tamil_u3.js?v=20261026_v14"></script>
-<script src="data_tamil_u4.js?v=20261026_v14"></script>
-<script src="data_english_u1.js?v=20261026_v14"></script>
-<script src="data_english_u2.js?v=20261026_v14"></script>
-<script src="data_english_u3.js?v=20261026_v14"></script>
-<script src="data_english_u4.js?v=20261026_v14"></script>
-<script src="data_maths_tm_u1.js?v=20261026_v14"></script>
-<script src="data_maths_tm_u2.js?v=20261026_v14"></script>
-<script src="data_maths_tm_u3.js?v=20261026_v14"></script>
-<script src="data_maths_tm_u4.js?v=20261026_v14"></script>
-<script src="data_maths_em_u1.js?v=20261026_v14"></script>
-<script src="data_maths_em_u2.js?v=20261026_v14"></script>
-<script src="data_maths_em_u3.js?v=20261026_v14"></script>
-<script src="data_maths_em_u4.js?v=20261026_v14"></script>
-<script src="data_science_u1.js?v=20261026_v14"></script>
-<script src="data_science_u2.js?v=20261026_v14"></script>
-<script src="data_science_u3.js?v=20261026_v14"></script>
-<script src="data_science_u4.js?v=20261026_v14"></script>
-<script src="data_science_em_u1.js?v=20261026_v14"></script>
-<script src="data_science_em_u2.js?v=20261026_v14"></script>
-<script src="data_science_em_u3.js?v=20261026_v14"></script>
-<script src="data_science_em_u4.js?v=20261026_v14"></script>
-<script src="data_social_u1.js?v=20261026_v14"></script>
-<script src="data_social_u2.js?v=20261026_v14"></script>
-<script src="data_social_u3.js?v=20261026_v14"></script>
-<script src="data_social_u4.js?v=20261026_v14"></script>
-<script src="data_social_em_u1.js?v=20261026_v14"></script>
-<script src="data_social_em_u2.js?v=20261026_v14"></script>
-<script src="data_social_em_u3.js?v=20261026_v14"></script>
-<script src="data_social_em_u4.js?v=20261026_v14"></script>
+<script src="data_tamil_u1.js?v=20261027_v15"></script>
+<script src="data_tamil_u2.js?v=20261027_v15"></script>
+<script src="data_tamil_u3.js?v=20261027_v15"></script>
+<script src="data_tamil_u4.js?v=20261027_v15"></script>
+<script src="data_english_u1.js?v=20261027_v15"></script>
+<script src="data_english_u2.js?v=20261027_v15"></script>
+<script src="data_english_u3.js?v=20261027_v15"></script>
+<script src="data_english_u4.js?v=20261027_v15"></script>
+<script src="data_maths_tm_u1.js?v=20261027_v15"></script>
+<script src="data_maths_tm_u2.js?v=20261027_v15"></script>
+<script src="data_maths_tm_u3.js?v=20261027_v15"></script>
+<script src="data_maths_tm_u4.js?v=20261027_v15"></script>
+<script src="data_maths_em_u1.js?v=20261027_v15"></script>
+<script src="data_maths_em_u2.js?v=20261027_v15"></script>
+<script src="data_maths_em_u3.js?v=20261027_v15"></script>
+<script src="data_maths_em_u4.js?v=20261027_v15"></script>
+<script src="data_science_u1.js?v=20261027_v15"></script>
+<script src="data_science_u2.js?v=20261027_v15"></script>
+<script src="data_science_u3.js?v=20261027_v15"></script>
+<script src="data_science_u4.js?v=20261027_v15"></script>
+<script src="data_science_em_u1.js?v=20261027_v15"></script>
+<script src="data_science_em_u2.js?v=20261027_v15"></script>
+<script src="data_science_em_u3.js?v=20261027_v15"></script>
+<script src="data_science_em_u4.js?v=20261027_v15"></script>
+<script src="data_social_u1.js?v=20261027_v15"></script>
+<script src="data_social_u2.js?v=20261027_v15"></script>
+<script src="data_social_u3.js?v=20261027_v15"></script>
+<script src="data_social_u4.js?v=20261027_v15"></script>
+<script src="data_social_em_u1.js?v=20261027_v15"></script>
+<script src="data_social_em_u2.js?v=20261027_v15"></script>
+<script src="data_social_em_u3.js?v=20261027_v15"></script>
+<script src="data_social_em_u4.js?v=20261027_v15"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -5339,6 +5358,13 @@
     }
     titleEl.textContent = decodedTitle;
     
+    img.onerror = function() {
+      if (img.src && img.src.indexOf('images/') !== -1) {
+        img.onerror = null;
+        var parts = img.src.split('images/');
+        img.src = parts[parts.length - 1];
+      }
+    };
     img.src = imgSrc;
     img.onload = function() {
       resetModalZoom();
@@ -6111,13 +6137,13 @@ ${directLink}
     for (let c of chunks) {
       c = c.trim().replace(/^[\.,:;\s\-]+/, '').trim();
       if (!c) continue;
-      if (c.length <= 150) {
+      if (c.length <= (maxLen > 150 ? maxLen : 150)) {
         result.push(c);
       } else {
         const words = c.split(' ');
         let cur = '';
         for (let w of words) {
-          if ((cur + ' ' + w).trim().length <= 120) {
+          if ((cur + ' ' + w).trim().length <= (maxLen > 150 ? 220 : 120)) {
             cur = (cur + ' ' + w).trim();
           } else {
             if (cur) result.push(cur);
@@ -6358,7 +6384,17 @@ ${directLink}
       if (lang.startsWith('ta')) {
         return voices.find(v => v.lang.toLowerCase().replace('_', '-').startsWith('ta') || v.name.toLowerCase().includes('tamil')) || null;
       } else {
-        // South Indian / Indian English voices (en-IN: Heera, Ravi, Neerja, Google Indian English)
+        // 1. Natural / Neural High-Quality Voices (Google, Online, Neural)
+        const naturalVoice = voices.find(v => {
+          const n = v.name.toLowerCase();
+          const l = v.lang.toLowerCase().replace('_', '-');
+          const isEn = l.startsWith('en');
+          const isHighQ = n.includes('natural') || n.includes('online') || n.includes('neural') || n.includes('google');
+          return isEn && isHighQ && (l.includes('in') || l.includes('gb') || l.includes('us'));
+        });
+        if (naturalVoice) return naturalVoice;
+
+        // 2. South Indian / Indian English voices (en-IN: Heera, Ravi, Neerja, Google Indian English)
         const indianVoice = voices.find(v => {
           const l = v.lang.toLowerCase().replace('_', '-');
           const n = v.name.toLowerCase();
@@ -6366,7 +6402,7 @@ ${directLink}
         });
         if (indianVoice) return indianVoice;
 
-        // British English (en-GB) is clear standard curriculum phonetics, avoiding running US slang
+        // 3. British English (en-GB)
         const gbVoice = voices.find(v => {
           const l = v.lang.toLowerCase().replace('_', '-');
           return l === 'en-gb' || l.startsWith('en-gb') || v.name.toLowerCase().includes('united kingdom');
@@ -7319,7 +7355,7 @@ ${directLink}
         }
       }
 
-      const chunks = chunkTextForSpeech(fullText);
+      const chunks = (lang === 'en') ? chunkTextForSpeech(fullText, 250) : chunkTextForSpeech(fullText, 140);
 
       this.highlightActiveScene(this.currentSceneIndex);
       this.showDock(activeStory, scene, this.currentSceneIndex, activeStory.scenes.length, lang);
@@ -7332,9 +7368,8 @@ ${directLink}
       // Relaxed, melodic storytelling cadence (0.88 for English, 0.90 for Tamil)
       const options = {
         lang: lang === 'ta' ? 'ta-IN' : 'en-IN',
-        rate: lang === 'ta' ? (0.90 * this.rate) : (0.88 * this.rate),
-        pitch: 1.0,
-        voice: voice
+        rate: lang === 'ta' ? (0.90 * this.rate) : (0.98 * this.rate),
+        pitch: lang === 'ta' ? 1.0 : 1.02, voice: voice
       };
 
       if (window.speechQueueEngine) {
@@ -7380,9 +7415,8 @@ ${directLink}
       if (window.speechQueueEngine) {
         speechQueueEngine.resume({
           lang: this.currentLang === 'ta' ? 'ta-IN' : 'en-IN',
-          rate: (this.currentLang === 'ta' ? 0.90 : 0.88) * this.rate,
-          pitch: 1.0,
-          voice: voice
+          rate: (this.currentLang === 'ta' ? 0.90 : 0.98) * this.rate,
+          pitch: lang === 'ta' ? 1.0 : 1.02, voice: voice
         });
       }
       this.updateDockState();
@@ -8040,7 +8074,7 @@ ${directLink}
                   </button>
                 </div>
                 <div class="diagram-img-wrap" onclick="openImageModal('${fullBoardImgSrc}', '${bbTitle.replace(/'/g, "\\'")}')" style="cursor:zoom-in; display:inline-block; position:relative; max-width:100%;">
-                  <img src="${fullBoardImgSrc}" alt="${bbTitle.replace(/"/g, '&quot;')}" style="max-width:100%; max-height:72vh; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.7); border:2px solid #334155; display:block;" />
+                  <img src="${fullBoardImgSrc}" alt="${bbTitle.replace(/"/g, '&quot;')}" onerror="if(this.src.indexOf('images/')!==-1){this.src=this.src.split('images/').pop();}" style="max-width:100%; max-height:72vh; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.7); border:2px solid #334155; display:block;" />
                   <div class="diagram-zoom-hint">
                     <span>🔍 ${isEm ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாக்குக'}</span>
                   </div>
@@ -8249,8 +8283,7 @@ ${directLink}
       const options = {
         lang: lang,
         rate: isEm ? 0.80 : 0.90,
-        pitch: 1.0,
-        voice: voice
+        pitch: lang === 'ta' ? 1.0 : 1.02, voice: voice
       };
 
       const chunks = chunkTextForSpeech(textToSpeak, 120);
@@ -8318,8 +8351,7 @@ ${directLink}
           window.speechQueueEngine.resume({
             lang: lang,
             rate: isEm ? 0.80 : 0.90,
-            pitch: 1.0,
-            voice: voice
+            pitch: lang === 'ta' ? 1.0 : 1.02, voice: voice
           });
         } else {
           this.play();

@@ -1,10 +1,10 @@
-// =======================================================================
+﻿// =======================================================================
 // உன்னால் முடியும் (Vunnal Mudiyum) - Progressive Web App Service Worker
 // Enables 100% Offline Study for 10th Standard Students
 // Zero-Downtime Architecture - Auto-Update on Deploy Engine
 // =======================================================================
 
-const CACHE_NAME = 'vm-offline-v20261026_v14';
+const CACHE_NAME = 'vm-offline-v20261027_v15';
 
 // Core essential assets for instant offline app shell and subject question banks
 const PRECACHE_ASSETS = [
@@ -99,6 +99,14 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
 
   const url = new URL(req.url);
+
+  // 0. Redirect old Cloudflare Worker visitors directly to official GitHub Pages
+  if (url.hostname.includes('workers.dev') && req.mode === 'navigate') {
+    event.respondWith(
+      Response.redirect('https://simplealwaysrwin-lab.github.io/vunnal-mudiyum-learneasily/' + url.search + url.hash, 301)
+    );
+    return;
+  }
 
   // 1. Admin & Manual Pages: ALWAYS load fresh from network
   if (url.pathname.includes('admin_stats') || url.pathname.includes('mock_test_manual')) {

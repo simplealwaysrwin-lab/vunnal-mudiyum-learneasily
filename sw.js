@@ -4,7 +4,7 @@
 // Zero-Downtime Architecture - Auto-Update on Deploy Engine
 // =======================================================================
 
-const CACHE_NAME = 'vm-offline-v20261027_v15';
+const CACHE_NAME = 'vm-offline-v20261027_v17';
 
 // Core essential assets for instant offline app shell and subject question banks
 const PRECACHE_ASSETS = [
@@ -14,8 +14,17 @@ const PRECACHE_ASSETS = [
   '/index.html',
   'index.html',
   './manifest.json',
+  './icon-192.png',
+  './icon-512.png',
+  './app_logo.png',
+  './favicon.png',
+  'icon-192.png',
+  'icon-512.png',
+  'app_logo.png',
+  'favicon.png',
   './images/icon-192.png',
   './images/icon-512.png',
+  './images/app_logo.png',
   './images/og_banner.jpg',
   './images/qr_code.png',
   './images/math_bb_ex1_1.jpg',
@@ -102,8 +111,13 @@ self.addEventListener('fetch', (event) => {
 
   // 0. Redirect old Cloudflare Worker visitors directly to official GitHub Pages
   if (url.hostname.includes('workers.dev') && req.mode === 'navigate') {
+    const target = 'https://simplealwaysrwin-lab.github.io/vunnal-mudiyum-learneasily/' + url.search;
+    const redirectHtml = '<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=' + target + '"><script>location.replace("' + target + '");</script></head><body style="font-family:sans-serif; text-align:center; padding:40px;"><h2>Redirecting to Vunnal Mudiyum...</h2><p><a href="' + target + '">Click here if not redirected automatically</a></p></body></html>';
     event.respondWith(
-      Response.redirect('https://simplealwaysrwin-lab.github.io/vunnal-mudiyum-learneasily/' + url.search + url.hash, 301)
+      new Response(redirectHtml, {
+        status: 200,
+        headers: { 'Content-Type': 'text/html; charset=utf-8' }
+      })
     );
     return;
   }

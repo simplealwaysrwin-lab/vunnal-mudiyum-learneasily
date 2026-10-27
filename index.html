@@ -89,7 +89,7 @@
 <script>
   // Build tracker
   (function() {
-    const CURRENT_BUILD = '20261027_v17';
+    const CURRENT_BUILD = '20261027_v18';
     try {
       localStorage.setItem('vm_build_ver', CURRENT_BUILD);
     } catch(e) {}
@@ -98,38 +98,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Serif+Tamil:wght@600;700;800&display=swap" rel="stylesheet">
-<script src="data_tamil_u1.js?v=20261027_v17"></script>
-<script src="data_tamil_u2.js?v=20261027_v17"></script>
-<script src="data_tamil_u3.js?v=20261027_v17"></script>
-<script src="data_tamil_u4.js?v=20261027_v17"></script>
-<script src="data_english_u1.js?v=20261027_v17"></script>
-<script src="data_english_u2.js?v=20261027_v17"></script>
-<script src="data_english_u3.js?v=20261027_v17"></script>
-<script src="data_english_u4.js?v=20261027_v17"></script>
-<script src="data_maths_tm_u1.js?v=20261027_v17"></script>
-<script src="data_maths_tm_u2.js?v=20261027_v17"></script>
-<script src="data_maths_tm_u3.js?v=20261027_v17"></script>
-<script src="data_maths_tm_u4.js?v=20261027_v17"></script>
-<script src="data_maths_em_u1.js?v=20261027_v17"></script>
-<script src="data_maths_em_u2.js?v=20261027_v17"></script>
-<script src="data_maths_em_u3.js?v=20261027_v17"></script>
-<script src="data_maths_em_u4.js?v=20261027_v17"></script>
-<script src="data_science_u1.js?v=20261027_v17"></script>
-<script src="data_science_u2.js?v=20261027_v17"></script>
-<script src="data_science_u3.js?v=20261027_v17"></script>
-<script src="data_science_u4.js?v=20261027_v17"></script>
-<script src="data_science_em_u1.js?v=20261027_v17"></script>
-<script src="data_science_em_u2.js?v=20261027_v17"></script>
-<script src="data_science_em_u3.js?v=20261027_v17"></script>
-<script src="data_science_em_u4.js?v=20261027_v17"></script>
-<script src="data_social_u1.js?v=20261027_v17"></script>
-<script src="data_social_u2.js?v=20261027_v17"></script>
-<script src="data_social_u3.js?v=20261027_v17"></script>
-<script src="data_social_u4.js?v=20261027_v17"></script>
-<script src="data_social_em_u1.js?v=20261027_v17"></script>
-<script src="data_social_em_u2.js?v=20261027_v17"></script>
-<script src="data_social_em_u3.js?v=20261027_v17"></script>
-<script src="data_social_em_u4.js?v=20261027_v17"></script>
+<script src="data_tamil_u1.js?v=20261027_v18"></script>
+<script src="data_tamil_u2.js?v=20261027_v18"></script>
+<script src="data_tamil_u3.js?v=20261027_v18"></script>
+<script src="data_tamil_u4.js?v=20261027_v18"></script>
+<script src="data_english_u1.js?v=20261027_v18"></script>
+<script src="data_english_u2.js?v=20261027_v18"></script>
+<script src="data_english_u3.js?v=20261027_v18"></script>
+<script src="data_english_u4.js?v=20261027_v18"></script>
+<script src="data_maths_tm_u1.js?v=20261027_v18"></script>
+<script src="data_maths_tm_u2.js?v=20261027_v18"></script>
+<script src="data_maths_tm_u3.js?v=20261027_v18"></script>
+<script src="data_maths_tm_u4.js?v=20261027_v18"></script>
+<script src="data_maths_em_u1.js?v=20261027_v18"></script>
+<script src="data_maths_em_u2.js?v=20261027_v18"></script>
+<script src="data_maths_em_u3.js?v=20261027_v18"></script>
+<script src="data_maths_em_u4.js?v=20261027_v18"></script>
+<script src="data_science_u1.js?v=20261027_v18"></script>
+<script src="data_science_u2.js?v=20261027_v18"></script>
+<script src="data_science_u3.js?v=20261027_v18"></script>
+<script src="data_science_u4.js?v=20261027_v18"></script>
+<script src="data_science_em_u1.js?v=20261027_v18"></script>
+<script src="data_science_em_u2.js?v=20261027_v18"></script>
+<script src="data_science_em_u3.js?v=20261027_v18"></script>
+<script src="data_science_em_u4.js?v=20261027_v18"></script>
+<script src="data_social_u1.js?v=20261027_v18"></script>
+<script src="data_social_u2.js?v=20261027_v18"></script>
+<script src="data_social_u3.js?v=20261027_v18"></script>
+<script src="data_social_u4.js?v=20261027_v18"></script>
+<script src="data_social_em_u1.js?v=20261027_v18"></script>
+<script src="data_social_em_u2.js?v=20261027_v18"></script>
+<script src="data_social_em_u3.js?v=20261027_v18"></script>
+<script src="data_social_em_u4.js?v=20261027_v18"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -5194,6 +5194,44 @@
                   </div>
                 ` : ''}
 
+                ${item.checkpoints && item.checkpoints.length > 0 ? `
+                  <div class="recall-checkpoints-card" style="margin:16px 0; border:1.5px solid #0284c7; border-radius:12px; background:#f0f9ff; overflow:hidden; box-shadow:0 3px 10px rgba(14,165,233,0.08);">
+                    <div class="recall-card-header" onclick="toggleRecallCheckpoints('${item.id}')" style="padding:10px 14px; background:linear-gradient(135deg, #0284c7, #0369a1); color:#ffffff; display:flex; align-items:center; justify-content:space-between; cursor:pointer; user-select:none;">
+                      <div style="display:flex; align-items:center; gap:8px;">
+                        <span style="font-size:20px;">ðŸ§ </span>
+                        <div>
+                          <div style="font-size:13.5px; font-weight:800; color:#ffffff;">${isEm || isEnglish ? 'Solution Memory Checkpoints (10 Concept Q&A)' : 'à®¤à¯€à®°à¯à®µà¯ˆ à®¨à®¿à®©à¯ˆà®µà®¿à®²à¯ à®µà¯ˆà®•à¯à®• 10 à®®à¯à®•à¯à®•à®¿à®¯ à®µà®¿à®©à®¾-à®µà®¿à®Ÿà¯ˆà®•à®³à¯'}</div>
+                          <div style="font-size:11px; color:#e0f2fe; font-weight:600;">${isEm || isEnglish ? 'Interactive Step-by-Step Recall to Master this 5-Mark Question' : 'à®‡à®¨à¯à®¤ 5-à®®à®¤à®¿à®ªà¯à®ªà¯†à®£à¯ à®µà®¿à®©à®¾à®µà¯ˆà®¤à¯ à®¤à®µà®±à®¿à®©à¯à®±à®¿ à®¨à®¿à®©à¯ˆà®µà®¿à®²à¯ à®µà¯ˆà®•à¯à®• à®ªà®¯à®¿à®±à¯à®šà®¿'}</div>
+                        </div>
+                      </div>
+                      <span id="recallIcon_${item.id}" style="font-size:14px; font-weight:800; transition:transform 0.3s ease;">â–¼</span>
+                    </div>
+                    <div id="recallBody_${item.id}" style="display:none; padding:12px 14px; background:#ffffff;">
+                      <div style="font-size:12px; color:#475569; margin-bottom:12px; line-height:1.5; background:#e0f2fe; padding:8px 12px; border-radius:8px; border-left:3px solid #0284c7;">
+                        <b>ðŸ’¡ ${isEm || isEnglish ? 'Exam Master Tip:' : 'à®¤à¯‡à®°à¯à®µà¯ à®µà¯†à®±à¯à®±à®¿ à®µà®´à®¿à®•à®¾à®Ÿà¯à®Ÿà®¿:'}</b> ${isEm || isEnglish ? 'Practicing these 10 checkpoint questions ensures you never get stuck on any step in the public exam!' : 'à®‡à®¨à¯à®¤ 10 à®µà®¿à®©à®¾-à®µà®¿à®Ÿà¯ˆà®•à®³à¯ˆà®ªà¯ à®ªà®¯à®¿à®±à¯à®šà®¿ à®šà¯†à®¯à¯à®¤à®¾à®²à¯ à®…à®°à®šà¯à®ªà¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà®¿à®²à¯ à®Žà®¨à¯à®¤à®ªà¯ à®ªà®Ÿà®¿à®¯à®¿à®²à¯à®®à¯ à®¤à®µà®±à¯ à®¨à¯‡à®°à®¾à®¤à¯!'}
+                      </div>
+                      <div class="recall-list" style="display:flex; flex-direction:column; gap:12px;">
+                        ${item.checkpoints.map((cp, cpIdx) => `
+                          <div class="recall-item" id="cp_${item.id}_${cpIdx}" style="padding:10px 12px; border:1px solid #e2e8f0; border-radius:10px; background:#f8fafc;">
+                            <div style="font-size:13px; font-weight:700; color:#1e293b; margin-bottom:8px;">
+                              ${cp.q}
+                            </div>
+                            <div style="display:grid; grid-template-columns:1fr; gap:6px;">
+                              ${cp.options.map((opt, optIdx) => `
+                                <button type="button" class="recall-opt-btn" onclick="handleCheckpointAnswer('${item.id}', ${cpIdx}, ${optIdx}, ${cp.ans})" style="text-align:left; padding:8px 12px; font-size:12px; font-weight:600; border:1.5px solid #cbd5e1; border-radius:8px; background:#ffffff; cursor:pointer; transition:all 0.2s ease;">
+                                  ${opt}
+                                </button>
+                              `).join('')}
+                            </div>
+                            <div class="recall-explanation" id="cpExp_${item.id}_${cpIdx}" style="display:none; margin-top:8px; padding:8px 10px; background:#ecfdf5; border-left:3px solid #10b981; border-radius:6px; font-size:11.5px; color:#065f46; line-height:1.5;">
+                            </div>
+                          </div>
+                        `).join('')}
+                      </div>
+                    </div>
+                  </div>
+                ` : ''}
+
                 <!-- Doubt, Audio, and Public Exam Action Bar -->
                 <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-top:14px; padding-top:10px; border-top:1px dashed var(--border);">
                   <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
@@ -5390,21 +5428,38 @@
 
   let modalZoomLevel = 1.0;
   let baseFitWidth = 0;
+  let lastViewedQuestionCardId = null;
+  let lastImageScrollY = 0;
+  let isClosingImageModal = false;
 
   function openImageModalFromWrap(wrapEl) {
     if (!wrapEl) return;
+    const card = wrapEl.closest('.qa-card') || wrapEl.closest('[id^="card_"]');
+    if (card) {
+      lastViewedQuestionCardId = card.id;
+    }
     const img = wrapEl.querySelector('img');
     if (img) {
       openImageModal(img.src, img.alt);
     }
   }
 
-  function openImageModal(imgSrc, title) {
+  function openImageModal(imgSrc, title, cardId) {
+    lastImageScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+    if (cardId) {
+      lastViewedQuestionCardId = cardId;
+    } else if (window.event && window.event.target) {
+      try {
+        const card = window.event.target.closest('.qa-card') || window.event.target.closest('[id^="card_"]');
+        if (card) lastViewedQuestionCardId = card.id;
+      } catch(e) {}
+    }
+
     const modal = document.getElementById('imageModal');
     const img = document.getElementById('modalImg');
     const titleEl = document.getElementById('modalTitle');
     
-    let decodedTitle = 'வரைபடம்';
+    let decodedTitle = title || '\u0bb5\u0bb0\u0bc8\u0baa\u0b9f\u0bae\u0bcd';
     if (title) {
       try {
         decodedTitle = decodeURIComponent(title);
@@ -5429,7 +5484,7 @@
     resetModalZoom();
     modal.classList.add('open');
     try {
-      history.pushState({ modalOpen: true }, '');
+      history.pushState({ modalOpen: true }, '', window.location.href);
     } catch(e) {}
   }
 
@@ -5501,12 +5556,30 @@
 
   function closeImageModal() {
     const modal = document.getElementById('imageModal');
-    if (modal && modal.classList.contains('open')) {
-      modal.classList.remove('open');
-      resetModalZoom();
-      if (history.state && history.state.modalOpen) {
-        history.back();
+    if (!modal) return;
+    if (!modal.classList.contains('open')) return;
+    
+    modal.classList.remove('open');
+    resetModalZoom();
+
+    // Preserve exact question card view & scroll position
+    if (lastViewedQuestionCardId) {
+      const card = document.getElementById(lastViewedQuestionCardId);
+      if (card) {
+        card.scrollIntoView({ behavior: 'auto', block: 'nearest' });
+      } else if (lastImageScrollY) {
+        window.scrollTo({ top: lastImageScrollY, behavior: 'auto' });
       }
+    } else if (lastImageScrollY) {
+      window.scrollTo({ top: lastImageScrollY, behavior: 'auto' });
+    }
+
+    if (history.state && history.state.modalOpen) {
+      isClosingImageModal = true;
+      history.back();
+      setTimeout(function() {
+        isClosingImageModal = false;
+      }, 400);
     }
   }
 
@@ -8570,6 +8643,58 @@ ${directLink}
   }
   window.switchMathsMedium = switchSubjectMedium;
 
+  // -------------------------------------------------------------
+  // Solution Memory Checkpoints Interactive Engine
+  // -------------------------------------------------------------
+  window.toggleRecallCheckpoints = function(qId) {
+    const body = document.getElementById('recallBody_' + qId);
+    const icon = document.getElementById('recallIcon_' + qId);
+    if (!body) return;
+    if (body.style.display === 'none') {
+      body.style.display = 'block';
+      if (icon) icon.textContent = 'â–²';
+    } else {
+      body.style.display = 'none';
+      if (icon) icon.textContent = 'â–¼';
+    }
+  };
+
+  window.handleCheckpointAnswer = function(qId, cpIdx, selectedIdx, correctIdx) {
+    const container = document.getElementById('cp_' + qId + '_' + cpIdx);
+    if (!container) return;
+    const btns = container.querySelectorAll('.recall-opt-btn');
+    const expBox = document.getElementById('cpExp_' + qId + '_' + cpIdx);
+
+    btns.forEach((btn, idx) => {
+      btn.disabled = true;
+      btn.style.cursor = 'default';
+      if (idx === correctIdx) {
+        btn.style.background = '#dcfce7';
+        btn.style.borderColor = '#16a34a';
+        btn.style.color = '#15803d';
+        btn.innerHTML = 'âœ” ' + btn.innerHTML;
+      } else if (idx === selectedIdx && selectedIdx !== correctIdx) {
+        btn.style.background = '#fee2e2';
+        btn.style.borderColor = '#dc2626';
+        btn.style.color = '#b91c1c';
+        btn.innerHTML = 'âœ– ' + btn.innerHTML;
+      } else {
+        btn.style.opacity = '0.6';
+      }
+    });
+
+    if (expBox) {
+      let qItem = null;
+      if (currentLesson && currentLesson.questions) {
+        qItem = currentLesson.questions.find(x => x.id === qId);
+      }
+      if (qItem && qItem.checkpoints && qItem.checkpoints[cpIdx]) {
+        expBox.innerHTML = '<b>' + (selectedIdx === correctIdx ? 'âœ” à®šà®°à®¿à®¯à®¾à®©à®¤à¯ (Correct)!' : 'ðŸ’¡ à®†à®šà®¿à®°à®¿à®¯à®°à¯ à®µà®¿à®³à®•à¯à®•à®®à¯ (Step Analysis):') + '</b> ' + qItem.checkpoints[cpIdx].explanation;
+        expBox.style.display = 'block';
+      }
+    }
+  };
+
   // URL Hash & History routing support (Prevents app exit on Back button + Direct Mobile Deep-Linking)
   function handleHashNavigation() {
     if (window.teacherAudioPlayer) teacherAudioPlayer.stop();
@@ -8794,10 +8919,24 @@ ${directLink}
       doubtM.classList.remove('open');
       return;
     }
+    if (isClosingImageModal) {
+      isClosingImageModal = false;
+      return;
+    }
     const modal = document.getElementById('imageModal');
     if (modal && modal.classList.contains('open')) {
       modal.classList.remove('open');
       resetModalZoom();
+      if (lastViewedQuestionCardId) {
+        const card = document.getElementById(lastViewedQuestionCardId);
+        if (card) {
+          card.scrollIntoView({ behavior: 'auto', block: 'nearest' });
+        } else if (lastImageScrollY) {
+          window.scrollTo({ top: lastImageScrollY, behavior: 'auto' });
+        }
+      } else if (lastImageScrollY) {
+        window.scrollTo({ top: lastImageScrollY, behavior: 'auto' });
+      }
       return;
     }
     handleHashNavigation();

@@ -1,4 +1,4 @@
-// 10th Standard Mathematics - Unit 3: Algebra (English Medium)
+﻿// 10th Standard Mathematics - Unit 3: Algebra (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_3_DATA = {
@@ -85,6 +85,199 @@ const MATHS_EM_UNIT_3_DATA = {
             2 + y + 4 = 5 ⇒ y + 6 = 5 ⇒ <b>y = -1</b><br><br>
             <b>Hence, the solution is: x = 2, y = -1, z = 4</b>
           </div>`,
+          diagramSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="100%" height="auto" style="font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,sans-serif; background:#f8fafc; border-radius:14px; border:1.5px solid #cbd5e1; box-shadow:0 4px 12px rgba(0,0,0,0.05); max-width:100%; display:block; margin:0 auto;">
+  <defs>
+    <linearGradient id="gradCenter_em" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <filter id="shadow_em" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowB_em" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 1 L 6 4 L 0 7 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrowG_em" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 1 L 6 4 L 0 7 z" fill="#059669" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="48" fill="#1e293b" rx="14" ry="14" />
+  <rect x="0" y="24" width="960" height="24" fill="#1e293b" />
+  <text x="480" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="800" letter-spacing="0.5">&#129504; 5-MARK SOLUTION MINDMAP : LINEAR EQUATIONS IN THREE VARIABLES</text>
+
+  <path d="M 360 300 C 260 300, 260 140, 220 140" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="4,4" />
+  <path d="M 360 320 C 260 320, 260 270, 220 270" fill="none" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrowB_em)" />
+  <path d="M 360 340 C 260 340, 260 410, 220 410" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arrowB_em)" />
+  <path d="M 600 300 C 680 300, 680 150, 740 150" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowG_em)" />
+  <path d="M 600 320 C 680 320, 680 280, 740 280" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowG_em)" />
+  <path d="M 600 340 C 680 340, 680 410, 740 410" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowG_em)" />
+  <path d="M 480 375 L 480 500" fill="none" stroke="#d97706" stroke-width="3" marker-end="url(#arrowG_em)" />
+
+  <g filter="url(#shadow_em)">
+    <rect x="360" y="275" width="240" height="95" rx="16" fill="url(#gradCenter_em)" stroke="#60a5fa" stroke-width="2"/>
+    <text x="480" y="305" text-anchor="middle" fill="#93c5fd" font-size="11" font-weight="800" letter-spacing="1">CORE CONCEPT</text>
+    <text x="480" y="328" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="800">Solve 3x3 Linear System</text>
+    <text x="480" y="348" text-anchor="middle" fill="#e0f2fe" font-size="12" font-weight="600">Elimination &amp; Back-Substitution</text>
+  </g>
+
+  <g filter="url(#shadow_em)">
+    <rect x="25" y="80" width="205" height="110" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <rect x="25" y="80" width="205" height="28" rx="12" fill="#f1f5f9" />
+    <text x="127" y="99" text-anchor="middle" fill="#334155" font-size="12" font-weight="800">&#128203; Given Equations</text>
+    <text x="40" y="125" fill="#1e293b" font-size="12" font-family="monospace"><b>(1)</b> x + y + z = 5</text>
+    <text x="40" y="148" fill="#1e293b" font-size="12" font-family="monospace"><b>(2)</b> 2x - y + z = 9</text>
+    <text x="40" y="171" fill="#1e293b" font-size="12" font-family="monospace"><b>(3)</b> x - 2y + 3z = 16</text>
+  </g>
+
+  <g filter="url(#shadow_em)">
+    <rect x="20" y="215" width="215" height="105" rx="12" fill="#ffffff" stroke="#38bdf8" stroke-width="1.5" />
+    <rect x="20" y="215" width="215" height="26" rx="12" fill="#e0f2fe" />
+    <text x="127" y="233" text-anchor="middle" fill="#0369a1" font-size="11.5" font-weight="800">Step 1: Eliminate 'y'</text>
+    <text x="32" y="258" fill="#475569" font-size="11.5">Add Eq (1) + Eq (2):</text>
+    <text x="32" y="278" fill="#0f172a" font-size="11" font-family="monospace">(x+y+z) + (2x-y+z) = 14</text>
+    <rect x="30" y="287" width="195" height="24" rx="6" fill="#f0fdf4" stroke="#86efac" />
+    <text x="127" y="303" text-anchor="middle" fill="#15803d" font-size="12" font-weight="800">&#10145; 3x + 2z = 14  [Eq 4]</text>
+  </g>
+
+  <g filter="url(#shadow_em)">
+    <rect x="20" y="350" width="215" height="110" rx="12" fill="#ffffff" stroke="#c084fc" stroke-width="1.5" />
+    <rect x="20" y="350" width="215" height="26" rx="12" fill="#f3e8ff" />
+    <text x="127" y="368" text-anchor="middle" fill="#6b21a8" font-size="11.5" font-weight="800">Step 2: Eliminate 'y' Again</text>
+    <text x="32" y="393" fill="#475569" font-size="11">Multiply 2 Ã— (1) + (3):</text>
+    <text x="32" y="411" fill="#0f172a" font-size="10.5" font-family="monospace">(2x+2y+2z) + (x-2y+3z) = 26</text>
+    <rect x="30" y="422" width="195" height="24" rx="6" fill="#fdf4ff" stroke="#d8b4fe" />
+    <text x="127" y="438" text-anchor="middle" fill="#7e22ce" font-size="12" font-weight="800">&#10145; 3x + 5z = 26  [Eq 5]</text>
+  </g>
+
+  <g filter="url(#shadow_em)">
+    <rect x="725" y="85" width="215" height="105" rx="12" fill="#ffffff" stroke="#86efac" stroke-width="1.5" />
+    <rect x="725" y="85" width="215" height="26" rx="12" fill="#dcfce7" />
+    <text x="832" y="103" text-anchor="middle" fill="#15803d" font-size="11.5" font-weight="800">Step 3: Solve for 'z'</text>
+    <text x="737" y="128" fill="#475569" font-size="11">Subtract (5) - (4):</text>
+    <text x="737" y="146" fill="#0f172a" font-size="11" font-family="monospace">(3x+5z) - (3x+2z) = 12</text>
+    <text x="737" y="166" fill="#0f172a" font-size="11.5" font-weight="700">3z = 12  &#8658;  <tspan fill="#16a34a" font-size="14" font-weight="800">z = 4</tspan></text>
+  </g>
+
+  <g filter="url(#shadow_em)">
+    <rect x="725" y="215" width="215" height="100" rx="12" fill="#ffffff" stroke="#86efac" stroke-width="1.5" />
+    <rect x="725" y="215" width="215" height="26" rx="12" fill="#dcfce7" />
+    <text x="832" y="233" text-anchor="middle" fill="#15803d" font-size="11.5" font-weight="800">Step 4: Solve for 'x'</text>
+    <text x="737" y="258" fill="#475569" font-size="11">Substitute z = 4 in (4):</text>
+    <text x="737" y="276" fill="#0f172a" font-size="11" font-family="monospace">3x + 2(4) = 14 &#8658; 3x + 8 = 14</text>
+    <text x="737" y="296" fill="#0f172a" font-size="11.5" font-weight="700">3x = 6  &#8658;  <tspan fill="#16a34a" font-size="14" font-weight="800">x = 2</tspan></text>
+  </g>
+
+  <g filter="url(#shadow_em)">
+    <rect x="725" y="345" width="215" height="105" rx="12" fill="#ffffff" stroke="#86efac" stroke-width="1.5" />
+    <rect x="725" y="345" width="215" height="26" rx="12" fill="#dcfce7" />
+    <text x="832" y="363" text-anchor="middle" fill="#15803d" font-size="11.5" font-weight="800">Step 5: Solve for 'y'</text>
+    <text x="737" y="388" fill="#475569" font-size="11">Sub x = 2, z = 4 in (1):</text>
+    <text x="737" y="406" fill="#0f172a" font-size="11" font-family="monospace">2 + y + 4 = 5 &#8658; y + 6 = 5</text>
+    <text x="737" y="428" fill="#0f172a" font-size="11.5" font-weight="700">y = 5 - 6  &#8658;  <tspan fill="#16a34a" font-size="14" font-weight="800">y = -1</tspan></text>
+  </g>
+
+  <g filter="url(#shadow_em)">
+    <rect x="260" y="505" width="440" height="105" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2.5" />
+    <rect x="260" y="505" width="440" height="30" rx="14" fill="#fef3c7" />
+    <text x="480" y="525" text-anchor="middle" fill="#b45309" font-size="13" font-weight="800">&#127942; FINAL SOLUTION &amp; VERIFICATION</text>
+    <text x="480" y="558" text-anchor="middle" fill="#1e293b" font-size="18" font-weight="800">x = 2 ,  y = -1 ,  z = 4</text>
+    <text x="480" y="585" text-anchor="middle" fill="#059669" font-size="11.5" font-weight="700">&#10004; Verification: 2 + (-1) + 4 = 5  |  2(2)-(-1)+4 = 9  |  2-2(-1)+3(4) = 16</text>
+  </g>
+</svg>`,
+          diagramCaption: "Solution Mindmap : Step-by-Step Elimination &amp; Back-Substitution Flowchart",
+          checkpoints: [
+            {
+              q: "1. What is the primary goal when solving a system of three linear equations using elimination?",
+              options: [
+                "A. To find the values of all three variables simultaneously in the first step",
+                "B. To convert the equations into quadratic equations",
+                "C. To reduce the system to two equations with two variables",
+                "D. To eliminate all variables and solve for a constant"
+              ],
+              ans: 2,
+              explanation: "The standard method for solving a 3x3 linear system is to eliminate one variable using pairs of equations, reducing the system to two equations with two variables."
+            },
+            {
+              q: "2. Given the first equation x + y + z = 5, what is the value of z if x = 2 and y = 1?",
+              options: ["A. 1", "B. 2", "C. 3", "D. 4"],
+              ans: 1,
+              explanation: "Substitute x = 2 and y = 1: 2 + 1 + z = 5 => 3 + z = 5, which simplifies to z = 2."
+            },
+            {
+              q: "3. If you add the first equation (x + y + z = 5) and the second equation (2x - y + z = 9), what is the resulting equation?",
+              options: [
+                "A. 3x + y = 14",
+                "B. 3x - 2y + 2z = 14",
+                "C. x + 2y = 4",
+                "D. 3x + 2z = 14"
+              ],
+              ans: 3,
+              explanation: "Adding (x + y + z = 5) and (2x - y + z = 9) eliminates y: (x + 2x) + (y - y) + (z + z) = 5 + 9 => 3x + 2z = 14 [Equation 4]."
+            },
+            {
+              q: "4. What is the value of x in the final solution to the system?",
+              options: ["A. 2", "B. 3", "C. 4", "D. 5"],
+              ans: 0,
+              explanation: "From Equation (4): 3x + 2z = 14. Substituting z = 4 yields: 3x + 2(4) = 14 => 3x + 8 = 14 => 3x = 6 => x = 2."
+            },
+            {
+              q: "5. What is the value of y in the final solution to the system?",
+              options: ["A. 2", "B. 1", "C. 0", "D. -1"],
+              ans: 3,
+              explanation: "Substitute x = 2 and z = 4 into Eq (1): 2 + y + 4 = 5 => y + 6 = 5 => y = 5 - 6 = -1."
+            },
+            {
+              q: "6. What is the value of z in the final solution to the system?",
+              options: ["A. 4", "B. 1", "C. 5", "D. 7"],
+              ans: 0,
+              explanation: "Subtracting Eq (5) - Eq (4): (3x + 5z) - (3x + 2z) = 26 - 14 => 3z = 12 => z = 4."
+            },
+            {
+              q: "7. Which method is generally NOT used to solve a system of three linear equations?",
+              options: [
+                "A. Gaussian Elimination",
+                "B. Matrix Inversion (Cramer's Rule)",
+                "C. Substitution method",
+                "D. Pythagorean Theorem"
+              ],
+              ans: 3,
+              explanation: "The Pythagorean theorem is used in geometry for right-angled triangles, not for solving systems of linear equations."
+            },
+            {
+              q: "8. If you check the solution (x = 2, y = -1, z = 4) in the third equation (x - 2y + 3z = 16), does it hold true?",
+              options: [
+                "A. No, it equals 10",
+                "B. No, it equals 14",
+                "C. No, it equals 18",
+                "D. Yes, 2 - 2(-1) + 3(4) = 2 + 2 + 12 = 16"
+              ],
+              ans: 3,
+              explanation: "Substitute x = 2, y = -1, z = 4: 2 - 2(-1) + 3(4) = 2 + 2 + 12 = 16. LHS = RHS, so the solution is verified correct!"
+            },
+            {
+              q: "9. What does a consistent and independent system of three linear equations graphically represent in 3D space?",
+              options: [
+                "A. Three planes intersecting at a single unique point",
+                "B. Three parallel planes",
+                "C. The exact same plane repeated three times",
+                "D. Three intersecting lines on a 2D plane"
+              ],
+              ans: 0,
+              explanation: "A consistent and independent system of three linear equations represents three flat planes that intersect at a single unique point (the unique solution triplet x, y, z)."
+            },
+            {
+              q: "10. If a system of linear equations has infinitely many solutions, what does it mean algebraically during elimination?",
+              options: [
+                "A. You will get a true identity like 0 = 0",
+                "B. You will get a false statement like 0 = 5",
+                "C. You will find a unique coordinate triplet (x, y, z)",
+                "D. All variables will equal zero"
+              ],
+              ans: 0,
+              explanation: "An infinite number of solutions typically leads to dependent equations resulting in a true identity such as 0 = 0 during the elimination process."
+            }
+          ],
           explanation: "Variable elimination method yields unique solution x = 2, y = -1, z = 4."
         }
       ]

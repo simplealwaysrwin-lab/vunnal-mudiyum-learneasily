@@ -5180,7 +5180,7 @@
                       <span>🎨 ${isEm || isEnglish ? 'Textbook Illustration' : (isTm ? 'பாட வரைபடம்' : 'பாட வரைபடம் (Textbook Illustration)')}</span>
                     </div>
                     <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)">
-                      <img src="${(isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png' ? 'images/math_bb_ex1_4_en.png' : item.diagramImg}" alt="${(item.diagramCaption || item.q || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" class="diagram-img">
+                      <img src="${(isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png' ? 'images/math_bb_ex1_4_en.png' : item.diagramImg}" alt="${(item.diagramCaption || item.q || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" class="diagram-img" onerror="if(this.src.indexOf('images/')!==-1){this.src=this.src.split('images/').pop();}">
                       <div class="diagram-zoom-hint">
                         <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
                       </div>

@@ -89,6 +89,84 @@ const MATHS_EM_UNIT_4_DATA = {
             <b>AD / DB = AE / EC</b><br><br>
             <b>Hence, the Basic Proportionality Theorem is proved.</b>
           </div>`,
+          noVoice: true,
+          checkpoints: [
+            {
+              q: "1. What is another common name for the Basic Proportionality Theorem (BPT)?",
+              options: ["A. Pythagorean Theorem", "B. Midpoint Theorem", "C. Thales Theorem", "D. Euclid Theorem"],
+              ans: 2,
+              explanation: "The Basic Proportionality Theorem is famously credited to the Greek mathematician Thales, and is widely known as Thales Theorem."
+            },
+            {
+              q: "2. In triangle ABC, if a line DE is drawn parallel to BC intersecting the other two sides at D and E, in what manner does it divide them?",
+              options: ["A. Perpendicularly", "B. Into equal halves", "C. In a 2:1 ratio", "D. In the same ratio"],
+              ans: 3,
+              explanation: "The theorem states that a line drawn parallel to one side of a triangle divides the other two sides in the same ratio: AD/DB = AE/EC."
+            },
+            {
+              q: "3. Which geometric concept is primarily used in the classical proof of the Basic Proportionality Theorem?",
+              options: ["A. Congruent triangles", "B. Trigonometric ratios", "C. Circle theorems", "D. Ratios of areas of triangles"],
+              ans: 3,
+              explanation: "The standard proof compares the areas of triangles having the same height: Area = ½ × base × height."
+            },
+            {
+              q: "4. In triangle ABC with DE || BC, which ratio is equal to AD / DB according to BPT?",
+              options: ["A. EC / AE", "B. AE / EC", "C. AB / AC", "D. DE / BC"],
+              ans: 1,
+              explanation: "By the Basic Proportionality Theorem: AD / DB = AE / EC."
+            },
+            {
+              q: "5. What is the converse of the Basic Proportionality Theorem used to prove?",
+              options: [
+                "A. That two triangles are congruent",
+                "B. The area of a triangle",
+                "C. That a line is parallel to a side of the triangle",
+                "D. The length of the hypotenuse"
+              ],
+              ans: 2,
+              explanation: "The converse states that if a line divides two sides in the same ratio, then the line must be parallel to the third side."
+            },
+            {
+              q: "6. In the proof of BPT, when taking AD as the base of ΔADE, what represents the perpendicular height dropped from vertex E?",
+              options: ["A. DM", "B. AB", "C. EF (or EN)", "D. AC"],
+              ans: 2,
+              explanation: "The perpendicular dropped from vertex E onto side AB acts as the common height for both ΔADE and ΔBDE."
+            },
+            {
+              q: "7. Which property of areas is crucial for equating the denominators in the proof of BPT?",
+              options: [
+                "A. Diagonals of a parallelogram bisect each other",
+                "B. Sum of angles in a triangle is 180°",
+                "C. Pythagoras theorem",
+                "D. Triangles on the same base and between the same parallels have equal areas"
+              ],
+              ans: 3,
+              explanation: "ΔBDE and ΔCDE share the same base DE and lie between parallel lines DE and BC, so Area(ΔBDE) = Area(ΔCDE)."
+            },
+            {
+              q: "8. If AD = 2 cm, DB = 3 cm, and AE = 4 cm with DE || BC, what is the length of EC?",
+              options: ["A. 5 cm", "B. 8 cm", "C. 6 cm", "D. 3 cm"],
+              ans: 2,
+              explanation: "Using AD / DB = AE / EC: 2 / 3 = 4 / EC ⇒ 2 × EC = 12 ⇒ EC = 6 cm."
+            },
+            {
+              q: "9. Does the Basic Proportionality Theorem apply to all types of triangles?",
+              options: [
+                "A. No, only to right-angled triangles",
+                "B. Yes, to all types of triangles",
+                "C. Only to equilateral triangles",
+                "D. Only to isosceles triangles"
+              ],
+              ans: 1,
+              explanation: "The theorem is universal and applies to acute, obtuse, scalene, isosceles, and equilateral triangles."
+            },
+            {
+              q: "10. By corollary of BPT, which corresponding ratio equals AD / AB?",
+              options: ["A. AE / EC", "B. AE / AC", "C. EC / AC", "D. AC / AE"],
+              ans: 1,
+              explanation: "Adding 1 to both sides of the ratio yields the corollary: AD / AB = AE / AC."
+            }
+          ],
           explanation: "Classical Thales Theorem proof comparing triangle areas on common parallel segments."
         }
       ]
@@ -167,6 +245,84 @@ const MATHS_EM_UNIT_4_DATA = {
             <b>AC² = AB² + BC²</b><br><br>
             <b>Hence, Pythagoras Theorem is successfully proved.</b>
           </div>`,
+          noVoice: true,
+          checkpoints: [
+            {
+              q: "1. What type of triangle is strictly required for Pythagoras Theorem to apply?",
+              options: ["A. Equilateral triangle", "B. Scalene triangle", "C. Right-angled triangle", "D. Obtuse triangle"],
+              ans: 2,
+              explanation: "Pythagoras Theorem applies exclusively to right-angled triangles, which have one angle equal to 90 degrees."
+            },
+            {
+              q: "2. In the Pythagorean equation a² + b² = c², what does 'c' represent?",
+              options: ["A. The altitude", "B. The shortest side", "C. The adjacent side", "D. The hypotenuse"],
+              ans: 3,
+              explanation: "In a right triangle, 'c' represents the hypotenuse, which is the longest side opposite the right angle."
+            },
+            {
+              q: "3. Which of the following is a classic fundamental Pythagorean triple?",
+              options: ["A. (3, 4, 5)", "B. (2, 3, 4)", "C. (1, 2, 3)", "D. (5, 6, 7)"],
+              ans: 0,
+              explanation: "3² + 4² = 9 + 16 = 25 = 5². Thus (3, 4, 5) is a Pythagorean triple."
+            },
+            {
+              q: "4. If the lengths of the two legs of a right triangle are 6 and 8, what is the length of the hypotenuse?",
+              options: ["A. 12", "B. 10", "C. 14", "D. 100"],
+              ans: 1,
+              explanation: "c = √(6² + 8²) = √(36 + 64) = √100 = 10."
+            },
+            {
+              q: "5. The standard textbook proof of Pythagoras Theorem in 10th standard relies on which geometric concept?",
+              options: ["A. Limits and derivatives", "B. Vectors and matrices", "C. Similar triangles (AA Similarity)", "D. Complex numbers"],
+              ans: 2,
+              explanation: "The proof compares the two smaller right triangles (ΔADB and ΔBDC) to the main triangle (ΔABC) using AA similarity."
+            },
+            {
+              q: "6. If the hypotenuse of a right triangle is 13 and one leg is 5, what is the length of the other leg?",
+              options: ["A. 8", "B. 10", "C. 12", "D. 11"],
+              ans: 2,
+              explanation: "b = √(13² - 5²) = √(169 - 25) = √144 = 12."
+            },
+            {
+              q: "7. Who is historically credited with the first general proof of the theorem in ancient Greece?",
+              options: ["A. Pythagoras", "B. Euclid", "C. Archimedes", "D. Newton"],
+              ans: 0,
+              explanation: "Although Babylonians and Indians knew the relationship earlier, Greek philosopher Pythagoras is traditionally credited with its first formal geometric proof."
+            },
+            {
+              q: "8. What does the converse of Pythagoras Theorem state?",
+              options: [
+                "A. If a² + b² = c² in a triangle, then the triangle is right-angled",
+                "B. If a triangle has equal sides, it has equal angles",
+                "C. All right triangles are similar",
+                "D. The hypotenuse is always the longest side"
+              ],
+              ans: 0,
+              explanation: "The converse states that if the square of the longest side equals the sum of squares of the other two sides, the angle opposite the longest side is 90°."
+            },
+            {
+              q: "9. In the textbook similarity proof, which relation gives AB² = AC × AD?",
+              options: [
+                "A. Similarity of ΔBDC ~ ΔABC",
+                "B. Similarity of ΔADB ~ ΔABC (AD/AB = AB/AC)",
+                "C. Area of triangle formula",
+                "D. Angle bisector theorem"
+              ],
+              ans: 1,
+              explanation: "Comparing corresponding sides of similar triangles ΔADB ~ ΔABC: AD / AB = AB / AC ⇒ AB² = AC × AD."
+            },
+            {
+              q: "10. Which algebraic equation expresses the visual dissection proof of Pythagoras Theorem with 4 right triangles in an (a+b) square?",
+              options: [
+                "A. a³ + b³ = c³",
+                "B. a + b = c",
+                "C. (a + b)² = 4(½ ab) + c²",
+                "D. ab = c²"
+              ],
+              ans: 2,
+              explanation: "Area of outer square (a + b)² equals the area of 4 triangles [4 × ½ab = 2ab] plus the inner square c², which simplifies to a² + b² = c²."
+            }
+          ],
           explanation: "Similarity of right sub-triangles ΔADB and ΔBDC with whole ΔABC proves AC² = AB² + BC²."
         }
       ]

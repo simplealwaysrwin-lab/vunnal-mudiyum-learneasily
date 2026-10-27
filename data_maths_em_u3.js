@@ -62,6 +62,13 @@ const MATHS_EM_UNIT_3_DATA = {
           type: "5m",
           mark: "5 Marks",
           isImportant: true,
+          diagramImg: "images/math_bb_ch3_linear_eqn.jpg",
+          diagramCaption: "Blackboard Solution: System of Linear Equations in Three Variables (Tap to Zoom)",
+          blackboard: {
+            title: "Solving System of Linear Equations in Three Variables",
+            engTitle: "Solving System of Linear Equations in Three Variables",
+            fullBoardImg: "images/math_bb_ch3_linear_eqn.jpg"
+          },
           q: "Solve the following system of linear equations in three variables:<br>x + y + z = 5<br>2x - y + z = 9<br>x - 2y + 3z = 16",
           ans: `<div style="line-height:1.8;">
             <b>Solution:</b><br>
@@ -243,6 +250,74 @@ const MATHS_EM_UNIT_3_DATA = {
             Subtracting gives remainder: 0.<br><br>
             <b>Therefore, √(64x⁴ - 16x³ + 17x² - 2x + 1) = |8x² - x + 1|</b>
           </div>`,
+          noVoice: true,
+          checkpoints: [
+            {
+              q: "1. What is the first term in the square root of the polynomial 64x⁴ - 16x³ + 17x² - 2x + 1?",
+              options: ["A. 8x²", "B. 4x²", "C. 16x²", "D. 8x"],
+              ans: 0,
+              explanation: "The first term of the polynomial is 64x⁴. Its principal square root is 8x², which forms the first term of the root."
+            },
+            {
+              q: "2. After subtracting the square of the first term (8x²)² from the given polynomial, what is the first remainder polynomial?",
+              options: ["A. 32x³ - 2x + 1", "B. 16x³ + 17x² - 2x + 1", "C. -8x³ + 17x²", "D. -16x³ + 17x² - 2x + 1"],
+              ans: 3,
+              explanation: "Subtracting (8x²)² = 64x⁴ from the original polynomial leaves the remainder -16x³ + 17x² - 2x + 1."
+            },
+            {
+              q: "3. When dividing the leading term of the remainder (-16x³) by twice the current root (2 × 8x² = 16x²), what is the second term of the square root?",
+              options: ["A. 2x", "B. x", "C. -2x", "D. -x"],
+              ans: 3,
+              explanation: "Dividing (-16x³) / (16x²) = -x, which is the second term of the square root."
+            },
+            {
+              q: "4. What is the complete divisor expression used for the second step of division?",
+              options: ["A. 16x² - x", "B. 8x² - x", "C. 16x² - 2x", "D. 8x² - 2x"],
+              ans: 0,
+              explanation: "The divisor for step 2 is formed by taking twice the first term (16x²) and appending the new term (-x), giving 16x² - x."
+            },
+            {
+              q: "5. After subtracting the product (16x² - x)(-x) from the previous remainder, what is the new remainder brought down with remaining terms?",
+              options: ["A. 0", "B. 8x² - 2x + 1", "C. -2x + 1", "D. 16x² - 2x + 1"],
+              ans: 3,
+              explanation: "(-16x³ + 17x²) - (-16x³ + x²) = 16x². Bringing down -2x + 1 gives 16x² - 2x + 1."
+            },
+            {
+              q: "6. What is the third term of the square root polynomial?",
+              options: ["A. 1", "B. -1", "C. 2", "D. x"],
+              ans: 0,
+              explanation: "Dividing the leading term of the new remainder (16x²) by the leading term of the divisor (16x²) gives +1."
+            },
+            {
+              q: "7. What is the final expression for the square root of 64x⁴ - 16x³ + 17x² - 2x + 1?",
+              options: ["A. |8x² + x + 1|", "B. |8x² - x - 1|", "C. |4x² - x + 1|", "D. |8x² - x + 1|"],
+              ans: 3,
+              explanation: "The terms of the square root are 8x², -x, and +1. Hence, the square root is |8x² - x + 1|."
+            },
+            {
+              q: "8. What is the final remainder obtained at the end of the division process for a perfect square polynomial?",
+              options: ["A. 1", "B. -1", "C. x", "D. 0"],
+              ans: 3,
+              explanation: "Because the polynomial is a perfect square, the final remainder after complete division is 0."
+            },
+            {
+              q: "9. Which algebraic identity is closely related to finding the square root of a 4th-degree polynomial?",
+              options: [
+                "A. a² - b² = (a - b)(a + b)",
+                "B. (a + b)³ = a³ + 3a²b + 3ab² + b³",
+                "C. (a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca",
+                "D. (a + b)² = a² + 2ab + b²"
+              ],
+              ans: 2,
+              explanation: "Finding the square root of a 5-term 4th-degree polynomial corresponds to expanding a trinomial square (a + b + c)²."
+            },
+            {
+              q: "10. What is the degree of the resulting polynomial after finding the square root of a 4th-degree polynomial?",
+              options: ["A. 2", "B. 1", "C. 3", "D. 4"],
+              ans: 0,
+              explanation: "Taking the square root of a polynomial halves its degree: Degree 4 / 2 = Degree 2."
+            }
+          ],
           explanation: "Polynomial square root division method yields |8x² - x + 1|."
         }
       ]
@@ -302,6 +377,74 @@ const MATHS_EM_UNIT_3_DATA = {
             From (1) and (2), LHS = RHS.<br>
             <b>Hence, (AB)^T = B^T A^T is verified.</b>
           </div>`,
+          noVoice: true,
+          checkpoints: [
+            {
+              q: "1. What is the product matrix AB for A = [[1, 2], [3, 1]] and B = [[1, -2], [-3, 1]]?",
+              options: ["A. [[-5, 0], [0, -5]]", "B. [[7, 0], [0, 7]]", "C. [[-5, 4], [0, -5]]", "D. [[1, -4], [-9, 1]]"],
+              ans: 0,
+              explanation: "Row-by-column multiplication: (1)(1)+2(-3) = -5, (1)(-2)+2(1) = 0, (3)(1)+1(-3) = 0, (3)(-2)+1(1) = -5. Thus AB = [[-5, 0], [0, -5]]."
+            },
+            {
+              q: "2. What is the transpose of matrix A, denoted as A^T?",
+              options: ["A. [[1, 2], [3, 1]]", "B. [[1, 3], [2, 1]]", "C. [[-1, -2], [-3, -1]]", "D. [[1, -3], [-2, 1]]"],
+              ans: 1,
+              explanation: "Interchanging rows and columns of A: Row 1 [1, 2] becomes Column 1, and Row 2 [3, 1] becomes Column 2. Hence A^T = [[1, 3], [2, 1]]."
+            },
+            {
+              q: "3. What is the transpose of matrix B, denoted as B^T?",
+              options: ["A. [[1, -2], [-3, 1]]", "B. [[-1, 2], [3, -1]]", "C. [[1, -3], [-2, 1]]", "D. [[2, 1], [1, 3]]"],
+              ans: 2,
+              explanation: "Interchanging rows and columns of B gives B^T = [[1, -3], [-2, 1]]."
+            },
+            {
+              q: "4. What is the transpose of the product matrix AB, i.e., (AB)^T?",
+              options: ["A. [[5, 0], [0, 5]]", "B. [[-5, 0], [0, -5]]", "C. [[0, -5], [-5, 0]]", "D. [[-5, 5], [5, -5]]"],
+              ans: 1,
+              explanation: "Since AB is a scalar diagonal matrix [[-5, 0], [0, -5]], swapping off-diagonal zeros leaves it identical: (AB)^T = [[-5, 0], [0, -5]]."
+            },
+            {
+              q: "5. What is the product B^T A^T?",
+              options: ["A. [[-1, -6], [-6, -1]]", "B. [[7, -3], [-3, 7]]", "C. [[-5, 0], [0, -5]]", "D. [[0, -5], [-5, 0]]"],
+              ans: 2,
+              explanation: "Multiplying B^T and A^T gives [[-5, 0], [0, -5]], which exactly equals (AB)^T."
+            },
+            {
+              q: "6. Which matrix property is verified by showing (AB)^T = B^T A^T?",
+              options: [
+                "A. Commutative property of matrix multiplication",
+                "B. Associative property of matrix addition",
+                "C. Distributive property of matrices",
+                "D. Reversal law of matrix transpose"
+              ],
+              ans: 3,
+              explanation: "The reversal law of transpose states that the transpose of a product equals the product of their transposes in reverse order: (AB)^T = B^T A^T."
+            },
+            {
+              q: "7. What type of matrices are A and B in terms of their dimensions?",
+              options: ["A. 2×2 square matrices", "B. 2×3 matrices", "C. 3×3 matrices", "D. 1×2 row vectors"],
+              ans: 0,
+              explanation: "Both matrices have 2 rows and 2 columns, making them 2×2 square matrices."
+            },
+            {
+              q: "8. What is the determinant of matrix A = [[1, 2], [3, 1]]?",
+              options: ["A. 1", "B. 5", "C. -5", "D. -1"],
+              ans: 2,
+              explanation: "det(A) = (1)(1) - (2)(3) = 1 - 6 = -5."
+            },
+            {
+              q: "9. What is the trace (sum of leading diagonal elements) of matrix B = [[1, -2], [-3, 1]]?",
+              options: ["A. -2", "B. 0", "C. 1", "D. 2"],
+              ans: 3,
+              explanation: "The diagonal elements of B are 1 and 1. Their sum is 1 + 1 = 2."
+            },
+            {
+              q: "10. What is the result of adding matrices A and B (A + B)?",
+              options: ["A. [[2, 0], [0, 2]]", "B. [[2, -4], [0, 2]]", "C. [[0, 4], [6, 0]]", "D. [[1, 0], [0, 1]]"],
+              ans: 0,
+              explanation: "Adding corresponding entries: [1+1, 2+(-2)] = [2, 0] and [3+(-3), 1+1] = [0, 2]. Hence A + B = [[2, 0], [0, 2]] = 2I."
+            }
+          ],
           explanation: "Reversal law of matrix transpose (AB)^T = B^T A^T holds true."
         }
       ]

@@ -1,4 +1,4 @@
-﻿// 10th Standard Mathematics - Unit 4: Geometry (English Medium)
+// 10th Standard Mathematics - Unit 4: Geometry (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_4_DATA = {
@@ -24,40 +24,11 @@ const MATHS_EM_UNIT_4_DATA = {
     // Section 1: Thales Theorem, Angle Bisector Theorem & Similar Triangles
     // -------------------------------------------------------------
     {
+    {
       id: "sec_math_em_4_1",
-      title: "Section 1: Thales Theorem, Angle Bisector Theorem & Similar Triangles",
-      author: "Chapter 4: Geometry - Exercises 4.1 & 4.2",
+      title: "Section 1: Top 10 Important 5-Mark Questions & Theorems (Blackboard Special)",
+      author: "Chapter 4: Geometry - Important 5 Marks (Questions 1 to 10)",
       questions: [
-        {
-          id: "m_em_4_1_1",
-          type: "1m",
-          mark: "1 Mark",
-          examTag: "Board Model",
-          q: "In ΔABC, DE || BC. If AD = 4 cm, DB = 6 cm, and AE = 5 cm, calculate the length of EC.",
-          options: ["a) 6.5 cm", "b) 7.5 cm", "c) 8 cm", "d) 9 cm"],
-          ans: "Answer: <b>b) 7.5 cm</b><br>Explanation: By Thales Theorem (BPT), AD / DB = AE / EC ⇒ 4 / 6 = 5 / EC ⇒ EC = (5 × 6) / 4 = 30 / 4 = <b>7.5 cm</b>.",
-          explanation: "Applying BPT: AD/DB = AE/EC yields EC = 7.5 cm."
-        },
-        {
-          id: "m_em_4_1_2",
-          type: "2m",
-          mark: "2 Marks",
-          examYear: "2023",
-          examTag: "2023*",
-          q: "In ΔABC, AD is the internal bisector of ∠A meeting BC at D. If AB = 8 cm, AC = 6 cm, and BD = 4 cm, find DC.",
-          ans: `<div style="line-height:1.8;">
-            <b>Solution:</b><br>
-            By Angle Bisector Theorem (ABT):<br>
-            <div style="margin:4px 0 4px 18px; font-weight:700;">BD / DC = AB / AC</div><br>
-            Substituting the given values:<br>
-            4 / DC = 8 / 6<br>
-            4 / DC = 4 / 3<br>
-            Cross multiplying:<br>
-            4 × DC = 4 × 3<br>
-            <b>DC = 3 cm</b>
-          </div>`,
-          explanation: "Angle Bisector Theorem ratio BD/DC = AB/AC gives DC = 3 cm."
-        },
         {
           id: "m_em_4_1_3",
           type: "5m",
@@ -206,6 +177,150 @@ const MATHS_EM_UNIT_4_DATA = {
             }
           ],
           explanation: "Step-by-step similarity proof of Thales Theorem establishing AD/DB = AE/EC via ΔADE ~ ΔABC."
+        },
+        {
+          id: "m_em_4_2_3",
+          type: "5m",
+          mark: "5 Marks",
+          examYear: "2023",
+          examTag: "2023* (Theorem Proof)",
+          isImportant: true,
+          q: "State and prove Pythagoras Theorem.",
+          diagramImg: "math_ch4_5m_q2_pythagoras.jpg",
+          diagramCaption: "Blackboard Solution: Pythagoras Theorem Proof by Similarity (Tap to Zoom)",
+          ans: `<div style="line-height:1.8;">
+            <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
+              <b>Statement (Pythagoras Theorem):</b><br>
+              <i>In a right-angled triangle, the square on the hypotenuse is equal to the sum of the squares on the other two sides.</i>
+            </div>
+
+            <b>Given:</b><br>
+            In right-angled triangle ΔABC, ∠B = 90°.<br><br>
+
+            <b>To Prove:</b><br>
+            <div style="margin:6px 0 6px 18px; font-weight:700; font-size:16px; color:#1d4ed8;">
+              AC² = AB² + BC²
+            </div><br>
+
+            <b>Construction:</b><br>
+            Draw BD ⊥ AC (altitude from right angle vertex B to hypotenuse AC).<br><br>
+
+            <b>Proof:</b><br>
+            <table style="width:100%; border-collapse:collapse; margin:10px 0;">
+              <thead>
+                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
+                  <th style="padding:8px 10px; width:8%;">No.</th>
+                  <th style="padding:8px 10px; width:52%;">Mathematical Statement</th>
+                  <th style="padding:8px 10px; width:40%;">Reason / Justification</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:8px 10px; font-weight:700;">1.</td>
+                  <td style="padding:8px 10px;">Compare ΔADB and ΔABC:<br>• ∠ADB = ∠ABC = 90°<br>• ∠BAD = ∠BAC (common angle)<br>⇒ <b>ΔADB ~ ΔABC</b></td>
+                  <td style="padding:8px 10px; color:#475569;">AA similarity criterion</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:8px 10px; font-weight:700;">2.</td>
+                  <td style="padding:8px 10px;">AD / AB = AB / AC<br>Cross multiplying:<br><b>AB² = AC × AD</b></td>
+                  <td style="padding:8px 10px; color:#475569;">Corresponding sides of similar triangles ---- (1)</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:8px 10px; font-weight:700;">3.</td>
+                  <td style="padding:8px 10px;">Compare ΔBDC and ΔABC:<br>• ∠BDC = ∠ABC = 90°<br>• ∠BCD = ∠BCA (common angle)<br>⇒ <b>ΔBDC ~ ΔABC</b></td>
+                  <td style="padding:8px 10px; color:#475569;">AA similarity criterion</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:8px 10px; font-weight:700;">4.</td>
+                  <td style="padding:8px 10px;">CD / BC = BC / AC<br>Cross multiplying:<br><b>BC² = AC × CD</b></td>
+                  <td style="padding:8px 10px; color:#475569;">Corresponding sides of similar triangles ---- (2)</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:8px 10px; font-weight:700;">5.</td>
+                  <td style="padding:8px 10px;">Adding equations (1) and (2):<br>AB² + BC² = (AC × AD) + (AC × CD)<br>AB² + BC² = AC (AD + CD)</td>
+                  <td style="padding:8px 10px; color:#475569;">Taking common factor AC</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 10px; font-weight:700;">6.</td>
+                  <td style="padding:8px 10px;">From the diagram, AD + CD = AC:<br>AB² + BC² = AC × AC<br><b style="color:#15803d; font-size:15px;">AC² = AB² + BC²</b></td>
+                  <td style="padding:8px 10px; font-weight:700; color:#15803d;">Hence proved!</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="margin-top:12px; padding:10px 14px; background:#f0fdf4; border:1.5px solid #22c55e; border-radius:8px; font-weight:700; text-align:center; color:#166534; font-size:16px;">
+              ∴ AC² = AB² + BC² (Pythagoras Theorem is successfully proved)
+            </div>
+          </div>`,
+          noVoice: true,
+          checkpoints: [
+            {
+              q: "1. What type of triangle is strictly required for Pythagoras Theorem to apply?",
+              options: ["A. Equilateral triangle", "B. Scalene triangle", "C. Right-angled triangle", "D. Obtuse triangle"],
+              ans: 2,
+              explanation: "Pythagoras Theorem applies exclusively to right-angled triangles, which have one angle equal to 90 degrees."
+            },
+            {
+              q: "2. In the Pythagorean equation a² + b² = c², what does 'c' represent?",
+              options: ["A. The altitude", "B. The shortest side", "C. The adjacent side", "D. The hypotenuse"],
+              ans: 3,
+              explanation: "In a right triangle, 'c' represents the hypotenuse, which is the longest side opposite the right angle."
+            },
+            {
+              q: "3. Which construction line is crucial in the textbook similarity proof?",
+              options: ["A. Median from B", "B. Altitude BD ⊥ AC dropped onto the hypotenuse", "C. Angle bisector of C", "D. Line parallel to AB"],
+              ans: 1,
+              explanation: "Drawing altitude BD perpendicular to hypotenuse AC splits ΔABC into two right triangles that are both similar to the original triangle."
+            },
+            {
+              q: "4. Which relation is derived from ΔADB ~ ΔABC?",
+              options: ["A. AB² = AC × AD", "B. BC² = AC × CD", "C. BD² = AD × CD", "D. AC² = AD × CD"],
+              ans: 0,
+              explanation: "From AD / AB = AB / AC, cross multiplying yields AB² = AC × AD."
+            },
+            {
+              q: "5. Which relation is derived from ΔBDC ~ ΔABC?",
+              options: ["A. AB² = AC × AD", "B. BC² = AC × CD", "C. AC² = AB × BC", "D. BD = CD"],
+              ans: 1,
+              explanation: "From CD / BC = BC / AC, cross multiplying yields BC² = AC × CD."
+            },
+            {
+              q: "6. What is (AD + CD) equal to in terms of the hypotenuse segments?",
+              options: ["A. BD", "B. AC", "C. AB", "D. 2 AC"],
+              ans: 1,
+              explanation: "Since point D lies on hypotenuse segment AC, AD + CD = AC."
+            },
+            {
+              q: "7. Which of the following is a classic fundamental Pythagorean triple?",
+              options: ["A. (3, 4, 5)", "B. (2, 3, 4)", "C. (1, 2, 3)", "D. (5, 6, 7)"],
+              ans: 0,
+              explanation: "3² + 4² = 9 + 16 = 25 = 5². Thus (3, 4, 5) is a Pythagorean triple."
+            },
+            {
+              q: "8. If hypotenuse is 13 cm and one side is 5 cm, what is the third side?",
+              options: ["A. 8 cm", "B. 10 cm", "C. 12 cm", "D. 11 cm"],
+              ans: 2,
+              explanation: "√(13² - 5²) = √(169 - 25) = √144 = 12 cm."
+            },
+            {
+              q: "9. What does the converse of Pythagoras Theorem state?",
+              options: [
+                "A. If a² + b² = c² in a triangle, then the triangle is right-angled",
+                "B. If a triangle has equal sides, it has equal angles",
+                "C. All right triangles are similar",
+                "D. The hypotenuse is always the longest side"
+              ],
+              ans: 0,
+              explanation: "The converse states that if the square of the longest side equals the sum of squares of the other two sides, the angle opposite the longest side is 90°."
+            },
+            {
+              q: "10. In ancient Indian mathematics, by what name is Pythagoras Theorem known in Sulba Sutras?",
+              options: ["A. Baudhayana Theorem", "B. Aryabhata Rule", "C. Brahmagupta Formula", "D. Ramanujan Identity"],
+              ans: 0,
+              explanation: "Indian mathematician Baudhayana stated this geometric theorem in the Baudhayana Sulba Sutra centuries before Pythagoras."
+            }
+          ],
+          explanation: "Similarity of right sub-triangles ΔADB and ΔBDC with whole ΔABC proves AC² = AB² + BC²."
         },
         {
           id: "m_em_4_1_4",
@@ -493,307 +608,6 @@ const MATHS_EM_UNIT_4_DATA = {
             }
           ],
           explanation: "Proof that medians meet at centroid G using Ceva's Theorem and coordinate section formula."
-        },
-        {
-          id: "m_em_4_1_6",
-          type: "5m",
-          mark: "5 Marks",
-          examYear: "2024",
-          examTag: "Practical Geometry 5M",
-          isImportant: true,
-          q: "A girl of height 1.25 m stands 2.5 m from a mirror on the ground. The mirror is 6.6 m from a lamp post. Find the height of the lamp post.",
-          diagramImg: "math_ch4_5m_q10_lamp_post.jpg",
-          diagramCaption: "Blackboard Solution: Similar Triangles - Mirror Reflection & Lamp Post Height (Tap to Zoom)",
-          ans: `<div style="line-height:1.8;">
-            <b>Problem Statement:</b><br>
-            A girl of height 1.25 m stands 2.5 m away from a mirror placed horizontally on the ground. The mirror is 6.6 m away from the foot of a lamp post. If the girl can see the top of the lamp post reflected in the mirror, find the height of the lamp post.<br><br>
-
-            <b>Given Data:</b><br>
-            • Height of the girl (CD) = 1.25 m<br>
-            • Distance from girl to the mirror (DM) = 2.5 m<br>
-            • Distance from lamp post to the mirror (BM) = 6.6 m<br>
-            • Let the height of the lamp post (AB) = <b>h metres</b><br><br>
-
-            <b>Geometric Analysis using Similar Triangles:</b><br>
-            1. The lamp post and the girl both stand vertically upright on the horizontal ground:<br>
-            <div style="margin:4px 0 4px 18px; font-weight:700;">
-              ∠ABM = ∠CDM = 90°
-            </div><br>
-            2. By the physical <b>Law of Reflection of Light</b>, the angle of incidence equals the angle of reflection:<br>
-            <div style="margin:4px 0 4px 18px; font-weight:700;">
-              ∠AMB = ∠CMD
-            </div><br>
-            3. Therefore, by <b>AA similarity criterion</b>:<br>
-            <div style="margin:4px 0 4px 18px; font-weight:700; color:#1d4ed8; font-size:15px;">
-              ΔABM ~ ΔCDM
-            </div><br>
-
-            <b>Proportion of Corresponding Sides:</b><br>
-            Since corresponding sides of similar triangles are proportional:<br>
-            <div style="margin:6px 0 6px 18px; font-weight:700; font-size:16px;">
-              AB / CD = BM / DM
-            </div><br>
-            Substitute the given numerical values:<br>
-            h / 1.25 = 6.6 / 2.5<br><br>
-
-            <b>Step-by-Step Calculation:</b><br>
-            Cross-multiplying:<br>
-            2.5 × h = 1.25 × 6.6<br><br>
-            h = (1.25 × 6.6) / 2.5<br><br>
-            Notice that 1.25 / 2.5 = 1 / 2 = 0.5:<br>
-            h = 6.6 / 2<br>
-            <b style="color:#15803d; font-size:16px;">h = 3.3 m</b><br><br>
-
-            <div style="margin-top:12px; padding:10px 14px; background:#f0fdf4; border:1.5px solid #22c55e; border-radius:8px; font-weight:700; text-align:center; color:#166534; font-size:16px;">
-              Answer: The height of the lamp post is 3.3 metres (or 330 cm).
-            </div>
-          </div>`,
-          noVoice: true,
-          checkpoints: [
-            {
-              q: "1. Which geometric principle is used to find the lamp post's height?",
-              options: ["A. Congruence of triangles", "B. Similarity of triangles (AA criterion)", "C. Coordinate distance formula", "D. Volume ratio"],
-              ans: 1,
-              explanation: "Both right triangles share identical angles due to vertical standing (90°) and reflection angles, making them similar by AA."
-            },
-            {
-              q: "2. Why is ∠AMB equal to ∠CMD?",
-              options: ["A. Vertically opposite angles", "B. Law of reflection: angle of incidence equals angle of reflection", "C. Alternate angles", "D. Right angles"],
-              ans: 1,
-              explanation: "The reflection of light in the plane mirror ensures that the angle of incidence equals the angle of reflection."
-            },
-            {
-              q: "3. What is the ratio of heights (AB / CD) equal to?",
-              options: ["A. BM / DM", "B. DM / BM", "C. AM / CM", "D. CD / AB"],
-              ans: 0,
-              explanation: "In similar triangles ΔABM ~ ΔCDM, the ratio of vertical heights AB/CD equals the ratio of ground distances BM/DM."
-            },
-            {
-              q: "4. What is the value of 1.25 / 2.5?",
-              options: ["A. 2", "B. 0.5 (or ½)", "C. 0.25", "D. 0.75"],
-              ans: 1,
-              explanation: "1.25 × 2 = 2.50, so 1.25 / 2.5 = 0.5 = 1/2."
-            },
-            {
-              q: "5. What is the calculated height of the lamp post?",
-              options: ["A. 4.2 m", "B. 3.3 m", "C. 2.8 m", "D. 3.6 m"],
-              ans: 1,
-              explanation: "h = (1.25 × 6.6) / 2.5 = 6.6 / 2 = 3.3 m."
-            },
-            {
-              q: "6. If the mirror distance to the lamp post was doubled to 13.2 m while others remained constant, what would the height be?",
-              options: ["A. 6.6 m", "B. 3.3 m", "C. 9.9 m", "D. 5.5 m"],
-              ans: 0,
-              explanation: "Height is directly proportional to distance: h = (1.25 × 13.2) / 2.5 = 13.2 / 2 = 6.6 m."
-            },
-            {
-              q: "7. Which exercise in Tamil Nadu Class 10 Chapter 4 contains this real-world application problem?",
-              options: ["A. Exercise 4.1", "B. Exercise 4.2", "C. Exercise 4.3", "D. Exercise 4.4"],
-              ans: 0,
-              explanation: "This classic problem is in Exercise 4.1 (Similar Triangles Applications)."
-            },
-            {
-              q: "8. Both the girl and the lamp post form what angle with the horizontal ground?",
-              options: ["A. 45°", "B. 60°", "C. 90° (perpendicular)", "D. 180°"],
-              ans: 2,
-              explanation: "Structures and people standing upright on flat ground make a 90° right angle."
-            },
-            {
-              q: "9. Can similar triangles be used to measure celestial or unreachable heights?",
-              options: ["A. Yes, Thales famously used shadow similarity to calculate the height of the Great Pyramids", "B. No, only right triangles under 10 m", "C. Only in outer space", "D. No"],
-              ans: 0,
-              explanation: "Historically, Greek mathematician Thales measured the height of Egyptian pyramids using similar triangles and shadows."
-            },
-            {
-              q: "10. What is 3.3 metres expressed in centimetres?",
-              options: ["A. 33 cm", "B. 330 cm", "C. 3300 cm", "D. 0.33 cm"],
-              ans: 1,
-              explanation: "1 metre = 100 cm, so 3.3 m = 3.3 × 100 = 330 cm."
-            }
-          ],
-          explanation: "Similar triangle application problem: h / 1.25 = 6.6 / 2.5 gives lamp post height h = 3.3 m."
-        }
-      ]
-    },
-
-    // -------------------------------------------------------------
-    // Section 2: Pythagoras Theorem & Circle Tangents
-    // -------------------------------------------------------------
-    {
-      id: "sec_math_em_4_2",
-      title: "Section 2: Pythagoras Theorem & Circle Tangents",
-      author: "Chapter 4: Geometry - Exercises 4.3 & 4.4",
-      questions: [
-        {
-          id: "m_em_4_2_1",
-          type: "1m",
-          mark: "1 Mark",
-          q: "The length of the tangent to a circle from a point 10 cm away from the centre is 8 cm. Find the radius of the circle.",
-          options: ["a) 4 cm", "b) 5 cm", "c) 6 cm", "d) 7 cm"],
-          ans: "Answer: <b>c) 6 cm</b><br>Explanation: The radius is perpendicular to the tangent at the point of contact. By Pythagoras Theorem: Radius r = √(OP² - PT²) = √(10² - 8²) = √(100 - 64) = √36 = <b>6 cm</b>.",
-          explanation: "In right triangle OPT, r = √(10² - 8²) = 6 cm."
-        },
-        {
-          id: "m_em_4_2_2",
-          type: "2m",
-          mark: "2 Marks",
-          q: "A man goes 18 m due east and then 24 m due north. Find his distance from the starting point.",
-          ans: `<div style="line-height:1.8;">
-            <b>Solution:</b><br>
-            East and North directions are perpendicular (angle = 90°).<br>
-            The path forms a right-angled triangle where the required distance is the hypotenuse.<br><br>
-            By Pythagoras Theorem:<br>
-            Distance d = √(18² + 24²)<br>
-            d = √(324 + 576)<br>
-            d = √900<br>
-            <b>d = 30 m</b><br><br>
-            Hence, he is 30 metres away from the starting point.
-          </div>`,
-          explanation: "Hypotenuse = √(18² + 24²) = √900 = 30 m."
-        },
-        {
-          id: "m_em_4_2_3",
-          type: "5m",
-          mark: "5 Marks",
-          examYear: "2023",
-          examTag: "2023* (Theorem Proof)",
-          isImportant: true,
-          q: "State and prove Pythagoras Theorem.",
-          diagramImg: "math_ch4_5m_q2_pythagoras.jpg",
-          diagramCaption: "Blackboard Solution: Pythagoras Theorem Proof by Similarity (Tap to Zoom)",
-          ans: `<div style="line-height:1.8;">
-            <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
-              <b>Statement (Pythagoras Theorem):</b><br>
-              <i>In a right-angled triangle, the square on the hypotenuse is equal to the sum of the squares on the other two sides.</i>
-            </div>
-
-            <b>Given:</b><br>
-            In right-angled triangle ΔABC, ∠B = 90°.<br><br>
-
-            <b>To Prove:</b><br>
-            <div style="margin:6px 0 6px 18px; font-weight:700; font-size:16px; color:#1d4ed8;">
-              AC² = AB² + BC²
-            </div><br>
-
-            <b>Construction:</b><br>
-            Draw BD ⊥ AC (altitude from right angle vertex B to hypotenuse AC).<br><br>
-
-            <b>Proof:</b><br>
-            <table style="width:100%; border-collapse:collapse; margin:10px 0;">
-              <thead>
-                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
-                  <th style="padding:8px 10px; width:8%;">No.</th>
-                  <th style="padding:8px 10px; width:52%;">Mathematical Statement</th>
-                  <th style="padding:8px 10px; width:40%;">Reason / Justification</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:8px 10px; font-weight:700;">1.</td>
-                  <td style="padding:8px 10px;">Compare ΔADB and ΔABC:<br>• ∠ADB = ∠ABC = 90°<br>• ∠BAD = ∠BAC (common angle)<br>⇒ <b>ΔADB ~ ΔABC</b></td>
-                  <td style="padding:8px 10px; color:#475569;">AA similarity criterion</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:8px 10px; font-weight:700;">2.</td>
-                  <td style="padding:8px 10px;">AD / AB = AB / AC<br>Cross multiplying:<br><b>AB² = AC × AD</b></td>
-                  <td style="padding:8px 10px; color:#475569;">Corresponding sides of similar triangles ---- (1)</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:8px 10px; font-weight:700;">3.</td>
-                  <td style="padding:8px 10px;">Compare ΔBDC and ΔABC:<br>• ∠BDC = ∠ABC = 90°<br>• ∠BCD = ∠BCA (common angle)<br>⇒ <b>ΔBDC ~ ΔABC</b></td>
-                  <td style="padding:8px 10px; color:#475569;">AA similarity criterion</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:8px 10px; font-weight:700;">4.</td>
-                  <td style="padding:8px 10px;">CD / BC = BC / AC<br>Cross multiplying:<br><b>BC² = AC × CD</b></td>
-                  <td style="padding:8px 10px; color:#475569;">Corresponding sides of similar triangles ---- (2)</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:8px 10px; font-weight:700;">5.</td>
-                  <td style="padding:8px 10px;">Adding equations (1) and (2):<br>AB² + BC² = (AC × AD) + (AC × CD)<br>AB² + BC² = AC (AD + CD)</td>
-                  <td style="padding:8px 10px; color:#475569;">Taking common factor AC</td>
-                </tr>
-                <tr>
-                  <td style="padding:8px 10px; font-weight:700;">6.</td>
-                  <td style="padding:8px 10px;">From the diagram, AD + CD = AC:<br>AB² + BC² = AC × AC<br><b style="color:#15803d; font-size:15px;">AC² = AB² + BC²</b></td>
-                  <td style="padding:8px 10px; font-weight:700; color:#15803d;">Hence proved!</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <div style="margin-top:12px; padding:10px 14px; background:#f0fdf4; border:1.5px solid #22c55e; border-radius:8px; font-weight:700; text-align:center; color:#166534; font-size:16px;">
-              ∴ AC² = AB² + BC² (Pythagoras Theorem is successfully proved)
-            </div>
-          </div>`,
-          noVoice: true,
-          checkpoints: [
-            {
-              q: "1. What type of triangle is strictly required for Pythagoras Theorem to apply?",
-              options: ["A. Equilateral triangle", "B. Scalene triangle", "C. Right-angled triangle", "D. Obtuse triangle"],
-              ans: 2,
-              explanation: "Pythagoras Theorem applies exclusively to right-angled triangles, which have one angle equal to 90 degrees."
-            },
-            {
-              q: "2. In the Pythagorean equation a² + b² = c², what does 'c' represent?",
-              options: ["A. The altitude", "B. The shortest side", "C. The adjacent side", "D. The hypotenuse"],
-              ans: 3,
-              explanation: "In a right triangle, 'c' represents the hypotenuse, which is the longest side opposite the right angle."
-            },
-            {
-              q: "3. Which construction line is crucial in the textbook similarity proof?",
-              options: ["A. Median from B", "B. Altitude BD ⊥ AC dropped onto the hypotenuse", "C. Angle bisector of C", "D. Line parallel to AB"],
-              ans: 1,
-              explanation: "Drawing altitude BD perpendicular to hypotenuse AC splits ΔABC into two right triangles that are both similar to the original triangle."
-            },
-            {
-              q: "4. Which relation is derived from ΔADB ~ ΔABC?",
-              options: ["A. AB² = AC × AD", "B. BC² = AC × CD", "C. BD² = AD × CD", "D. AC² = AD × CD"],
-              ans: 0,
-              explanation: "From AD / AB = AB / AC, cross multiplying yields AB² = AC × AD."
-            },
-            {
-              q: "5. Which relation is derived from ΔBDC ~ ΔABC?",
-              options: ["A. AB² = AC × AD", "B. BC² = AC × CD", "C. AC² = AB × BC", "D. BD = CD"],
-              ans: 1,
-              explanation: "From CD / BC = BC / AC, cross multiplying yields BC² = AC × CD."
-            },
-            {
-              q: "6. What is (AD + CD) equal to in terms of the hypotenuse segments?",
-              options: ["A. BD", "B. AC", "C. AB", "D. 2 AC"],
-              ans: 1,
-              explanation: "Since point D lies on hypotenuse segment AC, AD + CD = AC."
-            },
-            {
-              q: "7. Which of the following is a classic fundamental Pythagorean triple?",
-              options: ["A. (3, 4, 5)", "B. (2, 3, 4)", "C. (1, 2, 3)", "D. (5, 6, 7)"],
-              ans: 0,
-              explanation: "3² + 4² = 9 + 16 = 25 = 5². Thus (3, 4, 5) is a Pythagorean triple."
-            },
-            {
-              q: "8. If hypotenuse is 13 cm and one side is 5 cm, what is the third side?",
-              options: ["A. 8 cm", "B. 10 cm", "C. 12 cm", "D. 11 cm"],
-              ans: 2,
-              explanation: "√(13² - 5²) = √(169 - 25) = √144 = 12 cm."
-            },
-            {
-              q: "9. What does the converse of Pythagoras Theorem state?",
-              options: [
-                "A. If a² + b² = c² in a triangle, then the triangle is right-angled",
-                "B. If a triangle has equal sides, it has equal angles",
-                "C. All right triangles are similar",
-                "D. The hypotenuse is always the longest side"
-              ],
-              ans: 0,
-              explanation: "The converse states that if the square of the longest side equals the sum of squares of the other two sides, the angle opposite the longest side is 90°."
-            },
-            {
-              q: "10. In ancient Indian mathematics, by what name is Pythagoras Theorem known in Sulba Sutras?",
-              options: ["A. Baudhayana Theorem", "B. Aryabhata Rule", "C. Brahmagupta Formula", "D. Ramanujan Identity"],
-              ans: 0,
-              explanation: "Indian mathematician Baudhayana stated this geometric theorem in the Baudhayana Sulba Sutra centuries before Pythagoras."
-            }
-          ],
-          explanation: "Similarity of right sub-triangles ΔADB and ΔBDC with whole ΔABC proves AC² = AB² + BC²."
         },
         {
           id: "m_em_4_2_4",
@@ -1438,6 +1252,126 @@ const MATHS_EM_UNIT_4_DATA = {
           explanation: "Logical proof showing OA is the shortest distance from center O to tangent line PQ, therefore OA ⊥ PQ."
         },
         {
+          id: "m_em_4_1_6",
+          type: "5m",
+          mark: "5 Marks",
+          examYear: "2024",
+          examTag: "Practical Geometry 5M",
+          isImportant: true,
+          q: "A girl of height 1.25 m stands 2.5 m from a mirror on the ground. The mirror is 6.6 m from a lamp post. Find the height of the lamp post.",
+          diagramImg: "math_ch4_5m_q10_lamp_post.jpg",
+          diagramCaption: "Blackboard Solution: Similar Triangles - Mirror Reflection & Lamp Post Height (Tap to Zoom)",
+          ans: `<div style="line-height:1.8;">
+            <b>Problem Statement:</b><br>
+            A girl of height 1.25 m stands 2.5 m away from a mirror placed horizontally on the ground. The mirror is 6.6 m away from the foot of a lamp post. If the girl can see the top of the lamp post reflected in the mirror, find the height of the lamp post.<br><br>
+
+            <b>Given Data:</b><br>
+            • Height of the girl (CD) = 1.25 m<br>
+            • Distance from girl to the mirror (DM) = 2.5 m<br>
+            • Distance from lamp post to the mirror (BM) = 6.6 m<br>
+            • Let the height of the lamp post (AB) = <b>h metres</b><br><br>
+
+            <b>Geometric Analysis using Similar Triangles:</b><br>
+            1. The lamp post and the girl both stand vertically upright on the horizontal ground:<br>
+            <div style="margin:4px 0 4px 18px; font-weight:700;">
+              ∠ABM = ∠CDM = 90°
+            </div><br>
+            2. By the physical <b>Law of Reflection of Light</b>, the angle of incidence equals the angle of reflection:<br>
+            <div style="margin:4px 0 4px 18px; font-weight:700;">
+              ∠AMB = ∠CMD
+            </div><br>
+            3. Therefore, by <b>AA similarity criterion</b>:<br>
+            <div style="margin:4px 0 4px 18px; font-weight:700; color:#1d4ed8; font-size:15px;">
+              ΔABM ~ ΔCDM
+            </div><br>
+
+            <b>Proportion of Corresponding Sides:</b><br>
+            Since corresponding sides of similar triangles are proportional:<br>
+            <div style="margin:6px 0 6px 18px; font-weight:700; font-size:16px;">
+              AB / CD = BM / DM
+            </div><br>
+            Substitute the given numerical values:<br>
+            h / 1.25 = 6.6 / 2.5<br><br>
+
+            <b>Step-by-Step Calculation:</b><br>
+            Cross-multiplying:<br>
+            2.5 × h = 1.25 × 6.6<br><br>
+            h = (1.25 × 6.6) / 2.5<br><br>
+            Notice that 1.25 / 2.5 = 1 / 2 = 0.5:<br>
+            h = 6.6 / 2<br>
+            <b style="color:#15803d; font-size:16px;">h = 3.3 m</b><br><br>
+
+            <div style="margin-top:12px; padding:10px 14px; background:#f0fdf4; border:1.5px solid #22c55e; border-radius:8px; font-weight:700; text-align:center; color:#166534; font-size:16px;">
+              Answer: The height of the lamp post is 3.3 metres (or 330 cm).
+            </div>
+          </div>`,
+          noVoice: true,
+          checkpoints: [
+            {
+              q: "1. Which geometric principle is used to find the lamp post's height?",
+              options: ["A. Congruence of triangles", "B. Similarity of triangles (AA criterion)", "C. Coordinate distance formula", "D. Volume ratio"],
+              ans: 1,
+              explanation: "Both right triangles share identical angles due to vertical standing (90°) and reflection angles, making them similar by AA."
+            },
+            {
+              q: "2. Why is ∠AMB equal to ∠CMD?",
+              options: ["A. Vertically opposite angles", "B. Law of reflection: angle of incidence equals angle of reflection", "C. Alternate angles", "D. Right angles"],
+              ans: 1,
+              explanation: "The reflection of light in the plane mirror ensures that the angle of incidence equals the angle of reflection."
+            },
+            {
+              q: "3. What is the ratio of heights (AB / CD) equal to?",
+              options: ["A. BM / DM", "B. DM / BM", "C. AM / CM", "D. CD / AB"],
+              ans: 0,
+              explanation: "In similar triangles ΔABM ~ ΔCDM, the ratio of vertical heights AB/CD equals the ratio of ground distances BM/DM."
+            },
+            {
+              q: "4. What is the value of 1.25 / 2.5?",
+              options: ["A. 2", "B. 0.5 (or ½)", "C. 0.25", "D. 0.75"],
+              ans: 1,
+              explanation: "1.25 × 2 = 2.50, so 1.25 / 2.5 = 0.5 = 1/2."
+            },
+            {
+              q: "5. What is the calculated height of the lamp post?",
+              options: ["A. 4.2 m", "B. 3.3 m", "C. 2.8 m", "D. 3.6 m"],
+              ans: 1,
+              explanation: "h = (1.25 × 6.6) / 2.5 = 6.6 / 2 = 3.3 m."
+            },
+            {
+              q: "6. If the mirror distance to the lamp post was doubled to 13.2 m while others remained constant, what would the height be?",
+              options: ["A. 6.6 m", "B. 3.3 m", "C. 9.9 m", "D. 5.5 m"],
+              ans: 0,
+              explanation: "Height is directly proportional to distance: h = (1.25 × 13.2) / 2.5 = 13.2 / 2 = 6.6 m."
+            },
+            {
+              q: "7. Which exercise in Tamil Nadu Class 10 Chapter 4 contains this real-world application problem?",
+              options: ["A. Exercise 4.1", "B. Exercise 4.2", "C. Exercise 4.3", "D. Exercise 4.4"],
+              ans: 0,
+              explanation: "This classic problem is in Exercise 4.1 (Similar Triangles Applications)."
+            },
+            {
+              q: "8. Both the girl and the lamp post form what angle with the horizontal ground?",
+              options: ["A. 45°", "B. 60°", "C. 90° (perpendicular)", "D. 180°"],
+              ans: 2,
+              explanation: "Structures and people standing upright on flat ground make a 90° right angle."
+            },
+            {
+              q: "9. Can similar triangles be used to measure celestial or unreachable heights?",
+              options: ["A. Yes, Thales famously used shadow similarity to calculate the height of the Great Pyramids", "B. No, only right triangles under 10 m", "C. Only in outer space", "D. No"],
+              ans: 0,
+              explanation: "Historically, Greek mathematician Thales measured the height of Egyptian pyramids using similar triangles and shadows."
+            },
+            {
+              q: "10. What is 3.3 metres expressed in centimetres?",
+              options: ["A. 33 cm", "B. 330 cm", "C. 3300 cm", "D. 0.33 cm"],
+              ans: 1,
+              explanation: "1 metre = 100 cm, so 3.3 m = 3.3 × 100 = 330 cm."
+            }
+          ],
+          explanation: "Similar triangle application problem: h / 1.25 = 6.6 / 2.5 gives lamp post height h = 3.3 m."
+        }
+      ]
+        {
           id: "m_em_4_2_9",
           type: "5m",
           mark: "5 Marks",
@@ -1473,6 +1407,88 @@ const MATHS_EM_UNIT_4_DATA = {
           </div>`,
           noVoice: true,
           explanation: "Master overview of all 10 crucial 5-mark geometry questions for 10th standard board examinations."
+        }
+      ]
+    }
+  ]
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ]
+    },
+    {
+      id: "sec_math_em_4_2",
+      title: "Section 2: 1-Mark & 2-Mark Practice Questions (Exercises 4.1 to 4.4)",
+      author: "Chapter 4: Geometry - 1M & 2M Key Concepts",
+      questions: [
+        {
+          id: "m_em_4_1_1",
+          type: "1m",
+          mark: "1 Mark",
+          examTag: "Board Model",
+          q: "In ΔABC, DE || BC. If AD = 4 cm, DB = 6 cm, and AE = 5 cm, calculate the length of EC.",
+          options: ["a) 6.5 cm", "b) 7.5 cm", "c) 8 cm", "d) 9 cm"],
+          ans: "Answer: <b>b) 7.5 cm</b><br>Explanation: By Thales Theorem (BPT), AD / DB = AE / EC ⇒ 4 / 6 = 5 / EC ⇒ EC = (5 × 6) / 4 = 30 / 4 = <b>7.5 cm</b>.",
+          explanation: "Applying BPT: AD/DB = AE/EC yields EC = 7.5 cm."
+        },
+        {
+          id: "m_em_4_1_2",
+          type: "2m",
+          mark: "2 Marks",
+          examYear: "2023",
+          examTag: "2023*",
+          q: "In ΔABC, AD is the internal bisector of ∠A meeting BC at D. If AB = 8 cm, AC = 6 cm, and BD = 4 cm, find DC.",
+          ans: `<div style="line-height:1.8;">
+            <b>Solution:</b><br>
+            By Angle Bisector Theorem (ABT):<br>
+            <div style="margin:4px 0 4px 18px; font-weight:700;">BD / DC = AB / AC</div><br>
+            Substituting the given values:<br>
+            4 / DC = 8 / 6<br>
+            4 / DC = 4 / 3<br>
+            Cross multiplying:<br>
+            4 × DC = 4 × 3<br>
+            <b>DC = 3 cm</b>
+          </div>`,
+          explanation: "Angle Bisector Theorem ratio BD/DC = AB/AC gives DC = 3 cm."
+        },
+        {
+          id: "m_em_4_2_1",
+          type: "1m",
+          mark: "1 Mark",
+          q: "The length of the tangent to a circle from a point 10 cm away from the centre is 8 cm. Find the radius of the circle.",
+          options: ["a) 4 cm", "b) 5 cm", "c) 6 cm", "d) 7 cm"],
+          ans: "Answer: <b>c) 6 cm</b><br>Explanation: The radius is perpendicular to the tangent at the point of contact. By Pythagoras Theorem: Radius r = √(OP² - PT²) = √(10² - 8²) = √(100 - 64) = √36 = <b>6 cm</b>.",
+          explanation: "In right triangle OPT, r = √(10² - 8²) = 6 cm."
+        },
+        {
+          id: "m_em_4_2_2",
+          type: "2m",
+          mark: "2 Marks",
+          q: "A man goes 18 m due east and then 24 m due north. Find his distance from the starting point.",
+          ans: `<div style="line-height:1.8;">
+            <b>Solution:</b><br>
+            East and North directions are perpendicular (angle = 90°).<br>
+            The path forms a right-angled triangle where the required distance is the hypotenuse.<br><br>
+            By Pythagoras Theorem:<br>
+            Distance d = √(18² + 24²)<br>
+            d = √(324 + 576)<br>
+            d = √900<br>
+            <b>d = 30 m</b><br><br>
+            Hence, he is 30 metres away from the starting point.
+          </div>`,
+          explanation: "Hypotenuse = √(18² + 24²) = √900 = 30 m."
         }
       ]
     }

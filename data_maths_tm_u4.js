@@ -1,4 +1,4 @@
-﻿// 10-ஆம் வகுப்பு கணிதம் - அலகு 4: வடிவியல் (Geometry)
+// 10-ஆம் வகுப்பு கணிதம் - அலகு 4: வடிவியல் (Geometry)
 // தமிழ்நாடு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const MATHS_TM_UNIT_4_DATA = {
@@ -24,40 +24,11 @@ const MATHS_TM_UNIT_4_DATA = {
     // பகுதி 1: தேல்ஸ் தேற்றம், கோண இருசமவெட்டித் தேற்றம் & வடிவொத்த முக்கோணங்கள்
     // -------------------------------------------------------------
     {
+    {
       id: "sec_math_tm_4_1",
-      title: "பகுதி 1: தேல்ஸ் தேற்றம், கோண இருசமவெட்டித் தேற்றம் & வடிவொத்த முக்கோணங்கள்",
-      author: "வடிவியல் - பயிற்சி 4.1 & 4.2",
+      title: "பகுதி 1: முக்கிய 5-மதிப்பெண் தேற்றங்கள் & கணக்குகள் (கரும்பலகை சிறப்பு 10 வினாக்கள்)",
+      author: "அலகு 4: வடிவியல் - முக்கிய 5 மதிப்பெண் (வினாக்கள் 1 முதல் 10 வரை)",
       questions: [
-        {
-          id: "m_tm_4_1_1",
-          type: "1m",
-          mark: "1 மதிப்பெண்",
-          examTag: "அரசு மாதிரி",
-          q: "ΔABC-யில் DE || BC. AD = 4 செ.மீ, DB = 6 செ.மீ மற்றும் AE = 5 செ.மீ எனில் EC-ன் மதிப்பு காண்க.",
-          options: ["அ) 6.5 செ.மீ", "ஆ) 7.5 செ.மீ", "இ) 8 செ.மீ", "ஈ) 9 செ.மீ"],
-          ans: "விடை: <b>ஆ) 7.5 செ.மீ</b><br>விளக்கம்: தேல்ஸ் தேற்றப்படி AD/DB = AE/EC. 4/6 = 5/EC ⇒ EC = (5 × 6) / 4 = 30 / 4 = <b>7.5 செ.மீ</b>.",
-          ansTamil: "அடிப்படை விகிதசமத் தேற்றத்தைப் பயன்படுத்தி EC = 7.5 செ.மீ எனப் பெறப்படுகிறது."
-        },
-        {
-          id: "m_tm_4_1_2",
-          type: "2m",
-          mark: "2 மதிப்பெண்",
-          examYear: "2023",
-          examTag: "2023*",
-          q: "ΔABC-யில் ∠A-ன் இருசமவெட்டி AD ஆனது BC-ஐ D-யில் சந்திக்கிறது. AB = 8 செ.மீ, AC = 6 செ.மீ மற்றும் BD = 4 செ.மீ எனில் DC-ன் நீளம் காண்க.",
-          ans: `<div style="line-height:1.8;">
-            <b>தீர்வு:</b><br>
-            கோண இருசமவெட்டித் தேற்றத்தின்படி (ABT):<br>
-            <div style="margin:4px 0 4px 18px; font-weight:700;">BD / DC = AB / AC</div><br>
-            கொடுக்கப்பட்ட மதிப்புகளைப் பிரதியிட:<br>
-            4 / DC = 8 / 6<br>
-            4 / DC = 4 / 3<br>
-            குறுக்குப் பெருக்கல் செய்ய:<br>
-            4 × DC = 4 × 3<br>
-            <b>DC = 3 செ.மீ</b>
-          </div>`,
-          ansTamil: "கோண இருசமவெட்டித் தேற்றப்படி எதிர்பக்கத்தின் விகிதம் மற்ற இரு பக்கங்களின் விகிதத்திற்கு சமமாக DC = 3 செ.மீ கிடைக்கிறது."
-        },
         {
           id: "m_tm_4_1_3",
           type: "5m",
@@ -208,6 +179,83 @@ const MATHS_TM_UNIT_4_DATA = {
           ansTamil: "தேல்ஸ் தேற்றத்தின் வடிவொத்த முக்கோண நிரூபணம் மூலம் AD/DB = AE/EC நிறுவப்பட்டது."
         },
         {
+          id: "m_tm_4_2_3",
+          type: "5m",
+          mark: "5 மதிப்பெண்",
+          examYear: "2023",
+          examTag: "2023* (தேற்றம்)",
+          isImportant: true,
+          q: "பிதாகரஸ் தேற்றத்தைக் (Pythagoras Theorem) கூறி நிறுவுக.",
+          diagramImg: "math_ch4_5m_q2_pythagoras.jpg",
+          diagramCaption: "கரும்பலகைத் தீர்வு: பிதாகரஸ் தேற்றம் நிரூபணம் (தொட்டுப் பெரிதாகக் காண்க)",
+          ans: `<div style="line-height:1.8;">
+            <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
+              <b>பிதாகரஸ் தேற்றம்:</b><br>
+              <i>ஒரு செங்கோண முக்கோணத்தில் கர்ணத்தின் வர்க்கமானது மற்ற இரு பக்கங்களின் வர்க்கங்களின் கூடுதலுக்குச் சமம்.</i>
+            </div>
+
+            <b>கொடுக்கப்பட்டது:</b><br>
+            செங்கோண முக்கோணம் ΔABC-ல் ∠B = 90°.<br><br>
+
+            <b>நிரூபிக்க வேண்டியது:</b><br>
+            <div style="margin:6px 0 6px 18px; font-weight:700; font-size:16px; color:#1d4ed8;">
+              AC² = AB² + BC²
+            </div><br>
+
+            <b>அமைப்பு:</b><br>
+            BD ⊥ AC வரைக.<br><br>
+
+            <b>நிரூபணம்:</b><br>
+            <table style="width:100%; border-collapse:collapse; margin:10px 0;">
+              <thead>
+                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
+                  <th style="padding:8px 10px; width:8%;">படி</th>
+                  <th style="padding:8px 10px; width:52%;">கூற்று</th>
+                  <th style="padding:8px 10px; width:40%;">காரணம்</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:8px 10px; font-weight:700;">1.</td>
+                  <td style="padding:8px 10px;">ΔADB மற்றும் ΔABC-ஐ ஒப்பிட:<br>• ∠ADB = ∠ABC = 90°<br>• ∠A பொதுக் கோணம்<br>⇒ <b>ΔADB ~ ΔABC</b></td>
+                  <td style="padding:8px 10px; color:#475569;">AA வடிவொத்த விதி</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:8px 10px; font-weight:700;">2.</td>
+                  <td style="padding:8px 10px;">AD / AB = AB / AC<br>குறுக்குப் பெருக்கல் செய்ய:<br><b>AB² = AC × AD</b></td>
+                  <td style="padding:8px 10px; color:#475569;">ஒத்த பக்கங்களின் விகிதம் ---- (1)</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:8px 10px; font-weight:700;">3.</td>
+                  <td style="padding:8px 10px;">ΔBDC மற்றும் ΔABC-ஐ ஒப்பிட:<br>• ∠BDC = ∠ABC = 90°<br>• ∠C பொதுக் கோணம்<br>⇒ <b>ΔBDC ~ ΔABC</b></td>
+                  <td style="padding:8px 10px; color:#475569;">AA வடிவொத்த விதி</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:8px 10px; font-weight:700;">4.</td>
+                  <td style="padding:8px 10px;">CD / BC = BC / AC<br>குறுக்குப் பெருக்கல் செய்ய:<br><b>BC² = AC × CD</b></td>
+                  <td style="padding:8px 10px; color:#475569;">ஒத்த பக்கங்களின் விகிதம் ---- (2)</td>
+                </tr>
+                <tr style="border-bottom:1px solid #e2e8f0;">
+                  <td style="padding:8px 10px; font-weight:700;">5.</td>
+                  <td style="padding:8px 10px;">(1) மற்றும் (2)-ஐக் கூட்ட:<br>AB² + BC² = (AC × AD) + (AC × CD)<br>AB² + BC² = AC (AD + CD)</td>
+                  <td style="padding:8px 10px; color:#475569;">AC-ஐப் பொதுவாக வெளியே எடுக்க</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 10px; font-weight:700;">6.</td>
+                  <td style="padding:8px 10px;">படத்திலிருந்து AD + CD = AC என்பதால்:<br>AB² + BC² = AC × AC<br><b style="color:#15803d; font-size:15px;">AC² = AB² + BC²</b></td>
+                  <td style="padding:8px 10px; font-weight:700; color:#15803d;">தேற்றம் நிறுவப்பட்டது!</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="margin-top:12px; padding:10px 14px; background:#f0fdf4; border:1.5px solid #22c55e; border-radius:8px; font-weight:700; text-align:center; color:#166534; font-size:16px;">
+              ∴ AC² = AB² + BC² (பிதாகரஸ் தேற்றம் வெற்றிகரமாக நிறுவப்பட்டது)
+            </div>
+          </div>`,
+          noVoice: true,
+          ansTamil: "செங்கோண முக்கோணங்களின் வடிவொத்த தன்மை மூலம் AC² = AB² + BC² என நிறுவப்பட்டது."
+        },
+        {
           id: "m_tm_4_1_4",
           type: "5m",
           mark: "5 மதிப்பெண்",
@@ -336,162 +384,6 @@ const MATHS_TM_UNIT_4_DATA = {
           </div>`,
           noVoice: true,
           ansTamil: "சீவாஸின் தேற்றத்தின் பெருக்கற்பலன் 1 என அமைவதால் நடுக்கோடுகள் ஒரு புள்ளி வழிச் செல்வது நிறுவப்பட்டது."
-        },
-        {
-          id: "m_tm_4_1_6",
-          type: "5m",
-          mark: "5 மதிப்பெண்",
-          examYear: "2024",
-          examTag: "பயன்பாட்டுக் கணக்கு 5M",
-          isImportant: true,
-          q: "1.25 மீ உயரமுள்ள ஒரு பெண் தரையிலுள்ள கண்ணாடியிலிருந்து 2.5 மீ தொலைவில் நிற்கிறாள். அக்கண்ணாடி ஒரு விளக்குக் கம்பத்திலிருந்து 6.6 மீ தொலைவில் உள்ளது எனில், விளக்குக் கம்பத்தின் உயரம் காண்க.",
-          diagramImg: "math_ch4_5m_q10_lamp_post.jpg",
-          diagramCaption: "கரும்பலகைத் தீர்வு: வடிவொத்த முக்கோணங்கள் - விளக்குக் கம்பத்தின் உயரம் (தொட்டுப் பெரிதாகக் காண்க)",
-          ans: `<div style="line-height:1.8;">
-            <b>கொடுக்கப்பட்ட தகவல்கள்:</b><br>
-            • பெண்ணின் உயரம் (CD) = 1.25 மீ<br>
-            • பெண்ணிற்கும் கண்ணாடிக்கும் உள்ள தொலைவு (DM) = 2.5 மீ<br>
-            • விளக்குக் கம்பத்திற்கும் கண்ணாடிக்கும் உள்ள தொலைவு (BM) = 6.6 மீ<br>
-            • விளக்குக் கம்பத்தின் உயரம் (AB) = <b>h மீ</b> என்க.<br><br>
-
-            <b>வடிவொத்த முக்கோணக் கோட்பாடு:</b><br>
-            1. விளக்குக் கம்பமும் பெண்ணும் தரையில் செங்குத்தாக நிற்கின்றனர்:<br>
-            ∠ABM = ∠CDM = 90°.<br>
-            2. ஒளி எதிரொளிப்பு விதியின்படி (படுகோணம் = எதிரொளிப்புக் கோணம்):<br>
-            ∠AMB = ∠CMD.<br>
-            3. எனவே, <b>AA வடிவொத்த விதியின்படி</b>:<br>
-            <div style="margin:4px 0 4px 18px; font-weight:700; color:#1d4ed8; font-size:15px;">
-              ΔABM ~ ΔCDM
-            </div><br>
-
-            <b>ஒத்த பக்கங்களின் விகிதம்:</b><br>
-            AB / CD = BM / DM<br><br>
-            மதிப்புகளைப் பிரதியிட:<br>
-            h / 1.25 = 6.6 / 2.5<br><br>
-            2.5 × h = 1.25 × 6.6<br>
-            h = (1.25 × 6.6) / 2.5<br>
-            1.25 / 2.5 = 1 / 2 = 0.5 என்பதால்:<br>
-            h = 6.6 / 2<br>
-            <b style="color:#15803d; font-size:16px;">h = 3.3 மீ</b><br><br>
-
-            <div style="margin-top:12px; padding:10px 14px; background:#f0fdf4; border:1.5px solid #22c55e; border-radius:8px; font-weight:700; text-align:center; color:#166534; font-size:16px;">
-              விடை: விளக்குக் கம்பத்தின் உயரம் 3.3 மீட்டர்கள் ஆகும்.
-            </div>
-          </div>`,
-          noVoice: true,
-          ansTamil: "வடிவொத்த முக்கோணங்களின் விகிதத்தைப் பயன்படுத்தி விளக்குக் கம்பத்தின் உயரம் 3.3 மீ எனப் பெறப்படுகிறது."
-        }
-      ]
-    },
-
-    // -------------------------------------------------------------
-    // பகுதி 2: பிதாகரஸ் தேற்றம் & வட்டத்தின் தொடுகோடுகள்
-    // -------------------------------------------------------------
-    {
-      id: "sec_math_tm_4_2",
-      title: "பகுதி 2: பிதாகரஸ் தேற்றம் & வட்டத்தின் தொடுகோடுகள்",
-      author: "வடிவியல் - பயிற்சி 4.3 & 4.4",
-      questions: [
-        {
-          id: "m_tm_4_2_1",
-          type: "1m",
-          mark: "1 மதிப்பெண்",
-          q: "வட்டத்தின் மையத்திலிருந்து 10 செ.மீ தொலைவில் உள்ள புள்ளியிலிருந்து வட்டத்திற்கு வரையப்பட்ட தொடுகோட்டின் நீளம் 8 செ.மீ எனில், வட்டத்தின் ஆரம் காண்க.",
-          options: ["அ) 4 செ.மீ", "ஆ) 5 செ.மீ", "இ) 6 செ.மீ", "ஈ) 7 செ.மீ"],
-          ans: "விடை: <b>இ) 6 செ.மீ</b><br>விளக்கம்: தொடுபுள்ளியில் ஆரம் தொடுகோட்டிற்குச் செங்குத்து. பிதாகரஸ் தேற்றப்படி ஆரம் r = √(10² - 8²) = √(100 - 64) = √36 = <b>6 செ.மீ</b>.",
-          ansTamil: "செங்கோண முக்கோணத்தில் r = √(100 - 64) = 6 செ.மீ கிடைக்கிறது."
-        },
-        {
-          id: "m_tm_4_2_2",
-          type: "2m",
-          mark: "2 மதிப்பெண்",
-          q: "ஒரு மனிதர் தொடக்கப் புள்ளியிலிருந்து 18 மீ கிழக்கு நோக்கியும், பின்னர் 24 மீ வடக்கு நோக்கியும் செல்கிறார். அவர் தொடங்கிய இடத்திலிருந்து உள்ள தூரத்தைக் காண்க.",
-          ans: `<div style="line-height:1.8;">
-            <b>தீர்வு:</b><br>
-            கிழக்கு மற்றும் வடக்கு திசைகள் செங்குத்தானவை (90° கோணம்).<br>
-            பிதாகரஸ் தேற்றப்படி தேவையான தொலைவு d = √(18² + 24²)<br>
-            d = √(324 + 576) = √900<br>
-            <b>d = 30 மீ</b><br>
-            எனவே, அவர் தொடக்க இடத்திலிருந்து 30 மீ தொலைவில் உள்ளார்.
-          </div>`,
-          ansTamil: "செங்கோண முக்கோணக் கர்ணம் = √(324 + 576) = 30 மீ."
-        },
-        {
-          id: "m_tm_4_2_3",
-          type: "5m",
-          mark: "5 மதிப்பெண்",
-          examYear: "2023",
-          examTag: "2023* (தேற்றம்)",
-          isImportant: true,
-          q: "பிதாகரஸ் தேற்றத்தைக் (Pythagoras Theorem) கூறி நிறுவுக.",
-          diagramImg: "math_ch4_5m_q2_pythagoras.jpg",
-          diagramCaption: "கரும்பலகைத் தீர்வு: பிதாகரஸ் தேற்றம் நிரூபணம் (தொட்டுப் பெரிதாகக் காண்க)",
-          ans: `<div style="line-height:1.8;">
-            <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
-              <b>பிதாகரஸ் தேற்றம்:</b><br>
-              <i>ஒரு செங்கோண முக்கோணத்தில் கர்ணத்தின் வர்க்கமானது மற்ற இரு பக்கங்களின் வர்க்கங்களின் கூடுதலுக்குச் சமம்.</i>
-            </div>
-
-            <b>கொடுக்கப்பட்டது:</b><br>
-            செங்கோண முக்கோணம் ΔABC-ல் ∠B = 90°.<br><br>
-
-            <b>நிரூபிக்க வேண்டியது:</b><br>
-            <div style="margin:6px 0 6px 18px; font-weight:700; font-size:16px; color:#1d4ed8;">
-              AC² = AB² + BC²
-            </div><br>
-
-            <b>அமைப்பு:</b><br>
-            BD ⊥ AC வரைக.<br><br>
-
-            <b>நிரூபணம்:</b><br>
-            <table style="width:100%; border-collapse:collapse; margin:10px 0;">
-              <thead>
-                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
-                  <th style="padding:8px 10px; width:8%;">படி</th>
-                  <th style="padding:8px 10px; width:52%;">கூற்று</th>
-                  <th style="padding:8px 10px; width:40%;">காரணம்</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:8px 10px; font-weight:700;">1.</td>
-                  <td style="padding:8px 10px;">ΔADB மற்றும் ΔABC-ஐ ஒப்பிட:<br>• ∠ADB = ∠ABC = 90°<br>• ∠A பொதுக் கோணம்<br>⇒ <b>ΔADB ~ ΔABC</b></td>
-                  <td style="padding:8px 10px; color:#475569;">AA வடிவொத்த விதி</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:8px 10px; font-weight:700;">2.</td>
-                  <td style="padding:8px 10px;">AD / AB = AB / AC<br>குறுக்குப் பெருக்கல் செய்ய:<br><b>AB² = AC × AD</b></td>
-                  <td style="padding:8px 10px; color:#475569;">ஒத்த பக்கங்களின் விகிதம் ---- (1)</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:8px 10px; font-weight:700;">3.</td>
-                  <td style="padding:8px 10px;">ΔBDC மற்றும் ΔABC-ஐ ஒப்பிட:<br>• ∠BDC = ∠ABC = 90°<br>• ∠C பொதுக் கோணம்<br>⇒ <b>ΔBDC ~ ΔABC</b></td>
-                  <td style="padding:8px 10px; color:#475569;">AA வடிவொத்த விதி</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:8px 10px; font-weight:700;">4.</td>
-                  <td style="padding:8px 10px;">CD / BC = BC / AC<br>குறுக்குப் பெருக்கல் செய்ய:<br><b>BC² = AC × CD</b></td>
-                  <td style="padding:8px 10px; color:#475569;">ஒத்த பக்கங்களின் விகிதம் ---- (2)</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:8px 10px; font-weight:700;">5.</td>
-                  <td style="padding:8px 10px;">(1) மற்றும் (2)-ஐக் கூட்ட:<br>AB² + BC² = (AC × AD) + (AC × CD)<br>AB² + BC² = AC (AD + CD)</td>
-                  <td style="padding:8px 10px; color:#475569;">AC-ஐப் பொதுவாக வெளியே எடுக்க</td>
-                </tr>
-                <tr>
-                  <td style="padding:8px 10px; font-weight:700;">6.</td>
-                  <td style="padding:8px 10px;">படத்திலிருந்து AD + CD = AC என்பதால்:<br>AB² + BC² = AC × AC<br><b style="color:#15803d; font-size:15px;">AC² = AB² + BC²</b></td>
-                  <td style="padding:8px 10px; font-weight:700; color:#15803d;">தேற்றம் நிறுவப்பட்டது!</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <div style="margin-top:12px; padding:10px 14px; background:#f0fdf4; border:1.5px solid #22c55e; border-radius:8px; font-weight:700; text-align:center; color:#166534; font-size:16px;">
-              ∴ AC² = AB² + BC² (பிதாகரஸ் தேற்றம் வெற்றிகரமாக நிறுவப்பட்டது)
-            </div>
-          </div>`,
-          noVoice: true,
-          ansTamil: "செங்கோண முக்கோணங்களின் வடிவொத்த தன்மை மூலம் AC² = AB² + BC² என நிறுவப்பட்டது."
         },
         {
           id: "m_tm_4_2_4",
@@ -701,6 +593,52 @@ const MATHS_TM_UNIT_4_DATA = {
           ansTamil: "மையத்திலிருந்து தொடுகோட்டிற்கு வரையப்படும் மிகக் குறைந்த தூரம் செங்குத்துத் தூரமே என்பதால் OA ⊥ PQ நிறுவப்பட்டது."
         },
         {
+          id: "m_tm_4_1_6",
+          type: "5m",
+          mark: "5 மதிப்பெண்",
+          examYear: "2024",
+          examTag: "பயன்பாட்டுக் கணக்கு 5M",
+          isImportant: true,
+          q: "1.25 மீ உயரமுள்ள ஒரு பெண் தரையிலுள்ள கண்ணாடியிலிருந்து 2.5 மீ தொலைவில் நிற்கிறாள். அக்கண்ணாடி ஒரு விளக்குக் கம்பத்திலிருந்து 6.6 மீ தொலைவில் உள்ளது எனில், விளக்குக் கம்பத்தின் உயரம் காண்க.",
+          diagramImg: "math_ch4_5m_q10_lamp_post.jpg",
+          diagramCaption: "கரும்பலகைத் தீர்வு: வடிவொத்த முக்கோணங்கள் - விளக்குக் கம்பத்தின் உயரம் (தொட்டுப் பெரிதாகக் காண்க)",
+          ans: `<div style="line-height:1.8;">
+            <b>கொடுக்கப்பட்ட தகவல்கள்:</b><br>
+            • பெண்ணின் உயரம் (CD) = 1.25 மீ<br>
+            • பெண்ணிற்கும் கண்ணாடிக்கும் உள்ள தொலைவு (DM) = 2.5 மீ<br>
+            • விளக்குக் கம்பத்திற்கும் கண்ணாடிக்கும் உள்ள தொலைவு (BM) = 6.6 மீ<br>
+            • விளக்குக் கம்பத்தின் உயரம் (AB) = <b>h மீ</b> என்க.<br><br>
+
+            <b>வடிவொத்த முக்கோணக் கோட்பாடு:</b><br>
+            1. விளக்குக் கம்பமும் பெண்ணும் தரையில் செங்குத்தாக நிற்கின்றனர்:<br>
+            ∠ABM = ∠CDM = 90°.<br>
+            2. ஒளி எதிரொளிப்பு விதியின்படி (படுகோணம் = எதிரொளிப்புக் கோணம்):<br>
+            ∠AMB = ∠CMD.<br>
+            3. எனவே, <b>AA வடிவொத்த விதியின்படி</b>:<br>
+            <div style="margin:4px 0 4px 18px; font-weight:700; color:#1d4ed8; font-size:15px;">
+              ΔABM ~ ΔCDM
+            </div><br>
+
+            <b>ஒத்த பக்கங்களின் விகிதம்:</b><br>
+            AB / CD = BM / DM<br><br>
+            மதிப்புகளைப் பிரதியிட:<br>
+            h / 1.25 = 6.6 / 2.5<br><br>
+            2.5 × h = 1.25 × 6.6<br>
+            h = (1.25 × 6.6) / 2.5<br>
+            1.25 / 2.5 = 1 / 2 = 0.5 என்பதால்:<br>
+            h = 6.6 / 2<br>
+            <b style="color:#15803d; font-size:16px;">h = 3.3 மீ</b><br><br>
+
+            <div style="margin-top:12px; padding:10px 14px; background:#f0fdf4; border:1.5px solid #22c55e; border-radius:8px; font-weight:700; text-align:center; color:#166534; font-size:16px;">
+              விடை: விளக்குக் கம்பத்தின் உயரம் 3.3 மீட்டர்கள் ஆகும்.
+            </div>
+          </div>`,
+          noVoice: true,
+          ansTamil: "வடிவொத்த முக்கோணங்களின் விகிதத்தைப் பயன்படுத்தி விளக்குக் கம்பத்தின் உயரம் 3.3 மீ எனப் பெறப்படுகிறது."
+        }
+      ]
+        },
+        {
           id: "m_tm_4_2_9",
           type: "5m",
           mark: "5 மதிப்பெண்",
@@ -736,6 +674,75 @@ const MATHS_TM_UNIT_4_DATA = {
           </div>`,
           noVoice: true,
           ansTamil: "அலகு 4 வடிவியலின் 10 முக்கிய 5 மதிப்பெண் வினா-விடைகளின் முழுமையான தொகுப்பு."
+        }
+      ]
+    }
+  ]
+};
+
+
+
+
+      ]
+    },
+    {
+      id: "sec_math_tm_4_2",
+      title: "பகுதி 2: 1 & 2 மதிப்பெண் பயிற்சி வினாக்கள் (பயிற்சி 4.1 முதல் 4.4 வரை)",
+      author: "அலகு 4: வடிவியல் - 1M & 2M அடிப்படைக் கணக்குகள்",
+      questions: [
+        {
+          id: "m_tm_4_1_1",
+          type: "1m",
+          mark: "1 மதிப்பெண்",
+          examTag: "அரசு மாதிரி",
+          q: "ΔABC-யில் DE || BC. AD = 4 செ.மீ, DB = 6 செ.மீ மற்றும் AE = 5 செ.மீ எனில் EC-ன் மதிப்பு காண்க.",
+          options: ["அ) 6.5 செ.மீ", "ஆ) 7.5 செ.மீ", "இ) 8 செ.மீ", "ஈ) 9 செ.மீ"],
+          ans: "விடை: <b>ஆ) 7.5 செ.மீ</b><br>விளக்கம்: தேல்ஸ் தேற்றப்படி AD/DB = AE/EC. 4/6 = 5/EC ⇒ EC = (5 × 6) / 4 = 30 / 4 = <b>7.5 செ.மீ</b>.",
+          ansTamil: "அடிப்படை விகிதசமத் தேற்றத்தைப் பயன்படுத்தி EC = 7.5 செ.மீ எனப் பெறப்படுகிறது."
+        },
+        {
+          id: "m_tm_4_1_2",
+          type: "2m",
+          mark: "2 மதிப்பெண்",
+          examYear: "2023",
+          examTag: "2023*",
+          q: "ΔABC-யில் ∠A-ன் இருசமவெட்டி AD ஆனது BC-ஐ D-யில் சந்திக்கிறது. AB = 8 செ.மீ, AC = 6 செ.மீ மற்றும் BD = 4 செ.மீ எனில் DC-ன் நீளம் காண்க.",
+          ans: `<div style="line-height:1.8;">
+            <b>தீர்வு:</b><br>
+            கோண இருசமவெட்டித் தேற்றத்தின்படி (ABT):<br>
+            <div style="margin:4px 0 4px 18px; font-weight:700;">BD / DC = AB / AC</div><br>
+            கொடுக்கப்பட்ட மதிப்புகளைப் பிரதியிட:<br>
+            4 / DC = 8 / 6<br>
+            4 / DC = 4 / 3<br>
+            குறுக்குப் பெருக்கல் செய்ய:<br>
+            4 × DC = 4 × 3<br>
+            <b>DC = 3 செ.மீ</b>
+          </div>`,
+          ansTamil: "கோண இருசமவெட்டித் தேற்றப்படி எதிர்பக்கத்தின் விகிதம் மற்ற இரு பக்கங்களின் விகிதத்திற்கு சமமாக DC = 3 செ.மீ கிடைக்கிறது."
+        },
+        {
+          id: "m_tm_4_2_1",
+          type: "1m",
+          mark: "1 மதிப்பெண்",
+          q: "வட்டத்தின் மையத்திலிருந்து 10 செ.மீ தொலைவில் உள்ள புள்ளியிலிருந்து வட்டத்திற்கு வரையப்பட்ட தொடுகோட்டின் நீளம் 8 செ.மீ எனில், வட்டத்தின் ஆரம் காண்க.",
+          options: ["அ) 4 செ.மீ", "ஆ) 5 செ.மீ", "இ) 6 செ.மீ", "ஈ) 7 செ.மீ"],
+          ans: "விடை: <b>இ) 6 செ.மீ</b><br>விளக்கம்: தொடுபுள்ளியில் ஆரம் தொடுகோட்டிற்குச் செங்குத்து. பிதாகரஸ் தேற்றப்படி ஆரம் r = √(10² - 8²) = √(100 - 64) = √36 = <b>6 செ.மீ</b>.",
+          ansTamil: "செங்கோண முக்கோணத்தில் r = √(100 - 64) = 6 செ.மீ கிடைக்கிறது."
+        },
+        {
+          id: "m_tm_4_2_2",
+          type: "2m",
+          mark: "2 மதிப்பெண்",
+          q: "ஒரு மனிதர் தொடக்கப் புள்ளியிலிருந்து 18 மீ கிழக்கு நோக்கியும், பின்னர் 24 மீ வடக்கு நோக்கியும் செல்கிறார். அவர் தொடங்கிய இடத்திலிருந்து உள்ள தூரத்தைக் காண்க.",
+          ans: `<div style="line-height:1.8;">
+            <b>தீர்வு:</b><br>
+            கிழக்கு மற்றும் வடக்கு திசைகள் செங்குத்தானவை (90° கோணம்).<br>
+            பிதாகரஸ் தேற்றப்படி தேவையான தொலைவு d = √(18² + 24²)<br>
+            d = √(324 + 576) = √900<br>
+            <b>d = 30 மீ</b><br>
+            எனவே, அவர் தொடக்க இடத்திலிருந்து 30 மீ தொலைவில் உள்ளார்.
+          </div>`,
+          ansTamil: "செங்கோண முக்கோணக் கர்ணம் = √(324 + 576) = 30 மீ."
         }
       ]
     }

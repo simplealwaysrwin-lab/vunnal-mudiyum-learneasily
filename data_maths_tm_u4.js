@@ -1,4 +1,4 @@
-// 10-ஆம் வகுப்பு கணிதம் - அலகு 4: வடிவியல் (Geometry)
+﻿// 10-ஆம் வகுப்பு கணிதம் - அலகு 4: வடிவியல் (Geometry)
 // தமிழ்நாடு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const MATHS_TM_UNIT_4_DATA = {
@@ -66,7 +66,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "2024* (தேற்றம்)",
           isImportant: true,
           q: "அடிப்படை விகிதசமத் தேற்றம் அல்லது தேல்ஸ் தேற்றத்தைக் (Basic Proportionality Theorem) கூறி நிறுவுக.",
-          diagramImg: "images/math_ch4_5m_q1_bpt.jpg",
+          diagramImg: "math_ch4_5m_q1_bpt_bb.jpg",
           diagramCaption: "அடிப்படை விகிதசமத் தேற்றம் (தேல்ஸ் தேற்றம்) - DE || BC (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -215,7 +215,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "முக்கிய 5M தேற்றம்",
           isImportant: true,
           q: "கோண இருசமவெட்டித் தேற்றத்தைக் (Angle Bisector Theorem) கூறி நிறுவுக.",
-          diagramImg: "images/math_ch4_5m_q3_abt.jpg",
+          diagramImg: "math_ch4_5m_q3_abt.jpg",
           diagramCaption: "கரும்பலகைத் தீர்வு: கோண இருசமவெட்டித் தேற்றம் நிரூபணம் (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -292,7 +292,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "அரசுத் தேர்வு 5M",
           isImportant: true,
           q: "ஒரு முக்கோணத்தின் நடுக்கோடுகள் ஒரு புள்ளி வழிச் செல்லும் (ஒரு புள்ளியில் சந்திக்கும்) என நிறுவுக.",
-          diagramImg: "images/math_ch4_5m_q4_medians.jpg",
+          diagramImg: "math_ch4_5m_q4_medians.jpg",
           diagramCaption: "கரும்பலகைத் தீர்வு: முக்கோணத்தின் நடுக்கோடுகள் ஒரு புள்ளியில் சந்திக்கும் நிரூபணம் (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -345,7 +345,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "பயன்பாட்டுக் கணக்கு 5M",
           isImportant: true,
           q: "1.25 மீ உயரமுள்ள ஒரு பெண் தரையிலுள்ள கண்ணாடியிலிருந்து 2.5 மீ தொலைவில் நிற்கிறாள். அக்கண்ணாடி ஒரு விளக்குக் கம்பத்திலிருந்து 6.6 மீ தொலைவில் உள்ளது எனில், விளக்குக் கம்பத்தின் உயரம் காண்க.",
-          diagramImg: "images/math_ch4_5m_q10_lamp_post.jpg",
+          diagramImg: "math_ch4_5m_q10_lamp_post.jpg",
           diagramCaption: "கரும்பலகைத் தீர்வு: வடிவொத்த முக்கோணங்கள் - விளக்குக் கம்பத்தின் உயரம் (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <b>கொடுக்கப்பட்ட தகவல்கள்:</b><br>
@@ -424,7 +424,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "2023* (தேற்றம்)",
           isImportant: true,
           q: "பிதாகரஸ் தேற்றத்தைக் (Pythagoras Theorem) கூறி நிறுவுக.",
-          diagramImg: "images/math_ch4_5m_q2_pythagoras.jpg",
+          diagramImg: "math_ch4_5m_q2_pythagoras.jpg",
           diagramCaption: "கரும்பலகைத் தீர்வு: பிதாகரஸ் தேற்றம் நிரூபணம் (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -501,7 +501,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "அரசு மாதிரி 5M",
           isImportant: true,
           q: "ஒரு செங்கோண முக்கோணத்தின் கர்ணமானது அதன் சிறிய பக்கத்தின் இருமடங்கை விட 6 மீ அதிகம். மூன்றாவது பக்கமானது கர்ணத்தை விட 2 மீ குறைவு எனில், முக்கோணத்தின் மூன்று பக்கங்களையும் காண்க.",
-          diagramImg: "images/math_ch4_5m_q5_rt_triangle.jpg",
+          diagramImg: "math_ch4_5m_q5_rt_triangle.jpg",
           diagramCaption: "கரும்பலகைத் தீர்வு: செங்கோண முக்கோணப் பக்கங்கள் (கர்ணம் 2x+6, பக்கங்கள் x, 2x+4) (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <b>தீர்வு முறை:</b><br>
@@ -543,7 +543,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "வடிவியல் 5M",
           isImportant: true,
           q: "5 செ.மீ ஆரமுள்ள வட்டத்தில் 6 செ.மீ நீளமுள்ள நாண் AB உள்ளது. A மற்றும் B வழியே செல்லும் தொடுகோடுகள் P-ல் சந்திக்கின்றன எனில், தொடுகோடு PA-ன் நீளம் காண்க.",
-          diagramImg: "images/math_ch4_5m_q6_circle_tangent.jpg",
+          diagramImg: "math_ch4_5m_q6_circle_tangent.jpg",
           diagramCaption: "கரும்பலகைத் தீர்வு: வட்டம் மற்றும் தொடுகோடு PA நீளம் காணுதல் (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <b>கொடுக்கப்பட்டவை:</b><br>
@@ -579,7 +579,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "முக்கிய நிரூபணம் 5M",
           isImportant: true,
           q: "C-ல் செங்கோணத்தைக் கொண்டுள்ள ΔABC-ல் CA மற்றும் CB ஆகியவற்றின் நடுப்புள்ளிகள் முறையே P மற்றும் Q எனில், 4(AQ² + BP²) = 5AB² என நிறுவுக.",
-          diagramImg: "images/math_ch4_5m_q7_midpoint_pythag.jpg",
+          diagramImg: "math_ch4_5m_q7_midpoint_pythag.jpg",
           diagramCaption: "கரும்பலகைத் தீர்வு: நடுப்புள்ளி பயன்பாடு 4(AQ² + BP²) = 5AB² (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <b>நிரூபணம்:</b><br>
@@ -618,7 +618,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "அரசுத் தேர்வுத் தேற்றம்",
           isImportant: true,
           q: "மாற்று வட்டத்துண்டுத் தேற்றத்தைக் (Alternate Segment Theorem) கூறி நிறுவுக.",
-          diagramImg: "images/math_ch4_5m_q8_alternate_segment.jpg",
+          diagramImg: "math_ch4_5m_q8_alternate_segment.jpg",
           diagramCaption: "கரும்பலகைத் தீர்வு: மாற்று வட்டத்துண்டுத் தேற்றம் நிரூபணம் (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -661,7 +661,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "அடிப்படைத் தேற்றம் 5M",
           isImportant: true,
           q: "வட்டத்தின் தொடுகோடும், தொடுபுள்ளி வழியே செல்லும் ஆரமும் ஒன்றுக்கொன்று செங்குத்து என நிறுவுக.",
-          diagramImg: "images/math_ch4_5m_q9_radius_perpendicular.jpg",
+          diagramImg: "math_ch4_5m_q9_radius_perpendicular.jpg",
           diagramCaption: "கரும்பலகைத் தீர்வு: தொடுபுள்ளி ஆரம் OA ⊥ PQ தொடுகோடு (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -708,7 +708,7 @@ const MATHS_TM_UNIT_4_DATA = {
           examTag: "பெருங்கரும்பலகை",
           isImportant: true,
           q: "10-ஆம் வகுப்பு கணிதம் அலகு 4: வடிவியல் - முக்கிய 10 ஐந்து மதிப்பெண் வினா-விடைகள் பெருங்கரும்பலகைத் தொகுப்பு",
-          diagramImg: "images/math_bb_ch4_all10.jpg",
+          diagramImg: "math_bb_ch4_all10.jpg",
           diagramCaption: "10-ஆம் வகுப்பு கணிதம் அலகு 4: வடிவியல் - முக்கிய 10 ஐந்து மதிப்பெண் வினா-விடைகள் பெருங்கரும்பலகை (தொட்டுப் பெரிதாகக் காண்க)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">

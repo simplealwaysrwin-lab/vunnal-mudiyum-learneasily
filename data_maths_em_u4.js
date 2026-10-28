@@ -1,4 +1,4 @@
-// 10th Standard Mathematics - Unit 4: Geometry (English Medium)
+﻿// 10th Standard Mathematics - Unit 4: Geometry (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_4_DATA = {
@@ -66,7 +66,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "2024* (Theorem Proof)",
           isImportant: true,
           q: "State and prove the Basic Proportionality Theorem (Thales Theorem).",
-          diagramImg: "images/math_ch4_5m_q1_bpt.jpg",
+          diagramImg: "math_ch4_5m_q1_bpt_bb.jpg",
           diagramCaption: "Basic Proportionality Theorem (Thales Theorem) Proof & Construction (DE || BC) (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -215,7 +215,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "Important 5M (Theorem)",
           isImportant: true,
           q: "State and prove the Angle Bisector Theorem (ABT).",
-          diagramImg: "images/math_ch4_5m_q3_abt.jpg",
+          diagramImg: "math_ch4_5m_q3_abt.jpg",
           diagramCaption: "Blackboard Solution: Angle Bisector Theorem (ABT) Proof & Ratio (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -371,7 +371,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "Board Favorite 5M",
           isImportant: true,
           q: "Prove that the medians of a triangle are concurrent.",
-          diagramImg: "images/math_ch4_5m_q4_medians.jpg",
+          diagramImg: "math_ch4_5m_q4_medians.jpg",
           diagramCaption: "Blackboard Solution: Concurrency of Medians & Centroid G (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -502,7 +502,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "Practical Geometry 5M",
           isImportant: true,
           q: "A girl of height 1.25 m stands 2.5 m from a mirror on the ground. The mirror is 6.6 m from a lamp post. Find the height of the lamp post.",
-          diagramImg: "images/math_ch4_5m_q10_lamp_post.jpg",
+          diagramImg: "math_ch4_5m_q10_lamp_post.jpg",
           diagramCaption: "Blackboard Solution: Similar Triangles - Mirror Reflection & Lamp Post Height (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <b>Problem Statement:</b><br>
@@ -659,7 +659,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "2023* (Theorem Proof)",
           isImportant: true,
           q: "State and prove Pythagoras Theorem.",
-          diagramImg: "images/math_ch4_5m_q2_pythagoras.jpg",
+          diagramImg: "math_ch4_5m_q2_pythagoras.jpg",
           diagramCaption: "Blackboard Solution: Pythagoras Theorem Proof by Similarity (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -803,7 +803,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "Algebra-Geometry 5M",
           isImportant: true,
           q: "The hypotenuse of a right triangle is 6 m more than twice its shortest side. The third side is 2 m less than the hypotenuse. Find all three sides.",
-          diagramImg: "images/math_ch4_5m_q5_rt_triangle.jpg",
+          diagramImg: "math_ch4_5m_q5_rt_triangle.jpg",
           diagramCaption: "Blackboard Solution: Right Triangle Sides (Hypotenuse 2x+6, Shortest x) (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <b>Problem Statement:</b><br>
@@ -924,7 +924,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "Circles & Tangents 5M",
           isImportant: true,
           q: "AB is a chord of length 6 cm in a circle of radius 5 cm. The tangents at A and B meet at P. Find the length of PA.",
-          diagramImg: "images/math_ch4_5m_q6_circle_tangent.jpg",
+          diagramImg: "math_ch4_5m_q6_circle_tangent.jpg",
           diagramCaption: "Blackboard Solution: Tangents PA & PB to Circle with Chord AB = 6 cm (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <b>Problem Statement:</b><br>
@@ -1047,7 +1047,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "Board Favorite 5M",
           isImportant: true,
           q: "P and Q are the midpoints of CA and CB respectively, of ΔABC, right-angled at C. Prove that 4(AQ² + BP²) = 5AB².",
-          diagramImg: "images/math_ch4_5m_q7_midpoint_pythag.jpg",
+          diagramImg: "math_ch4_5m_q7_midpoint_pythag.jpg",
           diagramCaption: "Blackboard Solution: Midpoint Theorem Application 4(AQ² + BP²) = 5AB² (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <b>Problem Statement:</b><br>
@@ -1178,7 +1178,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "2024* (Theorem Proof)",
           isImportant: true,
           q: "State and prove Alternate Segment Theorem.",
-          diagramImg: "images/math_ch4_5m_q8_alternate_segment.jpg",
+          diagramImg: "math_ch4_5m_q8_alternate_segment.jpg",
           diagramCaption: "Blackboard Solution: Alternate Segment Theorem Proof ∠PAB = ∠ACB (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -1325,7 +1325,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "Fundamental Theorem 5M",
           isImportant: true,
           q: "Prove that the radius is perpendicular to the tangent at the point of contact.",
-          diagramImg: "images/math_ch4_5m_q9_radius_perpendicular.jpg",
+          diagramImg: "math_ch4_5m_q9_radius_perpendicular.jpg",
           diagramCaption: "Blackboard Solution: Tangent PQ ⊥ Radius OA at Point of Contact A (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">
@@ -1445,7 +1445,7 @@ const MATHS_EM_UNIT_4_DATA = {
           examTag: "Master Blackboard",
           isImportant: true,
           q: "10th Std Mathematics - Chapter 4: Geometry - Top 10 Important 5 Marks Questions Master Board",
-          diagramImg: "images/math_bb_ch4_all10.jpg",
+          diagramImg: "math_bb_ch4_all10.jpg",
           diagramCaption: "10th Std Mathematics Chapter 4: Geometry - Top 10 Important 5 Marks Questions (with Solutions) Master Chalkboard (Tap to Zoom)",
           ans: `<div style="line-height:1.8;">
             <div style="padding:10px 14px; background:#eff6ff; border-left:4px solid #2563eb; border-radius:6px; margin-bottom:12px;">

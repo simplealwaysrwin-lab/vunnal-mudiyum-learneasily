@@ -20,12 +20,8 @@ const MATHS_EM_UNIT_4_DATA = {
   ],
 
   subSections: [
-    // -------------------------------------------------------------
-    // Section 1: Thales Theorem, Angle Bisector Theorem & Similar Triangles
-    // -------------------------------------------------------------
     {
-    {
-      id: "sec_math_em_4_1",
+      id: "sec_m_em_4_1",
       title: "Section 1: Top 10 Important 5-Mark Questions & Theorems (Blackboard Special)",
       author: "Chapter 4: Geometry - Important 5 Marks (Questions 1 to 10)",
       questions: [
@@ -178,6 +174,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ],
           explanation: "Step-by-step similarity proof of Thales Theorem establishing AD/DB = AE/EC via ΔADE ~ ΔABC."
         },
+
         {
           id: "m_em_4_2_3",
           type: "5m",
@@ -322,6 +319,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ],
           explanation: "Similarity of right sub-triangles ΔADB and ΔBDC with whole ΔABC proves AC² = AB² + BC²."
         },
+
         {
           id: "m_em_4_1_4",
           type: "5m",
@@ -478,6 +476,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ],
           explanation: "Angle Bisector Theorem proof establishing BD/DC = AB/AC using construction CE || AB and AA similarity."
         },
+
         {
           id: "m_em_4_1_5",
           type: "5m",
@@ -609,6 +608,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ],
           explanation: "Proof that medians meet at centroid G using Ceva's Theorem and coordinate section formula."
         },
+
         {
           id: "m_em_4_2_4",
           type: "5m",
@@ -730,6 +730,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ],
           explanation: "Pythagoras application leading to x² - 8x - 20 = 0 yielding sides 10 m, 24 m, and 26 m."
         },
+
         {
           id: "m_em_4_2_5",
           type: "5m",
@@ -853,6 +854,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ],
           explanation: "In circle with r=5, chord=6, OM=4, right triangle similarity yields tangent PA = 3.75 cm."
         },
+
         {
           id: "m_em_4_2_6",
           type: "5m",
@@ -984,6 +986,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ],
           explanation: "Applying Pythagoras to ΔACQ and ΔBCP yields AQ²+BP² = (5/4)(a²+b²) = (5/4)AB², proving 4(AQ²+BP²) = 5AB²."
         },
+
         {
           id: "m_em_4_2_7",
           type: "5m",
@@ -1131,6 +1134,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ],
           explanation: "Alternate Segment Theorem proof establishing ∠PAB = ∠ACB via diameter construction and semicircle 90° angle."
         },
+
         {
           id: "m_em_4_2_8",
           type: "5m",
@@ -1251,6 +1255,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ],
           explanation: "Logical proof showing OA is the shortest distance from center O to tangent line PQ, therefore OA ⊥ PQ."
         },
+
         {
           id: "m_em_4_1_6",
           type: "5m",
@@ -1369,8 +1374,8 @@ const MATHS_EM_UNIT_4_DATA = {
             }
           ],
           explanation: "Similar triangle application problem: h / 1.25 = 6.6 / 2.5 gives lamp post height h = 3.3 m."
-        }
-      ]
+        },
+
         {
           id: "m_em_4_2_9",
           type: "5m",
@@ -1409,27 +1414,9 @@ const MATHS_EM_UNIT_4_DATA = {
           explanation: "Master overview of all 10 crucial 5-mark geometry questions for 10th standard board examinations."
         }
       ]
-    }
-  ]
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      ]
     },
     {
-      id: "sec_math_em_4_2",
+      id: "sec_m_em_4_2",
       title: "Section 2: 1-Mark & 2-Mark Practice Questions (Exercises 4.1 to 4.4)",
       author: "Chapter 4: Geometry - 1M & 2M Key Concepts",
       questions: [
@@ -1443,6 +1430,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ans: "Answer: <b>b) 7.5 cm</b><br>Explanation: By Thales Theorem (BPT), AD / DB = AE / EC ⇒ 4 / 6 = 5 / EC ⇒ EC = (5 × 6) / 4 = 30 / 4 = <b>7.5 cm</b>.",
           explanation: "Applying BPT: AD/DB = AE/EC yields EC = 7.5 cm."
         },
+
         {
           id: "m_em_4_1_2",
           type: "2m",
@@ -1463,6 +1451,7 @@ const MATHS_EM_UNIT_4_DATA = {
           </div>`,
           explanation: "Angle Bisector Theorem ratio BD/DC = AB/AC gives DC = 3 cm."
         },
+
         {
           id: "m_em_4_2_1",
           type: "1m",
@@ -1472,6 +1461,7 @@ const MATHS_EM_UNIT_4_DATA = {
           ans: "Answer: <b>c) 6 cm</b><br>Explanation: The radius is perpendicular to the tangent at the point of contact. By Pythagoras Theorem: Radius r = √(OP² - PT²) = √(10² - 8²) = √(100 - 64) = √36 = <b>6 cm</b>.",
           explanation: "In right triangle OPT, r = √(10² - 8²) = 6 cm."
         },
+
         {
           id: "m_em_4_2_2",
           type: "2m",

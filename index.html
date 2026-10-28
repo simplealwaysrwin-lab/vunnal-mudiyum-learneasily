@@ -89,7 +89,7 @@
 <script>
   // Build tracker
   (function() {
-    const CURRENT_BUILD = '20261028_v22';
+    const CURRENT_BUILD = '20261028_v23';
     try {
       localStorage.setItem('vm_build_ver', CURRENT_BUILD);
     } catch(e) {}
@@ -109,11 +109,11 @@
 <script src="data_maths_tm_u1.js?v=20261027_v18"></script>
 <script src="data_maths_tm_u2.js?v=20261027_v18"></script>
 <script src="data_maths_tm_u3.js?v=20261027_v18"></script>
-<script src="data_maths_tm_u4.js?v=20261028_v22"></script>
+<script src="data_maths_tm_u4.js?v=20261028_v23"></script>
 <script src="data_maths_em_u1.js?v=20261027_v18"></script>
 <script src="data_maths_em_u2.js?v=20261027_v18"></script>
 <script src="data_maths_em_u3.js?v=20261027_v18"></script>
-<script src="data_maths_em_u4.js?v=20261028_v22"></script>
+<script src="data_maths_em_u4.js?v=20261028_v23"></script>
 <script src="data_science_u1.js?v=20261027_v18"></script>
 <script src="data_science_u2.js?v=20261027_v18"></script>
 <script src="data_science_u3.js?v=20261027_v18"></script>
@@ -5201,12 +5201,12 @@
                         <span style="font-size:20px;">&#129504;</span>
                         <div>
                           <div style="font-size:13.5px; font-weight:800; color:#ffffff;">${isEm || isEnglish ? 'Solution Memory Checkpoints (10 Concept Q&A)' : 'தீர்வை நினைவில் வைக்க 10 முக்கிய வினா-விடைகள்'}</div>
-                          <div style="font-size:11px; color:#e0f2fe; font-weight:600;">${isEm || isEnglish ? 'Step-by-Step Concept Recall with Answers in Text' : 'பாடப் படிகளை எளிதாக நினைவில் வைக்க எழுத்து வடிவிலான வினா-விடைகள்'}</div>
+                          <div style="font-size:11px; color:#e0f2fe; font-weight:600;">${isEm || isEnglish ? 'Tap to view 10 Concept Recall Q&A ▾' : '10 நினைவூட்டல் வினா-விடைகளைக் காணத் தொடுக ▾'}</div>
                         </div>
                       </div>
-                      <span id="recallIcon_${item.id}" style="font-size:14px; font-weight:800; transition:transform 0.3s ease;">&#9660;</span>
+                      <span id="recallIcon_${item.id}" style="font-size:14px; font-weight:800; transition:transform 0.3s ease;">&#9654;</span>
                     </div>
-                    <div id="recallBody_${item.id}" style="display:block; padding:12px 14px; background:#ffffff;">
+                    <div id="recallBody_${item.id}" style="display:none; padding:12px 14px; background:#ffffff;">
                       <div style="font-size:12px; color:#475569; margin-bottom:12px; line-height:1.5; background:#e0f2fe; padding:8px 12px; border-radius:8px; border-left:3px solid #0284c7;">
                         <b>&#128161; ${isEm || isEnglish ? 'Exam Master Note:' : 'தேர்வு வெற்றி குறிப்பு:'}</b> ${isEm || isEnglish ? 'Review these 10 concept checkpoints to solve this 5-mark question accurately in public exams!' : 'இந்த 10 முக்கியக் கருத்துகளையும் வினா-விடைகளையும் படித்தால் அரசுத் தேர்வில் 5 மதிப்பெண்களை முழுமையாகப் பெறலாம்!'}
                       </div>

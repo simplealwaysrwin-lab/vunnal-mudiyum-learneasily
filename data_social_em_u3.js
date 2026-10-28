@@ -114,6 +114,68 @@ const SOCIAL_EM_UNIT_3_DATA = {
           examYear: "2024",
           examTag: "2024* (Key 5 Marks)",
           isImportant: true,
+          checkpoints: [
+            {
+              q: "1. Fundamental Rights are included in which Part of the Indian Constitution?",
+              options: ["A. Part IV", "B. Part II", "C. Part III", "D. Part V"],
+              ans: 2,
+              explanation: "Fundamental Rights are contained in Part III of the Constitution, covering Articles 12 to 35."
+            },
+            {
+              q: "2. How many Fundamental Rights are guaranteed to Indian citizens at present?",
+              options: ["A. Five", "B. Seven", "C. Eight", "D. Six"],
+              ans: 3,
+              explanation: "At present, there are six Fundamental Rights. The Right to Property was removed as a Fundamental Right by the 44th Amendment in 1978."
+            },
+            {
+              q: "3. Which Fundamental Right guarantees equality before law to all persons?",
+              options: ["A. Right to Equality", "B. Right to Freedom", "C. Right against Exploitation", "D. Cultural and Educational Rights"],
+              ans: 0,
+              explanation: "The Right to Equality guarantees equality before law and equal protection of laws under Article 14."
+            },
+            {
+              q: "4. The abolition of untouchability is mainly associated with which Fundamental Right?",
+              options: ["A. Right to Equality", "B. Right to Constitutional Remedies", "C. Right to Freedom of Religion", "D. Right against Exploitation"],
+              ans: 0,
+              explanation: "Article 17 under the Right to Equality abolishes untouchability and forbids its practice in any form."
+            },
+            {
+              q: "5. Which of the following is included in the Right to Freedom?",
+              options: ["A. Equal wages for equal work", "B. Right to property", "C. Freedom of speech and expression", "D. Protection of monuments"],
+              ans: 2,
+              explanation: "Freedom of speech and expression is guaranteed under Article 19 in the Right to Freedom."
+            },
+            {
+              q: "6. Which Fundamental Right prohibits human trafficking, forced labour, and employment of children below 14 in hazardous work?",
+              options: ["A. Right to Equality", "B. Right to Freedom", "C. Cultural and Educational Rights", "D. Right against Exploitation"],
+              ans: 3,
+              explanation: "The Right against Exploitation (Articles 23 and 24) prohibits human trafficking, forced labour, and child labour in hazardous occupations."
+            },
+            {
+              q: "7. Which Fundamental Right allows citizens to practise and propagate any religion?",
+              options: ["A. Right to Freedom of Religion", "B. Right against Exploitation", "C. Cultural and Educational Rights", "D. Right to Freedom"],
+              ans: 0,
+              explanation: "The Right to Freedom of Religion (Articles 25 to 28) allows all persons to profess, practise, and propagate religion peacefully."
+            },
+            {
+              q: "8. Cultural and Educational Rights are mainly meant to protect the interests of:",
+              options: ["A. Minorities", "B. Only government officials", "C. Only industrial workers", "D. Only children below 14"],
+              ans: 0,
+              explanation: "Cultural and Educational Rights (Articles 29 and 30) protect the language, culture, script, and educational interests of minorities."
+            },
+            {
+              q: "9. Which Fundamental Right did Dr. B.R. Ambedkar call the 'heart and soul' of the Constitution?",
+              options: ["A. Right to Equality", "B. Right to Constitutional Remedies", "C. Right to Freedom of Religion", "D. Right against Exploitation"],
+              ans: 1,
+              explanation: "Dr. B.R. Ambedkar described Article 32 (Right to Constitutional Remedies) as the 'heart and soul' of the Indian Constitution."
+            },
+            {
+              q: "10. Which writ is issued by a court to release a person who has been unlawfully detained?",
+              options: ["A. Habeas Corpus", "B. Certiorari", "C. Quo Warranto", "D. Mandamus"],
+              ans: 0,
+              explanation: "Habeas Corpus is a writ that protects a person against unlawful detention and orders authorities to produce them before the court."
+            }
+          ],
           q: "Elaborate the Six Fundamental Rights guaranteed to Indian citizens by the Constitution.",
           ans: `<div style="line-height:1.8;">
             <b>Six Fundamental Rights (Part III, Articles 12 to 35):</b><br><br>

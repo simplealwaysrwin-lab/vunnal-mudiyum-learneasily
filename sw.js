@@ -4,7 +4,7 @@
 // Zero-Downtime Architecture - Auto-Update on Deploy Engine
 // =======================================================================
 
-const CACHE_NAME = 'vm-offline-v20261027_v18';
+const CACHE_NAME = 'vm-offline-v20261028_v19';
 
 // Core essential assets for instant offline app shell and subject question banks
 const PRECACHE_ASSETS = [
@@ -32,6 +32,19 @@ const PRECACHE_ASSETS = [
   './images/math_bb_ex1_4_en.png',
   './images/math_bb_ch3_linear_eqn.jpg',
   './math_bb_ch3_linear_eqn.jpg',
+  './images/math_ch4_5m_q1_bpt.jpg',
+  './math_ch4_5m_q1_bpt.jpg',
+  './images/math_bb_ch4_all10.jpg',
+  './math_bb_ch4_all10.jpg',
+  './images/math_ch4_5m_q2_pythagoras.jpg',
+  './images/math_ch4_5m_q3_abt.jpg',
+  './images/math_ch4_5m_q4_medians.jpg',
+  './images/math_ch4_5m_q5_rt_triangle.jpg',
+  './images/math_ch4_5m_q6_circle_tangent.jpg',
+  './images/math_ch4_5m_q7_midpoint_pythag.jpg',
+  './images/math_ch4_5m_q8_alternate_segment.jpg',
+  './images/math_ch4_5m_q9_radius_perpendicular.jpg',
+  './images/math_ch4_5m_q10_lamp_post.jpg',
   './images/sci_bb_mass_weight.jpg',
   './images/sci_bb_rocket_propulsion.jpg',
   './images/sci_bb_myopia_hypermetropia.jpg',

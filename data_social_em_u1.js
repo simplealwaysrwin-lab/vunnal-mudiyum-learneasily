@@ -1,4 +1,4 @@
-﻿// 10th Standard Social Science - History Unit 1: Outbreak of World War I and its Aftermath (English Medium)
+// 10th Standard Social Science - History Unit 1: Outbreak of World War I and its Aftermath (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SOCIAL_EM_UNIT_1_DATA = {
@@ -232,6 +232,68 @@ const SOCIAL_EM_UNIT_1_DATA = {
           examYear: "2024",
           examTag: "2024*",
           isImportant: true,
+          checkpoints: [
+            {
+              q: "1. Which organization was created by the Treaty of Versailles to help maintain international peace?",
+              options: ["A. United Nations", "B. European Union", "C. North Atlantic Treaty Organization", "D. League of Nations"],
+              ans: 3,
+              explanation: "The Treaty of Versailles established the League of Nations as an international organization intended to preserve peace and prevent future wars."
+            },
+            {
+              q: "2. Under Article 231, what did Germany accept?",
+              options: ["A. Membership in the League of Nations", "B. Full control of the Rhineland", "C. Responsibility for causing the war", "D. Cancellation of all reparations"],
+              ans: 2,
+              explanation: "Article 231, often called the War Guilt Clause, required Germany to accept responsibility for causing the war and provided a basis for reparations."
+            },
+            {
+              q: "3. What was the maximum permitted size of the German army under the Treaty?",
+              options: ["A. 100,000 men", "B. 500,000 men", "C. 250,000 men", "D. 50,000 men"],
+              ans: 0,
+              explanation: "The German army was limited to 100,000 men as part of the military restrictions imposed by the Treaty."
+            },
+            {
+              q: "4. Which military force was Germany forbidden to maintain under the Treaty?",
+              options: ["A. An air force", "B. A police force", "C. A coast guard", "D. A border patrol"],
+              ans: 0,
+              explanation: "Germany was prohibited from maintaining an air force under the Treaty's disarmament clauses."
+            },
+            {
+              q: "5. Which territory was returned to France by the Treaty of Versailles?",
+              options: ["A. Memel", "B. Danzig", "C. Upper Silesia", "D. Alsace-Lorraine"],
+              ans: 3,
+              explanation: "Alsace-Lorraine, which had been taken by Germany in 1871, was returned to France."
+            },
+            {
+              q: "6. What was Germany required to pay under the Treaty?",
+              options: ["A. A membership fee to the League of Nations", "B. No financial payments", "C. Debts only to the United States", "D. Reparations for war damage"],
+              ans: 3,
+              explanation: "Germany was required to pay reparations for war damage, amounting to 6,600 million pounds."
+            },
+            {
+              q: "7. What status did the Rhineland have under the Treaty?",
+              options: ["A. A demilitarized zone", "B. An independent state", "C. A League of Nations mandate", "D. A French colony"],
+              ans: 0,
+              explanation: "The Rhineland was made a demilitarized zone, and German military forces were not allowed there."
+            },
+            {
+              q: "8. What union was forbidden by the Treaty?",
+              options: ["A. Union between Germany and Austria", "B. Union between France and Belgium", "C. Union between Poland and Lithuania", "D. Union between Italy and Yugoslavia"],
+              ans: 0,
+              explanation: "The Treaty forbade Anschluss, the political union between Germany and Austria."
+            },
+            {
+              q: "9. What happened to Germany's former colonies under the Treaty?",
+              options: ["A. They became independent immediately", "B. They were annexed by Germany", "C. They were returned to the Ottoman Empire", "D. They became League of Nations mandates"],
+              ans: 3,
+              explanation: "Germany's former colonies were placed under League of Nations mandates, usually administered by Allied powers."
+            },
+            {
+              q: "10. Which naval weapon was Germany prohibited from possessing under the Treaty?",
+              options: ["A. Aircraft carriers", "B. Submarines", "C. Minesweepers", "D. Destroyers"],
+              ans: 1,
+              explanation: "Germany was banned from possessing submarines, and its navy was strictly limited in size and strength."
+            }
+          ],
           q: "Highlight the main clauses of the Treaty of Versailles (1919).",
           ans: `<div style="line-height:1.8;">
             <b>Treaty of Versailles (Signed on 28 June 1919):</b><br>
@@ -325,6 +387,68 @@ const SOCIAL_EM_UNIT_1_DATA = {
           examYear: "2022",
           examTag: "2022*",
           isImportant: true,
+          checkpoints: [
+            {
+              q: "1. In which year was the League of Nations officially established after the First World War?",
+              options: ["A. 1914", "B. 1918", "C. 1920", "D. 1939"],
+              ans: 2,
+              explanation: "The League of Nations came into official existence on 10 January 1920 with headquarters in Geneva, Switzerland."
+            },
+            {
+              q: "2. Which world leader was the chief architect and champion of the League of Nations?",
+              options: ["A. Woodrow Wilson", "B. David Lloyd George", "C. Georges Clemenceau", "D. Winston Churchill"],
+              ans: 0,
+              explanation: "US President Woodrow Wilson championed the League in his famous Fourteen Points to guarantee political independence and world peace."
+            },
+            {
+              q: "3. Why was the absence of the United States a fatal weakness to the League?",
+              options: ["A. USA was in a civil war", "B. US Senate refused to ratify the Treaty of Versailles and join the League", "C. USA had no armed forces", "D. USA was allied with Germany"],
+              ans: 1,
+              explanation: "The US Senate rejected the Treaty of Versailles and returned to isolationism, leaving the League without the world's greatest economic and industrial superpower."
+            },
+            {
+              q: "4. What major military deficiency crippled the League of Nations?",
+              options: ["A. It had too large an army", "B. It had no standing army of its own to enforce collective security", "C. Its soldiers had no weapons", "D. It was only allowed naval ships"],
+              ans: 1,
+              explanation: "The League had no independent military force to enforce decisions against aggressive dictator states."
+            },
+            {
+              q: "5. Which two European imperialist powers dominated the League and subordinated its ideals to their own selfish interests?",
+              options: ["A. Britain and France", "B. Germany and Italy", "C. USA and Soviet Union", "D. Japan and China"],
+              ans: 0,
+              explanation: "Britain and France dominated the League of Nations Council and often acted only when their own imperial interests were threatened."
+            },
+            {
+              q: "6. What voting rule made decisive and timely intervention impossible for the League?",
+              options: ["A. Simple majority", "B. Two-thirds majority", "C. The rule of unanimity (100% agreement required)", "D. Lottery system"],
+              ans: 2,
+              explanation: "Every crucial decision required a unanimous vote of all member states, which allowed any single nation to paralyze action."
+            },
+            {
+              q: "7. In 1931, which nation's aggression against Manchuria exposed the League's complete helplessness?",
+              options: ["A. Italy", "B. Japan", "C. Soviet Union", "D. Spain"],
+              ans: 1,
+              explanation: "Japan invaded Manchuria in 1931; when the League condemned the invasion, Japan simply withdrew from the League without suffering penalties."
+            },
+            {
+              q: "8. Which fascist dictator invaded Ethiopia (Abyssinia) in 1935 despite League economic sanctions?",
+              options: ["A. Benito Mussolini", "B. Adolf Hitler", "C. Francisco Franco", "D. General Tojo"],
+              ans: 0,
+              explanation: "Italian dictator Benito Mussolini conquered Abyssinia because the League's economic sanctions were weak and failed to ban oil and coal."
+            },
+            {
+              q: "9. How did Adolf Hitler systematically undermine and defy the League of Nations?",
+              options: ["A. By rearming Germany, remilitarizing the Rhineland, and leaving the League", "B. By donating funds to the League", "C. By signing peace treaties", "D. By joining the United Nations"],
+              ans: 0,
+              explanation: "Hitler withdrew Germany from the League in 1933, rearmed Germany, and remilitarized the Rhineland in 1936 without facing armed opposition."
+            },
+            {
+              q: "10. Which major global event in September 1939 marked the total collapse and demise of the League of Nations?",
+              options: ["A. Cold War", "B. First World War", "C. Outbreak of the Second World War", "D. Russian Revolution"],
+              ans: 2,
+              explanation: "The outbreak of World War II in 1939 proved the League had completely failed its founding mission of preventing catastrophic global wars."
+            }
+          ],
           q: "Describe the causes for the failure of the League of Nations.",
           ans: `<div style="line-height:1.8;">
             <b>The League of Nations (Formed in 1920):</b><br>

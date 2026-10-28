@@ -1,4 +1,4 @@
-﻿// 10th Standard Social Science - Geography Unit 1: India - Location, Relief and Drainage (English Medium)
+// 10th Standard Social Science - Geography Unit 1: India - Location, Relief and Drainage (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SOCIAL_EM_UNIT_2_DATA = {
@@ -539,6 +539,68 @@ const SOCIAL_EM_UNIT_2_DATA = {
           examYear: "2024",
           examTag: "2024*",
           isImportant: true,
+          checkpoints: [
+            {
+              q: "1. What is the main role of the Himalayas as a climatic barrier?",
+              options: ["A. They allow cold winds from Central Asia to reach India.", "B. They block cold winds from Central Asia and help in causing monsoon rainfall.", "C. They prevent all rainfall in the northern plains.", "D. They increase temperature in the northern plains throughout the year."],
+              ans: 1,
+              explanation: "The Himalayas block cold winds from Central Asia and force moist monsoon winds to rise, helping cause rainfall in India."
+            },
+            {
+              q: "2. Why do many rivers originating in the Himalayas flow throughout the year?",
+              options: ["A. They are fed only by rainwater.", "B. They flow underground.", "C. They receive water from melting snow and glaciers.", "D. They are supplied by sea tides."],
+              ans: 2,
+              explanation: "Himalayan rivers are perennial because they receive a steady supply of water from melting snow and glaciers."
+            },
+            {
+              q: "3. How do the Himalayas influence the Indian monsoon?",
+              options: ["A. They force moist monsoon winds to rise, cool, and give rain.", "B. They make monsoon winds dry.", "C. They cause monsoon winds to blow only in winter.", "D. They stop monsoon winds from entering India."],
+              ans: 0,
+              explanation: "The Himalayas act as a barrier that forces moist monsoon winds to rise, cool, and cause heavy rainfall."
+            },
+            {
+              q: "4. The Himalayas support rich biodiversity mainly because:",
+              options: ["A. They are located near the sea.", "B. They have no forests.", "C. They have varied altitudes and climates.", "D. They have uniform temperature."],
+              ans: 2,
+              explanation: "Different altitudes and climates in the Himalayas create many habitats, supporting rich biodiversity."
+            },
+            {
+              q: "5. Why are the Himalayas important for India's defense?",
+              options: ["A. They provide flat land for roads.", "B. They are rich in fish.", "C. They form a natural mountain boundary in the north.", "D. They stop all trade."],
+              ans: 2,
+              explanation: "The Himalayas form a natural mountain boundary in the north and act as a strategic defense barrier."
+            },
+            {
+              q: "6. Which statement best shows the cultural significance of the Himalayas?",
+              options: ["A. They are home to many pilgrims, sacred sites, and diverse communities.", "B. They are important only for mining.", "C. They are used only for air travel.", "D. They have no religious sites."],
+              ans: 0,
+              explanation: "The Himalayas are culturally important because they contain sacred sites and are home to diverse communities and pilgrims."
+            },
+            {
+              q: "7. How do Himalayan rivers help agriculture in the northern plains?",
+              options: ["A. They reduce soil fertility.", "B. They make the plains rocky.", "C. They deposit fertile alluvium on the plains.", "D. They cause permanent drought."],
+              ans: 2,
+              explanation: "Himalayan rivers carry silt and deposit fertile alluvium in the northern plains, which helps agriculture."
+            },
+            {
+              q: "8. Which activity is promoted by the Himalayan region's scenic beauty and adventure sports?",
+              options: ["A. Coal mining only", "B. Tourism and adventure tourism", "C. Deep-sea fishing", "D. Coral reef farming"],
+              ans: 1,
+              explanation: "The scenic beauty and adventure opportunities in the Himalayas promote tourism and adventure tourism."
+            },
+            {
+              q: "9. Why are the Himalayas prone to earthquakes and landslides?",
+              options: ["A. They are located in the middle of the ocean.", "B. They are made of flat sedimentary plates.", "C. They are young fold mountains with unstable slopes.", "D. They have no human activity."],
+              ans: 2,
+              explanation: "The Himalayas are young fold mountains with steep and unstable slopes, making them prone to earthquakes and landslides."
+            },
+            {
+              q: "10. What resource significance do the Himalayas have for India?",
+              options: ["A. They provide timber, medicinal plants, minerals, and water.", "B. They are important only for snowfall.", "C. They block all rivers from rising.", "D. They provide no forests or minerals."],
+              ans: 0,
+              explanation: "The Himalayas are a source of timber, medicinal plants, minerals, and water from rivers and glaciers."
+            }
+          ],
           q: "Explain the significance of the Himalayas.",
           ans: `<div style="line-height:1.8;">
             <b>Significance of the Himalayas:</b><br>

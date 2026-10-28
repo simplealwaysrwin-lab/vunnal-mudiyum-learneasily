@@ -89,7 +89,7 @@
 <script>
   // Build tracker
   (function() {
-    const CURRENT_BUILD = '20261028_v23';
+    const CURRENT_BUILD = '20261028_v24';
     try {
       localStorage.setItem('vm_build_ver', CURRENT_BUILD);
     } catch(e) {}
@@ -109,11 +109,11 @@
 <script src="data_maths_tm_u1.js?v=20261027_v18"></script>
 <script src="data_maths_tm_u2.js?v=20261027_v18"></script>
 <script src="data_maths_tm_u3.js?v=20261027_v18"></script>
-<script src="data_maths_tm_u4.js?v=20261028_v23"></script>
+<script src="data_maths_tm_u4.js?v=20261028_v24"></script>
 <script src="data_maths_em_u1.js?v=20261027_v18"></script>
 <script src="data_maths_em_u2.js?v=20261027_v18"></script>
 <script src="data_maths_em_u3.js?v=20261027_v18"></script>
-<script src="data_maths_em_u4.js?v=20261028_v23"></script>
+<script src="data_maths_em_u4.js?v=20261028_v24"></script>
 <script src="data_science_u1.js?v=20261027_v18"></script>
 <script src="data_science_u2.js?v=20261027_v18"></script>
 <script src="data_science_u3.js?v=20261027_v18"></script>
@@ -122,13 +122,13 @@
 <script src="data_science_em_u2.js?v=20261027_v18"></script>
 <script src="data_science_em_u3.js?v=20261027_v18"></script>
 <script src="data_science_em_u4.js?v=20261027_v18"></script>
-<script src="data_social_u1.js?v=20261027_v18"></script>
-<script src="data_social_u2.js?v=20261027_v18"></script>
-<script src="data_social_u3.js?v=20261027_v18"></script>
+<script src="data_social_u1.js?v=20261028_v24"></script>
+<script src="data_social_u2.js?v=20261028_v24"></script>
+<script src="data_social_u3.js?v=20261028_v24"></script>
 <script src="data_social_u4.js?v=20261027_v18"></script>
-<script src="data_social_em_u1.js?v=20261027_v18"></script>
-<script src="data_social_em_u2.js?v=20261027_v18"></script>
-<script src="data_social_em_u3.js?v=20261027_v18"></script>
+<script src="data_social_em_u1.js?v=20261028_v24"></script>
+<script src="data_social_em_u2.js?v=20261028_v24"></script>
+<script src="data_social_em_u3.js?v=20261028_v24"></script>
 <script src="data_social_em_u4.js?v=20261027_v18"></script>
 <style>
   :root {
@@ -4250,7 +4250,7 @@
               <div class="unit-badge">${l.unit}</div>
               <div>
                 <div class="lesson-title-text">${l.title}</div>
-                <div class="lesson-meta">${l.qCount || (l.questions ? l.questions.length : 15)} ${isEm ? 'Questions & Solutions' : 'வினா-விடைகள் உள்ளன'} • <span style="color:#d97706; font-weight:800;">🏆 ${isEm ? 'Mock Test & Competition' : 'மாதிரித் தேர்வு & போட்டி'}</span></div>
+                <div class="lesson-meta">${l.qCount || (l.questions ? l.questions.length : 15)} ${isEm ? 'Questions & Solutions' : 'வினா-விடைகள் உள்ளன'} • <span style="color:#d97706; font-weight:800;">🏆 ${isEm ? 'Mock Test' : 'மாதிரித் தேர்வு'}</span> • <span style="color:#0284c7; font-weight:800; cursor:pointer;" onclick="event.stopPropagation(); selectLesson('${l.id}', 'checkpoints')">🧠 ${isEm ? 'Checkpoints (1 Click)' : 'நினைவூட்டல் (1 Click)'}</span></div>
               </div>
             </div>
             <div class="lesson-arrow">➔</div>
@@ -4447,7 +4447,7 @@
     }
   }
 
-  function selectLesson(lesId) {
+  function selectLesson(lesId, defaultFilter = 'all') {
     if (lesId === 'math_u1' || lesId === 'maths_u1') lesId = 'math_tm_u1';
     if (!currentSubject) {
       currentSubject = APP_DATA.subjects.find(s => s.lessons && s.lessons.some(l => l.id === lesId));
@@ -4470,7 +4470,7 @@
     }
     resolveLessonData(currentLesson);
     currentSubSection = 'all';
-    currentFilter = 'all';
+    currentFilter = defaultFilter;
     lessonSearchQuery = '';
     currentLessonPage = 1;
     currentLessonViewMode = 'qa';
@@ -4774,6 +4774,7 @@
     if (currentFilter === '1m') filteredQ = filteredQ.filter(q => q.type === '1m');
     else if (currentFilter === '2m' || currentFilter === '2m_audio') filteredQ = filteredQ.filter(q => q.type === '2m');
     else if (currentFilter === '5m') filteredQ = filteredQ.filter(q => q.type === '5m');
+    else if (currentFilter === 'checkpoints') filteredQ = filteredQ.filter(q => q.checkpoints && q.checkpoints.length > 0);
     else if (currentFilter === 'diagram') filteredQ = filteredQ.filter(q => q.diagramSvg || q.diagram || q.diagramImg);
     else if (currentFilter === 'public' || currentFilter === '2025') filteredQ = filteredQ.filter(q => q.examYear || q.examTag || q.isImportant);
 
@@ -4795,21 +4796,24 @@
     const countPublic = allQuestions.filter(q => q.examYear || q.examTag || q.isImportant).length;
     const twoMarkQuestions = allQuestions.filter(q => q.type === '2m');
     const count2M = twoMarkQuestions.length;
+    const countCheckpoints = allQuestions.filter(q => q.checkpoints && q.checkpoints.length > 0).length;
     const hasManapaadam = currentLesson && currentLesson.manapaadam && currentLesson.manapaadam.length > 0;
     const manapaadamCount = hasManapaadam ? currentLesson.manapaadam.length : 0;
 
-    // Book-like Pagination Calculations (5 questions per page)
+    // Book-like Pagination Calculations (5 questions per page; all checkpoints displayed together in 1 click)
+    const isCheckpointsView = (currentFilter === 'checkpoints');
+    const effectivePerPage = isCheckpointsView ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE;
     const totalQuestions = filteredQ.length;
-    const totalPages = Math.ceil(totalQuestions / QUESTIONS_PER_PAGE) || 1;
+    const totalPages = Math.ceil(totalQuestions / effectivePerPage) || 1;
     if (currentLessonPage > totalPages) currentLessonPage = totalPages;
     if (currentLessonPage < 1) currentLessonPage = 1;
 
-    const startIndex = (currentLessonPage - 1) * QUESTIONS_PER_PAGE;
-    const endIndex = Math.min(startIndex + QUESTIONS_PER_PAGE, totalQuestions);
+    const startIndex = (currentLessonPage - 1) * effectivePerPage;
+    const endIndex = Math.min(startIndex + effectivePerPage, totalQuestions);
     const pageQuestions = filteredQ.slice(startIndex, endIndex);
 
     function buildBookPaginationBar(pos) {
-      if (currentFilter === 'manapaadam' || totalPages <= 1) return '';
+      if (currentFilter === 'manapaadam' || currentFilter === 'checkpoints' || totalPages <= 1) return '';
       const prevDisabled = currentLessonPage <= 1 ? 'disabled' : '';
       const nextDisabled = currentLessonPage >= totalPages ? 'disabled' : '';
       const prevText = isEm ? '◀ Previous Page' : '◀ முந்தைய பக்கம்';
@@ -4949,6 +4953,33 @@
           </div>
         ` : ''}
 
+        <!-- Dedicated 1-Click Lesson Memory Checkpoint Banner -->
+        ${countCheckpoints > 0 ? `
+          <div class="recall-banner-card" style="margin:14px 0 10px 0; background:linear-gradient(135deg, #0284c7 0%, #0369a1 100%); border-radius:14px; padding:12px 18px; color:#ffffff; box-shadow:0 4px 14px rgba(2,132,199,0.25); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+            <div style="display:flex; align-items:center; gap:12px; flex:1; min-width:240px;">
+              <span style="font-size:26px; background:rgba(255,255,255,0.2); width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center;">🧠</span>
+              <div>
+                <div style="font-size:15px; font-weight:800; display:flex; align-items:center; gap:8px;">
+                  <span>${isEm ? 'Lesson Memory Checkpoints' : 'அலகின் நினைவூட்டல் புள்ளிகள்'}</span>
+                  <span style="background:#fde047; color:#854d0e; font-size:11px; font-weight:800; padding:2px 8px; border-radius:8px;">${countCheckpoints} ${isEm ? 'Questions' : 'முக்கிய வினாக்கள்'}</span>
+                </div>
+                <div style="font-size:12px; color:#e0f2fe; margin-top:2px; font-weight:600;">
+                  ${isEm ? 'Access all 10-point concept checkpoints in this lesson in 1 single click!' : 'இப்பாடத்தின் அனைத்து நினைவூட்டல் வினா-விடைகளையும் ஒரே கிளிக்கில் முழுமையாகப் படிக்கலாம்!'}
+                </div>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <button type="button" class="tab-btn" onclick="openAllLessonCheckpoints(true)" style="background:#ffffff; color:#0369a1; font-weight:800; font-size:13px; padding:9px 16px; border-radius:8px; border:none; box-shadow:0 2px 6px rgba(0,0,0,0.15); display:inline-flex; align-items:center; gap:6px; cursor:pointer;">
+                <span>⚡ ${isEm ? 'All Checkpoints in 1 Click' : 'அனைத்தும் ஒரே கிளிக்கில் (1 Click)'}</span>
+              </button>
+              <button type="button" class="tab-btn" onclick="toggleAllRecallCards()" style="background:rgba(255,255,255,0.18); color:#ffffff; font-weight:700; font-size:13px; padding:9px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.4); display:inline-flex; align-items:center; gap:6px; cursor:pointer;">
+                <span id="allRecallToggleIcon">${isCheckpointsView ? '📁' : '📂'}</span>
+                <span id="allRecallToggleText">${isCheckpointsView ? (isEm ? 'Collapse All' : 'அனைத்தையும் மூடுக') : (isEm ? 'Expand All' : 'அனைத்தையும் திறக்க')}</span>
+              </button>
+            </div>
+          </div>
+        ` : ''}
+
         <!-- Mark Filter Tabs & Public Exam Questions Folder Tab -->
         <div style="margin-top:10px;">
           <div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:6px;">${isEm ? 'Filter by Marks / Importance:' : (isTm ? 'மதிப்பெண் / முக்கியத்துவம் வாரியாக:' : 'மதிப்பெண் வாரியாக (Mark Filter):')}</div>
@@ -4960,6 +4991,11 @@
             <button class="tab-btn ${currentFilter === '1m' ? 'active' : ''}" onclick="setFilter('1m')">${isEm ? '🎯 1-Mark' : '🎯 1-மதிப்பெண்'}</button>
             <button class="tab-btn ${currentFilter === '2m' ? 'active' : ''}" onclick="setFilter('2m')">${isEm ? '📝 2-Marks' : (isTm ? '📝 2-மதிப்பெண்' : '📝 2-மதிப்பெண் வினாக்கள்')}</button>
             <button class="tab-btn ${currentFilter === '5m' ? 'active' : ''}" onclick="setFilter('5m')">${isEm ? '📑 5-Marks' : (isTm ? '📑 5-மதிப்பெண்' : '📑 விரிவான வினாக்கள்')}</button>
+            ${countCheckpoints > 0 ? `
+              <button class="tab-btn ${currentFilter === 'checkpoints' ? 'active' : ''}" onclick="openAllLessonCheckpoints(true)" style="${currentFilter === 'checkpoints' ? 'background:linear-gradient(135deg, #0284c7, #0369a1); color:#fff; font-weight:800; border-color:#0369a1; box-shadow:0 3px 10px rgba(2,132,199,0.3);' : 'background:#f0f9ff; color:#0369a1; font-weight:800; border:1px solid #7dd3fc;'}">
+                🧠 ${isEm ? `Memory Checkpoints (${countCheckpoints})` : `நினைவூட்டல் புள்ளிகள் (${countCheckpoints})`}
+              </button>
+            ` : ''}
             <button class="tab-btn ${currentFilter === 'diagram' ? 'active' : ''}" onclick="setFilter('diagram')">${isEm ? '🎨 Diagrams' : '🎨 வரைபடங்கள்'}</button>
             ${count2M > 0 ? `
               <button class="tab-btn ${currentFilter === '2m_audio' ? 'active' : ''}" onclick="openContinuous2MAudioTab()" style="${currentFilter === '2m_audio' ? 'background:linear-gradient(135deg, #16a34a, #15803d); color:#fff; font-weight:800; border-color:#15803d;' : 'background:#f0fdf4; color:#166534; font-weight:800; border:1px solid #86efac;'}">
@@ -5204,9 +5240,9 @@
                           <div style="font-size:11px; color:#e0f2fe; font-weight:600;">${isEm || isEnglish ? 'Tap to view 10 Concept Recall Q&A ▾' : '10 நினைவூட்டல் வினா-விடைகளைக் காணத் தொடுக ▾'}</div>
                         </div>
                       </div>
-                      <span id="recallIcon_${item.id}" style="font-size:14px; font-weight:800; transition:transform 0.3s ease;">&#9654;</span>
+                      <span id="recallIcon_${item.id}" style="font-size:14px; font-weight:800; transition:transform 0.3s ease;">${isCheckpointsView ? '&#9650;' : '&#9654;'}</span>
                     </div>
-                    <div id="recallBody_${item.id}" style="display:none; padding:12px 14px; background:#ffffff;">
+                    <div id="recallBody_${item.id}" style="display:${isCheckpointsView ? 'block' : 'none'}; padding:12px 14px; background:#ffffff;">
                       <div style="font-size:12px; color:#475569; margin-bottom:12px; line-height:1.5; background:#e0f2fe; padding:8px 12px; border-radius:8px; border-left:3px solid #0284c7;">
                         <b>&#128161; ${isEm || isEnglish ? 'Exam Master Note:' : 'தேர்வு வெற்றி குறிப்பு:'}</b> ${isEm || isEnglish ? 'Review these 10 concept checkpoints to solve this 5-mark question accurately in public exams!' : 'இந்த 10 முக்கியக் கருத்துகளையும் வினா-விடைகளையும் படித்தால் அரசுத் தேர்வில் 5 மதிப்பெண்களை முழுமையாகப் பெறலாம்!'}
                       </div>
@@ -5238,11 +5274,13 @@
                 <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-top:14px; padding-top:10px; border-top:1px dashed var(--border);">
                   <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
                     ${((item.blackboard || item.isImportant || item.type === '5m') && item.type !== '1m') ? `
+                    ${!isMath ? `
                     <button type="button" class="blackboard-btn" onclick="openBlackboardModal('${item.id}', 'steps')" title="${isEm || isEnglish ? 'Interactive Blackboard Demo (Step-by-step animation)' : 'கரும்பலகை அனிமேஷன் பாடம் (படிநிலைகளாகக் காண்க)'}">
                       <span>👨‍🏫</span>
                       <span>${isEm || isEnglish ? 'Blackboard Demo' : 'கரும்பலகை பாடம்'}</span>
                       <span class="bb-btn-badge">NEW</span>
                     </button>
+                    ` : ''}
                     <button type="button" class="blackboard-full-btn" onclick="openBlackboardModal('${item.id}', 'board')" title="${isEm || isEnglish ? 'View Full Solution on Blackboard at once' : 'முழு கரும்பலகை விடையை உடனே காண்க'}">
                       <span>🎨</span>
                       <span>${isEm || isEnglish ? 'Full Blackboard' : 'முழு கரும்பலகை'}</span>
@@ -8030,37 +8068,54 @@ ${directLink}
         qEl.innerHTML = `<span style="color:#fef08a; font-weight:800;">${isEm ? 'Question: ' : 'வினா: '}</span>${item.q}`;
       }
 
-      // Configure View Tabs for ALL blackboard questions (concise labels so both tabs fit 100% on any mobile screen)
+      // Configure View Tabs for ALL blackboard questions (hide for Maths where animated steps are removed)
+      const isMath = currentSubject && (currentSubject.id.includes('maths') || currentSubject.id.includes('math'));
       if (viewTabs) {
-        viewTabs.style.display = 'flex';
-        if (tabSteps) tabSteps.textContent = isEm ? '🎬 Animated Steps' : '🎬 அனிமேஷன் பாடம்';
-        if (tabBoard) tabBoard.textContent = isEm ? '🎨 Full Blackboard' : '🎨 முழு கரும்பலகை';
+        if (isMath) {
+          viewTabs.style.display = 'none';
+        } else {
+          viewTabs.style.display = 'flex';
+          if (tabSteps) tabSteps.textContent = isEm ? '🎬 Animated Steps' : '🎬 அனிமேஷன் பாடம்';
+          if (tabBoard) tabBoard.textContent = isEm ? '🎨 Full Blackboard' : '🎨 முழு கரும்பலகை';
+        }
+      }
+
+      const stepNav = document.getElementById('bbStepNav');
+      const controls = document.querySelector('.bb-controls');
+      if (isMath) {
+        if (stepNav) stepNav.style.display = 'none';
+        if (controls) controls.style.display = 'none';
+      } else {
+        if (stepNav) stepNav.style.display = '';
+        if (controls) controls.style.display = '';
       }
 
       // Preserve Blackboard URL across phone calls and reloads
       if (currentSubject && currentLesson) {
-        const bbHash = `#${currentSubject.id}/${currentLesson.id}/bb_${qId}_${initialView || 'steps'}`;
+        const bbHash = `#${currentSubject.id}/${currentLesson.id}/bb_${qId}_${isMath ? 'board' : (initialView || 'steps')}`;
         if (window.location.hash !== bbHash) {
           try {
-            history.pushState({ bbQId: qId, initialView: initialView || 'steps' }, '', bbHash);
+            history.pushState({ bbQId: qId, initialView: isMath ? 'board' : (initialView || 'steps') }, '', bbHash);
           } catch(e) {
             window.location.hash = bbHash;
           }
         }
       }
 
-      const targetView = (initialView === 'board') ? 'board' : 'steps';
+      const targetView = isMath ? 'board' : ((initialView === 'board') ? 'board' : 'steps');
       this.switchView(targetView, true);
-      this.renderStepNav();
-      this.renderCurrentStep(false);
-      this.updateControlsUI();
+      if (!isMath) {
+        this.renderStepNav();
+        this.renderCurrentStep(false);
+        this.updateControlsUI();
+      }
 
       modal.classList.add('open');
       modal.classList.add('show');
 
-      // Auto start explanation only if steps view
+      // Auto start explanation only if steps view and NOT maths
       setTimeout(() => {
-        if (this.currentView === 'steps') {
+        if (!isMath && this.currentView === 'steps') {
           this.play();
         }
       }, 350);
@@ -8215,6 +8270,12 @@ ${directLink}
         modal.classList.remove('open');
         modal.classList.remove('show');
       }
+      const viewTabs = document.getElementById('bbViewTabs');
+      const stepNav = document.getElementById('bbStepNav');
+      const controls = document.querySelector('.bb-controls');
+      if (viewTabs) viewTabs.style.display = '';
+      if (stepNav) stepNav.style.display = '';
+      if (controls) controls.style.display = '';
       if (currentSubject && currentLesson && window.location.hash && window.location.hash.includes('/bb_')) {
         const cleanHash = `#${currentSubject.id}/${currentLesson.id}`;
         try {
@@ -8635,7 +8696,9 @@ ${directLink}
 
   function openBlackboardModal(qId, initialView) {
     if (window.blackboardPlayer) {
-      const isEm = currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english');
+      const isEnglish = currentSubject && currentSubject.id === 'english';
+      const isEm = currentSubject && (currentSubject.id.endsWith('_em') || isEnglish);
+      const isMath = currentSubject && (currentSubject.id.includes('maths') || currentSubject.id.includes('math'));
       if (isEm) {
         let q = null;
         if (typeof allQuestions !== 'undefined' && allQuestions) q = allQuestions.find(x => x.id === qId);
@@ -8649,7 +8712,8 @@ ${directLink}
           }
         }
       }
-      blackboardPlayer.open(qId, initialView || 'steps');
+      // For Maths, always open Full Blackboard view (Animated BB removed)
+      blackboardPlayer.open(qId, isMath ? 'board' : (initialView || 'steps'));
     }
   }
 
@@ -8700,6 +8764,39 @@ ${directLink}
   // -------------------------------------------------------------
   // Solution Memory Checkpoints Interactive Engine
   // -------------------------------------------------------------
+  window.openAllLessonCheckpoints = function(forceOpen) {
+    if (window.teacherAudioPlayer) teacherAudioPlayer.stop();
+    if (window.continuousAudioPlayer) continuousAudioPlayer.stop();
+    currentFilter = 'checkpoints';
+    currentSubSection = 'all';
+    currentLessonPage = 1;
+    renderLessonGuide();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.toggleAllRecallCards = function() {
+    if (!currentLesson || !currentLesson.questions) return;
+    const cpQuestions = currentLesson.questions.filter(q => q.checkpoints && q.checkpoints.length > 0);
+    let anyClosed = false;
+    cpQuestions.forEach(q => {
+      const b = document.getElementById('recallBody_' + q.id);
+      if (b && (b.style.display === 'none' || b.style.display === '')) anyClosed = true;
+    });
+    const targetState = anyClosed ? 'block' : 'none';
+    const targetIcon = anyClosed ? '&#9650;' : '&#9654;';
+    cpQuestions.forEach(q => {
+      const b = document.getElementById('recallBody_' + q.id);
+      const icon = document.getElementById('recallIcon_' + q.id);
+      if (b) b.style.display = targetState;
+      if (icon) icon.innerHTML = targetIcon;
+    });
+    const toggleIcon = document.getElementById('allRecallToggleIcon');
+    const toggleText = document.getElementById('allRecallToggleText');
+    const isEm = currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english');
+    if (toggleIcon) toggleIcon.innerText = anyClosed ? '📁' : '📂';
+    if (toggleText) toggleText.innerText = anyClosed ? (isEm ? 'Collapse All' : 'அனைத்தையும் மூடுக') : (isEm ? 'Expand All' : 'அனைத்தையும் திறக்க');
+  };
+
   window.toggleRecallCheckpoints = function(qId) {
     const body = document.getElementById('recallBody_' + qId);
     const icon = document.getElementById('recallIcon_' + qId);

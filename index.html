@@ -4244,18 +4244,21 @@
       </div>
 
       <div class="lesson-list">
-        ${currentSubject.lessons.map(l => `
+        ${currentSubject.lessons.map(l => {
+          resolveLessonData(l);
+          const cpCount = (l.questions || []).filter(q => q.checkpoints && q.checkpoints.length > 0).length;
+          return `
           <div class="lesson-item" onclick="selectLesson('${l.id}')">
             <div class="lesson-left">
               <div class="unit-badge">${l.unit}</div>
               <div>
                 <div class="lesson-title-text">${l.title}</div>
-                <div class="lesson-meta">${l.qCount || (l.questions ? l.questions.length : 15)} ${isEm ? 'Questions & Solutions' : 'வினா-விடைகள் உள்ளன'} • <span style="color:#d97706; font-weight:800;">🏆 ${isEm ? 'Mock Test' : 'மாதிரித் தேர்வு'}</span> • <span style="color:#0284c7; font-weight:800; cursor:pointer;" onclick="event.stopPropagation(); selectLesson('${l.id}', 'checkpoints')">🧠 ${isEm ? 'Checkpoints (1 Click)' : 'நினைவூட்டல் (1 Click)'}</span></div>
+                <div class="lesson-meta">${l.qCount || (l.questions ? l.questions.length : 15)} ${isEm ? 'Questions & Solutions' : 'வினா-விடைகள் உள்ளன'} • <span style="color:#d97706; font-weight:800;">🏆 ${isEm ? 'Mock Test' : 'மாதிரித் தேர்வு'}</span>${cpCount > 0 ? ` • <span style="color:#0284c7; font-weight:800; cursor:pointer;" onclick="event.stopPropagation(); selectLesson('${l.id}', 'checkpoints')">🧠 ${isEm ? 'Checkpoints (1 Click)' : 'நினைவூட்டல் (1 Click)'}</span>` : ''}</div>
               </div>
             </div>
             <div class="lesson-arrow">➔</div>
           </div>
-        `).join('')}
+        `;}).join('')}
       </div>
     `;
   }
@@ -4477,7 +4480,12 @@
     if (currentLesson && currentLesson.stories && currentLesson.stories.length > 0) {
       currentStoryId = currentLesson.stories[0].id;
     }
-    window.location.hash = `${subId}/${lesId}`;
+    const targetHash = (defaultFilter && defaultFilter !== 'all') ? `${subId}/${lesId}/${defaultFilter}` : `${subId}/${lesId}`;
+    if (window.location.hash === '#' + targetHash) {
+      handleHashNavigation();
+    } else {
+      window.location.hash = targetHash;
+    }
   }
 
   function renderLessonGuide() {
@@ -4969,9 +4977,14 @@
               </div>
             </div>
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-              <button type="button" class="tab-btn" onclick="openAllLessonCheckpoints(true)" style="background:#ffffff; color:#0369a1; font-weight:800; font-size:13px; padding:9px 16px; border-radius:8px; border:none; box-shadow:0 2px 6px rgba(0,0,0,0.15); display:inline-flex; align-items:center; gap:6px; cursor:pointer;">
-                <span>⚡ ${isEm ? 'All Checkpoints in 1 Click' : 'அனைத்தும் ஒரே கிளிக்கில் (1 Click)'}</span>
+              <button type="button" class="tab-btn" onclick="openAllLessonCheckpoints(true)" style="${isCheckpointsView ? 'background:#dcfce7; color:#15803d; border:1.5px solid #22c55e;' : 'background:#ffffff; color:#0369a1; border:none;'} font-weight:800; font-size:13px; padding:9px 16px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); display:inline-flex; align-items:center; gap:6px; cursor:pointer;">
+                <span>${isCheckpointsView ? ('✔ ' + (isEm ? 'Showing All Checkpoints' : 'நினைவூட்டல் புள்ளிகள்')) : ('⚡ ' + (isEm ? 'All Checkpoints in 1 Click' : 'அனைத்தும் ஒரே கிளிக்கில் (1 Click)'))}</span>
               </button>
+              ${isCheckpointsView ? `
+                <button type="button" class="tab-btn" onclick="setFilter('all')" style="background:rgba(255,255,255,0.22); color:#ffffff; font-weight:700; font-size:12.5px; padding:9px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.5); display:inline-flex; align-items:center; gap:6px; cursor:pointer;">
+                  <span>↩ ${isEm ? 'Show Normal Q&A' : 'அனைத்து வினாக்கள்'}</span>
+                </button>
+              ` : ''}
               <button type="button" class="tab-btn" onclick="toggleAllRecallCards()" style="background:rgba(255,255,255,0.18); color:#ffffff; font-weight:700; font-size:13px; padding:9px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.4); display:inline-flex; align-items:center; gap:6px; cursor:pointer;">
                 <span id="allRecallToggleIcon">${isCheckpointsView ? '📁' : '📂'}</span>
                 <span id="allRecallToggleText">${isCheckpointsView ? (isEm ? 'Collapse All' : 'அனைத்தையும் மூடுக') : (isEm ? 'Expand All' : 'அனைத்தையும் திறக்க')}</span>
@@ -5052,6 +5065,7 @@
         </div>
       ` : ''}
 
+      <div id="lessonCheckpointsAnchor"></div>
       <div id="lessonPageTopAnchor"></div>
 
       ${buildBookPaginationBar('top')}
@@ -5197,53 +5211,20 @@
               ` : ''}
 
               <div class="ans-container" style="font-size:${contentFontSize}px;">
-                <span class="ans-label">${isEm || isEnglish ? 'Answer:' : (isTm ? 'விடை:' : 'விடை (Answer):')}</span><br>
-                <div>${cleanMathEncoding(item.ans)}</div>
-
-                ${(item.ansTamil && !isEm && !isEnglish) ? `
-                  <div style="margin-top:10px; padding:8px 12px; background:var(--bg-page); border-left:3px solid #16a34a; border-radius:6px; font-size:${contentFontSize - 1}px; color:var(--text-main); line-height:1.5;">
-                    <span style="font-weight:700; color:#15803d;">💡 ${isTm ? 'எளிய விளக்கம்:' : 'எளிய விளக்கம் (Explanation):'}</span> ${item.ansTamil}
-                  </div>
-                ` : (item.explanation && (isEm || isEnglish)) ? `
-                  <div style="margin-top:10px; padding:8px 12px; background:var(--bg-page); border-left:3px solid #16a34a; border-radius:6px; font-size:${contentFontSize - 1}px; color:var(--text-main); line-height:1.5;">
-                    <span style="font-weight:700; color:#15803d;">💡 Key Concept:</span> ${cleanMathEncoding(item.explanation)}
-                  </div>
-                ` : ''}
-
-                ${item.diagramImg ? `
-                  <div class="diagram-box">
-                    <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:center; gap:6px;">
-                      <span>🎨 ${isEm || isEnglish ? 'Textbook Illustration' : (isTm ? 'பாட வரைபடம்' : 'பாட வரைபடம் (Textbook Illustration)')}</span>
-                    </div>
-                    <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)">
-                      <img src="${(isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png' ? 'images/math_bb_ex1_4_en.png' : item.diagramImg}" alt="${(item.diagramCaption || item.q || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" class="diagram-img" onerror="handleDiagramImgError(this)">
-                      <div class="diagram-zoom-hint">
-                        <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
-                      </div>
-                    </div>
-                    <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
-                  </div>
-                ` : item.diagramSvg ? `
-                  <div class="diagram-box">
-                    ${item.diagramSvg}
-                    <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
-                  </div>
-                ` : ''}
-
-                                ${item.checkpoints && item.checkpoints.length > 0 ? `
-                  <div class="recall-checkpoints-card" style="margin:16px 0; border:1.5px solid #0284c7; border-radius:12px; background:#f0f9ff; overflow:hidden; box-shadow:0 3px 10px rgba(14,165,233,0.08);">
-                    <div class="recall-card-header" onclick="toggleRecallCheckpoints('${item.id}')" style="padding:10px 14px; background:linear-gradient(135deg, #0284c7, #0369a1); color:#ffffff; display:flex; align-items:center; justify-content:space-between; cursor:pointer; user-select:none;">
+                ${isCheckpointsView && item.checkpoints && item.checkpoints.length > 0 ? `
+                  <div class="recall-checkpoints-card" style="margin:4px 0 14px 0; border:2px solid #0284c7; border-radius:12px; background:#f0f9ff; overflow:hidden; box-shadow:0 4px 14px rgba(2,132,199,0.15);">
+                    <div class="recall-card-header" onclick="toggleRecallCheckpoints('${item.id}')" style="padding:12px 16px; background:linear-gradient(135deg, #0284c7, #0369a1); color:#ffffff; display:flex; align-items:center; justify-content:space-between; cursor:pointer; user-select:none;">
                       <div style="display:flex; align-items:center; gap:8px;">
-                        <span style="font-size:20px;">&#129504;</span>
+                        <span style="font-size:22px;">🧠</span>
                         <div>
-                          <div style="font-size:13.5px; font-weight:800; color:#ffffff;">${isEm || isEnglish ? 'Solution Memory Checkpoints (10 Concept Q&A)' : 'தீர்வை நினைவில் வைக்க 10 முக்கிய வினா-விடைகள்'}</div>
-                          <div style="font-size:11px; color:#e0f2fe; font-weight:600;">${isEm || isEnglish ? 'Tap to view 10 Concept Recall Q&A ▾' : '10 நினைவூட்டல் வினா-விடைகளைக் காணத் தொடுக ▾'}</div>
+                          <div style="font-size:14px; font-weight:800; color:#ffffff;">${isEm || isEnglish ? 'Solution Memory Checkpoints (10 Concept Q&A)' : 'தீர்வை நினைவில் வைக்க 10 முக்கிய வினா-விடைகள்'}</div>
+                          <div style="font-size:11.5px; color:#e0f2fe; font-weight:600;">${isEm || isEnglish ? '10 Concept Checkpoint Q&A (All Checkpoints in 1 Click)' : '10 நினைவூட்டல் வினா-விடைகள் (ஒரே கிளிக்கில்)'}</div>
                         </div>
                       </div>
-                      <span id="recallIcon_${item.id}" style="font-size:14px; font-weight:800; transition:transform 0.3s ease;">${isCheckpointsView ? '&#9650;' : '&#9654;'}</span>
+                      <span id="recallIcon_${item.id}" style="font-size:14px; font-weight:800; transition:transform 0.3s ease;">&#9650;</span>
                     </div>
-                    <div id="recallBody_${item.id}" style="display:${isCheckpointsView ? 'block' : 'none'}; padding:12px 14px; background:#ffffff;">
-                      <div style="font-size:12px; color:#475569; margin-bottom:12px; line-height:1.5; background:#e0f2fe; padding:8px 12px; border-radius:8px; border-left:3px solid #0284c7;">
+                    <div id="recallBody_${item.id}" style="display:block; padding:14px; background:#ffffff;">
+                      <div style="font-size:12px; color:#0369a1; margin-bottom:12px; line-height:1.5; background:#e0f2fe; padding:8px 12px; border-radius:8px; border-left:3px solid #0284c7;">
                         <b>&#128161; ${isEm || isEnglish ? 'Exam Master Note:' : 'தேர்வு வெற்றி குறிப்பு:'}</b> ${isEm || isEnglish ? 'Review these 10 concept checkpoints to solve this 5-mark question accurately in public exams!' : 'இந்த 10 முக்கியக் கருத்துகளையும் வினா-விடைகளையும் படித்தால் அரசுத் தேர்வில் 5 மதிப்பெண்களை முழுமையாகப் பெறலாம்!'}
                       </div>
                       <div class="recall-list" style="display:flex; flex-direction:column; gap:14px;">
@@ -5268,7 +5249,118 @@
                       </div>
                     </div>
                   </div>
-                ` : ''}
+
+                  <details style="margin-top:10px; border:1px solid #cbd5e1; border-radius:10px; background:#f8fafc; overflow:hidden;">
+                    <summary style="padding:10px 14px; font-weight:700; font-size:13px; cursor:pointer; color:#0369a1; user-select:none; background:#f1f5f9; display:flex; align-items:center; gap:6px;">
+                      <span>📖 ${isEm || isEnglish ? 'View Full Detailed Textbook Proof / Solution ▾' : 'பாடநூல் முழுமையான தீர்வைக் காண்க ▾'}</span>
+                    </summary>
+                    <div style="padding:14px; background:#ffffff;">
+                      <span class="ans-label">${isEm || isEnglish ? 'Answer:' : (isTm ? 'விடை:' : 'விடை (Answer):')}</span><br>
+                      <div>${cleanMathEncoding(item.ans)}</div>
+                      ${(item.ansTamil && !isEm && !isEnglish) ? `
+                        <div style="margin-top:10px; padding:8px 12px; background:var(--bg-page); border-left:3px solid #16a34a; border-radius:6px; font-size:${contentFontSize - 1}px; color:var(--text-main); line-height:1.5;">
+                          <span style="font-weight:700; color:#15803d;">💡 ${isTm ? 'எளிய விளக்கம்:' : 'எளிய விளக்கம் (Explanation):'}</span> ${item.ansTamil}
+                        </div>
+                      ` : (item.explanation && (isEm || isEnglish)) ? `
+                        <div style="margin-top:10px; padding:8px 12px; background:var(--bg-page); border-left:3px solid #16a34a; border-radius:6px; font-size:${contentFontSize - 1}px; color:var(--text-main); line-height:1.5;">
+                          <span style="font-weight:700; color:#15803d;">💡 Key Concept:</span> ${cleanMathEncoding(item.explanation)}
+                        </div>
+                      ` : ''}
+                      ${item.diagramImg ? `
+                        <div class="diagram-box">
+                          <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:center; gap:6px;">
+                            <span>🎨 ${isEm || isEnglish ? 'Textbook Illustration' : (isTm ? 'பாட வரைபடம்' : 'பாட வரைபடம் (Textbook Illustration)')}</span>
+                          </div>
+                          <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)">
+                            <img src="${(isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png' ? 'images/math_bb_ex1_4_en.png' : item.diagramImg}" alt="${(item.diagramCaption || item.q || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" class="diagram-img" onerror="handleDiagramImgError(this)">
+                            <div class="diagram-zoom-hint">
+                              <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
+                            </div>
+                          </div>
+                          <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
+                        </div>
+                      ` : item.diagramSvg ? `
+                        <div class="diagram-box">
+                          ${item.diagramSvg}
+                          <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
+                        </div>
+                      ` : ''}
+                    </div>
+                  </details>
+                ` : `
+                  <span class="ans-label">${isEm || isEnglish ? 'Answer:' : (isTm ? 'விடை:' : 'விடை (Answer):')}</span><br>
+                  <div>${cleanMathEncoding(item.ans)}</div>
+
+                  ${(item.ansTamil && !isEm && !isEnglish) ? `
+                    <div style="margin-top:10px; padding:8px 12px; background:var(--bg-page); border-left:3px solid #16a34a; border-radius:6px; font-size:${contentFontSize - 1}px; color:var(--text-main); line-height:1.5;">
+                      <span style="font-weight:700; color:#15803d;">💡 ${isTm ? 'எளிய விளக்கம்:' : 'எளிய விளக்கம் (Explanation):'}</span> ${item.ansTamil}
+                    </div>
+                  ` : (item.explanation && (isEm || isEnglish)) ? `
+                    <div style="margin-top:10px; padding:8px 12px; background:var(--bg-page); border-left:3px solid #16a34a; border-radius:6px; font-size:${contentFontSize - 1}px; color:var(--text-main); line-height:1.5;">
+                      <span style="font-weight:700; color:#15803d;">💡 Key Concept:</span> ${cleanMathEncoding(item.explanation)}
+                    </div>
+                  ` : ''}
+
+                  ${item.diagramImg ? `
+                    <div class="diagram-box">
+                      <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:center; gap:6px;">
+                        <span>🎨 ${isEm || isEnglish ? 'Textbook Illustration' : (isTm ? 'பாட வரைபடம்' : 'பாட வரைபடம் (Textbook Illustration)')}</span>
+                      </div>
+                      <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)">
+                        <img src="${(isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png' ? 'images/math_bb_ex1_4_en.png' : item.diagramImg}" alt="${(item.diagramCaption || item.q || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" class="diagram-img" onerror="handleDiagramImgError(this)">
+                        <div class="diagram-zoom-hint">
+                          <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
+                        </div>
+                      </div>
+                      <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
+                    </div>
+                  ` : item.diagramSvg ? `
+                    <div class="diagram-box">
+                      ${item.diagramSvg}
+                      <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
+                    </div>
+                  ` : ''}
+
+                  ${item.checkpoints && item.checkpoints.length > 0 ? `
+                    <div class="recall-checkpoints-card" style="margin:16px 0; border:1.5px solid #0284c7; border-radius:12px; background:#f0f9ff; overflow:hidden; box-shadow:0 3px 10px rgba(14,165,233,0.08);">
+                      <div class="recall-card-header" onclick="toggleRecallCheckpoints('${item.id}')" style="padding:10px 14px; background:linear-gradient(135deg, #0284c7, #0369a1); color:#ffffff; display:flex; align-items:center; justify-content:space-between; cursor:pointer; user-select:none;">
+                        <div style="display:flex; align-items:center; gap:8px;">
+                          <span style="font-size:20px;">&#129504;</span>
+                          <div>
+                            <div style="font-size:13.5px; font-weight:800; color:#ffffff;">${isEm || isEnglish ? 'Solution Memory Checkpoints (10 Concept Q&A)' : 'தீர்வை நினைவில் வைக்க 10 முக்கிய வினா-விடைகள்'}</div>
+                            <div style="font-size:11px; color:#e0f2fe; font-weight:600;">${isEm || isEnglish ? 'Tap to view 10 Concept Recall Q&A ▾' : '10 நினைவூட்டல் வினா-விடைகளைக் காணத் தொடுக ▾'}</div>
+                          </div>
+                        </div>
+                        <span id="recallIcon_${item.id}" style="font-size:14px; font-weight:800; transition:transform 0.3s ease;">${isCheckpointsView ? '&#9650;' : '&#9654;'}</span>
+                      </div>
+                      <div id="recallBody_${item.id}" style="display:${isCheckpointsView ? 'block' : 'none'}; padding:12px 14px; background:#ffffff;">
+                        <div style="font-size:12px; color:#475569; margin-bottom:12px; line-height:1.5; background:#e0f2fe; padding:8px 12px; border-radius:8px; border-left:3px solid #0284c7;">
+                          <b>&#128161; ${isEm || isEnglish ? 'Exam Master Note:' : 'தேர்வு வெற்றி குறிப்பு:'}</b> ${isEm || isEnglish ? 'Review these 10 concept checkpoints to solve this 5-mark question accurately in public exams!' : 'இந்த 10 முக்கியக் கருத்துகளையும் வினா-விடைகளையும் படித்தால் அரசுத் தேர்வில் 5 மதிப்பெண்களை முழுமையாகப் பெறலாம்!'}
+                        </div>
+                        <div class="recall-list" style="display:flex; flex-direction:column; gap:14px;">
+                          ${item.checkpoints.map((cp, cpIdx) => `
+                            <div class="recall-item" id="cp_${item.id}_${cpIdx}" style="padding:12px 14px; border:1px solid #e2e8f0; border-radius:10px; background:#f8fafc;">
+                              <div style="font-size:13px; font-weight:700; color:#1e293b; margin-bottom:10px; line-height:1.5;">
+                                ${cp.q}
+                              </div>
+                              <div style="display:grid; grid-template-columns:1fr; gap:6px;">
+                                ${cp.options.map((opt, optIdx) => `
+                                  <div style="padding:8px 12px; font-size:12px; font-weight:${optIdx === cp.ans ? '700' : '500'}; border:1.5px solid ${optIdx === cp.ans ? '#16a34a' : '#e2e8f0'}; border-radius:8px; background:${optIdx === cp.ans ? '#dcfce7' : '#ffffff'}; color:${optIdx === cp.ans ? '#15803d' : '#334155'}; display:flex; align-items:center; gap:8px;">
+                                    <span style="font-size:14px; color:${optIdx === cp.ans ? '#16a34a' : '#94a3b8'};">${optIdx === cp.ans ? '&#10004;' : '&#9675;'}</span>
+                                    <span>${opt} ${optIdx === cp.ans ? `<span style="font-weight:800; color:#15803d; margin-left:6px;">${isEm || isEnglish ? '(Correct Answer)' : '(சரியான விடை)'}</span>` : ''}</span>
+                                  </div>
+                                `).join('')}
+                              </div>
+                              <div class="recall-explanation" style="margin-top:10px; padding:8px 12px; background:#f0fdf4; border-left:3px solid #16a34a; border-radius:6px; font-size:12px; color:#166534; line-height:1.5;">
+                                <b>&#128161; ${isEm || isEnglish ? 'Step Analysis / Reasoning:' : 'ஆசிரியர் விளக்கம் / வழிமுறை:'}</b> ${cp.explanation || cp.exp || ''}
+                              </div>
+                            </div>
+                          `).join('')}
+                        </div>
+                      </div>
+                    </div>
+                  ` : ''}
+                `}
 
                 <!-- Doubt, Audio, and Public Exam Action Bar -->
                 <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-top:14px; padding-top:10px; border-top:1px dashed var(--border);">
@@ -8770,8 +8862,23 @@ ${directLink}
     currentFilter = 'checkpoints';
     currentSubSection = 'all';
     currentLessonPage = 1;
+    if (currentSubject && currentLesson) {
+      const cpHash = `#${currentSubject.id}/${currentLesson.id}/checkpoints`;
+      try {
+        history.replaceState(null, '', cpHash);
+      } catch(e) {
+        window.location.hash = cpHash;
+      }
+    }
     renderLessonGuide();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      const targetElem = document.getElementById('lessonCheckpointsAnchor') ||
+                         document.getElementById('lessonPageTopAnchor') ||
+                         document.getElementById('qaList');
+      if (targetElem) {
+        targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 60);
   };
 
   window.toggleAllRecallCards = function() {
@@ -8947,6 +9054,9 @@ ${directLink}
           } else if (target === 'public' || target === '2025') {
             currentLessonViewMode = 'qa';
             currentFilter = 'public';
+          } else if (target === 'checkpoints') {
+            currentLessonViewMode = 'qa';
+            currentFilter = 'checkpoints';
           } else if (target && target.startsWith('bb_')) {
             currentLessonViewMode = 'qa';
             currentFilter = 'all';
@@ -8995,6 +9105,17 @@ ${directLink}
             { name: currentLesson.unit, action: `selectLesson('${lesId}')` }
           ]);
           renderLessonGuide();
+
+          if (target === 'checkpoints') {
+            setTimeout(() => {
+              const targetElem = document.getElementById('lessonCheckpointsAnchor') ||
+                                 document.getElementById('lessonPageTopAnchor') ||
+                                 document.getElementById('qaList');
+              if (targetElem) {
+                targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }, 80);
+          }
 
           if (parts[2] === 'mock') {
             setTimeout(() => {

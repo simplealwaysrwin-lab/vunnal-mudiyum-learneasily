@@ -1,4 +1,4 @@
-// 10th Standard Social Science - History Unit 1: Outbreak of World War I and its Aftermath (English Medium)
+﻿// 10th Standard Social Science - History Unit 1: Outbreak of World War I and its Aftermath (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SOCIAL_EM_UNIT_1_DATA = {
@@ -464,5 +464,197 @@ const SOCIAL_EM_UNIT_1_DATA = {
         }
       ]
     }
+    ,
+    // -------------------------------------------------------------
+    // Section 4: Key Exam-Predicted 5-Mark Questions & Checkpoints
+    // -------------------------------------------------------------
+    {
+      id: "sec_soc_em_1_4",
+      title: "Section 4: Key Exam-Predicted 5-Mark Questions & Checkpoints",
+      author: "History - Unit 1 Special",
+      questions: [
+        {
+          id: "soc_em_1_9",
+          type: "5m",
+          mark: "5 Marks",
+          examTag: "Exam Predicted",
+          isImportant: true,
+          q: "Explain how imperialism and militarism increased tensions in Europe before World War I.",
+          ans: `<div style="line-height:1.8;">
+            <b>Core Causes of Pre-War Tension:</b><br><br>
+            1. <b>Imperialism:</b> European powers competed intensely for overseas colonies in Africa and Asia to secure raw materials, cheap labor, and exclusive markets for their growing industries.<br><br>
+            2. <b>Militarism:</b> European nations adopted policies of building up massive standing armies and stockpiling weapons. Military leaders gained enormous influence over civilian governments.<br><br>
+            3. <b>Naval Arms Race:</b> A dangerous rivalry developed between Great Britain and Germany as Kaiser Wilhelm II built a powerful battle fleet (Dreadnoughts) to challenge Britain's supremacy on the high seas.<br><br>
+            4. <b>Secret Military Alliances:</b> Europe was split into two hostile armed camps: the <b>Triple Alliance (1882)</b> (Germany, Austria-Hungary, Italy) and the <b>Triple Entente (1907)</b> (Britain, France, Russia).<br><br>
+            5. <b>Aggressive Nationalism:</b> Extreme, militant patriotism ('Jingoism' in Britain, 'Chauvinism' in France, 'Kultur' in Germany) created deep hatred and suspicion among neighbouring nations.<br><br>
+            6. <b>Result:</b> These tensions turned Europe into a virtual powder keg, culminating in the outbreak of World War I in July 1914 following the assassination of Archduke Franz Ferdinand at Sarajevo.<br><br>
+            <div style="background:#f0f9ff; border:1.5px solid #0284c7; border-radius:8px; padding:10px 14px; margin-top:8px;">
+              <b style="color:#0369a1;">🧠 Fast-Recall Mnemonic: I – M – N – A – N – R</b><br>
+              <span style="font-size:13px; color:#334155;"><b>I</b>mperialism | <b>M</b>ilitarism | <b>N</b>aval race | <b>A</b>lliances | <b>N</b>ationalism | <b>R</b>esult</span>
+            </div>
+          </div>`,
+          explanation: "Imperialism, arms race, secret alliances, and extreme nationalism divided Europe into hostile camps, triggering WWI.",
+          checkpoints: [
+            {
+              q: "1. What is imperialism?",
+              options: [
+                "A. The policy of extending a country's power by acquiring colonies",
+                "B. Free trade between all nations",
+                "C. Disarmament of national armies",
+                "D. Mutual non-aggression treaties"
+              ],
+              ans: 0,
+              explanation: "Imperialism is the policy of extending national power through colonization and economic exploitation."
+            },
+            {
+              q: "2. Which two countries competed fiercely in the pre-WWI naval arms race?",
+              options: [
+                "A. France and Russia",
+                "B. Britain and Germany",
+                "C. Italy and Austria",
+                "D. USA and Japan"
+              ],
+              ans: 1,
+              explanation: "Britain and Germany engaged in an intense race to build the strongest dreadnought battle fleets."
+            },
+            {
+              q: "3. The Triple Alliance formed in 1882 consisted of which nations?",
+              options: [
+                "A. Britain, France, Russia",
+                "B. Germany, Austria-Hungary, Italy",
+                "C. USA, Britain, France",
+                "D. Turkey, Russia, Germany"
+              ],
+              ans: 1,
+              explanation: "The Triple Alliance brought Germany, Austria-Hungary, and Italy together."
+            },
+            {
+              q: "4. The Triple Entente formed in 1907 consisted of which nations?",
+              options: [
+                "A. Britain, France, Russia",
+                "B. Germany, Austria, Italy",
+                "C. USA, Japan, Britain",
+                "D. Spain, Portugal, Italy"
+              ],
+              ans: 0,
+              explanation: "Britain, France, and Russia formed the Triple Entente to counter German expansion."
+            },
+            {
+              q: "5. What does the mnemonic 'I-M-N-A-N-R' stand for?",
+              options: [
+                "A. Industry, Mining, Navigation, Agriculture, Nature, Railroads",
+                "B. Imperialism, Militarism, Naval race, Alliances, Nationalism, Result",
+                "C. Italy, Madrid, Norway, Austria, Netherlands, Russia",
+                "D. Infantry, Mortars, Navy, Artillery, Nuclear, Reserves"
+              ],
+              ans: 1,
+              explanation: "I-M-N-A-N-R reminds students of the 6 key causes of WWI tension."
+            },
+            {
+              q: "6. When did World War I officially break out?",
+              options: [
+                "A. 1912",
+                "B. 1914 (28 July)",
+                "C. 1918",
+                "D. 1920"
+              ],
+              ans: 1,
+              explanation: "World War I began on 28 July 1914 when Austria declared war on Serbia."
+            }
+          ]
+        },
+        {
+          id: "soc_em_1_10",
+          type: "5m",
+          mark: "5 Marks",
+          examTag: "Exam Predicted",
+          isImportant: true,
+          q: "Explain the major political and economic consequences of World War I.",
+          ans: `<div style="line-height:1.8;">
+            <b>Major Consequences of World War I:</b><br><br>
+            1. <b>Colossal Loss of Life:</b> Over 8 million combatants and millions of civilians died. An entire generation of young men was lost, leaving millions of widows and orphans.<br><br>
+            2. <b>Severe Economic Ruin:</b> Widespread destruction of industries, agriculture, and infrastructure across Europe resulted in skyrocketing debts, crippling inflation, and high unemployment.<br><br>
+            3. <b>Fall of Four Great Empires:</b> Four autocratic imperial dynasties completely collapsed: the <b>German Empire (Hohenzollern)</b>, <b>Russian Empire (Romanov)</b>, <b>Austro-Hungarian Empire (Habsburg)</b>, and <b>Ottoman Empire (Turkey)</b>.<br><br>
+            4. <b>Emergence of New Nations:</b> The political map of Central and Eastern Europe was redrawn. New independent nation-states emerged, including Poland, Finland, Estonia, Latvia, Lithuania, Czechoslovakia, and Yugoslavia.<br><br>
+            5. <b>The Harsh Treaty of Versailles (1919):</b> Germany was forced to sign a humiliating treaty accepting sole war guilt (Article 231), huge financial reparations, loss of territories, and severe military restrictions.<br><br>
+            6. <b>Creation of the League of Nations:</b> An international organization was founded on 10 January 1920 with headquarters in Geneva to maintain world peace and prevent future wars.<br><br>
+            <div style="background:#ecfdf5; border:1.5px solid #10b981; border-radius:8px; padding:10px 14px; margin-top:8px;">
+              <b style="color:#047857;">🧠 Fast-Recall Mnemonic: L – E – E – N – T – L</b><br>
+              <span style="font-size:13px; color:#334155;"><b>L</b>ife | <b>E</b>conomy | <b>E</b>mpires | <b>N</b>ations | <b>T</b>reaty | <b>L</b>eague</span>
+            </div>
+          </div>`,
+          explanation: "WWI resulted in loss of life, economic collapse, fall of 4 empires, new nations, Versailles treaty, and League of Nations.",
+          checkpoints: [
+            {
+              q: "1. When did the fighting in World War I officially end with the Armistice?",
+              options: [
+                "A. 28 June 1914",
+                "B. 11 November 1918",
+                "C. 28 June 1919",
+                "D. 10 January 1920"
+              ],
+              ans: 1,
+              explanation: "The armistice took effect at 11 am on 11 November 1918."
+            },
+            {
+              q: "2. Which four empires collapsed as a result of World War I?",
+              options: [
+                "A. British, French, American, Japanese empires",
+                "B. German, Russian, Austro-Hungarian, and Ottoman empires",
+                "C. Italian, Spanish, Portuguese, Dutch empires",
+                "D. Roman, Persian, Byzantine, Ottoman empires"
+              ],
+              ans: 1,
+              explanation: "The German, Russian, Austro-Hungarian, and Ottoman empires all disintegrated."
+            },
+            {
+              q: "3. Name the peace treaty signed between the Allies and Germany in June 1919:",
+              options: [
+                "A. Treaty of Versailles",
+                "B. Treaty of Brest-Litovsk",
+                "C. Treaty of Portsmouth",
+                "D. Treaty of Rome"
+              ],
+              ans: 0,
+              explanation: "The Treaty of Versailles was signed on 28 June 1919 in the Hall of Mirrors at Versailles."
+            },
+            {
+              q: "4. Where was the headquarters of the League of Nations established in 1920?",
+              options: [
+                "A. Paris, France",
+                "B. London, United Kingdom",
+                "C. Geneva, Switzerland",
+                "D. New York, USA"
+              ],
+              ans: 2,
+              explanation: "Geneva, Switzerland was chosen as the neutral permanent headquarters of the League."
+            },
+            {
+              q: "5. Name one of the new independent nations created in Europe following WWI:",
+              options: [
+                "A. Poland",
+                "B. Canada",
+                "C. Egypt",
+                "D. Argentina"
+              ],
+              ans: 0,
+              explanation: "Poland, Czechoslovakia, Finland, and Yugoslavia were created or restored as independent states."
+            },
+            {
+              q: "6. What does the mnemonic 'L-E-E-N-T-L' stand for?",
+              options: [
+                "A. Life, Economy, Empires, Nations, Treaty, League",
+                "B. Law, Executive, Elections, Navy, Troops, Logistics",
+                "C. Land, Exports, Employment, Nationalism, Taxation, Labour",
+                "D. Lenin, Europe, England, Netherlands, Turkey, London"
+              ],
+              ans: 0,
+              explanation: "L-E-E-N-T-L helps students easily recall all 6 major consequences of World War I."
+            }
+          ]
+        }
+      ]
+    }
+
   ]
 };

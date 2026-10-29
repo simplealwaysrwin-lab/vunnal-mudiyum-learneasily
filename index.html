@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -98,38 +98,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Serif+Tamil:wght@600;700;800&display=swap" rel="stylesheet">
-<script src="data_tamil_u1.js?v=20261027_v18"></script>
-<script src="data_tamil_u2.js?v=20261027_v18"></script>
-<script src="data_tamil_u3.js?v=20261027_v18"></script>
-<script src="data_tamil_u4.js?v=20261027_v18"></script>
-<script src="data_english_u1.js?v=20261027_v18"></script>
-<script src="data_english_u2.js?v=20261027_v18"></script>
-<script src="data_english_u3.js?v=20261027_v18"></script>
-<script src="data_english_u4.js?v=20261027_v18"></script>
-<script src="data_maths_tm_u1.js?v=20261027_v18"></script>
-<script src="data_maths_tm_u2.js?v=20261027_v18"></script>
-<script src="data_maths_tm_u3.js?v=20261027_v18"></script>
-<script src="data_maths_tm_u4.js?v=20261028_v24"></script>
-<script src="data_maths_em_u1.js?v=20261027_v18"></script>
-<script src="data_maths_em_u2.js?v=20261027_v18"></script>
-<script src="data_maths_em_u3.js?v=20261027_v18"></script>
-<script src="data_maths_em_u4.js?v=20261028_v24"></script>
-<script src="data_science_u1.js?v=20261027_v18"></script>
-<script src="data_science_u2.js?v=20261027_v18"></script>
-<script src="data_science_u3.js?v=20261027_v18"></script>
-<script src="data_science_u4.js?v=20261027_v18"></script>
-<script src="data_science_em_u1.js?v=20261027_v18"></script>
-<script src="data_science_em_u2.js?v=20261027_v18"></script>
-<script src="data_science_em_u3.js?v=20261027_v18"></script>
-<script src="data_science_em_u4.js?v=20261027_v18"></script>
-<script src="data_social_u1.js?v=20261028_v24"></script>
-<script src="data_social_u2.js?v=20261028_v24"></script>
-<script src="data_social_u3.js?v=20261028_v24"></script>
-<script src="data_social_u4.js?v=20261027_v18"></script>
-<script src="data_social_em_u1.js?v=20261028_v24"></script>
-<script src="data_social_em_u2.js?v=20261028_v24"></script>
-<script src="data_social_em_u3.js?v=20261028_v24"></script>
-<script src="data_social_em_u4.js?v=20261027_v18"></script>
+<script src="data_tamil_u1.js?v=20261029_v25"></script>
+<script src="data_tamil_u2.js?v=20261029_v25"></script>
+<script src="data_tamil_u3.js?v=20261029_v25"></script>
+<script src="data_tamil_u4.js?v=20261029_v25"></script>
+<script src="data_english_u1.js?v=20261029_v25"></script>
+<script src="data_english_u2.js?v=20261029_v25"></script>
+<script src="data_english_u3.js?v=20261029_v25"></script>
+<script src="data_english_u4.js?v=20261029_v25"></script>
+<script src="data_maths_tm_u1.js?v=20261029_v25"></script>
+<script src="data_maths_tm_u2.js?v=20261029_v25"></script>
+<script src="data_maths_tm_u3.js?v=20261029_v25"></script>
+<script src="data_maths_tm_u4.js?v=20261029_v25"></script>
+<script src="data_maths_em_u1.js?v=20261029_v25"></script>
+<script src="data_maths_em_u2.js?v=20261029_v25"></script>
+<script src="data_maths_em_u3.js?v=20261029_v25"></script>
+<script src="data_maths_em_u4.js?v=20261029_v25"></script>
+<script src="data_science_u1.js?v=20261029_v25"></script>
+<script src="data_science_u2.js?v=20261029_v25"></script>
+<script src="data_science_u3.js?v=20261029_v25"></script>
+<script src="data_science_u4.js?v=20261029_v25"></script>
+<script src="data_science_em_u1.js?v=20261029_v25"></script>
+<script src="data_science_em_u2.js?v=20261029_v25"></script>
+<script src="data_science_em_u3.js?v=20261029_v25"></script>
+<script src="data_science_em_u4.js?v=20261029_v25"></script>
+<script src="data_social_u1.js?v=20261029_v25"></script>
+<script src="data_social_u2.js?v=20261029_v25"></script>
+<script src="data_social_u3.js?v=20261029_v25"></script>
+<script src="data_social_u4.js?v=20261029_v25"></script>
+<script src="data_social_em_u1.js?v=20261029_v25"></script>
+<script src="data_social_em_u2.js?v=20261029_v25"></script>
+<script src="data_social_em_u3.js?v=20261029_v25"></script>
+<script src="data_social_em_u4.js?v=20261029_v25"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -4505,10 +4505,27 @@
       currentStoryId = currentLesson.stories[0].id;
     }
     const targetHash = (defaultFilter && defaultFilter !== 'all') ? `${subId}/${lesId}/${defaultFilter}` : `${subId}/${lesId}`;
-    if (window.location.hash === '#' + targetHash) {
-      handleHashNavigation();
-    } else {
-      window.location.hash = targetHash;
+    try {
+      history.pushState(null, '', '#' + targetHash);
+    } catch(e) {
+      try { window.location.hash = targetHash; } catch(err) {}
+    }
+    const isEm = currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english');
+    updateBreadcrumb([
+      { name: isEm ? 'Home' : 'முகப்பு', action: 'goHome()' },
+      { name: currentSubject ? currentSubject.name : '', action: `selectSubject('${subId}')` },
+      { name: currentLesson ? currentLesson.unit : '', action: `selectLesson('${lesId}')` }
+    ]);
+    renderLessonGuide();
+    if (defaultFilter === 'checkpoints') {
+      setTimeout(() => {
+        const targetElem = document.getElementById('lessonCheckpointsAnchor') ||
+                           document.getElementById('lessonPageTopAnchor') ||
+                           document.getElementById('qaList');
+        if (targetElem) {
+          targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 80);
     }
   }
 
@@ -8954,12 +8971,12 @@ ${directLink}
         btn.style.background = '#dcfce7';
         btn.style.borderColor = '#16a34a';
         btn.style.color = '#15803d';
-        btn.innerHTML = 'âœ” ' + btn.innerHTML;
+        btn.innerHTML = '✔ ' + btn.innerHTML;
       } else if (idx === selectedIdx && selectedIdx !== correctIdx) {
         btn.style.background = '#fee2e2';
         btn.style.borderColor = '#dc2626';
         btn.style.color = '#b91c1c';
-        btn.innerHTML = 'âœ– ' + btn.innerHTML;
+        btn.innerHTML = '✖ ' + btn.innerHTML;
       } else {
         btn.style.opacity = '0.6';
       }
@@ -8971,7 +8988,7 @@ ${directLink}
         qItem = currentLesson.questions.find(x => x.id === qId);
       }
       if (qItem && qItem.checkpoints && qItem.checkpoints[cpIdx]) {
-        expBox.innerHTML = '<b>' + (selectedIdx === correctIdx ? 'âœ” à®šà®°à®¿à®¯à®¾à®©à®¤à¯ (Correct)!' : 'ðŸ’¡ à®†à®šà®¿à®°à®¿à®¯à®°à¯ à®µà®¿à®³à®•à¯à®•à®®à¯ (Step Analysis):') + '</b> ' + qItem.checkpoints[cpIdx].explanation;
+        expBox.innerHTML = '<b>' + (selectedIdx === correctIdx ? '✔ சரியானது (Correct)!' : '💡 ஆசிரியர் விளக்கம் (Step Analysis):') + '</b> ' + qItem.checkpoints[cpIdx].explanation;
         expBox.style.display = 'block';
       }
     }
@@ -8981,7 +8998,7 @@ ${directLink}
   function handleHashNavigation() {
     if (window.teacherAudioPlayer) teacherAudioPlayer.stop();
     if (window.blackboardPlayer) blackboardPlayer.stop();
-    const rawHash = window.location.hash.replace('#', '').trim();
+    const rawHash = window.location.hash.replace(/^[#/]+/, '').trim();
     if (!rawHash || rawHash === 'home') {
       currentSubject = null;
       currentLesson = null;

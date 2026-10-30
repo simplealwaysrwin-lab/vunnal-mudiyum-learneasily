@@ -4,7 +4,7 @@
 // Zero-Downtime Architecture - Auto-Update on Deploy Engine
 // =======================================================================
 
-const CACHE_NAME = 'vm-offline-v20261029_v25';
+const CACHE_NAME = 'vm-offline-v20261030_v26';
 
 // Core essential assets for instant offline app shell and subject question banks
 const PRECACHE_ASSETS = [
@@ -93,7 +93,15 @@ const PRECACHE_ASSETS = [
   './data_social_em_u1.js',
   './data_social_em_u2.js',
   './data_social_em_u3.js',
-  './data_social_em_u4.js'
+  './data_social_em_u4.js',
+  './data_science_u5.js',
+  './data_science_u6.js',
+  './data_science_em_u5.js',
+  './data_science_em_u6.js',
+  './data_social_u5.js',
+  './data_social_u6.js',
+  './data_social_em_u5.js',
+  './data_social_em_u6.js'
 ];
 
 // Install Event: Cache essential shell in background and skip waiting immediately

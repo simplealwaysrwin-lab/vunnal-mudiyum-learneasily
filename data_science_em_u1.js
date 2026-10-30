@@ -923,3 +923,125 @@ const SCIENCE_EM_UNIT_1_DATA = {
 
   ]
 };
+
+
+// ==========================================
+// ðŸŒŸ Outside Book Practice Questions & Mock Test 1-Mark Points (Unit 1 EM)
+// ==========================================
+if (typeof SCIENCE_EM_UNIT_1_DATA !== 'undefined') {
+  if (!SCIENCE_EM_UNIT_1_DATA.subSections) SCIENCE_EM_UNIT_1_DATA.subSections = [];
+  SCIENCE_EM_UNIT_1_DATA.subSections.push({
+    id: "sci_em_u1_outside",
+    title: "ðŸŒŸ Outside Book Practice Questions & Mock Test 1-Mark Points",
+    author: "Expert Science Faculty",
+    questions: [
+      {
+        id: "sci_em_u1_out_5m_1",
+        q: "Explain rocket propulsion and its working principle with a neat labeled diagram.",
+        type: "5m",
+        examTag: "Outside Book / Extra Practice 5-Mark Question",
+        ans: "<b>Rocket Propulsion and Working Principle:</b><br><br>" +
+             "<b>1. Fundamental Principles:</b><br>" +
+             "Rocket propulsion is based on <b>Newton's Third Law of Motion</b> and the <b>Law of Conservation of Linear Momentum</b>.<br><br>" +
+             "<b>2. Fuel and Combustion Chamber:</b><br>" +
+             "Rockets are filled with liquid or solid propellant fuels and oxidizers. When ignited, intense chemical combustion produces hot exhaust gases at immense temperature and pressure.<br><br>" +
+             "<b>3. Ejection through Nozzle (Action):</b><br>" +
+             "These high-pressure exhaust gases escape through the convergent-divergent nozzle at hypersonic speeds in the downward direction. This constitutes the <b>Action</b>.<br><br>" +
+             "<b>4. Upward Reactionary Thrust (Reaction):</b><br>" +
+             "According to Newton's Third Law, an equal and opposite upward reaction force (Thrust) is exerted on the rocket body, accelerating it skyward into the atmosphere.<br><br>" +
+             "<b>5. Momentum Conservation & Speed Increase:</b><br>" +
+             "As the rocket ascends, its propellant mass decreases continuously. By the law of conservation of momentum, as mass decreases, its velocity increases steadily until escape velocity is reached.",
+        explanation: "Rocket propulsion uses Newton's Third Law (Action = Reaction) and Conservation of Momentum to propel the rocket upwards as exhaust gases escape downwards.",
+        diagramCaption: "Rocket Propulsion Principle & Upward Reaction Thrust",
+        diagramSvg: `<svg viewBox="0 0 400 320" style="max-width:100%; height:auto; display:block; margin:0 auto; background:#f8fafc; border-radius:12px; border:1px solid #cbd5e1;">
+  <defs>
+    <linearGradient id="rocketBodyGrad1_em" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/><stop offset="50%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="flameGrad1_em" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/><stop offset="50%" stop-color="#f97316"/><stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <line x1="200" y1="50" x2="200" y2="15" stroke="#16a34a" stroke-width="4"/>
+  <polygon points="194,22 200,8 206,22" fill="#16a34a"/>
+  <text x="214" y="24" font-size="12" font-weight="bold" fill="#15803d">Reaction / Upward Thrust (â†‘)</text>
+  <path d="M 200,45 Q 225,90 225,180 L 175,180 Q 175,90 200,45 Z" fill="url(#rocketBodyGrad1_em)"/>
+  <polygon points="175,150 148,185 175,185" fill="#1e40af"/>
+  <polygon points="225,150 252,185 225,185" fill="#1e40af"/>
+  <circle cx="200" cy="95" r="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <circle cx="200" cy="120" r="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <rect x="180" y="142" width="40" height="22" rx="4" fill="#ffffff" fill-opacity="0.25"/>
+  <text x="200" y="157" font-size="9" text-anchor="middle" font-weight="bold" fill="#ffffff">Fuel Tanks</text>
+  <polygon points="185,180 215,180 222,195 178,195" fill="#475569"/>
+  <polygon points="182,195 200,270 218,195 208,225 200,270 192,225" fill="url(#flameGrad1_em)"/>
+  <polygon points="194,285 200,298 206,285" fill="#dc2626"/>
+  <line x1="200" y1="265" x2="200" y2="290" stroke="#dc2626" stroke-width="3"/>
+  <text x="200" y="312" font-size="11" text-anchor="middle" font-weight="bold" fill="#b91c1c">Action / Downward Exhaust Gases (â†“)</text>
+</svg>`
+      },
+      {
+        id: "sci_em_u1_out_5m_2",
+        q: "State and explain the law of conservation of linear momentum with a neat collision diagram.",
+        type: "5m",
+        examTag: "Outside Book / Extra Practice 5-Mark Question",
+        ans: "<b>Law of Conservation of Linear Momentum:</b><br><br>" +
+             "<b>1. Statement:</b><br>" +
+             "In the absence of an external unbalanced force, the total linear momentum of an isolated system remains constant.<br><br>" +
+             "<b>2. Explanation & Derivation:</b><br>" +
+             "â€¢ Consider two bodies A and B of masses mâ‚ and mâ‚‚ moving along a straight line with initial velocities uâ‚ and uâ‚‚ (uâ‚ > uâ‚‚).<br>" +
+             "â€¢ Total initial momentum before collision = <b>mâ‚uâ‚ + mâ‚‚uâ‚‚</b>.<br>" +
+             "â€¢ During collision for time t, body A exerts force F<sub>B</sub> on B, and body B exerts equal and opposite force F<sub>A</sub> on A.<br>" +
+             "â€¢ By Newton's Third Law: <b>F<sub>B</sub> = -F<sub>A</sub></b>.<br>" +
+             "â€¢ After collision, their final velocities become vâ‚ and vâ‚‚.<br>" +
+             "â€¢ Total final momentum after collision = <b>mâ‚vâ‚ + mâ‚‚vâ‚‚</b>.<br><br>" +
+             "<b>3. Mathematical Formula:</b><br>" +
+             "<div style='text-align:center; font-size:16px; font-weight:bold; color:#0369a1; padding:8px; background:#f0f9ff; border-radius:8px;'>mâ‚uâ‚ + mâ‚‚uâ‚‚ = mâ‚vâ‚ + mâ‚‚vâ‚‚</div><br>" +
+             "Hence, total momentum before collision equals total momentum after collision.",
+        explanation: "Total initial momentum = Total final momentum (mâ‚uâ‚ + mâ‚‚uâ‚‚ = mâ‚vâ‚ + mâ‚‚vâ‚‚) whenever no external force acts.",
+        diagramCaption: "Stages of Linear Momentum Conservation During Collision",
+        diagramSvg: `<svg viewBox="0 0 460 260" style="max-width:100%; height:auto; display:block; margin:0 auto; background:#f8fafc; border-radius:12px; border:1px solid #cbd5e1;">
+  <text x="230" y="24" font-size="13" font-weight="bold" text-anchor="middle" fill="#1e293b">Law of Conservation of Linear Momentum</text>
+  <g transform="translate(20, 45)">
+    <rect x="0" y="0" width="420" height="50" rx="8" fill="#e0f2fe" stroke="#7dd3fc"/>
+    <text x="10" y="20" font-size="11" font-weight="bold" fill="#0369a1">1. Before Collision (uâ‚ > uâ‚‚):</text>
+    <circle cx="120" cy="32" r="14" fill="#3b82f6"/><text x="120" y="36" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">mâ‚</text>
+    <line x1="138" y1="32" x2="165" y2="32" stroke="#1d4ed8" stroke-width="2.5"/><polygon points="163,28 172,32 163,36" fill="#1d4ed8"/><text x="150" y="24" font-size="9" font-weight="bold" fill="#1d4ed8">uâ‚</text>
+    <circle cx="280" cy="32" r="18" fill="#10b981"/><text x="280" y="36" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">mâ‚‚</text>
+    <line x1="302" y1="32" x2="320" y2="32" stroke="#047857" stroke-width="2.5"/><polygon points="318,28 326,32 318,36" fill="#047857"/><text x="312" y="24" font-size="9" font-weight="bold" fill="#047857">uâ‚‚</text>
+  </g>
+  <g transform="translate(20, 105)">
+    <rect x="0" y="0" width="420" height="50" rx="8" fill="#fef3c7" stroke="#fcd34d"/>
+    <text x="10" y="20" font-size="11" font-weight="bold" fill="#b45309">2. During Collision (Time t):</text>
+    <circle cx="196" cy="32" r="14" fill="#3b82f6"/><text x="196" y="36" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">mâ‚</text>
+    <circle cx="228" cy="32" r="18" fill="#10b981"/><text x="228" y="36" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">mâ‚‚</text>
+    <line x1="182" y1="32" x2="168" y2="32" stroke="#dc2626" stroke-width="2"/><polygon points="172,29 164,32 172,35" fill="#dc2626"/><text x="175" y="22" font-size="9" font-weight="bold" fill="#dc2626">F_A</text>
+    <line x1="246" y1="32" x2="260" y2="32" stroke="#dc2626" stroke-width="2"/><polygon points="256,29 264,32 256,35" fill="#dc2626"/><text x="253" y="22" font-size="9" font-weight="bold" fill="#dc2626">F_B</text>
+  </g>
+  <g transform="translate(20, 165)">
+    <rect x="0" y="0" width="420" height="50" rx="8" fill="#dcfce7" stroke="#86efac"/>
+    <text x="10" y="20" font-size="11" font-weight="bold" fill="#15803d">3. After Collision:</text>
+    <circle cx="140" cy="32" r="14" fill="#3b82f6"/><text x="140" y="36" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">mâ‚</text>
+    <line x1="158" y1="32" x2="185" y2="32" stroke="#1d4ed8" stroke-width="2.5"/><polygon points="183,28 192,32 183,36" fill="#1d4ed8"/><text x="170" y="24" font-size="9" font-weight="bold" fill="#1d4ed8">vâ‚</text>
+    <circle cx="310" cy="32" r="18" fill="#10b981"/><text x="310" y="36" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">mâ‚‚</text>
+    <line x1="332" y1="32" x2="365" y2="32" stroke="#047857" stroke-width="2.5"/><polygon points="363,28 372,32 363,36" fill="#047857"/><text x="348" y="24" font-size="9" font-weight="bold" fill="#047857">vâ‚‚</text>
+  </g>
+  <rect x="70" y="224" width="320" height="28" rx="6" fill="#1e293b"/>
+  <text x="230" y="243" font-size="12" font-weight="bold" fill="#38bdf8" text-anchor="middle">mâ‚uâ‚ + mâ‚‚uâ‚‚ = mâ‚vâ‚ + mâ‚‚vâ‚‚</text>
+</svg>`
+      },
+      // 12 Mock Test 1-Mark Questions
+      { id: "sci_em_u1_out_1m_1", q: "What is the inherent property of a body to resist any change in its state of rest or motion?", options: ["Acceleration", "Inertia", "Force", "Impulse"], ans: "Inertia", type: "1m", explanation: "Inertia is the natural resistance of any physical object to any change in its velocity." },
+      { id: "sci_em_u1_out_1m_2", q: "Which law of Newton defines force and inertia qualitatively?", options: ["Newton's First Law", "Newton's Second Law", "Newton's Third Law", "Law of Gravitation"], ans: "Newton's First Law", type: "1m", explanation: "Newton's first law states a body remains at rest or in uniform motion unless an external force acts." },
+      { id: "sci_em_u1_out_1m_3", q: "The rate of change of momentum of a body is directly proportional to the applied force. This is:", options: ["Newton's First Law", "Newton's Second Law", "Newton's Third Law", "Ohm's Law"], ans: "Newton's Second Law", type: "1m", explanation: "F = ma is derived directly from Newton's Second Law of Motion." },
+      { id: "sci_em_u1_out_1m_4", q: "For every action, there is an equal and opposite reaction. This is known as:", options: ["Boyle's Law", "Newton's Third Law", "Pascal's Law", "Hooke's Law"], ans: "Newton's Third Law", type: "1m", explanation: "Newton's Third Law ensures forces always occur in equal and opposite pairs." },
+      { id: "sci_em_u1_out_1m_5", q: "Linear momentum (p) of a moving body is defined as the product of:", options: ["Mass and Velocity (m Ã— v)", "Force and Time", "Mass and Acceleration", "Work and Time"], ans: "Mass and Velocity (m Ã— v)", type: "1m", explanation: "Linear momentum p = m Ã— v." },
+      { id: "sci_em_u1_out_1m_6", q: "What is the mathematical formula for linear momentum?", options: ["p = mv", "F = ma", "W = Fs", "E = mcÂ²"], ans: "p = mv", type: "1m", explanation: "Momentum is given by mass times velocity." },
+      { id: "sci_em_u1_out_1m_7", q: "What is the SI unit of linear momentum?", options: ["N m", "kg m sâ»Â¹", "J s", "kg mÂ²"], ans: "kg m sâ»Â¹", type: "1m", explanation: "Mass (kg) Ã— velocity (m/s) gives kg m sâ»Â¹ (or N s)." },
+      { id: "sci_em_u1_out_1m_8", q: "What is the product of a large force acting over a very short interval of time called?", options: ["Impulse", "Momentum", "Inertia", "Power"], ans: "Impulse", type: "1m", explanation: "Impulse J = F Ã— Î”t, measured in N s." },
+      { id: "sci_em_u1_out_1m_9", q: "What is the SI unit of Force?", options: ["Newton (N)", "Joule", "Pascal", "Watt"], ans: "Newton (N)", type: "1m", explanation: "Force is measured in Newtons (N) in the SI system." },
+      { id: "sci_em_u1_out_1m_10", q: "When no external force acts on a system, the total linear momentum remains constant. This is:", options: ["Law of Conservation of Energy", "Law of Conservation of Momentum", "Law of Gravitation", "Newton's First Law"], ans: "Law of Conservation of Momentum", type: "1m", explanation: "Total momentum before collision equals total momentum after collision." },
+      { id: "sci_em_u1_out_1m_11", q: "The resistance of a body to change its state of rest is called:", options: ["Inertia of rest", "Inertia of motion", "Inertia of direction", "Gravity"], ans: "Inertia of rest", type: "1m", explanation: "Inertia of rest keeps stationary objects at rest." },
+      { id: "sci_em_u1_out_1m_12", q: "The resistance of a body to change its state of uniform motion is called:", options: ["Inertia of rest", "Inertia of motion", "Inertia of direction", "Friction"], ans: "Inertia of motion", type: "1m", explanation: "Inertia of motion maintains constant forward velocity." }
+    ]
+  });
+}

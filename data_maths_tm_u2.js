@@ -1,4 +1,4 @@
-// 10-ஆம் வகுப்பு கணிதம் - அலகு 2: எண்களும் தொடர்வரிசைகளும் (Numbers and Sequences)
+﻿// 10-ஆம் வகுப்பு கணிதம் - அலகு 2: எண்களும் தொடர்வரிசைகளும் (Numbers and Sequences)
 // தமிழ்நாடு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 // அரசுப் பொதுத்தேர்வுக்கான மிக முக்கியமான வினா-விடைகள், கரும்பலகை விளக்கங்கள், சூத்திரங்கள்
 
@@ -554,6 +554,78 @@ const MATHS_TM_UNIT_2_DATA = {
         },
         {
           id: "m_tm_2_8",
+          detailedSolution: {
+            title: "விரிவான படிநிலைத் தீர்வு (Step-by-Step Derivation):",
+            sections: [
+              {
+                stepNum: 1,
+                title: "எல்லைகளைப் பகுப்பாய்வு செய்து AP அமைத்தல்",
+                badge: "படி 1",
+                html: `
+                  <div style="margin-bottom:8px;"><b>1.1 தொடக்க எண் காணுதல்:</b><br>
+                  300-ஐ 7-ஆல் வகுத்தால்: <b>300 ÷ 7 = 42</b>, மீதி = <b>6</b>.<br>
+                  எனவே 300-க்கு அடுத்த 7-ஆல் வகுபடும் முதல் எண்: <b>a = 300 + (7 - 6) = 301</b>.</div>
+                  <div style="margin-bottom:8px;"><b>1.2 கடைசி எண் காணுதல்:</b><br>
+                  600-ஐ 7-ஆல் வகுத்தால்: <b>600 ÷ 7 = 85</b>, மீதி = <b>5</b>.<br>
+                  எனவே 600-க்கு முந்தைய 7-ஆல் வகுபடும் கடைசி எண்: <b>l = 600 - 5 = 595</b>.</div>
+                  <div style="background:#eff6ff; padding:8px 12px; border-radius:8px; border-left:3px solid #2563eb; color:#1e40af; font-weight:700;">
+                    அமைந்த கூட்டுத்தொடர்வரிசை: 301, 308, 315, ..., 595<br>
+                    (முதல் உறுப்பு a = 301, பொது வித்தியாசம் d = 7, கடைசி உறுப்பு l = 595)
+                  </div>
+                `
+              },
+              {
+                stepNum: 2,
+                title: "உறுப்புகளின் எண்ணிக்கை (n) கணக்கிடுதல்",
+                badge: "படி 2",
+                html: `
+                  <div style="background:#fefce8; padding:8px 12px; border-radius:8px; border:1px solid #facc15; margin-bottom:8px; color:#854d0e;">
+                    <b>பயன்படுத்தப்படும் சூத்திரம்:</b> n = [(l - a) / d] + 1
+                  </div>
+                  <div>
+                    n = [(595 - 301) / 7] + 1<br>
+                    n = [294 / 7] + 1<br>
+                    n = 42 + 1<br>
+                    <b style="color:#15803d; font-size:15px;">n = 43 உறுப்புகள்</b>
+                  </div>
+                `
+              },
+              {
+                stepNum: 3,
+                title: "கூட்டுத்தொடரின் கூடுதல் (S₄₃) கணக்கிடுதல்",
+                badge: "படி 3",
+                html: `
+                  <div style="background:#f0fdf4; padding:8px 12px; border-radius:8px; border:1px solid #86efac; margin-bottom:8px; color:#166534;">
+                    <b>கூடுதல் சூத்திரம்:</b> Sₙ = (n / 2) [a + l]
+                  </div>
+                  <div style="line-height:1.9;">
+                    S₄₃ = (43 / 2) [301 + 595]<br>
+                    S₄₃ = (43 / 2) [896]<br>
+                    S₄₃ = 43 × 448<br>
+                    <div style="margin:8px 0; background:#f8fafc; padding:8px 12px; border-radius:6px; border:1px dashed #cbd5e1; font-size:13px;">
+                      ✍️ <b>செய்முறை (Working):</b> 448 × 40 = 17,920; 448 × 3 = 1,344 ➔ 17,920 + 1,344 = <b>19,264</b>
+                    </div>
+                    <div style="font-size:16px; font-weight:800; color:#15803d; background:#dcfce7; padding:8px 14px; border-radius:8px; display:inline-block; border:1px solid #86efac;">
+                      விடை: எண்களின் கூடுதல் S₄₃ = 19,264
+                    </div>
+                  </div>
+                `
+              },
+              {
+                stepNum: 4,
+                title: "பொதுத்தேர்வு மதிப்பெண் பங்கீடு (Mark Allocation Guide)",
+                badge: "தேர்வு வழிகாட்டி",
+                html: `
+                  <ul style="margin:4px 0 4px 18px; line-height:1.7; font-size:13px; color:#475569;">
+                    <li>முதல் எண் a=301 மற்றும் கடைசி எண் l=595 கண்டறிதல்: <b>1 மதிப்பெண்</b></li>
+                    <li>சூத்திரம் n = [(l-a)/d]+1 எழுதி n=43 கணக்கிடுதல்: <b>1.5 மதிப்பெண்</b></li>
+                    <li>சூத்திரம் Sₙ = (n/2)[a+l] எழுதி பிரதியிடுதல்: <b>1.5 மதிப்பெண்</b></li>
+                    <li>சரியான இறுதி விடை 19,264 கண்டறிதல்: <b>1 மதிப்பெண்</b></li>
+                  </ul>
+                `
+              }
+            ]
+          },
           type: "5m",
           mark: "5 மதிப்பெண்",
           examYear: "2022",
@@ -651,6 +723,70 @@ const MATHS_TM_UNIT_2_DATA = {
         },
         {
           id: "m_tm_2_10",
+          detailedSolution: {
+            title: "விரிவான படிநிலைத் தீர்வு (Step-by-Step Derivation):",
+            sections: [
+              {
+                stepNum: 1,
+                title: "5-ஐப் பொதுவெளியாக எடுத்து 9-ஆல் பெருக்குதல்",
+                badge: "படி 1",
+                html: `
+                  <div style="line-height:1.8;">
+                    கொடுக்கப்பட்ட தொடர்: Sₙ = 5 + 55 + 555 + ... n உறுப்புகள் வரை<br>
+                    <b>5-ஐப் பொது காரணியாக எடுக்க:</b><br>
+                    Sₙ = 5 [1 + 11 + 111 + ... n உறுப்புகள்]<br>
+                    <b>பெருக்குத்தொடர் (GP) வடிவில் மாற்ற 9-ஆல் பெருக்கி வகுக்க:</b><br>
+                    <b style="color:#2563eb;">Sₙ = (5/9) [9 + 99 + 999 + ... n உறுப்புகள்]</b>
+                  </div>
+                `
+              },
+              {
+                stepNum: 2,
+                title: "10-ன் அடுக்குகளாகப் பிரித்து இரு தொடர்களாக்குதல்",
+                badge: "படி 2",
+                html: `
+                  <div style="line-height:1.8;">
+                    9 = (10 - 1), 99 = (10² - 1), 999 = (10³ - 1) என எழுத:<br>
+                    Sₙ = (5/9) [ (10 - 1) + (10² - 1) + (10³ - 1) + ... n உறுப்புகள் ]<br>
+                    10-ன் அடுக்குகளை ஒரு தொடராகவும், 1-களை மற்றொரு தொடராகவும் பிரிக்க:<br>
+                    <b style="color:#15803d;">Sₙ = (5/9) [ (10 + 10² + 10³ + ... n உறுப்புகள்) - (1 + 1 + 1 + ... n முறை) ]</b>
+                  </div>
+                `
+              },
+              {
+                stepNum: 3,
+                title: "GP கூடுதல் சூத்திரம் பொருத்தி இறுதி விடை காணுதல்",
+                badge: "படி 3",
+                html: `
+                  <div style="line-height:1.8;">
+                    (10 + 10² + 10³ + ... n உறுப்புகள்) என்பது முதல் உறுப்பு a = 10 மற்றும் பொது விகிதம் r = 10 கொண்ட GP ஆகும்.<br>
+                    GP கூடுதல் சூத்திரம்: <b>Sₙ = a(rⁿ - 1) / (r - 1)</b><br>
+                    = 10(10ⁿ - 1) / (10 - 1) = <b>10(10ⁿ - 1) / 9</b><br>
+                    மற்றும் 1 + 1 + ... n முறை = <b>n</b>.<br><br>
+                    பிரதியிட:<br>
+                    <b>Sₙ = (5/9) [ {10(10ⁿ - 1) / 9} - n ]</b><br><br>
+                    உள்ளே பெருக்கினால்:<br>
+                    <div style="font-size:16px; font-weight:800; color:#15803d; background:#dcfce7; padding:8px 14px; border-radius:8px; display:inline-block; border:1px solid #86efac;">
+                      Sₙ = [ 50(10ⁿ - 1) / 81 ] - (5n / 9)
+                    </div>
+                  </div>
+                `
+              },
+              {
+                stepNum: 4,
+                title: "பொதுத்தேர்வு மதிப்பெண் பங்கீடு (Mark Allocation Guide)",
+                badge: "தேர்வு வழிகாட்டி",
+                html: `
+                  <ul style="margin:4px 0 4px 18px; line-height:1.7; font-size:13px; color:#475569;">
+                    <li>5-ஐ வெளியே எடுத்து (5/9)[9+99+999+...] என மாற்றுதல்: <b>1 மதிப்பெண்</b></li>
+                    <li>(10-1) + (10²-1) என மாற்றி இரு தொடர்களாகப் பிரித்தல்: <b>1 மதிப்பெண்</b></li>
+                    <li>GP சூத்திரம் எழுதி 10(10ⁿ-1)/9 மற்றும் n எனத் தீர்த்தல்: <b>1.5 மதிப்பெண்</b></li>
+                    <li>சரியான இறுதி வடிவம் Sₙ = 50(10ⁿ-1)/81 - 5n/9 தருவித்தல்: <b>1.5 மதிப்பெண்</b></li>
+                  </ul>
+                `
+              }
+            ]
+          },
           type: "5m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",
@@ -765,6 +901,109 @@ const MATHS_TM_UNIT_2_DATA = {
         },
         {
           id: "m_tm_2_13",
+          detailedSolution: {
+            title: "விரிவான படிநிலைத் தீர்வு (Step-by-Step Derivation):",
+            sections: [
+              {
+                stepNum: 1,
+                title: "கொடுக்கப்பட்ட தொடரை இரு இயல் எண்களின் வர்க்கத் தொடர்களாகப் பிரித்தல்",
+                badge: "படி 1",
+                html: `
+                  <div style="line-height:1.8;">
+                    வினா: 16² + 17² + 18² + ... + 30²<br>
+                    இது 1-லிருந்து தொடங்கவில்லை என்பதால், 1 முதல் 30 வரையிலான வர்க்கங்களிலிருந்து 1 முதல் 15 வரையிலான வர்க்கங்களைக் கழிக்க வேண்டும்:<br>
+                    <b style="color:#2563eb; font-size:14.5px;">16² + 17² + ... + 30² = (1² + 2² + ... + 30²) - (1² + 2² + ... + 15²)</b>
+                  </div>
+                `
+              },
+              {
+                stepNum: 2,
+                title: "சூத்திரம் & இரு பகுதிகளின் தனித்தனி மதிப்புகள் காணுதல்",
+                badge: "படி 2",
+                html: `
+                  <div style="background:#fefce8; padding:8px 12px; border-radius:8px; border:1px solid #facc15; margin-bottom:8px; color:#854d0e;">
+                    <b>சூத்திரம்:</b> முதல் n இயல் எண்களின் வர்க்கங்களின் கூடுதல்: Σn² = n(n + 1)(2n + 1) / 6
+                  </div>
+                  <div style="margin-bottom:10px;">
+                    <b>பகுதி 1: n = 30 ஆக உள்ள போது:</b><br>
+                    = [30 × (30 + 1) × (2(30) + 1)] / 6<br>
+                    = [30 × 31 × 61] / 6<br>
+                    = 5 × 31 × 61<br>
+                    = 155 × 61 = <b>9,455</b>
+                  </div>
+                  <div>
+                    <b>பகுதி 2: n = 15 ஆக உள்ள போது:</b><br>
+                    = [15 × (15 + 1) × (2(15) + 1)] / 6<br>
+                    = [15 × 16 × 31] / 6<br>
+                    = 5 × 8 × 31<br>
+                    = 40 × 31 = <b>1,240</b>
+                  </div>
+                `
+              },
+              {
+                stepNum: 3,
+                title: "கழித்து இறுதி விடை பெறுதல்",
+                badge: "படி 3",
+                html: `
+                  <div style="line-height:1.8;">
+                    கூடுதல் = 9,455 - 1,240<br>
+                    <div style="font-size:16px; font-weight:800; color:#15803d; background:#dcfce7; padding:8px 14px; border-radius:8px; display:inline-block; border:1px solid #86efac; margin-top:6px;">
+                      விடை: கூடுதல் = 8,215
+                    </div>
+                  </div>
+                `
+              },
+              {
+                stepNum: 4,
+                title: "பொதுத்தேர்வு மதிப்பெண் பங்கீடு (Mark Allocation Guide)",
+                badge: "தேர்வு வழிகாட்டி",
+                html: `
+                  <ul style="margin:4px 0 4px 18px; line-height:1.7; font-size:13px; color:#475569;">
+                    <li>தொடரை (1²+...+30²) - (1²+...+15²) எனப் பிரித்து எழுதுதல்: <b>1 மதிப்பெண்</b></li>
+                    <li>சூத்திரம் Σn² = n(n+1)(2n+1)/6 எழுதுதல்: <b>1 மதிப்பெண்</b></li>
+                    <li>முதல் பகுதி = 9455 கணக்கிடுதல்: <b>1.5 மதிப்பெண்</b></li>
+                    <li>இரண்டாம் பகுதி = 1240 கணக்கிட்டு கழித்து 8215 பெறுதல்: <b>1.5 மதிப்பெண்</b></li>
+                  </ul>
+                `
+              }
+            ]
+          },
+          blackboard: {
+            title: "16² + 17² + ... + 30² வர்க்கங்களின் கூடுதல்",
+            engTitle: "Sum of squares 16² + 17² + ... + 30²",
+            steps: [
+              {
+                stepNum: 1,
+                badge: "① தொடர் பிரித்தல்",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800;">படி 1: 1 முதல் தொடங்கும் இரு தொடர்களாகப் பிரித்தல்</div>
+                  <div class="bb-box-cyan">
+                    <div class="bb-line">16² + 17² + ... + 30² = (1² + 2² + ... + 30²) - (1² + 2² + ... + 15²)</div>
+                    <div class="bb-line" style="color:#fde047; font-weight:700; margin-top:6px;">
+                      சூத்திரம்: Σn² = n(n + 1)(2n + 1) / 6
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "படி ஒன்று: 16 ஸ்கொயர் முதல் 30 ஸ்கொயர் வரையிலான கூடுதலைக் காண, ஒன்று முதல் 30 வரையிலான வர்க்கங்களின் கூடுதலிலிருந்து ஒன்று முதல் 15 வரையிலான வர்க்கங்களின் கூடுதலைக் கழிக்க வேண்டும்."
+              },
+              {
+                stepNum: 2,
+                badge: "② மதிப்புகள் பிரதியிட்டு விடை காணுதல்",
+                chalkHtml: `
+                  <div class="bb-box-yellow">
+                    <div class="bb-line">Σ(30) = 30 × 31 × 61 / 6 = 5 × 31 × 61 = <b>9455</b></div>
+                    <div class="bb-line">Σ(15) = 15 × 16 × 31 / 6 = 5 × 8 × 31 = <b>1240</b></div>
+                  </div>
+                  <div class="bb-box-green" style="margin-top:8px;">
+                    <div class="bb-pill-magenta" style="font-size:18px; font-weight:800;">
+                      விடை: 9455 - 1240 = 8,215
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "படி இரண்டு: முப்பது எண்களின் வர்க்க கூடுதல் 9455. பதினைந்து எண்களின் வர்க்க கூடுதல் 1240. இரண்டையும் கழித்தால் விடை 8215."
+              }
+            ]
+          },
           type: "5m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",

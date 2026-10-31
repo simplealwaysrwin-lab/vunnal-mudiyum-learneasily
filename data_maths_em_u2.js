@@ -1,4 +1,4 @@
-// Class 10 Mathematics - Unit 2: Numbers and Sequences
+﻿// Class 10 Mathematics - Unit 2: Numbers and Sequences
 // Tamil Nadu State Board Samacheer Kalvi Digital Guide (English Medium)
 // Standard Public Exam Model Solutions, Blackboard Steps & Formulas
 
@@ -555,6 +555,78 @@ const MATHS_EM_UNIT_2_DATA = {
         },
         {
           id: "m_em_2_8",
+          detailedSolution: {
+            title: "Step-by-Step Detailed Solution & Working:",
+            sections: [
+              {
+                stepNum: 1,
+                title: "Finding AP Boundaries Divisible by 7",
+                badge: "Step 1",
+                html: `
+                  <div style="margin-bottom:8px;"><b>1.1 Finding First Term (a):</b><br>
+                  Dividing 300 by 7: <b>300 Ã· 7 = 42</b>, remainder = <b>6</b>.<br>
+                  Therefore, first number after 300 divisible by 7: <b>a = 300 + (7 - 6) = 301</b>.</div>
+                  <div style="margin-bottom:8px;"><b>1.2 Finding Last Term (l):</b><br>
+                  Dividing 600 by 7: <b>600 Ã· 7 = 85</b>, remainder = <b>5</b>.<br>
+                  Therefore, last number before 600 divisible by 7: <b>l = 600 - 5 = 595</b>.</div>
+                  <div style="background:#eff6ff; padding:8px 12px; border-radius:8px; border-left:3px solid #2563eb; color:#1e40af; font-weight:700;">
+                    Arithmetic Progression (A.P.): 301, 308, 315, ..., 595<br>
+                    (First term a = 301, Common difference d = 7, Last term l = 595)
+                  </div>
+                `
+              },
+              {
+                stepNum: 2,
+                title: "Finding Number of Terms (n)",
+                badge: "Step 2",
+                html: `
+                  <div style="background:#fefce8; padding:8px 12px; border-radius:8px; border:1px solid #facc15; margin-bottom:8px; color:#854d0e;">
+                    <b>Formula Used:</b> n = [(l - a) / d] + 1
+                  </div>
+                  <div>
+                    n = [(595 - 301) / 7] + 1<br>
+                    n = [294 / 7] + 1<br>
+                    n = 42 + 1<br>
+                    <b style="color:#15803d; font-size:15px;">n = 43 terms</b>
+                  </div>
+                `
+              },
+              {
+                stepNum: 3,
+                title: "Calculating Sum Sâ‚„â‚ƒ",
+                badge: "Step 3",
+                html: `
+                  <div style="background:#f0fdf4; padding:8px 12px; border-radius:8px; border:1px solid #86efac; margin-bottom:8px; color:#166534;">
+                    <b>Sum Formula:</b> Sâ‚™ = (n / 2) [a + l]
+                  </div>
+                  <div style="line-height:1.9;">
+                    Sâ‚„â‚ƒ = (43 / 2) [301 + 595]<br>
+                    Sâ‚„â‚ƒ = (43 / 2) [896]<br>
+                    Sâ‚„â‚ƒ = 43 Ã— 448<br>
+                    <div style="margin:8px 0; background:#f8fafc; padding:8px 12px; border-radius:6px; border:1px dashed #cbd5e1; font-size:13px;">
+                      âœï¸ <b>Rough Working:</b> 448 Ã— 40 = 17,920; 448 Ã— 3 = 1,344 âž” 17,920 + 1,344 = <b>19,264</b>
+                    </div>
+                    <div style="font-size:16px; font-weight:800; color:#15803d; background:#dcfce7; padding:8px 14px; border-radius:8px; display:inline-block; border:1px solid #86efac;">
+                      Answer: Sum Sâ‚„â‚ƒ = 19,264
+                    </div>
+                  </div>
+                `
+              },
+              {
+                stepNum: 4,
+                title: "Board Exam Mark Allocation Guide",
+                badge: "Exam Guide",
+                html: `
+                  <ul style="margin:4px 0 4px 18px; line-height:1.7; font-size:13px; color:#475569;">
+                    <li>Finding first term a=301 and last term l=595: <b>1 Mark</b></li>
+                    <li>Formula n = [(l-a)/d]+1 and computing n=43: <b>1.5 Marks</b></li>
+                    <li>Formula Sâ‚™ = (n/2)[a+l] and substitution: <b>1.5 Marks</b></li>
+                    <li>Correct final answer 19,264: <b>1 Mark</b></li>
+                  </ul>
+                `
+              }
+            ]
+          },
           type: "5m",
           mark: "5 Marks",
           examYear: "2022",
@@ -653,6 +725,70 @@ const MATHS_EM_UNIT_2_DATA = {
         },
         {
           id: "m_em_2_10",
+          detailedSolution: {
+            title: "Step-by-Step Detailed Solution & Working:",
+            sections: [
+              {
+                stepNum: 1,
+                title: "Factoring 5 and Multiplying/Dividing by 9",
+                badge: "Step 1",
+                html: `
+                  <div style="line-height:1.8;">
+                    Given series: Sâ‚™ = 5 + 55 + 555 + ... to n terms<br>
+                    <b>Take 5 as common factor:</b><br>
+                    Sâ‚™ = 5 [1 + 11 + 111 + ... to n terms]<br>
+                    <b>Multiply and divide by 9 to form G.P.:</b><br>
+                    <b style="color:#2563eb;">Sâ‚™ = (5/9) [9 + 99 + 999 + ... to n terms]</b>
+                  </div>
+                `
+              },
+              {
+                stepNum: 2,
+                title: "Expressing in Powers of 10 and Splitting into Two Series",
+                badge: "Step 2",
+                html: `
+                  <div style="line-height:1.8;">
+                    Write 9 = (10 - 1), 99 = (10Â² - 1), 999 = (10Â³ - 1):<br>
+                    Sâ‚™ = (5/9) [ (10 - 1) + (10Â² - 1) + (10Â³ - 1) + ... to n terms ]<br>
+                    Split into two separate series:<br>
+                    <b style="color:#15803d;">Sâ‚™ = (5/9) [ (10 + 10Â² + 10Â³ + ... to n terms) - (1 + 1 + 1 + ... n times) ]</b>
+                  </div>
+                `
+              },
+              {
+                stepNum: 3,
+                title: "Applying G.P. Sum Formula & Final Simplification",
+                badge: "Step 3",
+                html: `
+                  <div style="line-height:1.8;">
+                    (10 + 10Â² + ... to n terms) is a G.P. with a = 10, r = 10.<br>
+                    G.P. Sum formula: <b>Sâ‚™ = a(râ¿ - 1) / (r - 1)</b><br>
+                    = 10(10â¿ - 1) / (10 - 1) = <b>10(10â¿ - 1) / 9</b><br>
+                    And (1 + 1 + ... n times) = <b>n</b>.<br><br>
+                    Substituting back:<br>
+                    <b>Sâ‚™ = (5/9) [ {10(10â¿ - 1) / 9} - n ]</b><br><br>
+                    Multiplying through:<br>
+                    <div style="font-size:16px; font-weight:800; color:#15803d; background:#dcfce7; padding:8px 14px; border-radius:8px; display:inline-block; border:1px solid #86efac;">
+                      Sâ‚™ = [ 50(10â¿ - 1) / 81 ] - (5n / 9)
+                    </div>
+                  </div>
+                `
+              },
+              {
+                stepNum: 4,
+                title: "Board Exam Mark Allocation Guide",
+                badge: "Exam Guide",
+                html: `
+                  <ul style="margin:4px 0 4px 18px; line-height:1.7; font-size:13px; color:#475569;">
+                    <li>Factoring out 5 and writing (5/9)[9+99+999+...]: <b>1 Mark</b></li>
+                    <li>Converting to (10-1)+(10Â²-1) and separating series: <b>1 Mark</b></li>
+                    <li>Applying G.P. sum formula for 10(10â¿-1)/9 and n: <b>1.5 Marks</b></li>
+                    <li>Final simplified expression Sâ‚™ = 50(10â¿-1)/81 - 5n/9: <b>1.5 Marks</b></li>
+                  </ul>
+                `
+              }
+            ]
+          },
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",
@@ -768,6 +904,109 @@ const MATHS_EM_UNIT_2_DATA = {
         },
         {
           id: "m_em_2_13",
+          detailedSolution: {
+            title: "Step-by-Step Detailed Solution & Working:",
+            sections: [
+              {
+                stepNum: 1,
+                title: "Splitting into Difference of Two Sums of Squares",
+                badge: "Step 1",
+                html: `
+                  <div style="line-height:1.8;">
+                    Question: 16Â² + 17Â² + 18Â² + ... + 30Â²<br>
+                    Since the series does not start from 1, we rewrite it as:<br>
+                    <b style="color:#2563eb; font-size:14.5px;">16Â² + 17Â² + ... + 30Â² = (1Â² + 2Â² + ... + 30Â²) - (1Â² + 2Â² + ... + 15Â²)</b>
+                  </div>
+                `
+              },
+              {
+                stepNum: 2,
+                title: "Formula & Individual Sum Calculations",
+                badge: "Step 2",
+                html: `
+                  <div style="background:#fefce8; padding:8px 12px; border-radius:8px; border:1px solid #facc15; margin-bottom:8px; color:#854d0e;">
+                    <b>Formula:</b> Sum of squares of first n natural numbers: Î£nÂ² = n(n + 1)(2n + 1) / 6
+                  </div>
+                  <div style="margin-bottom:10px;">
+                    <b>Part 1: For n = 30:</b><br>
+                    = [30 Ã— (30 + 1) Ã— (2(30) + 1)] / 6<br>
+                    = [30 Ã— 31 Ã— 61] / 6<br>
+                    = 5 Ã— 31 Ã— 61<br>
+                    = 155 Ã— 61 = <b>9,455</b>
+                  </div>
+                  <div>
+                    <b>Part 2: For n = 15:</b><br>
+                    = [15 Ã— (15 + 1) Ã— (2(15) + 1)] / 6<br>
+                    = [15 Ã— 16 Ã— 31] / 6<br>
+                    = 5 Ã— 8 Ã— 31<br>
+                    = 40 Ã— 31 = <b>1,240</b>
+                  </div>
+                `
+              },
+              {
+                stepNum: 3,
+                title: "Subtracting to Obtain Final Sum",
+                badge: "Step 3",
+                html: `
+                  <div style="line-height:1.8;">
+                    Sum = 9,455 - 1,240<br>
+                    <div style="font-size:16px; font-weight:800; color:#15803d; background:#dcfce7; padding:8px 14px; border-radius:8px; display:inline-block; border:1px solid #86efac; margin-top:6px;">
+                      Answer: Sum = 8,215
+                    </div>
+                  </div>
+                `
+              },
+              {
+                stepNum: 4,
+                title: "Board Exam Mark Allocation Guide",
+                badge: "Exam Guide",
+                html: `
+                  <ul style="margin:4px 0 4px 18px; line-height:1.7; font-size:13px; color:#475569;">
+                    <li>Writing series as (1Â²+...+30Â²) - (1Â²+...+15Â²): <b>1 Mark</b></li>
+                    <li>Stating formula Î£nÂ² = n(n+1)(2n+1)/6: <b>1 Mark</b></li>
+                    <li>Evaluating first part = 9455: <b>1.5 Marks</b></li>
+                    <li>Evaluating second part = 1240 and subtracting for 8215: <b>1.5 Marks</b></li>
+                  </ul>
+                `
+              }
+            ]
+          },
+          blackboard: {
+            title: "Sum of squares 16Â² + 17Â² + ... + 30Â²",
+            engTitle: "Sum of squares 16Â² + 17Â² + ... + 30Â²",
+            steps: [
+              {
+                stepNum: 1,
+                badge: "â‘  Series Decomposition",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800;">Step 1: Splitting into Two Standard Series</div>
+                  <div class="bb-box-cyan">
+                    <div class="bb-line">16Â² + 17Â² + ... + 30Â² = (1Â² + 2Â² + ... + 30Â²) - (1Â² + 2Â² + ... + 15Â²)</div>
+                    <div class="bb-line" style="color:#fde047; font-weight:700; margin-top:6px;">
+                      Formula: Î£nÂ² = n(n + 1)(2n + 1) / 6
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "Step 1: To find the sum of squares from 16 to 30, subtract the sum of first 15 squares from the sum of first 30 squares."
+              },
+              {
+                stepNum: 2,
+                badge: "â‘¡ Substituting & Calculating Answer",
+                chalkHtml: `
+                  <div class="bb-box-yellow">
+                    <div class="bb-line">Î£(30) = 30 Ã— 31 Ã— 61 / 6 = 5 Ã— 31 Ã— 61 = <b>9455</b></div>
+                    <div class="bb-line">Î£(15) = 15 Ã— 16 Ã— 31 / 6 = 5 Ã— 8 Ã— 31 = <b>1240</b></div>
+                  </div>
+                  <div class="bb-box-green" style="margin-top:8px;">
+                    <div class="bb-pill-magenta" style="font-size:18px; font-weight:800;">
+                      Answer: 9455 - 1240 = 8,215
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "Step 2: Sum of first 30 squares is 9455. Sum of first 15 squares is 1240. The difference gives the final answer 8215."
+              }
+            ]
+          },
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",

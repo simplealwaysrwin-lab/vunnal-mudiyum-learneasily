@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -12824,6 +12824,7 @@ Format your response clearly:
   window.openAITeacherModal = openAITeacherModal;
 
   function closeAITeacherModal() {
+    stopAISpeech();
     const modal = document.getElementById('aiTeacherModal');
     if (modal) modal.style.display = 'none';
   }
@@ -12853,6 +12854,7 @@ Format your response clearly:
   }
 
   async function sendAIMessage() {
+    stopAISpeech();
     const input = document.getElementById('aiUserInput');
     if (!input) return;
     const text = input.value.trim();
@@ -12899,10 +12901,10 @@ Format your response clearly:
         .replace(/\n/g, '<br>');
 
       div.innerHTML = `
-        <div>${formatted}</div>
+        <div class="ai-msg-content">${formatted}</div>
         <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px; margin-top:8px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.08);">
           <button type="button" onclick="copyAIText(this)" style="background:none; border:none; color:#38bdf8; font-size:11.5px; font-weight:700; cursor:pointer;" title="பதிலை நகலெடு">📋 நகலெடு</button>
-          <button type="button" onclick="speakAIText(this)" style="background:none; border:none; color:#10b981; font-size:11.5px; font-weight:700; cursor:pointer;" title="பதிலைக் கேள்">🔊 வாசி</button>
+          <button type="button" class="ai-speak-btn" onclick="speakAIText(this)" style="background:none; border:none; color:#10b981; font-size:11.5px; font-weight:700; cursor:pointer; padding:3px 8px; border-radius:6px; transition:all 0.2s;" title="பதிலைக் கேள்">🔊 வாசி</button>
         </div>
       `;
     } else {
@@ -12933,9 +12935,10 @@ Format your response clearly:
   }
 
   function copyAIText(btn) {
-    const parent = btn.closest('.ai-bubble');
+    const parent = btn.closest('.ai-bubble') || btn.closest('.eval-score-card');
     if (!parent) return;
-    const text = parent.innerText.replace(/📋 நகலெடு|🔊 வாசி/g, '').trim();
+    const contentEl = parent.querySelector('.ai-msg-content') || parent;
+    const text = (contentEl.innerText || '').trim();
     navigator.clipboard.writeText(text).then(() => {
       btn.innerText = '✅ நகலெடுக்கப்பட்டது!';
       setTimeout(() => { btn.innerText = '📋 நகலெடு'; }, 2000);
@@ -12943,21 +12946,203 @@ Format your response clearly:
   }
   window.copyAIText = copyAIText;
 
-  function speakAIText(btn) {
-    const parent = btn.closest('.ai-bubble');
-    if (!parent) return;
-    const text = parent.innerText.replace(/📋 நகலெடு|🔊 வாசி/g, '').trim();
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utter = new SpeechSynthesisUtterance(text);
-      utter.lang = 'ta-IN';
-      utter.rate = 0.95;
-      window.speechSynthesis.speak(utter);
-      btn.innerText = '🔊 வாசிக்கிறது...';
-      utter.onend = () => { btn.innerText = '🔊 வாசி'; };
-      utter.onerror = () => { btn.innerText = '🔊 வாசி'; };
+  // -------------------------------------------------------------
+  // AI SPEECH ENGINE: CLEAN NATURAL SPEECH WITHOUT SYMBOLS
+  // -------------------------------------------------------------
+  let currentAISpeakingBtn = null;
+
+  function cleanAITextForSpeech(rawText) {
+    if (!rawText) return { text: '', lang: 'ta-IN', isEnglish: false };
+
+    let text = rawText;
+
+    // 1. Remove UI action labels (Copy, Speak, Stop, etc.)
+    text = text.replace(/📋\s*நகலெடு|🔊\s*வாசி|⏹️\s*நிறுத்து|வாசிக்கிறது\.\.\./gi, ' ');
+    text = text.replace(/\b(Copy|Listen|Stop)\b/gi, ' ');
+
+    // 2. Remove code blocks ```...``` and inline code `...`
+    text = text.replace(/```[\s\S]*?```/g, ' ');
+    text = text.replace(/`([^`]+)`/g, ' $1 ');
+
+    // 3. Remove Markdown headings (###, ##, #) so TTS NEVER speaks "Hash" / "Ash"
+    text = text.replace(/^#{1,6}\s+/gm, ' ');
+    text = text.replace(/#{1,6}\s*/g, ' ');
+
+    // 4. Remove Markdown bold & italic asterisks (**, *) so TTS NEVER speaks "Natchathiram" / "Star"
+    text = text.replace(/\*{1,3}([^*]+)\*{1,3}/g, ' $1 ');
+    text = text.replace(/\*+/g, ' ');
+
+    // 5. Remove Markdown underscores (__text__, _text_) so TTS NEVER speaks "Adikkodu"
+    text = text.replace(/_{1,3}([^_]+)_{1,3}/g, ' $1 ');
+    text = text.replace(/_+/g, ' ');
+
+    // 6. Remove Markdown bullet points (- item, + item, * item, • item) and blockquotes (> ) so TTS NEVER speaks "Idai kodu" / "Hyphen"
+    text = text.replace(/^[\s*\-+•>]+\s*/gm, '. ');
+    text = text.replace(/[\s*\-+•>]+\s*/g, ' ');
+
+    // 7. Strip ALL Unicode Emojis completely so TTS never speaks emoji names (e.g. 💡, 📌, 🚀, 🤖, 📝, ⚡, ⭐, 🎯, ⚠️)
+    text = text.replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{FE00}-\u{FE0F}]/gu, '');
+
+    // 8. Markdown links [text](url) -> text
+    text = text.replace(/\[([^\]]+)\]\([^)]+\)/g, ' $1 ');
+
+    // 9. Remove commas inside numbers (e.g. 1,000 -> 1000) so numbers are spoken smoothly
+    text = text.replace(/(\d+),(\d+)/g, '$1$2');
+
+    // 10. Intelligent Language Detection:
+    const tamilChars = (text.match(/[\u0B80-\u0BFF]/g) || []).length;
+    const englishWords = (text.match(/[a-zA-Z]{2,}/g) || []).length;
+    const isSubjectEnglish = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
+    const isEnglish = (englishWords > 10 && tamilChars < 12) || (isSubjectEnglish && tamilChars < 15);
+    const lang = isEnglish ? 'en-IN' : 'ta-IN';
+
+    // 11. Language-specific spoken substitutions
+    if (lang === 'ta-IN') {
+      text = text.replace(/எ[-.]கா[:.]?/g, ' எடுத்துக்காட்டாக: ');
+      text = text.replace(/உ[-.]ம்[:.]?/g, ' உதாரணமாக: ');
+      text = text.replace(/\s*\/\s*/g, ' அல்லது ');
+      text = text.replace(/\s*=\s*/g, ' சமம் ');
+      text = text.replace(/\s*\+\s*/g, ' கூட்டல் ');
+      text = text.replace(/(?<=\s)-\s*(?=\d)/g, ' மைனஸ் ');
+      text = text.replace(/\s*×\s*/g, ' பெருக்கல் ');
+      text = text.replace(/(\d+)\s*%/g, '$1 சதவீதம் ');
+      text = text.replace(/(\d+)\.(\d+)/g, '$1 புள்ளி $2');
+      text = text.replace(/(\d+)\s*மீ\/வி\b/g, ' $1 மீட்டர் பெர் விநாடி ');
+      text = text.replace(/(\d+)\s*m\/s\b/gi, ' $1 மீட்டர் பெர் விநாடி ');
+      text = text.replace(/(\d+)\s*மீ\b/g, ' $1 மீட்டர் ');
+      text = text.replace(/(\d+)\s*கி\.?மீ\b/g, ' $1 கிலோமீட்டர் ');
     } else {
+      // English reading: clean English words & mathematical expressions
+      text = text.replace(/[\u0B80-\u0BFF]+/g, ''); // strip stray Tamil in English answers
+      text = text.replace(/\be\.g\.?/gi, 'for example');
+      text = text.replace(/\bi\.e\.?/gi, 'that is');
+      text = text.replace(/\betc\.?/gi, 'etcetera');
+      text = text.replace(/\s*\/\s*/g, ' or ');
+      text = text.replace(/\s*=\s*/g, ' equals ');
+      text = text.replace(/\s*\+\s*/g, ' plus ');
+      text = text.replace(/(?<=\s)-\s*(?=\d)/g, ' minus ');
+      text = text.replace(/\s*×\s*|\s*\*\s*/g, ' multiplied by ');
+      text = text.replace(/(\d+)\s*%/g, '$1 percent ');
+      text = text.replace(/(\d+)\.(\d+)/g, '$1 point $2');
+      text = text.replace(/(\d+)\s*m\/s\b/gi, ' $1 meters per second ');
+    }
+
+    // 12. Strip all stray symbols and brackets that TTS pronounces literally
+    text = text.replace(/[`~^\\|<>{}\[\]\(\)]/g, ' ');
+    text = text.replace(/-{2,}/g, '. ');
+    text = text.replace(/[—–]/g, ', ');
+    text = text.replace(/[:\?,]\s*\./g, '. ');
+    text = text.replace(/\.{2,}/g, '. ');
+    text = text.replace(/\s*,\s*/g, ', ');
+    text = text.replace(/\s*\.\s*/g, '. ');
+    text = text.replace(/\s+/g, ' ').trim();
+    text = text.replace(/^[\s\.,:;\-]+/, '').trim();
+
+    return { text, lang, isEnglish };
+  }
+
+  function stopAISpeech() {
+    if ('speechSynthesis' in window) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch (e) {}
+    }
+    if (window.speechQueueEngine) {
+      try {
+        window.speechQueueEngine.stop();
+      } catch (e) {}
+    }
+    if (currentAISpeakingBtn) {
+      currentAISpeakingBtn.innerHTML = '🔊 வாசி';
+      currentAISpeakingBtn.classList.remove('speaking');
+      currentAISpeakingBtn.style.background = 'none';
+      currentAISpeakingBtn.style.color = '#10b981';
+      currentAISpeakingBtn = null;
+    }
+    document.querySelectorAll('.ai-speak-btn').forEach(btn => {
+      btn.innerHTML = '🔊 வாசி';
+      btn.classList.remove('speaking');
+      btn.style.background = 'none';
+      btn.style.color = '#10b981';
+    });
+    const stopBtn = document.getElementById('aiGlobalStopSpeechBtn');
+    if (stopBtn) stopBtn.style.display = 'none';
+    const evalStopBtn = document.getElementById('evalGlobalStopSpeechBtn');
+    if (evalStopBtn) evalStopBtn.style.display = 'none';
+  }
+  window.stopAISpeech = stopAISpeech;
+
+  function speakAIText(btn) {
+    if (currentAISpeakingBtn === btn || (btn && btn.classList.contains('speaking'))) {
+      stopAISpeech();
+      return;
+    }
+
+    stopAISpeech();
+
+    const parent = btn.closest('.ai-bubble') || btn.closest('.eval-score-card');
+    if (!parent) return;
+
+    const contentEl = parent.querySelector('.ai-msg-content') || parent;
+    const rawText = contentEl.innerText || '';
+    const cleanInfo = cleanAITextForSpeech(rawText);
+
+    if (!cleanInfo.text || !cleanInfo.text.trim()) {
+      return;
+    }
+
+    if (!('speechSynthesis' in window)) {
       alert('உங்கள் உலாவியில் ஒலி வாசிப்பு (Speech Synthesis) வசதி இல்லை.');
+      return;
+    }
+
+    currentAISpeakingBtn = btn;
+    btn.classList.add('speaking');
+    btn.innerHTML = '⏹️ நிறுத்து';
+    btn.style.background = '#ef4444';
+    btn.style.color = '#ffffff';
+
+    const stopBtn = document.getElementById('aiGlobalStopSpeechBtn');
+    if (stopBtn) stopBtn.style.display = 'inline-block';
+    const evalStopBtn = document.getElementById('evalGlobalStopSpeechBtn');
+    if (evalStopBtn) evalStopBtn.style.display = 'inline-block';
+
+    const bestVoice = (typeof teacherAudioPlayer !== 'undefined' && teacherAudioPlayer.getBestVoice)
+      ? teacherAudioPlayer.getBestVoice(cleanInfo.lang)
+      : null;
+
+    const speechRate = cleanInfo.isEnglish ? 0.90 : 0.95;
+
+    if (window.speechQueueEngine && typeof chunkTextForSpeech === 'function') {
+      const chunks = chunkTextForSpeech(cleanInfo.text, 120);
+      if (chunks && chunks.length > 0) {
+        window.speechQueueEngine.play(
+          chunks,
+          {
+            lang: cleanInfo.lang,
+            rate: speechRate,
+            pitch: 1.0,
+            voice: bestVoice
+          },
+          null,
+          () => { stopAISpeech(); }
+        );
+        return;
+      }
+    }
+
+    try {
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(cleanInfo.text);
+      utter.lang = cleanInfo.lang;
+      utter.rate = speechRate;
+      if (bestVoice) utter.voice = bestVoice;
+      utter.onend = () => { stopAISpeech(); };
+      utter.onerror = () => { stopAISpeech(); };
+      window.speechSynthesis.speak(utter);
+    } catch (err) {
+      console.warn('[AI TTS Error]', err);
+      stopAISpeech();
     }
   }
   window.speakAIText = speakAIText;
@@ -13029,7 +13214,7 @@ Format your response clearly:
   }
   window.openAnswerEvaluationModal = openAnswerEvaluationModal;
 
-  function closeAIEvaluatorModal() {
+  function closeAIEvaluatorModal() { stopAISpeech();
     const modal = document.getElementById('aiEvaluatorModal');
     if (modal) modal.style.display = 'none';
   }
@@ -13236,7 +13421,7 @@ Format your response clearly:
         </div>
       </div>
       <div style="display:flex; align-items:center; gap:8px;">
-        <button type="button" onclick="openAISettingsModal()" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; cursor:pointer;" title="API Key அமைப்புகள்">⚙️ Key</button>
+        <button type="button" id="aiGlobalStopSpeechBtn" onclick="stopAISpeech()" style="display:none; background:#ef4444; color:#fff; border:none; padding:4px 10px; border-radius:8px; font-size:11.5px; font-weight:800; cursor:pointer;" title="à®ªà¯‡à®šà¯à®šà¯ˆ à®‰à®Ÿà®©à®Ÿà®¿à®¯à®¾à®• à®¨à®¿à®±à¯à®¤à¯à®¤à¯">â¹ï¸ à®¨à®¿à®±à¯à®¤à¯à®¤à¯</button><button type="button" onclick="openAISettingsModal()" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; cursor:pointer;" title="API Key அமைப்புகள்">⚙️ Key</button>
         <button type="button" onclick="closeAITeacherModal()" style="background:none; border:none; color:#94a3b8; font-size:22px; cursor:pointer; padding:0 4px; line-height:1;">&times;</button>
       </div>
     </div>
@@ -13282,7 +13467,7 @@ Format your response clearly:
           <span style="font-size:11px; color:#10b981; font-weight:700;">அரசுத் தேர்வு மதிப்பெண் & திருத்துதல்</span>
         </div>
       </div>
-      <button type="button" onclick="closeAIEvaluatorModal()" style="background:none; border:none; color:#94a3b8; font-size:22px; cursor:pointer;">&times;</button>
+      <button type="button" id="evalGlobalStopSpeechBtn" onclick="stopAISpeech()" style="display:none; background:#ef4444; color:#fff; border:none; padding:4px 10px; border-radius:8px; font-size:11.5px; font-weight:800; cursor:pointer; margin-right:8px;" title="à®ªà¯‡à®šà¯à®šà¯ˆ à®‰à®Ÿà®©à®Ÿà®¿à®¯à®¾à®• à®¨à®¿à®±à¯à®¤à¯à®¤à¯">â¹ï¸ à®¨à®¿à®±à¯à®¤à¯à®¤à¯</button><button type="button" onclick="closeAIEvaluatorModal()" style="background:none; border:none; color:#94a3b8; font-size:22px; cursor:pointer;">&times;</button>
     </div>
 
     <div style="padding:18px 20px; overflow-y:auto; flex:1; background:#090e17;">

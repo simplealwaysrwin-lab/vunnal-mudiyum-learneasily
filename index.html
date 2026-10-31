@@ -89,7 +89,7 @@
 <script>
   // Build tracker
   (function() {
-    const CURRENT_BUILD = '20261031_v32';
+    const CURRENT_BUILD = '20261031_v33';
     try {
       localStorage.setItem('vm_build_ver', CURRENT_BUILD);
     } catch(e) {}
@@ -138,6 +138,14 @@
 <script src="data_social_u6.js?v=20261031_v31"></script>
 <script src="data_social_em_u5.js?v=20261031_v31"></script>
 <script src="data_social_em_u6.js?v=20261031_v31"></script>
+<script src="data_science_u7.js?v=20261031_v33"></script>
+<script src="data_science_u8.js?v=20261031_v33"></script>
+<script src="data_science_em_u7.js?v=20261031_v33"></script>
+<script src="data_science_em_u8.js?v=20261031_v33"></script>
+<script src="data_social_u7.js?v=20261031_v33"></script>
+<script src="data_social_u8.js?v=20261031_v33"></script>
+<script src="data_social_em_u7.js?v=20261031_v33"></script>
+<script src="data_social_em_u8.js?v=20261031_v33"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -4039,6 +4047,24 @@
             subSections: (typeof SCIENCE_UNIT_6_DATA !== 'undefined') ? SCIENCE_UNIT_6_DATA.subSections : [],
             questions: (typeof SCIENCE_UNIT_6_DATA !== 'undefined' && SCIENCE_UNIT_6_DATA.subSections) ? SCIENCE_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof SCIENCE_UNIT_6_DATA !== 'undefined') ? SCIENCE_UNIT_6_DATA.formulas : []
+          },
+          {
+            id: 'sci_u7',
+            unit: 'அலகு 7',
+            title: 'அணுக்களும் மூலக்கூறுகளும் (Atoms and Molecules)',
+            qCount: (typeof SCIENCE_UNIT_7_DATA !== 'undefined' && SCIENCE_UNIT_7_DATA.subSections) ? SCIENCE_UNIT_7_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_7_DATA !== 'undefined') ? SCIENCE_UNIT_7_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_7_DATA !== 'undefined' && SCIENCE_UNIT_7_DATA.subSections) ? SCIENCE_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_7_DATA !== 'undefined') ? SCIENCE_UNIT_7_DATA.formulas : []
+          },
+          {
+            id: 'sci_u8',
+            unit: 'அலகு 8',
+            title: 'தனிமங்களின் ஆவர்த்தன வகைப்பாடு (Periodic Classification of Elements)',
+            qCount: (typeof SCIENCE_UNIT_8_DATA !== 'undefined' && SCIENCE_UNIT_8_DATA.subSections) ? SCIENCE_UNIT_8_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_8_DATA !== 'undefined') ? SCIENCE_UNIT_8_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_8_DATA !== 'undefined' && SCIENCE_UNIT_8_DATA.subSections) ? SCIENCE_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_8_DATA !== 'undefined') ? SCIENCE_UNIT_8_DATA.formulas : []
           }
         ]
       },
@@ -4104,6 +4130,24 @@
             subSections: (typeof SCIENCE_EM_UNIT_6_DATA !== 'undefined') ? SCIENCE_EM_UNIT_6_DATA.subSections : [],
             questions: (typeof SCIENCE_EM_UNIT_6_DATA !== 'undefined' && SCIENCE_EM_UNIT_6_DATA.subSections) ? SCIENCE_EM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof SCIENCE_EM_UNIT_6_DATA !== 'undefined') ? SCIENCE_EM_UNIT_6_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u7',
+            unit: 'Unit 7',
+            title: 'Atoms and Molecules',
+            qCount: (typeof SCIENCE_EM_UNIT_7_DATA !== 'undefined' && SCIENCE_EM_UNIT_7_DATA.subSections) ? SCIENCE_EM_UNIT_7_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_7_DATA !== 'undefined') ? SCIENCE_EM_UNIT_7_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_7_DATA !== 'undefined' && SCIENCE_EM_UNIT_7_DATA.subSections) ? SCIENCE_EM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_7_DATA !== 'undefined') ? SCIENCE_EM_UNIT_7_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u8',
+            unit: 'Unit 8',
+            title: 'Periodic Classification of Elements',
+            qCount: (typeof SCIENCE_EM_UNIT_8_DATA !== 'undefined' && SCIENCE_EM_UNIT_8_DATA.subSections) ? SCIENCE_EM_UNIT_8_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_8_DATA !== 'undefined') ? SCIENCE_EM_UNIT_8_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_8_DATA !== 'undefined' && SCIENCE_EM_UNIT_8_DATA.subSections) ? SCIENCE_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_8_DATA !== 'undefined') ? SCIENCE_EM_UNIT_8_DATA.formulas : []
           }
         ]
       },
@@ -4168,6 +4212,24 @@
             subSections: (typeof SOCIAL_UNIT_6_DATA !== 'undefined') ? SOCIAL_UNIT_6_DATA.subSections : [],
             questions: (typeof SOCIAL_UNIT_6_DATA !== 'undefined' && SOCIAL_UNIT_6_DATA.subSections) ? SOCIAL_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             geoHighlights: (typeof SOCIAL_UNIT_6_DATA !== 'undefined') ? SOCIAL_UNIT_6_DATA.geoHighlights : []
+          },
+          {
+            id: 'soc_c2',
+            unit: 'குடிமையியல் 2',
+            title: 'நடுவண் அரசு (Central Government)',
+            qCount: (typeof SOCIAL_UNIT_7_DATA !== 'undefined' && SOCIAL_UNIT_7_DATA.subSections) ? SOCIAL_UNIT_7_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_7_DATA !== 'undefined') ? SOCIAL_UNIT_7_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_7_DATA !== 'undefined' && SOCIAL_UNIT_7_DATA.subSections) ? SOCIAL_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            timeline: (typeof SOCIAL_UNIT_7_DATA !== 'undefined') ? SOCIAL_UNIT_7_DATA.timeline : []
+          },
+          {
+            id: 'soc_e2',
+            unit: 'பொருளியல் 2',
+            title: 'உலகமயமாதல் மற்றும் வர்த்தகம் (Globalization and Trade)',
+            qCount: (typeof SOCIAL_UNIT_8_DATA !== 'undefined' && SOCIAL_UNIT_8_DATA.subSections) ? SOCIAL_UNIT_8_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_8_DATA !== 'undefined') ? SOCIAL_UNIT_8_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_8_DATA !== 'undefined' && SOCIAL_UNIT_8_DATA.subSections) ? SOCIAL_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            timeline: (typeof SOCIAL_UNIT_8_DATA !== 'undefined') ? SOCIAL_UNIT_8_DATA.timeline : []
           }
         ]
       },
@@ -4231,6 +4293,24 @@
             subSections: (typeof SOCIAL_EM_UNIT_6_DATA !== 'undefined') ? SOCIAL_EM_UNIT_6_DATA.subSections : [],
             questions: (typeof SOCIAL_EM_UNIT_6_DATA !== 'undefined' && SOCIAL_EM_UNIT_6_DATA.subSections) ? SOCIAL_EM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             geoHighlights: (typeof SOCIAL_EM_UNIT_6_DATA !== 'undefined') ? SOCIAL_EM_UNIT_6_DATA.geoHighlights : []
+          },
+          {
+            id: 'soc_em_c2',
+            unit: 'Civics 2',
+            title: 'Central Government',
+            qCount: (typeof SOCIAL_EM_UNIT_7_DATA !== 'undefined' && SOCIAL_EM_UNIT_7_DATA.subSections) ? SOCIAL_EM_UNIT_7_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_7_DATA !== 'undefined') ? SOCIAL_EM_UNIT_7_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_7_DATA !== 'undefined' && SOCIAL_EM_UNIT_7_DATA.subSections) ? SOCIAL_EM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            timeline: (typeof SOCIAL_EM_UNIT_7_DATA !== 'undefined') ? SOCIAL_EM_UNIT_7_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_e2',
+            unit: 'Economics 2',
+            title: 'Globalization and Trade',
+            qCount: (typeof SOCIAL_EM_UNIT_8_DATA !== 'undefined' && SOCIAL_EM_UNIT_8_DATA.subSections) ? SOCIAL_EM_UNIT_8_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_8_DATA !== 'undefined') ? SOCIAL_EM_UNIT_8_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_8_DATA !== 'undefined' && SOCIAL_EM_UNIT_8_DATA.subSections) ? SOCIAL_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            timeline: (typeof SOCIAL_EM_UNIT_8_DATA !== 'undefined') ? SOCIAL_EM_UNIT_8_DATA.timeline : []
           }
         ]
       }
@@ -4603,13 +4683,13 @@
       visualType = 'sci';
       badgeBorder = '#06b6d450';
       badgeColor = '#38bdf8';
-      subTitle = isEm ? 'Motion, Optics, Electricity & Nuclear Physics' : 'இயக்க விதிகள், ஒளியியல், மின்னோட்டம் & அணுக்கரு';
+      subTitle = isEm ? 'Physics (Units 1-6) & Chemistry (Units 7-8)' : 'இயக்க விதிகள், ஒளியியல், மின்னோட்டம் & அணுக்கரு';
     } else if (s.id.startsWith('soc')) {
       cardClass = 'card-soc';
       visualType = 'soc';
       badgeBorder = '#a855f750';
       badgeColor = '#c084fc';
-      subTitle = isEm ? 'World War, India Geography, Constitution & Economics' : 'உலகப்போர், இந்திய புவியியல், அரசியலமைப்பு & பொருளியல்';
+      subTitle = isEm ? 'History, Geography, Central Govt & Trade' : 'உலகப்போர், இந்திய புவியியல், அரசியலமைப்பு & பொருளியல்';
     } else if (s.id === 'tamil') {
       cardClass = 'card-tam';
       visualType = 'tam';
@@ -5321,6 +5401,47 @@
       lesson.geoHighlights = SOCIAL_EM_UNIT_6_DATA.geoHighlights || [];
       lesson.qCount = lesson.questions.length;
     }
+    else if (lesId === 'sci_u7' && typeof SCIENCE_UNIT_7_DATA !== 'undefined' && SCIENCE_UNIT_7_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_7_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_7_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u7' && typeof SCIENCE_EM_UNIT_7_DATA !== 'undefined' && SCIENCE_EM_UNIT_7_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_7_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_7_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u8' && typeof SCIENCE_UNIT_8_DATA !== 'undefined' && SCIENCE_UNIT_8_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_8_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_8_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u8' && typeof SCIENCE_EM_UNIT_8_DATA !== 'undefined' && SCIENCE_EM_UNIT_8_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_8_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_8_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_c2' && typeof SOCIAL_UNIT_7_DATA !== 'undefined' && SOCIAL_UNIT_7_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_7_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.timeline = SOCIAL_UNIT_7_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_c2' && typeof SOCIAL_EM_UNIT_7_DATA !== 'undefined' && SOCIAL_EM_UNIT_7_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_7_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.timeline = SOCIAL_EM_UNIT_7_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_e2' && typeof SOCIAL_UNIT_8_DATA !== 'undefined' && SOCIAL_UNIT_8_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_8_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.timeline = SOCIAL_UNIT_8_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_e2' && typeof SOCIAL_EM_UNIT_8_DATA !== 'undefined' && SOCIAL_EM_UNIT_8_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_8_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.timeline = SOCIAL_EM_UNIT_8_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+  }
   }
 
   function selectLesson(lesId, defaultFilter = 'all') {

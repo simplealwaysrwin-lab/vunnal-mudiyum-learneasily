@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -12709,11 +12709,10 @@ ${this.studentName || 'மாணவர்'}`;
       }, 2800);
     });
   })();
-
   // ==========================================================================
   // GOOGLE GEMINI AI TEACHER & ANSWER EVALUATION ENGINE
   // ==========================================================================
-    // Default API Key (Chunked Base64 to prevent GitHub Secret Scanning push protection blocks)
+  // Default API Key (Chunked Base64 to prevent GitHub Secret Scanning push protection blocks)
   const _g0 = 'QVEuQWI4Uk42SmVM';
   const _g1 = 'VXdNak1nNTFDS1dPMzJz';
   const _g2 = 'SWQtRjlldkVaejZ6ZGpt';
@@ -12733,6 +12732,8 @@ ${this.studentName || 'மாணவர்'}`;
   function setGeminiApiKey(key) {
     if (key && key.trim()) {
       localStorage.setItem('vm_gemini_api_key', key.trim());
+    } else {
+      localStorage.removeItem('vm_gemini_api_key');
     }
   }
 
@@ -12744,20 +12745,29 @@ ${this.studentName || 'மாணவர்'}`;
   ];
 
   const AI_TEACHER_SYSTEM = `You are "உன்னால் முடியும்" (Vunnal Mudiyum) Tamil Nadu State Board (Samacheer Kalvi) Class 10 school AI Teacher (அன்பான 10-ஆம் வகுப்பு ஆசிரியர்).
-Goals:
-1. Explain concepts warmly, encouragingly, and simply in friendly Tamil (or English if asked).
-2. For math problems or science laws, provide clear step-by-step working, formulas, and rough calculations.
-3. Highlight public exam scoring tips, key words, and bullet points to help students score 450+ marks.
-4. Keep explanations crisp, structured, and easy to memorize for 10th standard students.
-5. Use bullet points and emoji highlights (💡, 📌, 📐, ⭐).`;
+CRITICAL RULES:
+1. STRICT LANGUAGE MATCHING:
+   - If the student's question, prompt, or context is in ENGLISH (or for English Medium / EM), respond 100% in clear, simple, fluent ENGLISH. Do NOT mix Tamil into English Medium explanations!
+   - If the question or prompt is in TAMIL (or for Tamil Medium / TM), respond warmly in friendly, simple Tamil.
+2. 100% ACCURATE NUMBERS & MATH:
+   - Use the EXACT numbers, sets, and variables from the question and official answer. NEVER alter, hallucinate, or miscopy any number or sign. If a set is A = {2, -2, 3}, use strictly 2, -2, 3.
+   - Verify every calculation, ordered pair, and counting check (n(A), n(B), n(A × B)).
+3. CLEAN MATH SYMBOLS (NO RAW LATEX CODES):
+   - NEVER output raw LaTeX codes like \\times, \\cdot, \\div, \\pm, \\{ \\} or dollar signs ($).
+   - Use clean, standard Unicode math symbols: '×', '·', '÷', '±', '{ }', '²', '³', '≤', '≥', '≠'.
+   - Format ordered pairs simply as: (2, 1), (2, -4), (-2, 1), (-2, -4), (3, 1), (3, -4).
+4. EXAM-SCORING STRUCTURE:
+   - Provide clear, numbered steps with formulas highlighted.
+   - Include a counting check or verification tip so students avoid exam errors.`;
 
   const AI_EVALUATOR_SYSTEM = `You are an expert Tamil Nadu 10th Standard Public Exam paper evaluator.
 Evaluate the student's answer against the official textbook answer key.
 Format your response clearly:
-1. 🎯 மதிப்பெண் (Marks Awarded): e.g. 4 / 5 (80%)
-2. ✅ சரியான முக்கியக் குறிப்புகள் (Points Covered Accurately)
-3. ⚠️ விடுபட்ட முக்கிய சொற்கள் (Keywords / Steps Missing for Full Marks)
-4. 💡 அரசுத் தேர்வு வழிகாட்டுதல் (Constructive Examiner Feedback in friendly Tamil)`;
+1. 🎯 Score / மதிப்பெண்: e.g. 2 / 2 or 4 / 5
+2. ✅ Points Covered Accurately / சரியான குறிப்புகள்
+3. ⚠️ Missing Keywords or Steps / விடுபட்ட முக்கிய சொற்கள்
+4. 💡 Examiner Advice / பொதுத்தேர்வு வழிகாட்டுதல்
+Match the language: evaluate English answers in English, and Tamil answers in Tamil.`;
 
   async function callGeminiAPI(prompt, systemInstruction = '') {
     const apiKey = getGeminiApiKey();
@@ -12803,6 +12813,19 @@ Format your response clearly:
     throw lastError || new Error('All Gemini models are temporarily busy. Please try again.');
   }
 
+  function cleanHtmlEntities(str) {
+    if (!str) return '';
+    return str
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&times;/g, '×')
+      .replace(/&minus;/g, '-')
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&#39;/g, "'")
+      .replace(/&quot;/g, '"');
+  }
+
   // --- AI TEACHER MODAL CONTROLLER ---
   let currentAIQuestionContext = null;
 
@@ -12813,7 +12836,8 @@ Format your response clearly:
 
     if (contextQ) {
       if (banner) banner.style.display = 'block';
-      if (qText) qText.innerText = (contextQ.q || '').replace(/<[^>]+>/g, '').substring(0, 90) + '...';
+      const cleanBannerQ = cleanHtmlEntities((contextQ.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+      if (qText) qText.innerText = cleanBannerQ.substring(0, 95) + '...';
     } else {
       if (banner) banner.style.display = 'none';
     }
@@ -12834,7 +12858,34 @@ Format your response clearly:
     const qItem = findQuestionById(qId);
     if (!qItem) return;
     openAITeacherModal(qItem);
-    sendQuickPrompt(`கீழ்கண்ட வினாவை எளிய முறையில் படிப்படியாக விளக்குங்கள்:\nகேள்வி: ${(qItem.q || '').replace(/<[^>]+>/g, '')}\nஅதிகாரப்பூர்வ விடை: ${(qItem.ans || '').replace(/<[^>]+>/g, '')}`);
+
+    // Determine if question is English Medium
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english')) ||
+                 (qId && (qId.includes('_em_') || qId.startsWith('eng_')));
+
+    const cleanQ = cleanHtmlEntities((qItem.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+    const cleanAns = cleanHtmlEntities((qItem.ans || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+
+    if (isEm) {
+      sendQuickPrompt(`Please explain the following Class 10 Board Exam question step-by-step in clear, simple English for English Medium students.
+Question: ${cleanQ}
+Official Textbook Answer: ${cleanAns}
+
+Important:
+1. Explain 100% in clear ENGLISH (do NOT use Tamil).
+2. Keep the EXACT numbers and sets from the question: if A = {2, -2, 3}, use strictly 2, -2, 3.
+3. Write clean math symbols directly (×, ·, ÷, ±, { }, ², ³) and DO NOT use raw LaTeX codes (no \\times, no \\{, no dollar signs $).
+4. Break into Step 1, Step 2, and Counting check.`);
+    } else {
+      sendQuickPrompt(`கீழ்கண்ட 10-ஆம் வகுப்பு பொதுத்தேர்வு வினாவை எளிய முறையில் தமிழ் வழி மாணவர்களுக்காகப் படிப்படியாக விளக்குங்கள்:
+கேள்வி: ${cleanQ}
+அதிகாரப்பூர்வ விடைக்குறிப்பு: ${cleanAns}
+
+முக்கிய வழிகாட்டல்கள்:
+1. முழு விளக்கத்தையும் எளிய, தூய தமிழில் வழங்கவும்.
+2. கேள்வியில் உள்ள அதே எண்கள் மற்றும் கணங்களை (Exact sets and numbers) துல்லியமாகப் பயன்படுத்தவும்.
+3. படிநிலைகளாகத் தெளிவாகக் காட்டி முழு மதிப்பெண் பெறுவதற்கான சூத்திரங்களை எடுத்துரைக்கவும்.`);
+    }
   }
   window.openAITeacherForQuestion = openAITeacherForQuestion;
 
@@ -12868,7 +12919,15 @@ Format your response clearly:
     try {
       let fullPrompt = text;
       if (currentAIQuestionContext) {
-        fullPrompt = `[தொடர்புடைய 10-ஆம் வகுப்பு வினா]: ${(currentAIQuestionContext.q || '').replace(/<[^>]+>/g, '')}\n[மாணவர் கேள்வி]: ${text}`;
+        const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+        const cleanCtxQ = cleanHtmlEntities((currentAIQuestionContext.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+        const cleanCtxAns = cleanHtmlEntities((currentAIQuestionContext.ans || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+
+        if (isEm) {
+          fullPrompt = `[Related Class 10 Board Question]: ${cleanCtxQ}\n[Official Answer]: ${cleanCtxAns}\n[Student Query]: ${text}\n(Respond in clear ENGLISH with exact numbers and clean math symbols)`;
+        } else {
+          fullPrompt = `[தொடர்புடைய 10-ஆம் வகுப்பு வினா]: ${cleanCtxQ}\n[அதிகாரப்பூர்வ விடை]: ${cleanCtxAns}\n[மாணவர் கேள்வி]: ${text}\n(எளிய தமிழில் துல்லியமான எண்களுடன் விளக்குங்கள்)`;
+        }
       }
       const reply = await callGeminiAPI(fullPrompt, AI_TEACHER_SYSTEM);
       removeAILoadingIndicator(loadingId);
@@ -12887,6 +12946,36 @@ Format your response clearly:
   }
   window.sendQuickPrompt = sendQuickPrompt;
 
+  function formatAIResponseForDisplay(text) {
+    if (!text) return '';
+    let f = text;
+
+    // 1. Clean raw LaTeX math symbols
+    f = f.replace(/\\times/g, '×')
+         .replace(/\\cdot/g, '·')
+         .replace(/\\div/g, '÷')
+         .replace(/\\pm/g, '±')
+         .replace(/\\le(q)?/g, '≤')
+         .replace(/\\ge(q)?/g, '≥')
+         .replace(/\\neq/g, '≠')
+         .replace(/\\{/g, '{')
+         .replace(/\\}/g, '}')
+         .replace(/\\([a-zA-Z]+)/g, '$1')
+         .replace(/\$([^\$]+)\$/g, '$1')
+         .replace(/\$\$(.*?)\$\$/gs, '$1')
+         .replace(/\\\(/g, '').replace(/\\\)/g, '')
+         .replace(/\\\[/g, '').replace(/\\\]/g, '');
+
+    // 2. Headings and bold
+    f = f.replace(/^### (.*$)/gim, '<h4 style="margin:8px 0 4px; color:#38bdf8; font-size:14px; font-weight:800;">$1</h4>')
+         .replace(/^## (.*$)/gim, '<h3 style="margin:10px 0 6px; color:#38bdf8; font-size:15px; font-weight:800;">$1</h3>')
+         .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
+         .replace(/\n\n/g, '<br><br>')
+         .replace(/\n/g, '<br>');
+
+    return f;
+  }
+
   function appendAIChatMessage(sender, text) {
     const chatBody = document.getElementById('aiChatBody');
     if (!chatBody) return;
@@ -12895,10 +12984,7 @@ Format your response clearly:
     div.className = `ai-bubble ai-bubble-${sender}`;
 
     if (sender === 'bot') {
-      const formatted = text
-        .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
-        .replace(/\n\n/g, '<br><br>')
-        .replace(/\n/g, '<br>');
+      const formatted = formatAIResponseForDisplay(text);
 
       div.innerHTML = `
         <div class="ai-msg-content">${formatted}</div>
@@ -13012,7 +13098,6 @@ Format your response clearly:
       text = text.replace(/(\d+)\s*மீ\b/g, ' $1 மீட்டர் ');
       text = text.replace(/(\d+)\s*கி\.?மீ\b/g, ' $1 கிலோமீட்டர் ');
     } else {
-      // English reading: clean English words & mathematical expressions
       text = text.replace(/[\u0B80-\u0BFF]+/g, ''); // strip stray Tamil in English answers
       text = text.replace(/\be\.g\.?/gi, 'for example');
       text = text.replace(/\bi\.e\.?/gi, 'that is');
@@ -13040,6 +13125,7 @@ Format your response clearly:
 
     return { text, lang, isEnglish };
   }
+  window.cleanAITextForSpeech = cleanAITextForSpeech;
 
   function stopAISpeech() {
     if ('speechSynthesis' in window) {
@@ -13098,7 +13184,7 @@ Format your response clearly:
 
     currentAISpeakingBtn = btn;
     btn.classList.add('speaking');
-    btn.innerHTML = '⏹️ நிறுத்து';
+    btn.innerHTML = '&#9209; நிறுத்து';
     btn.style.background = '#ef4444';
     btn.style.color = '#ffffff';
 
@@ -13166,18 +13252,18 @@ Format your response clearly:
       return;
     }
 
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
     aiSpeechRec = new SpeechRec();
-    aiSpeechRec.lang = 'ta-IN';
+    aiSpeechRec.lang = isEm ? 'en-IN' : 'ta-IN';
     aiSpeechRec.interimResults = false;
 
     if (btn) btn.classList.add('recording');
 
     aiSpeechRec.onresult = (e) => {
-      const transcript = e.results[0][0].transcript;
-      if (input) input.value = transcript;
+      const spoken = e.results[0][0].transcript;
+      if (input) input.value = (input.value ? input.value + ' ' : '') + spoken;
       if (btn) btn.classList.remove('recording');
       aiSpeechRec = null;
-      sendAIMessage();
     };
 
     aiSpeechRec.onerror = () => {
@@ -13194,19 +13280,24 @@ Format your response clearly:
   }
   window.toggleAIMicInput = toggleAIMicInput;
 
-  // --- AI ANSWER EVALUATION CONTROLLER ---
+  // --- AI EVALUATOR CONTROLLER ---
   let currentEvalQuestion = null;
 
   function openAnswerEvaluationModal(qId) {
-    currentEvalQuestion = findQuestionById(qId);
-    if (!currentEvalQuestion) return;
+    const qItem = findQuestionById(qId);
+    if (!qItem) return;
 
-    const qBox = document.getElementById('evalQuestionText');
+    currentEvalQuestion = qItem;
+    const qBox = document.getElementById('evalQuestionBox');
+    if (qBox) {
+      const cleanQ = cleanHtmlEntities((qItem.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+      qBox.innerHTML = `<b>வினா (${qItem.mark || 'மதிப்பெண்'}):</b> ${cleanQ}`;
+    }
+
     const ansBox = document.getElementById('evalStudentAnswer');
-    const resArea = document.getElementById('evalResultArea');
-
-    if (qBox) qBox.innerHTML = currentEvalQuestion.q;
     if (ansBox) ansBox.value = '';
+
+    const resArea = document.getElementById('evalResultArea');
     if (resArea) resArea.style.display = 'none';
 
     const modal = document.getElementById('aiEvaluatorModal');
@@ -13214,7 +13305,8 @@ Format your response clearly:
   }
   window.openAnswerEvaluationModal = openAnswerEvaluationModal;
 
-  function closeAIEvaluatorModal() { stopAISpeech();
+  function closeAIEvaluatorModal() {
+    stopAISpeech();
     const modal = document.getElementById('aiEvaluatorModal');
     if (modal) modal.style.display = 'none';
   }
@@ -13239,24 +13331,32 @@ Format your response clearly:
       btn.innerHTML = '<span>⏳ விடைத்தாள் திருத்தப்படுகிறது...</span>';
     }
 
-    const prompt = `வினா (${currentEvalQuestion.mark || 'மதிப்பெண்'}): ${(currentEvalQuestion.q || '').replace(/<[^>]+>/g, '')}
-அதிகாரப்பூர்வ பாடப்புத்தக விடைக்குறிப்பு: ${(currentEvalQuestion.ans || '').replace(/<[^>]+>/g, '')}
-மாணவர் எழுதிய விடை: ${studentAns}
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english')) ||
+                 (currentEvalQuestion.id && currentEvalQuestion.id.includes('_em_'));
 
-மாணவரின் விடையை அதிகாரப்பூர்வ விடையுடன் ஒப்பிட்டு 10-ஆம் வகுப்பு பொதுத்தேர்வு முறையில் மதிப்பீடு செய்க.`;
+    const cleanQ = cleanHtmlEntities((currentEvalQuestion.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+    const cleanAns = cleanHtmlEntities((currentEvalQuestion.ans || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+
+    let prompt = '';
+    if (isEm) {
+      prompt = `Question (${currentEvalQuestion.mark || 'Marks'}): ${cleanQ}\nOfficial Textbook Answer: ${cleanAns}\nStudent Answer: ${studentAns}\n\nEvaluate the student's answer against the official textbook answer strictly in ENGLISH for Class 10 Board Exam.`;
+    } else {
+      prompt = `வினா (${currentEvalQuestion.mark || 'மதிப்பெண்'}): ${cleanQ}\nஅதிகாரப்பூர்வ பாடப்புத்தக விடைக்குறிப்பு: ${cleanAns}\nமாணவர் எழுதிய விடை: ${studentAns}\n\nமாணவரின் விடையை அதிகாரப்பூர்வ விடையுடன் ஒப்பிட்டு 10-ஆம் வகுப்பு பொதுத்தேர்வு முறையில் எளிய தமிழில் மதிப்பீடு செய்க.`;
+    }
 
     try {
       const evaluation = await callGeminiAPI(prompt, AI_EVALUATOR_SYSTEM);
       if (resArea && resContent) {
-        const formatted = evaluation
-          .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
-          .replace(/\n\n/g, '<br><br>')
-          .replace(/\n/g, '<br>');
+        const formatted = formatAIResponseForDisplay(evaluation);
 
         resContent.innerHTML = `
           <div class="eval-score-card">
-            <div style="font-size:12px; font-weight:800; color:#38bdf8; text-transform:uppercase;">விடைத்தாள் மதிப்பீட்டு அறிக்கை</div>
-            <div style="margin-top:8px;">${formatted}</div>
+            <div style="font-size:12px; font-weight:800; color:#38bdf8; text-transform:uppercase;">${isEm ? 'Evaluation Report' : 'விடைத்தாள் மதிப்பீட்டு அறிக்கை'}</div>
+            <div class="ai-msg-content" style="margin-top:8px;">${formatted}</div>
+            <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px; margin-top:8px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.08);">
+              <button type="button" onclick="copyAIText(this)" style="background:none; border:none; color:#38bdf8; font-size:11.5px; font-weight:700; cursor:pointer;" title="அறிக்கையை நகலெடு">📋 நகலெடு</button>
+              <button type="button" class="ai-speak-btn" onclick="speakAIText(this)" style="background:none; border:none; color:#10b981; font-size:11.5px; font-weight:700; cursor:pointer; padding:3px 8px; border-radius:6px;" title="அறிக்கையைக் கேள்">🔊 வாசி</button>
+            </div>
           </div>
         `;
         resArea.style.display = 'block';
@@ -13291,8 +13391,9 @@ Format your response clearly:
       return;
     }
 
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
     evalSpeechRec = new SpeechRec();
-    evalSpeechRec.lang = 'ta-IN';
+    evalSpeechRec.lang = isEm ? 'en-IN' : 'ta-IN';
     evalSpeechRec.interimResults = false;
 
     if (btn) btn.innerText = '🔴 பதிவு செய்யப்படுகிறது...';
@@ -13323,8 +13424,24 @@ Format your response clearly:
     const modal = document.getElementById('aiSettingsModal');
     const input = document.getElementById('settingsApiKeyInput');
     const status = document.getElementById('settingsKeyStatus');
-    if (input) input.value = getGeminiApiKey();
-    if (status) status.innerText = '';
+    const customKey = localStorage.getItem('vm_gemini_api_key');
+
+    if (input) {
+      // SECURITY: NEVER reveal the built-in system API key to users!
+      input.type = 'password';
+      input.value = customKey || '';
+      input.placeholder = customKey ? 'சொந்த API Key சேமிக்கப்பட்டுள்ளது' : 'செயலியின் இலவச AI சாவி தானாகவே செயலில் உள்ளது ✅';
+    }
+
+    if (status) {
+      if (!customKey) {
+        status.style.color = '#10b981';
+        status.innerHTML = '🔒 <b>செயலியின் இலவச AI சாவி தானாகவே செயலில் உள்ளது.</b> மாணவர்கள் எதுவும் உள்ளிடத் தேவையில்லை! நீங்கள் உங்கள் சொந்த Google AI Studio சாவியைப் பயன்படுத்த விரும்பினால் மட்டுமே மேலே உள்ளிடவும்.';
+      } else {
+        status.style.color = '#38bdf8';
+        status.innerHTML = '✨ <b>உங்கள் தனிப்பட்ட API Key சேமிக்கப்பட்டுள்ளது.</b> (அகற்றி இயல்புநிலைக்கு மாற காலியாக விட்டு சேமிக்கவும்)';
+      }
+    }
     if (modal) modal.style.display = 'flex';
   }
   window.openAISettingsModal = openAISettingsModal;
@@ -13348,13 +13465,18 @@ Format your response clearly:
     if (!input) return;
     const val = input.value.trim();
     if (!val) {
-      alert('தயவுசெய்து சரியான API Key உள்ளிடவும்.');
+      setGeminiApiKey('');
+      if (status) {
+        status.style.color = '#10b981';
+        status.innerText = '✅ இயல்புநிலை இலவச சாவிக்கு மாற்றப்பட்டது!';
+      }
+      setTimeout(() => { closeAISettingsModal(); }, 1200);
       return;
     }
     setGeminiApiKey(val);
     if (status) {
       status.style.color = '#10b981';
-      status.innerText = '✅ API Key சேமிக்கப்பட்டது!';
+      status.innerText = '✅ உங்கள் சொந்த API Key சேமிக்கப்பட்டது!';
     }
     setTimeout(() => { closeAISettingsModal(); }, 1200);
   }
@@ -13363,36 +13485,34 @@ Format your response clearly:
   async function testAISettingsConnection() {
     const input = document.getElementById('settingsApiKeyInput');
     const status = document.getElementById('settingsKeyStatus');
-    if (!input || !status) return;
-    const val = input.value.trim();
-    if (!val) {
+    if (!status) return;
+
+    const testKey = (input && input.value.trim()) ? input.value.trim() : getGeminiApiKey();
+    if (!testKey) {
       status.style.color = '#ef4444';
-      status.innerText = '⚠️ API Key காலியாக உள்ளது!';
+      status.innerText = '❌ சோதிக்க API Key இல்லை.';
       return;
     }
 
-    status.style.color = '#38bdf8';
-    status.innerText = '⏳ இணைப்பைச் சோதிக்கிறது...';
+    status.style.color = '#f59e0b';
+    status.innerText = '⏳ கூகுள் AI இணைப்பு சோதிக்கப்படுகிறது...';
 
     try {
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${val}`;
-      const res = await fetch(url, {
+      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-lite-latest:generateContent?key=${testKey}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: 'Hello, reply with OK' }] }]
-        })
+        body: JSON.stringify({ contents: [{ parts: [{ text: 'ping' }] }] })
       });
-
-      if (!res.ok) {
-        throw new Error('Google connection error (HTTP ' + res.status + ')');
+      if (resp.ok) {
+        status.style.color = '#10b981';
+        status.innerText = '✅ இணைப்பு வெற்றி! Gemini 3.5 AI தயாராக உள்ளது.';
+      } else {
+        const err = await resp.json().catch(() => ({}));
+        throw new Error(err.error?.message || `HTTP ${resp.status}`);
       }
-
-      status.style.color = '#10b981';
-      status.innerText = '✅ இணைப்பு வெற்றி! Google Gemini AI தயார்!';
-    } catch(err) {
+    } catch (err) {
       status.style.color = '#ef4444';
-      status.innerText = '❌ தோல்வி: ' + err.message;
+      status.innerText = `❌ இணைப்பு தோல்வி: ${err.message}`;
     }
   }
   window.testAISettingsConnection = testAISettingsConnection;
@@ -13421,7 +13541,7 @@ Format your response clearly:
         </div>
       </div>
       <div style="display:flex; align-items:center; gap:8px;">
-        <button type="button" id="aiGlobalStopSpeechBtn" onclick="stopAISpeech()" style="display:none; background:#ef4444; color:#fff; border:none; padding:4px 10px; border-radius:8px; font-size:11.5px; font-weight:800; cursor:pointer;" title="à®ªà¯‡à®šà¯à®šà¯ˆ à®‰à®Ÿà®©à®Ÿà®¿à®¯à®¾à®• à®¨à®¿à®±à¯à®¤à¯à®¤à¯">â¹ï¸ à®¨à®¿à®±à¯à®¤à¯à®¤à¯</button><button type="button" onclick="openAISettingsModal()" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; cursor:pointer;" title="API Key அமைப்புகள்">⚙️ Key</button>
+        <button type="button" id="aiGlobalStopSpeechBtn" onclick="stopAISpeech()" style="display:none; background:#ef4444; color:#fff; border:none; padding:4px 10px; border-radius:8px; font-size:12px; font-weight:800; cursor:pointer;" title="பேச்சை உடனடியாக நிறுத்து">⏹️ நிறுத்து</button><button type="button" onclick="openAISettingsModal()" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; cursor:pointer;" title="API Key அமைப்புகள்">⚙️ Key</button>
         <button type="button" onclick="closeAITeacherModal()" style="background:none; border:none; color:#94a3b8; font-size:22px; cursor:pointer; padding:0 4px; line-height:1;">&times;</button>
       </div>
     </div>
@@ -13467,7 +13587,7 @@ Format your response clearly:
           <span style="font-size:11px; color:#10b981; font-weight:700;">அரசுத் தேர்வு மதிப்பெண் & திருத்துதல்</span>
         </div>
       </div>
-      <button type="button" id="evalGlobalStopSpeechBtn" onclick="stopAISpeech()" style="display:none; background:#ef4444; color:#fff; border:none; padding:4px 10px; border-radius:8px; font-size:11.5px; font-weight:800; cursor:pointer; margin-right:8px;" title="à®ªà¯‡à®šà¯à®šà¯ˆ à®‰à®Ÿà®©à®Ÿà®¿à®¯à®¾à®• à®¨à®¿à®±à¯à®¤à¯à®¤à¯">â¹ï¸ à®¨à®¿à®±à¯à®¤à¯à®¤à¯</button><button type="button" onclick="closeAIEvaluatorModal()" style="background:none; border:none; color:#94a3b8; font-size:22px; cursor:pointer;">&times;</button>
+      <button type="button" id="evalGlobalStopSpeechBtn" onclick="stopAISpeech()" style="display:none; background:#ef4444; color:#fff; border:none; padding:4px 10px; border-radius:8px; font-size:12px; font-weight:800; cursor:pointer; margin-right:8px;" title="பேச்சை உடனடியாக நிறுத்து">⏹️ நிறுத்து</button><button type="button" onclick="closeAIEvaluatorModal()" style="background:none; border:none; color:#94a3b8; font-size:22px; cursor:pointer;">&times;</button>
     </div>
 
     <div style="padding:18px 20px; overflow-y:auto; flex:1; background:#090e17;">

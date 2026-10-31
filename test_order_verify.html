@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Verification of 5M Question Ordering</title>
+  <script src="data_maths_em_u4.js"></script>
+</head>
+<body>
+  <div id="output"></div>
+  <script>
+    const qs = MATHS_EM_UNIT_4_DATA.subSections.flatMap(s => s.questions).filter(q => q.type === '5m');
+    const out = document.getElementById('output');
+    out.innerHTML = qs.map((q, idx) => <div>Q\: \ [\]</div>).join('');
+    console.log('Total 5M Questions:', qs.length);
+  </script>
+</body>
+</html>

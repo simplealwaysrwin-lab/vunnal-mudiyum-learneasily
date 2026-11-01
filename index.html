@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -6442,6 +6442,7 @@
     // Book-like Pagination Calculations (5 questions per page; 1 question per page for long detailed answers)
     const isCheckpointsView = (currentFilter === 'checkpoints');
     const isLongAnswerView = (currentFilter === '5m' || currentFilter === '4m' || currentFilter === '7m' || currentFilter === '8m');
+    const is5MView = isLongAnswerView;
     const effectivePerPage = isLongAnswerView ? 1 : (isCheckpointsView ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE);
     const totalQuestions = filteredQ.length;
     const totalPages = Math.ceil(totalQuestions / effectivePerPage) || 1;
@@ -11212,7 +11213,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js')
+        navigator.serviceWorker.register('./sw.js?v=20261101_v44')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 
@@ -14166,11 +14167,6 @@ Important:
     }
     document.querySelectorAll('.ai-speak-btn').forEach(btn => {
       btn.innerHTML = defaultSpeakText;
-      btn.classList.remove('speaking');
-      btn.style.background = 'none';
-      btn.style.color = '#10b981';
-    });
-      btn.innerHTML = '🔊 வாசி';
       btn.classList.remove('speaking');
       btn.style.background = 'none';
       btn.style.color = '#10b981';

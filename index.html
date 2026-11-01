@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -3072,6 +3072,121 @@
     gap: 5px !important;
     transition: all 0.2s ease !important;
   }
+    /* AI Question Dropdown Menu */
+  .ai-dropdown-wrap {
+    position: relative;
+    display: inline-block;
+  }
+  .ai-ask-btn {
+    background: #0f172a !important;
+    color: #38bdf8 !important;
+    border: 1px solid #0284c7 !important;
+    font-size: 11.5px !important;
+    font-weight: 800 !important;
+    padding: 5px 11px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+  }
+  .ai-ask-btn:hover {
+    background: #1e293b !important;
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.35) !important;
+    transform: translateY(-1px) !important;
+  }
+  .ai-caret-icon {
+    font-size: 10.5px;
+    opacity: 0.85;
+    margin-left: 2px;
+    transition: transform 0.2s ease;
+  }
+  .ai-dropdown-wrap.open .ai-caret-icon {
+    transform: rotate(180deg);
+  }
+  .ai-dropdown-menu {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    min-width: 260px;
+    max-width: 92vw;
+    background: #0b1329;
+    border: 1.5px solid rgba(56, 189, 248, 0.4);
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 18px rgba(56, 189, 248, 0.2);
+    z-index: 1050;
+    backdrop-filter: blur(12px);
+    animation: aiMenuFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes aiMenuFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .ai-dropdown-wrap.open .ai-dropdown-menu {
+    display: block;
+  }
+  .ai-drop-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s ease;
+  }
+  .ai-drop-item:hover, .ai-drop-item:focus {
+    background: rgba(56, 189, 248, 0.15);
+    outline: none;
+    transform: translateX(2px);
+  }
+  .ai-item-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .ai-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .ai-item-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #f8fafc;
+  }
+  .ai-item-sub {
+    font-size: 11px;
+    color: #94a3b8;
+  }
+  .ai-drop-item:hover .ai-item-title {
+    color: #38bdf8;
+  }
+  .ai-svg-diagram-wrapper {
+    overflow-x: auto;
+    margin: 14px 0;
+    padding: 4px;
+    text-align: center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .ai-svg-diagram-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .ai-svg-diagram-wrapper svg {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+
   .ai-ask-btn:hover {
     background: #1e293b !important;
     border-color: #38bdf8 !important;
@@ -3195,6 +3310,120 @@
   }
   .ai-bubble-bot b { color: #f59e0b; }
 
+  /* Structured Q&A Cards: Separate Question & Answer Cards */
+  .ai-qa-card {
+    width: 100%;
+    border-radius: 14px;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+    transition: all 0.2s ease;
+    animation: fadeInSlideUp 0.25s ease;
+  }
+  @keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .ai-qa-user-card {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.95));
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-left: 5px solid #38bdf8;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  }
+  .ai-qa-bot-card {
+    background: linear-gradient(135deg, rgba(11, 19, 41, 0.98), rgba(19, 31, 55, 0.95));
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-left: 5px solid #10b981;
+    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.45);
+  }
+  .ai-qa-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .ai-qa-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ai-qa-user-card .ai-qa-type { color: #38bdf8; font-weight: 800; font-size: 13px; }
+  .ai-qa-bot-card .ai-qa-type { color: #10b981; font-weight: 800; font-size: 13px; }
+  .ai-qa-badge {
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 12px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .ai-qa-badge-cyan {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+  }
+  .ai-qa-badge-green {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+  }
+  .ai-qa-badge-amber {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+  }
+  .ai-qa-badge-purple {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, 0.35);
+  }
+  .ai-qa-body {
+    padding: 14px 16px;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #f1f5f9;
+  }
+  .ai-qa-question-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f8fafc;
+    line-height: 1.55;
+  }
+  .ai-qa-context-sub {
+    font-size: 11.5px;
+    color: #94a3b8;
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .ai-qa-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 8px 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.18);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+  .ai-card-btn {
+    background: none;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+
   /* Suggestion Chips */
   .ai-chips-bar {
     padding: 8px 16px;
@@ -3204,6 +3433,11 @@
     gap: 6px;
     overflow-x: auto;
     white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .ai-chips-bar::-webkit-scrollbar {
+    display: none;
   }
   .ai-chip {
     background: rgba(255, 255, 255, 0.06);
@@ -6749,10 +6983,43 @@
                     </button>
                     ` : ''}
 
-                    <button type="button" class="ai-ask-btn" onclick="openAITeacherForQuestion('${item.id}')" title="${isEm || isEnglish ? 'Ask AI Teacher to explain' : 'AI ஆசிரியரிடம் விளக்கம் கேட்க'}">
-                      <span>🤖</span>
-                      <span>${isEm || isEnglish ? 'Ask AI' : 'AI ஆசிரியர்'}</span>
-                    </button>
+                    <div class="ai-dropdown-wrap" id="aiDropWrap_${item.id}">
+                      <button type="button" class="ai-ask-btn" onclick="toggleAIQuestionMenu('${item.id}', event)" title="${isEm || isEnglish ? 'Ask AI Teacher (Click for choices)' : 'AI ஆசிரியர் விளக்கம் (தேர்வுகளைக் காண்க)'}">
+                        <span>🤖</span>
+                        <span>${isEm || isEnglish ? 'Ask AI' : 'AI ஆசிரியர்'}</span>
+                        <span class="ai-caret-icon">▾</span>
+                      </button>
+                      <div class="ai-dropdown-menu" id="aiDropMenu_${item.id}">
+                        <button type="button" class="ai-drop-item" onclick="openAITeacherMode('${item.id}', 'simple', event)">
+                          <span class="ai-item-icon">💡</span>
+                          <span class="ai-item-content">
+                            <span class="ai-item-title">${isEm || isEnglish ? "I don't understand" : "எனக்குப் புரியவில்லை"}</span>
+                            <span class="ai-item-sub">${isEm || isEnglish ? "Simple analogy & concepts" : "எளிய நிஜ வாழ்க்கை விளக்கம்"}</span>
+                          </span>
+                        </button>
+                        <button type="button" class="ai-drop-item" onclick="openAITeacherMode('${item.id}', 'steps', event)">
+                          <span class="ai-item-icon">📝</span>
+                          <span class="ai-item-content">
+                            <span class="ai-item-title">${isEm || isEnglish ? "Step-by-step solution" : "படிநிலைகளாக தீர்வு"}</span>
+                            <span class="ai-item-sub">${isEm || isEnglish ? "Formulas & full working" : "சூத்திரங்கள் & முழு செய்முறை"}</span>
+                          </span>
+                        </button>
+                        <button type="button" class="ai-drop-item" onclick="openAITeacherMode('${item.id}', 'mindmap', event)">
+                          <span class="ai-item-icon">🎨</span>
+                          <span class="ai-item-content">
+                            <span class="ai-item-title">${isEm || isEnglish ? "Mind Map & Drawing" : "மன வரைபடம் & வரைபடம்"}</span>
+                            <span class="ai-item-sub">${isEm || isEnglish ? "Visual SVG diagram" : "வண்ணமயமான வரைபடம்"}</span>
+                          </span>
+                        </button>
+                        <button type="button" class="ai-drop-item" onclick="openAITeacherMode('${item.id}', 'tips', event)">
+                          <span class="ai-item-icon">⭐</span>
+                          <span class="ai-item-content">
+                            <span class="ai-item-title">${isEm || isEnglish ? "Exam Scoring Tips" : "தேர்வு குறிப்புகள்"}</span>
+                            <span class="ai-item-sub">${isEm || isEnglish ? "Key words for full marks" : "முழு மதிப்பெண் பெற வழிகாட்டி"}</span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
                     
                     ${item.type !== '1m' ? `
                     <button type="button" class="ai-eval-btn" onclick="openAnswerEvaluationModal('${item.id}')" title="${isEm || isEnglish ? 'Evaluate Answer with AI' : 'உங்கள் விடையை AI மூலம் திருத்து'}">
@@ -12756,7 +13023,17 @@ CRITICAL RULES:
    - NEVER output raw LaTeX codes like \\times, \\cdot, \\div, \\pm, \\{ \\} or dollar signs ($).
    - Use clean, standard Unicode math symbols: '×', '·', '÷', '±', '{ }', '²', '³', '≤', '≥', '≠'.
    - Format ordered pairs simply as: (2, 1), (2, -4), (-2, 1), (-2, -4), (3, 1), (3, -4).
-4. EXAM-SCORING STRUCTURE:
+4. RULES FOR DRAWINGS, DIAGRAMS & MIND MAPS (🎨):
+   - NEVER say "Since I am a text-based teacher" or "I cannot draw"!
+   - NEVER output ASCII art diagrams using slashes, pipes, or text dashes!
+   - When asked for a Mind Map, Diagram, or Drawing, YOU MUST OUTPUT A REAL, COLORFUL, RESPONSIVE INLINE SVG inside an \`\`\`xml code block!
+     * Structure: <svg viewBox="0 0 650 360" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:650px; background:#0b1329; border-radius:12px; font-family:system-ui, sans-serif;">
+     * Use colorful node rectangles: <rect rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2" ... />
+     * Connecting lines/arrows: <line stroke="#64748b" stroke-width="2" marker-end="url(#arrow)" ... />
+     * Clear, readable text: <text fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">...</text>
+     * Contrast colors: Cyan (#38bdf8), Emerald (#10b981), Amber (#f59e0b), Pink (#ec4899), Indigo (#6366f1).
+     * Provide a brief 3-bullet text summary below the SVG diagram.
+5. EXAM-SCORING STRUCTURE:
    - Provide clear, numbered steps with formulas highlighted.
    - Include a counting check or verification tip so students avoid exam errors.`;
 
@@ -12826,6 +13103,34 @@ Match the language: evaluate English answers in English, and Tamil answers in Ta
       .replace(/&quot;/g, '"');
   }
 
+  // --- QUESTION CARD DROPDOWN CONTROLLER ---
+  let activeAIDropdownId = null;
+
+  function toggleAIQuestionMenu(qId, e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    const wrap = document.getElementById('aiDropWrap_' + qId);
+    if (!wrap) return;
+
+    if (activeAIDropdownId && activeAIDropdownId !== qId) {
+      const prev = document.getElementById('aiDropWrap_' + activeAIDropdownId);
+      if (prev) prev.classList.remove('open');
+    }
+
+    const isOpen = wrap.classList.toggle('open');
+    activeAIDropdownId = isOpen ? qId : null;
+  }
+  window.toggleAIQuestionMenu = toggleAIQuestionMenu;
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.ai-dropdown-wrap')) {
+      document.querySelectorAll('.ai-dropdown-wrap.open').forEach(w => w.classList.remove('open'));
+      activeAIDropdownId = null;
+    }
+  });
+
   // --- AI TEACHER MODAL CONTROLLER ---
   let currentAIQuestionContext = null;
 
@@ -12854,40 +13159,133 @@ Match the language: evaluate English answers in English, and Tamil answers in Ta
   }
   window.closeAITeacherModal = closeAITeacherModal;
 
-  function openAITeacherForQuestion(qId) {
+  function openAITeacherMode(qId, mode = 'simple', e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    document.querySelectorAll('.ai-dropdown-wrap.open').forEach(w => w.classList.remove('open'));
+    activeAIDropdownId = null;
+
     const qItem = findQuestionById(qId);
     if (!qItem) return;
+
     openAITeacherModal(qItem);
 
-    // Determine if question is English Medium
     const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english')) ||
                  (qId && (qId.includes('_em_') || qId.startsWith('eng_')));
 
     const cleanQ = cleanHtmlEntities((qItem.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
     const cleanAns = cleanHtmlEntities((qItem.ans || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 
-    if (isEm) {
-      sendQuickPrompt(`Please explain the following Class 10 Board Exam question step-by-step in clear, simple English for English Medium students.
+    let userPrompt = '';
+
+    if (mode === 'simple') {
+      if (isEm) {
+        userPrompt = `I don't understand this question. Please explain it in very simple, conversational English like a friendly tutor, using everyday real-life examples and analogies so any Class 10 student can easily grasp it.
 Question: ${cleanQ}
 Official Textbook Answer: ${cleanAns}
 
 Important:
-1. Explain 100% in clear ENGLISH (do NOT use Tamil).
-2. Keep the EXACT numbers and sets from the question: if A = {2, -2, 3}, use strictly 2, -2, 3.
-3. Write clean math symbols directly (×, ·, ÷, ±, { }, ², ³) and DO NOT use raw LaTeX codes (no \\times, no \\{, no dollar signs $).
-4. Break into Step 1, Step 2, and Counting check.`);
-    } else {
-      sendQuickPrompt(`கீழ்கண்ட 10-ஆம் வகுப்பு பொதுத்தேர்வு வினாவை எளிய முறையில் தமிழ் வழி மாணவர்களுக்காகப் படிப்படியாக விளக்குங்கள்:
+1. Respond 100% in English (do NOT use Tamil).
+2. Avoid dense textbook jargon; use simple words and analogies.
+3. Keep the exact numbers from the question: if A = {2, -2, 3}, use strictly 2, -2, 3.`;
+      } else {
+        userPrompt = `இந்த வினாவை எனக்குப் புரியவில்லை. ஆசிரியர் போல எளிய அன்றாட வாழ்க்கை உதாரணங்களுடன், எளிய தமிழில், ஒரு 10-ஆம் வகுப்பு மாணவனுக்கு எளிதில் புரியும்படி விளக்குங்கள்.
 கேள்வி: ${cleanQ}
 அதிகாரப்பூர்வ விடைக்குறிப்பு: ${cleanAns}
 
-முக்கிய வழிகாட்டல்கள்:
-1. முழு விளக்கத்தையும் எளிய, தூய தமிழில் வழங்கவும்.
-2. கேள்வியில் உள்ள அதே எண்கள் மற்றும் கணங்களை (Exact sets and numbers) துல்லியமாகப் பயன்படுத்தவும்.
-3. படிநிலைகளாகத் தெளிவாகக் காட்டி முழு மதிப்பெண் பெறுவதற்கான சூத்திரங்களை எடுத்துரைக்கவும்.`);
+வழிகாட்டல்:
+1. கடினமான புத்தகச் சொற்கள் இல்லாமல் எளிய தமிழில் விளக்குங்கள்.
+2. கேள்வியிலுள்ள அதே எண்கள் மற்றும் கணங்களை துல்லியமாகப் பயன்படுத்தவும்.`;
+      }
+    } else if (mode === 'steps') {
+      if (isEm) {
+        userPrompt = `Please provide a complete, clear, step-by-step solution (Step 1, Step 2, Step 3...) for this Class 10 Board Exam question.
+Question: ${cleanQ}
+Official Textbook Answer: ${cleanAns}
+
+Important:
+1. Respond 100% in English.
+2. Show all working clearly: formulas, intermediate calculations, and final boxed answer.
+3. Use exact numbers: e.g. if A = {2, -2, 3}, use strictly 2, -2, 3.
+4. Do NOT use raw LaTeX codes (no \\times, no \\{, no dollar signs $). Use clean symbols: ×, ·, ÷, { }, etc.`;
+      } else {
+        userPrompt = `இந்த வினாவிற்கு அரசுப் பொதுத்தேர்வில் முழு மதிப்பெண் பெறத் தேவையான முழுமையான தீர்வினைப் படிநிலைகளாக (படி 1, படி 2, படி 3...) சூத்திரங்களுடன் வழங்கவும்.
+கேள்வி: ${cleanQ}
+அதிகாரப்பூர்வ விடைக்குறிப்பு: ${cleanAns}
+
+வழிகாட்டல்:
+1. தேர்வில் எழுத வேண்டிய முழு செய்முறையையும் (Working steps) தெளிவாகக் காட்டவும்.
+2. கேள்வியில் உள்ள அதே எண்கள் மற்றும் கணங்களை துல்லியமாகப் பயன்படுத்தவும்.
+3. சூத்திரங்களையும் இறுதி விடையையும் தடிமனாகக் காட்டவும்.`;
+      }
+    } else if (mode === 'mindmap') {
+      if (isEm) {
+        userPrompt = `Please create a Mind Map and Visual Diagram for this Class 10 Board Exam question.
+Question: ${cleanQ}
+Official Textbook Answer: ${cleanAns}
+
+CRITICAL RULES FOR DRAWING:
+1. YOU MUST GENERATE A COMPLETE, COLORFUL, RESPONSIVE INLINE SVG DIAGRAM inside an \`\`\`xml code block!
+   - Use <svg viewBox="0 0 650 360" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:650px; background:#0b1329; border-radius:12px;">
+   - Include colored node boxes (rect with rx="10", fill="#1e293b", stroke="#38bdf8"), connecting arrows (<line> or <path> with marker-end), and clear text labels (<text fill="#f8fafc">).
+   - NEVER say "I am a text-based teacher" and NEVER draw ASCII art!
+2. Below the SVG diagram, write 3 key bullet points summarizing the mindmap in simple English.`;
+      } else {
+        userPrompt = `இந்த வினாவிற்கு வண்ணமயமான மன வரைபடம் (Mind Map) மற்றும் வரைபட விளக்கம் (Visual Diagram) வழங்கவும்.
+கேள்வி: ${cleanQ}
+அதிகாரப்பூர்வ விடைக்குறிப்பு: ${cleanAns}
+
+வரைபடத்திற்கான முக்கிய விதிகள்:
+1. கட்டாயமாக முழுமையான, வண்ணமயமான INLINE SVG வரைபடத்தை \`\`\`xml குறியீட்டிற்குள் உருவாக்கவும்!
+   - <svg viewBox="0 0 650 360" xmlns="http://www.w3.org/2000/svg"> பயன்படுத்தி, வண்ணப் பெட்டிகள் (#1e293b, #38bdf8, #10b981), இணைப்புக் கோடுகள் மற்றும் தெளிவான தமிழ் தலைப்புகளுடன் வரையவும்.
+   - ஒருபோதும் "நான் உரை வழி ஆசிரியர், படம் வரைய முடியாது" என்றோ அல்லது ASCII குறியீடுகளையோ தரக்கூடாது!
+2. வரைபடத்திற்கு கீழே, நினைவில் கொள்ள வேண்டிய 3 முக்கியக் குறிப்புகளைத் தமிழில் வழங்கவும்.`;
+      }
+    } else if (mode === 'tips') {
+      if (isEm) {
+        userPrompt = `Please provide the examiner's scoring tips, crucial keywords that earn marks, and common pitfalls to avoid for this question in Class 10 Board Exam.
+Question: ${cleanQ}
+Official Textbook Answer: ${cleanAns}
+
+Important:
+1. Respond 100% in English.
+2. Give bullet points on what examiners look for to award full marks.`;
+      } else {
+        userPrompt = `இந்த வினாவில் அரசுப் பொதுத்தேர்வில் திருத்தும் ஆசிரியர் எதிர்பார்க்கும் முக்கிய சொற்கள் (Key words), சூத்திரங்கள் மற்றும் முழு மதிப்பெண் பெற உதவும் ரகசியக் குறிப்புகளை (Scoring Tips) புல்லட் பாயிண்டுகளாக வழங்கவும்.
+கேள்வி: ${cleanQ}
+அதிகாரப்பூர்வ விடைக்குறிப்பு: ${cleanAns}`;
+      }
     }
+
+    // Execute structured question flow
+    executeAIQuestionFlow({
+      displayText: cleanQ,
+      fullPrompt: userPrompt,
+      mode: mode,
+      contextQ: qItem
+    });
+  }
+  window.openAITeacherMode = openAITeacherMode;
+
+  function openAITeacherForQuestion(qId) {
+    openAITeacherMode(qId, 'simple');
   }
   window.openAITeacherForQuestion = openAITeacherForQuestion;
+
+  function triggerAIModeFromModal(mode) {
+    if (currentAIQuestionContext && currentAIQuestionContext.id) {
+      openAITeacherMode(currentAIQuestionContext.id, mode);
+    } else {
+      const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+      if (mode === 'simple') sendQuickPrompt(isEm ? "Please explain this question with simple everyday analogies 💡" : "இந்த வினாவை எளிய அன்றாட வாழ்க்கை உதாரணங்களுடன் விளக்குங்கள் 💡");
+      else if (mode === 'steps') sendQuickPrompt(isEm ? "Please show the full step-by-step solution with working 📝" : "படிநிலைகளாக விரிவான செய்முறை விளக்கம் தாருங்கள் 📝");
+      else if (mode === 'mindmap') sendQuickPrompt(isEm ? "Please create a colorful inline SVG mind map & visual diagram 🎨" : "இதற்கு வண்ணமயமான INLINE SVG வரைபடம் மற்றும் மன வரைபடம் வரைக 🎨");
+      else if (mode === 'tips') sendQuickPrompt(isEm ? "Please share the top scoring tips and keywords for full marks ⭐" : "தேர்வில் முழு மதிப்பெண் பெற முக்கியமான குறிப்புகளைக் கூறுக ⭐");
+    }
+  }
+  window.triggerAIModeFromModal = triggerAIModeFromModal;
 
   function findQuestionById(qId) {
     if (!APP_DATA || !APP_DATA.subjects) return null;
@@ -12904,6 +13302,145 @@ Important:
     return null;
   }
 
+  // --- STRUCTURED Q&A SEPARATE CARDS ENGINE ---
+  function getModeBadgeInfo(mode, isEm) {
+    switch (mode) {
+      case 'simple':
+        return {
+          title: isEm ? "I don't understand" : "எனக்குப் புரியவில்லை",
+          sub: isEm ? "Simple Analogy & Real-life explanation" : "எளிய நிஜ வாழ்க்கை விளக்கம்",
+          icon: "💡",
+          badgeClass: "ai-qa-badge-cyan"
+        };
+      case 'steps':
+        return {
+          title: isEm ? "Step-by-step solution" : "படிநிலைகளாக தீர்வு",
+          sub: isEm ? "Full Working & Formulas" : "சூத்திரங்கள் & முழு செய்முறை",
+          icon: "📝",
+          badgeClass: "ai-qa-badge-green"
+        };
+      case 'mindmap':
+        return {
+          title: isEm ? "Mind Map & Visual Diagram" : "மன வரைபடம் & வரைபடம்",
+          sub: isEm ? "Inline SVG Diagram" : "வண்ணமயமான வரைபடம்",
+          icon: "🎨",
+          badgeClass: "ai-qa-badge-amber"
+        };
+      case 'tips':
+        return {
+          title: isEm ? "Exam Scoring Tips" : "தேர்வு குறிப்புகள்",
+          sub: isEm ? "Keywords for Full Marks" : "முழு மதிப்பெண் பெற வழிகாட்டி",
+          icon: "⭐",
+          badgeClass: "ai-qa-badge-purple"
+        };
+      default:
+        return {
+          title: isEm ? "Student Query" : "மாணவர் சந்தேகம்",
+          sub: isEm ? "Direct Doubt" : "நேரடி வினா",
+          icon: "❓",
+          badgeClass: "ai-qa-badge-cyan"
+        };
+    }
+  }
+
+  function appendUserQuestionCard(qText, mode = 'custom', contextInfo = null) {
+    const chatBody = document.getElementById('aiChatBody');
+    if (!chatBody) return;
+
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english')) ||
+                 (contextInfo && contextInfo.id && (contextInfo.id.includes('_em_') || contextInfo.id.startsWith('eng_')));
+
+    const badge = getModeBadgeInfo(mode, isEm);
+    const card = document.createElement('div');
+    card.className = 'ai-qa-card ai-qa-user-card';
+
+    let contextSubHtml = '';
+    if (contextInfo) {
+      const subTitle = (typeof currentSubject !== 'undefined' && currentSubject && currentSubject.title) ? currentSubject.title : '';
+      contextSubHtml = `
+        <div class="ai-qa-context-sub">
+          <span>📌 10-ஆம் வகுப்பு பொதுத்தேர்வு வினா</span>
+          ${subTitle ? `<span style="opacity:0.6;">•</span> <span>📚 ${subTitle}</span>` : ''}
+        </div>
+      `;
+    }
+
+    card.innerHTML = `
+      <div class="ai-qa-header">
+        <div class="ai-qa-title-wrap">
+          <span style="font-size:16px;">❓</span>
+          <span class="ai-qa-type">${isEm ? "STUDENT QUESTION" : "மாணவர் வினா"}</span>
+        </div>
+        <span class="ai-qa-badge ${badge.badgeClass}">
+          <span>${badge.icon}</span>
+          <span>${badge.title}</span>
+        </span>
+      </div>
+      <div class="ai-qa-body">
+        <div class="ai-qa-question-text">${cleanHtmlEntities(qText)}</div>
+        ${contextSubHtml}
+      </div>
+    `;
+
+    chatBody.appendChild(card);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  function appendAIAnswerCard(rawReplyText, mode = 'custom') {
+    const chatBody = document.getElementById('aiChatBody');
+    if (!chatBody) return;
+
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+    const formatted = formatAIResponseForDisplay(rawReplyText);
+
+    const card = document.createElement('div');
+    card.className = 'ai-qa-card ai-qa-bot-card';
+
+    card.innerHTML = `
+      <div class="ai-qa-header">
+        <div class="ai-qa-title-wrap">
+          <span style="font-size:16px;">🤖</span>
+          <span class="ai-qa-type">${isEm ? "AI TEACHER SOLUTION" : "AI ஆசிரியர் வழிகாட்டி"}</span>
+        </div>
+        <span class="ai-qa-badge ai-qa-badge-cyan">
+          <span>⚡</span>
+          <span>Gemini 3.5 Flash</span>
+        </span>
+      </div>
+      <div class="ai-qa-body ai-msg-content">
+        ${formatted}
+      </div>
+      <div class="ai-qa-footer">
+        <button type="button" class="ai-card-btn" onclick="copyAIText(this)" style="color:#38bdf8;" title="பதிலை நகலெடு">📋 நகலெடு</button>
+        <button type="button" class="ai-card-btn ai-speak-btn" onclick="speakAIText(this)" style="color:#10b981;" title="பதிலைக் கேள்">🔊 வாசி</button>
+      </div>
+    `;
+
+    chatBody.appendChild(card);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  async function executeAIQuestionFlow({ displayText, fullPrompt, mode = 'custom', contextQ = null }) {
+    stopAISpeech();
+
+    // 1. Append the Separate USER QUESTION CARD
+    appendUserQuestionCard(displayText, mode, contextQ);
+
+    // 2. Show the Teacher Thinking / Loading Indicator
+    const loadingId = appendAILoadingIndicator();
+
+    // 3. Query Gemini
+    try {
+      const reply = await callGeminiAPI(fullPrompt, AI_TEACHER_SYSTEM);
+      removeAILoadingIndicator(loadingId);
+      // 4. Append the Separate AI TEACHER ANSWER CARD
+      appendAIAnswerCard(reply, mode);
+    } catch (err) {
+      removeAILoadingIndicator(loadingId);
+      appendAIAnswerCard(`⚠️ மன்னிக்கவும்: ${err.message}<br><br>💡 இணைய இணைப்பைச் சரிபார்க்கவும் அல்லது மேலே உள்ள <b>"⚙️ Key"</b> அமைப்பில் உங்கள் Google API Key-ஐ சரிபார்க்கவும்.`, 'error');
+    }
+  }
+
   async function sendAIMessage() {
     stopAISpeech();
     const input = document.getElementById('aiUserInput');
@@ -12912,32 +13449,49 @@ Important:
     if (!text) return;
     input.value = '';
 
-    appendAIChatMessage('user', text);
+    let promptForGemini = text;
+    if (currentAIQuestionContext) {
+      const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+      const cleanCtxQ = cleanHtmlEntities((currentAIQuestionContext.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+      const cleanCtxAns = cleanHtmlEntities((currentAIQuestionContext.ans || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 
-    const loadingId = appendAILoadingIndicator();
-
-    try {
-      let fullPrompt = text;
-      if (currentAIQuestionContext) {
-        const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
-        const cleanCtxQ = cleanHtmlEntities((currentAIQuestionContext.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
-        const cleanCtxAns = cleanHtmlEntities((currentAIQuestionContext.ans || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
-
-        if (isEm) {
-          fullPrompt = `[Related Class 10 Board Question]: ${cleanCtxQ}\n[Official Answer]: ${cleanCtxAns}\n[Student Query]: ${text}\n(Respond in clear ENGLISH with exact numbers and clean math symbols)`;
-        } else {
-          fullPrompt = `[தொடர்புடைய 10-ஆம் வகுப்பு வினா]: ${cleanCtxQ}\n[அதிகாரப்பூர்வ விடை]: ${cleanCtxAns}\n[மாணவர் கேள்வி]: ${text}\n(எளிய தமிழில் துல்லியமான எண்களுடன் விளக்குங்கள்)`;
-        }
+      if (isEm) {
+        promptForGemini = `[Related Class 10 Board Question]: ${cleanCtxQ}\n[Official Answer]: ${cleanCtxAns}\n[Student Query]: ${text}\n(Respond in clear ENGLISH with exact numbers and clean math symbols. If asked for drawing, output complete inline SVG)`;
+      } else {
+        promptForGemini = `[தொடர்புடைய 10-ஆம் வகுப்பு வினா]: ${cleanCtxQ}\n[அதிகாரப்பூர்வ விடை]: ${cleanCtxAns}\n[மாணவர் கேள்வி]: ${text}\n(எளிய தமிழில் துல்லியமான எண்களுடன் விளக்குங்கள். படம் கேட்டால் கட்டாயம் முழுமையான INLINE SVG வரைபடம் தரவும்)`;
       }
-      const reply = await callGeminiAPI(fullPrompt, AI_TEACHER_SYSTEM);
-      removeAILoadingIndicator(loadingId);
-      appendAIChatMessage('bot', reply);
-    } catch (err) {
-      removeAILoadingIndicator(loadingId);
-      appendAIChatMessage('bot', `⚠️ மன்னிக்கவும்: ${err.message}<br><br>💡 இணைய இணைப்பைச் சரிபார்க்கவும் அல்லது மேலே உள்ள <b>"⚙️ Key"</b> அமைப்பில் உங்கள் Google API Key-ஐ சரிபார்க்கவும்.`);
     }
+
+    executeAIQuestionFlow({
+      displayText: text,
+      fullPrompt: promptForGemini,
+      mode: 'custom',
+      contextQ: currentAIQuestionContext
+    });
   }
   window.sendAIMessage = sendAIMessage;
+
+  function clearAIChatHistory() {
+    stopAISpeech();
+    const chatBody = document.getElementById('aiChatBody');
+    if (!chatBody) return;
+    chatBody.innerHTML = `
+      <div class="ai-qa-card ai-qa-bot-card" style="border-left-color: #38bdf8;">
+        <div class="ai-qa-header">
+          <div class="ai-qa-title-wrap">
+            <span style="font-size:18px;">🤖</span>
+            <span class="ai-qa-type" style="color:#38bdf8;">10-ஆம் வகுப்பு AI ஆசிரியர் (Doubt Solver)</span>
+          </div>
+          <span class="ai-qa-badge ai-qa-badge-cyan">24/7 தயார்</span>
+        </div>
+        <div class="ai-qa-body">
+          👋 <b>வணக்கம் மாணவரே!</b> நான் உங்கள் 10-ஆம் வகுப்பு பொதுத்தேர்வு AI ஆசிரியர்.<br><br>
+          வினா அட்டைகளில் உள்ள <b>"🤖 AI ஆசிரியர் ▾"</b> தேர்வுகளைக் கிளிக் செய்து அல்லது கீழே உள்ள உள்ளீட்டுப் பெட்டியில் உங்கள் சந்தேகங்களைத் தட்டச்சு செய்து/பேசிக் கேளுங்கள்; எளிய முறையில் தமிழில் விளக்குகிறேன்! 🚀
+        </div>
+      </div>
+    `;
+  }
+  window.clearAIChatHistory = clearAIChatHistory;
 
   function sendQuickPrompt(promptText) {
     const input = document.getElementById('aiUserInput');
@@ -12950,7 +13504,26 @@ Important:
     if (!text) return '';
     let f = text;
 
-    // 1. Clean raw LaTeX math symbols
+    // 1. Stash and protect inline SVG diagrams
+    const svgMap = [];
+    f = f.replace(/```(?:xml|svg|html)?\s*(<svg[\s\S]*?<\/svg>)\s*```/gi, (match, svgContent) => {
+      let styledSvg = svgContent;
+      if (!styledSvg.includes('style=')) {
+        styledSvg = styledSvg.replace('<svg', '<svg style="width:100%; max-width:650px; height:auto; display:block; margin:14px auto; border-radius:12px; border:1px solid #334155; box-shadow:0 8px 24px rgba(0,0,0,0.5);"');
+      }
+      const idx = svgMap.length;
+      svgMap.push(`<div class="ai-svg-diagram-wrapper">${styledSvg}</div>`);
+      return `___SVG_HOLDER_${idx}___`;
+    });
+
+    f = f.replace(/(?<!class="ai-svg-diagram-wrapper"[^>]*>)(<svg[\s\S]*?<\/svg>)/gi, (match, svgContent) => {
+      if (svgContent.includes('___SVG_HOLDER_')) return svgContent;
+      const idx = svgMap.length;
+      svgMap.push(`<div class="ai-svg-diagram-wrapper">${svgContent}</div>`);
+      return `___SVG_HOLDER_${idx}___`;
+    });
+
+    // 2. Clean raw LaTeX math symbols
     f = f.replace(/\\times/g, '×')
          .replace(/\\cdot/g, '·')
          .replace(/\\div/g, '÷')
@@ -12966,12 +13539,17 @@ Important:
          .replace(/\\\(/g, '').replace(/\\\)/g, '')
          .replace(/\\\[/g, '').replace(/\\\]/g, '');
 
-    // 2. Headings and bold
+    // 3. Headings and bold
     f = f.replace(/^### (.*$)/gim, '<h4 style="margin:8px 0 4px; color:#38bdf8; font-size:14px; font-weight:800;">$1</h4>')
          .replace(/^## (.*$)/gim, '<h3 style="margin:10px 0 6px; color:#38bdf8; font-size:15px; font-weight:800;">$1</h3>')
          .replace(/\*\*(.*?)\*\*/g, '<b>$1</b>')
          .replace(/\n\n/g, '<br><br>')
          .replace(/\n/g, '<br>');
+
+    // 4. Restore protected SVG diagrams
+    svgMap.forEach((svgHtml, idx) => {
+      f = f.replace(`___SVG_HOLDER_${idx}___`, svgHtml);
+    });
 
     return f;
   }
@@ -12989,17 +13567,14 @@ Important:
       div.innerHTML = `
         <div class="ai-msg-content">${formatted}</div>
         <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px; margin-top:8px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.08);">
-          <button type="button" onclick="copyAIText(this)" style="background:none; border:none; color:#38bdf8; font-size:11.5px; font-weight:700; cursor:pointer;" title="பதிலை நகலெடு">📋 நகலெடு</button>
-          <button type="button" class="ai-speak-btn" onclick="speakAIText(this)" style="background:none; border:none; color:#10b981; font-size:11.5px; font-weight:700; cursor:pointer; padding:3px 8px; border-radius:6px; transition:all 0.2s;" title="பதிலைக் கேள்">🔊 வாசி</button>
-        </div>
-      `;
+  function appendAIChatMessage(sender, text) {
+    if (sender === 'user') {
+      appendUserQuestionCard(text, 'custom', currentAIQuestionContext);
     } else {
-      div.innerText = text;
+      appendAIAnswerCard(text, 'custom');
     }
-
-    chatBody.appendChild(div);
-    chatBody.scrollTop = chatBody.scrollHeight;
   }
+  window.appendAIChatMessage = appendAIChatMessage;
 
   function appendAILoadingIndicator() {
     const chatBody = document.getElementById('aiChatBody');
@@ -13007,8 +13582,14 @@ Important:
     const id = 'ai_load_' + Date.now();
     const div = document.createElement('div');
     div.id = id;
-    div.className = 'ai-bubble ai-bubble-bot';
-    div.innerHTML = `<span style="display:inline-block; animation:spinSpark 1.5s infinite;">🤔</span> <b>ஆசிரியர் பதிலளிக்கிறார்...</b>`;
+    div.className = 'ai-qa-card ai-qa-bot-card';
+    div.style.borderLeftColor = '#f59e0b';
+    div.innerHTML = `
+      <div class="ai-qa-body" style="display:flex; align-items:center; gap:10px; color:#fbbf24; font-weight:700;">
+        <span style="display:inline-block; animation:spinSpark 1.5s infinite; font-size:20px;">🤔</span>
+        <span>AI ஆசிரியர் விடையைத் தயார் செய்கிறார்...</span>
+      </div>
+    `;
     chatBody.appendChild(div);
     chatBody.scrollTop = chatBody.scrollHeight;
     return id;
@@ -13021,7 +13602,7 @@ Important:
   }
 
   function copyAIText(btn) {
-    const parent = btn.closest('.ai-bubble') || btn.closest('.eval-score-card');
+    const parent = btn.closest('.ai-qa-card') || btn.closest('.ai-bubble') || btn.closest('.eval-score-card');
     if (!parent) return;
     const contentEl = parent.querySelector('.ai-msg-content') || parent;
     const text = (contentEl.innerText || '').trim();
@@ -13041,6 +13622,9 @@ Important:
     if (!rawText) return { text: '', lang: 'ta-IN', isEnglish: false };
 
     let text = rawText;
+
+    // 0. Strip SVG diagrams before speech synthesis
+    text = text.replace(/<svg[\s\S]*?<\/svg>/gi, ' வரைபட விளக்கம். ');
 
     // 1. Remove UI action labels (Copy, Speak, Stop, etc.)
     text = text.replace(/📋\s*நகலெடு|🔊\s*வாசி|⏹️\s*நிறுத்து|வாசிக்கிறது\.\.\./gi, ' ');
@@ -13166,7 +13750,7 @@ Important:
 
     stopAISpeech();
 
-    const parent = btn.closest('.ai-bubble') || btn.closest('.eval-score-card');
+    const parent = btn.closest('.ai-qa-card') || btn.closest('.ai-bubble') || btn.closest('.eval-score-card');
     if (!parent) return;
 
     const contentEl = parent.querySelector('.ai-msg-content') || parent;
@@ -13535,13 +14119,15 @@ Important:
         <div>
           <h3 class="ai-modal-title">AI ஆசிரியர் (Doubt Solver)</h3>
           <div style="display:flex; align-items:center; gap:6px; margin-top:2px;">
-            <span class="ai-power-tag">⚡ Gemini 3.1 Flash AI</span>
+            <span class="ai-power-tag">⚡ Gemini 3.5 Flash AI</span>
             <span style="font-size:11px; color:#94a3b8;">10-ஆம் வகுப்பு பொதுத்தேர்வு வழிகாட்டி</span>
           </div>
         </div>
       </div>
       <div style="display:flex; align-items:center; gap:8px;">
-        <button type="button" id="aiGlobalStopSpeechBtn" onclick="stopAISpeech()" style="display:none; background:#ef4444; color:#fff; border:none; padding:4px 10px; border-radius:8px; font-size:12px; font-weight:800; cursor:pointer;" title="பேச்சை உடனடியாக நிறுத்து">⏹️ நிறுத்து</button><button type="button" onclick="openAISettingsModal()" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; cursor:pointer;" title="API Key அமைப்புகள்">⚙️ Key</button>
+        <button type="button" id="aiGlobalStopSpeechBtn" onclick="stopAISpeech()" style="display:none; background:#ef4444; color:#fff; border:none; padding:4px 10px; border-radius:8px; font-size:12px; font-weight:800; cursor:pointer;" title="பேச்சை உடனடியாக நிறுத்து">⏹️ நிறுத்து</button>
+        <button type="button" onclick="clearAIChatHistory()" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; cursor:pointer;" title="அரட்டைப் பட்டியலை அழி (Clear List)">🗑️ அழி</button>
+        <button type="button" onclick="openAISettingsModal()" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; border-radius:8px; padding:4px 9px; font-size:12px; font-weight:700; cursor:pointer;" title="API Key அமைப்புகள்">⚙️ Key</button>
         <button type="button" onclick="closeAITeacherModal()" style="background:none; border:none; color:#94a3b8; font-size:22px; cursor:pointer; padding:0 4px; line-height:1;">&times;</button>
       </div>
     </div>
@@ -13553,18 +14139,27 @@ Important:
 
     <!-- Chat Messages Scroll Area -->
     <div id="aiChatBody" class="ai-chat-body">
-      <div class="ai-bubble ai-bubble-bot">
-        👋 <b>வணக்கம் மாணவரே!</b> நான் உங்கள் 10-ஆம் வகுப்பு AI ஆசிரியர்.<br><br>
-        கணித சூத்திரங்கள், அறிவியல் விதிகளின் விளக்கம், சமூக அறிவியல் காலக்கோடு அல்லது ஆங்கில இலக்கணம் எதுவாக இருந்தாலும் கேளுங்கள்; எளிய முறையில் தமிழில் விளக்குகிறேன்! 🚀
+      <div class="ai-qa-card ai-qa-bot-card" style="border-left-color: #38bdf8;">
+        <div class="ai-qa-header">
+          <div class="ai-qa-title-wrap">
+            <span style="font-size:18px;">🤖</span>
+            <span class="ai-qa-type" style="color:#38bdf8;">10-ஆம் வகுப்பு AI ஆசிரியர் (Doubt Solver)</span>
+          </div>
+          <span class="ai-qa-badge ai-qa-badge-cyan">24/7 தயார்</span>
+        </div>
+        <div class="ai-qa-body">
+          👋 <b>வணக்கம் மாணவரே!</b> நான் உங்கள் 10-ஆம் வகுப்பு பொதுத்தேர்வு AI ஆசிரியர்.<br><br>
+          வினா அட்டைகளில் உள்ள <b>"🤖 AI ஆசிரியர் ▾"</b> தேர்வுகளைக் கிளிக் செய்து அல்லது கீழே உள்ள உள்ளீட்டுப் பெட்டியில் உங்கள் சந்தேகங்களைத் தட்டச்சு செய்து/பேசிக் கேளுங்கள்; எளிய முறையில் தமிழில் விளக்குகிறேன்! 🚀
+        </div>
       </div>
     </div>
 
     <!-- Suggestion Prompt Chips -->
     <div class="ai-chips-bar">
-      <span class="ai-chip" onclick="sendQuickPrompt('இந்த வினாவை எளிய முறையில் படிப்படியாக விளக்குங்கள் 💡')">💡 எளிய விளக்கம்</span>
-      <span class="ai-chip" onclick="sendQuickPrompt('முக்கிய சமன்பாடுகள் மற்றும் விதிகளை மட்டும் சுருக்கமாகக் கூறுங்கள் 📐')">📐 விதிகள் & சமன்பாடுகள்</span>
-      <span class="ai-chip" onclick="sendQuickPrompt('பொதுத்தேர்வில் முழு மதிப்பெண் பெற என்னென்ன முக்கியக் குறிப்புகள் எழுத வேண்டும்? 📝')">📝 தேர்வு குறிப்புகள்</span>
-      <span class="ai-chip" onclick="sendQuickPrompt('Explain this concept in simple English with key points 🗣️')">🗣️ English</span>
+      <span class="ai-chip" onclick="triggerAIModeFromModal('simple')">💡 எளிய விளக்கம் (Simple)</span>
+      <span class="ai-chip" onclick="triggerAIModeFromModal('steps')">📝 படிநிலைகள் (Steps)</span>
+      <span class="ai-chip" onclick="triggerAIModeFromModal('mindmap')">🎨 வரைபடம் / படம் (Diagram)</span>
+      <span class="ai-chip" onclick="triggerAIModeFromModal('tips')">⭐ தேர்வு குறிப்புகள் (Tips)</span>
     </div>
 
     <!-- Input Footer -->

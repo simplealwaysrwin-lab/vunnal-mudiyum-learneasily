@@ -3103,6 +3103,9 @@
     margin-left: 2px;
     transition: transform 0.2s ease;
   }
+  .ai-dropdown-wrap.open {
+    z-index: 9999;
+  }
   .ai-dropdown-wrap.open .ai-caret-icon {
     transform: rotate(180deg);
   }
@@ -3118,7 +3121,7 @@
     border-radius: 12px;
     padding: 6px;
     box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 18px rgba(56, 189, 248, 0.2);
-    z-index: 1050;
+    z-index: 99999;
     backdrop-filter: blur(12px);
     animation: aiMenuFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -13167,8 +13170,24 @@ Match the language: evaluate English answers in English, and Tamil answers in Ta
     document.querySelectorAll('.ai-dropdown-wrap.open').forEach(w => w.classList.remove('open'));
     activeAIDropdownId = null;
 
-    const qItem = findQuestionById(qId);
-    if (!qItem) return;
+    let qItem = findQuestionById(qId);
+    if (!qItem) {
+      const cardEl = document.getElementById('card_' + qId);
+      if (cardEl) {
+        const qTextEl = cardEl.querySelector('.q-text') || cardEl;
+        const ansTextEl = cardEl.querySelector('.ans-text') || cardEl.querySelector('.sol-box');
+        qItem = {
+          id: qId,
+          q: (qTextEl ? qTextEl.innerText : '').substring(0, 250),
+          ans: (ansTextEl ? ansTextEl.innerText : ''),
+          mark: 'வினா'
+        };
+      }
+    }
+    if (!qItem) {
+      openAITeacherModal();
+      return;
+    }
 
     openAITeacherModal(qItem);
 
@@ -13288,17 +13307,66 @@ Important:
   window.triggerAIModeFromModal = triggerAIModeFromModal;
 
   function findQuestionById(qId) {
-    if (!APP_DATA || !APP_DATA.subjects) return null;
-    for (const sub of APP_DATA.subjects) {
-      if (!sub.lessons) continue;
-      for (const les of sub.lessons) {
-        if (typeof resolveLessonData === 'function') resolveLessonData(les);
-        if (les.questions) {
-          const found = les.questions.find(q => q.id === qId);
-          if (found) return found;
+    if (!qId) return null;
+
+    // 1. Search currentLesson immediately (fastest & active)
+    if (typeof currentLesson !== 'undefined' && currentLesson) {
+      if (typeof resolveLessonData === 'function') resolveLessonData(currentLesson);
+      if (currentLesson.questions) {
+        const found = currentLesson.questions.find(q => q.id === qId);
+        if (found) return found;
+      }
+      if (currentLesson.subSections) {
+        for (const sec of currentLesson.subSections) {
+          if (sec.questions) {
+            const found = sec.questions.find(q => q.id === qId);
+            if (found) return { ...found, sectionTitle: sec.title };
+          }
         }
       }
     }
+
+    // 2. Search all subjects and lessons in APP_DATA
+    if (typeof APP_DATA !== 'undefined' && APP_DATA && APP_DATA.subjects) {
+      for (const sub of APP_DATA.subjects) {
+        if (!sub.lessons) continue;
+        for (const les of sub.lessons) {
+          if (typeof resolveLessonData === 'function') resolveLessonData(les);
+          if (les.questions) {
+            const found = les.questions.find(q => q.id === qId);
+            if (found) return found;
+          }
+          if (les.subSections) {
+            for (const sec of les.subSections) {
+              if (sec.questions) {
+                const found = sec.questions.find(q => q.id === qId);
+                if (found) return { ...found, sectionTitle: sec.title };
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // 3. Search DOM question card fallback (never fails for any card on screen!)
+    try {
+      const cardEl = document.getElementById('card_' + qId);
+      if (cardEl) {
+        const qTextEl = cardEl.querySelector('.q-text') || cardEl.querySelector('.qa-top');
+        const ansTextEl = cardEl.querySelector('.ans-text') || cardEl.querySelector('.sol-box') || cardEl.querySelector('.recall-explanation');
+        const cleanQ = qTextEl ? qTextEl.innerText.replace(/^Q\d+\.\s*/i, '').trim() : '';
+        const cleanAns = ansTextEl ? ansTextEl.innerText.trim() : '';
+        if (cleanQ) {
+          return {
+            id: qId,
+            q: cleanQ,
+            ans: cleanAns,
+            mark: qId.includes('5m') ? '5 மதிப்பெண்' : (qId.includes('1m') ? '1 மதிப்பெண்' : '2 மதிப்பெண்')
+          };
+        }
+      }
+    } catch (e) {}
+
     return null;
   }
 
@@ -13554,19 +13622,6 @@ Important:
     return f;
   }
 
-  function appendAIChatMessage(sender, text) {
-    const chatBody = document.getElementById('aiChatBody');
-    if (!chatBody) return;
-
-    const div = document.createElement('div');
-    div.className = `ai-bubble ai-bubble-${sender}`;
-
-    if (sender === 'bot') {
-      const formatted = formatAIResponseForDisplay(text);
-
-      div.innerHTML = `
-        <div class="ai-msg-content">${formatted}</div>
-        <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px; margin-top:8px; padding-top:6px; border-top:1px solid rgba(255,255,255,0.08);">
   function appendAIChatMessage(sender, text) {
     if (sender === 'user') {
       appendUserQuestionCard(text, 'custom', currentAIQuestionContext);
@@ -13868,11 +13923,27 @@ Important:
   let currentEvalQuestion = null;
 
   function openAnswerEvaluationModal(qId) {
-    const qItem = findQuestionById(qId);
-    if (!qItem) return;
+    let qItem = findQuestionById(qId);
+    if (!qItem) {
+      const cardEl = document.getElementById('card_' + qId);
+      if (cardEl) {
+        const qTextEl = cardEl.querySelector('.q-text') || cardEl;
+        const ansTextEl = cardEl.querySelector('.ans-text') || cardEl.querySelector('.sol-box');
+        qItem = {
+          id: qId,
+          q: (qTextEl ? qTextEl.innerText : '').substring(0, 250),
+          ans: (ansTextEl ? ansTextEl.innerText : ''),
+          mark: 'வினா'
+        };
+      }
+    }
+    if (!qItem) {
+      openAITeacherModal();
+      return;
+    }
 
     currentEvalQuestion = qItem;
-    const qBox = document.getElementById('evalQuestionBox');
+    const qBox = document.getElementById('evalQuestionText') || document.getElementById('evalQuestionBox');
     if (qBox) {
       const cleanQ = cleanHtmlEntities((qItem.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
       qBox.innerHTML = `<b>வினா (${qItem.mark || 'மதிப்பெண்'}):</b> ${cleanQ}`;

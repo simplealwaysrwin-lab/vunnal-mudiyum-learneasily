@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -866,6 +866,59 @@
   .filter-eq-neutral.active .filter-count {
     color: #ffffff !important;
   }
+  .filter-eq-blue {
+    background: #0f395c;
+    color: #ffffff;
+    border: 1.5px solid #38bdf8;
+    box-shadow: 0 2px 6px rgba(15, 57, 92, 0.25);
+  }
+  .filter-eq-blue:hover {
+    background: #154e7d;
+    border-color: #7dd3fc;
+    transform: translateY(-1px);
+  }
+  .filter-eq-blue.active {
+    background: linear-gradient(135deg, #0284c7, #0369a1) !important;
+    color: #ffffff !important;
+    border-color: #38bdf8 !important;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.45) !important;
+  }
+  .filter-eq-blue.active .filter-count {
+    color: #ffffff !important;
+  }
+  .filter-eq-purple {
+    background: #3b1d60;
+    color: #ffffff;
+    border: 1.5px solid #c084fc;
+    box-shadow: 0 2px 6px rgba(59, 29, 96, 0.25);
+  }
+  .filter-eq-purple:hover {
+    background: #502782;
+    border-color: #e9d5ff;
+    transform: translateY(-1px);
+  }
+  .filter-eq-purple.active {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9) !important;
+    color: #ffffff !important;
+    border-color: #c084fc !important;
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.45) !important;
+  }
+  .filter-eq-purple.active .filter-count {
+    color: #ffffff !important;
+  }
+  .filter-group-grid.five-cols {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media (max-width: 768px) {
+    .filter-group-grid.five-cols {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 480px) {
+    .filter-group-grid.five-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
   body.dark .filter-eq-golden {
     background: #183326;
     color: #ffffff;
@@ -973,6 +1026,24 @@
     color: #f5a623;
     border: 1.5px solid #f5a623;
     box-shadow: 0 2px 8px rgba(245, 166, 35, 0.25);
+  }
+  .mark-4 {
+    background: linear-gradient(135deg, #0f395c, #09253d);
+    color: #38bdf8;
+    border: 1.5px solid #38bdf8;
+    box-shadow: 0 2px 8px rgba(56, 189, 248, 0.25);
+  }
+  .mark-7 {
+    background: linear-gradient(135deg, #3b1d60, #25103f);
+    color: #e9d5ff;
+    border: 1.5px solid #c084fc;
+    box-shadow: 0 2px 8px rgba(192, 132, 252, 0.25);
+  }
+  .mark-8 {
+    background: linear-gradient(135deg, #5b1035, #3b0721);
+    color: #fbcfe8;
+    border: 1.5px solid #f472b6;
+    box-shadow: 0 2px 8px rgba(244, 114, 182, 0.25);
   }
 
   .q-num {
@@ -3840,6 +3911,9 @@
       <button type="button" class="audio-dock-btn" onclick="handleAudioDockRate()" id="audioDockRateBtn" title="பேச்சு வேகம் (Speed)">
         <span>1x</span>
       </button>
+      <button type="button" class="audio-dock-btn" onclick="handleAudioDockMute()" id="audioDockMuteBtn" title="ஒலி கட்டுப்பாடு (Mute/Unmute)">
+        <span>🔊</span>
+      </button>
       <button type="button" class="audio-dock-btn exit-btn" id="audioDockExitBtn" onclick="handleAudioDockExit()" title="வெளியேறு / நிறுத்துக (EXIT)" style="background:rgba(239, 68, 68, 0.25); border-color:rgba(239, 68, 68, 0.5); color:#fca5a5;">
         <span>✕</span>
       </button>
@@ -6315,13 +6389,26 @@
       }
     }
 
-    // Filter by Mark Type
-    if (currentFilter === '1m') filteredQ = filteredQ.filter(q => q.type === '1m');
-    else if (currentFilter === '2m' || currentFilter === '2m_audio') filteredQ = filteredQ.filter(q => q.type === '2m');
-    else if (currentFilter === '5m') filteredQ = filteredQ.filter(q => q.type === '5m');
-    else if (currentFilter === 'checkpoints') filteredQ = filteredQ.filter(q => q.checkpoints && q.checkpoints.length > 0);
-    else if (currentFilter === 'diagram') filteredQ = filteredQ.filter(q => q.diagramSvg || q.diagram || q.diagramImg);
-    else if (currentFilter === 'public' || currentFilter === '2025') filteredQ = filteredQ.filter(q => q.examYear || q.examTag || q.isImportant);
+    // Filter by Mark Type according to Tamil Nadu Board Exam Blueprint
+    if (currentFilter === '1m') {
+      filteredQ = filteredQ.filter(q => q.type === '1m' || (q.mark && q.mark.includes('1')));
+    } else if (currentFilter === '2m' || currentFilter === '2m_audio') {
+      filteredQ = filteredQ.filter(q => q.type === '2m' || (q.mark && q.mark.includes('2')));
+    } else if (currentFilter === '4m') {
+      filteredQ = filteredQ.filter(q => q.type === '4m' || (q.mark && (q.mark.includes('4') || q.mark.includes('4 / 7'))));
+    } else if (currentFilter === '7m') {
+      filteredQ = filteredQ.filter(q => q.type === '7m' || q.type === '5m' || (q.mark && (q.mark.includes('7') || q.mark.includes('4 / 7') || q.mark.includes('5'))));
+    } else if (currentFilter === '5m') {
+      filteredQ = filteredQ.filter(q => q.type === '5m' || q.type === '4m' || (q.mark && (q.mark.includes('5') || q.mark.includes('4'))));
+    } else if (currentFilter === '8m') {
+      filteredQ = filteredQ.filter(q => q.type === '8m' || (q.mark && q.mark.includes('8')) || q.is8Mark || (q.subSectionId && (q.subSectionId.includes('geo') || q.subSectionId.includes('graph') || q.subSectionId.includes('map') || q.subSectionId.includes('timeline'))));
+    } else if (currentFilter === 'checkpoints') {
+      filteredQ = filteredQ.filter(q => q.checkpoints && q.checkpoints.length > 0);
+    } else if (currentFilter === 'diagram') {
+      filteredQ = filteredQ.filter(q => q.diagramSvg || q.diagram || q.diagramImg);
+    } else if (currentFilter === 'public' || currentFilter === '2025') {
+      filteredQ = filteredQ.filter(q => q.examYear || q.examTag || q.isImportant);
+    }
 
     // Filter by Search Query
     if (lessonSearchQuery.trim()) {
@@ -6338,17 +6425,24 @@
     const isEnglish = currentSubject && currentSubject.id === 'english';
     const isMath = currentSubject && (currentSubject.id.includes('maths') || currentSubject.id.includes('math'));
     const isTm = currentSubject && (currentSubject.id.endsWith('_tm') || currentSubject.id === 'tamil');
+    const isScience = currentSubject && currentSubject.id.startsWith('science');
     const countPublic = allQuestions.filter(q => q.examYear || q.examTag || q.isImportant).length;
-    const twoMarkQuestions = allQuestions.filter(q => q.type === '2m');
+    const count1M = allQuestions.filter(q => q.type === '1m' || (q.mark && q.mark.includes('1'))).length;
+    const twoMarkQuestions = allQuestions.filter(q => q.type === '2m' || (q.mark && q.mark.includes('2')));
     const count2M = twoMarkQuestions.length;
+    const count4M = allQuestions.filter(q => q.type === '4m' || (q.mark && (q.mark.includes('4') || q.mark.includes('4 / 7')))).length;
+    const count7M = allQuestions.filter(q => q.type === '7m' || q.type === '5m' || (q.mark && (q.mark.includes('7') || q.mark.includes('4 / 7') || q.mark.includes('5')))).length;
+    const count5M = allQuestions.filter(q => q.type === '5m' || q.type === '4m' || (q.mark && (q.mark.includes('5') || q.mark.includes('4')))).length;
+    const count8M = allQuestions.filter(q => q.type === '8m' || (q.mark && q.mark.includes('8')) || q.is8Mark || (q.subSectionId && (q.subSectionId.includes('geo') || q.subSectionId.includes('graph') || q.subSectionId.includes('map') || q.subSectionId.includes('timeline')))).length;
+    const countDiag = allQuestions.filter(q => q.diagramSvg || q.diagram || q.diagramImg).length;
     const countCheckpoints = allQuestions.filter(q => q.checkpoints && q.checkpoints.length > 0).length;
     const hasManapaadam = currentLesson && currentLesson.manapaadam && currentLesson.manapaadam.length > 0;
     const manapaadamCount = hasManapaadam ? currentLesson.manapaadam.length : 0;
 
-    // Book-like Pagination Calculations (5 questions per page; all checkpoints displayed together in 1 click)
+    // Book-like Pagination Calculations (5 questions per page; 1 question per page for long detailed answers)
     const isCheckpointsView = (currentFilter === 'checkpoints');
-    const is5MView = (currentFilter === '5m');
-    const effectivePerPage = is5MView ? 1 : (isCheckpointsView ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE);
+    const isLongAnswerView = (currentFilter === '5m' || currentFilter === '4m' || currentFilter === '7m' || currentFilter === '8m');
+    const effectivePerPage = isLongAnswerView ? 1 : (isCheckpointsView ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE);
     const totalQuestions = filteredQ.length;
     const totalPages = Math.ceil(totalQuestions / effectivePerPage) || 1;
     if (currentLessonPage > totalPages) currentLessonPage = totalPages;
@@ -6542,19 +6636,31 @@
             </button>
           </div>
 
-          <!-- Row 2: Mark Buttons: 1m, 2m, 5m, Diag (Equal Size Grid, Green & Golden theme) -->
-          <div class="filter-group-grid">
+          <!-- Row 2: Dynamic Question Paper Blueprint Mark Buttons -->
+          <div class="filter-group-grid five-cols">
             <button type="button" class="filter-eq-btn filter-eq-golden ${currentFilter === '1m' ? 'active' : ''}" onclick="setFilter('1m')">
-              <span>🎯 ${isEm ? '1-Mark' : '1-மதிப்பெண்'}</span>
+              <span>🎯 ${isEm ? '1-Mark' : '1-மதிப்பெண்'} <span class="filter-count">(${count1M})</span></span>
             </button>
             <button type="button" class="filter-eq-btn filter-eq-green ${currentFilter === '2m' ? 'active' : ''}" onclick="setFilter('2m')">
-              <span>📝 ${isEm ? '2-Marks' : '2-மதிப்பெண்'}</span>
+              <span>📝 ${isEm ? '2-Marks' : '2-மதிப்பெண்'} <span class="filter-count">(${count2M})</span></span>
             </button>
-            <button type="button" class="filter-eq-btn filter-eq-golden ${currentFilter === '5m' ? 'active' : ''}" onclick="setFilter('5m')">
-              <span>📑 ${isEm ? '5-Marks' : '5-மதிப்பெண்'}</span>
-            </button>
+            ${isScience ? `
+              <button type="button" class="filter-eq-btn filter-eq-blue ${currentFilter === '4m' ? 'active' : ''}" onclick="setFilter('4m')">
+                <span>📑 ${isEm ? '4-Marks' : '4-மதிப்பெண்'} <span class="filter-count">(${count4M})</span></span>
+              </button>
+              <button type="button" class="filter-eq-btn filter-eq-purple ${currentFilter === '7m' ? 'active' : ''}" onclick="setFilter('7m')">
+                <span>💎 ${isEm ? '7-Marks' : '7-மதிப்பெண்'} <span class="filter-count">(${count7M})</span></span>
+              </button>
+            ` : `
+              <button type="button" class="filter-eq-btn filter-eq-golden ${currentFilter === '5m' ? 'active' : ''}" onclick="setFilter('5m')">
+                <span>📑 ${isEm ? '5-Marks' : '5-மதிப்பெண்'} <span class="filter-count">(${count5M})</span></span>
+              </button>
+              <button type="button" class="filter-eq-btn filter-eq-purple ${currentFilter === '8m' ? 'active' : ''}" onclick="setFilter('8m')">
+                <span>⭐ ${isEm ? '8-Marks' : '8-மதிப்பெண்'} <span class="filter-count">(${count8M})</span></span>
+              </button>
+            `}
             <button type="button" class="filter-eq-btn filter-eq-green ${currentFilter === 'diagram' ? 'active' : ''}" onclick="setFilter('diagram')">
-              <span>🎨 ${isEm ? 'Diagrams' : 'வரைபடங்கள்'}</span>
+              <span>🎨 ${isEm ? (isMath ? 'Graph' : (currentSubject && currentSubject.id.startsWith('social') ? 'Map' : 'Diagrams')) : (isMath ? 'வரைபடம்' : (currentSubject && currentSubject.id.startsWith('social') ? 'வரைபடம்' : 'படங்கள்'))} <span class="filter-count">(${countDiag})</span></span>
             </button>
           </div>
 
@@ -6735,7 +6841,14 @@
                   ` : ((item.examTag || item.isImportant) ? `
                     <span class="badge-2025">⭐ ${isEm || isEnglish ? 'Public Exam' : 'அரசுப் பொதுத்தேர்வு'}</span>
                   ` : '')}
-                  <span class="mark-badge mark-${item.type === '1m' ? '1' : item.type === '2m' ? '2' : '5'}">${item.mark}</span>
+                  ${(() => {
+                    const markCls = (item.type === '1m' || (item.mark && item.mark.includes('1'))) ? '1' :
+                                    (item.type === '2m' || (item.mark && item.mark.includes('2'))) ? '2' :
+                                    (item.type === '4m' || (item.mark && item.mark.includes('4'))) ? '4' :
+                                    (item.type === '7m' || (item.mark && item.mark.includes('7'))) ? '7' :
+                                    (item.type === '8m' || (item.mark && item.mark.includes('8'))) ? '8' : '5';
+                    return `<span class="mark-badge mark-${markCls}">${item.mark}</span>`;
+                  })()}
                   <button class="bookmark-btn ${isSaved ? 'active' : ''}" onclick="toggleBookmark('${item.id}')" title="${isEm || isEnglish ? 'Bookmark' : 'புக்மார்க்'}">
                     ★
                   </button>
@@ -8203,16 +8316,16 @@ ${directLink}
 
         utt.onend = () => {
           if (session.isStopped) return;
+          if (session.isPaused) return; // Prevent advancing chunk on cancel during pause!
           session.index++;
-          if (session.isPaused) return;
           setTimeout(speakNextChunk, 70);
         };
 
         utt.onerror = (e) => {
           if (session.isStopped) return;
+          if (session.isPaused) return; // Prevent advancing chunk on cancel during pause!
           console.warn('[SpeechQueue] Chunk error, moving to next:', e);
           session.index++;
-          if (session.isPaused) return;
           setTimeout(speakNextChunk, 70);
         };
 
@@ -8228,6 +8341,7 @@ ${directLink}
         }
       };
 
+      session.speakNextChunk = speakNextChunk;
       speakNextChunk();
     },
 
@@ -8244,11 +8358,23 @@ ${directLink}
       if (!this.activeSession || !this.activeSession.isPaused) return;
       const session = this.activeSession;
       session.isPaused = false;
-      const remainingChunks = session.chunks.slice(session.index);
-      if (remainingChunks.length > 0) {
-        this.play(remainingChunks, options || session.options, session.onChunkStart, session.onComplete);
+      if (options) session.options = Object.assign({}, session.options, options);
+      if (session.index < session.chunks.length) {
+        if (session.speakNextChunk) session.speakNextChunk();
       } else if (typeof session.onComplete === 'function') {
         session.onComplete();
+      }
+    },
+
+    skip: function(delta) {
+      if (!this.activeSession) return;
+      const session = this.activeSession;
+      try { window.speechSynthesis.cancel(); } catch(e) {}
+      session.index = Math.max(0, Math.min(session.chunks.length - 1, session.index + delta));
+      if (!session.isPaused) {
+        setTimeout(() => { if (session.speakNextChunk) session.speakNextChunk(); }, 80);
+      } else if (typeof session.onChunkStart === 'function') {
+        session.onChunkStart(session.index, session.chunks.length);
       }
     },
 
@@ -8409,6 +8535,24 @@ ${directLink}
                  .replace(/&gt;/g, '>')
                  .replace(/&times;/g, '×');
 
+      // 0. Strip LaTeX delimiter dollars ($) completely so TTS NEVER speaks "dollar" / "ADollar"
+      text = text.replace(/\$/g, ' ');
+
+      // 0.1 Convert Unicode subscripts & superscripts into distinct pronounced digits
+      text = text.replace(/₀/g, ' 0 ').replace(/₁/g, ' 1 ').replace(/₂/g, ' 2 ').replace(/₃/g, ' 3 ').replace(/₄/g, ' 4 ')
+                 .replace(/₅/g, ' 5 ').replace(/₆/g, ' 6 ').replace(/₇/g, ' 7 ').replace(/₈/g, ' 8 ').replace(/₉/g, ' 9 ')
+                 .replace(/⁰/g, ' 0 ').replace(/¹/g, ' 1 ').replace(/²/g, ' squared ').replace(/³/g, ' cubed ');
+
+      // 0.2 Convert LaTeX math commands
+      text = text.replace(/\\times\b/g, ' × ')
+                 .replace(/\\cdot\b/g, ' · ')
+                 .replace(/\\approx\b/g, ' ≈ ')
+                 .replace(/\\pm\b/g, ' ± ')
+                 .replace(/\\sqrt\{([^}]+)\}/g, ' square root of $1 ')
+                 .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, ' $1 by $2 ')
+                 .replace(/\\[a-zA-Z]+/g, ' ')
+                 .replace(/[{}]/g, ' ');
+
       // 1. Strip ALL Unicode Emojis completely so TTS never speaks emoji names (e.g. ⛰️ -> "மலைகள்", 🏞️ -> "தேசிய பூங்கா", ⭐ -> "நட்சத்திரம்")
       text = text.replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{FE00}-\u{FE0F}]/gu, '');
 
@@ -8423,6 +8567,22 @@ ${directLink}
       text = text.replace(/(?:^|\s)\d+[\.\)](?!\d)\s*/g, '. ');
 
       if (lang.startsWith('ta')) {
+        // Physics and Math variables with subscripts in Tamil (m1, m2, u1, u2, v1, v2, p1, p2, F1, F2)
+        text = text.replace(/\b(m|M)[_\s]*1\b/g, ' எம் ஒன்று ')
+                   .replace(/\b(m|M)[_\s]*2\b/g, ' எம் இரண்டு ')
+                   .replace(/\b(u|U)[_\s]*1\b/g, ' யு ஒன்று ')
+                   .replace(/\b(u|U)[_\s]*2\b/g, ' யு இரண்டு ')
+                   .replace(/\b(v|V)[_\s]*1\b/g, ' வி ஒன்று ')
+                   .replace(/\b(v|V)[_\s]*2\b/g, ' வி இரண்டு ')
+                   .replace(/\b(p|P)[_\s]*1\b/g, ' பி ஒன்று ')
+                   .replace(/\b(p|P)[_\s]*2\b/g, ' பி இரண்டு ')
+                   .replace(/\b(f|F)[_\s]*1\b/g, ' எஃப் ஒன்று ')
+                   .replace(/\b(f|F)[_\s]*2\b/g, ' எஃப் இரண்டு ')
+                   .replace(/\b(a|A)[_\s]*1\b/g, ' ஏ ஒன்று ')
+                   .replace(/\b(a|A)[_\s]*2\b/g, ' ஏ இரண்டு ')
+                   .replace(/\bn\s*\(\s*([A-Za-z])\s*\)/g, ' என் ஆஃப் $1 ')
+                   .replace(/\b([A-Za-z])\s*[×*]\s*([A-Za-z])\b/g, ' $1 கிராஸ் $2 ');
+
         text = text.replace(/எ[-.]கா[:.]?/g, ' எடுத்துக்காட்டாக: ');
         text = text.replace(/உ[-.]ம்[:.]?/g, ' உதாரணமாக: ');
         text = text.replace(/\s*\/\s*/g, ' அல்லது ');
@@ -8466,6 +8626,22 @@ ${directLink}
         });
         text = text.replace(/(?:^|\s)-(\d+)/g, ' மைனஸ் $1 ');
       } else {
+        // Physics and Math variables with subscripts in English (m1, m2, u1, u2, v1, v2, p1, p2, F1, F2)
+        text = text.replace(/\b(m|M)[_\s]*1\b/g, ' m 1 ')
+                   .replace(/\b(m|M)[_\s]*2\b/g, ' m 2 ')
+                   .replace(/\b(u|U)[_\s]*1\b/g, ' u 1 ')
+                   .replace(/\b(u|U)[_\s]*2\b/g, ' u 2 ')
+                   .replace(/\b(v|V)[_\s]*1\b/g, ' v 1 ')
+                   .replace(/\b(v|V)[_\s]*2\b/g, ' v 2 ')
+                   .replace(/\b(p|P)[_\s]*1\b/g, ' p 1 ')
+                   .replace(/\b(p|P)[_\s]*2\b/g, ' p 2 ')
+                   .replace(/\b(f|F)[_\s]*1\b/g, ' F 1 ')
+                   .replace(/\b(f|F)[_\s]*2\b/g, ' F 2 ')
+                   .replace(/\b(a|A)[_\s]*1\b/g, ' a 1 ')
+                   .replace(/\b(a|A)[_\s]*2\b/g, ' a 2 ')
+                   .replace(/\bn\s*\(\s*([A-Za-z])\s*\)/g, ' n of $1 ')
+                   .replace(/\b([A-Za-z])\s*[×*]\s*([A-Za-z])\b/g, ' $1 cross $2 ');
+
         text = text.replace(/[\u0B80-\u0BFF]+/g, '');
         text = text.replace(/\(\s*\)/g, '');
         text = text.replace(/\[\s*\]/g, '');
@@ -8514,8 +8690,7 @@ ${directLink}
                  .replace(/,\s*,+/g, ',')
                  .replace(/\s*,\s*/g, ', ')
                  .replace(/\s*\.\s*/g, '. ')
-                 .replace(/(?:\.|\s)+\d+[\.\)]?\s*$/g, '.')
-                 .replace(/\s+\d+[\.\)]?\s*$/g, '')
+                 .replace(/(?:\.|\s)+\d+[\.\)]\s*$/g, '.')
                  .replace(/^\s*\d+[\.\)]\s*/g, '')
                  .replace(/^\s*[\.,:;\s\-]+/, '')
                  .replace(/[\.,:;\s\-]+$/, '')
@@ -8756,8 +8931,32 @@ ${directLink}
 
       const prevBtn = document.getElementById('audioDockPrevBtn');
       const nextBtn = document.getElementById('audioDockNextBtn');
-      if (prevBtn) prevBtn.style.display = 'none';
-      if (nextBtn) nextBtn.style.display = 'none';
+      if (prevBtn) {
+        prevBtn.style.display = 'inline-flex';
+        prevBtn.title = isEm ? 'Rewind (-10s / Previous sentence)' : 'பின்னோக்கி (⏪ -10s)';
+        prevBtn.innerHTML = '<span>⏪</span>';
+      }
+      if (nextBtn) {
+        nextBtn.style.display = 'inline-flex';
+        nextBtn.title = isEm ? 'Forward (+10s / Next sentence)' : 'முன்னோக்கி (⏩ +10s)';
+        nextBtn.innerHTML = '<span>⏩</span>';
+      }
+    },
+
+    rewind: function() {
+      if (this.audioInstance) {
+        this.audioInstance.currentTime = Math.max(0, this.audioInstance.currentTime - 10);
+      } else if (window.speechQueueEngine) {
+        speechQueueEngine.skip(-1);
+      }
+    },
+
+    forward: function() {
+      if (this.audioInstance) {
+        this.audioInstance.currentTime = Math.min(this.audioInstance.duration || 9999, this.audioInstance.currentTime + 10);
+      } else if (window.speechQueueEngine) {
+        speechQueueEngine.skip(+1);
+      }
     },
 
     hideDock: function(force = false) {
@@ -9626,6 +9825,8 @@ ${directLink}
       storyAudioPlayer.prevScene();
     } else if (window.continuousAudioPlayer && continuousAudioPlayer.isPlaying) {
       continuousAudioPlayer.prev();
+    } else if (window.teacherAudioPlayer && (teacherAudioPlayer.isPlaying || teacherAudioPlayer.isPaused)) {
+      teacherAudioPlayer.rewind();
     }
   }
 
@@ -9634,6 +9835,26 @@ ${directLink}
       storyAudioPlayer.nextScene();
     } else if (window.continuousAudioPlayer && continuousAudioPlayer.isPlaying) {
       continuousAudioPlayer.next();
+    } else if (window.teacherAudioPlayer && (teacherAudioPlayer.isPlaying || teacherAudioPlayer.isPaused)) {
+      teacherAudioPlayer.forward();
+    }
+  }
+
+  let isAudioMuted = false;
+  function handleAudioDockMute() {
+    isAudioMuted = !isAudioMuted;
+    const btn = document.getElementById('audioDockMuteBtn');
+    if (btn) btn.innerHTML = isAudioMuted ? '<span>🔇</span>' : '<span>🔊</span>';
+    if (window.teacherAudioPlayer && teacherAudioPlayer.audioInstance) {
+      teacherAudioPlayer.audioInstance.muted = isAudioMuted;
+    }
+    if (window.continuousAudioPlayer && continuousAudioPlayer.audioInstance) {
+      continuousAudioPlayer.audioInstance.muted = isAudioMuted;
+    }
+    if (window.speechQueueEngine && speechQueueEngine.activeSession) {
+      if (speechQueueEngine.activeSession.currentUtterance) {
+        speechQueueEngine.activeSession.currentUtterance.volume = isAudioMuted ? 0 : 1;
+      }
     }
   }
 
@@ -13142,10 +13363,25 @@ Match the language: evaluate English answers in English, and Tamil answers in Ta
     const banner = document.getElementById('aiContextBanner');
     const qText = document.getElementById('aiContextQText');
 
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english')) ||
+                 (contextQ && contextQ.id && (contextQ.id.includes('_em_') || contextQ.id.startsWith('eng_')));
+
+    const titleEl = document.querySelector('#aiTeacherModal .ai-modal-title');
+    const subTitleEl = document.querySelector('#aiTeacherModal .ai-modal-header span[style*="font-size:11px"]');
+    const promptInput = document.getElementById('aiPromptInput');
+    const stopSpeechBtn = document.getElementById('aiGlobalStopSpeechBtn');
+    const clearBtn = document.querySelector('#aiTeacherModal button[title*="அரட்டை"], #aiTeacherModal button[title*="Clear"]');
+
+    if (titleEl) titleEl.innerText = isEm ? 'AI Teacher (Doubt Solver)' : 'AI ஆசிரியர் (Doubt Solver)';
+    if (subTitleEl) subTitleEl.innerText = isEm ? 'Class 10 Board Exam Smart Guide' : '10-ஆம் வகுப்பு பொதுத்தேர்வு வழிகாட்டி';
+    if (promptInput) promptInput.placeholder = isEm ? 'Type your doubt or question here...' : 'உங்கள் சந்தேகத்தைத் தட்டச்சு செய்யுங்கள்...';
+    if (stopSpeechBtn) stopSpeechBtn.innerText = isEm ? '⏹️ Stop' : '⏹️ நிறுத்து';
+    if (clearBtn) clearBtn.innerHTML = isEm ? '🗑️ Clear' : '🗑️ அழி';
+
     if (contextQ) {
       if (banner) banner.style.display = 'block';
       const cleanBannerQ = cleanHtmlEntities((contextQ.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
-      if (qText) qText.innerText = cleanBannerQ.substring(0, 95) + '...';
+      if (qText) qText.innerText = (isEm ? '📌 Question: ' : '📌 வினா: ') + cleanBannerQ.substring(0, 95) + '...';
     } else {
       if (banner) banner.style.display = 'none';
     }
@@ -13478,15 +13714,97 @@ Important:
       <div class="ai-qa-body ai-msg-content">
         ${formatted}
       </div>
-      <div class="ai-qa-footer">
-        <button type="button" class="ai-card-btn" onclick="copyAIText(this)" style="color:#38bdf8;" title="பதிலை நகலெடு">📋 நகலெடு</button>
-        <button type="button" class="ai-card-btn ai-speak-btn" onclick="speakAIText(this)" style="color:#10b981;" title="பதிலைக் கேள்">🔊 வாசி</button>
+      <div class="ai-qa-footer" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <button type="button" class="ai-card-btn" onclick="copyAIText(this)" style="color:#38bdf8;" title="${isEm ? 'Copy Solution' : 'பதிலை நகலெடு'}">📋 ${isEm ? 'Copy' : 'நகலெடு'}</button>
+          <button type="button" class="ai-card-btn ai-speak-btn" onclick="speakAIText(this)" style="color:#10b981;" title="${isEm ? 'Listen to Solution' : 'பதிலைக் கேள்'}">🔊 ${isEm ? 'Listen' : 'வாசி'}</button>
+          <button type="button" class="ai-card-btn" onclick="stopAISpeech()" style="display:none; color:#ef4444;" title="${isEm ? 'Stop Audio' : 'பேச்சை நிறுத்து'}">⏹️ ${isEm ? 'Stop' : 'நிறுத்து'}</button>
+        </div>
+        <button type="button" class="ai-card-btn" onclick="closeAITeacherModal()" style="color:#fca5a5; background:rgba(239, 68, 68, 0.15); border:1px solid rgba(239, 68, 68, 0.35); border-radius:6px; padding:4px 10px; font-weight:800;" title="${isEm ? 'Close AI Tutor' : 'வெளியேறு'}">✕ ${isEm ? 'Close / Exit' : 'வெளியேறு'}</button>
+      </div>
+      <div style="margin-top:12px; padding-top:10px; border-top:1px dashed rgba(255,255,255,0.12); text-align:center;">
+        <button type="button" onclick="closeAITeacherModal()" style="background:linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(185, 28, 28, 0.25)); border:1.5px solid rgba(239, 68, 68, 0.5); color:#fca5a5; padding:8px 20px; border-radius:20px; font-weight:800; font-size:12.5px; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+          <span>✕</span>
+          <span>${isEm ? 'Exit / Close AI Tutor' : 'வெளியேறு (Close AI Tutor)'}</span>
+        </button>
       </div>
     `;
 
     chatBody.appendChild(card);
     chatBody.scrollTop = chatBody.scrollHeight;
   }
+
+  function generateVisualMindmapSVG(title, content) {
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+    const cleanTitle = (title || (isEm ? 'Core Concept Mind Map' : 'மையக் கருத்து வரைபடம்')).replace(/<[^>]+>/g, '').replace(/[^\w\s\u0B80-\u0BFF\-\+\=]/g, '').trim().substring(0, 42);
+
+    const lines = (content || '').split(/[\n\.\r]+/).map(s => s.replace(/<[^>]+>/g, '').trim()).filter(s => s.length > 5);
+    const node1 = (lines[0] || (isEm ? '1. Fundamental Principle' : '1. அடிப்படைக் கொள்கை')).substring(0, 36);
+    const node2 = (lines[1] || (isEm ? '2. Formula & Equations' : '2. சூத்திரம் & கணிதம்')).substring(0, 36);
+    const node3 = (lines[2] || (isEm ? '3. Key Application / Working' : '3. பயன்பாடு & விளக்கம்')).substring(0, 36);
+
+    return `
+<div class="ai-svg-mindmap-wrap" style="margin:12px 0; background:#0b1329; border:1.5px solid #1e3a8a; border-radius:14px; padding:12px; box-shadow:0 6px 18px rgba(0,0,0,0.35);">
+  <div style="font-size:12.5px; font-weight:800; color:#38bdf8; margin-bottom:8px; display:flex; align-items:center; gap:6px;">
+    <span>🎨</span> <span>${isEm ? 'Visual Mind Map & Diagram' : 'வண்ணமயமான மன வரைபடம் (Mind Map)'}</span>
+  </div>
+  <svg viewBox="0 0 650 330" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; display:block; font-family:system-ui,-apple-system,sans-serif;">
+    <defs>
+      <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3b82f6"/>
+        <stop offset="100%" stop-color="#1d4ed8"/>
+      </linearGradient>
+      <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.4"/>
+      </filter>
+    </defs>
+
+    <path d="M 325 70 C 325 100, 110 100, 110 130" stroke="#38bdf8" stroke-width="2.5" fill="none" stroke-dasharray="4 2"/>
+    <path d="M 325 70 C 325 100, 325 100, 325 130" stroke="#10b981" stroke-width="2.5" fill="none" stroke-dasharray="4 2"/>
+    <path d="M 325 70 C 325 100, 540 100, 540 130" stroke="#f59e0b" stroke-width="2.5" fill="none" stroke-dasharray="4 2"/>
+
+    <g filter="url(#cardGlow)">
+      <rect x="180" y="20" width="290" height="52" rx="14" fill="url(#coreGrad)" stroke="#60a5fa" stroke-width="2"/>
+      <text x="325" y="46" fill="#ffffff" font-size="14" font-weight="bold" text-anchor="middle" dominant-baseline="middle">⭐ ${cleanTitle}</text>
+      <text x="325" y="62" fill="#bfdbfe" font-size="10.5" font-weight="600" text-anchor="middle">${isEm ? 'Class 10 Public Exam Concept' : '10-ஆம் வகுப்பு பொதுத்தேர்வு கருத்து'}</text>
+    </g>
+
+    <g filter="url(#cardGlow)">
+      <rect x="20" y="130" width="180" height="170" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+      <rect x="30" y="142" width="160" height="26" rx="6" fill="#0369a1"/>
+      <text x="110" y="159" fill="#e0f2fe" font-size="11.5" font-weight="bold" text-anchor="middle">💡 ${isEm ? 'Step 1: Concept' : 'படி 1: கொள்கை'}</text>
+      <foreignObject x="30" y="175" width="160" height="115">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:11px; color:#cbd5e1; line-height:1.45; padding:4px;">
+          ${node1}
+        </div>
+      </foreignObject>
+    </g>
+
+    <g filter="url(#cardGlow)">
+      <rect x="235" y="130" width="180" height="170" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+      <rect x="245" y="142" width="160" height="26" rx="6" fill="#047857"/>
+      <text x="325" y="159" fill="#ecfdf5" font-size="11.5" font-weight="bold" text-anchor="middle">📝 ${isEm ? 'Step 2: Formula' : 'படி 2: சூத்திரம்'}</text>
+      <foreignObject x="245" y="175" width="160" height="115">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:11px; color:#cbd5e1; line-height:1.45; padding:4px;">
+          ${node2}
+        </div>
+      </foreignObject>
+    </g>
+
+    <g filter="url(#cardGlow)">
+      <rect x="450" y="130" width="180" height="170" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+      <rect x="460" y="142" width="160" height="26" rx="6" fill="#b45309"/>
+      <text x="540" y="159" fill="#fef3c7" font-size="11.5" font-weight="bold" text-anchor="middle">⚡ ${isEm ? 'Step 3: Process' : 'படி 3: செய்முறை'}</text>
+      <foreignObject x="460" y="175" width="160" height="115">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-size:11px; color:#cbd5e1; line-height:1.45; padding:4px;">
+          ${node3}
+        </div>
+      </foreignObject>
+    </g>
+  </svg>
+</div>`;
+  }
+  window.generateVisualMindmapSVG = generateVisualMindmapSVG;
 
   async function executeAIQuestionFlow({ displayText, fullPrompt, mode = 'custom', contextQ = null }) {
     stopAISpeech();
@@ -13499,13 +13817,21 @@ Important:
 
     // 3. Query Gemini
     try {
-      const reply = await callGeminiAPI(fullPrompt, AI_TEACHER_SYSTEM);
+      let reply = await callGeminiAPI(fullPrompt, AI_TEACHER_SYSTEM);
       removeAILoadingIndicator(loadingId);
+
+      // If mindmap was requested and reply does not include inline svg, inject beautiful SVG mindmap
+      if (mode === 'mindmap' && !reply.includes('<svg')) {
+        const svgDiagram = generateVisualMindmapSVG(displayText, reply);
+        reply = svgDiagram + '\n\n' + reply;
+      }
+
       // 4. Append the Separate AI TEACHER ANSWER CARD
       appendAIAnswerCard(reply, mode);
     } catch (err) {
       removeAILoadingIndicator(loadingId);
-      appendAIAnswerCard(`⚠️ மன்னிக்கவும்: ${err.message}<br><br>💡 இணைய இணைப்பைச் சரிபார்க்கவும் அல்லது மேலே உள்ள <b>"⚙️ Key"</b> அமைப்பில் உங்கள் Google API Key-ஐ சரிபார்க்கவும்.`, 'error');
+      const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+      appendAIAnswerCard(isEm ? `⚠️ Error: ${err.message}<br><br>💡 Please check your internet connection or verify your Google API Key in <b>"⚙️ Key"</b> settings above.` : `⚠️ மன்னிக்கவும்: ${err.message}<br><br>💡 இணைய இணைப்பைச் சரிபார்க்கவும் அல்லது மேலே உள்ள <b>"⚙️ Key"</b> அமைப்பில் உங்கள் Google API Key-ஐ சரிபார்க்கவும்.`, 'error');
     }
   }
 
@@ -13661,9 +13987,10 @@ Important:
     if (!parent) return;
     const contentEl = parent.querySelector('.ai-msg-content') || parent;
     const text = (contentEl.innerText || '').trim();
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
     navigator.clipboard.writeText(text).then(() => {
-      btn.innerText = '✅ நகலெடுக்கப்பட்டது!';
-      setTimeout(() => { btn.innerText = '📋 நகலெடு'; }, 2000);
+      btn.innerText = isEm ? '✅ Copied!' : '✅ நகலெடுக்கப்பட்டது!';
+      setTimeout(() => { btn.innerText = isEm ? '📋 Copy' : '📋 நகலெடு'; }, 2000);
     });
   }
   window.copyAIText = copyAIText;
@@ -13680,6 +14007,24 @@ Important:
 
     // 0. Strip SVG diagrams before speech synthesis
     text = text.replace(/<svg[\s\S]*?<\/svg>/gi, ' வரைபட விளக்கம். ');
+
+    // 0.1 Remove LaTeX delimiter dollars ($) completely so TTS NEVER speaks "dollar"
+    text = text.replace(/\$/g, ' ');
+
+    // 0.2 Convert Unicode subscripts & superscripts into distinct pronounced digits
+    text = text.replace(/₀/g, ' 0 ').replace(/₁/g, ' 1 ').replace(/₂/g, ' 2 ').replace(/₃/g, ' 3 ').replace(/₄/g, ' 4 ')
+               .replace(/₅/g, ' 5 ').replace(/₆/g, ' 6 ').replace(/₇/g, ' 7 ').replace(/₈/g, ' 8 ').replace(/₉/g, ' 9 ')
+               .replace(/⁰/g, ' 0 ').replace(/¹/g, ' 1 ').replace(/²/g, ' squared ').replace(/³/g, ' cubed ');
+
+    // 0.3 Convert LaTeX math commands
+    text = text.replace(/\\times\b/g, ' × ')
+               .replace(/\\cdot\b/g, ' · ')
+               .replace(/\\approx\b/g, ' ≈ ')
+               .replace(/\\pm\b/g, ' ± ')
+               .replace(/\\sqrt\{([^}]+)\}/g, ' square root of $1 ')
+               .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, ' $1 by $2 ')
+               .replace(/\\[a-zA-Z]+/g, ' ')
+               .replace(/[{}]/g, ' ');
 
     // 1. Remove UI action labels (Copy, Speak, Stop, etc.)
     text = text.replace(/📋\s*நகலெடு|🔊\s*வாசி|⏹️\s*நிறுத்து|வாசிக்கிறது\.\.\./gi, ' ');
@@ -13723,6 +14068,22 @@ Important:
 
     // 11. Language-specific spoken substitutions
     if (lang === 'ta-IN') {
+      // Physics and Math variables with subscripts in Tamil
+      text = text.replace(/\b(m|M)[_\s]*1\b/g, ' எம் ஒன்று ')
+                 .replace(/\b(m|M)[_\s]*2\b/g, ' எம் இரண்டு ')
+                 .replace(/\b(u|U)[_\s]*1\b/g, ' யு ஒன்று ')
+                 .replace(/\b(u|U)[_\s]*2\b/g, ' யு இரண்டு ')
+                 .replace(/\b(v|V)[_\s]*1\b/g, ' வி ஒன்று ')
+                 .replace(/\b(v|V)[_\s]*2\b/g, ' வி இரண்டு ')
+                 .replace(/\b(p|P)[_\s]*1\b/g, ' பி ஒன்று ')
+                 .replace(/\b(p|P)[_\s]*2\b/g, ' பி இரண்டு ')
+                 .replace(/\b(f|F)[_\s]*1\b/g, ' எஃப் ஒன்று ')
+                 .replace(/\b(f|F)[_\s]*2\b/g, ' எஃப் இரண்டு ')
+                 .replace(/\b(a|A)[_\s]*1\b/g, ' ஏ ஒன்று ')
+                 .replace(/\b(a|A)[_\s]*2\b/g, ' ஏ இரண்டு ')
+                 .replace(/\bn\s*\(\s*([A-Za-z])\s*\)/g, ' என் ஆஃப் $1 ')
+                 .replace(/\b([A-Za-z])\s*[×*]\s*([A-Za-z])\b/g, ' $1 கிராஸ் $2 ');
+
       text = text.replace(/எ[-.]கா[:.]?/g, ' எடுத்துக்காட்டாக: ');
       text = text.replace(/உ[-.]ம்[:.]?/g, ' உதாரணமாக: ');
       text = text.replace(/\s*\/\s*/g, ' அல்லது ');
@@ -13737,6 +14098,22 @@ Important:
       text = text.replace(/(\d+)\s*மீ\b/g, ' $1 மீட்டர் ');
       text = text.replace(/(\d+)\s*கி\.?மீ\b/g, ' $1 கிலோமீட்டர் ');
     } else {
+      // Physics and Math variables with subscripts in English
+      text = text.replace(/\b(m|M)[_\s]*1\b/g, ' m 1 ')
+                 .replace(/\b(m|M)[_\s]*2\b/g, ' m 2 ')
+                 .replace(/\b(u|U)[_\s]*1\b/g, ' u 1 ')
+                 .replace(/\b(u|U)[_\s]*2\b/g, ' u 2 ')
+                 .replace(/\b(v|V)[_\s]*1\b/g, ' v 1 ')
+                 .replace(/\b(v|V)[_\s]*2\b/g, ' v 2 ')
+                 .replace(/\b(p|P)[_\s]*1\b/g, ' p 1 ')
+                 .replace(/\b(p|P)[_\s]*2\b/g, ' p 2 ')
+                 .replace(/\b(f|F)[_\s]*1\b/g, ' F 1 ')
+                 .replace(/\b(f|F)[_\s]*2\b/g, ' F 2 ')
+                 .replace(/\b(a|A)[_\s]*1\b/g, ' a 1 ')
+                 .replace(/\b(a|A)[_\s]*2\b/g, ' a 2 ')
+                 .replace(/\bn\s*\(\s*([A-Za-z])\s*\)/g, ' n of $1 ')
+                 .replace(/\b([A-Za-z])\s*[×*]\s*([A-Za-z])\b/g, ' $1 cross $2 ');
+
       text = text.replace(/[\u0B80-\u0BFF]+/g, ''); // strip stray Tamil in English answers
       text = text.replace(/\be\.g\.?/gi, 'for example');
       text = text.replace(/\bi\.e\.?/gi, 'that is');
@@ -13777,14 +14154,22 @@ Important:
         window.speechQueueEngine.stop();
       } catch (e) {}
     }
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+    const defaultSpeakText = isEm ? '🔊 Listen' : '🔊 வாசி';
+
     if (currentAISpeakingBtn) {
-      currentAISpeakingBtn.innerHTML = '🔊 வாசி';
+      currentAISpeakingBtn.innerHTML = defaultSpeakText;
       currentAISpeakingBtn.classList.remove('speaking');
       currentAISpeakingBtn.style.background = 'none';
       currentAISpeakingBtn.style.color = '#10b981';
       currentAISpeakingBtn = null;
     }
     document.querySelectorAll('.ai-speak-btn').forEach(btn => {
+      btn.innerHTML = defaultSpeakText;
+      btn.classList.remove('speaking');
+      btn.style.background = 'none';
+      btn.style.color = '#10b981';
+    });
       btn.innerHTML = '🔊 வாசி';
       btn.classList.remove('speaking');
       btn.style.background = 'none';
@@ -13821,16 +14206,23 @@ Important:
       return;
     }
 
+    const isEm = cleanInfo.isEnglish || (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
     currentAISpeakingBtn = btn;
     btn.classList.add('speaking');
-    btn.innerHTML = '&#9209; நிறுத்து';
+    btn.innerHTML = `&#9209; ${isEm ? 'Stop' : 'நிறுத்து'}`;
     btn.style.background = '#ef4444';
     btn.style.color = '#ffffff';
 
     const stopBtn = document.getElementById('aiGlobalStopSpeechBtn');
-    if (stopBtn) stopBtn.style.display = 'inline-block';
+    if (stopBtn) {
+      stopBtn.innerText = `⏹️ ${isEm ? 'Stop' : 'நிறுத்து'}`;
+      stopBtn.style.display = 'inline-block';
+    }
     const evalStopBtn = document.getElementById('evalGlobalStopSpeechBtn');
-    if (evalStopBtn) evalStopBtn.style.display = 'inline-block';
+    if (evalStopBtn) {
+      evalStopBtn.innerText = `⏹️ ${isEm ? 'Stop' : 'நிறுத்து'}`;
+      evalStopBtn.style.display = 'inline-block';
+    }
 
     const bestVoice = (typeof teacherAudioPlayer !== 'undefined' && teacherAudioPlayer.getBestVoice)
       ? teacherAudioPlayer.getBestVoice(cleanInfo.lang)
@@ -14171,6 +14563,7 @@ Important:
     }
   }
   window.testAISettingsConnection = testAISettingsConnection;
+
 
 </script>
 

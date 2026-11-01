@@ -1,4 +1,4 @@
-﻿// 10-ஆம் வகுப்பு அறிவியல் - அலகு 1: இயக்க விதிகள் (Laws of Motion)
+// 10-ஆம் வகுப்பு அறிவியல் - அலகு 1: இயக்க விதிகள் (Laws of Motion)
 // தமிழ்நாடு அரசு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி
 
 const SCIENCE_UNIT_1_DATA = {
@@ -259,12 +259,12 @@ const SCIENCE_UNIT_1_DATA = {
             • ஒரு குறிப்பிட்ட உயரத்தில் புவியீர்ப்பு விசையிலிருந்து விடுபட தேவையான <b>விடுபடு திசைவேகத்தை (Escape velocity)</b> ராக்கெட் அடைகிறது.
           </div>`,
           ansTamil: "ராக்கெட் தத்துவம்: நியூட்டனின் 3-ம் விதி மற்றும் உந்த மாறாக் கோட்பாடு. வாயுக்கள் கீழ்நோக்கிப் பாயும்போது ராக்கெட் மேல்நோக்கிப் பறக்கிறது.",
-          diagramImg: "images/sci_bb_rocket_propulsion.jpg",
+          diagramImg: "images/sci_bb_rocket_propulsion_tm.jpg",
           diagramCaption: "கரும்பலகைக் குறிப்பு: ராக்கெட் ஏவுதல் தத்துவம் & உந்துவிசை (நியூட்டனின் 3-ம் விதி மற்றும் நேர்க்கோட்டு உந்த மாறாக் கோட்பாடு)",
           blackboard: {
             title: "ராக்கெட் ஏவுதல் தத்துவம் (Rocket Propulsion)",
             engTitle: "Rocket Propulsion (Working & Principles)",
-            fullBoardImg: "images/sci_bb_rocket_propulsion.jpg"
+            fullBoardImg: "images/sci_bb_rocket_propulsion_tm.jpg"
           }
         }
       ]

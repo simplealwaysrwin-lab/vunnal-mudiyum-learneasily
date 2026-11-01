@@ -4,7 +4,7 @@
 // Zero-Downtime Architecture - Auto-Update on Deploy Engine
 // =======================================================================
 
-const CACHE_NAME = 'vm-offline-v20261101_v42';
+const CACHE_NAME = 'vm-offline-v20261101_v43';
 
 // Core essential assets for instant offline app shell and subject question banks
 const PRECACHE_ASSETS = [
@@ -58,6 +58,7 @@ const PRECACHE_ASSETS = [
   './math_ch4_5m_q10_lamp_post.jpg',
   './images/sci_bb_mass_weight.jpg',
   './images/sci_bb_rocket_propulsion.jpg',
+  './images/sci_bb_rocket_propulsion_tm.jpg',
   './images/sci_bb_myopia_hypermetropia.jpg',
   './images/sci_bb_hypermetropia.jpg',
   './images/sci_bb_myopia.jpg',

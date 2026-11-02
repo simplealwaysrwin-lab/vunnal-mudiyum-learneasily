@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -106,11 +106,11 @@
 <script src="data_english_u2.js?v=20261031_v31"></script>
 <script src="data_english_u3.js?v=20261031_v31"></script>
 <script src="data_english_u4.js?v=20261031_v31"></script>
-<script src="data_maths_tm_u1.js?v=20261031_v31"></script>
+  <script src="data_maths_tm_u1.js?v=20261102_v45"></script>
 <script src="data_maths_tm_u2.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u4.js?v=20261031_v31"></script>
-<script src="data_maths_em_u1.js?v=20261031_v31"></script>
+  <script src="data_maths_em_u1.js?v=20261102_v45"></script>
 <script src="data_maths_em_u2.js?v=20261031_v31"></script>
 <script src="data_maths_em_u3.js?v=20261031_v31"></script>
 <script src="data_maths_em_u4.js?v=20261031_v31"></script>
@@ -7157,9 +7157,9 @@
                     ` : ''}
                     ` : ''}
                     ${(item.videoUrl || item.videoFile) ? `
-                    <button type="button" class="videolink-btn" onclick="openInAppVideoModal('${(item.videoUrl || item.videoFile).replace(/'/g, "\\'")}', '${(typeof cleanText === 'function' ? cleanText(item.q) : (item.q || '').replace(/<[^>]+>/g, '')).substring(0, 45).replace(/'/g, "\\'")}')" title="${isEm || isEnglish ? 'Watch Video Explanation Inside App (Distraction-free)' : 'வீடியோ நேரடி விளக்கம் (செயலிக்குள்ளேயே காண்க)'}">
+                    <button type="button" class="videolink-btn" data-videourl="${item.videoUrl || item.videoFile}" data-q="${(typeof cleanText === 'function' ? cleanText(item.q) : (item.q || '').replace(/<[^>]+>/g, '')).substring(0, 45)}" onclick="openInAppVideoModal(this.dataset.videourl, this.dataset.q)" title="${isEm || isEnglish ? 'Watch Video Solution Inside App (Distraction-free)' : 'வீடியோ நேரடித் தீர்வு'}">
                       <span>🎬</span>
-                      <span>${isEm || isEnglish ? 'Watch Video' : 'வீடியோ பாடம்'}</span>
+                      <span>${isEm || isEnglish ? 'Video Solution' : 'வீடியோ தீர்வு (Video Solution)'}</span>
                     </button>
                     ` : ''}
                   </div>
@@ -7932,7 +7932,7 @@
     if (!modal || !container) return;
 
     if (titleEl) {
-      titleEl.textContent = title ? ('🎬 ' + title) : 'வீடியோ நேரடி விளக்கம் (Video Lesson)';
+    if (titleEl) { titleEl.textContent = title ? (title.startsWith('ðŸŽ¬') ? title : ('ðŸŽ¬ ' + title)) : 'ðŸŽ¬ à®µà¯€à®Ÿà®¿à®¯à¯‹ à®¨à¯‡à®°à®Ÿà®¿à®¤à¯ à®¤à¯€à®°à¯à®µà¯ (Video Solution)'; }
     }
 
     // Stop audio players to prevent overlapping sound
@@ -11213,7 +11213,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261101_v44')
+        navigator.serviceWorker.register('./sw.js?v=20261102_v45')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

@@ -1,4 +1,4 @@
-// Class 10 Mathematics - Unit 1: Relations and Functions
+﻿// Class 10 Mathematics - Unit 1: Relations and Functions
 // Tamil Nadu State Board Samacheer Kalvi Digital Guide (English Medium)
 // Note: English Medium is strictly in pure English without any Tamil words.
 
@@ -201,6 +201,7 @@ const MATHS_EM_UNIT_1_DATA = {
         },
         {
           id: "m_em_1_4",
+          videoUrl: "https://youtu.be/4Qz5ar5Vs-k",
           type: "5m",
           mark: "5 Marks",
           isImportant: true,
@@ -388,6 +389,7 @@ const MATHS_EM_UNIT_1_DATA = {
         },
         {
           id: "m_em_1_5",
+          videoUrl: "https://youtu.be/OhdYEnizwSE",
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",
@@ -1051,6 +1053,7 @@ const MATHS_EM_UNIT_1_DATA = {
         },
         {
           id: "m_em_2_3",
+          videoUrl: "https://youtu.be/dCyiAdWQEmg",
           type: "5m",
           mark: "5 Marks",
           examYear: "2020",

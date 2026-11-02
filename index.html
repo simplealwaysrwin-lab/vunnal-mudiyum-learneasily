@@ -106,12 +106,12 @@
 <script src="data_english_u2.js?v=20261031_v31"></script>
 <script src="data_english_u3.js?v=20261031_v31"></script>
 <script src="data_english_u4.js?v=20261031_v31"></script>
-  <script src="data_maths_tm_u1.js?v=20261102_v47"></script>
-<script src="data_maths_tm_u2.js?v=20261031_v31"></script>
+  <script src="data_maths_tm_u1.js?v=20261102_v48"></script>
+<script src="data_maths_tm_u2.js?v=20261102_v48"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u4.js?v=20261031_v31"></script>
-  <script src="data_maths_em_u1.js?v=20261102_v47"></script>
-<script src="data_maths_em_u2.js?v=20261031_v31"></script>
+  <script src="data_maths_em_u1.js?v=20261102_v48"></script>
+<script src="data_maths_em_u2.js?v=20261102_v48"></script>
 <script src="data_maths_em_u3.js?v=20261031_v31"></script>
 <script src="data_maths_em_u4.js?v=20261031_v31"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
@@ -1580,6 +1580,26 @@
   }
   .chalk-content div {
     color: #f8fafc;
+  }
+  /* Chalkboard formula container and override for inline background styles (prevents white-on-white) */
+  .chalk-content [style*="background"],
+  .chalk-content div[style*="background"] {
+    background: rgba(0, 0, 0, 0.45) !important;
+    color: #fde047 !important;
+    border: 1.5px dashed rgba(253, 224, 71, 0.6) !important;
+    border-left: 4px solid #facc15 !important;
+    border-radius: 8px !important;
+    text-shadow: 0 0 2px rgba(253, 224, 71, 0.6) !important;
+    padding: 10px 14px !important;
+    margin: 8px 0 !important;
+  }
+  .chalk-content [style*="#dcfce7"],
+  .chalk-content div[style*="#dcfce7"] {
+    background: rgba(22, 101, 52, 0.4) !important;
+    color: #4ade80 !important;
+    border: 1.5px solid #22c55e !important;
+    border-radius: 8px !important;
+    text-shadow: 0 0 2px rgba(74, 222, 128, 0.5) !important;
   }
   .chalk-concept-wrap {
     margin-top: 14px;
@@ -5943,7 +5963,7 @@
   let currentLessonViewMode = 'qa';
   let currentStoryId = 'story_prose';
   let currentLessonPage = 1;
-  const QUESTIONS_PER_PAGE = 5;
+  const QUESTIONS_PER_PAGE = 2;
 
   let storyLanguageMode = 'both'; // 'both', 'ta', 'en'
   function setStoryLanguageMode(mode) {
@@ -10548,15 +10568,15 @@ ${directLink}
             fullBoardView.innerHTML = `
               <div style="text-align:left; padding:8px 12px;">
                 <div class="chalkboard-top-bar" style="margin-bottom:14px;">
-                  <span class="chalk-badge-pill">â˜… ${this.currentQ.mark || (isEm ? '2 Marks' : '2 à®®à®¤à®¿à®ªà¯à®ªà¯†à®£à¯')}</span>
-                  <span style="color:#94a3b8; font-size:12px;">ðŸŽ¨ ${isEm ? 'Full Classroom Chalkboard' : 'à®®à¯à®´à¯ à®µà®•à¯à®ªà¯à®ªà®±à¯ˆà®•à¯ à®•à®°à¯à®®à¯à®ªà®²à®•à¯ˆ'}</span>
+                  <span class="chalk-badge-pill">\u2605 ${this.currentQ.mark || (isEm ? '2 Marks' : '2 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC6\u0BA3\u0BCD')}</span>
+                  <span style="color:#94a3b8; font-size:12px;">\uD83C\uDFA8 ${isEm ? 'Full Classroom Chalkboard' : '\u0BAE\u0BC1\u0BB4\u0BC1 \u0BB5\u0B95\u0BC1\u0BAA\u0BCD\u0BAA\u0BB1\u0BC8\u0B95\u0BCD \u0B95\u0BB0\u0BC1\u0BAE\u0BCD\u0BAA\u0BB2\u0B95\u0BC8'}</span>
                 </div>
                 <div class="chalk-content" style="font-size:16.5px; line-height:2;">
                   ${ansHtml}
                 </div>
                 ${keyConcept ? `
                   <div class="chalk-concept-wrap" style="margin-top:16px;">
-                    <div class="chalk-concept-badge">ðŸ’¡ ${isEm ? 'Key Concept / Scoring Note:' : 'à®®à¯à®•à¯à®•à®¿à®¯à®•à¯ à®•à®°à¯à®¤à¯à®¤à¯ (Key Concept):'}</div>
+                    <div class="chalk-concept-badge">\uD83D\uDCA1 ${isEm ? 'Key Concept / Scoring Note:' : '\u0BAE\u0BC1\u0B95\u0BCD\u0B95\u0BBF\u0BAF\u0B95\u0BCD \u0B95\u0BB0\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1 (Key Concept):'}</div>
                     <div class="chalk-concept-text" style="font-size:14.5px;">${keyConcept}</div>
                   </div>
                 ` : ''}
@@ -11425,7 +11445,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261102_v47')
+        navigator.serviceWorker.register('./sw.js?v=20261102_v48')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

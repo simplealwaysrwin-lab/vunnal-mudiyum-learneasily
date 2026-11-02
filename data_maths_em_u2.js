@@ -133,7 +133,7 @@ const MATHS_EM_UNIT_2_DATA = {
           ans: `<div style="line-height:1.8;">
             <b>Step-by-Step Evaluation:</b><br><br>
             Euclid's division algorithm is based on the formula:<br>
-            <div style="background:var(--bg-page); padding:8px 12px; border-radius:8px; border-left:3px solid var(--primary); margin:6px 0; font-weight:700;">
+            <div style="background:rgba(0,0,0,0.45); padding:10px 14px; border-radius:8px; border:1.5px dashed #fde047; border-left:4px solid #facc15; margin:8px 0; font-weight:800; color:#fde047; text-shadow:0 0 2px rgba(253,224,71,0.6);">
               Dividend (a) = Divisor (b) × Quotient (q) + Remainder (r), where 0 ≤ r &lt; b
             </div>
             We apply this step-by-step until the remainder becomes 0.<br><br>

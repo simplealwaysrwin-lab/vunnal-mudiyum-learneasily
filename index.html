@@ -97,7 +97,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Serif+Tamil:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Serif+Tamil:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="data_tamil_u1.js?v=20261031_v31"></script>
 <script src="data_tamil_u2.js?v=20261031_v31"></script>
 <script src="data_tamil_u3.js?v=20261031_v31"></script>
@@ -106,11 +106,11 @@
 <script src="data_english_u2.js?v=20261031_v31"></script>
 <script src="data_english_u3.js?v=20261031_v31"></script>
 <script src="data_english_u4.js?v=20261031_v31"></script>
-  <script src="data_maths_tm_u1.js?v=20261102_v45"></script>
+  <script src="data_maths_tm_u1.js?v=20261102_v47"></script>
 <script src="data_maths_tm_u2.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u4.js?v=20261031_v31"></script>
-  <script src="data_maths_em_u1.js?v=20261102_v45"></script>
+  <script src="data_maths_em_u1.js?v=20261102_v47"></script>
 <script src="data_maths_em_u2.js?v=20261031_v31"></script>
 <script src="data_maths_em_u3.js?v=20261031_v31"></script>
 <script src="data_maths_em_u4.js?v=20261031_v31"></script>
@@ -697,7 +697,9 @@
   .lesson-left {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
   }
   .unit-badge {
     background: linear-gradient(135deg, #244d38, #1a3829);
@@ -705,11 +707,45 @@
     border: 1.5px solid #36674f;
     font-weight: 800;
     font-size: 13px;
-    padding: 6px 12px;
+    padding: 6px 14px;
     border-radius: 8px;
-    min-width: 70px;
+    display: inline-block;
     text-align: center;
     box-shadow: 0 2px 6px rgba(19, 43, 33, 0.2);
+  }
+  .lesson-item .unit-badge {
+    width: 86px;
+    min-width: 86px;
+    max-width: 86px;
+    padding: 7px 4px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .unit-badge .ub-name {
+    font-weight: 800;
+    line-height: 1.15;
+    color: #f5a623;
+    text-align: center;
+    letter-spacing: 0.1px;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .unit-badge .ub-num {
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #fde047;
+    margin-top: 2px;
+  }
+  .lesson-item .unit-badge[style*="background"] .ub-name,
+  .lesson-item .unit-badge[style*="background"] .ub-num {
+    color: inherit;
   }
   .lesson-title-text {
     font-size: 17px;
@@ -1459,6 +1495,117 @@
     display: inline-block;
     box-shadow: 0 2px 6px rgba(244, 114, 182, 0.25);
   }
+    /* ========================================================
+     Blackboard Chalk Solution Cards (Authentic Classroom Slate)
+     ======================================================== */
+  .chalkboard-card {
+    background: linear-gradient(135deg, #3d220f 0%, #5c3517 50%, #2e1708 100%);
+    border: 3.5px solid #241306;
+    border-radius: 14px;
+    padding: 8px;
+    margin: 12px 0 16px 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,255,0.25);
+  }
+  .chalkboard-slate {
+    background: radial-gradient(circle at 50% 30%, #1a3829 0%, #11261b 70%, #0a1710 100%);
+    border: 2px solid #234e38;
+    border-radius: 8px;
+    padding: 16px 18px;
+    box-shadow: inset 0 0 35px rgba(0,0,0,0.85);
+    position: relative;
+    overflow: hidden;
+  }
+  .chalkboard-slate::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.04) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.03) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .chalkboard-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-bottom: 1.5px dashed rgba(255,255,255,0.22);
+    padding-bottom: 8px;
+  }
+  .chalk-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1.5px solid #fde047;
+    color: #fde047;
+    background: rgba(253, 224, 71, 0.12);
+    padding: 3px 10px;
+    border-radius: 16px;
+    font-weight: 800;
+    font-size: 12px;
+    text-shadow: 0 0 2px rgba(253,224,71,0.6);
+    letter-spacing: 0.3px;
+  }
+  .chalk-zoom-btn {
+    background: rgba(255, 255, 255, 0.12);
+    color: #f1f5f9;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 14px;
+    padding: 3px 12px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .chalk-zoom-btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+  .chalk-content {
+    font-family: 'Kalam', 'Mukta Malar', cursive, system-ui, -apple-system, sans-serif;
+    color: #f8fafc;
+    font-size: 15.5px;
+    line-height: 1.85;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 1.5px rgba(255,255,255,0.6);
+  }
+  .chalk-content b,
+  .chalk-content strong {
+    color: #fde047 !important;
+    text-shadow: 0 0 2px rgba(253,224,71,0.7) !important;
+    font-weight: 700 !important;
+  }
+  .chalk-content div {
+    color: #f8fafc;
+  }
+  .chalk-concept-wrap {
+    margin-top: 14px;
+    border: 1.5px dashed #fde047;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .chalk-concept-badge {
+    color: #fde047;
+    font-weight: 800;
+    font-size: 13.5px;
+    margin-bottom: 4px;
+    text-shadow: 0 0 2px rgba(253,224,71,0.6);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .chalk-concept-text {
+    color: #f1f5f9;
+    font-size: 13.5px;
+    line-height: 1.6;
+    font-style: italic;
+    opacity: 0.95;
+  }
+
   .bb-compare-container {
     display: flex;
     align-items: center;
@@ -5673,7 +5820,7 @@
                 return `
                   <div class="lesson-item" onclick="selectLesson('${l.id}')">
                     <div class="lesson-left">
-                      <div class="unit-badge" style="background:${s.bgColor}; color:${s.color}; border:1px solid ${s.color}40;">${l.unit}</div>
+                      <div class="unit-badge" style="background:${s.bgColor}; color:${s.color}; border:1px solid ${s.color}40;">${formatUnitBadge(l.unit)}</div>
                       <div>
                         <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px; flex-wrap:wrap;">
                           <span style="font-size:11px; font-weight:800; padding:2px 7px; border-radius:6px; ${isTm ? 'background:#fee2e2; color:#b91c1c;' : 'background:#cffafe; color:#0e7490;'}">${s.name} • ${isTm ? 'தமிழ் வழி' : 'English Medium'}</span>
@@ -5737,6 +5884,20 @@
     window.location.hash = subId;
   }
 
+    function formatUnitBadge(unitStr) {
+    if (!unitStr) return '';
+    const str = String(unitStr).trim();
+    const parts = str.split(/\s+/);
+    if (parts.length >= 2) {
+      const num = parts.pop();
+      const name = parts.join(' ');
+      const isVeryLong = name.length >= 8;
+      const fSize = isVeryLong ? '10px' : '11px';
+      return `<span class="ub-name" style="font-size:${fSize};">${name}</span><span class="ub-num">${num}</span>`;
+    }
+    return `<span class="ub-name" style="font-size:11px;">${str}</span>`;
+  }
+
   function renderSubjectLessons() {
     if (!currentSubject) { renderHome(); return; }
     const isEm = currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english');
@@ -5763,7 +5924,7 @@
           return `
           <div class="lesson-item" onclick="selectLesson('${l.id}')">
             <div class="lesson-left">
-              <div class="unit-badge">${l.unit}</div>
+              <div class="unit-badge">${formatUnitBadge(l.unit)}</div>
               <div>
                 <div class="lesson-title-text">${l.title}</div>
                 <div class="lesson-meta">${l.qCount || (l.questions ? l.questions.length : 15)} ${isEm ? 'Questions & Solutions' : 'வினா-விடைகள் உள்ளன'} • <span style="color:#d97706; font-weight:800;">🏆 ${isEm ? 'Mock Test' : 'மாதிரித் தேர்வு'}</span>${cpCount > 0 ? ` • <span style="color:#0284c7; font-weight:800; cursor:pointer;" onclick="event.stopPropagation(); selectLesson('${l.id}', 'checkpoints')">🧠 ${isEm ? 'Checkpoints (1 Click)' : 'நினைவூட்டல் (1 Click)'}</span>` : ''}</div>
@@ -6121,8 +6282,7 @@
               <h2 style="font-size:22px; font-weight:800; margin-top:6px;">${currentLesson.title}</h2>
             </div>
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-              <button class="tab-btn" onclick="adjustFontSize(-1)" title="எழுத்துரு அளவைக் குறை">A -</button>
-              <button class="tab-btn" onclick="adjustFontSize(1)" title="எழுத்துரு அளவை கூட்டு">A +</button>
+              
               <button class="tab-btn" onclick="selectSubject('${currentSubject.id}')" style="display:flex; align-items:center; gap:5px; background:var(--primary-light); color:var(--primary); font-weight:800;">
                 ⬅ அலகுகள் (Units)
               </button>
@@ -6508,8 +6668,7 @@
             <h2 style="font-size:22px; font-weight:800; margin-top:6px;">${currentLesson.title}</h2>
           </div>
           <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-            <button class="tab-btn" onclick="adjustFontSize(-1)" title="${isEm ? 'Decrease font size' : 'எழுத்துரு அளவைக் குறை'}">A -</button>
-            <button class="tab-btn" onclick="adjustFontSize(1)" title="${isEm ? 'Increase font size' : 'எழுத்துரு அளவை கூட்டு'}">A +</button>
+            
             <button class="tab-btn" onclick="selectSubject('${currentSubject.id}')" style="display:flex; align-items:center; gap:5px; background:var(--primary-light); color:var(--primary); font-weight:800;">
               ⬅ ${isEm ? 'Units' : (isTm ? 'அலகுகள்' : 'அலகுகள் (Units)')}
             </button>
@@ -6911,8 +7070,9 @@
                       <span>📖 ${isEm || isEnglish ? 'View Full Detailed Textbook Proof / Solution ▾' : 'பாடநூல் முழுமையான தீர்வைக் காண்க ▾'}</span>
                     </summary>
                     <div style="padding:14px; background:#ffffff;">
-                      <span class="ans-label">${isEm || isEnglish ? 'Answer:' : (isTm ? 'விடை:' : 'விடை (Answer):')}</span><br>
+                      <span class="ans-label">${isEm || isEnglish ? 'Answer:' : (isTm ? '\u0BB5\u0BBF\u0B9F\u0BC8:' : '\u0BB5\u0BBF\u0B9F\u0BC8 (Answer):')}</span><br>
                       <div>${cleanMathEncoding(item.ans)}</div>
+
 
 
                   ${item.detailedSolution ? `
@@ -6975,8 +7135,30 @@
                     </div>
                   </details>
                 ` : `
-                  <span class="ans-label">${isEm || isEnglish ? 'Answer:' : (isTm ? 'விடை:' : 'விடை (Answer):')}</span><br>
-                  <div>${cleanMathEncoding(item.ans)}</div>
+                  ${(item.type === '2m' || (item.mark && item.mark.includes('2'))) ? `
+                    <div class="chalkboard-card">
+                      <div class="chalkboard-slate">
+                        <div class="chalkboard-top-bar">
+                          <span class="chalk-badge-pill">\u2605 ${item.mark || (isEm || isEnglish ? '2 Marks' : '\u0032 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC6\u0BA3\u0BCD')}</span>
+                          <button type="button" class="chalk-zoom-btn" onclick="openBlackboardModal('${item.id}', 'board')" title="${isEm || isEnglish ? 'Tap for Fullscreen Chalkboard Zoom' : '\u0BAE\u0BC1\u0BB4\u0BC1\u0BA4\u0BCD\u0BA4\u0BBF\u0BB0\u0BC8\u0B95\u0BCD \u0B95\u0BB0\u0BC1\u0BAE\u0BCD\u0BAA\u0BB2\u0B95\u0BC8\u0B95\u0BCD \u0B95\u0BBE\u0B9F\u0BCD\u0B9A\u0BBF (Zoom)'}">
+                            \uD83D\uDD0D ${isEm || isEnglish ? 'Tap to Zoom' : '\u0BA4\u0BCA\u0B9F\u0BCD\u0B9F\u0BC1\u0BAA\u0BCD \u0BAA\u0BC6\u0BB0\u0BBF\u0BA4\u0BBE\u0B95\u0BCD\u0B95\u0BC1\u0B95'}
+                          </button>
+                        </div>
+                        <div class="chalk-content">
+                          ${cleanMathEncoding(item.ans)}
+                        </div>
+                        ${(item.ansTamil || item.explanation) ? `
+                          <div class="chalk-concept-wrap">
+                            <div class="chalk-concept-badge">\uD83D\uDCA1 ${isEm || isEnglish ? 'Key Concept:' : '\u0BAE\u0BC1\u0B95\u0BCD\u0B95\u0BBF\u0BAF\u0B95\u0BCD \u0B95\u0BB0\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1 (Key Concept):'}</div>
+                            <div class="chalk-concept-text">${isEm || isEnglish ? (item.explanation || item.ansTamil) : (item.ansTamil || item.explanation)}</div>
+                          </div>
+                        ` : ''}
+                      </div>
+                    </div>
+                  ` : `
+                    <span class="ans-label">${isEm || isEnglish ? 'Answer:' : (isTm ? '\u0BB5\u0BBF\u0B9F\u0BC8:' : '\u0BB5\u0BBF\u0B9F\u0BC8 (Answer):')}</span><br>
+                    <div>${cleanMathEncoding(item.ans)}</div>
+                  `}
 
 
                   ${item.detailedSolution ? `
@@ -7009,11 +7191,11 @@
                     </div>
                   ` : ''}
 
-                  ${(item.ansTamil && !isEm && !isEnglish) ? `
+                  ${(item.ansTamil && !isEm && !isEnglish && item.type !== '2m' && !(item.mark && item.mark.includes('2'))) ? `
                     <div style="margin-top:10px; padding:8px 12px; background:var(--bg-page); border-left:3px solid #16a34a; border-radius:6px; font-size:${contentFontSize - 1}px; color:var(--text-main); line-height:1.5;">
                       <span style="font-weight:700; color:#15803d;">💡 ${isTm ? 'எளிய விளக்கம்:' : 'எளிய விளக்கம் (Explanation):'}</span> ${item.ansTamil}
                     </div>
-                  ` : (item.explanation && (isEm || isEnglish)) ? `
+                  ` : (item.explanation && (isEm || isEnglish) && item.type !== '2m' && !(item.mark && item.mark.includes('2'))) ? `
                     <div style="margin-top:10px; padding:8px 12px; background:var(--bg-page); border-left:3px solid #16a34a; border-radius:6px; font-size:${contentFontSize - 1}px; color:var(--text-main); line-height:1.5;">
                       <span style="font-weight:700; color:#15803d;">💡 Key Concept:</span> ${cleanMathEncoding(item.explanation)}
                     </div>
@@ -7087,7 +7269,7 @@
                 <!-- Doubt, Audio, and Public Exam Action Bar -->
                 <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-top:14px; padding-top:10px; border-top:1px dashed var(--border);">
                   <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-                    ${((item.blackboard || item.isImportant || item.type === '5m') && item.type !== '1m') ? `
+                    ${((item.blackboard || item.isImportant || item.type === '5m' || item.type === '2m' || (item.mark && item.mark.includes('2'))) && item.type !== '1m') ? `
                     <button type="button" class="blackboard-btn" onclick="openBlackboardModal('${item.id}', 'steps')" title="${isEm || isEnglish ? 'Interactive Blackboard Demo (Step-by-step animation)' : 'கரும்பலகை அனிமேஷன் பாடம் (படிநிலைகளாகக் காண்க)'}">
                       <span>👨‍🏫</span>
                       <span>${isEm || isEnglish ? 'Blackboard Demo' : 'கரும்பலகை பாடம்'}</span>
@@ -7157,7 +7339,7 @@
                     ` : ''}
                     ` : ''}
                     ${(item.videoUrl || item.videoFile) ? `
-                    <button type="button" class="videolink-btn" data-videourl="${item.videoUrl || item.videoFile}" data-q="${(typeof cleanText === 'function' ? cleanText(item.q) : (item.q || '').replace(/<[^>]+>/g, '')).substring(0, 45)}" onclick="openInAppVideoModal(this.dataset.videourl, this.dataset.q)" title="${isEm || isEnglish ? 'Watch Video Solution Inside App (Distraction-free)' : 'வீடியோ நேரடித் தீர்வு'}">
+                    <button type="button" class="videolink-btn" data-videourl="${item.videoUrl || item.videoFile}" data-q="${isEm || isEnglish ? `Question ${displayQNum} \u2022 Video Solution` : `\u0BB5\u0BBF\u0BA9\u0BBE ${displayQNum} \u2022 \u0BB5\u0BC0\u0B9F\u0BBF\u0BAF\u0BCB \u0BA4\u0BC0\u0BB0\u0BCD\u0BB5\u0BC1`}" onclick="openInAppVideoModal(this.dataset.videourl, this.dataset.q)" title="${isEm || isEnglish ? 'Watch Video Solution Inside App (Distraction-free)' : '\u0BB5\u0BC0\u0B9F\u0BBF\u0BAF\u0BCB \u0BA8\u0BC7\u0BB0\u0B9F\u0BBF\u0BA4\u0BCD \u0BA4\u0BC0\u0BB0\u0BCD\u0BB5\u0BC1'}">
                       <span>🎬</span>
                       <span>${isEm || isEnglish ? 'Video Solution' : 'வீடியோ தீர்வு (Video Solution)'}</span>
                     </button>
@@ -7931,8 +8113,18 @@
     const titleEl = document.getElementById('videoModalTitle');
     if (!modal || !container) return;
 
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
     if (titleEl) {
-    if (titleEl) { titleEl.textContent = title ? (title.startsWith('ðŸŽ¬') ? title : ('ðŸŽ¬ ' + title)) : 'ðŸŽ¬ à®µà¯€à®Ÿà®¿à®¯à¯‹ à®¨à¯‡à®°à®Ÿà®¿à®¤à¯ à®¤à¯€à®°à¯à®µà¯ (Video Solution)'; }
+      if (title && typeof title === 'string' && title.trim().length > 0) {
+        const cleanHeading = title.replace(/^[^\w\u0B80-\u0BFF]+/, '').trim();
+        titleEl.textContent = cleanHeading || (isEm ? 'Video Solution' : '\u0BB5\u0BC0\u0B9F\u0BBF\u0BAF\u0BCB \u0BA8\u0BC7\u0BB0\u0B9F\u0BBF \u0BB5\u0BBF\u0BB3\u0B95\u0BCD\u0B95\u0BAE\u0BCD');
+      } else {
+        titleEl.textContent = isEm ? 'Video Solution' : '\u0BB5\u0BC0\u0B9F\u0BBF\u0BAF\u0BCB \u0BA8\u0BC7\u0BB0\u0B9F\u0BBF \u0BB5\u0BBF\u0BB3\u0B95\u0BCD\u0B95\u0BAE\u0BCD';
+      }
+    }
+    const subEl = document.getElementById('videoModalSub');
+    if (subEl) {
+      subEl.textContent = isEm ? '\uD83D\uDD12 Ad-Free & Distraction-Free Direct Video' : '\uD83D\uDD12 \u0BB5\u0BBF\u0BB3\u0BAE\u0BCD\u0BAA\u0BB0\u0B99\u0BCD\u0B95\u0BB3\u0BCD / \u0B85\u0B9F\u0BC1\u0BA4\u0BCD\u0BA4 \u0BB5\u0BC0\u0B9F\u0BBF\u0BAF\u0BCB\u0B95\u0BCD\u0B95\u0BB3\u0BCD \u0B85\u0BB1\u0BCD\u0BB1 \u0BA8\u0BC7\u0BB0\u0B9F\u0BBF \u0B87\u0BAF\u0B95\u0BCD\u0B95\u0BAE\u0BCD';
     }
 
     // Stop audio players to prevent overlapping sound
@@ -10350,6 +10542,26 @@ ${directLink}
               `;
             }
             fullBoardView.innerHTML = fullHtml;
+          } else {
+            const ansHtml = cleanMathEncoding(this.currentQ.ans || '');
+            const keyConcept = isEm ? (this.currentQ.explanation || this.currentQ.ansTamil) : (this.currentQ.ansTamil || this.currentQ.explanation);
+            fullBoardView.innerHTML = `
+              <div style="text-align:left; padding:8px 12px;">
+                <div class="chalkboard-top-bar" style="margin-bottom:14px;">
+                  <span class="chalk-badge-pill">â˜… ${this.currentQ.mark || (isEm ? '2 Marks' : '2 à®®à®¤à®¿à®ªà¯à®ªà¯†à®£à¯')}</span>
+                  <span style="color:#94a3b8; font-size:12px;">ðŸŽ¨ ${isEm ? 'Full Classroom Chalkboard' : 'à®®à¯à®´à¯ à®µà®•à¯à®ªà¯à®ªà®±à¯ˆà®•à¯ à®•à®°à¯à®®à¯à®ªà®²à®•à¯ˆ'}</span>
+                </div>
+                <div class="chalk-content" style="font-size:16.5px; line-height:2;">
+                  ${ansHtml}
+                </div>
+                ${keyConcept ? `
+                  <div class="chalk-concept-wrap" style="margin-top:16px;">
+                    <div class="chalk-concept-badge">ðŸ’¡ ${isEm ? 'Key Concept / Scoring Note:' : 'à®®à¯à®•à¯à®•à®¿à®¯à®•à¯ à®•à®°à¯à®¤à¯à®¤à¯ (Key Concept):'}</div>
+                    <div class="chalk-concept-text" style="font-size:14.5px;">${keyConcept}</div>
+                  </div>
+                ` : ''}
+              </div>
+            `;
           }
         }
         if (stepNav) stepNav.style.opacity = '0.3';
@@ -11213,7 +11425,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261102_v45')
+        navigator.serviceWorker.register('./sw.js?v=20261102_v47')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

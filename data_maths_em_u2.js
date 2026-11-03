@@ -726,7 +726,6 @@ const MATHS_EM_UNIT_2_DATA = {
         },
         {
           id: "m_em_2_10",
-          videoUrl: "https://youtu.be/ywHp_eZi0B8",
           detailedSolution: {
             title: "Step-by-Step Detailed Solution & Working:",
             sections: [

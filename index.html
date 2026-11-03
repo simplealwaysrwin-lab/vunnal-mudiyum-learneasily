@@ -89,7 +89,7 @@
 <script>
   // Build tracker
   (function() {
-    const CURRENT_BUILD = '20261031_v34';
+    const CURRENT_BUILD = '20261103_v50';
     try {
       localStorage.setItem('vm_build_ver', CURRENT_BUILD);
     } catch(e) {}
@@ -106,12 +106,12 @@
 <script src="data_english_u2.js?v=20261031_v31"></script>
 <script src="data_english_u3.js?v=20261031_v31"></script>
 <script src="data_english_u4.js?v=20261031_v31"></script>
-  <script src="data_maths_tm_u1.js?v=20261103_v49"></script>
-<script src="data_maths_tm_u2.js?v=20261103_v49"></script>
+  <script src="data_maths_tm_u1.js?v=20261103_v50"></script>
+<script src="data_maths_tm_u2.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u4.js?v=20261031_v31"></script>
-  <script src="data_maths_em_u1.js?v=20261103_v49"></script>
-<script src="data_maths_em_u2.js?v=20261103_v49"></script>
+  <script src="data_maths_em_u1.js?v=20261103_v50"></script>
+<script src="data_maths_em_u2.js?v=20261103_v50"></script>
 <script src="data_maths_em_u3.js?v=20261031_v31"></script>
 <script src="data_maths_em_u4.js?v=20261031_v31"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
@@ -146,6 +146,14 @@
 <script src="data_social_u8.js?v=20261031_v33"></script>
 <script src="data_social_em_u7.js?v=20261031_v33"></script>
 <script src="data_social_em_u8.js?v=20261031_v33"></script>
+<script src="data_science_u9.js?v=20261103_v50"></script>
+<script src="data_science_u10.js?v=20261103_v50"></script>
+<script src="data_science_em_u9.js?v=20261103_v50"></script>
+<script src="data_science_em_u10.js?v=20261103_v50"></script>
+<script src="data_social_u9.js?v=20261103_v50"></script>
+<script src="data_social_u10.js?v=20261103_v50"></script>
+<script src="data_social_em_u9.js?v=20261103_v50"></script>
+<script src="data_social_em_u10.js?v=20261103_v50"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -714,9 +722,9 @@
     box-shadow: 0 2px 6px rgba(19, 43, 33, 0.2);
   }
   .lesson-item .unit-badge {
-    width: 86px;
-    min-width: 86px;
-    max-width: 86px;
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
     padding: 7px 4px;
     border-radius: 10px;
     flex-shrink: 0;
@@ -732,9 +740,13 @@
     line-height: 1.15;
     color: #f5a623;
     text-align: center;
-    letter-spacing: 0.1px;
+    letter-spacing: -0.2px;
     white-space: nowrap;
     max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
   }
   .unit-badge .ub-num {
     font-size: 15px;
@@ -4896,6 +4908,24 @@
             subSections: (typeof SCIENCE_UNIT_8_DATA !== 'undefined') ? SCIENCE_UNIT_8_DATA.subSections : [],
             questions: (typeof SCIENCE_UNIT_8_DATA !== 'undefined' && SCIENCE_UNIT_8_DATA.subSections) ? SCIENCE_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof SCIENCE_UNIT_8_DATA !== 'undefined') ? SCIENCE_UNIT_8_DATA.formulas : []
+          },
+          {
+            id: 'sci_u9',
+            unit: '\u0B85\u0BB2\u0B95\u0BC1 9',
+            title: '\u0B95\u0BB0\u0BC8\u0B9A\u0BB2\u0BCD\u0B95\u0BB3\u0BCD (Solutions)',
+            qCount: (typeof SCIENCE_UNIT_9_DATA !== 'undefined' && SCIENCE_UNIT_9_DATA.subSections) ? SCIENCE_UNIT_9_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_9_DATA !== 'undefined') ? SCIENCE_UNIT_9_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_9_DATA !== 'undefined' && SCIENCE_UNIT_9_DATA.subSections) ? SCIENCE_UNIT_9_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_9_DATA !== 'undefined') ? SCIENCE_UNIT_9_DATA.formulas : []
+          },
+          {
+            id: 'sci_u10',
+            unit: '\u0B85\u0BB2\u0B95\u0BC1 10',
+            title: '\u0BB5\u0BC7\u0BA4\u0BBF\u0BB5\u0BBF\u0BA9\u0BC8\u0B95\u0BB3\u0BBF\u0BA9\u0BCD \u0BB5\u0B95\u0BC8\u0B95\u0BB3\u0BCD (Types of Chemical Reactions)',
+            qCount: (typeof SCIENCE_UNIT_10_DATA !== 'undefined' && SCIENCE_UNIT_10_DATA.subSections) ? SCIENCE_UNIT_10_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_10_DATA !== 'undefined') ? SCIENCE_UNIT_10_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_10_DATA !== 'undefined' && SCIENCE_UNIT_10_DATA.subSections) ? SCIENCE_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_10_DATA !== 'undefined') ? SCIENCE_UNIT_10_DATA.formulas : []
           }
         ]
       },
@@ -4979,6 +5009,24 @@
             subSections: (typeof SCIENCE_EM_UNIT_8_DATA !== 'undefined') ? SCIENCE_EM_UNIT_8_DATA.subSections : [],
             questions: (typeof SCIENCE_EM_UNIT_8_DATA !== 'undefined' && SCIENCE_EM_UNIT_8_DATA.subSections) ? SCIENCE_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof SCIENCE_EM_UNIT_8_DATA !== 'undefined') ? SCIENCE_EM_UNIT_8_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u9',
+            unit: 'Unit 9',
+            title: 'Solutions',
+            qCount: (typeof SCIENCE_EM_UNIT_9_DATA !== 'undefined' && SCIENCE_EM_UNIT_9_DATA.subSections) ? SCIENCE_EM_UNIT_9_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_9_DATA !== 'undefined') ? SCIENCE_EM_UNIT_9_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_9_DATA !== 'undefined' && SCIENCE_EM_UNIT_9_DATA.subSections) ? SCIENCE_EM_UNIT_9_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_9_DATA !== 'undefined') ? SCIENCE_EM_UNIT_9_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u10',
+            unit: 'Unit 10',
+            title: 'Types of Chemical Reactions',
+            qCount: (typeof SCIENCE_EM_UNIT_10_DATA !== 'undefined' && SCIENCE_EM_UNIT_10_DATA.subSections) ? SCIENCE_EM_UNIT_10_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_10_DATA !== 'undefined') ? SCIENCE_EM_UNIT_10_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_10_DATA !== 'undefined' && SCIENCE_EM_UNIT_10_DATA.subSections) ? SCIENCE_EM_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_10_DATA !== 'undefined') ? SCIENCE_EM_UNIT_10_DATA.formulas : []
           }
         ]
       },
@@ -5061,6 +5109,24 @@
             subSections: (typeof SOCIAL_UNIT_8_DATA !== 'undefined') ? SOCIAL_UNIT_8_DATA.subSections : [],
             questions: (typeof SOCIAL_UNIT_8_DATA !== 'undefined' && SOCIAL_UNIT_8_DATA.subSections) ? SOCIAL_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             timeline: (typeof SOCIAL_UNIT_8_DATA !== 'undefined') ? SOCIAL_UNIT_8_DATA.timeline : []
+          },
+          {
+            id: 'soc_h3',
+            unit: '\u0BB5\u0BB0\u0BB2\u0BBE\u0BB1\u0BC1 3',
+            title: '\u0B87\u0BB0\u0BA3\u0BCD\u0B9F\u0BBE\u0BAE\u0BCD \u0B89\u0BB2\u0B95\u0BAA\u0BCD\u0BAA\u0BCB\u0BB0\u0BCD (World War II)',
+            qCount: (typeof SOCIAL_UNIT_9_DATA !== 'undefined' && SOCIAL_UNIT_9_DATA.subSections) ? SOCIAL_UNIT_9_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_9_DATA !== 'undefined') ? SOCIAL_UNIT_9_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_9_DATA !== 'undefined' && SOCIAL_UNIT_9_DATA.subSections) ? SOCIAL_UNIT_9_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            timeline: (typeof SOCIAL_UNIT_9_DATA !== 'undefined') ? SOCIAL_UNIT_9_DATA.timeline : []
+          },
+          {
+            id: 'soc_g3',
+            unit: '\u0BAA\u0BC1\u0BB5\u0BBF\u0BAF\u0BBF\u0BAF\u0BB2\u0BCD 3',
+            title: '\u0B87\u0BA8\u0BCD\u0BA4\u0BBF\u0BAF\u0BBE - \u0BB5\u0BC7\u0BB3\u0BBE\u0BA3\u0BCD\u0BAE\u0BC8 (India - Agriculture)',
+            qCount: (typeof SOCIAL_UNIT_10_DATA !== 'undefined' && SOCIAL_UNIT_10_DATA.subSections) ? SOCIAL_UNIT_10_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_10_DATA !== 'undefined') ? SOCIAL_UNIT_10_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_10_DATA !== 'undefined' && SOCIAL_UNIT_10_DATA.subSections) ? SOCIAL_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            geoHighlights: (typeof SOCIAL_UNIT_10_DATA !== 'undefined') ? SOCIAL_UNIT_10_DATA.geoHighlights : []
           }
         ]
       },
@@ -5142,6 +5208,24 @@
             subSections: (typeof SOCIAL_EM_UNIT_8_DATA !== 'undefined') ? SOCIAL_EM_UNIT_8_DATA.subSections : [],
             questions: (typeof SOCIAL_EM_UNIT_8_DATA !== 'undefined' && SOCIAL_EM_UNIT_8_DATA.subSections) ? SOCIAL_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             timeline: (typeof SOCIAL_EM_UNIT_8_DATA !== 'undefined') ? SOCIAL_EM_UNIT_8_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_h3',
+            unit: 'History 3',
+            title: 'World War II',
+            qCount: (typeof SOCIAL_EM_UNIT_9_DATA !== 'undefined' && SOCIAL_EM_UNIT_9_DATA.subSections) ? SOCIAL_EM_UNIT_9_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_9_DATA !== 'undefined') ? SOCIAL_EM_UNIT_9_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_9_DATA !== 'undefined' && SOCIAL_EM_UNIT_9_DATA.subSections) ? SOCIAL_EM_UNIT_9_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            timeline: (typeof SOCIAL_EM_UNIT_9_DATA !== 'undefined') ? SOCIAL_EM_UNIT_9_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_g3',
+            unit: 'Geography 3',
+            title: 'India - Agriculture',
+            qCount: (typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined' && SOCIAL_EM_UNIT_10_DATA.subSections) ? SOCIAL_EM_UNIT_10_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined') ? SOCIAL_EM_UNIT_10_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined' && SOCIAL_EM_UNIT_10_DATA.subSections) ? SOCIAL_EM_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            geoHighlights: (typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined') ? SOCIAL_EM_UNIT_10_DATA.geoHighlights : []
           }
         ]
       }
@@ -5975,11 +6059,16 @@
     if (parts.length >= 2) {
       const num = parts.pop();
       const name = parts.join(' ');
-      const isVeryLong = name.length >= 8;
-      const fSize = isVeryLong ? '10px' : '11px';
+      let fSize = '11.5px';
+      if (name.length >= 10) {
+        fSize = '9px';
+      } else if (name.length >= 8) {
+        fSize = '9.5px';
+      }
       return `<span class="ub-name" style="font-size:${fSize};">${name}</span><span class="ub-num">${num}</span>`;
     }
-    return `<span class="ub-name" style="font-size:11px;">${str}</span>`;
+    const fSize = str.length >= 10 ? '9px' : (str.length >= 8 ? '9.5px' : '11.5px');
+    return `<span class="ub-name" style="font-size:${fSize};">${str}</span>`;
   }
 
   function renderSubjectLessons() {
@@ -6286,7 +6375,47 @@
       lesson.questions = SOCIAL_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
       lesson.timeline = SOCIAL_EM_UNIT_8_DATA.timeline || [];
       lesson.qCount = lesson.questions.length;
-  }
+    } else if (lesId === 'sci_u9' && typeof SCIENCE_UNIT_9_DATA !== 'undefined' && SCIENCE_UNIT_9_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_9_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_9_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_9_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u9' && typeof SCIENCE_EM_UNIT_9_DATA !== 'undefined' && SCIENCE_EM_UNIT_9_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_9_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_9_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_9_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u10' && typeof SCIENCE_UNIT_10_DATA !== 'undefined' && SCIENCE_UNIT_10_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_10_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_10_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u10' && typeof SCIENCE_EM_UNIT_10_DATA !== 'undefined' && SCIENCE_EM_UNIT_10_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_10_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_10_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_h3' && typeof SOCIAL_UNIT_9_DATA !== 'undefined' && SOCIAL_UNIT_9_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_9_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_9_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.timeline = SOCIAL_UNIT_9_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_h3' && typeof SOCIAL_EM_UNIT_9_DATA !== 'undefined' && SOCIAL_EM_UNIT_9_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_9_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_9_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.timeline = SOCIAL_EM_UNIT_9_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_g3' && typeof SOCIAL_UNIT_10_DATA !== 'undefined' && SOCIAL_UNIT_10_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_10_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.geoHighlights = SOCIAL_UNIT_10_DATA.geoHighlights || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_g3' && typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined' && SOCIAL_EM_UNIT_10_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_10_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.geoHighlights = SOCIAL_EM_UNIT_10_DATA.geoHighlights || [];
+      lesson.qCount = lesson.questions.length;
+    }
   }
 
   function selectLesson(lesId, defaultFilter = 'all') {
@@ -11531,7 +11660,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261103_v49')
+        navigator.serviceWorker.register('./sw.js?v=20261103_v50')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

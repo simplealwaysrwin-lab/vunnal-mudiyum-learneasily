@@ -1263,6 +1263,7 @@ const MATHS_EM_UNIT_1_DATA = {
         },
         {
           id: "m_em_3_3",
+          videoUrl: "https://youtu.be/Cu_Mqrp-9X0",
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",
@@ -1334,6 +1335,7 @@ const MATHS_EM_UNIT_1_DATA = {
         },
         {
           id: "m_em_4_3",
+          videoUrl: "https://youtu.be/oJXCaNbMQfE",
           type: "5m",
           mark: "5 Marks",
           examYear: "2022",
@@ -1586,6 +1588,7 @@ const MATHS_EM_UNIT_1_DATA = {
         },
         {
           id: "m_em_5_3",
+          videoUrl: "https://youtu.be/EUWokdlnu2c",
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",

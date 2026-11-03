@@ -555,6 +555,7 @@ const MATHS_EM_UNIT_2_DATA = {
         },
         {
           id: "m_em_2_8",
+          videoUrl: "https://youtu.be/L3lXX2Z5XHs",
           detailedSolution: {
             title: "Step-by-Step Detailed Solution & Working:",
             sections: [
@@ -725,6 +726,7 @@ const MATHS_EM_UNIT_2_DATA = {
         },
         {
           id: "m_em_2_10",
+          videoUrl: "https://youtu.be/ywHp_eZi0B8",
           detailedSolution: {
             title: "Step-by-Step Detailed Solution & Working:",
             sections: [
@@ -904,6 +906,7 @@ const MATHS_EM_UNIT_2_DATA = {
         },
         {
           id: "m_em_2_13",
+          videoUrl: "https://youtu.be/c5omulb9dfQ",
           detailedSolution: {
             title: "Step-by-Step Detailed Solution & Working:",
             sections: [

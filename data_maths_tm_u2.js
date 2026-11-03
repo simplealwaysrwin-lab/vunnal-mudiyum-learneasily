@@ -554,6 +554,7 @@ const MATHS_TM_UNIT_2_DATA = {
         },
         {
           id: "m_tm_2_8",
+          videoUrl: "https://youtu.be/L3lXX2Z5XHs",
           detailedSolution: {
             title: "விரிவான படிநிலைத் தீர்வு (Step-by-Step Derivation):",
             sections: [
@@ -723,6 +724,7 @@ const MATHS_TM_UNIT_2_DATA = {
         },
         {
           id: "m_tm_2_10",
+          videoUrl: "https://youtu.be/ywHp_eZi0B8",
           detailedSolution: {
             title: "விரிவான படிநிலைத் தீர்வு (Step-by-Step Derivation):",
             sections: [
@@ -901,6 +903,7 @@ const MATHS_TM_UNIT_2_DATA = {
         },
         {
           id: "m_tm_2_13",
+          videoUrl: "https://youtu.be/c5omulb9dfQ",
           detailedSolution: {
             title: "விரிவான படிநிலைத் தீர்வு (Step-by-Step Derivation):",
             sections: [

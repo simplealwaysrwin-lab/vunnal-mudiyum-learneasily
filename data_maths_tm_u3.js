@@ -1,4 +1,4 @@
-// 10-ஆம் வகுப்பு கணிதம் - அலகு 3: இயற்கணிதம் (Algebra)
+﻿// 10-ஆம் வகுப்பு கணிதம் - அலகு 3: இயற்கணிதம் (Algebra)
 // தமிழ்நாடு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const MATHS_TM_UNIT_3_DATA = {
@@ -58,6 +58,7 @@ const MATHS_TM_UNIT_3_DATA = {
         },
         {
           id: "m_tm_3_1_3",
+          videoUrl: "https://youtu.be/8zuChWmJTIk",
           type: "5m",
           mark: "5 மதிப்பெண்",
           isImportant: true,
@@ -228,6 +229,7 @@ const MATHS_TM_UNIT_3_DATA = {
         },
         {
           id: "m_tm_3_2_3",
+          videoUrl: "https://youtu.be/C3djN9tURD8",
           type: "5m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",
@@ -445,6 +447,225 @@ const MATHS_TM_UNIT_3_DATA = {
             }
           ],
           ansTamil: "அணி பெருக்கல் மற்றும் இடமாற்று பண்பு (AB)^T = B^T A^T நிரூபிக்கப்பட்டது."
+        }
+      ]
+    }    ,
+    // -------------------------------------------------------------
+    // à®ªà®•à¯à®¤à®¿ 4: à®µà®°à¯ˆà®ªà®Ÿà®®à¯ - à®…à®°à®šà¯à®ªà¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà¯ 8-à®®à®¤à®¿à®ªà¯à®ªà¯†à®£à¯ à®µà®¿à®©à®¾à®•à¯à®•à®³à¯ (à®ªà®¯à®¿à®±à¯à®šà®¿ 3.16)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_tm_3_4",
+      title: "à®ªà®•à¯à®¤à®¿ 4: à®µà®°à¯ˆà®ªà®Ÿà®®à¯ - à®…à®°à®šà¯à®ªà¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà¯ 8-à®®à®¤à®¿à®ªà¯à®ªà¯†à®£à¯ à®šà®¿à®±à®ªà¯à®ªà¯ à®µà®¿à®©à®¾à®•à¯à®•à®³à¯ (Graph)",
+      author: "à®‡à®¯à®±à¯à®•à®£à®¿à®¤à®®à¯ - à®ªà®¯à®¿à®±à¯à®šà®¿ 3.16 à®µà®°à¯ˆà®ªà®Ÿà®®à¯ (à®µà®¿à®©à®¾ à®Žà®£à¯ 44)",
+      questions: [
+        {
+          id: "m_tm_3_4_1",
+          type: "8m",
+          mark: "8 à®®à®¤à®¿à®ªà¯à®ªà¯†à®£à¯",
+          is8Mark: true,
+          examYear: "2024",
+          examTag: "à®…à®°à®šà¯à®ªà¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà¯ (à®µà®¿à®©à®¾ 44)",
+          isImportant: true,
+          q: "xÂ² - 9 = 0 à®Žà®©à¯à®± à®‡à®°à¯à®ªà®Ÿà®¿à®šà¯ à®šà®®à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®µà®°à¯ˆà®ªà®Ÿà®®à¯ à®µà®°à¯ˆà®¨à¯à®¤à¯, à®…à®¤à®©à¯ à®¤à¯€à®°à¯à®µà¯à®•à®³à®¿à®©à¯ à®¤à®©à¯à®®à¯ˆà®¯à¯ˆà®•à¯ à®•à®¾à®£à¯à®•.",
+          ans: `<div style="line-height:1.8;">
+            <b>à®ªà®Ÿà®¿ 1: à®šà®®à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà¯ˆ y = f(x) à®Žà®© à®…à®®à¯ˆà®¤à¯à®¤à®²à¯:</b><br>
+            y = xÂ² - 9<br><br>
+            <b>à®ªà®Ÿà®¿ 2: à®®à®¤à®¿à®ªà¯à®ªà¯à®•à®³à®¿à®©à¯ à®…à®Ÿà¯à®Ÿà®µà®£à¯ˆ (Table of Values):</b><br>
+            <table style="width:100%; border-collapse:collapse; text-align:center; margin:8px 0; font-size:13px;">
+              <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">x</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-3</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-2</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">2</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">3</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+              </tr>
+              <tr style="border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">xÂ²</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">16</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">16</td>
+              </tr>
+              <tr style="border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">-9</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+              </tr>
+              <tr style="background:#e0f2fe; font-weight:700; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1; color:#0369a1;">y</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">7</td>
+                <td style="padding:6px; border:1px solid #cbd5e1; color:#15803d;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-5</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-8</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-8</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-5</td>
+                <td style="padding:6px; border:1px solid #cbd5e1; color:#15803d;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">7</td>
+              </tr>
+            </table><br>
+            <b>à®ªà®Ÿà®¿ 3: à®•à¯à®±à®¿à®•à¯à®• à®µà¯‡à®£à¯à®Ÿà®¿à®¯ à®ªà¯à®³à¯à®³à®¿à®•à®³à¯:</b><br>
+            (-4, 7), (-3, 0), (-2, -5), (-1, -8), (0, -9), (1, -8), (2, -5), (3, 0), (4, 7).<br><br>
+            <b>à®ªà®Ÿà®¿ 4: à®…à®³à®µà¯à®¤à¯ à®¤à®¿à®Ÿà¯à®Ÿà®®à¯ (Scale):</b><br>
+            â€¢ X-à®…à®šà¯à®šà¯: 1 à®šà¯†.à®®à¯€ = 1 à®…à®²à®•à¯<br>
+            â€¢ Y-à®…à®šà¯à®šà¯: 1 à®šà¯†.à®®à¯€ = 2 à®…à®²à®•à¯à®•à®³à¯<br><br>
+            <b>à®ªà®Ÿà®¿ 5: à®µà®°à¯ˆà®ªà®Ÿà®®à¯ & à®¤à¯€à®°à¯à®µà¯à®•à®³à®¿à®©à¯ à®¤à®©à¯à®®à¯ˆ:</b><br>
+            à®‡à®ªà¯à®ªà¯à®³à¯à®³à®¿à®•à®³à¯ˆ à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¾à®³à®¿à®²à¯ à®•à¯à®±à®¿à®¤à¯à®¤à¯ à®’à®°à¯ à®šà¯€à®°à®¾à®© à®ªà®°à®µà®³à¯ˆà®¯à®®à¯ (Smooth Parabola) à®µà®°à¯ˆà®•.<br>
+            à®‡à®ªà¯à®ªà®°à®µà®³à¯ˆà®¯à®®à®¾à®©à®¤à¯ X-à®…à®šà¯à®šà¯ˆ <b>(-3, 0)</b> à®®à®±à¯à®±à¯à®®à¯ <b>(3, 0)</b> à®†à®•à®¿à®¯ à®‡à®°à¯ à®µà¯‡à®±à¯à®ªà®Ÿà¯à®Ÿ à®ªà¯à®³à¯à®³à®¿à®•à®³à®¿à®²à¯ à®µà¯†à®Ÿà¯à®Ÿà¯à®•à®¿à®±à®¤à¯.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              à®®à¯à®Ÿà®¿à®µà¯: à®ªà®°à®µà®³à¯ˆà®¯à®®à¯ X-à®…à®šà¯à®šà¯ˆ à®‡à®°à¯ à®µà¯‡à®±à¯à®ªà®Ÿà¯à®Ÿ à®ªà¯à®³à¯à®³à®¿à®•à®³à®¿à®²à¯ à®µà¯†à®Ÿà¯à®Ÿà¯à®µà®¤à®¾à®²à¯, à®•à¯Šà®Ÿà¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®‡à®°à¯à®ªà®Ÿà®¿à®šà¯ à®šà®®à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà®¿à®±à¯à®•à¯ <u>à®®à¯†à®¯à¯ à®®à®±à¯à®±à¯à®®à¯ à®šà®®à®®à®±à¯à®± à®®à¯‚à®²à®™à¯à®•à®³à¯ (Real and Unequal Roots)</u> à®‰à®£à¯à®Ÿà¯.<br>
+              à®¤à¯€à®°à¯à®µà¯à®•à¯à®•à®£à®®à¯ = {-3, 3}.
+            </div>
+          </div>`,
+          ansTamil: "à®ªà®°à®µà®³à¯ˆà®¯à®®à¯ X-à®…à®šà¯à®šà¯ˆ (-3, 0) à®®à®±à¯à®±à¯à®®à¯ (3, 0) à®Žà®©à¯à®± à®‡à®°à¯ à®ªà¯à®³à¯à®³à®¿à®•à®³à®¿à®²à¯ à®µà¯†à®Ÿà¯à®Ÿà¯à®µà®¤à®¾à®²à¯ à®®à¯†à®¯à¯ à®®à®±à¯à®±à¯à®®à¯ à®šà®®à®®à®±à¯à®± à®®à¯‚à®²à®™à¯à®•à®³à¯ à®‰à®£à¯à®Ÿà¯; à®¤à¯€à®°à¯à®µà¯: {-3, 3}."
+        },
+        {
+          id: "m_tm_3_4_2",
+          type: "8m",
+          mark: "8 à®®à®¤à®¿à®ªà¯à®ªà¯†à®£à¯",
+          is8Mark: true,
+          examYear: "2023",
+          examTag: "à®…à®°à®šà¯à®ªà¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà¯ (à®µà®¿à®©à®¾ 44)",
+          isImportant: true,
+          q: "xÂ² - 4x + 4 = 0 à®Žà®©à¯à®± à®‡à®°à¯à®ªà®Ÿà®¿à®šà¯ à®šà®®à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®µà®°à¯ˆà®ªà®Ÿà®®à¯ à®µà®°à¯ˆà®¨à¯à®¤à¯, à®¤à¯€à®°à¯à®µà¯à®•à®³à®¿à®©à¯ à®¤à®©à¯à®®à¯ˆà®¯à¯ˆà®•à¯ à®•à®¾à®£à¯à®•.",
+          ans: `<div style="line-height:1.8;">
+            <b>à®ªà®Ÿà®¿ 1: à®šà®®à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà¯ˆ à®…à®®à¯ˆà®¤à¯à®¤à®²à¯:</b><br>
+            y = xÂ² - 4x + 4<br><br>
+            <b>à®ªà®Ÿà®¿ 2: à®®à®¤à®¿à®ªà¯à®ªà¯à®•à®³à®¿à®©à¯ à®…à®Ÿà¯à®Ÿà®µà®£à¯ˆ (Table of Values):</b><br>
+            <table style="width:100%; border-collapse:collapse; text-align:center; margin:8px 0; font-size:13px;">
+              <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">x</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">2</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">3</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">5</td>
+              </tr>
+              <tr style="border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">xÂ²</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">16</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">25</td>
+              </tr>
+              <tr style="border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">-4x</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-8</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-12</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-16</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-20</td>
+              </tr>
+              <tr style="border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">+4</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+              </tr>
+              <tr style="background:#e0f2fe; font-weight:700; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1; color:#0369a1;">y</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1; color:#15803d;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
+              </tr>
+            </table><br>
+            <b>à®ªà®Ÿà®¿ 3: à®•à¯à®±à®¿à®•à¯à®• à®µà¯‡à®£à¯à®Ÿà®¿à®¯ à®ªà¯à®³à¯à®³à®¿à®•à®³à¯:</b><br>
+            (-1, 9), (0, 4), (1, 1), (2, 0), (3, 1), (4, 4), (5, 9).<br><br>
+            <b>à®ªà®Ÿà®¿ 4: à®…à®³à®µà¯à®¤à¯ à®¤à®¿à®Ÿà¯à®Ÿà®®à¯:</b><br>
+            â€¢ X-à®…à®šà¯à®šà¯: 1 à®šà¯†.à®®à¯€ = 1 à®…à®²à®•à¯<br>
+            â€¢ Y-à®…à®šà¯à®šà¯: 1 à®šà¯†.à®®à¯€ = 1 à®…à®²à®•à¯<br><br>
+            <b>à®ªà®Ÿà®¿ 5: à®µà®°à¯ˆà®ªà®Ÿà®®à¯ & à®¤à¯€à®°à¯à®µà¯à®•à®³à®¿à®©à¯ à®¤à®©à¯à®®à¯ˆ:</b><br>
+            à®‡à®ªà¯à®ªà®°à®µà®³à¯ˆà®¯à®®à®¾à®©à®¤à¯ X-à®…à®šà¯à®šà¯ˆ <b>(2, 0)</b> à®Žà®©à¯à®± à®’à®°à¯‡ à®’à®°à¯ à®ªà¯à®³à¯à®³à®¿à®¯à®¿à®²à¯ à®®à®Ÿà¯à®Ÿà¯à®®à¯‡ à®¤à¯Šà®Ÿà¯à®Ÿà¯à®šà¯ à®šà¯†à®²à¯à®•à®¿à®±à®¤à¯.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              à®®à¯à®Ÿà®¿à®µà¯: à®ªà®°à®µà®³à¯ˆà®¯à®®à¯ X-à®…à®šà¯à®šà¯ˆ à®’à®°à¯‡ à®ªà¯à®³à¯à®³à®¿à®¯à®¿à®²à¯ à®¤à¯Šà®Ÿà¯à®µà®¤à®¾à®²à¯, à®šà®®à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà®¿à®±à¯à®•à¯ <u>à®®à¯†à®¯à¯ à®®à®±à¯à®±à¯à®®à¯ à®šà®®à®®à®¾à®© à®®à¯‚à®²à®™à¯à®•à®³à¯ (Real and Equal Roots)</u> à®‰à®£à¯à®Ÿà¯.<br>
+              à®¤à¯€à®°à¯à®µà¯ = 2.
+            </div>
+          </div>`,
+          ansTamil: "à®ªà®°à®µà®³à¯ˆà®¯à®®à¯ X-à®…à®šà¯à®šà¯ˆ (2, 0) à®Žà®©à¯à®± à®’à®°à¯‡ à®ªà¯à®³à¯à®³à®¿à®¯à®¿à®²à¯ à®¤à¯Šà®Ÿà¯à®µà®¤à®¾à®²à¯ à®®à¯†à®¯à¯ à®®à®±à¯à®±à¯à®®à¯ à®šà®®à®®à®¾à®© à®®à¯‚à®²à®™à¯à®•à®³à¯ à®‰à®£à¯à®Ÿà¯; à®¤à¯€à®°à¯à®µà¯: x = 2."
+        },
+        {
+          id: "m_tm_3_4_3",
+          type: "8m",
+          mark: "8 à®®à®¤à®¿à®ªà¯à®ªà¯†à®£à¯",
+          is8Mark: true,
+          examYear: "2024",
+          examTag: "à®…à®°à®šà¯ à®®à®¾à®¤à®¿à®°à®¿ à®µà®¿à®©à®¾ 44",
+          isImportant: true,
+          q: "y = xÂ² + 3x - 4-à®©à¯ à®µà®°à¯ˆà®ªà®Ÿà®®à¯ à®µà®°à¯ˆà®¨à¯à®¤à¯, à®…à®¤à®©à¯ˆà®ªà¯ à®ªà®¯à®©à¯à®ªà®Ÿà¯à®¤à¯à®¤à®¿ xÂ² + 3x - 4 = 0 à®Žà®©à¯à®± à®šà®®à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà¯ˆà®¤à¯ à®¤à¯€à®°à¯à®•à¯à®•à®µà¯à®®à¯.",
+          ans: `<div style="line-height:1.8;">
+            <b>à®ªà®Ÿà®¿ 1: y = xÂ² + 3x - 4-à®•à¯à®•à®¾à®© à®…à®Ÿà¯à®Ÿà®µà®£à¯ˆ:</b><br>
+            <table style="width:100%; border-collapse:collapse; text-align:center; margin:8px 0; font-size:13px;">
+              <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">x</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-5</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-3</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-2</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">2</td>
+              </tr>
+              <tr style="background:#e0f2fe; font-weight:700; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1; color:#0369a1;">y</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">6</td>
+                <td style="padding:6px; border:1px solid #cbd5e1; color:#15803d;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-6</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-6</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1; color:#15803d;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">6</td>
+              </tr>
+            </table><br>
+            <b>à®ªà®Ÿà®¿ 2: à®¨à¯‡à®°à¯à®•à¯à®•à¯‹à®Ÿà¯à®Ÿà®¿à®©à¯ à®šà®®à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà¯ˆà®•à¯ à®•à®¾à®£ à®šà®®à®©à¯à®ªà®¾à®Ÿà¯à®•à®³à¯ˆà®•à¯ à®•à®´à®¿à®•à¯à®•:</b><br>
+            y = xÂ² + 3x - 4<br>
+            0 = xÂ² + 3x - 4<br>
+            ----------------<br>
+            <b>y = 0</b> (à®‡à®¤à¯ X-à®…à®šà¯à®šà¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®¿à®±à®¤à¯)<br><br>
+            <b>à®ªà®Ÿà®¿ 3: à®…à®³à®µà¯à®¤à¯ à®¤à®¿à®Ÿà¯à®Ÿà®®à¯:</b><br>
+            â€¢ X-à®…à®šà¯à®šà¯: 1 à®šà¯†.à®®à¯€ = 1 à®…à®²à®•à¯<br>
+            â€¢ Y-à®…à®šà¯à®šà¯: 1 à®šà¯†.à®®à¯€ = 1 à®…à®²à®•à¯<br><br>
+            <b>à®ªà®Ÿà®¿ 4: à®¤à¯€à®°à¯à®µà¯:</b><br>
+            y = 0 à®Žà®©à¯à®± à®¨à¯‡à®°à¯à®•à¯à®•à¯‹à®Ÿà¯ (X-à®…à®šà¯à®šà¯) à®ªà®°à®µà®³à¯ˆà®¯à®¤à¯à®¤à¯ˆ <b>(-4, 0)</b> à®®à®±à¯à®±à¯à®®à¯ <b>(1, 0)</b> à®†à®•à®¿à®¯ à®ªà¯à®³à¯à®³à®¿à®•à®³à®¿à®²à¯ à®µà¯†à®Ÿà¯à®Ÿà¯à®•à®¿à®±à®¤à¯.<br>
+            à®‡à®ªà¯à®ªà¯à®³à¯à®³à®¿à®•à®³à®¿à®©à¯ X-à®†à®¯à®¤à¯à®¤à¯Šà®²à¯ˆà®µà¯à®•à®³à¯‡ à®¤à¯‡à®µà¯ˆà®¯à®¾à®© à®¤à¯€à®°à¯à®µà¯à®•à®³à¯ à®†à®•à¯à®®à¯.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              âˆ´ à®•à¯Šà®Ÿà¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®šà®®à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®¤à¯€à®°à¯à®µà¯ = {-4, 1}.
+            </div>
+          </div>`,
+          ansTamil: "y = xÂ² + 3x - 4 à®ªà®°à®µà®³à¯ˆà®¯à®®à¯ X-à®…à®šà¯à®šà¯ˆ (-4, 0) à®®à®±à¯à®±à¯à®®à¯ (1, 0) à®‡à®²à¯ à®µà¯†à®Ÿà¯à®Ÿà¯à®µà®¤à®¾à®²à¯ à®¤à¯€à®°à¯à®µà¯: {-4, 1}."
         }
       ]
     }

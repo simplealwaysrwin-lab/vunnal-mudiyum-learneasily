@@ -1,4 +1,4 @@
-// 10th Standard Mathematics - Unit 4: Geometry (English Medium)
+﻿// 10th Standard Mathematics - Unit 4: Geometry (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_4_DATA = {
@@ -27,6 +27,7 @@ const MATHS_EM_UNIT_4_DATA = {
       questions: [
         {
           id: "m_em_4_1_3",
+          videoUrl: "https://youtu.be/2zVgkVWNeUg",
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",
@@ -177,6 +178,7 @@ const MATHS_EM_UNIT_4_DATA = {
 
         {
           id: "m_em_4_2_3",
+          videoUrl: "https://youtu.be/_qDOEKHN2D8",
           type: "5m",
           mark: "5 Marks",
           examYear: "2023",
@@ -322,6 +324,7 @@ const MATHS_EM_UNIT_4_DATA = {
 
         {
           id: "m_em_4_1_4",
+          videoUrl: "https://youtu.be/FcVbNmC7NlA",
           type: "5m",
           mark: "5 Marks",
           examYear: "2023",
@@ -1479,6 +1482,99 @@ const MATHS_EM_UNIT_4_DATA = {
             Hence, he is 30 metres away from the starting point.
           </div>`,
           explanation: "Hypotenuse = √(18² + 24²) = √900 = 30 m."
+        }
+      ]
+    }    ,
+    // -------------------------------------------------------------
+    // Section 2: Practical Geometry - Public Exam 8-Mark Special Questions (Exercise 4.1 - 4.4)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_em_4_2",
+      title: "Section 2: Practical Geometry - Public Exam 8-Mark Special Questions (Exercise 4.1 - 4.4)",
+      author: "Chapter 4: Geometry - Practical Geometry (Q.43)",
+      questions: [
+        {
+          id: "m_em_4_2_10",
+          type: "8m",
+          mark: "8 Marks",
+          is8Mark: true,
+          examYear: "2024",
+          examTag: "Public Exam (Q.43)",
+          isImportant: true,
+          q: "Construct a triangle similar to a given triangle PQR with its sides equal to 3/5 of the corresponding sides of triangle PQR (scale factor 3/5 < 1).",
+          ans: `<div style="line-height:1.8;">
+            <b>Step 1: Rough Diagram:</b><br>
+            Draw any triangle PQR. Inside it, draw smaller similar triangle P'QR'.<br><br>
+            <b>Step 2: Steps of Construction:</b><br>
+            1. Construct <b>Î”PQR</b> with any convenient measurements.<br>
+            2. Draw a ray <b>QX</b> making an acute angle with QR on the side opposite to vertex P.<br>
+            3. Since 5 is greater in 3/5, mark 5 equal points on QX: <b>QQâ‚ = Qâ‚Qâ‚‚ = Qâ‚‚Qâ‚ƒ = Qâ‚ƒQâ‚„ = Qâ‚„Qâ‚…</b>.<br>
+            4. Join <b>Qâ‚…R</b>.<br>
+            5. Draw a line through Qâ‚ƒ parallel to Qâ‚…R to intersect QR at <b>R'</b>.<br>
+            6. Draw a line through R' parallel to RP to intersect QP at <b>P'</b>.<br>
+            7. <b>Î”P'QR'</b> is the required similar triangle with scale factor 3/5.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Similar Triangle Î”P'QR' successfully constructed!
+            </div>
+          </div>`,
+          explanation: "Constructed similar triangle P'QR' with scale factor 3/5 using parallel line division on ray QX."
+        },
+        {
+          id: "m_em_4_2_11",
+          type: "8m",
+          mark: "8 Marks",
+          is8Mark: true,
+          examYear: "2023",
+          examTag: "Public Exam (Q.43)",
+          isImportant: true,
+          q: "Construct a triangle similar to a given triangle ABC with its sides equal to 7/4 of the corresponding sides of triangle ABC (scale factor 7/4 > 1).",
+          ans: `<div style="line-height:1.8;">
+            <b>Step 1: Rough Diagram:</b><br>
+            Draw Î”ABC. Outside it, sketch the larger similar triangle A'BC'.<br><br>
+            <b>Step 2: Steps of Construction:</b><br>
+            1. Construct <b>Î”ABC</b> with any convenient measurements.<br>
+            2. Draw a ray <b>BX</b> making an acute angle with BC.<br>
+            3. Since 7 is greater in 7/4, locate 7 equal points <b>Bâ‚ to Bâ‚‡</b> on BX.<br>
+            4. 4 is the smaller denominator: join <b>Bâ‚„C</b>.<br>
+            5. Draw a line through Bâ‚‡ parallel to Bâ‚„C intersecting extended BC at <b>C'</b>.<br>
+            6. Draw a line through C' parallel to CA intersecting extended BA at <b>A'</b>.<br>
+            7. <b>Î”A'BC'</b> is the required triangle with scale factor 7/4.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Similar Triangle Î”A'BC' (scale factor 7/4 > 1) successfully constructed!
+            </div>
+          </div>`,
+          explanation: "Constructed enlarged similar triangle A'BC' using scale factor 7/4 > 1."
+        },
+        {
+          id: "m_em_4_2_12",
+          type: "8m",
+          mark: "8 Marks",
+          is8Mark: true,
+          examYear: "2024",
+          examTag: "Public Exam (Q.43)",
+          isImportant: true,
+          q: "Draw a circle of radius 3 cm. From a point 5 cm away from its centre, construct the pair of tangents to the circle and measure their lengths.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b><br>
+            Radius r = 3 cm; Distance OP = d = 5 cm.<br><br>
+            <b>Step 1: Rough Diagram:</b><br>
+            Draw a circle with center O, mark external point P at 5 cm, draw tangents PA and PB.<br><br>
+            <b>Step 2: Steps of Construction:</b><br>
+            1. With 'O' as center, draw a <b>circle of radius 3 cm</b>.<br>
+            2. Draw a line segment <b>OP = 5 cm</b>.<br>
+            3. Draw the perpendicular bisector of OP to find its midpoint <b>M</b>.<br>
+            4. With 'M' as center and <b>MO = MP</b> as radius, draw another circle.<br>
+            5. Let this circle intersect the given circle at points <b>A</b> and <b>B</b>.<br>
+            6. Join <b>PA</b> and <b>PB</b>. PA and PB are the required tangents.<br><br>
+            <b>Step 3: Verification (Calculation):</b><br>
+            In right triangle Î”OAP (by Pythagoras theorem):<br>
+            PA = âˆš(OPÂ² - OAÂ²)<br>
+            PA = âˆš(5Â² - 3Â²) = âˆš(25 - 9) = âˆš16 = <b>4 cm</b>.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Measured length of tangents: PA = PB = 4 cm (verified).
+            </div>
+          </div>`,
+          explanation: "Constructed pair of tangents PA and PB from external point P = 5 cm to 3 cm radius circle. Tangent length = 4 cm."
         }
       ]
     }

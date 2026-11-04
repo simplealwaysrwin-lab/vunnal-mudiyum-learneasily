@@ -1,4 +1,4 @@
-// 10th Standard Mathematics - Unit 3: Algebra (English Medium)
+﻿// 10th Standard Mathematics - Unit 3: Algebra (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_3_DATA = {
@@ -59,6 +59,7 @@ const MATHS_EM_UNIT_3_DATA = {
         },
         {
           id: "m_em_3_1_3",
+          videoUrl: "https://youtu.be/8zuChWmJTIk",
           type: "5m",
           mark: "5 Marks",
           isImportant: true,
@@ -228,6 +229,7 @@ const MATHS_EM_UNIT_3_DATA = {
         },
         {
           id: "m_em_3_2_3",
+          videoUrl: "https://youtu.be/C3djN9tURD8",
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",
@@ -446,6 +448,222 @@ const MATHS_EM_UNIT_3_DATA = {
             }
           ],
           explanation: "Reversal law of matrix transpose (AB)^T = B^T A^T holds true."
+        }
+      ]
+    }    ,
+    // -------------------------------------------------------------
+    // Section 4: Graph - Top Important 8-Mark Public Exam Questions (Exercise 3.16)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_em_3_4",
+      title: "Section 4: Graph - Public Exam 8-Mark Special Questions (Exercise 3.16)",
+      author: "Chapter 3: Algebra - Quadratic Graphs (Q.44)",
+      questions: [
+        {
+          id: "m_em_3_4_1",
+          type: "8m",
+          mark: "8 Marks",
+          is8Mark: true,
+          examYear: "2024",
+          examTag: "Public Exam (Q.44)",
+          isImportant: true,
+          q: "Draw the graph of y = xÂ² - 9 and state the nature of solutions.",
+          ans: `<div style="line-height:1.8;">
+            <b>Step 1: Given Quadratic Function:</b><br>
+            y = xÂ² - 9<br><br>
+            <b>Step 2: Table of Values:</b><br>
+            <table style="width:100%; border-collapse:collapse; text-align:center; margin:8px 0; font-size:13px;">
+              <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">x</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-3</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-2</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">2</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">3</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+              </tr>
+              <tr style="border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">xÂ²</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">16</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">16</td>
+              </tr>
+              <tr style="border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">-9</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+              </tr>
+              <tr style="background:#e0f2fe; font-weight:700; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1; color:#0369a1;">y</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">7</td>
+                <td style="padding:6px; border:1px solid #cbd5e1; color:#15803d;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-5</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-8</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-8</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-5</td>
+                <td style="padding:6px; border:1px solid #cbd5e1; color:#15803d;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">7</td>
+              </tr>
+            </table><br>
+            <b>Step 3: Points to be Plotted:</b><br>
+            (-4, 7), (-3, 0), (-2, -5), (-1, -8), (0, -9), (1, -8), (2, -5), (3, 0), (4, 7).<br><br>
+            <b>Step 4: Scale:</b><br>
+            â€¢ X-axis: 1 cm = 1 unit<br>
+            â€¢ Y-axis: 1 cm = 2 units<br><br>
+            <b>Step 5: Nature of Solutions:</b><br>
+            Plot these points and draw a smooth parabola.<br>
+            The curve intersects the X-axis at two distinct points: <b>(-3, 0)</b> and <b>(3, 0)</b>.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Conclusion: Since the parabola intersects the X-axis at two distinct points, the equation has <u>Real and Unequal Roots</u>.<br>
+              Solution Set = {-3, 3}.
+            </div>
+          </div>`,
+          explanation: "Parabola intersects X-axis at two points (-3, 0) and (3, 0), hence real and unequal roots with solution {-3, 3}."
+        },
+        {
+          id: "m_em_3_4_2",
+          type: "8m",
+          mark: "8 Marks",
+          is8Mark: true,
+          examYear: "2023",
+          examTag: "Public Exam (Q.44)",
+          isImportant: true,
+          q: "Draw the graph of y = xÂ² - 4x + 4 and state the nature of solutions.",
+          ans: `<div style="line-height:1.8;">
+            <b>Step 1: Function:</b><br>
+            y = xÂ² - 4x + 4<br><br>
+            <b>Step 2: Table of Values:</b><br>
+            <table style="width:100%; border-collapse:collapse; text-align:center; margin:8px 0; font-size:13px;">
+              <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">x</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">2</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">3</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">5</td>
+              </tr>
+              <tr style="border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">xÂ²</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">16</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">25</td>
+              </tr>
+              <tr style="border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">-4x</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-8</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-12</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-16</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-20</td>
+              </tr>
+              <tr style="border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">+4</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+              </tr>
+              <tr style="background:#e0f2fe; font-weight:700; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1; color:#0369a1;">y</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1; color:#15803d;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
+              </tr>
+            </table><br>
+            <b>Step 3: Points to Plot:</b><br>
+            (-1, 9), (0, 4), (1, 1), (2, 0), (3, 1), (4, 4), (5, 9).<br><br>
+            <b>Step 4: Scale:</b><br>
+            â€¢ X-axis: 1 cm = 1 unit<br>
+            â€¢ Y-axis: 1 cm = 1 unit<br><br>
+            <b>Step 5: Nature of Solutions:</b><br>
+            The parabola touches the X-axis at only one point: <b>(2, 0)</b>.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Conclusion: Since the curve touches the X-axis at only one point, the roots are <u>Real and Equal</u>.<br>
+              Solution = 2.
+            </div>
+          </div>`,
+          explanation: "Curve touches X-axis at (2, 0) giving real and equal root x = 2."
+        },
+        {
+          id: "m_em_3_4_3",
+          type: "8m",
+          mark: "8 Marks",
+          is8Mark: true,
+          examYear: "2024",
+          examTag: "Public Exam Model (Q.44)",
+          isImportant: true,
+          q: "Draw the graph of y = xÂ² + 3x - 4 and hence use it to solve xÂ² + 3x - 4 = 0.",
+          ans: `<div style="line-height:1.8;">
+            <b>Step 1: Table for Parabola y = xÂ² + 3x - 4:</b><br>
+            <table style="width:100%; border-collapse:collapse; text-align:center; margin:8px 0; font-size:13px;">
+              <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1;">x</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-5</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-3</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-2</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">2</td>
+              </tr>
+              <tr style="background:#e0f2fe; font-weight:700; border:1px solid #cbd5e1;">
+                <th style="padding:6px; border:1px solid #cbd5e1; color:#0369a1;">y</th>
+                <td style="padding:6px; border:1px solid #cbd5e1;">6</td>
+                <td style="padding:6px; border:1px solid #cbd5e1; color:#15803d;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-6</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-6</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">-4</td>
+                <td style="padding:6px; border:1px solid #cbd5e1; color:#15803d;">0</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">6</td>
+              </tr>
+            </table><br>
+            <b>Step 2: Subtract equations to find line equation:</b><br>
+            y = xÂ² + 3x - 4<br>
+            0 = xÂ² + 3x - 4<br>
+            ----------------<br>
+            <b>y = 0</b> (the X-axis itself)<br><br>
+            <b>Step 3: Points of Intersection:</b><br>
+            The parabola intersects the line y = 0 (X-axis) at <b>(-4, 0)</b> and <b>(1, 0)</b>.<br>
+            The X-coordinates of these points are the roots.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Solution Set = {-4, 1}.
+            </div>
+          </div>`,
+          explanation: "Parabola y = xÂ² + 3x - 4 intersects the line y = 0 at x = -4 and x = 1."
         }
       ]
     }

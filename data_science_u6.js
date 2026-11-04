@@ -170,7 +170,7 @@ if (typeof SCIENCE_UNIT_6_DATA !== 'undefined') {
       {
         id: "sci_u6_out_5m_1",
         q: "அணுக்கரு உலையின் (Nuclear Reactor) முதன்மை பாகங்கள், அவற்றின் செயல்பாடுகள் மற்றும் பாதுகாப்பு அமைப்புகளைத் தெளிவான வரைபடத்துடன் விளக்குக.",
-        type: "5m",
+        type: "7m",
         examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (Outside Book Practice)",
         ans: "<b>அணுக்கரு உலையின் பாகங்கள் மற்றும் செயல்பாடுகள்:</b><br><br>" +
              "<b>1. அடிப்படைத் தத்துவம்:</b><br>" +
@@ -232,7 +232,7 @@ if (typeof SCIENCE_UNIT_6_DATA !== 'undefined') {
       {
         id: "sci_u6_out_5m_2",
         q: "அணுக்கரு பிளவு மற்றும் அணுக்கரு இணைவு ஆகியவற்றை அவற்றின் தத்துவங்கள், நிபந்தனைகள் மற்றும் வினைக் குறியீட்டு வரைபடங்களுடன் ஒப்பிடுக.",
-        type: "5m",
+        type: "7m",
         examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (Outside Book Practice)",
         ans: "<b>அணுக்கரு பிளவு மற்றும் அணுக்கரு இணைவு ஒப்பீடு:</b><br><br>" +
              "<table style='width:100%; border-collapse:collapse; margin-bottom:12px; font-size:12.5px; border:1px solid #cbd5e1;'>" +

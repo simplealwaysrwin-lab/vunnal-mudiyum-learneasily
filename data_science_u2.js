@@ -245,7 +245,7 @@ const SCIENCE_UNIT_2_DATA = {
       questions: [
         {
           id: "sci_2_8",
-          type: "5m",
+          type: "7m",
           mark: "4 / 7 மதிப்பெண்",
           examYear: "2024",
           examTag: "2024*",
@@ -297,7 +297,7 @@ if (typeof SCIENCE_UNIT_2_DATA !== 'undefined') {
       {
         id: "sci_u2_out_5m_1",
         q: "எளிய நுண்ணோக்கியின் அமைப்பு, பிம்பம் உருவாதல் மற்றும் அதன் பயன்களைக் கதிர் வரைபடத்துடன் விளக்குக.",
-        type: "5m",
+        type: "7m",
         examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (Outside Book Practice)",
         ans: "<b>எளிய நுண்ணோக்கி (Simple Microscope):</b><br><br>" +
              "<b>1. அமைப்பு:</b><br>" +
@@ -341,7 +341,7 @@ if (typeof SCIENCE_UNIT_2_DATA !== 'undefined') {
       {
         id: "sci_u2_out_5m_2",
         q: "கண் குறைபாடுகளான கிட்டப்பார்வை (Myopia) மற்றும் தூரப்பார்வை (Hypermetropia) ஆகியவற்றின் காரணங்களையும் அவற்றை லென்சுகள் மூலம் எவ்வாறு சரிசெய்யலாம் என்பதையும் கதிர் வரைபடங்களுடன் விளக்குக.",
-        type: "5m",
+        type: "7m",
         examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (Outside Book Practice)",
         ans: "<b>கண் குறைபாடுகள் மற்றும் சரிசெய்தல்:</b><br><br>" +
              "<b>I. கிட்டப்பார்வை (Myopia):</b><br>" +

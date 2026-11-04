@@ -1,4 +1,4 @@
-// 10th Standard Social Science - Economics Unit 2: Globalization and Trade
+﻿// 10th Standard Social Science - Economics Unit 2: Globalization and Trade
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions (English Medium)
 
 const SOCIAL_EM_UNIT_8_DATA = {
@@ -74,8 +74,8 @@ const SOCIAL_EM_UNIT_8_DATA = {
         },
         {
           id: "soc_em_8_5",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Important 5M",
           q: "Explain the positive and negative impacts of Globalization.",
           ans: `<div style="line-height:1.8;">
@@ -98,8 +98,8 @@ const SOCIAL_EM_UNIT_8_DATA = {
         },
         {
           id: "soc_em_8_6",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Public Exam 5M",
           q: "State the major objectives of the World Trade Organization (WTO).",
           ans: `<div style="line-height:1.8;">

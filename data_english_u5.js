@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 10th Standard English - Unit 5 Study Guide & Question Bank
  * Tamil Nadu Samacheer Kalvi Syllabus
  * 
@@ -122,8 +122,8 @@ const ENGLISH_UNIT_5_DATA = {
         },
         {
           id: "eng5_1_5",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "2024 Exam Question",
           isImportant: true,
           q: "Write a detailed paragraph on how modern technology transforms the lives of differently-abled people as depicted in 'Tech Bloomers'.",
@@ -181,8 +181,8 @@ const ENGLISH_UNIT_5_DATA = {
         },
         {
           id: "eng5_2_4",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Poem Summary",
           isImportant: true,
           q: "Summarize the poem 'The Secret of the Machines' by Rudyard Kipling.",
@@ -225,8 +225,8 @@ const ENGLISH_UNIT_5_DATA = {
         },
         {
           id: "eng5_3_3",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           isImportant: true,
           q: "How did Tom try to resolve the dilemma of the explosive jewel box? What was the outcome?",
           ans: `<div style="line-height:1.8;">

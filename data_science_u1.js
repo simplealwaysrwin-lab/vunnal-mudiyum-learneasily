@@ -1,4 +1,4 @@
-// 10-ஆம் வகுப்பு அறிவியல் - அலகு 1: இயக்க விதிகள் (Laws of Motion)
+﻿// 10-ஆம் வகுப்பு அறிவியல் - அலகு 1: இயக்க விதிகள் (Laws of Motion)
 // தமிழ்நாடு அரசு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி
 
 const SCIENCE_UNIT_1_DATA = {
@@ -185,7 +185,7 @@ const SCIENCE_UNIT_1_DATA = {
       questions: [
         {
           id: "sci_1_6",
-          type: "5m",
+          type: "7m",
           mark: "4 / 7 மதிப்பெண்",
           examYear: "2023",
           examTag: "2023*",
@@ -240,7 +240,7 @@ const SCIENCE_UNIT_1_DATA = {
         },
         {
           id: "sci_1_7",
-          type: "5m",
+          type: "7m",
           mark: "4 / 7 மதிப்பெண்",
           examYear: "2024",
           examTag: "2024*",
@@ -350,7 +350,7 @@ const SCIENCE_UNIT_1_DATA = {
       questions: [
         {
           id: "sci_1_10",
-          type: "5m",
+          type: "7m",
           mark: "5 மதிப்பெண்",
           examTag: "அரசு பொதுத்தேர்வு மாதிரி",
           isImportant: true,
@@ -466,7 +466,7 @@ const SCIENCE_UNIT_1_DATA = {
         },
         {
           id: "sci_1_11",
-          type: "5m",
+          type: "7m",
           mark: "5 மதிப்பெண்",
           examTag: "அரசு பொதுத்தேர்வு மாதிரி",
           isImportant: true,
@@ -570,7 +570,7 @@ const SCIENCE_UNIT_1_DATA = {
         },
         {
           id: "sci_1_12",
-          type: "5m",
+          type: "7m",
           mark: "5 மதிப்பெண்",
           examTag: "கணக்கீடு வினா",
           isImportant: true,
@@ -677,7 +677,7 @@ const SCIENCE_UNIT_1_DATA = {
         },
         {
           id: "sci_1_13",
-          type: "5m",
+          type: "7m",
           mark: "5 மதிப்பெண்",
           examTag: "அரசு பொதுத்தேர்வு மாதிரி",
           isImportant: true,
@@ -805,7 +805,7 @@ if (typeof SCIENCE_UNIT_1_DATA !== 'undefined') {
       {
         id: "sci_u1_out_5m_1",
         q: "ராக்கெட் ஏவுதலின் தத்துவம் மற்றும் செயல்பாட்டைத் தெளிவான வரைபடத்துடன் விளக்குக.",
-        type: "5m",
+        type: "7m",
         examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (Outside Book Practice)",
         ans: "<b>ராக்கெட் ஏவுதல் தத்துவம் மற்றும் செயல்பாடு:</b><br><br>" +
              "<b>1. அடிப்படைத் தத்துவம்:</b><br>" +
@@ -849,7 +849,7 @@ if (typeof SCIENCE_UNIT_1_DATA !== 'undefined') {
       {
         id: "sci_u1_out_5m_2",
         q: "நேர்க்கோட்டு உந்த மாறாக் கோட்பாட்டை கூறி அதனை மெய்ப்பிக்கவும் (விளக்க வரைபடத்துடன்).",
-        type: "5m",
+        type: "7m",
         examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (Outside Book Practice)",
         ans: "<b>நேர்க்கோட்டு உந்த மாறாக் கோட்பாடு (Law of Conservation of Linear Momentum):</b><br><br>" +
              "<b>1. விதி:</b><br>" +

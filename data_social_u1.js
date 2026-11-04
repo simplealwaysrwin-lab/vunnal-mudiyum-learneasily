@@ -205,7 +205,7 @@ const SOCIAL_UNIT_1_DATA = {
       questions: [
         {
           id: "soc_1_7",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",
           examTag: "2024*",
@@ -395,7 +395,7 @@ const SOCIAL_UNIT_1_DATA = {
         },
         {
           id: "soc_1_8",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2022",
           examTag: "2022*",
@@ -591,7 +591,7 @@ const SOCIAL_UNIT_1_DATA = {
       questions: [
         {
           id: "soc_1_9",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examTag: "அரசு பொதுத்தேர்வு மாதிரி",
           isImportant: true,
@@ -682,7 +682,7 @@ const SOCIAL_UNIT_1_DATA = {
         },
         {
           id: "soc_1_10",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examTag: "அரசு பொதுத்தேர்வு மாதிரி",
           isImportant: true,

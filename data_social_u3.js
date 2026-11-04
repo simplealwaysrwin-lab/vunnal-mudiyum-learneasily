@@ -109,7 +109,7 @@ const SOCIAL_UNIT_3_DATA = {
         },
         {
           id: "soc_3_7",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",
           examTag: "2024* (முக்கிய 5 மதிப்பெண்)",

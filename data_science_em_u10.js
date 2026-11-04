@@ -1,4 +1,4 @@
-// Class 10 Science - Unit 10: Types of Chemical Reactions
+﻿// Class 10 Science - Unit 10: Types of Chemical Reactions
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SCIENCE_EM_UNIT_10_DATA = {
@@ -76,8 +76,8 @@ const SCIENCE_EM_UNIT_10_DATA = {
         },
         {
           id: "sci_em_10_5",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Important 5M",
           q: "What is the pH scale? Explain the role of pH in everyday life.",
           ans: `<div style="line-height:1.8;">
@@ -132,8 +132,8 @@ const SCIENCE_EM_UNIT_10_DATA = {
         },
         {
           id: "sci_em_10_8",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Important 5M",
           q: "What is chemical equilibrium? State its characteristic features.",
           ans: `<div style="line-height:1.8;">

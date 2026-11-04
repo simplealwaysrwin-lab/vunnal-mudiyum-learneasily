@@ -1,4 +1,4 @@
-// Class 10 Social Science - History Unit 2: The World between two World Wars
+﻿// Class 10 Social Science - History Unit 2: The World between two World Wars
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SOCIAL_EM_UNIT_5_DATA = {
@@ -60,8 +60,8 @@ const SOCIAL_EM_UNIT_5_DATA = {
         },
         {
           id: "soc_em_5_4",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Board Exam 5M High Yield",
           q: "Explain the underlying causes and worldwide socio-economic impact of the Great Depression of 1929.",
           ans: `<div style="line-height:1.7;">
@@ -114,8 +114,8 @@ const SOCIAL_EM_UNIT_5_DATA = {
         },
         {
           id: "soc_em_5_6",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Board Exam 5M High Yield",
           q: "Trace the factors that led to the rise of Fascism in Italy under Benito Mussolini and highlight his domestic and foreign policies.",
           ans: `<div style="line-height:1.7;">

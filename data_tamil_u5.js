@@ -1,4 +1,4 @@
-// 10th Standard Tamil - Unit 5: மணற்கேணி
+﻿// 10th Standard Tamil - Unit 5: மணற்கேணி
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const TAMIL_UNIT_5_DATA = {
@@ -53,7 +53,7 @@ const TAMIL_UNIT_5_DATA = {
         },
         {
           id: "tam5_1_6",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examTag: "2024*",
           isImportant: true,
@@ -128,7 +128,7 @@ const TAMIL_UNIT_5_DATA = {
         },
         {
           id: "tam5_2_6",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examTag: "முக்கிய நெடுவினா",
           isImportant: true,
@@ -186,7 +186,7 @@ const TAMIL_UNIT_5_DATA = {
         },
         {
           id: "tam5_3_5",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examTag: "முக்கிய வினா",
           isImportant: true,

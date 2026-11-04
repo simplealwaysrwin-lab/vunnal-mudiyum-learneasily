@@ -1,4 +1,4 @@
-// 10th Standard Social Science - Civics Unit 2: Central Government
+﻿// 10th Standard Social Science - Civics Unit 2: Central Government
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions (English Medium)
 
 const SOCIAL_EM_UNIT_7_DATA = {
@@ -75,8 +75,8 @@ const SOCIAL_EM_UNIT_7_DATA = {
         },
         {
           id: "soc_em_7_5",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Important 5M",
           q: "Describe the powers and functions of the President of India.",
           ans: `<div style="line-height:1.8;">
@@ -104,8 +104,8 @@ const SOCIAL_EM_UNIT_7_DATA = {
         },
         {
           id: "soc_em_7_6",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Public Exam 5M",
           q: "Write a short note on the powers and duties of the Prime Minister of India.",
           ans: `<div style="line-height:1.8;">

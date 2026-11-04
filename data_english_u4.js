@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 10th Standard English - Unit 4 Study Guide & Question Bank
  * Tamil Nadu Samacheer Kalvi Syllabus
  * 
@@ -180,8 +180,8 @@ const ENGLISH_UNIT_4_DATA = {
         },
         {
           id: "eng4_1_7",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           isImportant: true,
           q: "Give a detailed account of how Aditya made amends for his childhood wrong deed in 'The Attic'.",
           qTamil: "'தி அட்டிக்' கதையில் ஆதித்யா தனது பால்ய காலத் தவறுக்குப் பரிகாரம் தேடிய விதத்தை விரிவாக விவரிக்க.",
@@ -243,8 +243,8 @@ const ENGLISH_UNIT_4_DATA = {
         },
         {
           id: "eng4_2_4",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           q: "Contrast the attitudes of the ant and the cricket in the poem 'The Ant and the Cricket'.",
           qTamil: "இக்கவிதையில் எறும்பு மற்றும் வெட்டுக்கிளியின் குணாதிசயங்களை ஒப்பிட்டு வேறுபடுத்திக் காட்டுக.",
           ans: `<div style="line-height:1.6;">

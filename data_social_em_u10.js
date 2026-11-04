@@ -1,4 +1,4 @@
-// Class 10 Social Science - Geography Unit 3: India - Agriculture
+﻿// Class 10 Social Science - Geography Unit 3: India - Agriculture
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SOCIAL_EM_UNIT_10_DATA = {
@@ -82,8 +82,8 @@ const SOCIAL_EM_UNIT_10_DATA = {
         },
         {
           id: "soc_em_10_5",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Important 5M",
           q: "What are Multipurpose River Valley Projects? Describe any four prominent multipurpose projects in India.",
           ans: `<div style="line-height:1.8;">
@@ -140,8 +140,8 @@ const SOCIAL_EM_UNIT_10_DATA = {
         },
         {
           id: "soc_em_10_8",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Important 5M",
           q: "Explain the geographical conditions required for the cultivation of rice and wheat in India.",
           ans: `<div style="line-height:1.8;">

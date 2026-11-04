@@ -109,7 +109,7 @@ const SCIENCE_UNIT_4_DATA = {
         },
         {
           id: "sci_4_7",
-          type: "5m",
+          type: "7m",
           mark: "4 / 7 மதிப்பெண்",
           examYear: "2023",
           examTag: "2023* (முக்கிய விரிவான விடை)",
@@ -160,7 +160,7 @@ if (typeof SCIENCE_UNIT_4_DATA !== 'undefined') {
       {
         id: "sci_u4_out_5m_1",
         q: "மின்தடையாக்கிகளின் தொடரிணைப்பு மற்றும் பக்க இணைப்புகளைத் தெளிவான மின்சுற்று வரைபடங்கள் மற்றும் ஒப்பீட்டு அட்டவணையுடன் விளக்குக.",
-        type: "5m",
+        type: "7m",
         examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (Outside Book Practice)",
         ans: "<b>தொடரிணைப்பு மற்றும் பக்க இணைப்பு ஒப்பீடு:</b><br><br>" +
              "<table style='width:100%; border-collapse:collapse; margin-bottom:12px; font-size:12.5px; border:1px solid #cbd5e1;'>" +
@@ -252,7 +252,7 @@ if (typeof SCIENCE_UNIT_4_DATA !== 'undefined') {
       {
         id: "sci_u4_out_5m_2",
         q: "மின்னோட்டத்தின் வெப்ப விளைவு என்றால் என்ன? ஜூல் வெப்ப விதியைக் கூறி அதன் முக்கிய அன்றாடப் பயன்பாடுகளை வரைபடத்துடன் விளக்குக.",
-        type: "5m",
+        type: "7m",
         examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (Outside Book Practice)",
         ans: "<b>மின்னோட்டத்தின் வெப்ப விளைவு மற்றும் ஜூல் விதி:</b><br><br>" +
              "<b>1. வெப்ப விளைவு தத்துவம்:</b><br>" +

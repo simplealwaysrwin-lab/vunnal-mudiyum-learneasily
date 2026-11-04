@@ -1,4 +1,4 @@
-// Class 10 Social Science - History Unit 3: World War II
+﻿// Class 10 Social Science - History Unit 3: World War II
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SOCIAL_EM_UNIT_9_DATA = {
@@ -73,8 +73,8 @@ const SOCIAL_EM_UNIT_9_DATA = {
         },
         {
           id: "soc_em_9_5",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Important 5M",
           q: "Analyze the major causes that led to the outbreak of the Second World War.",
           ans: `<div style="line-height:1.8;">
@@ -130,8 +130,8 @@ const SOCIAL_EM_UNIT_9_DATA = {
         },
         {
           id: "soc_em_9_8",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Important 5M",
           q: "Discuss the consequences of World War II and the primary objectives of the United Nations Organization.",
           ans: `<div style="line-height:1.8;">

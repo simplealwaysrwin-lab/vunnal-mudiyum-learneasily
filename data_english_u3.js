@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 10th Standard English - Unit 3 Study Guide & Question Bank
  * Tamil Nadu Samacheer Kalvi Syllabus
  * 
@@ -250,8 +250,8 @@ const ENGLISH_UNIT_3_DATA = {
         },
         {
           id: "eng3_1_7",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           isImportant: true,
           q: "Write a detailed paragraph on the challenges faced and the spirit displayed by the all-women crew of INSV Tarini.",
           qTamil: "INSV தாரிணி பெண் குழுவினர் எதிர்கொண்ட சவால்களையும் அவர்களின் வீரமிக்க சாதனைகளையும் விளக்கிப் பத்தி வரைக.",
@@ -312,8 +312,8 @@ const ENGLISH_UNIT_3_DATA = {
         },
         {
           id: "eng3_2_4",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           q: "How does Rakhi Nariani Shirke portray the multi-faceted nature of the modern woman in 'I am Every Woman'?",
           qTamil: "ராக்கி நாரியானி ஷிர்கே நவீனப் பெண்ணின் பன்முக ஆற்றலை எவ்வாறு கவிதையில் விவரிக்கிறார்?",
           ans: `<div style="line-height:1.6;">

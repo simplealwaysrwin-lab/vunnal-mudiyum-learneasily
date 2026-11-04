@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 10th Standard English - Unit 2 Study Guide & Question Bank
  * Tamil Nadu Samacheer Kalvi Syllabus
  * 
@@ -195,8 +195,8 @@ const ENGLISH_UNIT_2_DATA = {
         },
         {
           id: "eng2_1_8",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           q: "Describe the humorous events that took place on the night the ghost got in.",
           qTamil: "'அன்று இரவு பேய் புகுந்த போது' நடந்த நகைச்சுவைச் சம்பவங்களை விரிவாக விவரிக்க.",
           ans: `<div style="line-height:1.6;">

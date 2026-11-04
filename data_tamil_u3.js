@@ -1,4 +1,4 @@
-// 10th Standard Tamil - Unit 3: கூட்டஞ்சோறு
+﻿// 10th Standard Tamil - Unit 3: கூட்டஞ்சோறு
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const TAMIL_UNIT_3_DATA = {
@@ -58,7 +58,7 @@ const TAMIL_UNIT_3_DATA = {
         },
         {
           id: "tam3_1_6",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",
           examTag: "2024*",
@@ -123,7 +123,7 @@ const TAMIL_UNIT_3_DATA = {
         },
         {
           id: "tam3_2_5",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2023",
           examTag: "2023*",
@@ -186,7 +186,7 @@ const TAMIL_UNIT_3_DATA = {
         },
         {
           id: "tam3_3_5",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",
           examTag: "2024*",

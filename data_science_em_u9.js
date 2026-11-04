@@ -1,4 +1,4 @@
-// Class 10 Science - Unit 9: Solutions
+﻿// Class 10 Science - Unit 9: Solutions
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SCIENCE_EM_UNIT_9_DATA = {
@@ -73,8 +73,8 @@ const SCIENCE_EM_UNIT_9_DATA = {
         },
         {
           id: "sci_em_9_5",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Important 5M",
           q: "Explain the various factors affecting solubility.",
           ans: `<div style="line-height:1.8;">
@@ -128,8 +128,8 @@ const SCIENCE_EM_UNIT_9_DATA = {
         },
         {
           id: "sci_em_9_8",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Important 5M",
           q: "What is water of crystallization? Explain with two examples of hydrated salts.",
           ans: `<div style="line-height:1.8;">

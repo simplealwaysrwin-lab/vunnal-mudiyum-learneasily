@@ -1,4 +1,4 @@
-// 10th Standard Social Science - Geography Unit 1: India - Location, Relief and Drainage (English Medium)
+﻿// 10th Standard Social Science - Geography Unit 1: India - Location, Relief and Drainage (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SOCIAL_EM_UNIT_2_DATA = {
@@ -534,8 +534,8 @@ const SOCIAL_EM_UNIT_2_DATA = {
         },
         {
           id: "soc_em_2_6",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examYear: "2024",
           examTag: "2024*",
           isImportant: true,

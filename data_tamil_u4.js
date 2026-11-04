@@ -1,4 +1,4 @@
-// 10th Standard Tamil - Unit 4: நான்காம் தமிழ்
+﻿// 10th Standard Tamil - Unit 4: நான்காம் தமிழ்
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const TAMIL_UNIT_4_DATA = {
@@ -46,7 +46,7 @@ const TAMIL_UNIT_4_DATA = {
         },
         {
           id: "tam4_1_5",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",
           examTag: "2024*",
@@ -108,7 +108,7 @@ const TAMIL_UNIT_4_DATA = {
         },
         {
           id: "tam4_2_5",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",
           examTag: "2024*",
@@ -164,7 +164,7 @@ const TAMIL_UNIT_4_DATA = {
         },
         {
           id: "tam4_3_5",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",
           examTag: "2024*",

@@ -1,4 +1,4 @@
-// 10th Standard Social Science - Economics Unit 1: Gross Domestic Product and its Growth (English Medium)
+﻿// 10th Standard Social Science - Economics Unit 1: Gross Domestic Product and its Growth (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SOCIAL_EM_UNIT_4_DATA = {
@@ -100,8 +100,8 @@ const SOCIAL_EM_UNIT_4_DATA = {
         },
         {
           id: "soc_em_4_7",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examYear: "2023",
           examTag: "2023* (Key 5 Marks)",
           isImportant: true,

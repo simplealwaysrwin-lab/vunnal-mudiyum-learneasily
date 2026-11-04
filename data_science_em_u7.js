@@ -1,4 +1,4 @@
-// 10th Standard Science - Unit 7: Atoms and Molecules
+﻿// 10th Standard Science - Unit 7: Atoms and Molecules
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions (English Medium)
 
 const SCIENCE_EM_UNIT_7_DATA = {
@@ -76,8 +76,8 @@ const SCIENCE_EM_UNIT_7_DATA = {
         },
         {
           id: "sci_em_7_5",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Important 5M",
           q: "List out the postulates of Modern Atomic Theory.",
           ans: `<div style="line-height:1.8;">
@@ -99,8 +99,8 @@ const SCIENCE_EM_UNIT_7_DATA = {
         },
         {
           id: "sci_em_7_6",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Public Exam 5M",
           q: "What are the applications of Avogadro's Law?",
           ans: `<div style="line-height:1.8;">

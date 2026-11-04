@@ -186,7 +186,7 @@ if (typeof SCIENCE_UNIT_5_DATA !== 'undefined') {
       {
         id: "sci_u5_out_5m_1",
         q: "எதிரொலி (Echo) எவ்வாறு உருவாகிறது? தெளிவான எதிரொலியைக் கேட்பதற்கான அறிவியல் நிபந்தனைகளை வரைபடத்துடன் விளக்குக.",
-        type: "5m",
+        type: "7m",
         examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (Outside Book Practice)",
         ans: "<b>எதிரொலி மற்றும் அதன் நிபந்தனைகள்:</b><br><br>" +
              "<b>1. எதிரொலி வரையறை:</b><br>" +
@@ -247,7 +247,7 @@ if (typeof SCIENCE_UNIT_5_DATA !== 'undefined') {
       {
         id: "sci_u5_out_5m_2",
         q: "மீயொலி அலைகளின் (Ultrasonic waves) முக்கிய மருத்துவ, தொழில் துறை மற்றும் கடல்சார் பயன்பாடுகளை வரைபடத்துடன் விளக்குக.",
-        type: "5m",
+        type: "7m",
         examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (Outside Book Practice)",
         ans: "<b>மீயொலி அலைகளின் பயன்கள் (Applications of Ultrasonic Waves):</b><br><br>" +
              "<b>1. மீயொலி வரையறை:</b><br>" +

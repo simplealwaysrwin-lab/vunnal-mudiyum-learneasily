@@ -187,7 +187,7 @@ if (typeof SCIENCE_EM_UNIT_5_DATA !== 'undefined') {
       {
         id: "sci_em_u5_out_5m_1",
         q: "Explain how an echo is formed, derive the minimum distance required to hear a distinct echo, and describe its conditions with a neat diagram.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Echo Formation and Essential Conditions:</b><br><br>" +
              "<b>1. Definition of Echo:</b><br>" +
@@ -248,7 +248,7 @@ if (typeof SCIENCE_EM_UNIT_5_DATA !== 'undefined') {
       {
         id: "sci_em_u5_out_5m_2",
         q: "Explain the major applications of ultrasonic waves in medicine, industry, and oceanography with a neat diagram.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Applications of Ultrasonic Waves (f &gt; 20 kHz):</b><br><br>" +
              "<b>1. Definition:</b><br>" +

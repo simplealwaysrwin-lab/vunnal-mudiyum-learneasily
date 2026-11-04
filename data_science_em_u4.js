@@ -109,7 +109,7 @@ const SCIENCE_EM_UNIT_4_DATA = {
         },
         {
           id: "sci_em_4_7",
-          type: "5m",
+          type: "7m",
           mark: "4 / 7 Marks",
           examYear: "2023",
           examTag: "2023* (Key Comprehensive)",
@@ -160,7 +160,7 @@ if (typeof SCIENCE_EM_UNIT_4_DATA !== 'undefined') {
       {
         id: "sci_em_u4_out_5m_1",
         q: "Compare Series and Parallel electrical circuits with clear circuit diagrams, formulas, and practical features.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Comparison between Series and Parallel Circuits:</b><br><br>" +
              "<table style='width:100%; border-collapse:collapse; margin-bottom:12px; font-size:12.5px; border:1px solid #cbd5e1;'>" +
@@ -252,7 +252,7 @@ if (typeof SCIENCE_EM_UNIT_4_DATA !== 'undefined') {
       {
         id: "sci_em_u4_out_5m_2",
         q: "Explain the heating effect of electric current, state Joule's law of heating (H = I²Rt), and explain its practical applications with a neat diagram.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Heating Effect of Electric Current &amp; Joule's Law:</b><br><br>" +
              "<b>1. Principle:</b><br>" +

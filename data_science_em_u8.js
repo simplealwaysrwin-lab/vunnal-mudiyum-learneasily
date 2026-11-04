@@ -1,4 +1,4 @@
-// 10th Standard Science - Unit 8: Periodic Classification of Elements
+﻿// 10th Standard Science - Unit 8: Periodic Classification of Elements
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions (English Medium)
 
 const SCIENCE_EM_UNIT_8_DATA = {
@@ -74,8 +74,8 @@ const SCIENCE_EM_UNIT_8_DATA = {
         },
         {
           id: "sci_em_8_5",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Important 5M",
           q: "Tabulate how periodic properties vary along a period and down a group in the Modern Periodic Table.",
           ans: `<div style="line-height:1.8;">
@@ -122,8 +122,8 @@ const SCIENCE_EM_UNIT_8_DATA = {
         },
         {
           id: "sci_em_8_6",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Public Exam 5M",
           q: "Explain any four methods of preventing corrosion of metals.",
           ans: `<div style="line-height:1.8;">

@@ -1,4 +1,4 @@
-// 10th Standard Science - Unit 3: Thermal Physics (English Medium)
+﻿// 10th Standard Science - Unit 3: Thermal Physics (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SCIENCE_EM_UNIT_3_DATA = {
@@ -111,7 +111,7 @@ const SCIENCE_EM_UNIT_3_DATA = {
         },
         {
           id: "sci_em_3_8",
-          type: "5m",
+          type: "7m",
           mark: "4 / 7 Marks",
           examYear: "2023",
           examTag: "2023* (Key Comprehensive)",
@@ -164,21 +164,21 @@ if (typeof SCIENCE_EM_UNIT_3_DATA !== 'undefined') {
       {
         id: "sci_em_u3_out_5m_1",
         q: "Explain the three modes of heat transfer â€” Conduction, Convection, and Radiation â€” with examples and a neat diagram.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Three Modes of Heat Transfer:</b><br><br>" +
              "<b>1. Conduction:</b><br>" +
-             "â€¢ The process of heat transfer in solids from a region of higher temperature to lower temperature without the actual bulk movement of the constituent particles.<br>" +
-             "â€¢ Atoms vibrate vigorously and pass vibrational kinetic energy to neighbouring atoms.<br>" +
-             "â€¢ <i>Example:</i> A metal spoon placed in hot soup becomes hot throughout.<br><br>" +
+             "• The process of heat transfer in solids from a region of higher temperature to lower temperature without the actual bulk movement of the constituent particles.<br>" +
+             "• Atoms vibrate vigorously and pass vibrational kinetic energy to neighbouring atoms.<br>" +
+             "• <i>Example:</i> A metal spoon placed in hot soup becomes hot throughout.<br><br>" +
              "<b>2. Convection:</b><br>" +
-             "â€¢ The process of heat transfer in fluids (liquids and gases) by the actual physical movement of the heated molecules.<br>" +
-             "â€¢ Heated fluid expands, becomes less dense and rises up, while cooler, denser fluid descends, establishing circulating convection currents.<br>" +
-             "â€¢ <i>Example:</i> Boiling water in an electric kettle; generation of sea and land breezes.<br><br>" +
+             "• The process of heat transfer in fluids (liquids and gases) by the actual physical movement of the heated molecules.<br>" +
+             "• Heated fluid expands, becomes less dense and rises up, while cooler, denser fluid descends, establishing circulating convection currents.<br>" +
+             "• <i>Example:</i> Boiling water in an electric kettle; generation of sea and land breezes.<br><br>" +
              "<b>3. Radiation:</b><br>" +
-             "â€¢ The process of heat transfer in the form of electromagnetic infrared waves without requiring any material intervening medium.<br>" +
-             "â€¢ Radiative heat travels through empty vacuum at the speed of light (3 Ã— 10â¸ m/s).<br>" +
-             "â€¢ <i>Example:</i> Solar thermal energy reaching Earth across outer space vacuum; warming hands around an electric room heater.",
+             "• The process of heat transfer in the form of electromagnetic infrared waves without requiring any material intervening medium.<br>" +
+             "• Radiative heat travels through empty vacuum at the speed of light (3 × 10â¸ m/s).<br>" +
+             "• <i>Example:</i> Solar thermal energy reaching Earth across outer space vacuum; warming hands around an electric room heater.",
         explanation: "Conduction occurs in solids without particle motion; Convection occurs in fluids with particle motion; Radiation travels through vacuum as electromagnetic waves.",
         diagramCaption: "Illustration of Conduction, Convection, and Radiation",
         diagramSvg: `<svg viewBox="0 0 460 260" style="max-width:100%; height:auto; display:block; margin:0 auto; background:#f8fafc; border-radius:12px; border:1px solid #cbd5e1;">
@@ -209,17 +209,17 @@ if (typeof SCIENCE_EM_UNIT_3_DATA !== 'undefined') {
       {
         id: "sci_em_u3_out_5m_2",
         q: "Explain the construction, working principle, and design features of a Thermos Flask (Vacuum Flask) with a neat diagram.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Thermos Flask (Vacuum Flask):</b><br><br>" +
              "<b>1. Introduction:</b><br>" +
              "Invented by Sir James Dewar in 1892, a thermos flask is designed to minimize all three modes of heat transfer (conduction, convection, and radiation) to keep hot liquids hot and cold liquids cold for a prolonged duration.<br><br>" +
              "<b>2. Construction and Heat Reduction Features:</b><br>" +
-             "â€¢ <b>Double-Walled Glass/Steel Container:</b> It has two vessels nested one inside the other.<br>" +
-             "â€¢ <b>Vacuum Layer:</b> Air between the double walls is completely evacuated. Since conduction and convection strictly require a physical material medium, the vacuum eliminates heat loss or gain by <b>conduction and convection</b>.<br>" +
-             "â€¢ <b>Silvered Mirror Coating:</b> The facing surfaces of the inner and outer walls are silver-coated. Silver mirrors reflect thermal infrared radiation back into the flask, preventing heat loss by <b>radiation</b>.<br>" +
-             "â€¢ <b>Insulating Stopper:</b> The neck of the flask is sealed with an insulating cork, rubber, or plastic stopper to prevent heat escape through convection currents and evaporation.<br>" +
-             "â€¢ <b>Outer Shock-Proof Casing:</b> A metal or plastic casing with a shock-absorbing base support pad protects the fragile inner vacuum vessel.",
+             "• <b>Double-Walled Glass/Steel Container:</b> It has two vessels nested one inside the other.<br>" +
+             "• <b>Vacuum Layer:</b> Air between the double walls is completely evacuated. Since conduction and convection strictly require a physical material medium, the vacuum eliminates heat loss or gain by <b>conduction and convection</b>.<br>" +
+             "• <b>Silvered Mirror Coating:</b> The facing surfaces of the inner and outer walls are silver-coated. Silver mirrors reflect thermal infrared radiation back into the flask, preventing heat loss by <b>radiation</b>.<br>" +
+             "• <b>Insulating Stopper:</b> The neck of the flask is sealed with an insulating cork, rubber, or plastic stopper to prevent heat escape through convection currents and evaporation.<br>" +
+             "• <b>Outer Shock-Proof Casing:</b> A metal or plastic casing with a shock-absorbing base support pad protects the fragile inner vacuum vessel.",
         explanation: "Vacuum between double walls prevents conduction and convection; silvered lining reflects radiation; insulating stopper stops air convection.",
         diagramCaption: "Cross-Section of a Double-Walled Thermos Flask",
         diagramSvg: `<svg viewBox="0 0 380 280" style="max-width:100%; height:auto; display:block; margin:0 auto; background:#f8fafc; border-radius:12px; border:1px solid #cbd5e1;">
@@ -248,7 +248,7 @@ if (typeof SCIENCE_EM_UNIT_3_DATA !== 'undefined') {
       { id: "sci_em_u3_out_1m_5", q: "Heat transfer in liquids and gases through the actual bulk movement of heated particles is called:", options: ["Convection", "Conduction", "Radiation", "Sublimation"], ans: "Convection", type: "1m", explanation: "Convection occurs in fluids due to density gradients." },
       { id: "sci_em_u3_out_1m_6", q: "Heat transfer by means of electromagnetic waves without requiring a material medium is called:", options: ["Radiation", "Conduction", "Convection", "Refraction"], ans: "Radiation", type: "1m", explanation: "Thermal radiation travels across vacuum as infrared rays." },
       { id: "sci_em_u3_out_1m_7", q: "Which mode of heat transfer can take place across an absolute vacuum?", options: ["Radiation only", "Conduction only", "Convection only", "All three"], ans: "Radiation only", type: "1m", explanation: "Only electromagnetic radiation can travel through vacuum." },
-      { id: "sci_em_u3_out_1m_8", q: "The amount of heat required to raise the temperature of 1 kg of a substance by 1 K is called:", options: ["Specific heat capacity", "Heat capacity", "Latent heat", "Thermal conductance"], ans: "Specific heat capacity", type: "1m", explanation: "C = Q / (m Ã— Î”T)." },
+      { id: "sci_em_u3_out_1m_8", q: "The amount of heat required to raise the temperature of 1 kg of a substance by 1 K is called:", options: ["Specific heat capacity", "Heat capacity", "Latent heat", "Thermal conductance"], ans: "Specific heat capacity", type: "1m", explanation: "C = Q / (m × ΔT)." },
       { id: "sci_em_u3_out_1m_9", q: "What is the SI unit of specific heat capacity?", options: ["J kgâ»Â¹ Kâ»Â¹", "J Kâ»Â¹", "J sâ»Â¹", "cal gâ»Â¹"], ans: "J kgâ»Â¹ Kâ»Â¹", type: "1m", explanation: "Joules per kilogram Kelvin." },
       { id: "sci_em_u3_out_1m_10", q: "The heat absorbed or released during a change of state at constant temperature is called:", options: ["Latent heat", "Specific heat", "Sensible heat", "Reaction heat"], ans: "Latent heat", type: "1m", explanation: "Latent heat changes physical state without changing temperature." },
       { id: "sci_em_u3_out_1m_11", q: "What is the normal boiling point of pure water at standard atmospheric pressure?", options: ["100Â°C (373.15 K)", "0Â°C", "273 K", "300 K"], ans: "100Â°C (373.15 K)", type: "1m", explanation: "Water boils at 100Â°C under 1 atmosphere pressure." },

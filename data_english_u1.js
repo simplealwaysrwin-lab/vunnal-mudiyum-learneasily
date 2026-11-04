@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 10th Standard English - Unit 1 Study Guide & Question Bank
  * Tamil Nadu Samacheer Kalvi Syllabus
  * 
@@ -462,8 +462,8 @@ const ENGLISH_UNIT_1_DATA = {
         // 5-Mark: Paragraph Question
         {
           id: "eng1_1_18",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examYear: "2023",
           examTag: "2023*",
           isImportant: true,
@@ -590,7 +590,7 @@ const ENGLISH_UNIT_1_DATA = {
         // Memory Poem
         {
           id: "eng1_2_1",
-          type: "5m",
+          type: "8m",
           mark: "Memory Poem (முழு மனப்பாடப் பாடல்)",
           q: "Quote from memory: The poem 'Life' by Henry Van Dyke (14 lines).",
           qTamil: "ஹென்றி வான் டைக் எழுதிய 'Life' மனப்பாடப் பாடலை பிழையின்றி எழுதுக (14 வரிகள்).",
@@ -707,8 +707,8 @@ const ENGLISH_UNIT_1_DATA = {
         // 5-Mark: Paragraph Question
         {
           id: "eng1_2_11",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           q: "Describe the poet's attitude towards life as expressed in the poem 'Life'.",
           qTamil: "'Life' கவிதையில் வெளிப்படும் கவிஞரின் நேர்மறையான வாழ்க்கை அணுகுமுறையை விவரிக்க.",
           ans: `<div style="line-height:1.6;">
@@ -841,8 +841,8 @@ const ENGLISH_UNIT_1_DATA = {
         // 5-Mark: Paragraph Question
         {
           id: "eng1_3_11",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           q: "Narrate the story of 'The Tempest' highlighting Prospero's nobility and forgiveness.",
           qTamil: "பிராஸ்பரோவின் பெருந்தன்மையையும் மன்னிக்கும் நற்குணத்தையும் முன்னிறுத்தி 'தி டெம்பஸ்ட்' கதையை விவரிக்க.",
           ans: `<div style="line-height:1.6;">

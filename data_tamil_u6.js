@@ -1,4 +1,4 @@
-// 10th Standard Tamil - Unit 6: நிகழ்கலை
+﻿// 10th Standard Tamil - Unit 6: நிகழ்கலை
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const TAMIL_UNIT_6_DATA = {
@@ -53,7 +53,7 @@ const TAMIL_UNIT_6_DATA = {
         },
         {
           id: "tam6_1_6",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examTag: "2023*",
           isImportant: true,
@@ -122,7 +122,7 @@ const TAMIL_UNIT_6_DATA = {
         },
         {
           id: "tam6_2_5",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examTag: "அரசுத் தேர்வு நெடுவினா",
           isImportant: true,
@@ -190,7 +190,7 @@ const TAMIL_UNIT_6_DATA = {
         },
         {
           id: "tam6_3_5",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examTag: "துணைப்பாட வினா",
           isImportant: true,

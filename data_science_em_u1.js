@@ -318,7 +318,7 @@ const SCIENCE_EM_UNIT_1_DATA = {
       questions: [
         {
           id: "sci_em_1_6",
-          type: "5m",
+          type: "7m",
           mark: "4 / 7 Marks",
           examYear: "2023",
           examTag: "2023*",
@@ -376,7 +376,7 @@ const SCIENCE_EM_UNIT_1_DATA = {
         },
         {
           id: "sci_em_1_7",
-          type: "5m",
+          type: "7m",
           mark: "4 / 7 Marks",
           examYear: "2024",
           examTag: "2024*",
@@ -487,8 +487,8 @@ const SCIENCE_EM_UNIT_1_DATA = {
       questions: [
         {
           id: "sci_em_1_10",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Exam Predicted",
           isImportant: true,
           q: "Explain the three types of inertia with suitable examples.",
@@ -602,8 +602,8 @@ const SCIENCE_EM_UNIT_1_DATA = {
         },
         {
           id: "sci_em_1_11",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Exam Predicted",
           isImportant: true,
           q: "Derive the mathematical expression for force using Newton’s Second Law of Motion.",
@@ -705,8 +705,8 @@ const SCIENCE_EM_UNIT_1_DATA = {
         },
         {
           id: "sci_em_1_12",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Numerical",
           isImportant: true,
           q: "A cricket ball of mass 0.15 kg is moving with a velocity of 20 m/s. A batsman hits the ball, and it moves in the opposite direction with a velocity of 30 m/s. If the contact time is 0.05 s, calculate: (1) The impulse acting on the ball, (2) The average force acting on the ball.",
@@ -811,8 +811,8 @@ const SCIENCE_EM_UNIT_1_DATA = {
         },
         {
           id: "sci_em_1_13",
-          type: "5m",
-          mark: "5 Marks",
+          type: "7m",
+          mark: "7 Marks",
           examTag: "Exam Predicted",
           isImportant: true,
           q: "Explain the Principle of Moments and Moment of a Couple with examples.",
@@ -938,7 +938,7 @@ if (typeof SCIENCE_EM_UNIT_1_DATA !== 'undefined') {
       {
         id: "sci_em_u1_out_5m_1",
         q: "Explain rocket propulsion and its working principle with a neat labeled diagram.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Rocket Propulsion and Working Principle:</b><br><br>" +
              "<b>1. Fundamental Principles:</b><br>" +
@@ -982,7 +982,7 @@ if (typeof SCIENCE_EM_UNIT_1_DATA !== 'undefined') {
       {
         id: "sci_em_u1_out_5m_2",
         q: "State and explain the law of conservation of linear momentum with a neat collision diagram.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Law of Conservation of Linear Momentum:</b><br><br>" +
              "<b>1. Statement:</b><br>" +

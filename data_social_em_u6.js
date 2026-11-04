@@ -1,4 +1,4 @@
-// Class 10 Social Science - Geography Unit 2: India - Climate and Natural Vegetation
+﻿// Class 10 Social Science - Geography Unit 2: India - Climate and Natural Vegetation
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SOCIAL_EM_UNIT_6_DATA = {
@@ -64,8 +64,8 @@ const SOCIAL_EM_UNIT_6_DATA = {
         },
         {
           id: "soc_em_6_4",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Board Exam 5M High Yield",
           q: "Explain the mechanism of the Southwest Monsoon and trace the rainfall pattern of its two branches across India.",
           ans: `<div style="line-height:1.7;">
@@ -120,8 +120,8 @@ const SOCIAL_EM_UNIT_6_DATA = {
         },
         {
           id: "soc_em_6_6",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Board Exam 5M High Yield",
           q: "Describe the various types of natural vegetation found in India along with their characteristic trees.",
           ans: `<div style="line-height:1.7;">

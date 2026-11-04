@@ -170,7 +170,7 @@ if (typeof SCIENCE_EM_UNIT_6_DATA !== 'undefined') {
       {
         id: "sci_em_u6_out_5m_1",
         q: "Explain the essential components, functions, and working principle of a Nuclear Reactor with a neat labeled diagram.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Components and Working Principle of a Nuclear Reactor:</b><br><br>" +
              "<b>1. Fundamental Principle:</b><br>" +
@@ -232,7 +232,7 @@ if (typeof SCIENCE_EM_UNIT_6_DATA !== 'undefined') {
       {
         id: "sci_em_u6_out_5m_2",
         q: "Differentiate between Nuclear Fission and Nuclear Fusion with their reaction equations, physical conditions, and diagrams.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Comparison between Nuclear Fission and Nuclear Fusion:</b><br><br>" +
              "<table style='width:100%; border-collapse:collapse; margin-bottom:12px; font-size:12.5px; border:1px solid #cbd5e1;'>" +

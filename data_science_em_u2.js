@@ -1,4 +1,4 @@
-// 10th Standard Science - Unit 2: Optics (English Medium)
+﻿// 10th Standard Science - Unit 2: Optics (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SCIENCE_EM_UNIT_2_DATA = {
@@ -342,7 +342,7 @@ const SCIENCE_EM_UNIT_2_DATA = {
       questions: [
         {
           id: "sci_em_2_8",
-          type: "5m",
+          type: "7m",
           mark: "4 / 7 Marks",
           examYear: "2024",
           examTag: "2024*",
@@ -393,7 +393,7 @@ if (typeof SCIENCE_EM_UNIT_2_DATA !== 'undefined') {
       {
         id: "sci_em_u2_out_5m_1",
         q: "Explain the construction, image formation, and uses of a simple microscope with a neat ray diagram.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Simple Microscope:</b><br><br>" +
              "<b>1. Construction:</b><br>" +
@@ -440,7 +440,7 @@ if (typeof SCIENCE_EM_UNIT_2_DATA !== 'undefined') {
       {
         id: "sci_em_u2_out_5m_2",
         q: "Explain Myopia (short-sightedness) and Hypermetropia (long-sightedness), their causes, and correction methods with clear ray diagrams.",
-        type: "5m",
+        type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Eye Defects and Ray Diagram Corrections:</b><br><br>" +
              "<b>1. Myopia (Short-sightedness):</b><br>" +

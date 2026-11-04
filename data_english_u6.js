@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 10th Standard English - Unit 6 Study Guide & Question Bank
  * Tamil Nadu Samacheer Kalvi Syllabus
  * 
@@ -121,8 +121,8 @@ const ENGLISH_UNIT_6_DATA = {
         },
         {
           id: "eng6_1_5",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "5 Mark Paragraph",
           isImportant: true,
           q: "Describe the atmosphere of the classroom on the day of 'The Last Lesson'.",
@@ -176,8 +176,8 @@ const ENGLISH_UNIT_6_DATA = {
         },
         {
           id: "eng6_2_4",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Appreciation / Summary",
           isImportant: true,
           q: "Elaborate the central theme of universal brotherhood in James Kirkup's 'No Men Are Foreign'.",
@@ -219,8 +219,8 @@ const ENGLISH_UNIT_6_DATA = {
         },
         {
           id: "eng6_3_3",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Supplementary Paragraph",
           isImportant: true,
           q: "Narrate Peter's heroic act of saving Holland from the raging sea.",

@@ -227,8 +227,8 @@ const SOCIAL_EM_UNIT_1_DATA = {
       questions: [
         {
           id: "soc_em_1_7",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examYear: "2024",
           examTag: "2024*",
           isImportant: true,
@@ -382,8 +382,8 @@ const SOCIAL_EM_UNIT_1_DATA = {
         },
         {
           id: "soc_em_1_8",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examYear: "2022",
           examTag: "2022*",
           isImportant: true,
@@ -475,8 +475,8 @@ const SOCIAL_EM_UNIT_1_DATA = {
       questions: [
         {
           id: "soc_em_1_9",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Exam Predicted",
           isImportant: true,
           q: "Explain how imperialism and militarism increased tensions in Europe before World War I.",
@@ -565,8 +565,8 @@ const SOCIAL_EM_UNIT_1_DATA = {
         },
         {
           id: "soc_em_1_10",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examTag: "Exam Predicted",
           isImportant: true,
           q: "Explain the major political and economic consequences of World War I.",

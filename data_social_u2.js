@@ -776,7 +776,7 @@ const SOCIAL_UNIT_2_DATA = {
         },
         {
           id: "soc_2_6",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2024",
           examTag: "2024*",
@@ -885,7 +885,7 @@ const SOCIAL_UNIT_2_DATA = {
         },
         {
           id: "soc_2_8",
-          type: "5m",
+          type: "8m",
           mark: "5 மதிப்பெண்",
           examYear: "2023",
           examTag: "2023*",

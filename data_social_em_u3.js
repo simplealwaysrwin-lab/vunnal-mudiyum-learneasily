@@ -1,4 +1,4 @@
-// 10th Standard Social Science - Civics Unit 1: Indian Constitution (English Medium)
+﻿// 10th Standard Social Science - Civics Unit 1: Indian Constitution (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SOCIAL_EM_UNIT_3_DATA = {
@@ -109,8 +109,8 @@ const SOCIAL_EM_UNIT_3_DATA = {
         },
         {
           id: "soc_em_3_7",
-          type: "5m",
-          mark: "5 Marks",
+          type: "8m",
+          mark: "8 Marks",
           examYear: "2024",
           examTag: "2024* (Key 5 Marks)",
           isImportant: true,

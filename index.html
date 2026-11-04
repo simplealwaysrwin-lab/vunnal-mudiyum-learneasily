@@ -102,18 +102,26 @@
 <script src="data_tamil_u2.js?v=20261031_v31"></script>
 <script src="data_tamil_u3.js?v=20261031_v31"></script>
 <script src="data_tamil_u4.js?v=20261031_v31"></script>
+<script src="data_tamil_u5.js?v=20261104_v51"></script>
+<script src="data_tamil_u6.js?v=20261104_v51"></script>
 <script src="data_english_u1.js?v=20261031_v31"></script>
 <script src="data_english_u2.js?v=20261031_v31"></script>
 <script src="data_english_u3.js?v=20261031_v31"></script>
 <script src="data_english_u4.js?v=20261031_v31"></script>
+<script src="data_english_u5.js?v=20261104_v51"></script>
+<script src="data_english_u6.js?v=20261104_v51"></script>
   <script src="data_maths_tm_u1.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u2.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u4.js?v=20261031_v31"></script>
+<script src="data_maths_tm_u5.js?v=20261104_v51"></script>
+<script src="data_maths_tm_u6.js?v=20261104_v51"></script>
   <script src="data_maths_em_u1.js?v=20261103_v50"></script>
 <script src="data_maths_em_u2.js?v=20261103_v50"></script>
 <script src="data_maths_em_u3.js?v=20261031_v31"></script>
 <script src="data_maths_em_u4.js?v=20261031_v31"></script>
+<script src="data_maths_em_u5.js?v=20261104_v51"></script>
+<script src="data_maths_em_u6.js?v=20261104_v51"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
 <script src="data_science_u3.js?v=20261031_v31"></script>
@@ -4683,6 +4691,24 @@
             qCount: (typeof TAMIL_UNIT_4_DATA !== 'undefined' && TAMIL_UNIT_4_DATA.subSections) ? TAMIL_UNIT_4_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 15,
             subSections: (typeof TAMIL_UNIT_4_DATA !== 'undefined') ? TAMIL_UNIT_4_DATA.subSections : [],
             questions: (typeof TAMIL_UNIT_4_DATA !== 'undefined' && TAMIL_UNIT_4_DATA.subSections) ? TAMIL_UNIT_4_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : []
+          },
+          {
+            id: 'tam_u5',
+            unit: 'இயல் 5',
+            title: 'மணற்கேணி (மொழிபெயர்ப்புக் கல்வி, நீதி வெண்பா, திருவிளையாடற் புராணம், புதிய நம்பிக்கை, வினா விடை வகைகள் & பொருட்கோள்)',
+            qCount: (typeof TAMIL_UNIT_5_DATA !== 'undefined' && TAMIL_UNIT_5_DATA.subSections) ? TAMIL_UNIT_5_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 17,
+            subSections: (typeof TAMIL_UNIT_5_DATA !== 'undefined') ? TAMIL_UNIT_5_DATA.subSections : [],
+            questions: (typeof TAMIL_UNIT_5_DATA !== 'undefined' && TAMIL_UNIT_5_DATA.subSections) ? TAMIL_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            manapaadam: (typeof TAMIL_UNIT_5_DATA !== 'undefined' && TAMIL_UNIT_5_DATA.manapaadam) ? TAMIL_UNIT_5_DATA.manapaadam : []
+          },
+          {
+            id: 'tam_u6',
+            unit: 'இயல் 6',
+            title: 'நிகழ்கலை (பாய்ச்சல், முத்துக்குமாரசுவாமி பிள்ளைத்தமிழ், கம்பராமாயணம், அகப்பொருள் இலக்கணம்)',
+            qCount: (typeof TAMIL_UNIT_6_DATA !== 'undefined' && TAMIL_UNIT_6_DATA.subSections) ? TAMIL_UNIT_6_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 16,
+            subSections: (typeof TAMIL_UNIT_6_DATA !== 'undefined') ? TAMIL_UNIT_6_DATA.subSections : [],
+            questions: (typeof TAMIL_UNIT_6_DATA !== 'undefined' && TAMIL_UNIT_6_DATA.subSections) ? TAMIL_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            manapaadam: (typeof TAMIL_UNIT_6_DATA !== 'undefined' && TAMIL_UNIT_6_DATA.manapaadam) ? TAMIL_UNIT_6_DATA.manapaadam : []
           }
         ]
       },
@@ -4730,6 +4756,24 @@
             subSections: (typeof ENGLISH_UNIT_4_DATA !== 'undefined') ? ENGLISH_UNIT_4_DATA.subSections : [],
             questions: (typeof ENGLISH_UNIT_4_DATA !== 'undefined' && ENGLISH_UNIT_4_DATA.subSections) ? ENGLISH_UNIT_4_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             stories: (typeof ENGLISH_UNIT_4_DATA !== 'undefined' && ENGLISH_UNIT_4_DATA.stories) ? ENGLISH_UNIT_4_DATA.stories : []
+          },
+          {
+            id: 'eng_u5',
+            unit: 'Unit 5',
+            title: 'Prose: Tech Bloomers | Poem: The Secret of the Machines | Supplementary: A Dilemma | Grammar',
+            qCount: (typeof ENGLISH_UNIT_5_DATA !== 'undefined' && ENGLISH_UNIT_5_DATA.subSections) ? ENGLISH_UNIT_5_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 15,
+            subSections: (typeof ENGLISH_UNIT_5_DATA !== 'undefined') ? ENGLISH_UNIT_5_DATA.subSections : [],
+            questions: (typeof ENGLISH_UNIT_5_DATA !== 'undefined' && ENGLISH_UNIT_5_DATA.subSections) ? ENGLISH_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            stories: (typeof ENGLISH_UNIT_5_DATA !== 'undefined' && ENGLISH_UNIT_5_DATA.stories) ? ENGLISH_UNIT_5_DATA.stories : []
+          },
+          {
+            id: 'eng_u6',
+            unit: 'Unit 6',
+            title: 'Prose: The Last Lesson | Poem: No Men Are Foreign | Supplementary: The Little Hero of Holland | Grammar',
+            qCount: (typeof ENGLISH_UNIT_6_DATA !== 'undefined' && ENGLISH_UNIT_6_DATA.subSections) ? ENGLISH_UNIT_6_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 16,
+            subSections: (typeof ENGLISH_UNIT_6_DATA !== 'undefined') ? ENGLISH_UNIT_6_DATA.subSections : [],
+            questions: (typeof ENGLISH_UNIT_6_DATA !== 'undefined' && ENGLISH_UNIT_6_DATA.subSections) ? ENGLISH_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            stories: (typeof ENGLISH_UNIT_6_DATA !== 'undefined' && ENGLISH_UNIT_6_DATA.stories) ? ENGLISH_UNIT_6_DATA.stories : []
           }
         ]
       },
@@ -4777,6 +4821,24 @@
             subSections: (typeof MATHS_TM_UNIT_4_DATA !== 'undefined') ? MATHS_TM_UNIT_4_DATA.subSections : [],
             questions: (typeof MATHS_TM_UNIT_4_DATA !== 'undefined' && MATHS_TM_UNIT_4_DATA.subSections) ? MATHS_TM_UNIT_4_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof MATHS_TM_UNIT_4_DATA !== 'undefined') ? MATHS_TM_UNIT_4_DATA.formulas : []
+          },
+          {
+            id: 'math_tm_u5',
+            unit: 'அலகு 5',
+            title: 'ஆயத்தொலை வடிவியல் (Coordinate Geometry)',
+            qCount: (typeof MATHS_TM_UNIT_5_DATA !== 'undefined' && MATHS_TM_UNIT_5_DATA.subSections) ? MATHS_TM_UNIT_5_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof MATHS_TM_UNIT_5_DATA !== 'undefined') ? MATHS_TM_UNIT_5_DATA.subSections : [],
+            questions: (typeof MATHS_TM_UNIT_5_DATA !== 'undefined' && MATHS_TM_UNIT_5_DATA.subSections) ? MATHS_TM_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof MATHS_TM_UNIT_5_DATA !== 'undefined') ? MATHS_TM_UNIT_5_DATA.formulas : []
+          },
+          {
+            id: 'math_tm_u6',
+            unit: 'அலகு 6',
+            title: 'முக்கோணவியல் (Trigonometry)',
+            qCount: (typeof MATHS_TM_UNIT_6_DATA !== 'undefined' && MATHS_TM_UNIT_6_DATA.subSections) ? MATHS_TM_UNIT_6_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 6,
+            subSections: (typeof MATHS_TM_UNIT_6_DATA !== 'undefined') ? MATHS_TM_UNIT_6_DATA.subSections : [],
+            questions: (typeof MATHS_TM_UNIT_6_DATA !== 'undefined' && MATHS_TM_UNIT_6_DATA.subSections) ? MATHS_TM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof MATHS_TM_UNIT_6_DATA !== 'undefined') ? MATHS_TM_UNIT_6_DATA.formulas : []
           }
         ]
       },
@@ -4824,6 +4886,24 @@
             subSections: (typeof MATHS_EM_UNIT_4_DATA !== 'undefined') ? MATHS_EM_UNIT_4_DATA.subSections : [],
             questions: (typeof MATHS_EM_UNIT_4_DATA !== 'undefined' && MATHS_EM_UNIT_4_DATA.subSections) ? MATHS_EM_UNIT_4_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof MATHS_EM_UNIT_4_DATA !== 'undefined') ? MATHS_EM_UNIT_4_DATA.formulas : []
+          },
+          {
+            id: 'math_em_u5',
+            unit: 'Unit 5',
+            title: 'Coordinate Geometry',
+            qCount: (typeof MATHS_EM_UNIT_5_DATA !== 'undefined' && MATHS_EM_UNIT_5_DATA.subSections) ? MATHS_EM_UNIT_5_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof MATHS_EM_UNIT_5_DATA !== 'undefined') ? MATHS_EM_UNIT_5_DATA.subSections : [],
+            questions: (typeof MATHS_EM_UNIT_5_DATA !== 'undefined' && MATHS_EM_UNIT_5_DATA.subSections) ? MATHS_EM_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof MATHS_EM_UNIT_5_DATA !== 'undefined') ? MATHS_EM_UNIT_5_DATA.formulas : []
+          },
+          {
+            id: 'math_em_u6',
+            unit: 'Unit 6',
+            title: 'Trigonometry',
+            qCount: (typeof MATHS_EM_UNIT_6_DATA !== 'undefined' && MATHS_EM_UNIT_6_DATA.subSections) ? MATHS_EM_UNIT_6_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 6,
+            subSections: (typeof MATHS_EM_UNIT_6_DATA !== 'undefined') ? MATHS_EM_UNIT_6_DATA.subSections : [],
+            questions: (typeof MATHS_EM_UNIT_6_DATA !== 'undefined' && MATHS_EM_UNIT_6_DATA.subSections) ? MATHS_EM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof MATHS_EM_UNIT_6_DATA !== 'undefined') ? MATHS_EM_UNIT_6_DATA.formulas : []
           }
         ]
       },
@@ -6414,6 +6494,44 @@
       lesson.subSections = SOCIAL_EM_UNIT_10_DATA.subSections;
       lesson.questions = SOCIAL_EM_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
       lesson.geoHighlights = SOCIAL_EM_UNIT_10_DATA.geoHighlights || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'tam_u5' && typeof TAMIL_UNIT_5_DATA !== 'undefined' && TAMIL_UNIT_5_DATA.subSections) {
+      lesson.subSections = TAMIL_UNIT_5_DATA.subSections;
+      lesson.questions = TAMIL_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'tam_u6' && typeof TAMIL_UNIT_6_DATA !== 'undefined' && TAMIL_UNIT_6_DATA.subSections) {
+      lesson.subSections = TAMIL_UNIT_6_DATA.subSections;
+      lesson.questions = TAMIL_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'eng_u5' && typeof ENGLISH_UNIT_5_DATA !== 'undefined' && ENGLISH_UNIT_5_DATA.subSections) {
+      lesson.subSections = ENGLISH_UNIT_5_DATA.subSections;
+      lesson.questions = ENGLISH_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.stories = ENGLISH_UNIT_5_DATA.stories || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'eng_u6' && typeof ENGLISH_UNIT_6_DATA !== 'undefined' && ENGLISH_UNIT_6_DATA.subSections) {
+      lesson.subSections = ENGLISH_UNIT_6_DATA.subSections;
+      lesson.questions = ENGLISH_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.stories = ENGLISH_UNIT_6_DATA.stories || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'math_tm_u5' && typeof MATHS_TM_UNIT_5_DATA !== 'undefined' && MATHS_TM_UNIT_5_DATA.subSections) {
+      lesson.subSections = MATHS_TM_UNIT_5_DATA.subSections;
+      lesson.questions = MATHS_TM_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = MATHS_TM_UNIT_5_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'math_tm_u6' && typeof MATHS_TM_UNIT_6_DATA !== 'undefined' && MATHS_TM_UNIT_6_DATA.subSections) {
+      lesson.subSections = MATHS_TM_UNIT_6_DATA.subSections;
+      lesson.questions = MATHS_TM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = MATHS_TM_UNIT_6_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'math_em_u5' && typeof MATHS_EM_UNIT_5_DATA !== 'undefined' && MATHS_EM_UNIT_5_DATA.subSections) {
+      lesson.subSections = MATHS_EM_UNIT_5_DATA.subSections;
+      lesson.questions = MATHS_EM_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = MATHS_EM_UNIT_5_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'math_em_u6' && typeof MATHS_EM_UNIT_6_DATA !== 'undefined' && MATHS_EM_UNIT_6_DATA.subSections) {
+      lesson.subSections = MATHS_EM_UNIT_6_DATA.subSections;
+      lesson.questions = MATHS_EM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = MATHS_EM_UNIT_6_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     }
   }

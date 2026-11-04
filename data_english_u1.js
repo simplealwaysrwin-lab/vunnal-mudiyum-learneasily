@@ -15,11 +15,12 @@ const ENGLISH_UNIT_1_DATA = {
   unit: "Unit 1",
   title: "Unit 1: Prose - His First Flight | Poem - Life | Supplementary - The Tempest | Grammar",
 
-  // 📖 கதை வடிவிலான முழுமையான தமிழ் விளக்கம் (Story Reader Data)
+  // 📖 கதை வடிவிலான முழுமையான தமிழ் & ஆங்கில விளக்கம் (Bilingual Story Mode with Audio Voice Scripts)
   stories: [
     {
       id: "story_prose",
       title: "🦅 His First Flight (முதல் பறத்தல்)",
+      titleEn: "His First Flight",
       author: "லியாம் ஓ'பிளஹர்ட்டி (Liam O'Flaherty)",
       type: "உரைநடை (Prose)",
       image: "images/his_first_flight_mindmap.png",
@@ -33,39 +34,67 @@ const ENGLISH_UNIT_1_DATA = {
       ],
       scenes: [
         {
-          num: "காட்சி 1",
+          num: "காட்சி 1 / Scene 1",
           title: "பாறை விளிம்பில் ஒரு தனிமை (Alone on the Ledge)",
-          tamilContent: `அந்த இளம் கடற்பறவை, ஒரு செங்குத்தான பாறையின் குறுகிய விளிம்பில் (Ledge) தனியாக நின்று கொண்டிருந்தது. அவனுடைய இரண்டு அண்ணன்களும், ஒரே தங்கையும் முந்தைய நாளே தங்கள் சிறகுகளை விரித்துப் பறந்துவிட்டனர். ஆனால் இவனுக்கு மட்டும் அந்தப் பாறை விளிம்பிலிருந்து கீழே பாய்ந்து சிறகடிக்கக் கடுமையான பயம்!<br><br>பாறையின் விளிம்பிற்கு வேகமாக ஓடிவந்து, சிறகுகளை அசைக்க முயன்ற போதெல்லாம், கீழே கண்ணுக்கு எட்டிய தூரம் வரை பரந்து விரிந்திருந்த நீலக்கடல் அவனை அச்சுறுத்தியது. "என் பலவீனமான சிறகுகள் இந்த பிரம்மாண்டமான கடலின் மீது என்னை ஒருபோதும் தாங்காது!" என்று அவன் தீவிரமாக நம்பினான். எனவே தலையைக் குனிந்து கொண்டு, பாறையில் தான் இரவில் உறங்கும் சிறிய பொந்திற்குள் (little hole) பயந்து ஓடி ஒளிந்து கொண்டான்.`
+          titleEn: "Alone on the Ledge",
+          tamilContent: `அந்த இளம் கடற்பறவை, ஒரு செங்குத்தான பாறையின் குறுகிய விளிம்பில் (Ledge) தனியாக நின்று கொண்டிருந்தது. அவனுடைய இரண்டு அண்ணன்களும், ஒரே தங்கையும் முந்தைய நாளே தங்கள் சிறகுகளை விரித்துப் பறந்துவிட்டனர். ஆனால் இவனுக்கு மட்டும் அந்தப் பாறை விளிம்பிலிருந்து கீழே பாய்ந்து சிறகடிக்கக் கடுமையான பயம்!<br><br>பாறையின் விளிம்பிற்கு வேகமாக ஓடிவந்து, சிறகுகளை அசைக்க முயன்ற போதெல்லாம், கீழே கண்ணுக்கு எட்டிய தூரம் வரை பரந்து விரிந்திருந்த நீலக்கடல் அவனை அச்சுறுத்தியது. "என் பலவீனமான சிறகுகள் இந்த பிரம்மாண்டமான கடலின் மீது என்னை ஒருபோதும் தாங்காது!" என்று அவன் தீவிரமாக நம்பினான். எனவே தலையைக் குனிந்து கொண்டு, பாறையில் தான் இரவில் உறங்கும் சிறிய பொந்திற்குள் (little hole) பயந்து ஓடி ஒளிந்து கொண்டான்.`,
+          englishContent: `The young seagull was left all alone on his sea ledge. His two brothers and his little sister had already flown away the day before. But he had been terrified to fly with them. Whenever he ran forward to the brink of the ledge and attempted to flap his wings, the vast, monstrous expanse of the sea stretching far beneath struck terror into his heart. Convinced his wings could never support him, he bent his head and scampered back to the dark hole where he slept at night.`,
+          audioNarrationTa: "வாருங்கள் மாணவர்களே! லியாம் ஓ'பிளஹர்ட்டியின் உத்வேகக் கதையான 'முதல் பறத்தல்' கதையைக் கேட்போம்! அந்த இளம் கடற்பறவை, ஒரு செங்குத்தான பாறையின் விளிம்பில் தனியாக நின்று கொண்டிருந்தது. அவனுடைய உடன்பிறப்புகள் முந்தைய நாளே தங்கள் சிறகுகளை விரித்துப் பறந்துவிட்டனர். ஆனால் இவனுக்கு மட்டும் அந்தப் பாறை விளிம்பிலிருந்து கீழே பாய்ந்து சிறகடிக்கக் கடுமையான பயம்! என் பலவீனமான சிறகுகள் என்னை ஒருபோதும் தாங்காது என்று நம்பி, பாறையில் தான் இரவில் உறங்கும் சிறிய பொந்திற்குள் பயந்து ஓடி ஒளிந்து கொண்டான்.",
+          audioNarrationEn: "Welcome, students, to Liam O'Flaherty's inspiring classic, His First Flight! The young seagull stood shivering alone on a narrow cliff ledge. His brothers and sister had already taken wing the previous day, but he was gripped by paralyzing fear! Whenever he approached the steep edge and looked down at the boundless blue ocean rolling miles beneath, he felt certain his wings would fail him. Despairing, he tucked his head under his wing and retreated to the dark little hole where he spent his nights in fear."
         },
         {
-          num: "காட்சி 2",
+          num: "காட்சி 2 / Scene 2",
           title: "உடன்பிறப்புகளின் பறக்கும் திறனும் பெற்றோரின் கண்டிப்பும் (Parents' Threat to Starve)",
-          tamilContent: `அவனுடைய தம்பி-தங்கைகளோ, இவனை விட மிகச் சிறிய இறக்கைகளைக் கொண்டிருந்த போதிலும், சற்றும் தயங்காமல் பாறை விளிம்பிற்கு ஓடிச்சென்று சிறகடித்து வானில் வட்டமிட்டுப் பறந்து மகிழ்ந்தனர்.<br><br>ஆனால், இவனால் அந்த ஒரு துணிச்சலான பாய்ச்சலை (plunge) மேற்கொள்ள தைரியத்தைத் திரட்ட (muster up courage) முடியவில்லை. அவனுடைய தாய் மற்றும் தந்தை அவனருகே பறந்து வந்து, கீச்சிடும் குரலில் (shrilly) கத்தி அவனைக் கண்டித்தனர். "நீ சிறகடித்துப் பறக்காவிட்டால், இந்தப் பாறை விளிம்பிலேயே பட்டினியால் சாக நேரிடும்!" என்று அச்சுறுத்தினர். ஆனால், உயிர்ப்பயத்தினால் அவனால் ஒரு அடிகூட நகர முடியவில்லை.`
+          titleEn: "Parents Threaten to Starve Him",
+          tamilContent: `அவனுடைய தம்பி-தங்கைகளோ, இவனை விட மிகச் சிறிய இறக்கைகளைக் கொண்டிருந்த போதிலும், சற்றும் தயங்காமல் பாறை விளிம்பிற்கு ஓடிச்சென்று சிறகடித்து வானில் வட்டமிட்டுப் பறந்து மகிழ்ந்தனர்.<br><br>ஆனால், இவனால் அந்த ஒரு துணிச்சலான பாய்ச்சலை (plunge) மேற்கொள்ள தைரியத்தைத் திரட்ட (muster up courage) முடியவில்லை. அவனுடைய தாய் மற்றும் தந்தை அவனருகே பறந்து வந்து, கீச்சிடும் குரலில் (shrilly) கத்தி அவனைக் கண்டித்தனர். "நீ சிறகடித்துப் பறக்காவிட்டால், இந்தப் பாறை விளிம்பிலேயே பட்டினியால் சாக நேரிடும்!" என்று அச்சுறுத்தினர். ஆனால், உயிர்ப்பயத்தினால் அவனால் ஒரு அடிகூட நகர முடியவில்லை.`,
+          englishContent: `Even though his brothers and little sister possessed far shorter wings than his own, they ran boldly to the brink, flapped their wings, and soared gracefully into the sky. But he failed to muster up the courage to plunge into the air! His mother and father flew around him, calling sharply and shrilly, threatening to let him starve upon his ledge unless he flew away. Yet for the life of him, he could not bring himself to move.`,
+          audioNarrationTa: "அவனுடைய தம்பி-தங்கைகளோ, இவனை விட மிகச் சிறிய இறக்கைகளைக் கொண்டிருந்த போதிலும், சற்றும் தயங்காமல் பாறை விளிம்பிற்கு ஓடிச்சென்று சிறகடித்து வானில் வட்டமிட்டுப் பறந்து மகிழ்ந்தனர். அவனுடைய தாய் மற்றும் தந்தை அவனருகே பறந்து வந்து கண்டித்தனர். நீ சிறகடித்துப் பறக்காவிட்டால், இந்தப் பாறை விளிம்பிலேயே பட்டினியால் சாக நேரிடும் என்று அச்சுறுத்தினர். ஆனால், உயிர்ப்பயத்தினால் அவனால் ஒரு அடிகூட நகர முடியவில்லை.",
+          audioNarrationEn: "His younger siblings, whose wings were much shorter than his own, ran cheerfully to the ledge, flapped their wings, and took to the open sky! Yet the young seagull could not summon up the courage to take that single daring plunge. His mother and father swooped past him, screeching shrilly and reproaching him sternly. They warned him that unless he spread his wings and flew, he would starve alone on the bare rock. But terror rooted him to the spot!"
         },
         {
-          num: "காட்சி 3",
+          num: "காட்சி 3 / Scene 3",
           title: "24 மணி நேரக் கடும் பசியும் தவிப்பும் (24 Hours of Agony & Hunger)",
-          tamilContent: `இப்போது அவன் தனியாக விடப்பட்டு முழுதாக 24 மணி நேரம் கடந்துவிட்டது. நேற்று முதல் அவனுக்கு ஒரு சிறு உணவுத் துண்டுகூடக் கிடைக்கவில்லை. சூரியன் உச்சி வானுக்கு ஏறியது. அவனது பாறை விளிம்பில் வெயில் கொளுத்தியது; பசியின் கொடுமை அவனைக் கிறங்கடித்தது.<br><br>பாறை முழுவதும் அங்கும் இங்கும் நடந்து பார்த்தான். பாறையின் இடுக்கில் இருந்த காய்ந்த முட்டை ஓட்டுத் துண்டுகளைக்கூட (dried pieces of eggshell) பசியால் கடித்து மென்றான். அது தன் உடலின் ஒரு பகுதியையே உண்பது போலிருந்தது. எதிரே இருந்த பரந்த பீடபூமியில் (plateau) அவனது தாய், தந்தை, சகோதரர்கள் மகிழ்ச்சியாக அமர்ந்திருந்தனர். அண்ணன் கடலில் பாய்ந்து தனது முதல் மீனைப் (herring) பிடித்து விழுங்குவதையும், பெற்றோர்கள் பெருமையுடன் சத்தமிட்டுக் கொண்டாடுவதையும் இவன் பரிதாபமாகப் பார்த்துக் கொண்டிருந்தான்.`
+          titleEn: "Twenty-four Hours of Agony and Hunger",
+          tamilContent: `இப்போது அவன் தனியாக விடப்பட்டு முழுதாக 24 மணி நேரம் கடந்துவிட்டது. நேற்று முதல் அவனுக்கு ஒரு சிறு உணவுத் துண்டுகூடக் கிடைக்கவில்லை. சூரியன் உச்சி வானுக்கு ஏறியது. அவனது பாறை விளிம்பில் வெயில் கொளுத்தியது; பசியின் கொடுமை அவனைக் கிறங்கடித்தது.<br><br>பாறை முழுவதும் அங்கும் இங்கும் நடந்து பார்த்தான். பாறையின் இடுக்கில் இருந்த காய்ந்த முட்டை ஓட்டுத் துண்டுகளைக்கூட (dried pieces of eggshell) பசியால் கடித்து மென்றான். அது தன் உடலின் ஒரு பகுதியையே உண்பது போலிருந்தது. எதிரே இருந்த பரந்த பீடபூமியில் (plateau) அவனது தாய், தந்தை, சகோதரர்கள் மகிழ்ச்சியாக அமர்ந்திருந்தனர். அண்ணன் கடலில் பாய்ந்து தனது முதல் மீனைப் (herring) பிடித்து விழுங்குவதையும், பெற்றோர்கள் பெருமையுடன் சத்தமிட்டுக் கொண்டாடுவதையும் இவன் பரிதாபமாகப் பார்த்துக் கொண்டிருந்தான்.`,
+          englishContent: `A full twenty-four hours passed since he had been abandoned. Not a scrap of food remained. The midday sun blazed overhead, scorching the ledge. Maddened by hunger, he searched every inch of the rock, gnawing helplessly at dried pieces of eggshell—it felt like eating a part of his own body! Across on the plateau, he watched his family resting peacefully. His brother caught his first herring, swallowing it hungrily while his parents circled round, raising a proud cackle.`,
+          audioNarrationTa: "இப்போது அவன் தனியாக விடப்பட்டு 24 மணி நேரம் கடந்துவிட்டது. அவனுக்கு ஒரு சிறு உணவுத் துண்டுகூடக் கிடைக்கவில்லை. பாறையில் வெயில் கொளுத்தியது; பசியின் கொடுமை அவனைக் கிறங்கடித்தது. பாறையின் இடுக்கில் இருந்த காய்ந்த முட்டை ஓட்டுத் துண்டுகளைக்கூட பசியால் மென்றான். எதிரே இருந்த பீடபூமியில் அவனது குடும்பத்தினர் மகிழ்ச்சியாக மீன் பிடித்து உண்பதை இவன் பரிதாபமாகப் பார்த்துக் கொண்டிருந்தான்.",
+          audioNarrationEn: "Twenty-four long hours dragged by, and not a single bite of food had touched his beak! The scorching sun mounted the clear sky, blazing fiercely against his barren cliff. In desperate starvation, he paced back and forth, pecking at dried fragments of eggshell—it felt as if he were eating part of himself! From across the vast plateau, he watched his family basking in the sun while his elder brother snatched his very first herring and gulped it down, praised by their parents' joyous chorus!"
         },
         {
-          num: "காட்சி 4",
+          num: "காட்சி 4 / Scene 4",
           title: "தாயின் அன்பு கலந்த தந்திர உத்தி — மீன் துண்டு (The Mother's Clever Masterstroke)",
-          tamilContent: `அவன் மீது அவனுடைய தாய் மட்டுமே தன் பார்வையை வைத்திருந்தாள். அவளுக்குத் தன் குழந்தையின் பலவீனமும் தெரியும், அவனுக்குள் இருக்கும் மறைந்திருக்கும் பறக்கும் சக்தியும் தெரியும்.<br><br>திடீரென்று தாய் தன் அலகால் ஒரு மீன் துண்டைக் கிழித்துக் கீழே போட்டாள். பின்னர் அந்த மீன் துண்டை தன் அலகில் கவ்விக் கொண்டு, அவனை நோக்கிப் பறந்து வரத் தொடங்கினாள். மீனைக் கண்டதும் பசியால் வெறிபிடித்த (maddened by hunger) இளம் கடற்பறவை, தன் கால்களால் பாறையைத் தட்டி ஆவலோடு முன்னோக்கி நகர்ந்தான். தாய் மிக அருகில் வந்துவிட்டாள்... ஆனால் அவனுக்கு எட்டும் தூரத்திற்குச் சற்று முன்னதாகவே, அந்தரத்தில் தன் சிறகுகளை அசைக்காமல் அப்படியே நின்றாள் (halted)! மீன் துண்டு அவனது அலகிற்கு மிக அருகில் இருந்தது! பசி அவனது அறிவை மயக்கியது; பயத்தை மறக்கடித்தது.`
+          titleEn: "The Mother's Clever Masterstroke",
+          tamilContent: `அவன் மீது அவனுடைய தாய் மட்டுமே தன் பார்வையை வைத்திருந்தாள். அவளுக்குத் தன் குழந்தையின் பலவீனமும் தெரியும், அவனுக்குள் இருக்கும் மறைந்திருக்கும் பறக்கும் சக்தியும் தெரியும்.<br><br>திடீரென்று தாய் தன் அலகால் ஒரு மீன் துண்டைக் கிழித்துக் கீழே போட்டாள். பின்னர் அந்த மீன் துண்டை தன் அலகில் கவ்விக் கொண்டு, அவனை நோக்கிப் பறந்து வரத் தொடங்கினாள். மீனைக் கண்டதும் பசியால் வெறிபிடித்த (maddened by hunger) இளம் கடற்பறவை, தன் கால்களால் பாறையைத் தட்டி ஆவலோடு முன்னோக்கி நகர்ந்தான். தாய் மிக அருகில் வந்துவிட்டாள்... ஆனால் அவனுக்கு எட்டும் தூரத்திற்குச் சற்று முன்னதாகவே, அந்தரத்தில் தன் சிறகுகளை அசைக்காமல் அப்படியே நின்றாள் (halted)! மீன் துண்டு அவனது அலகிற்கு மிக அருகில் இருந்தது! பசி அவனது அறிவை மயக்கியது; பயத்தை மறக்கடித்தது.`,
+          englishContent: `Only his mother was looking toward him. Understanding both his weakness and his innate strength, she tore at a piece of fish with her beak and flew across the chasm toward him. Crazed by the sight of food, the young seagull crept forward eagerly, tapping the rock with his feet. Just as she came almost within reach, she suddenly halted mid-air, her wings motionless, the juicy scrap of fish dangling tantalizingly just inches from his beak!`,
+          audioNarrationTa: "அவன் மீது அவனுடைய தாய் மட்டுமே தன் பார்வையை வைத்திருந்தாள். திடீரென்று தாய் தன் அலகால் ஒரு மீன் துண்டைக் கிழித்து, அவனருகே பறந்து வந்தாள். மீனைக் கண்டதும் பசியால் வெறிபிடித்த இளம் கடற்பறவை முன்னோக்கி நகர்ந்தான். தாய் மிக அருகில் வந்துவிட்டு, அந்தரத்தில் சிறகசைக்காமல் நின்றாள்! மீன் துண்டு அவனது அலகிற்கு மிக அருகில் இருந்தது. பசி அவனது பயத்தை மறக்கடித்தது!",
+          audioNarrationEn: "Only his watchful mother paid attention to his plight. She understood that only love wrapped in sternness could save her child. Snatching a delicious piece of fish in her beak, she flew across the chasm toward him. Maddened by agonizing hunger, the little seagull leaned out eagerly, tapping his feet against the rock. But just as she reached his ledge, she halted in mid-air, hovering with motionless wings! The tempting scrap of fish hung just inches out of reach!"
         },
         {
-          num: "காட்சி 5",
+          num: "காட்சி 5 / Scene 5",
           title: "துணிச்சலான பாய்ச்சல் — காற்றில் வீழ்ந்த தருணம் (The Leap into Space)",
-          tamilContent: `பசியின் உச்சத்தில், மீனை அடைந்தே தீரவேண்டும் என்ற உந்துதலில், அவன் மீனை நோக்கி ஒரு பெருங்குரலுடன் முன்னோக்கிப் பாய்ந்தான் (dived at the fish)!<br><br>அடுத்த கணம்... அவன் பாறையிலிருந்து விடுபட்டு, திறந்த வெட்டவெளியில் தலைகீழாக கீழ்நோக்கி விழத் தொடங்கினான்! ஒரு கணத்தில் ஒரு கொடூரமான நடுக்கமும் பயமும் (monstrous terror) அவனை ஆட்கொண்டது. அவனது இதயமே நின்றுவிட்டது போல் இருந்தது! அவனால் எதையும் கேட்கவோ யோசிக்கவோ முடியவில்லை. ஆனால் அந்த பயங்கர உணர்வு ஒரே ஒரு நிமிடம் மட்டுமே நீடித்தது!`
+          titleEn: "The Leap into Space",
+          tamilContent: `பசியின் உச்சத்தில், மீனை அடைந்தே தீரவேண்டும் என்ற உந்துதலில், அவன் மீனை நோக்கி ஒரு பெருங்குரலுடன் முன்னோக்கிப் பாய்ந்தான் (dived at the fish)!<br><br>அடுத்த கணம்... அவன் பாறையிலிருந்து விடுபட்டு, திறந்த வெட்டவெளியில் தலைகீழாக கீழ்நோக்கி விழத் தொடங்கினான்! ஒரு கணத்தில் ஒரு கொடூரமான நடுக்கமும் பயமும் (monstrous terror) அவனை ஆட்கொண்டது. அவனது இதயமே நின்றுவிட்டது போல் இருந்தது! அவனால் எதையும் கேட்கவோ யோசிக்கவோ முடியவில்லை. ஆனால் அந்த பயங்கர உணர்வு ஒரே ஒரு நிமிடம் மட்டுமே நீடித்தது!`,
+          englishContent: `Waiting not another second, driven mad by the sight of food, the young bird uttered a loud shriek and dived straight at the fish! The next instant, he slipped off the ledge and plummeted downward into open empty space! A monstrous, icy terror seized his chest, and his heart stood completely still. He could hear nothing, think nothing. But that suffocating terror lasted only a single breathless moment!`,
+          audioNarrationTa: "பசியின் உச்சத்தில், அவன் மீனை நோக்கிப் பெருங்குரலுடன் முன்னோக்கிப் பாய்ந்தான்! அடுத்த கணம்... அவன் பாறையிலிருந்து விடுபட்டு, திறந்த வெட்டவெளியில் தலைகீழாக கீழ்நோக்கி விழத் தொடங்கினான்! ஒரு கணத்தில் கொடூரமான நடுக்கமும் பயமும் அவனை ஆட்கொண்டது. ஆனால் அந்த பயங்கர உணர்வு ஒரே ஒரு நிமிடம் மட்டுமே நீடித்தது!",
+          audioNarrationEn: "Maddened by overwhelming hunger, unable to endure the torment another instant, the bird gave a wild scream and dived blindly at the fish! The next fraction of a second, his feet slipped from the rock, and he plunged headlong into empty space! A monstrous terror seized him, and his heart seemed to stop beating entirely. The wind whistled in his ears, and he felt he was falling to his doom. But the paralyzing panic lasted only a moment!"
         },
         {
-          num: "காட்சி 6",
+          num: "காட்சி 6 / Scene 6",
           title: "சிறகுகள் விரிந்தன! அற்புதப் பறத்தல் (Wings Catch the Wind & Soaring)",
-          tamilContent: `அடுத்த கணமே, அவனது மார்பு இறகுகளுக்கு இடையே குளிர்ந்த காற்று சீறிப்பாய்வதை அவன் உணர்ந்தான். அவனது உடலின் அனிச்சை செயலாக, அவனது இரு சிறகுகளும் வெளிப்புறமாகத் தானாகவே விரிந்தன!<br><br>இப்போது அவன் கீழ்நோக்கி விழவில்லை! காற்று அவனது சிறகுகளுக்குக் கீழ் மிதக்க, அவன் கம்பீரமாக மேல்நோக்கிப் பறக்க (soaring upward) ஆரம்பித்தான்! அவன் மகிழ்ச்சியில் கூச்சலிட்டான். மீண்டும் மீண்டும் தன் சிறகுகளை அடித்துப் பறந்தான். அவன் பறக்கத் தொடங்கிவிட்டான்!`
+          titleEn: "Wings Catch the Wind and Soaring",
+          tamilContent: `அடுத்த கணமே, அவனது மார்பு இறகுகளுக்கு இடையே குளிர்ந்த காற்று சீறிப்பாய்வதை அவன் உணர்ந்தான். அவனது உடலின் அனிச்சை செயலாக, அவனது இரு சிறகுகளும் வெளிப்புறமாகத் தானாகவே விரிந்தன!<br><br>இப்போது அவன் கீழ்நோக்கி விழவில்லை! காற்று அவனது சிறகுகளுக்குக் கீழ் மிதக்க, அவன் கம்பீரமாக மேல்நோக்கிப் பறக்க (soaring upward) ஆரம்பித்தான்! அவன் மகிழ்ச்சியில் கூச்சலிட்டான். மீண்டும் மீண்டும் தன் சிறகுகளை அடித்துப் பறந்தான். அவன் பறக்கத் தொடங்கிவிட்டான்!`,
+          englishContent: `The very next moment, he felt the rush of cool air against his breast feathers, then under his stomach, and along his outstretched wings! By instinct, his wings had spread wide. He was not falling headlong anymore! The wind caught beneath him, and he was soaring upward and outward over the majestic sea! He cried out with joyous shrieks, flapping his wings again and again. He was truly flying!`,
+          audioNarrationTa: "அடுத்த கணமே, அவனது மார்பு இறகுகளுக்கு இடையே குளிர்ந்த காற்று சீறிப்பாய்வதை அவன் உணர்ந்தான். அவனது இரு சிறகுகளும் தானாகவே விரிந்தன! இப்போது அவன் கீழ்நோக்கி விழவில்லை! காற்று அவனது சிறகுகளுக்குக் கீழ் மிதக்க, அவன் கம்பீரமாக மேல்நோக்கிப் பறக்க ஆரம்பித்தான்! அவன் மகிழ்ச்சியில் கூச்சலிட்டான். அவன் பறக்கத் தொடங்கிவிட்டான்!",
+          audioNarrationEn: "In the very next instant, he felt the rushing breeze against his breast feathers, beneath his belly, and sweeping over the tips of his wings! Instinctively, his wings opened wide, catching the powerful ocean currents. He was no longer tumbling headlong! He was soaring gracefully upward, banking through the blue sky! Filled with dizzying ecstasy, he flapped his wings and screamed with triumph—he was flying, truly flying!"
         },
         {
-          num: "காட்சி 7",
+          num: "காட்சி 7 / Scene 7",
           title: "கடலின் மேல் மிதத்தல் & குடும்பத்தின் கொண்டாட்டம் (Landing on Sea & Dog-fish Feast)",
-          tamilContent: `அவனது பெற்றோரும் சகோதரர்களும் அவனைச் சுற்றி வட்டமிட்டு, ஆனந்தக் குரலெழுப்பினர். அவர்கள் முன்னால் சென்று பச்சை நிறக் கடல் பரப்பின் மீது இறங்கினர். இவனும் கடலின் மீது தன் கால்களை வைத்தான்; அவனது கால்கள் தண்ணீருக்குள் மூழ்கின. மீண்டும் பயந்து சிறகடித்தான். ஆனால் அவனது பசியும் களைப்பும் அவனை அமைதிப்படுத்தின.<br><br>அவனது வயிறு கடல் நீரைத் தொட்டது... வியப்பு! அவன் கடலில் மூழ்கவில்லை; பாதுகாப்பாக மிதந்தான் (floated)! அவனது ஒட்டுமொத்த குடும்பமும் அவனைச் சூழ்ந்து, அவனது துணிச்சலைப் பாராட்டி, தங்களின் அலகுகளிலிருந்து நாய் மீன் துண்டுகளை (scraps of dog-fish) அவனுக்குப் பரிசாக ஊட்டினர்! இப்படியாக, அந்த இளம் கடற்பறவை தன் வாழ்வின் முதல் வரலாற்றுப் பறத்தலை வெற்றிகரமாக நிகழ்த்திக் காட்டியது!`
+          titleEn: "Landing on the Green Sea and Celebration",
+          tamilContent: `அவனது பெற்றோரும் சகோதரர்களும் அவனைச் சுற்றி வட்டமிட்டு, ஆனந்தக் குரலெழுப்பினர். அவர்கள் முன்னால் சென்று பச்சை நிறக் கடல் பரப்பின் மீது இறங்கினர். இவனும் கடலின் மீது தன் கால்களை வைத்தான்; அவனது கால்கள் தண்ணீருக்குள் மூழ்கின. மீண்டும் பயந்து சிறகடித்தான். ஆனால் அவனது பசியும் களைப்பும் அவனை அமைதிப்படுத்தின.<br><br>அவனது வயிறு கடல் நீரைத் தொட்டது... வியப்பு! அவன் கடலில் மூழ்கவில்லை; பாதுகாப்பாக மிதந்தான் (floated)! அவனது ஒட்டுமொத்த குடும்பமும் அவனைச் சூழ்ந்து, அவனது துணிச்சலைப் பாராட்டி, தங்களின் அலகுகளிலிருந்து நாய் மீன் துண்டுகளை (scraps of dog-fish) அவனுக்குப் பரிசாக ஊட்டினர்! இப்படியாக, அந்த இளம் கடற்பறவை தன் வாழ்வின் முதல் வரலாற்றுப் பறத்தலை வெற்றிகரமாக நிகழ்த்திக் காட்டியது!`,
+          englishContent: `His parents and siblings flew around him, curveting and banking in high celebration. They touched down upon the vast green sea ahead. The young seagull dropped his legs to stand upon the water, but his feet sank into the deep green brine. He flapped his wings once more in panic, but exhausted by hunger and the immense exercise, his belly gently touched the calm water—and he floated safely! Around him, his overjoyed family danced and praised him, offering delicious scraps of dog-fish to his beak. He had made his historic first flight!`,
+          audioNarrationTa: "அவனது பெற்றோரும் சகோதரர்களும் அவனைச் சுற்றி வட்டமிட்டு ஆனந்தக் குரலெழுப்பினர். அவர்கள் முன்னால் சென்று பச்சை நிறக் கடல் பரப்பின் மீது இறங்கினர். இவனும் கடலின் மீது கால்களை வைக்க, வயிறு கடல் நீரைத் தொட்டது. அவன் கடலில் மூழ்கவில்லை; பாதுகாப்பாக மிதந்தான்! ஒட்டுமொத்த குடும்பமும் அவனைச் சூழ்ந்து நாய் மீன் துண்டுகளைப் பரிசாக ஊட்டினர்! இப்படியாக, அந்த இளம் கடற்பறவை தன் வாழ்வின் முதல் பறத்தலை வெற்றிகரமாக நிகழ்த்திக் காட்டியது!",
+          audioNarrationEn: "His parents, brothers, and sister flew excitedly about him, crying out praises and executing brilliant swoops in the clear air. They settled gently upon the vast green ocean surface. The young bird let his tired feet drop onto the water, and when his soft white belly touched the calm green surface, he sank no further—he was floating effortlessly! His family crowded close around him, uttering proud screeches and thrusting tender scraps of dog-fish into his beak. He had conquered fear, trusted his wings, and accomplished his historic first flight!"
         }
       ],
       vocabulary: [
@@ -86,6 +115,7 @@ const ENGLISH_UNIT_1_DATA = {
     {
       id: "story_poem",
       title: "🌿 Life (வாழ்க்கை — கவிதை விளக்கம்)",
+      titleEn: "Life",
       author: "ஹென்றி வான் டைக் (Henry Van Dyke)",
       type: "செய்யுள் (Poem - Sonnet)",
       summary: "கடந்த காலத் துயரங்களை மறப்போம்; எதிர்கால பயங்களைத் துறப்போம்; நிகழ்காலத்தை முழு உற்சாகத்தோடு வாழ்வோம் என்ற மகத்தான தத்துவக் கவிதை!",
@@ -94,8 +124,9 @@ const ENGLISH_UNIT_1_DATA = {
       ],
       scenes: [
         {
-          num: "பகுதி 1: அட்டகம் (Octave - முதல் 8 வரிகள்)",
-          title: "துணிச்சலான முகத்துடன் நிகழ்காலத்தை வாழ்வது",
+          num: "பகுதி 1 / Octave (Lines 1-8)",
+          title: "துணிச்சலான முகத்துடன் நிகழ்காலத்தை வாழ்வது (Forward Face and Unreluctant Soul)",
+          titleEn: "Forward Face and Unreluctant Soul",
           tamilContent: `<b>ஆங்கில வரிகள்:</b><br>
           <i>"Let me but live my life from year to year,<br>
           With forward face and unreluctant soul;<br>
@@ -107,11 +138,15 @@ const ENGLISH_UNIT_1_DATA = {
           To Youth and Age, and travels on with cheer."</i><br><br>
           <b>எளிய தமிழ் விளக்கம்:</b><br>
           கவிஞர் தன் வாழ்க்கையை ஆண்டுதோறும் எந்தவித தயக்கமுமின்றி, முழு உற்சாகத்தோடும் தைரியமான முகத்தோடும் வாழ விரும்புகிறார். இலக்கை நோக்கி பதற்றத்தோடு அவசரப்படாமலும், அதே நேரத்தில் இலக்கிலிருந்து பின்வாங்காமலும் பயணிக்க வேண்டும் என்கிறார்.<br>
-          மறைந்துபோன கடந்த காலத் துயரங்களுக்காகவும் இழப்புகளுக்காகவும் அழுது புலம்பக் கூடாது. அதேபோல், எதிர்காலம் எதனை மறைத்து வைத்திருக்கிறதோ அதைக் கண்டு அஞ்சி பின்வாங்கக் கூடாது. இளமையிலும் சரி, முதுமையிலும் சரி, முழுமையான மகிழ்ச்சியான இதயத்தோடு வாழ்க்கைப் பயணத்தை ஆனந்தமாகத் தொடர வேண்டும் என்கிறார்.`
+          மறைந்துபோன கடந்த காலத் துயரங்களுக்காகவும் இழப்புகளுக்காகவும் அழுது புலம்பக் கூடாது. அதேபோல், எதிர்காலம் எதனை மறைத்து வைத்திருக்கிறதோ அதைக் கண்டு அஞ்சி பின்வாங்கக் கூடாது. இளமையிலும் சரி, முதுமையிலும் சரி, முழுமையான மகிழ்ச்சியான இதயத்தோடு வாழ்க்கைப் பயணத்தை ஆனந்தமாகத் தொடர வேண்டும் என்கிறார்.`,
+          englishContent: `Poet Henry Van Dyke expresses his noble desire to live life year by year with a forward-looking countenance and an unreluctant, enthusiastic soul. He wishes neither to rush recklessly toward his goals nor to shrink back in dismay. Rather than mourning over lost opportunities of the dim past or trembling in fear of what the unknown future veils, he resolves to embrace the present with a whole, joyful heart, cheerfully paying his dues to both Youth and Age.`,
+          audioNarrationTa: "ஹென்றி வான் டைக் இயற்றிய உன்னதமான வாழ்க்கை என்ற கவிதையைக் கேட்போம்! கவிஞர் தன் வாழ்க்கையை ஆண்டுதோறும் எந்தவித தயக்கமுமின்றி, முழு உற்சாகத்தோடும் தைரியமான முகத்தோடும் வாழ விரும்புகிறார். மறைந்துபோன கடந்த காலத் துயரங்களுக்காக அழுது புலம்பாமல், எதிர்காலம் எதனை மறைத்து வைத்திருக்கிறதோ அதைக் கண்டு அஞ்சாமல், இளமையிலும் முதுமையிலும் மகிழ்ச்சியான இதயத்தோடு வாழ்க்கைப் பயணத்தை ஆனந்தமாகத் தொடர வேண்டும் என்கிறார்.",
+          audioNarrationEn: "Listen to the uplifting sonnet Life, written by Henry Van Dyke! The poet declares his deep wish to live each passing year with a courageous, forward-looking face and an eager, unhesitating spirit. He wants neither to rush frantically toward worldly goals nor to turn away in defeat. Instead of mourning for treasures lost in the dim past, or hesitating in fear of what the veiled future holds, he travels forward with a radiant, joyous heart, embracing each season of youth and maturity with gratitude and cheer!"
         },
         {
-          num: "பகுதி 2: ஆறடி (Sestet - கடைசி 6 வரிகள்)",
-          title: "மேடு பள்ளங்களைக் கடந்த உற்சாகமான பயணம்",
+          num: "பகுதி 2 / Sestet (Lines 9-14)",
+          title: "மேடு பள்ளங்களைக் கடந்த உற்சாகமான பயணம் (Joyous Journey and Courage of the Quest)",
+          titleEn: "Joyous Journey and Courage of the Quest",
           tamilContent: `<b>ஆங்கில வரிகள்:</b><br>
           <i>"So let the way wind up the hill or down,<br>
           O'er rough or smooth, the journey will be joy:<br>
@@ -121,7 +156,10 @@ const ENGLISH_UNIT_1_DATA = {
           And hope the road's last turn will be the best."</i><br><br>
           <b>எளிய தமிழ் விளக்கம்:</b><br>
           வாழ்க்கைப் பாதை மலை மேல் ஏறினாலும் (கடினமான சூழல்) அல்லது கீழ் நோக்கிச் சென்றாலும் (எளிய சூழல்), கரடுமுரடாக இருந்தாலும் அல்லது மென்மையாக இருந்தாலும், இந்தப் பயணம் முழுவதும் ஆனந்தமாகவே இருக்கும்!<br>
-          சிறுவனாக இருந்தபோது எதைத் தேடினேனோ — அதாவது புதிய நட்பு, உயரிய சாகசம், வெற்றியின் மகுடம் — அவற்றை இப்போதும் தொடர்ந்து என் இதயம் தேடிக்கொண்டே இருக்கும். என் மனதின் தேடுதல் தைரியம் எப்போதும் குறையாது. வாழ்க்கைப் பாதையின் கடைசி வளைவு மிகச் சிறந்ததாகவே முடியும் என்று முழுமையாக நம்புகிறேன்.`
+          சிறுவனாக இருந்தபோது எதைத் தேடினேனோ — அதாவது புதிய நட்பு, உயரிய சாகசம், வெற்றியின் மகுடம் — அவற்றை இப்போதும் தொடர்ந்து என் இதயம் தேடிக்கொண்டே இருக்கும். என் மனதின் தேடுதல் தைரியம் எப்போதும் குறையாது. வாழ்க்கைப் பாதையின் கடைசி வளைவு மிகச் சிறந்ததாகவே முடியும் என்று முழுமையாக நம்புகிறேன்.`,
+          englishContent: `Whether the journey of life winds uphill through demanding struggles or descends down easy slopes, whether the road is rough or smooth, the poet declares it will remain a source of joy! He continues to seek the pure ideals of his boyhood—new friendships, high adventures, and the crown of meaningful achievement. With an enduring courage for life's great quest, he maintains unwavering faith that the final turn of the road will be the finest of all!`,
+          audioNarrationTa: "வாழ்க்கைப் பாதை கரடுமுரடாக இருந்தாலும் அல்லது மென்மையாக இருந்தாலும், இந்தப் பயணம் முழுவதும் ஆனந்தமாகவே இருக்கும் என்கிறார் கவிஞர்! சிறுவனாக இருந்தபோது புதிய நட்பையும், உயரிய சாகசத்தையும், வெற்றியின் மகுடத்தையும் எவ்வாறு தேடினேனோ, அதே தைரியத்தோடு இப்போதும் தேடுவேன்; வாழ்க்கைப் பாதையின் கடைசி வளைவு மிகச் சிறந்ததாகவே முடியும் என்று கவிஞர் நம்பிக்கையூட்டுகிறார்!",
+          audioNarrationEn: "Now hear the soaring optimism of the poet's conclusion! Though the road of life winds steeply uphill through hardship or slopes downward through calm valleys, whether rough or smooth, he resolves that the journey itself shall be pure joy! He still pursues the grand dreams of his youth—noble friendships, thrilling adventures, and the crown of honour. Keeping the brave courage of the quest alive in his soul, he steps forward with serene confidence, trusting that the road's last turn will be the best of all!"
         }
       ],
       vocabulary: [
@@ -139,6 +177,7 @@ const ENGLISH_UNIT_1_DATA = {
     {
       id: "story_supplementary",
       title: "⚡ The Tempest (புயல் — நாடகக் கதை)",
+      titleEn: "The Tempest",
       author: "வில்லியம் ஷேக்ஸ்பியர் (சாரல்ஸ் & மேரி லாம்ப் எளிய கதை வடிவம்)",
       type: "துணைப்பாடம் (Supplementary)",
       summary: "சூழ்ச்சியால் அரியணையை இழந்த ஒரு மன்னன், மாயாஜால சக்தியால் எதிரிகளைத் தன் ஆதிக்கத்திற்குள் கொண்டுவந்து, இறுதியில் பழிவாங்காமல் மன்னித்து உயர்த்திய உன்னதக் கதை!",
@@ -154,34 +193,58 @@ const ENGLISH_UNIT_1_DATA = {
       ],
       scenes: [
         {
-          num: "காட்சி 1",
+          num: "காட்சி 1 / Scene 1",
           title: "துரோகமும் நாடுகடத்தலும் (Treacherous Exile)",
-          tamilContent: `பிராஸ்பரோ மிலன் நகரின் உண்மையான டியூக் (அரசர்). அவர் எப்போதும் நூல்களைப் படிப்பதிலும் கல்வியிலும் மூழ்கியிருந்தார். இதனைப் பயன்படுத்திய அவரது தம்பி அன்டோனியோ, நேபிள்ஸ் மன்னன் அலான்சோவின் துணையோடு ஆட்சியைக் கைப்பற்றினான். பிராஸ்பரோவையும் அவரது மூன்று வயது கைக்குழந்தை மிராண்டாவையும் ஒரு பழுதடைந்த படகில் ஏற்றி நடுக்கடலில் தவிக்கவிட்டனர். ஆனால் கொன்சாலோ என்ற நல்ல அமைச்சர், ரகசியமாக படகில் உணவு, தண்ணீர், ஆடைகள் மற்றும் பிராஸ்பரோவின் அருமையான மாயாஜால நூல்களை வைத்து உதவினார். படகு மிதந்து ஒரு தனித்தீவை அடைந்தது.`
+          titleEn: "Treacherous Exile",
+          tamilContent: `பிராஸ்பரோ மிலன் நகரின் உண்மையான டியூக் (அரசர்). அவர் எப்போதும் நூல்களைப் படிப்பதிலும் கல்வியிலும் மூழ்கியிருந்தார். இதனைப் பயன்படுத்திய அவரது தம்பி அன்டோனியோ, நேபிள்ஸ் மன்னன் அலான்சோவின் துணையோடு ஆட்சியைக் கைப்பற்றினான். பிராஸ்பரோவையும் அவரது மூன்று வயது கைக்குழந்தை மிராண்டாவையும் ஒரு பழுதடைந்த படகில் ஏற்றி நடுக்கடலில் தவிக்கவிட்டனர். ஆனால் கொன்சாலோ என்ற நல்ல அமைச்சர், ரகசியமாக படகில் உணவு, தண்ணீர், ஆடைகள் மற்றும் பிராஸ்பரோவின் அருமையான மாயாஜால நூல்களை வைத்து உதவினார். படகு மிதந்து ஒரு தனித்தீவை அடைந்தது.`,
+          englishContent: `Prospero was the lawful Duke of Milan, devoted to scholarly contemplation and the secret arts of magic. Taking advantage of his trust, his treacherous brother Antonio plotted with Alonso, the King of Naples, to usurp the dukedom. One dark night, Prospero and his three-year-old daughter Miranda were cast adrift upon the open sea in a rotting, broken bark. Fortunately, the compassionate courtier Gonzalo secretly furnished the vessel with food, fresh water, fine garments, and Prospero's priceless magic books, allowing them to drift safely to an isolated enchanted island.`,
+          audioNarrationTa: "வில்லியம் ஷேக்ஸ்பியரின் புகழ்பெற்ற புயல் நாடகக் கதையைக் கேட்போம் வாருங்கள்! மிலன் நகரின் மன்னரான பிராஸ்பரோ, படிப்பிலும் கல்வியிலும் ஆழ்ந்திருந்தார். இதனைப் பயன்படுத்திய அவரது தம்பி அன்டோனியோ, நேபிள்ஸ் மன்னன் அலான்சோவுடன் சேர்ந்து நாட்டைக் கைப்பற்றினான். பிராஸ்பரோவையும் அவரது குழந்தை மிராண்டாவையும் பாழடைந்த படகில் ஏற்றி நடுக்கடலில் தவிக்கவிட்டனர். ஆனால் நல்ல அமைச்சர் கொன்சாலோ, படகில் உணவு, ஆடைகள் மற்றும் மாயாஜால நூல்களை வைத்து உதவினார். படகு ஒரு தனித்தீவை அடைந்தது.",
+          audioNarrationEn: "Step into Shakespeare's world of magic and redemption with The Tempest! Prospero was the noble Duke of Milan, renowned for his learning and wisdom. Trusting his treacherous younger brother Antonio to govern, Prospero devoted his time to profound studies. But Antonio betrayed him, striking an alliance with Alonso, King of Naples, to seize the dukedom. Prospero and his toddler daughter Miranda were banished in a frail, derelict boat without sails or oars. But the kind lord Gonzalo had secretly provisioned the bark with water, provisions, fine apparel, and Prospero's treasured books of magic, enabling them to reach a mysterious, uninhabited island!"
         },
         {
-          num: "காட்சி 2",
+          num: "காட்சி 2 / Scene 2",
           title: "மாயாஜாலத் தீவும் ஏரியல் விடுதலையும் (Enchanted Island & Ariel)",
-          tamilContent: `அந்தத் தீவில் சைகோராக்ஸ் என்ற சூனியக்காரி பல நல்ல ஆவிகளை மரப் பொந்துகளில் அடைத்து வைத்திருந்தாள். பிராஸ்பரோ தன் மாயாஜால சக்தியால் அந்த ஆவிகளை விடுவித்தார். அதில் முதன்மையான ஏரியல் என்ற நற்குண ஆவி, பிராஸ்பரோவின் விசுவாசமுள்ள உதவியாளராக மாறியது. சைகோராக்ஸின் விகாரமான மகன் காலிபனை பிராஸ்பரோ தன் பணிவிடை ஆளாக வைத்திருந்தார்.`
+          titleEn: "The Enchanted Island and Ariel",
+          tamilContent: `அந்தத் தீவில் சைகோராக்ஸ் என்ற சூனியக்காரி பல நல்ல ஆவிகளை மரப் பொந்துகளில் அடைத்து வைத்திருந்தாள். பிராஸ்பரோ தன் மாயாஜால சக்தியால் அந்த ஆவிகளை விடுவித்தார். அதில் முதன்மையான ஏரியல் என்ற நற்குண ஆவி, பிராஸ்பரோவின் விசுவாசமுள்ள உதவியாளராக மாறியது. சைகோராக்ஸின் விகாரமான மகன் காலிபனை பிராஸ்பரோ தன் பணிவிடை ஆளாக வைத்திருந்தார்.`,
+          englishContent: `On the island, an evil witch named Sycorax had imprisoned numerous gentle spirits within the trunks of ancient pine trees before her death. Using his profound magical mastery, Prospero liberated these trapped spirits. Among them, Ariel, a delicate and joyful spirit of the air, became Prospero's loyal and devoted helper. Sycorax's ugly and sullen son, Caliban, was kept as a servant to fetch wood and perform heavy menial chores.`,
+          audioNarrationTa: "அந்தத் தீவில் சைகோராக்ஸ் என்ற சூனியக்காரி பல நல்ல ஆவிகளை மரப் பொந்துகளில் அடைத்து வைத்திருந்தாள். பிராஸ்பரோ தன் மாய சக்தியால் அந்த ஆவிகளை விடுவித்தார். அதில் முதன்மையான ஏரியல் என்ற நற்குண ஆவி, பிராஸ்பரோவின் விசுவாசமுள்ள உதவியாளராக மாறியது. சைகோராக்ஸின் மகன் காலிபனை பிராஸ்பரோ தன் வேலைக்காரனாக வைத்திருந்தார்.",
+          audioNarrationEn: "Upon this enchanted island, an evil sorceress named Sycorax had confined many benevolent spirits inside hollow pine trees. Prospero used his magical knowledge to liberate these gentle creatures. Among them was Ariel, an airy, obedient spirit full of music and grace, who gratefully pledged loyal obedience to Prospero. Meanwhile, Sycorax's misshapen and malicious son, Caliban, was compelled to serve as a menial laborer to gather firewood and carry water."
         },
         {
-          num: "காட்சி 3",
+          num: "காட்சி 3 / Scene 3",
           title: "கடலில் கிளம்பிய மாயப் புயல் (The Magical Tempest)",
-          tamilContent: `பன்னிரண்டு ஆண்டுகள் கழிந்தன. ஒருநாள், துரோகம் செய்த அன்டோனியோ, மன்னன் அலான்சோ மற்றும் இளவரசன் பெர்டினாண்ட் ஆகியோர் பயணம் செய்த கப்பல் அந்தத் தீவின் வழியே சென்றது. பிராஸ்பரோ ஏரியலிடம் கட்டளையிட்டு, கடலில் ஒரு பயங்கரமான புயலை உருவாக்கச் செய்தார். கப்பல் சுக்குநூறாக உடைந்தது போல் தோன்றினாலும், கப்பலில் இருந்த ஒரு உயிருக்கும் சிறு சேதமும் ஏற்படாமல் அனைவரையும் தீவின் வெவ்வேறு பகுதிகளில் பாதுகாப்பாகக் கரைசேர்த்தது ஏரியல்.`
+          titleEn: "The Magical Tempest",
+          tamilContent: `பன்னிரண்டு ஆண்டுகள் கழிந்தன. ஒருநாள், துரோகம் செய்த அன்டோனியோ, மன்னன் அலான்சோ மற்றும் இளவரசன் பெர்டினாண்ட் ஆகியோர் பயணம் செய்த கப்பல் அந்தத் தீவின் வழியே சென்றது. பிராஸ்பரோ ஏரியலிடம் கட்டளையிட்டு, கடலில் ஒரு பயங்கரமான புயலை உருவாக்கச் செய்தார். கப்பல் சுக்குநூறாக உடைந்தது போல் தோன்றினாலும், கப்பலில் இருந்த ஒரு உயிருக்கும் சிறு சேதமும் ஏற்படாமல் அனைவரையும் தீவின் வெவ்வேறு பகுதிகளில் பாதுகாப்பாகக் கரைசேர்த்தது ஏரியல்.`,
+          englishContent: `Twelve years later, a royal ship carrying the usurping Antonio, King Alonso, and young Prince Ferdinand sailed near the island. Prospero commanded Ariel to raise a roaring, magical tempest! Waves rose like mountains and lightning cracked across the skies. Though the terrified passengers believed the vessel was torn to pieces, Ariel ensured that not a single hair was harmed, bringing each group safely ashore on separate shores of the island.`,
+          audioNarrationTa: "பன்னிரண்டு ஆண்டுகள் கழிந்தன. துரோகம் செய்த அன்டோனியோ, மன்னன் அலான்சோ மற்றும் இளவரசன் பெர்டினாண்ட் ஆகியோர் பயணம் செய்த கப்பல் அந்தத் தீவின் வழியே சென்றது. பிராஸ்பரோ கடலில் ஒரு மாயப் புயலை உருவாக்கச் செய்தார். கப்பல் உடைந்தது போல் தோன்றினாலும், கப்பலில் இருந்த ஒரு உயிருக்கும் சேதம் இல்லாமல் அனைவரையும் தீவின் வெவ்வேறு பகுதிகளில் பாதுகாப்பாகக் கரைசேர்த்தது ஏரியல்.",
+          audioNarrationEn: "Twelve years went by. One fateful afternoon, a magnificent royal fleet carrying Antonio, King Alonso, and his son Prince Ferdinand sailed near the coast. Prospero commanded Ariel to conjure a dramatic, roaring tempest! Fierce winds shrieked, waves crested as high as mountains, and lightning flashed across the masts! Yet under Prospero's compassionate instructions, not a soul perished; Ariel guided the ship into a quiet harbor and brought every voyager safely to shore on separate corners of the island!"
         },
         {
-          num: "காட்சி 4",
+          num: "காட்சி 4 / Scene 4",
           title: "பெர்டினாண்ட் - மிராண்டா காதல் & சுமை தூக்கும் சோதனை (Ferdinand's Test of Love)",
-          tamilContent: `கப்பல் உடைந்ததில் தன் தந்தை இறந்துவிட்டதாக நினைத்துக் கலங்கிய இளவரசன் பெர்டினாண்டை, ஏரியல் தன் இனிய இசையால் வழிநடத்தி பிராஸ்பரோவின் குகைக்கு அழைத்து வந்தது. மிராண்டாவும் பெர்டினாண்டும் ஒருவரை ஒருவர் கண்டவுடன் காதலில் விழுந்தனர். ஆனால் பெர்டினாண்டின் காதல் உண்மையானதா என்று சோதிக்க விரும்பிய பிராஸ்பரோ, அவனைக் கடுமையாக வேலை வாங்கினார். கனமான மரக்கட்டைகளைத் தூக்கி அடுக்கச் செய்தார். பெர்டினாண்ட் மிராண்டா மீதான தூய அன்பினால் அந்தச் சுமையை இன்முகத்தோடு ஏற்றுச் செய்தான்.`
+          titleEn: "Ferdinand's Test of Love",
+          tamilContent: `கப்பல் உடைந்ததில் தன் தந்தை இறந்துவிட்டதாக நினைத்துக் கலங்கிய இளவரசன் பெர்டினாண்டை, ஏரியல் தன் இனிய இசையால் வழிநடத்தி பிராஸ்பரோவின் குகைக்கு அழைத்து வந்தது. மிராண்டாவும் பெர்டினாண்டும் ஒருவரை ஒருவர் கண்டவுடன் காதலில் விழுந்தனர். ஆனால் பெர்டினாண்டின் காதல் உண்மையானதா என்று சோதிக்க விரும்பிய பிராஸ்பரோ, அவனைக் கடுமையாக வேலை வாங்கினார். கனமான மரக்கட்டைகளைத் தூக்கி அடுக்கச் செய்தார். பெர்டினாண்ட் மிராண்டா மீதான தூய அன்பினால் அந்தச் சுமையை இன்முகத்தோடு ஏற்றுச் செய்தான்.`,
+          englishContent: `Weeping for his father whom he assumed had drowned, Prince Ferdinand was led by Ariel's enchanting, invisible music to Prospero's cave. The moment Miranda and Ferdinand laid eyes on each other, they fell deeply in love. Desiring to test whether Ferdinand's affection was true and honorable, Prospero treated him sternly, commanding him to pile thousands of heavy wooden logs. Ferdinand embraced the exhausting labor with gladness, made light by his devotion to Miranda.`,
+          audioNarrationTa: "தன் தந்தை இறந்துவிட்டதாக நினைத்துக் கலங்கிய இளவரசன் பெர்டினாண்டை, ஏரியல் தன் இனிய இசையால் வழிநடத்தி பிராஸ்பரோவின் குகைக்கு அழைத்து வந்தது. மிராண்டாவும் பெர்டினாண்டும் காதல் கொண்டனர். பெர்டினாண்டின் காதல் உண்மையானதா என்று சோதிக்க விரும்பிய பிராஸ்பரோ, அவனைக் கனமான மரக்கட்டைகளைத் தூக்கி அடுக்கச் செய்தார். பெர்டினாண்ட் மிராண்டா மீதான அன்பினால் அந்தச் சுமையை இன்முகத்தோடு ஏற்றுச் செய்தான்.",
+          audioNarrationEn: "Grieving for his father whom he feared had perished in the waves, young Prince Ferdinand was drawn forward by Ariel's magical, enchanting melody toward Prospero's cave. The instant Miranda and Ferdinand beheld one another, mutual love ignited in their hearts. To test whether the prince's love was true and constant, Prospero pretended to doubt him, putting him through severe trials and ordering him to stack heavy logs of timber. Ferdinand undertook the arduous labor with a joyful spirit, inspired by his profound devotion to Miranda!"
         },
         {
-          num: "காட்சி 5",
+          num: "காட்சி 5 / Scene 5",
           title: "எதிரிகளின் மனமாற்றமும் மன்னிப்பும் (Repentance & Supreme Forgiveness)",
-          tamilContent: `மறுபுறம், ஏரியல் தன் மாய சக்தியால் அலான்சோ மற்றும் அன்டோனியோவின் மனசாட்சியை உலுக்கியது. தாங்கள் பிராஸ்பரோவுக்குச் செய்த கொடிய துரோகத்தை நினைத்து அவர்கள் கண்ணீர் வடித்து மனம் வருந்தினர். அவர்களைத் தன்முன் வரவழைத்த பிராஸ்பரோ, பழிவாங்காமல் அவர்களை முழு மனதுடன் மன்னித்தார்! தன் மகனை இழந்ததாக நினைத்துக் கதறிய அலான்சோவிடம், பெர்டினாண்ட் உயிருடன் இருப்பதைச் சுட்டிக்காட்டி மிராண்டாவை அவனுக்கு மணம் முடிக்க இசைவு தந்தார். அலான்சோ பிராஸ்பரோவின் மிலன் அரசை அவரிடமே திருப்பி ஒப்படைத்தார்.`
+          titleEn: "Repentance and Supreme Forgiveness",
+          tamilContent: `மறுபுறம், ஏரியல் தன் மாய சக்தியால் அலான்சோ மற்றும் அன்டோனியோவின் மனசாட்சியை உலுக்கியது. தாங்கள் பிராஸ்பரோவுக்குச் செய்த கொடிய துரோகத்தை நினைத்து அவர்கள் கண்ணீர் வடித்து மனம் வருந்தினர். அவர்களைத் தன்முன் வரவழைத்த பிராஸ்பரோ, பழிவாங்காமல் அவர்களை முழு மனதுடன் மன்னித்தார்! தன் மகனை இழந்ததாக நினைத்துக் கதறிய அலான்சோவிடம், பெர்டினாண்ட் உயிருடன் இருப்பதைச் சுட்டிக்காட்டி மிராண்டாவை அவனுக்கு மணம் முடிக்க இசைவு தந்தார். அலான்சோ பிராஸ்பரோவின் மிலன் அரசை அவரிடமே திருப்பி ஒப்படைத்தார்.`,
+          englishContent: `Meanwhile, Ariel used visions and illusions to awaken the guilty consciences of Alonso and Antonio. Stricken with intense remorse for their cruel betrayal of Prospero twelve years ago, they wept bitter tears. Bringing them before his presence, Prospero magnanimously granted complete forgiveness! Reassuring the distraught Alonso that his son had survived, Prospero drew aside a curtain to reveal Ferdinand and Miranda happily playing chess. Overwhelmed with gratitude, Alonso restored the Dukedom of Milan to Prospero.`,
+          audioNarrationTa: "மறுபுறம், ஏரியல் தன் மாய சக்தியால் அலான்சோ மற்றும் அன்டோனியோவின் மனசாட்சியை உலுக்கியது. தாங்கள் பிராஸ்பரோவுக்குச் செய்த துரோகத்தை நினைத்து அவர்கள் மனம் வருந்தினர். அவர்களைத் தன்முன் வரவழைத்த பிராஸ்பரோ, பழிவாங்காமல் அவர்களை முழு மனதுடன் மன்னித்தார்! பெர்டினாண்ட் உயிருடன் இருப்பதைச் சுட்டிக்காட்டி மிராண்டாவை அவனுக்கு மணம் முடிக்க இசைவு தந்தார். அலான்சோ பிராஸ்பரோவின் மிலன் அரசை அவரிடமே திருப்பி ஒப்படைத்தார்.",
+          audioNarrationEn: "Meanwhile, Ariel haunted King Alonso and Antonio with phantom banquets and thunderous voices, stirring profound remorse in their guilty souls. Remembering their cruel banishment of Prospero twelve years before, they wept with deep contrition. Prospero summoned them before him, and rather than seeking vengeance, he embraced noble mercy, granting them full pardon! To the weeping Alonso who lamented the loss of his son, Prospero pulled open a tapestry to reveal Ferdinand and Miranda playing chess! In deep humility and wonder, Alonso restored the Dukedom of Milan to its rightful master!"
         },
         {
-          num: "காட்சி 6",
+          num: "காட்சி 6 / Scene 6",
           title: "மாயக்கோலை ஆழப் புதைத்து தாயகம் திரும்புதல் (Burying Magic & Freedom)",
-          tamilContent: `தன் வாழ்நாள் விருப்பம் நிறைவேறியதும், பிராஸ்பரோ விசுவாசமுள்ள ஏரியலுக்கு முழு விடுதலை அளித்தார். தன் மாயாஜாலக் கோலை மண்ணில் ஆழப் புதைத்தார்; மாய நூல்களைக் கடலில் மூழ்கடித்தார். பழிவாங்குவதை விட மன்னிப்பதே மனிதனின் உயர்ந்த குணம் என்பதை உலகிற்கு உணர்த்தி, தன் மக்களுடன் மிலன் நகருக்கு மகிழ்ச்சியாகத் திரும்பினார்.`
+          titleEn: "Burying Magic and Journey Home",
+          tamilContent: `தன் வாழ்நாள் விருப்பம் நிறைவேறியதும், பிராஸ்பரோ விசுவாசமுள்ள ஏரியலுக்கு முழு விடுதலை அளித்தார். தன் மாயாஜாலக் கோலை மண்ணில் ஆழப் புதைத்தார்; மாய நூல்களைக் கடலில் மூழ்கடித்தார். பழிவாங்குவதை விட மன்னிப்பதே மனிதனின் உயர்ந்த குணம் என்பதை உலகிற்கு உணர்த்தி, தன் மக்களுடன் மிலன் நகருக்கு மகிழ்ச்சியாகத் திரும்பினார்.`,
+          englishContent: `With peace restored and justice done, Prospero fulfilled his sacred pledge to the loyal Ariel, granting the spirit everlasting freedom to roam the skies. Prospero then buried his magic staff deep within the earth and drowned his book of enchantments fathoms beneath the sea. Proving that the rarer action is in virtue than in vengeance, Prospero set sail joyfully with his family and reformed friends back to Milan.`,
+          audioNarrationTa: "தன் வாழ்நாள் விருப்பம் நிறைவேறியதும், பிராஸ்பரோ விசுவாசமுள்ள ஏரியலுக்கு முழு விடுதலை அளித்தார். தன் மாயாஜாலக் கோலை மண்ணில் ஆழப் புதைத்தார்; மாய நூல்களைக் கடலில் மூழ்கடித்தார். பழிவாங்குவதை விட மன்னிப்பதே மனிதனின் உயர்ந்த குணம் என்பதை உலகிற்கு உணர்த்தி, தன் மக்களுடன் மிலன் நகருக்கு மகிழ்ச்சியாகத் திரும்பினார்.",
+          audioNarrationEn: "With his family reunited and harmony restored, Prospero fulfilled his dearest promise, bestowing complete and joyous freedom upon the faithful Ariel. Prospero then broke his magic wand, burying it deep in the earth, and cast his spellbooks into the ocean's depths. Demonstrating that true nobility lies not in vengeance but in boundless forgiveness, Prospero returned across the sunlit sea to Milan to resume his peaceful reign!"
         }
       ],
       vocabulary: [

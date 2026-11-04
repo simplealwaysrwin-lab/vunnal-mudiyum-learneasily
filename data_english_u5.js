@@ -13,11 +13,12 @@ const ENGLISH_UNIT_5_DATA = {
   unit: "Unit 5",
   title: "Unit 5: Prose - Tech Bloomers | Poem - The Secret of the Machines | Supplementary - A Dilemma | Grammar",
 
-  // 📖 கதை வடிவிலான தமிழ் விளக்கம் (Story Mode)
+  // 📖 கதை வடிவிலான முழுமையான தமிழ் & ஆங்கில விளக்கம் (Bilingual Story Mode with Audio Voice Scripts)
   stories: [
     {
       id: "story_prose_u5",
       title: "💻 Tech Bloomers (தொழில்நுட்ப மலர்ச்சி - மாற்றுத்திறனாளிகளின் வரப்பிரசாதம்)",
+      titleEn: "Tech Bloomers",
       author: "Special Feature on Assistive Technology",
       type: "உரைநடை (Prose)",
       summary: "நவீன தொழில்நுட்பங்கள் மாற்றுத்திறனாளிகள் மற்றவர்களைச் சார்ந்திருக்காமல் தன்னிச்சையாக வாழவும், கல்வி கற்கவும், வேலை செய்யவும் எவ்வாறு உதவுகின்றன என்பதை அலிஷா மற்றும் டேவிட் ஆகியோரின் உண்மை வாழ்க்கை வழி விவரிக்கும் உத்வேகமூட்டும் பாடம்!",
@@ -28,14 +29,22 @@ const ENGLISH_UNIT_5_DATA = {
       ],
       scenes: [
         {
-          num: "காட்சி 1",
+          num: "காட்சி 1 / Scene 1",
           title: "அலிஷாவின் மாற்றம் (Empowerment through Dragon Dictate)",
-          tamilContent: "அலிஷாவால் தன் கைகளால் வேகமாக எழுத முடியாது. ஆனால் அவள் கணினியில் பேசப் பேச, 'Dragon Dictate' மென்பொருள் அவளது பேச்சை உடனே உரையாக (Text) மாற்றியது. இதன் மூலம் அவள் தேர்வுகளைத் தானே எழுதி நல்ல மதிப்பெண்களோடு தேர்ச்சி பெற்றாள்."
+          titleEn: "Empowerment through Dragon Dictate",
+          tamilContent: "அலிஷாவால் தன் கைகளால் வேகமாக எழுத முடியாது. ஆனால் அவள் கணினியில் பேசப் பேச, 'Dragon Dictate' மென்பொருள் அவளது பேச்சை உடனே உரையாக (Text) மாற்றியது. இதன் மூலம் அவள் தேர்வுகளைத் தானே எழுதி நல்ல மதிப்பெண்களோடு தேர்ச்சி பெற்றாள்.",
+          englishContent: "Alisha has cerebral palsy and found it exhausting to type or write with her hands. With the help of assistive speech-recognition software called <b>Dragon Dictate</b>, her spoken words were instantly converted into text on screen. This breakthrough allowed her to complete GCSE exams independently, study mathematics, and achieve academic brilliance!",
+          audioNarrationTa: "வாருங்கள் மாணவர்களே! நவீன அறிவியல் மற்றும் தொழில்நுட்பத்தின் வரப்பிரசாதமான 'டெக் புளூமர்ஸ்' பாடத்தைக் கேட்போம்! மூளை முடக்குவாதத்தால் பாதிக்கப்பட்ட அலிஷாவால் கைகளால் வேகமாக எழுத முடியாது. ஆனால் அவள் கணினியின் முன் பேசப் பேச, டிராகன் டிக்டேட் என்ற மென்பொருள் அவளது பேச்சை உடனே கணினித் திரையில் எழுத்தாக மாற்றியது! இதன் மூலம் மற்றவர்களின் உதவியின்றி தானே தேர்வுகளை எழுதி சாதனை படைத்தாள் அலிஷா!",
+          audioNarrationEn: "Welcome, dear students, to the inspiring world of Tech Bloomers! Meet Alisha, a bright young student with cerebral palsy. Due to physical limitations, writing or typing with her hands was intensely tiring and painful. But technology opened a magnificent new door! Using cutting-edge speech-recognition software named Dragon Dictate, every word she speaks is transformed into accurate written text on screen. Empowered by technology, Alisha writes assignments, drafts essays, and excels in her board examinations with pride and independence!"
         },
         {
-          num: "காட்சி 2",
+          num: "காட்சி 2 / Scene 2",
           title: "டேவிட்டின் குரல் (Liberator Communication Device & ECO2)",
-          tamilContent: "டேவிட்டிற்கு வாய் பேச இயலாது. ஆனால் அவன் தன் கண் அசைவுகள் மற்றும் கால் அசைவு சுவிட்சுகள் (Foot switch) மூலம் 'ECO2' கணினித் திரையில் எழுத்துக்களைத் தொட்டுப் பேசுகிறான். இப்போது அவன் பள்ளி மாணவர்களுக்கு விளையாட்டுப் பயிற்சி அளிக்கும் திறமையான பயிற்றுநராக விளங்குகிறான்!"
+          titleEn: "David's Voice and the Liberator Device",
+          tamilContent: "டேவிட்டிற்கு வாய் பேச இயலாது. ஆனால் அவன் தன் கண் அசைவுகள் மற்றும் கால் அசைவு சுவிட்சுகள் (Foot switch) மூலம் 'ECO2' கணினித் திரையில் எழுத்துக்களைத் தொட்டுப் பேசுகிறான். இப்போது அவன் பள்ளி மாணவர்களுக்கு விளையாட்டுப் பயிற்சி அளிக்கும் திறமையான பயிற்றுநராக விளங்குகிறான்!",
+          englishContent: "David suffers from athetoid cerebral palsy, making natural speech and movement impossible. However, using an advanced <b>ECO2 communication device</b> paired with eye-gaze technology and foot switches, David communicates fluently with synthesized speech. Today, he is an enthusiastic sports coach and motivational mentor for school children!",
+          audioNarrationTa: "அடுத்து நாம் காணவிருப்பது டேவிட்டின் மனோதிடக் கதை! டேவிட்டிற்கு வாய் பேச இயலாது; கைகளையும் கால்களையும் அசைக்க முடியாது. ஆனால் அவன் தன் கண் அசைவுகள் மற்றும் பாத சுவிட்ச் மூலம் இகோ டூ என்ற நவீன கருவியைப் பயன்படுத்தி கம்பீரமாகப் பேசுகிறான்! இன்று அவன் பள்ளி மாணவர்களுக்கு விளையாட்டுப் பயிற்சியளிக்கும் தன்னம்பிக்கைப் பயிற்றுநராக மிளிர்கிறான்!",
+          audioNarrationEn: "Now listen to the remarkable journey of David, a courageous young man living with athetoid cerebral palsy! Though David cannot speak with his voice or hold a pen, assistive technology has become his greatest champion. Utilizing an advanced ECO2 Liberator communication device linked to eye-gaze tracking and foot switches, he selects words with his gaze. The computer speaks his thoughts aloud in natural synthesized speech! Today, David serves as an active sports coach, mentoring young athletes and demonstrating that limitations exist only in our minds!"
         }
       ],
       moral: "மனித ஆற்றல் எல்லைக்குட்பட்டது; ஆனால் தொழில்நுட்பம் எல்லைகளற்ற சாத்தியங்களைத் திறந்து வைக்கிறது."
@@ -43,19 +52,28 @@ const ENGLISH_UNIT_5_DATA = {
     {
       id: "story_poem_u5",
       title: "⚙️ The Secret of the Machines (எந்திரங்களின் ரகசியம்)",
+      titleEn: "The Secret of the Machines",
       author: "ருட்யார்ட் கிப்ளிங் (Rudyard Kipling)",
       type: "கவிதை (Poem)",
       summary: "சுரங்கத்திலிருந்து வெட்டி எடுக்கப்பட்டு உலைகளில் உருக்கப்பட்டு உருவான எந்திரங்கள், மனிதர்களுக்காக இரவும் பகலும் அயராது உழைக்கும் தங்களின் பேராற்றலையும், அதே வேளையில் மனித மூளையின் சிறு படைப்புகளே தாங்கள் என்பதையும் நினைவூட்டும் அழகிய கவிதை.",
       scenes: [
         {
-          num: "பிரிவு 1",
-          title: "எந்திரங்களின் பிறப்பு & பராமரிப்பு",
-          tamilContent: "எந்திரங்கள் கூறுகின்றன: 'நாங்கள் நிலத்தடியில் உள்ள தாதுக்களில் இருந்து வெட்டி எடுக்கப்பட்டு, உலைகளில் காய்ச்சி வார்த்தெடுக்கப்பட்டோம். எங்களுக்குத் தேவை கொஞ்சம் நிலக்கரி, தண்ணீர் மற்றும் எண்ணெய் மட்டுமே!'"
+          num: "பிரிவு 1 / Stanza 1 & 2",
+          title: "எந்திரங்களின் பிறப்பு & பராமரிப்பு (Origin and Care of Machines)",
+          titleEn: "Origin and Care of Machines",
+          tamilContent: "எந்திரங்கள் கூறுகின்றன: 'நாங்கள் நிலத்தடியில் உள்ள தாதுக்களில் இருந்து வெட்டி எடுக்கப்பட்டு, உலைகளில் காய்ச்சி வார்த்தெடுக்கப்பட்டோம். எங்களுக்குத் தேவை கொஞ்சம் நிலக்கரி, தண்ணீர் மற்றும் எண்ணெய் மட்டுமே!'",
+          englishContent: "The machines proudly declare their origin: they were extracted as ores from the coal-mine and melted in fiery furnaces. Hammered, filed, and gauged to fit exact specifications, all they need to work is water, coal, and oil. Once fueled, they are ready to serve human masters twenty-four hours a day!",
+          audioNarrationTa: "ருட்யார்ட் கிப்ளிங் இயற்றிய எந்திரங்களின் ரகசியம் என்ற கவிதையைக் கேட்போம்! எந்திரங்கள் கூறுகின்றன: நாங்கள் பூமியின் அடியிலுள்ள சுரங்கங்களிலிருந்து தாதுக்களாக வெட்டி எடுக்கப்பட்டு, உலைகளில் உருக்கி வார்க்கப்பட்டோம். மனிதர்களின் தேவைக்கேற்ப செதுக்கப்பட்டோம். எங்களுக்குத் தேவை கொஞ்சம் நிலக்கரி, தண்ணீர் மற்றும் எண்ணெய் மட்டுமே! இவற்றைத் தந்தால் போதும், நாங்கள் இரவும் பகலும் மனிதர்களுக்காக அயராது உழைப்போம்!",
+          audioNarrationEn: "Listen to the powerful rhythm of Rudyard Kipling's famous poem, The Secret of the Machines! The great metal giants speak with thunderous voices: 'We were dug from the deep ore-bed and the dark mine, melted in glowing furnaces, hammered and gauged to the thousandth of an inch! Give us water, coal, and oil to drink, and we will pull, push, lift, drive, print, plough, weave, and run for twenty-four hours a day without fatigue!'"
         },
         {
-          num: "பிரிவு 2",
-          title: "எங்களின் மாபெரும் ஆற்றலும் வரம்பும்",
-          tamilContent: "'எங்களால் எடையைத் தூக்க முடியும், நிலத்தை உழ முடியும், கடலைக் கடக்க முடியும். ஆனால் நாங்கள் ஒருபோதும் பொய் சொல்ல மாட்டோம்; எங்களுக்கு அன்பு, இரக்கம், மன்னிப்பு தெரியாது. கவனமாகப் பயன்படுத்தாவிட்டால் உங்கள் உயிரையே பறித்து விடுவோம். முடிவில் நாங்கள் உங்கள் மனித மூளையின் பிள்ளைகள் மட்டுமே!'"
+          num: "பிரிவு 2 / Stanza 3 & 4",
+          title: "எங்களின் மாபெரும் ஆற்றலும் வரம்பும் (Power and Limitations of Machines)",
+          titleEn: "Power and Limitations of Machines",
+          tamilContent: "'எங்களால் எடையைத் தூக்க முடியும், நிலத்தை உழ முடியும், கடலைக் கடக்க முடியும். ஆனால் நாங்கள் ஒருபோதும் பொய் சொல்ல மாட்டோம்; எங்களுக்கு அன்பு, இரக்கம், மன்னிப்பு தெரியாது. கவனமாகப் பயன்படுத்தாவிட்டால் உங்கள் உயிரையே பறித்து விடுவோம். முடிவில் நாங்கள் உங்கள் மனித மூளையின் பிள்ளைகள் மட்டுமே!'",
+          englishContent: "While machines can pull, haul, print, plough, and fly across oceans, they issue a stern reminder: the law by which they live has no mercy! They cannot comprehend a lie, nor can they love or pity. One careless slip can cost a human life. Ultimately, despite their titanic size, machines are merely the children of the human brain!",
+          audioNarrationTa: "எந்திரங்கள் மேலும் கூறுகின்றன: எங்களால் மலைகளைப் பிளக்க முடியும், பெருங்கடல்களைக் கடக்க முடியும். ஆனால் விதிகளின்படி இயங்கும் எங்களுக்கு அன்பு, கருணை, மன்னிப்பு தெரியாது. ஒரு சிறு கவனக்குறைவு ஏற்பட்டால் உங்கள் உயிரையே பறித்து விடுவோம்! நாங்கள் எவ்வளவு பிரம்மாண்டமாக இருந்தாலும், மனித மூளையின் கற்பனையில் உதித்த சிறு பிள்ளைகளே நாங்கள் என்பதை நினைவில் கொள்ளுங்கள்!",
+          audioNarrationEn: "Now heed the vital caution of the machines! They tell humanity: 'Remember the strict law by which we live! We are not built to comprehend a lie; we can neither love, nor pity, nor forgive! If you make a slip in handling us, you will perish! And remember this supreme truth: though our smoke may hide the heavens from your eyes, it will clear away and the stars will shine again. For all our colossal might and size, we are nothing more than children of your human brain!'"
         }
       ],
       moral: "இயந்திரங்கள் மனிதனுக்குச் சிறந்த அடிமைகள்; ஆனால் மோசமான எஜமானர்கள். தொழில்நுட்பத்தை விவேகத்துடன் ஆள வேண்டும்."

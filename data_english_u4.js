@@ -13,11 +13,12 @@ const ENGLISH_UNIT_4_DATA = {
   unit: "Unit 4",
   title: "Unit 4: Prose - The Attic | Poem - The Ant and the Cricket | Supplementary - The Aged Mother | Grammar",
 
-  // 📖 கதை வடிவிலான முழுமையான தமிழ் விளக்கம் (Story Mode)
+  // 📖 கதை வடிவிலான முழுமையான தமிழ் & ஆங்கில விளக்கம் (Bilingual Story Mode with Audio Voice Scripts)
   stories: [
     {
       id: "story_prose_u4",
       title: "🏠 The Attic (பரண் - 29 ஆண்டுகளுக்குப் பின் ஒரு பிராயச்சித்தம்!)",
+      titleEn: "The Attic",
       author: "சத்யஜித் ரே (Satyajit Ray - புகழ்பெற்ற இந்தியத் திரைப்பட மேதை & எழுத்தாளர்)",
       type: "உரைநடை (Prose)",
       summary: "பள்ளிப் பருவத்தில் பொறாமையால் திருடிய ஒரு தங்கப் பதக்கத்தை, 29 ஆண்டுகளுக்குப் பின் குற்ற உணர்ச்சியுடன் தேடிக் கண்டுபிடித்துத் தன் பழைய நண்பனிடம் ஒப்படைக்கும் ஒரு மனதைத் தொடும் கதை!",
@@ -29,24 +30,40 @@ const ENGLISH_UNIT_4_DATA = {
       ],
       scenes: [
         {
-          num: "காட்சி 1",
+          num: "காட்சி 1 / Scene 1",
           title: "29 ஆண்டுகளுக்குப் பிறகு சொந்த ஊருக்குப் பயணம் (Return to Bramhapur)",
-          tamilContent: `தொழில் நிமித்தமாக காரில் சென்று கொண்டிருந்த ஆதித்யாவும் அவரது நண்பரும், பிரம்மபூர் என்ற சிற்றூரின் சந்திப்பைக் கடக்கும் போது ஆதித்யா வண்டியைத் திருப்பச் சொன்னார். அது அவர் 29 ஆண்டுகளுக்கு முன் படித்த பள்ளி அமைந்த ஊர்.<br><br>அங்கு நாகேன் என்பவரின் சிறிய தேநீர்க் கடைக்குச் சென்றனர். அங்கே கிழிந்த ஆடைகளுடன் ஒரு நடுத்தர வயது மனிதர் அமர்ந்து சத்தமாக தாகூரின் கவிதையை (Panraksha) கம்பீரமாக ஒப்பித்துக் கொண்டிருந்தார். அவர் பெயர் சசாங்க சன்யால்!`
+          titleEn: "Return to Bramhapur",
+          tamilContent: `தொழில் நிமித்தமாக காரில் சென்று கொண்டிருந்த ஆதித்யாவும் அவரது நண்பரும், பிரம்மபூர் என்ற சிற்றூரின் சந்திப்பைக் கடக்கும் போது ஆதித்யா வண்டியைத் திருப்பச் சொன்னார். அது அவர் 29 ஆண்டுகளுக்கு முன் படித்த பள்ளி அமைந்த ஊர்.<br><br>அங்கு நாகேன் என்பவரின் சிறிய தேநீர்க் கடைக்குச் சென்றனர். அங்கே கிழிந்த ஆடைகளுடன் ஒரு நடுத்தர வயது மனிதர் அமர்ந்து சத்தமாக தாகூரின் கவிதையை (Panraksha) கம்பீரமாக ஒப்பித்துக் கொண்டிருந்தார். அவர் பெயர் சசாங்க சன்யால்!`,
+          englishContent: `Aditya and his narrator friend were driving back after visiting a modern factory when they reached the junction leading toward Bramhapur. Aditya suddenly decided to take the right turn and visit the village where he had spent his boyhood twenty-nine years ago.<br><br>They arrived at Nagen uncle's rustic tea shop. Inside, they met Sasanka Sanyal, a frail, impoverished man in ragged clothes. Despite his misfortunes, Sanyal stood erect and recited verses from Rabindranath Tagore's poem 'Panraksha' in a powerful, resounding voice!`,
+          audioNarrationTa: "வாருங்கள் மாணவர்களே! சத்யஜித் ரேயின் புகழ்பெற்ற 'பரண்' கதையைக் கேட்போம்! கொல்கத்தாவில் பெரும் தொழிலதிபராக விளங்கும் ஆதித்யாவும் அவரது நண்பரும் காரில் பயணம் செய்து கொண்டிருந்தனர். பிரம்மபூர் என்ற சிற்றூருக்குச் செல்லும் திருப்பம் வந்ததும், ஆதித்யா வண்டியை அங்கு திருப்பச் சொன்னார். 29 ஆண்டுகளுக்கு முன்பு அவர் படித்த பள்ளி அமைந்த ஊர் அது! அங்கு நாகேன் மாமாவின் சிறிய தேநீர்க் கடைக்குச் சென்றனர். அங்கே கிழிந்த ஆடைகளுடன் ஒரு நடுத்தர வயது மனிதர் கம்பீரமான குரலில் ரவீந்திரநாத் தாகூரின் கவிதையை ஒப்பித்துக் கொண்டிருந்தார். அவர் பெயர் சசாங்க சன்யால்!",
+          audioNarrationEn: "Welcome, dear students, to Satyajit Ray's touching story, The Attic! Aditya, a wealthy businessman, was driving through the countryside with his narrator friend. When they reached the fork leading toward Bramhapur, Aditya decided to take a detour to visit the quaint village of his boyhood, twenty-nine years later. At Nagen uncle's rustic tea shop, they noticed a frail man dressed in shabby clothes. Suddenly, this stranger stood up and began reciting verses from Rabindranath Tagore's famous poem Panraksha in a clear, resonant voice. His name was Sasanka Sanyal!"
         },
         {
-          num: "காட்சி 2",
+          num: "காட்சி 2 / Scene 2",
           title: "பழைய வீட்டின் பரண் மீது தேடுதல் (Searching the Attic)",
-          tamilContent: `சன்யாலின் கவிதை வாசிப்பைக் கேட்டதும் ஆதித்யாவின் முகம் வெளிறிப் போனது! உடனே தேநீர்க் கடையை விட்டுப் புறப்பட்டு, பாழடைந்து கிடந்த தனது 200 ஆண்டுகள் பழமையான பூர்வீக வீட்டிற்கு நண்பனை அழைத்துச் சென்றார்.<br><br>அங்கு தூசி படிந்த மாடிப் பரணில் (Attic) ஏறி, ஒரு புறா கூட்டின் அருகிலிருந்த சுவர்ப்பொந்தில் நீண்ட நேரம் துழாவி, ஏதோ ஒரு பழைய பொருளைத் தேடி எடுத்துத் தனது பாக்கெட்டில் பத்திரப்படுத்திக் கொண்டார்.`
+          titleEn: "Searching the Attic",
+          tamilContent: `சன்யாலின் கவிதை வாசிப்பைக் கேட்டதும் ஆதித்யாவின் முகம் வெளிறிப் போனது! உடனே தேநீர்க் கடையை விட்டுப் புறப்பட்டு, பாழடைந்து கிடந்த தனது 200 ஆண்டுகள் பழமையான பூர்வீக வீட்டிற்கு நண்பனை அழைத்துச் சென்றார்.<br><br>அங்கு தூசி படிந்த மாடிப் பரணில் (Attic) ஏறி, ஒரு புறா கூட்டின் அருகிலிருந்த சுவர்ப்பொந்தில் நீண்ட நேரம் துழாவி, ஏதோ ஒரு பழைய பொருளைத் தேடி எடுத்துத் தனது பாக்கெட்டில் பத்திரப்படுத்திக் கொண்டார்.`,
+          englishContent: `Hearing Sanyal recite the poem, Aditya's face turned completely pale! Without finishing his tea, he rushed out and led his friend to his ancestral home, a decaying two-hundred-year-old mansion.<br><br>Aditya climbed up a creaky wooden ladder into the dusty attic. Near a pigeon's nest inside a crevice in the brick wall, he searched anxiously. At last, he retrieved a small antique object and slipped it safely into his pocket with relief.`,
+          audioNarrationTa: "சன்யாலின் கவிதை வாசிப்பைக் கேட்டதும் ஆதித்யாவின் முகம் வெளிறிப் போனது! உடனே கடையை விட்டுப் புறப்பட்டு, பாழடைந்து கிடந்த தனது 200 ஆண்டுகள் பழமையான பூர்வீக வீட்டிற்கு நண்பனை அழைத்துச் சென்றார். அங்கே தூசி படிந்த மாடிப் பரணில் ஏறி, ஒரு புறா கூட்டின் அருகிலிருந்த சுவர்ப்பொந்தில் நீண்ட நேரம் துழாவி, ஒரு பழைய பொருளைத் தேடி எடுத்துத் தன் பாக்கெட்டில் பத்திரப்படுத்திக் கொண்டார்!",
+          audioNarrationEn: "As soon as Aditya heard the poem, his expression changed completely. Rushing out of the tea shop, he drove directly to his ancestral home, an ancient two-hundred-year-old house now in ruins. Aditya climbed the creaky ladder into the dark, dusty attic. Near a pigeon's nest inside a cavity in the brick wall, he searched anxiously. At last, he found the antique object he had been seeking and placed it safely in his pocket with a quiet sigh of relief."
         },
         {
-          num: "காட்சி 3",
+          num: "காட்சி 3 / Scene 3",
           title: "தங்க வியாபாரியிடம் மதிப்பு அறிதல் (At the Jeweller's Shop)",
-          tamilContent: `இருவரும் நேராக ஒரு நகைக்கடைக்குச் சென்றனர். அங்கு அந்தப் பொருளைக் கொடுத்து உரைத்துப் பார்த்தனர். அது ஒரு 'வெள்ளிப் பதக்கம்' (silver medal), ஆனால் அதன் மீது தங்க முலாம் பூசப்பட்டிருந்தது. அதன் தற்போதைய மதிப்பு 150 ரூபாய் என நகைக்கடைக்காரர் கூறினார்.`
+          titleEn: "At the Jeweller's Shop",
+          tamilContent: `இருவரும் நேராக ஒரு நகைக்கடைக்குச் சென்றனர். அங்கு அந்தப் பொருளைக் கொடுத்து உரைத்துப் பார்த்தனர். அது ஒரு 'வெள்ளிப் பதக்கம்' (silver medal), ஆனால் அதன் மீது தங்க முலாம் பூசப்பட்டிருந்தது. அதன் தற்போதைய மதிப்பு 150 ரூபாய் என நகைக்கடைக்காரர் கூறினார்.`,
+          englishContent: `They proceeded directly to a local jeweller's shop. Aditya handed over the discovered object to be tested. It was a medal engraved with Sasanka Sanyal's name for winning the school poetry recitation contest in 1948. Though originally made of silver, it had a rich golden polish. The jeweller weighed it and estimated its current market value at one hundred and fifty rupees.`,
+          audioNarrationTa: "இருவரும் நேராக ஒரு நகைக்கடைக்குச் சென்றனர். அங்கு அந்தப் பொருளைக் கொடுத்து உரசிப் பார்த்தனர். அது ஒரு வெள்ளிப் பதக்கம்; ஆனால் அதன் மீது தங்க முலாம் பூசப்பட்டிருந்தது. 1948-ஆம் ஆண்டு பள்ளியில் நடந்த கவிதைப் போட்டியில் சசாங்க சன்யால் வென்ற பதக்கம் அது! அதன் தற்போதைய மதிப்பு 150 ரூபாய் என நகைக்கடைக்காரர் கூறினார்.",
+          audioNarrationEn: "Next, they drove straight to a nearby jewellery shop. Aditya presented the medal to the jeweller to determine its value. It was a silver medal crafted with a fine coat of gold, bearing Sasanka Sanyal's name for winning the recitation contest in nineteen forty-eight. The jeweller weighed it and stated that its current market worth was one hundred and fifty rupees."
         },
         {
-          num: "காட்சி 4",
+          num: "காட்சி 4 / Scene 4",
           title: "சன்யாலின் வீட்டில் மனம் திறந்த ஆதித்யா (Confession & Redemption)",
-          tamilContent: `சன்யால் வசித்து வந்த சிறிய வீட்டிற்குச் சென்றனர். ஆதித்யா 150 ரூபாய் பணத்தை சன்யாலிடம் கொடுத்து, '29 ஆண்டுகளுக்கு முன்பு பள்ளியில் தாகூரின் கவிதை ஒப்புவித்தல் போட்டியில் நீங்கள் வென்ற அந்த மெடலை பொறாமையால் உங்களிடமிருந்து வாங்கிப் பரணில் ஒளித்து வைத்த அதே ஆதித்யா நான்தான். தவறை உணர்ந்து இந்தப் பணத்தை ஈடாகக் கொண்டு வந்துள்ளேன்' என்றார்.<br><br>சன்யால் அந்தப் பணத்தைத் தூக்கி எறிந்தார்! 'எனக்கு பிச்சை வேண்டாம்; ஆனால் என் உழைப்பால் கிடைத்த என் மெடல் எனக்கு வேண்டும்' என்றார். உடனே ஆதித்யா அந்த வெள்ளிப் பதக்கத்தை எடுத்து சன்யாலின் கைகளில் மரியாதையுடன் வைத்தார். சன்யாலின் கண்களில் ஆனந்தக் கண்ணீர் பெருக்கெடுத்தது!`
+          titleEn: "Confession and Redemption",
+          tamilContent: `சன்யால் வசித்து வந்த சிறிய வீட்டிற்குச் சென்றனர். ஆதித்யா 150 ரூபாய் பணத்தை சன்யாலிடம் கொடுத்து, '29 ஆண்டுகளுக்கு முன்பு பள்ளியில் தாகூரின் கவிதை ஒப்புவித்தல் போட்டியில் நீங்கள் வென்ற அந்த மெடலை பொறாமையால் உங்களிடமிருந்து வாங்கிப் பரணில் ஒளித்து வைத்த அதே ஆதித்யா நான்தான். தவறை உணர்ந்து இந்தப் பணத்தை ஈடாகக் கொண்டு வந்துள்ளேன்' என்றார்.<br><br>சன்யால் அந்தப் பணத்தைத் தூக்கி எறிந்தார்! 'எனக்கு பிச்சை வேண்டாம்; ஆனால் என் உழைப்பால் கிடைத்த என் மெடல் எனக்கு வேண்டும்' என்றார். உடனே ஆதித்யா அந்த வெள்ளிப் பதக்கத்தை எடுத்து சன்யாலின் கைகளில் மரியாதையுடன் வைத்தார். சன்யாலின் கண்களில் ஆனந்தக் கண்ணீர் பெருக்கெடுத்தது!`,
+          englishContent: `Aditya visited Sanyal's humble home and offered him the one hundred and fifty rupees. Sanyal sternly refused to accept charity, saying he only wanted his medal. Aditya confessed with genuine humility: 'I am the boy who borrowed your medal twenty-nine years ago out of jealousy and never returned it. Please forgive me.'<br><br>Aditya then placed the cherished medal into Sanyal's hands. Overjoyed and moved by Aditya's genuine remorse, Sanyal accepted his medal with tears of joy!`,
+          audioNarrationTa: "சன்யாலின் சிறிய வீட்டிற்கு ஆதித்யா சென்றார். 150 ரூபாய் பணத்தை நீட்டி, '29 ஆண்டுகளுக்கு முன்பு உங்களிடமிருந்து பொறாமையால் அந்த மெடலை வாங்கித் தராமல் ஏமாற்றிய பாவி நான்தான். தவறை உணர்ந்து இந்தப் பணத்தை இழப்பீடாகத் தருகிறேன்' என்றார். சன்யால் பணத்தை மறுத்துவிட்டு, 'எனக்கு என் உழைப்பால் கிடைத்த பதக்கமே வேண்டும்' என்றார். ஆதித்யா அந்தப் பதக்கத்தை மரியாதையுடன் ஒப்படைக்க, சன்யாலின் கண்களில் ஆனந்தக் கண்ணீர் பெருக்கெடுத்தது!",
+          audioNarrationEn: "Aditya arrived at Sanyal's modest home and offered him the one hundred and fifty rupees. Sanyal firmly refused to accept charity, declaring that he only wanted his self-respect and his medal. Aditya confessed with genuine humility: 'I am Aditya, the classmate who took your medal out of foolish envy twenty-nine years ago.' Aditya then handed the medal to Sanyal. Moved by Aditya's genuine remorse and honesty, Sanyal accepted his medal with tears of joy and forgave his old friend!"
         }
       ],
       vocabulary: [
@@ -62,7 +79,8 @@ const ENGLISH_UNIT_4_DATA = {
 
     {
       id: "story_poem_u4",
-      title: "🐜 The Ant and the Cricket (எறும்பும் வெட்டுக்கிளியும்)",
+      title: "🐜 The Ant and the Cricket (எறுமமும் வெட்டுக்கிளியும்)",
+      titleEn: "The Ant and the Cricket",
       author: "ஈசாப் நீதிக்கதைகள் தழுவல் (Adapted from Aesop's Fables)",
       type: "செய்யுள் (Poem)",
       summary: "கோடையில் உழைக்காமல் பாடித் திரிந்துவிட்டு, குளிர்காலத்தில் உணவின்றித் தவித்த சோம்பேறி வெட்டுக்கிளிக்கும், சேமிப்பின் அவசியத்தை உணர்த்தும் சுறுசுறுப்பான எறும்புக்கும் இடையே நடக்கும் சுவையான விவாதம்!",
@@ -72,9 +90,13 @@ const ENGLISH_UNIT_4_DATA = {
       ],
       scenes: [
         {
-          num: "முழு கவிதை விளக்கம்",
-          title: "இன்பமும் துன்பமும் — உழைப்பின் மேன்மை",
-          tamilContent: `வசந்த காலத்திலும் கோடைக்காலத்திலும் வெயில் கொளுத்தும்போது, ஒரு முட்டாள் வெட்டுக்கிளி எவ்வித எதிர்காலச் சிந்தனையும் இன்றி பாடிக்கொண்டே மகிழ்ச்சியாகத் திரிந்தது. ஆனால் பனிபொழியும் கொடும் குளிர்காலம் வந்தது. பனியால் நிலமெங்கும் மூடியது; மரங்களில் இலைகளோ, பூக்களோ எங்குமே ஒரு துளி தானியமோ கிடைக்கவில்லை.<br><br>பசியால் நடுங்கியபடி, சேமித்து வைத்திருந்த ஒரு சிறிய எறும்பின் புற்றிற்குச் சென்று பிச்சை கேட்டது: 'எனக்குக் கொஞ்சம் தானியமும் தங்குமிடமும் கொடு, அடுத்த வசந்தத்தில் திருப்பித் தந்து விடுகிறேன்' என்றது. அதற்கு எறும்பு புன்னகையுடன், 'நாங்கள் எறும்புகள் யாரிடமும் கடன் வாங்குவதும் இல்லை, கொடுப்பதும் இல்லை! கோடைக்காலத்தில் நீ என்ன செய்து கொண்டிருந்தாய்?' என்று கேட்டது. 'நான் பாடிக் கொண்டிருந்தேன்' என்றது வெட்டுக்கிளி. 'அப்படியானால் குளிர்காலத்தை ஆடியபடியே கடந்துவிடு (Dance the winter away)!' என்று கூறி கதவை அறைந்து சாத்தியது எறும்பு!`
+          num: "முழு கவிதை விளக்கம் / Full Poem Narration",
+          title: "இன்பமும் துன்பமும் — உழைப்பின் மேன்மை (The Fable of the Ant and the Cricket)",
+          titleEn: "The Fable of the Ant and the Cricket",
+          tamilContent: `வசந்த காலத்திலும் கோடைக்காலத்திலும் வெயில் கொளுத்தும்போது, ஒரு முட்டாள் வெட்டுக்கிளி எவ்வித எதிர்காலச் சிந்தனையும் இன்றி பாடிக்கொண்டே மகிழ்ச்சியாகத் திரிந்தது. ஆனால் பனிபொழியும் கொடும் குளிர்காலம் வந்தது. பனியால் நிலமெங்கும் மூடியது; மரங்களில் இலைகளோ, பூக்களோ எங்குமே ஒரு துளி தானியமோ கிடைக்கவில்லை.<br><br>பசியால் நடுங்கியபடி, சேமித்து வைத்திருந்த ஒரு சிறிய எறும்பின் புற்றிற்குச் சென்று பிச்சை கேட்டது: 'எனக்குக் கொஞ்சம் தானியமும் தங்குமிடமும் கொடு, அடுத்த வசந்தத்தில் திருப்பித் தந்து விடுகிறேன்' என்றது. அதற்கு எறும்பு புன்னகையுடன், 'நாங்கள் எறும்புகள் யாரிடமும் கடன் வாங்குவதும் இல்லை, கொடுப்பதும் இல்லை! கோடைக்காலத்தில் நீ என்ன செய்து கொண்டிருந்தாய்?' என்று கேட்டது. 'நான் பாடிக் கொண்டிருந்தேன்' என்றது வெட்டுக்கிளி. 'அப்படியானால் குளிர்காலத்தை ஆடியபடியே கடந்துவிடு (Dance the winter away)!' என்று கூறி கதவை அறைந்து சாத்தியது எறும்பு!`,
+          englishContent: `A silly young cricket spent the glorious, warm days of summer and spring singing and dancing without a care. But when bitter winter arrived, the ground was covered with thick snow, and not a crumb of food was to be found.<br><br>Starving and trembling in the freezing cold, the cricket begged a hardworking ant for shelter and a mouthful of grain. The prudent ant replied: 'We ants never borrow, we ants never lend! What did you do all summer?' When the cricket confessed he spent the summer singing, the ant retorted: 'Go then, and dance the winter away!' and shut the door firmly.`,
+          audioNarrationTa: "ஈசாப் நீதிக்கதையை அடிப்படையாகக் கொண்ட எறும்பும் வெட்டுக்கிளியும் கவிதையைக் கேட்போம்! வசந்த காலத்திலும் கோடையிலும் ஒரு சோம்பேறி வெட்டுக்கிளி ஆடிப் பாடி நேரத்தை வீணடித்தது. ஆனால் கொடும் பனிக்காலம் வந்தபோது பசியால் வாடியது. உழைத்துச் சேமித்து வைத்திருந்த சுறுசுறுப்பான எறும்பின் வீட்டிற்குச் சென்று பிச்சை கேட்டது. எறும்போ, 'நாங்கள் கடன் வாங்குவதும் இல்லை, கொடுப்பதும் இல்லை! கோடையில் பாடினாய் அல்லவா, குளிர்காலத்தில் ஆடியே காலத்தைக் கழி!' என்று கூறி கதவை மூடியது. உழைப்பின் மேன்மையையும் சேமிப்பின் அவசியத்தையும் உணர்த்தும் பாடம் இது!",
+          audioNarrationEn: "Listen to Aesop's timeless fable of The Ant and the Cricket! A carefree young cricket sang joyfully throughout the warm, sunny months of spring and summer, never saving a single grain of food. But when bleak winter froze the earth, snow covered the trees, and the cricket found his cupboard completely empty! Starving in the bitter frost, he knocked on the door of a frugal ant, pleading for a mouthful of grain. The wise ant questioned him: 'Did you lay nothing by when the weather was warm?' The cricket confessed: 'My heart was so light that I sang day and night!' The ant firmly replied: 'If you sang the summer away, now go and dance the winter away!' and shut the door. The moral is clear: prepare today for the needs of tomorrow!"
         }
       ],
       vocabulary: [

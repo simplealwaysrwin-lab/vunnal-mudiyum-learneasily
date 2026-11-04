@@ -13,10 +13,12 @@ const ENGLISH_UNIT_6_DATA = {
   unit: "Unit 6",
   title: "Unit 6: Prose - The Last Lesson | Poem - No Men Are Foreign | Supplementary - The Little Hero of Holland | Grammar",
 
+  // 📖 கதை வடிவிலான முழுமையான தமிழ் & ஆங்கில விளக்கம் (Bilingual Story Mode with Audio Voice Scripts)
   stories: [
     {
       id: "story_prose_u6",
       title: "🇫🇷 The Last Lesson (கடைசிப் பிரெஞ்சுப் பாடம்)",
+      titleEn: "The Last Lesson",
       author: "அல்போன்ஸ் டாடே (Alphonse Daudet)",
       type: "உரைநடை (Prose)",
       summary: "பிரான்ஸ்-பிரஷ்ய போரில் பிரான்சின் அல்சேஸ் மற்றும் லோரெய்ன் பகுதிகளை ஜெர்மனி கைப்பற்றிய பிறகு, அங்கு பிரெஞ்சு மொழி கற்பிக்கத் தடை விதிக்கப்படுகிறது. ஆசிரியர் எம். ஹேமல் தனது 40 ஆண்டுகால பணிக்கு விடைபெற்று நடத்தும் இதயத்தை நெகிழச் செய்யும் இறுதிப் பாடம்!",
@@ -27,14 +29,22 @@ const ENGLISH_UNIT_6_DATA = {
       ],
       scenes: [
         {
-          num: "காட்சி 1",
+          num: "காட்சி 1 / Scene 1",
           title: "பள்ளியில் விசித்திரமான அமைதி (Quiet School & Prussian Order)",
-          tamilContent: "பிரான்ஸ் தாமதமாக பள்ளிக்கு வந்தபோது எங்கும் சுற்றிலும் மயான அமைதி நிலவியது. ஆசிரியர் வழக்கமான கோபத்திற்கு பதிலாக பச்சை நிற சிறப்பு அங்கி அணிந்து பரிவுடன் வரவேற்றார். பெர்லினில் இருந்து உத்தரவு வந்துவிட்டது: இனி ஜெர்மன் மட்டுமே கற்பிக்கப்பட வேண்டும்!"
+          titleEn: "Strange Silence and the Prussian Decree",
+          tamilContent: "பிரான்ஸ் தாமதமாக பள்ளிக்கு வந்தபோது எங்கும் சுற்றிலும் மயான அமைதி நிலவியது. ஆசிரியர் வழக்கமான கோபத்திற்கு பதிலாக பச்சை நிற சிறப்பு அங்கி அணிந்து பரிவுடன் வரவேற்றார். பெர்லினில் இருந்து உத்தரவு வந்துவிட்டது: இனி ஜெர்மன் மட்டுமே கற்பிக்கப்பட வேண்டும்!",
+          englishContent: "Little Franz was late for school and feared a reprimand from his teacher M. Hamel. But surprisingly, the classroom was as hushed as a Sunday morning! M. Hamel was dressed in his handsome green coat reserved for inspection days. With deep sorrow, the teacher announced: 'An order has come from Berlin to teach only German in the schools of Alsace and Lorraine. This is your last French lesson!'",
+          audioNarrationTa: "அல்போன்ஸ் டாடே எழுதிய உலகப் புகழ்பெற்ற கதையான 'தி லாஸ்ட் லெசன்' - இறுதிப் பிரெஞ்சுப் பாடத்தைக் கேட்போம்! பிரான்ஸ் என்ற சிறுவன் பள்ளிக்குத் தாமதமாக ஓடி வந்தான். வழக்கமாக இரைச்சல் நிறைந்திருக்கும் பள்ளிக்கூடம் இன்று விசித்திரமான அமைதியில் மூழ்கியிருந்தது. ஆசிரியர் எம். ஹேமல் கோபப்படாமல், பச்சை நிற சிறப்பு அங்கி அணிந்து நின்றார். பெர்லினிலிருந்து உத்தரவு வந்துவிட்டது: இனி பிரெஞ்சு மொழி கற்பிக்கப்படக் கூடாது, ஜெர்மன் மட்டுமே கற்பிக்க வேண்டும்! இது உங்கள் கடைசிப் பிரெஞ்சுப் பாடம் என்று அவர் கூறியதும் மாணவர்கள் அதிர்ந்து நின்றனர்!",
+          audioNarrationEn: "Welcome to Alphonse Daudet's emotional masterpiece, The Last Lesson! Little Franz started late for school, dreading a harsh scolding from his strict master, M. Hamel. But when he arrived, a strange, solemn stillness hung over the school, as quiet as a Sunday morning. Behind the back benches sat the elderly villagers in silent reverence. M. Hamel was wearing his ceremonial green coat and frilled shirt. With gentle sadness, the teacher mounted his chair and announced: 'My children, this is the last French lesson I shall give you. The order has come from Berlin to teach only German in the schools of Alsace and Lorraine. The new master arrives tomorrow. I urge you to be very attentive!'"
         },
         {
-          num: "காட்சி 2",
+          num: "காட்சி 2 / Scene 2",
           title: "பிரெஞ்சு மொழியின் மேன்மையும் விடைபெறுதலும் (Vive La France!)",
-          tamilContent: "எம். ஹேமல் கூறினார்: 'பிரெஞ்சு உலகின் மிகத் தெளிவான, மிக அழகான மொழி. தாய்மொழியை காப்பதே அடிமைத் தளையிலிருந்து விடுபடும் சாவியாகும்!' மதியம் 12 மணி மணி ஒலித்ததும் அவர் கரும்பலகையில் பெரிய எழுத்துக்களில் 'VIVE LA FRANCE!' (பிரான்ஸ் வாழ்க!) என்று எழுதி தன் பாடத்தை முடித்தார்."
+          titleEn: "The Glory of French and Vive La France!",
+          tamilContent: "எம். ஹேமல் கூறினார்: 'பிரெஞ்சு உலகின் மிகத் தெளிவான, மிக அழகான மொழி. தாய்மொழியை காப்பதே அடிமைத் தளையிலிருந்து விடுபடும் சாவியாகும்!' மதியம் 12 மணி மணி ஒலித்ததும் அவர் கரும்பலகையில் பெரிய எழுத்துக்களில் 'VIVE LA FRANCE!' (பிரான்ஸ் வாழ்க!) என்று எழுதி தன் பாடத்தை முடித்தார்.",
+          englishContent: "M. Hamel taught the lesson with boundless passion. He praised French as the clearest, most beautiful, and most logical language in the world, reminding his pupils: 'When people are enslaved, as long as they hold fast to their language, it is as if they had the key to their prison!' When the church clock struck twelve and Prussian trumpets sounded, M. Hamel turned to the blackboard, took a piece of chalk, and with all his might wrote in giant letters: 'VIVE LA FRANCE!' (Long Live France!)",
+          audioNarrationTa: "எம். ஹேமல் நெகிழ்ச்சியுடன் கூறினார்: 'பிரெஞ்சு உலகின் மிக அழகான, தெளிவான மொழி. ஒரு மக்கள் அடிமைப்படுத்தப்படும்போது, தங்கள் தாய்மொழியை இறுகப் பற்றிக் கொண்டால் அது சிறைச்சாலையின் சாவியைத் தங்கள் கையில் வைத்திருப்பது போன்றது!' பள்ளி மணி 12 அடித்தது. பிரஷ்யப் படைகளின் எக்காள ஒலி கேட்டது. தழுதழுத்த குரலில் எம். ஹேமல் கரும்பலகைக்குத் திரும்பி, ஒரு சுண்ணக்கட்டியை எடுத்து தன் முழு ஆற்றலையும் திரட்டி, 'விவ் லா பிரான்ஸ்!' அதாவது பிரான்ஸ் வாழ்க என்று எழுதி விடைபெற்றார்!",
+          audioNarrationEn: "M. Hamel spoke of the French language with overflowing love and pride. 'It is the most beautiful language in the world, the clearest, the most logical,' he explained. 'We must guard it among us and never forget it, because when an enslaved nation holds fast to its mother tongue, it holds the very key to its freedom!' As the church clock struck twelve and the trumpets of the Prussian soldiers sounded under their windows, M. Hamel stood up, pale and choked with emotion. Unable to speak another word, he turned to the blackboard, grasped a piece of chalk, and bearing on with all his might, wrote in giant letters: VIVE LA FRANCE! Long live France! Then he leaned his head against the wall and gestured with his hand: 'School is dismissed; you may go!'"
         }
       ],
       moral: "தாய்மொழி ஒரு தேசியத்தின் அடையாளம்; தாய்மொழியை நேசிப்பதே தேசப்பற்றின் அடித்தளம்."
@@ -42,19 +52,28 @@ const ENGLISH_UNIT_6_DATA = {
     {
       id: "story_poem_u6",
       title: "🌍 No Men Are Foreign (எவரும் அந்நியர் அல்லர்)",
+      titleEn: "No Men Are Foreign",
       author: "ஜேம்ஸ் பால்கனர் கிர்கப் (James Falconer Kirkup)",
       type: "கவிதை (Poem)",
       summary: "மனித உடைகள், நாடுகள், கொடிகள் வேறுபட்டாலும், அனைவருக்குள்ளும் துடிப்பது ஒரே வகையான மனித இதயம்; நாம் அனைவரும் ஒரே பூமியையே பகிர்ந்து வாழ்கிறோம் என்பதை உரக்கச் சொல்லும் உலக அமைதிக் கவிதை.",
       scenes: [
         {
-          num: "பிரிவு 1",
-          title: "ஒரே இயற்கை, ஒரே மனித இனம்",
-          tamilContent: "எல்லா இராணுவ உடைகளுக்குக் கீழும் சுவாசிப்பது ஒரே காற்று; ஒரே சூரிய ஒளி, தண்ணீர் மற்றும் தானியங்களால் நாம் அனைவரும் ஊட்டமடைகிறோம். போரில் அனைவரும் பட்டினி கிடக்கிறோம்; அமைதியில் அனைவரும் மகிழ்கிறோம்."
+          num: "பிரிவு 1 / Stanza 1 & 2",
+          title: "ஒரே இயற்கை, ஒரே மனித இனம் (One Earth, One Human Race)",
+          titleEn: "One Earth, One Human Race",
+          tamilContent: "எல்லா இராணுவ உடைகளுக்குக் கீழும் சுவாசிப்பது ஒரே காற்று; ஒரே சூரிய ஒளி, தண்ணீர் மற்றும் தானியங்களால் நாம் அனைவரும் ஊட்டமடைகிறோம். போரில் அனைவரும் பட்டினி கிடக்கிறோம்; அமைதியில் அனைவரும் மகிழ்கிறோம்.",
+          englishContent: "Poet James Kirkup reminds us that no men are strange and no countries foreign. Beneath all military uniforms, a single body breathes. The same earth supports us all, and into the same earth we shall eventually rest. People of all nations are nourished by the same sun, air, and water, and blessed by peaceful harvests.",
+          audioNarrationTa: "ஜேம்ஸ் கிர்கப் இயற்றிய எவரும் அந்நியர் அல்லர் என்ற உலக அமைதிக் கவிதையைக் கேட்போம்! உலகில் எந்த ஒரு மனிதனும் அந்நியன் அல்ல; எந்த ஒரு நாடும் அயல் நாடு அல்ல! எல்லா இராணுவச் சீருடைகளுக்குக் கீழும் சுவாசிப்பது ஒரே வகையான மனித உடல் மட்டுமே! நாம் அனைவரும் ஒரே பூமியிலேயே நடக்கிறோம்; முடிவில் இந்த மண்ணிலேயே உறங்கப் போகிறோம்! சூரியன், காற்று, நீர் அனைத்தும் உலக மக்கள் அனைவருக்கும் பொதுவானதே என்று கவிஞர் பாடுகிறார்!",
+          audioNarrationEn: "Listen to the inspiring global message of James Kirkup's poem, No Men Are Foreign! The poet proclaims: 'Remember, no men are strange, no countries foreign! Beneath all uniforms, a single human body breathes, just like our own. The land our brothers walk upon is earth like this, in which we all shall lie!' People across every border are warmed by the very same sun, breathe the same air, and drink the same fresh water. During times of peace, we all flourish with harvest; during war, we all suffer hunger together!"
         },
         {
-          num: "பிரிவு 2",
-          title: "போரின் அவலம்",
-          tamilContent: "நாம் மற்றொரு மனிதனை வெறுக்கும்போது நம்மையே வெறுக்கிறோம்; நாம் கைகளில் ஆயுதம் ஏந்தும்போது இந்த புனித பூமியையே தூய்மைக்கேடாக்குகிறோம். எல்லைகளைக் கடந்து மனித நேயமே வாழ்வின் உண்மை!"
+          num: "பிரிவு 2 / Stanza 3 & 4",
+          title: "போரின் அவலம் & மனித நேயம் (The Tragedy of War and Universal Brotherhood)",
+          titleEn: "The Tragedy of War and Universal Brotherhood",
+          tamilContent: "நாம் மற்றொரு மனிதனை வெறுக்கும்போது நம்மையே வெறுக்கிறோம்; நாம் கைகளில் ஆயுதம் ஏந்தும்போது இந்த புனித பூமியையே தூய்மைக்கேடாக்குகிறோம். எல்லைகளைக் கடந்து மனித நேயமே வாழ்வின் உண்மை!",
+          englishContent: "Whenever we are instructed to hate our neighbours of another country, we only dispossess, betray, and condemn ourselves. When we take up weapons of war against fellow human beings, we pollute the purity of the innocent earth and air. Remember, no men are foreign and no countries strange!",
+          audioNarrationTa: "கவிஞர் மேலும் கூறுகிறார்: பிற நாட்டினரை வெறுக்குமாறு சிலர் நம்மைத் தூண்டும்போது, நாம் நம் சொந்த சகோதரர்களையே வஞ்சிக்கிறோம் என்பதை உணர வேண்டும்! சக மனிதனுக்கு எதிராக நாம் ஆயுதம் ஏந்தும்போது, இந்த புனித பூமியை நாமே அசுத்தப்படுத்துகிறோம்! போரைத் துறந்து மனித நேயத்தை வளர்ப்போம்; உலகில் எவரும் அந்நியர் அல்லர்!",
+          audioNarrationEn: "Hear the passionate call for global peace! The poet warns: 'Whenever we are told to hate our brothers, it is ourselves that we shall dispossess, betray, and condemn! It is the human earth that we defile when we take arms against one another. Our hells of fire and dust outrage the innocence of air that is everywhere our own!' Never forget the immortal truth: no men are foreign, and no countries strange. We are all children of the same universal human family!"
         }
       ],
       moral: "மனிதகுலம் ஒன்றே; போரைத் தவிர்த்து அமைதியையும் உலக சகோதரத்துவத்தையும் தழுவுவோம்."

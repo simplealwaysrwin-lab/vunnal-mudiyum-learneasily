@@ -450,7 +450,8 @@ const MATHS_EM_UNIT_3_DATA = {
           explanation: "Reversal law of matrix transpose (AB)^T = B^T A^T holds true."
         }
       ]
-    }    ,
+    }
+    ,
     // -------------------------------------------------------------
     // Section 4: Graph - Top Important 8-Mark Public Exam Questions (Exercise 3.16)
     // -------------------------------------------------------------
@@ -467,10 +468,10 @@ const MATHS_EM_UNIT_3_DATA = {
           examYear: "2024",
           examTag: "Public Exam (Q.44)",
           isImportant: true,
-          q: "Draw the graph of y = xÂ² - 9 and state the nature of solutions.",
+          q: "Draw the graph of y = x² - 9 and state the nature of solutions.",
           ans: `<div style="line-height:1.8;">
             <b>Step 1: Given Quadratic Function:</b><br>
-            y = xÂ² - 9<br><br>
+            y = x² - 9<br><br>
             <b>Step 2: Table of Values:</b><br>
             <table style="width:100%; border-collapse:collapse; text-align:center; margin:8px 0; font-size:13px;">
               <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
@@ -486,7 +487,7 @@ const MATHS_EM_UNIT_3_DATA = {
                 <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
               </tr>
               <tr style="border:1px solid #cbd5e1;">
-                <th style="padding:6px; border:1px solid #cbd5e1;">xÂ²</th>
+                <th style="padding:6px; border:1px solid #cbd5e1;">x²</th>
                 <td style="padding:6px; border:1px solid #cbd5e1;">16</td>
                 <td style="padding:6px; border:1px solid #cbd5e1;">9</td>
                 <td style="padding:6px; border:1px solid #cbd5e1;">4</td>
@@ -525,8 +526,8 @@ const MATHS_EM_UNIT_3_DATA = {
             <b>Step 3: Points to be Plotted:</b><br>
             (-4, 7), (-3, 0), (-2, -5), (-1, -8), (0, -9), (1, -8), (2, -5), (3, 0), (4, 7).<br><br>
             <b>Step 4: Scale:</b><br>
-            â€¢ X-axis: 1 cm = 1 unit<br>
-            â€¢ Y-axis: 1 cm = 2 units<br><br>
+            • X-axis: 1 cm = 1 unit<br>
+            • Y-axis: 1 cm = 2 units<br><br>
             <b>Step 5: Nature of Solutions:</b><br>
             Plot these points and draw a smooth parabola.<br>
             The curve intersects the X-axis at two distinct points: <b>(-3, 0)</b> and <b>(3, 0)</b>.<br><br>
@@ -545,10 +546,10 @@ const MATHS_EM_UNIT_3_DATA = {
           examYear: "2023",
           examTag: "Public Exam (Q.44)",
           isImportant: true,
-          q: "Draw the graph of y = xÂ² - 4x + 4 and state the nature of solutions.",
+          q: "Draw the graph of y = x² - 4x + 4 and state the nature of solutions.",
           ans: `<div style="line-height:1.8;">
             <b>Step 1: Function:</b><br>
-            y = xÂ² - 4x + 4<br><br>
+            y = x² - 4x + 4<br><br>
             <b>Step 2: Table of Values:</b><br>
             <table style="width:100%; border-collapse:collapse; text-align:center; margin:8px 0; font-size:13px;">
               <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
@@ -562,7 +563,7 @@ const MATHS_EM_UNIT_3_DATA = {
                 <td style="padding:6px; border:1px solid #cbd5e1;">5</td>
               </tr>
               <tr style="border:1px solid #cbd5e1;">
-                <th style="padding:6px; border:1px solid #cbd5e1;">xÂ²</th>
+                <th style="padding:6px; border:1px solid #cbd5e1;">x²</th>
                 <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
                 <td style="padding:6px; border:1px solid #cbd5e1;">0</td>
                 <td style="padding:6px; border:1px solid #cbd5e1;">1</td>
@@ -605,8 +606,8 @@ const MATHS_EM_UNIT_3_DATA = {
             <b>Step 3: Points to Plot:</b><br>
             (-1, 9), (0, 4), (1, 1), (2, 0), (3, 1), (4, 4), (5, 9).<br><br>
             <b>Step 4: Scale:</b><br>
-            â€¢ X-axis: 1 cm = 1 unit<br>
-            â€¢ Y-axis: 1 cm = 1 unit<br><br>
+            • X-axis: 1 cm = 1 unit<br>
+            • Y-axis: 1 cm = 1 unit<br><br>
             <b>Step 5: Nature of Solutions:</b><br>
             The parabola touches the X-axis at only one point: <b>(2, 0)</b>.<br><br>
             <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
@@ -624,9 +625,9 @@ const MATHS_EM_UNIT_3_DATA = {
           examYear: "2024",
           examTag: "Public Exam Model (Q.44)",
           isImportant: true,
-          q: "Draw the graph of y = xÂ² + 3x - 4 and hence use it to solve xÂ² + 3x - 4 = 0.",
+          q: "Draw the graph of y = x² + 3x - 4 and hence use it to solve x² + 3x - 4 = 0.",
           ans: `<div style="line-height:1.8;">
-            <b>Step 1: Table for Parabola y = xÂ² + 3x - 4:</b><br>
+            <b>Step 1: Table for Parabola y = x² + 3x - 4:</b><br>
             <table style="width:100%; border-collapse:collapse; text-align:center; margin:8px 0; font-size:13px;">
               <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
                 <th style="padding:6px; border:1px solid #cbd5e1;">x</th>
@@ -652,8 +653,8 @@ const MATHS_EM_UNIT_3_DATA = {
               </tr>
             </table><br>
             <b>Step 2: Subtract equations to find line equation:</b><br>
-            y = xÂ² + 3x - 4<br>
-            0 = xÂ² + 3x - 4<br>
+            y = x² + 3x - 4<br>
+            0 = x² + 3x - 4<br>
             ----------------<br>
             <b>y = 0</b> (the X-axis itself)<br><br>
             <b>Step 3: Points of Intersection:</b><br>
@@ -663,7 +664,7 @@ const MATHS_EM_UNIT_3_DATA = {
               Solution Set = {-4, 1}.
             </div>
           </div>`,
-          explanation: "Parabola y = xÂ² + 3x - 4 intersects the line y = 0 at x = -4 and x = 1."
+          explanation: "Parabola y = x² + 3x - 4 intersects the line y = 0 at x = -4 and x = 1."
         }
       ]
     }

@@ -1484,7 +1484,8 @@ const MATHS_EM_UNIT_4_DATA = {
           explanation: "Hypotenuse = √(18² + 24²) = √900 = 30 m."
         }
       ]
-    }    ,
+    }
+    ,
     // -------------------------------------------------------------
     // Section 2: Practical Geometry - Public Exam 8-Mark Special Questions (Exercise 4.1 - 4.4)
     // -------------------------------------------------------------
@@ -1506,15 +1507,15 @@ const MATHS_EM_UNIT_4_DATA = {
             <b>Step 1: Rough Diagram:</b><br>
             Draw any triangle PQR. Inside it, draw smaller similar triangle P'QR'.<br><br>
             <b>Step 2: Steps of Construction:</b><br>
-            1. Construct <b>Î”PQR</b> with any convenient measurements.<br>
+            1. Construct <b>ΔPQR</b> with any convenient measurements.<br>
             2. Draw a ray <b>QX</b> making an acute angle with QR on the side opposite to vertex P.<br>
-            3. Since 5 is greater in 3/5, mark 5 equal points on QX: <b>QQâ‚ = Qâ‚Qâ‚‚ = Qâ‚‚Qâ‚ƒ = Qâ‚ƒQâ‚„ = Qâ‚„Qâ‚…</b>.<br>
-            4. Join <b>Qâ‚…R</b>.<br>
-            5. Draw a line through Qâ‚ƒ parallel to Qâ‚…R to intersect QR at <b>R'</b>.<br>
+            3. Since 5 is greater in 3/5, mark 5 equal points on QX: <b>QQ₁ = Q₁Q₂ = Q₂Q₃ = Q₃Q₄ = Q₄Q₅</b>.<br>
+            4. Join <b>Q₅R</b>.<br>
+            5. Draw a line through Q₃ parallel to Q₅R to intersect QR at <b>R'</b>.<br>
             6. Draw a line through R' parallel to RP to intersect QP at <b>P'</b>.<br>
-            7. <b>Î”P'QR'</b> is the required similar triangle with scale factor 3/5.<br><br>
+            7. <b>ΔP'QR'</b> is the required similar triangle with scale factor 3/5.<br><br>
             <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
-              Similar Triangle Î”P'QR' successfully constructed!
+              Similar Triangle ΔP'QR' successfully constructed!
             </div>
           </div>`,
           explanation: "Constructed similar triangle P'QR' with scale factor 3/5 using parallel line division on ray QX."
@@ -1530,17 +1531,17 @@ const MATHS_EM_UNIT_4_DATA = {
           q: "Construct a triangle similar to a given triangle ABC with its sides equal to 7/4 of the corresponding sides of triangle ABC (scale factor 7/4 > 1).",
           ans: `<div style="line-height:1.8;">
             <b>Step 1: Rough Diagram:</b><br>
-            Draw Î”ABC. Outside it, sketch the larger similar triangle A'BC'.<br><br>
+            Draw ΔABC. Outside it, sketch the larger similar triangle A'BC'.<br><br>
             <b>Step 2: Steps of Construction:</b><br>
-            1. Construct <b>Î”ABC</b> with any convenient measurements.<br>
+            1. Construct <b>ΔABC</b> with any convenient measurements.<br>
             2. Draw a ray <b>BX</b> making an acute angle with BC.<br>
-            3. Since 7 is greater in 7/4, locate 7 equal points <b>Bâ‚ to Bâ‚‡</b> on BX.<br>
-            4. 4 is the smaller denominator: join <b>Bâ‚„C</b>.<br>
-            5. Draw a line through Bâ‚‡ parallel to Bâ‚„C intersecting extended BC at <b>C'</b>.<br>
+            3. Since 7 is greater in 7/4, locate 7 equal points <b>B₁ to B₇</b> on BX.<br>
+            4. 4 is the smaller denominator: join <b>B₄C</b>.<br>
+            5. Draw a line through B₇ parallel to B₄C intersecting extended BC at <b>C'</b>.<br>
             6. Draw a line through C' parallel to CA intersecting extended BA at <b>A'</b>.<br>
-            7. <b>Î”A'BC'</b> is the required triangle with scale factor 7/4.<br><br>
+            7. <b>ΔA'BC'</b> is the required triangle with scale factor 7/4.<br><br>
             <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
-              Similar Triangle Î”A'BC' (scale factor 7/4 > 1) successfully constructed!
+              Similar Triangle ΔA'BC' (scale factor 7/4 > 1) successfully constructed!
             </div>
           </div>`,
           explanation: "Constructed enlarged similar triangle A'BC' using scale factor 7/4 > 1."
@@ -1567,9 +1568,9 @@ const MATHS_EM_UNIT_4_DATA = {
             5. Let this circle intersect the given circle at points <b>A</b> and <b>B</b>.<br>
             6. Join <b>PA</b> and <b>PB</b>. PA and PB are the required tangents.<br><br>
             <b>Step 3: Verification (Calculation):</b><br>
-            In right triangle Î”OAP (by Pythagoras theorem):<br>
-            PA = âˆš(OPÂ² - OAÂ²)<br>
-            PA = âˆš(5Â² - 3Â²) = âˆš(25 - 9) = âˆš16 = <b>4 cm</b>.<br><br>
+            In right triangle ΔOAP (by Pythagoras theorem):<br>
+            PA = √(OP² - OA²)<br>
+            PA = √(5² - 3²) = √(25 - 9) = √16 = <b>4 cm</b>.<br><br>
             <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
               Measured length of tangents: PA = PB = 4 cm (verified).
             </div>

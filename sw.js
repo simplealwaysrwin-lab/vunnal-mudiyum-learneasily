@@ -1,10 +1,10 @@
-// =======================================================================
+﻿// =======================================================================
 // உன்னால் முடியும் (Vunnal Mudiyum) - Progressive Web App Service Worker
 // Enables 100% Offline Study for 10th Standard Students
 // Zero-Downtime Architecture - Auto-Update on Deploy Engine
 // =======================================================================
 
-const CACHE_NAME = 'vm-offline-v20261105_v56';
+const CACHE_NAME = 'vm-offline-v20261105_v57';
 
 // Core essential assets for instant offline app shell and subject question banks
 const PRECACHE_ASSETS = [
@@ -126,7 +126,15 @@ const PRECACHE_ASSETS = [
   './data_social_em_u7.js',
   './data_social_em_u8.js',
   './data_social_em_u9.js',
-  './data_social_em_u10.js'
+  './data_social_em_u10.js',
+  './data_science_u11.js',
+  './data_science_u12.js',
+  './data_science_em_u11.js',
+  './data_science_em_u12.js',
+  './data_social_u11.js',
+  './data_social_u12.js',
+  './data_social_em_u11.js',
+  './data_social_em_u12.js'
 ];
 
 // Install Event: Cache essential shell in background and skip waiting immediately

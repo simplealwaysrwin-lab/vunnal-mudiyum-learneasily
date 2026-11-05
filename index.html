@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -162,6 +162,14 @@
 <script src="data_social_u10.js?v=20261103_v50"></script>
 <script src="data_social_em_u9.js?v=20261103_v50"></script>
 <script src="data_social_em_u10.js?v=20261103_v50"></script>
+<script src="data_science_u11.js?v=20261105_v57"></script>
+<script src="data_science_u12.js?v=20261105_v57"></script>
+<script src="data_science_em_u11.js?v=20261105_v57"></script>
+<script src="data_science_em_u12.js?v=20261105_v57"></script>
+<script src="data_social_u11.js?v=20261105_v57"></script>
+<script src="data_social_u12.js?v=20261105_v57"></script>
+<script src="data_social_em_u11.js?v=20261105_v57"></script>
+<script src="data_social_em_u12.js?v=20261105_v57"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -5006,6 +5014,24 @@
             subSections: (typeof SCIENCE_UNIT_10_DATA !== 'undefined') ? SCIENCE_UNIT_10_DATA.subSections : [],
             questions: (typeof SCIENCE_UNIT_10_DATA !== 'undefined' && SCIENCE_UNIT_10_DATA.subSections) ? SCIENCE_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof SCIENCE_UNIT_10_DATA !== 'undefined') ? SCIENCE_UNIT_10_DATA.formulas : []
+          },
+          {
+            id: 'sci_u11',
+            unit: 'à®…à®²à®•à¯ 11',
+            title: 'à®•à®¾à®°à¯à®ªà®©à¯à®®à¯ à®…à®¤à®©à¯ à®šà¯‡à®°à¯à®®à®™à¯à®•à®³à¯à®®à¯ (Carbon and its Compounds)',
+            qCount: (typeof SCIENCE_UNIT_11_DATA !== 'undefined' && SCIENCE_UNIT_11_DATA.subSections) ? SCIENCE_UNIT_11_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_11_DATA !== 'undefined') ? SCIENCE_UNIT_11_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_11_DATA !== 'undefined' && SCIENCE_UNIT_11_DATA.subSections) ? SCIENCE_UNIT_11_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_11_DATA !== 'undefined') ? SCIENCE_UNIT_11_DATA.formulas : []
+          },
+          {
+            id: 'sci_u12',
+            unit: 'à®…à®²à®•à¯ 12',
+            title: 'à®¤à®¾à®µà®° à®‰à®³à¯à®³à®®à¯ˆà®ªà¯à®ªà®¿à®¯à®²à¯ à®®à®±à¯à®±à¯à®®à¯ à®¤à®¾à®µà®° à®‰à®Ÿà®²à®¿à®¯à®²à¯ (Plant Anatomy and Plant Physiology)',
+            qCount: (typeof SCIENCE_UNIT_12_DATA !== 'undefined' && SCIENCE_UNIT_12_DATA.subSections) ? SCIENCE_UNIT_12_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_12_DATA !== 'undefined') ? SCIENCE_UNIT_12_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_12_DATA !== 'undefined' && SCIENCE_UNIT_12_DATA.subSections) ? SCIENCE_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_12_DATA !== 'undefined') ? SCIENCE_UNIT_12_DATA.formulas : []
           }
         ]
       },
@@ -5107,6 +5133,24 @@
             subSections: (typeof SCIENCE_EM_UNIT_10_DATA !== 'undefined') ? SCIENCE_EM_UNIT_10_DATA.subSections : [],
             questions: (typeof SCIENCE_EM_UNIT_10_DATA !== 'undefined' && SCIENCE_EM_UNIT_10_DATA.subSections) ? SCIENCE_EM_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof SCIENCE_EM_UNIT_10_DATA !== 'undefined') ? SCIENCE_EM_UNIT_10_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u11',
+            unit: 'Unit 11',
+            title: 'Carbon and its Compounds',
+            qCount: (typeof SCIENCE_EM_UNIT_11_DATA !== 'undefined' && SCIENCE_EM_UNIT_11_DATA.subSections) ? SCIENCE_EM_UNIT_11_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_11_DATA !== 'undefined') ? SCIENCE_EM_UNIT_11_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_11_DATA !== 'undefined' && SCIENCE_EM_UNIT_11_DATA.subSections) ? SCIENCE_EM_UNIT_11_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_11_DATA !== 'undefined') ? SCIENCE_EM_UNIT_11_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u12',
+            unit: 'Unit 12',
+            title: 'Plant Anatomy and Plant Physiology',
+            qCount: (typeof SCIENCE_EM_UNIT_12_DATA !== 'undefined' && SCIENCE_EM_UNIT_12_DATA.subSections) ? SCIENCE_EM_UNIT_12_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_12_DATA !== 'undefined') ? SCIENCE_EM_UNIT_12_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_12_DATA !== 'undefined' && SCIENCE_EM_UNIT_12_DATA.subSections) ? SCIENCE_EM_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_12_DATA !== 'undefined') ? SCIENCE_EM_UNIT_12_DATA.formulas : []
           }
         ]
       },
@@ -5207,6 +5251,26 @@
             subSections: (typeof SOCIAL_UNIT_10_DATA !== 'undefined') ? SOCIAL_UNIT_10_DATA.subSections : [],
             questions: (typeof SOCIAL_UNIT_10_DATA !== 'undefined' && SOCIAL_UNIT_10_DATA.subSections) ? SOCIAL_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             geoHighlights: (typeof SOCIAL_UNIT_10_DATA !== 'undefined') ? SOCIAL_UNIT_10_DATA.geoHighlights : []
+          },
+          {
+            id: 'soc_c3',
+            unit: 'à®•à¯à®Ÿà®¿à®®à¯ˆà®¯à®¿à®¯à®²à¯ 3',
+            title: 'à®®à®¾à®¨à®¿à®² à®…à®°à®šà¯ (State Government)',
+            qCount: (typeof SOCIAL_UNIT_11_DATA !== 'undefined' && SOCIAL_UNIT_11_DATA.subSections) ? SOCIAL_UNIT_11_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_11_DATA !== 'undefined') ? SOCIAL_UNIT_11_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_11_DATA !== 'undefined' && SOCIAL_UNIT_11_DATA.subSections) ? SOCIAL_UNIT_11_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            civicsHighlights: (typeof SOCIAL_UNIT_11_DATA !== 'undefined') ? SOCIAL_UNIT_11_DATA.civicsHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_11_DATA !== 'undefined') ? SOCIAL_UNIT_11_DATA.timeline : []
+          },
+          {
+            id: 'soc_e3',
+            unit: 'à®ªà¯Šà®°à¯à®³à®¿à®¯à®²à¯ 3',
+            title: 'à®‰à®£à®µà¯ à®ªà®¾à®¤à¯à®•à®¾à®ªà¯à®ªà¯ à®®à®±à¯à®±à¯à®®à¯ à®Šà®Ÿà¯à®Ÿà®šà¯à®šà®¤à¯à®¤à¯ (Food Security and Nutrition)',
+            qCount: (typeof SOCIAL_UNIT_12_DATA !== 'undefined' && SOCIAL_UNIT_12_DATA.subSections) ? SOCIAL_UNIT_12_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_12_DATA !== 'undefined') ? SOCIAL_UNIT_12_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_12_DATA !== 'undefined' && SOCIAL_UNIT_12_DATA.subSections) ? SOCIAL_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            econHighlights: (typeof SOCIAL_UNIT_12_DATA !== 'undefined') ? SOCIAL_UNIT_12_DATA.econHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_12_DATA !== 'undefined') ? SOCIAL_UNIT_12_DATA.timeline : []
           }
         ]
       },
@@ -5306,6 +5370,26 @@
             subSections: (typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined') ? SOCIAL_EM_UNIT_10_DATA.subSections : [],
             questions: (typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined' && SOCIAL_EM_UNIT_10_DATA.subSections) ? SOCIAL_EM_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             geoHighlights: (typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined') ? SOCIAL_EM_UNIT_10_DATA.geoHighlights : []
+          },
+          {
+            id: 'soc_em_c3',
+            unit: 'Civics 3',
+            title: 'State Government',
+            qCount: (typeof SOCIAL_EM_UNIT_11_DATA !== 'undefined' && SOCIAL_EM_UNIT_11_DATA.subSections) ? SOCIAL_EM_UNIT_11_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_11_DATA !== 'undefined') ? SOCIAL_EM_UNIT_11_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_11_DATA !== 'undefined' && SOCIAL_EM_UNIT_11_DATA.subSections) ? SOCIAL_EM_UNIT_11_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            civicsHighlights: (typeof SOCIAL_EM_UNIT_11_DATA !== 'undefined') ? SOCIAL_EM_UNIT_11_DATA.civicsHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_11_DATA !== 'undefined') ? SOCIAL_EM_UNIT_11_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_e3',
+            unit: 'Economics 3',
+            title: 'Food Security and Nutrition',
+            qCount: (typeof SOCIAL_EM_UNIT_12_DATA !== 'undefined' && SOCIAL_EM_UNIT_12_DATA.subSections) ? SOCIAL_EM_UNIT_12_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_12_DATA !== 'undefined') ? SOCIAL_EM_UNIT_12_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_12_DATA !== 'undefined' && SOCIAL_EM_UNIT_12_DATA.subSections) ? SOCIAL_EM_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            econHighlights: (typeof SOCIAL_EM_UNIT_12_DATA !== 'undefined') ? SOCIAL_EM_UNIT_12_DATA.econHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_12_DATA !== 'undefined') ? SOCIAL_EM_UNIT_12_DATA.timeline : []
           }
         ]
       }
@@ -6489,6 +6573,50 @@
       lesson.subSections = SOCIAL_UNIT_10_DATA.subSections;
       lesson.questions = SOCIAL_UNIT_10_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
       lesson.geoHighlights = SOCIAL_UNIT_10_DATA.geoHighlights || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u11' && typeof SCIENCE_UNIT_11_DATA !== 'undefined' && SCIENCE_UNIT_11_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_11_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_11_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_11_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u11' && typeof SCIENCE_EM_UNIT_11_DATA !== 'undefined' && SCIENCE_EM_UNIT_11_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_11_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_11_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_11_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u12' && typeof SCIENCE_UNIT_12_DATA !== 'undefined' && SCIENCE_UNIT_12_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_12_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_12_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u12' && typeof SCIENCE_EM_UNIT_12_DATA !== 'undefined' && SCIENCE_EM_UNIT_12_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_12_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_12_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_c3' && typeof SOCIAL_UNIT_11_DATA !== 'undefined' && SOCIAL_UNIT_11_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_11_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_11_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.civicsHighlights = SOCIAL_UNIT_11_DATA.civicsHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_11_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_c3' && typeof SOCIAL_EM_UNIT_11_DATA !== 'undefined' && SOCIAL_EM_UNIT_11_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_11_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_11_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.civicsHighlights = SOCIAL_EM_UNIT_11_DATA.civicsHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_11_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_e3' && typeof SOCIAL_UNIT_12_DATA !== 'undefined' && SOCIAL_UNIT_12_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_12_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.econHighlights = SOCIAL_UNIT_12_DATA.econHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_12_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_e3' && typeof SOCIAL_EM_UNIT_12_DATA !== 'undefined' && SOCIAL_EM_UNIT_12_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_12_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.econHighlights = SOCIAL_EM_UNIT_12_DATA.econHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_12_DATA.timeline || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'soc_em_g3' && typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined' && SOCIAL_EM_UNIT_10_DATA.subSections) {
       lesson.subSections = SOCIAL_EM_UNIT_10_DATA.subSections;

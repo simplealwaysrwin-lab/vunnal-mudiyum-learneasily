@@ -614,6 +614,7 @@ const MATHS_EM_UNIT_4_DATA = {
 
         {
           id: "m_em_4_2_4",
+          videoUrl: "https://youtu.be/4zGDE_n8U1k",
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",
@@ -860,6 +861,7 @@ const MATHS_EM_UNIT_4_DATA = {
 
         {
           id: "m_em_4_2_6",
+          videoUrl: "https://youtu.be/Y4ss__Lhs50",
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",
@@ -992,6 +994,7 @@ const MATHS_EM_UNIT_4_DATA = {
 
         {
           id: "m_em_4_2_7",
+          videoUrl: "https://youtu.be/1P1iQmAbIAM",
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",
@@ -1140,6 +1143,7 @@ const MATHS_EM_UNIT_4_DATA = {
 
         {
           id: "m_em_4_2_8",
+          videoUrl: "https://youtu.be/QzgfbX1CaQI",
           type: "5m",
           mark: "5 Marks",
           examYear: "2023",
@@ -1261,6 +1265,7 @@ const MATHS_EM_UNIT_4_DATA = {
 
         {
           id: "m_em_4_1_6",
+          videoUrl: "https://youtu.be/NdkofuwBhOI",
           type: "5m",
           mark: "5 Marks",
           examYear: "2024",

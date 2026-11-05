@@ -1,4 +1,4 @@
-// 10th Standard Mathematics - Unit 6: Trigonometry (English Medium)
+﻿// 10th Standard Mathematics - Unit 6: Trigonometry (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_6_DATA = {
@@ -54,6 +54,7 @@ const MATHS_EM_UNIT_6_DATA = {
         },
         {
           id: "m_em_6_1_4",
+          videoUrl: "https://youtu.be/4KS-OUpKpy0",
           type: "5m",
           mark: "5 Marks",
           examTag: "Top Board Exam Identity",
@@ -107,6 +108,7 @@ const MATHS_EM_UNIT_6_DATA = {
         },
         {
           id: "m_em_6_2_2",
+          videoUrl: "https://youtu.be/Dm4jUvIkODc",
           type: "5m",
           mark: "5 Marks",
           examTag: "2024 Exam Special",

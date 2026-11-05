@@ -1,4 +1,4 @@
-// 10-ஆம் வகுப்பு கணிதம் - அலகு 6: முக்கோணவியல் (Trigonometry)
+﻿// 10-ஆம் வகுப்பு கணிதம் - அலகு 6: முக்கோணவியல் (Trigonometry)
 // தமிழ்நாடு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const MATHS_TM_UNIT_6_DATA = {
@@ -54,6 +54,7 @@ const MATHS_TM_UNIT_6_DATA = {
         },
         {
           id: "m_tm_6_1_4",
+          videoUrl: "https://youtu.be/4KS-OUpKpy0",
           type: "5m",
           mark: "5 மதிப்பெண்",
           examTag: "பொதுத்தேர்வு சிறப்பு",
@@ -107,6 +108,7 @@ const MATHS_TM_UNIT_6_DATA = {
         },
         {
           id: "m_tm_6_2_2",
+          videoUrl: "https://youtu.be/Dm4jUvIkODc",
           type: "5m",
           mark: "5 மதிப்பெண்",
           examTag: "2024 முக்கிய வினா",

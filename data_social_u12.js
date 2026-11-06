@@ -73,7 +73,8 @@ const SOCIAL_UNIT_12_DATA = {
           examTag: "வேறுபடுத்துக",
           q: "உலகளாவிய பொது விநியோக முறை மற்றும் இலக்கு அடிப்படையிலான பொது விநியோக முறை வேறுபடுத்துக.",
           ans: `<div style="line-height:1.7;">
-            <table style="width:100%; border-collapse:collapse; margin:8px 0;">
+            <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
+              <table style="width:100%; border-collapse:collapse; margin:8px 0;">
               <thead>
                 <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
                   <th style="padding:6px 8px;">அம்சம்</th>
@@ -93,7 +94,8 @@ const SOCIAL_UNIT_12_DATA = {
                   <td style="padding:6px 8px;">இந்தியாவின் பிற மாநிலங்களில் பின்பற்றப்படுகிறது.</td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
           </div>`,
           ansTamil: "உலகளாவிய முறையில் அனைவருக்கும் உணவு; இலக்கு முறையில் ஏழைகளுக்கு மட்டும் உணவு வழங்கப்படுகிறது."
         },

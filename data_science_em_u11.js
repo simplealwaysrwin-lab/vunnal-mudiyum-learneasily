@@ -55,6 +55,7 @@ const SCIENCE_EM_UNIT_11_DATA = {
             • The Carbon-Carbon (C-C) covalent bond is exceptionally strong and stable.<br>
             • Because of this high bond energy, carbon forms millions of versatile stable compounds.
           </div>`,
+          explanation: "Catenation is the unique ability of carbon atoms to form stable covalent bonds with one another, forming long open chains, branched chains, and closed rings, enabling millions of organic compounds.",
           ansTamil: "கார்பன் பிற கார்பன் அணுக்களுடன் இணைந்து நீண்ட சங்கிலிகளை உருவாக்கும் பண்பு சங்கிலித் தொடராக்கம் எனப்படும்."
         },
         {
@@ -70,6 +71,7 @@ const SCIENCE_EM_UNIT_11_DATA = {
             1. Successive members differ by a molecular mass of <b>14 amu</b>.<br>
             2. All members show similar chemical properties due to the same functional group.
           </div>`,
+          explanation: "Members of a homologous series share the same functional group and general formula, differ by a -CH₂- unit (14 amu), and exhibit similar chemical properties.",
           ansTamil: "ஒரே பொது வாய்ப்பாடும், அடுத்தடுத்த உறுப்பினர்களிடையே -CH₂- வேறுபாடும் கொண்ட சேர்மங்கள் படிவரிசை சேர்மங்கள் ஆகும்."
         },
         {
@@ -105,10 +107,33 @@ const SCIENCE_EM_UNIT_11_DATA = {
             </div>
           </div>`,
           detailedSolution: {
-            step1: "Combustion reaction (CO2 + H2O with blue flame)",
-            step2: "Reaction with active sodium metal to produce H2 gas",
-            step3: "Acid-catalyzed dehydration into Ethene at 443 K",
-            step4: "Esterification reaction producing sweet-smelling ethyl ethanoate"
+            title: "Step-by-Step Chemical Reactions & Working:",
+            sections: [
+              {
+                stepNum: 1,
+                badge: "Step 1",
+                title: "Combustion Reaction",
+                html: "Ethanol burns completely in air with a clean blue flame yielding carbon dioxide, water vapor, and heat energy:<br><div style='padding:6px 12px; background:#eff6ff; border-left:3px solid #2563eb; font-family:monospace; margin:4px 0; color:#1e40af; font-weight:700;'>C₂H₅OH + 3O₂ ➔ 2CO₂ + 3H₂O + Heat</div>"
+              },
+              {
+                stepNum: 2,
+                badge: "Step 2",
+                title: "Reaction with Active Sodium Metal",
+                html: "Ethanol reacts with sodium metal to produce sodium ethoxide liberating hydrogen gas with effervescence:<br><div style='padding:6px 12px; background:#eff6ff; border-left:3px solid #2563eb; font-family:monospace; margin:4px 0; color:#1e40af; font-weight:700;'>2C₂H₅OH + 2Na ➔ 2C₂H₅ONa + H₂↑</div>"
+              },
+              {
+                stepNum: 3,
+                badge: "Step 3",
+                title: "Acid-Catalyzed Dehydration Reaction",
+                html: "Heating ethanol with concentrated H₂SO₄ at 443 K (170°C) eliminates a water molecule to form ethene:<br><div style='padding:6px 12px; background:#eff6ff; border-left:3px solid #2563eb; font-family:monospace; margin:4px 0; color:#1e40af; font-weight:700;'>C₂H₅OH (conc. H₂SO₄ / 443 K) ➔ CH₂=CH₂ + H₂O</div>"
+              },
+              {
+                stepNum: 4,
+                badge: "Step 4",
+                title: "Esterification Reaction",
+                html: "Ethanol reacts with ethanoic acid in the presence of concentrated H₂SO₄ to produce sweet fruity-smelling ethyl ethanoate:<br><div style='padding:6px 12px; background:#eff6ff; border-left:3px solid #2563eb; font-family:monospace; margin:4px 0; color:#1e40af; font-weight:700;'>C₂H₅OH + CH₃COOH ➔ CH₃COOC₂H₅ (Ester) + H₂O</div>"
+              }
+            ]
           }
         },
         {
@@ -118,29 +143,49 @@ const SCIENCE_EM_UNIT_11_DATA = {
           examTag: "Govt Model",
           q: "State any two key differences between Soaps and Synthetic Detergents.",
           ans: `<div style="line-height:1.7;">
-            <table style="width:100%; border-collapse:collapse; margin:8px 0;">
-              <thead>
-                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
-                  <th style="padding:6px 8px;">Property</th>
-                  <th style="padding:6px 8px;">Soap</th>
-                  <th style="padding:6px 8px;">Detergent</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:6px 8px; font-weight:700;">Chemical Nature</td>
-                  <td style="padding:6px 8px;">Sodium salts of long-chain fatty acids.</td>
-                  <td style="padding:6px 8px;">Sodium salts of sulphonic acids or alkyl hydrogen sulphates.</td>
-                </tr>
-                <tr>
-                  <td style="padding:6px 8px; font-weight:700;">Action in Hard Water</td>
-                  <td style="padding:6px 8px;">Forms insoluble curdy precipitate (scum); ineffective.</td>
-                  <td style="padding:6px 8px;">Lathers freely and cleans effectively even in hard water.</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
+              <table style="width:100%; min-width:320px; border-collapse:collapse; margin:4px 0;">
+                <thead>
+                  <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
+                    <th style="padding:6px 8px; width:28%;">Property</th>
+                    <th style="padding:6px 8px; width:36%;">Soap</th>
+                    <th style="padding:6px 8px; width:36%;">Detergent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:6px 8px; font-weight:700;">Chemical Nature</td>
+                    <td style="padding:6px 8px;">Sodium salts of long-chain fatty acids.</td>
+                    <td style="padding:6px 8px;">Sodium salts of sulphonic acids or alkyl hydrogen sulphates.</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px 8px; font-weight:700;">Action in Hard Water</td>
+                    <td style="padding:6px 8px;">Forms insoluble curdy precipitate (scum); ineffective.</td>
+                    <td style="padding:6px 8px;">Lathers freely and cleans effectively even in hard water.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>`,
-          ansTamil: "சோப்பு கடின நீரில் நுரைக்காது; டிடர்ஜென்ட் கடின நீரிலும் நன்கு நுரைக்கும்."
+          explanation: "Soaps are sodium salts of fatty acids and precipitate as scum in hard water, whereas synthetic detergents are sodium salts of sulphonic acids and lather freely even in hard water.",
+          ansTamil: "சோப்பு கடின நீரில் நுரைக்காது; டிடர்ஜென்ட் கடின நீரிலும் நன்கு நுரைக்கும்.",
+          detailedSolution: {
+            title: "Step-by-Step Comparative Analysis (Soap vs Detergent):",
+            sections: [
+              {
+                stepNum: 1,
+                badge: "Point 1",
+                title: "Chemical Composition Difference",
+                html: "<b>Soap:</b> Sodium salts of long-chain organic fatty acids (e.g., sodium stearate, C₁₇H₃₅COONa).<br><b>Detergent:</b> Sodium salts of sulphonic acids or alkyl hydrogen sulphates (petroleum-derived synthetic compounds)."
+              },
+              {
+                stepNum: 2,
+                badge: "Point 2",
+                title: "Performance in Hard Water",
+                html: "<b>Soap:</b> Reacts with Ca²⁺ and Mg²⁺ ions present in hard water to form an insoluble curdy scum, wasting soap.<br><b>Detergent:</b> Calcium and magnesium salts of detergents are water-soluble, so detergents lather freely and clean effectively even in hard water."
+              }
+            ]
+          }
         },
         {
           id: "sci_em_11_7",
@@ -153,6 +198,7 @@ const SCIENCE_EM_UNIT_11_DATA = {
             • In cold climates and winter temperatures, it readily freezes to form solid ice-like transparent crystals.<br>
             • Hence, 100% pure ethanoic acid is commonly called <b>Glacial Acetic Acid</b>.
           </div>`,
+          explanation: "Pure ethanoic acid has a freezing point of 16.6°C (290 K) and solidifies into ice-like crystals in cold climates, giving it the name glacial acetic acid.",
           ansTamil: "தூய அசிட்டிக் அமிலம் 16.6°C-ல் உறைந்து பனிக்கட்டி படிகங்கள் ஆவதால் கிளேசியல் அசிட்டிக் அமிலம் எனப்படும்."
         },
         {
@@ -175,9 +221,27 @@ const SCIENCE_EM_UNIT_11_DATA = {
             • When the fabric is agitated and rinsed with water, the trapped oil droplet is lifted off the fabric surface and washed away, leaving the fabric clean.
           </div>`,
           detailedSolution: {
-            step1: "Dual structure: Hydrophobic non-polar tail and Hydrophilic polar ionic head",
-            step2: "Formation of radial spherical Micelle around oily dirt",
-            step3: "Ionic repulsion keeping dirt suspended in emulsion and rinsed away"
+            title: "Step-by-Step Cleansing Mechanism & Micelle Formation:",
+            sections: [
+              {
+                stepNum: 1,
+                badge: "Step 1",
+                title: "Dual Nature of Soap Molecule",
+                html: "A soap molecule has two parts: a non-polar hydrophobic hydrocarbon tail (water-repelling, oil-soluble) and a polar hydrophilic ionic head -COO⁻Na⁺ (water-attracting)."
+              },
+              {
+                stepNum: 2,
+                badge: "Step 2",
+                title: "Formation of Spherical Micelle",
+                html: "In water containing oily dirt, the hydrophobic tails cluster inward into the center of the oil droplet, while the polar heads project outward into water, creating a spherical cluster called a <b>Micelle</b>."
+              },
+              {
+                stepNum: 3,
+                badge: "Step 3",
+                title: "Emulsion & Rinsing Dirt Away",
+                html: "Negative charges on the outer ionic heads repel each other, keeping micelles suspended in water as a stable emulsion. Upon rinsing with water, the trapped oily dirt particles are easily washed away."
+              }
+            ]
           }
         }
       ]

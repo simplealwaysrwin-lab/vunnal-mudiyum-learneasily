@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -1672,6 +1672,49 @@
   }
   .chalk-content div {
     color: #f8fafc;
+  }
+  .chalk-content {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .chalk-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 8px 0;
+    display: block;
+  }
+  .chalk-content table {
+    width: 100% !important;
+    min-width: 280px;
+    border-collapse: collapse !important;
+    margin: 8px 0 !important;
+    font-size: 13.5px !important;
+  }
+  .chalk-content th,
+  .chalk-content td {
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    padding: 6px 10px !important;
+    text-align: left !important;
+    line-height: 1.5 !important;
+  }
+  .chalk-content th {
+    background: rgba(2, 132, 199, 0.35) !important;
+    color: #fde047 !important;
+    font-weight: 700 !important;
+  }
+  .chalk-content tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  @media (max-width: 640px) {
+    .chalk-content table {
+      font-size: 12px !important;
+      min-width: 260px;
+    }
+    .chalk-content th,
+    .chalk-content td {
+      padding: 5px 6px !important;
+    }
   }
   /* Chalkboard formula container and override for inline background styles (prevents white-on-white) */
   .chalk-content [style*="background"],
@@ -5475,7 +5518,12 @@
   // Clean corrupted UTF-8 / Windows-1252 math encoding artifacts (superscripts, multiplication, etc.)
   function cleanMathEncoding(str) {
     if (!str || typeof str !== 'string') return str || '';
-    return str
+    let s = str;
+    // Auto-wrap tables for mobile responsiveness if not already wrapped
+    if (s.includes('<table') && !s.includes('chalk-table-responsive')) {
+      s = s.replace(/<table[\s\S]*?<\/table>/gi, '<div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">$&</div>');
+    }
+    return s
       .replace(/sâ[\x80-\xFF»]+Â²/gi, 's⁻²')
       .replace(/sâ[\x80-\xFF»]+Â¹/gi, 's⁻¹')
       .replace(/kgâ[\x80-\xFF»]+Â¹/gi, 'kg⁻¹')
@@ -5508,6 +5556,56 @@
       .replace(/I\?4/g, 'λ⁴');
   }
   window.cleanMathEncoding = cleanMathEncoding;
+
+  function getDetailedSolutionSections(ds, isEm) {
+    if (!ds) return [];
+    if (Array.isArray(ds.sections) && ds.sections.length > 0) {
+      return ds.sections;
+    }
+    if (Array.isArray(ds.steps) && ds.steps.length > 0) {
+      return ds.steps.map((st, idx) => ({
+        badge: isEm ? `Step ${idx + 1}` : `\u0BAA\u0B9F\u0BBF ${idx + 1}`,
+        stepNum: idx + 1,
+        title: isEm ? `Step ${idx + 1}` : `\u0BAA\u0B9F\u0BBF ${idx + 1}`,
+        html: cleanMathEncoding(st)
+      }));
+    }
+    const stepKeys = Object.keys(ds).filter(k => /^step\d+$/i.test(k));
+    if (stepKeys.length > 0) {
+      stepKeys.sort((a, b) => {
+        const numA = parseInt(a.replace(/\D/g, ''), 10) || 0;
+        const numB = parseInt(b.replace(/\D/g, ''), 10) || 0;
+        return numA - numB;
+      });
+      return stepKeys.map(k => {
+        const num = parseInt(k.replace(/\D/g, ''), 10) || 1;
+        const val = ds[k];
+        let title = isEm ? `Step ${num}` : `\u0BAA\u0B9F\u0BBF ${num}`;
+        let content = val;
+        const colonIdx = val.indexOf(':');
+        if (colonIdx > 0 && colonIdx < 40) {
+          title = val.substring(0, colonIdx).replace(/<[^>]+>/g, '').trim();
+          content = val.substring(colonIdx + 1).trim();
+        }
+        return {
+          badge: isEm ? `Step ${num}` : `\u0BAA\u0B9F\u0BBF ${num}`,
+          stepNum: num,
+          title: title,
+          html: cleanMathEncoding(content || val)
+        };
+      });
+    }
+    if (typeof ds === 'string') {
+      return [{
+        badge: isEm ? 'Detailed Solution' : '\u0BB5\u0BBF\u0BB0\u0BBF\u0BB5\u0BBE\u0BA9 \u0BA4\u0BC0\u0BB0\u0BCD\u0BB5\u0BC1',
+        stepNum: 1,
+        title: isEm ? 'Step-by-Step Solution & Working' : '\u0BAA\u0B9F\u0BBF\u0BA8\u0BBF\u0BB2\u0BC8 \u0BB5\u0BBE\u0BB0\u0BBF\u0BAF\u0BBE\u0BA9 \u0BA4\u0BC0\u0BB0\u0BCD\u0BB5\u0BC1 & \u0B9A\u0BC6\u0BAF\u0BCD\u0BAE\u0BC1\u0BB1\u0BC8',
+        html: cleanMathEncoding(ds)
+      }];
+    }
+    return [];
+  }
+  window.getDetailedSolutionSections = getDetailedSolutionSections;
 
   function dismissPwaBanner(e) {
     if (e) e.stopPropagation();
@@ -7622,7 +7720,7 @@
                       </div>
                       <div id="solBody_${item.id}" style="display:${is5MView ? 'block' : 'none'}; padding:14px; background:#ffffff;">
                         <div class="detailed-sol-steps">
-                          ${(item.detailedSolution.sections || []).map(sec => `
+                          ${getDetailedSolutionSections(item.detailedSolution, isEm || isEnglish).map(sec => `
                             <div class="sol-step-item">
                               <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                                 <span style="background:#244d38; color:#f5a623; font-weight:800; font-size:11.5px; padding:2px 8px; border-radius:6px; border:1px solid #36674f;">${sec.badge || `படி ${sec.stepNum}`}</span>
@@ -7680,10 +7778,10 @@
                         <div class="chalk-content">
                           ${cleanMathEncoding(item.ans)}
                         </div>
-                        ${(item.ansTamil || item.explanation) ? `
+                        ${((isEm || isEnglish) ? item.explanation : (item.ansTamil || item.explanation)) ? `
                           <div class="chalk-concept-wrap">
                             <div class="chalk-concept-badge">\uD83D\uDCA1 ${isEm || isEnglish ? 'Key Concept:' : '\u0BAE\u0BC1\u0B95\u0BCD\u0B95\u0BBF\u0BAF\u0B95\u0BCD \u0B95\u0BB0\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1 (Key Concept):'}</div>
-                            <div class="chalk-concept-text">${isEm || isEnglish ? (item.explanation || item.ansTamil) : (item.ansTamil || item.explanation)}</div>
+                            <div class="chalk-concept-text">${(isEm || isEnglish) ? item.explanation : (item.ansTamil || item.explanation)}</div>
                           </div>
                         ` : ''}
                       </div>
@@ -7719,7 +7817,7 @@
                       </div>
                       <div id="solBody_${item.id}" style="display:${is5MView ? 'block' : 'none'}; padding:14px; background:#ffffff;">
                         <div class="detailed-sol-steps">
-                          ${(item.detailedSolution.sections || []).map(sec => `
+                          ${getDetailedSolutionSections(item.detailedSolution, isEm || isEnglish).map(sec => `
                             <div class="sol-step-item">
                               <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                                 <span style="background:#244d38; color:#f5a623; font-weight:800; font-size:11.5px; padding:2px 8px; border-radius:6px; border:1px solid #36674f;">${sec.badge || `படி ${sec.stepNum}`}</span>
@@ -9208,6 +9306,65 @@ ${directLink}
   // Teacher Audio Player Controller (Native In-Browser Voice Engine)
   // Zero external bandwidth, works offline, 0% performance penalty
   // -------------------------------------------------------------
+  function formatTableForSpeech(html, isEm) {
+    if (!html || !html.includes('<table')) return html;
+    return html.replace(/<table[\s\S]*?<\/table>/gi, function(tableHtml) {
+      const rowMatches = tableHtml.match(/<tr[\s\S]*?<\/tr>/gi);
+      if (!rowMatches || rowMatches.length < 2) return tableHtml;
+
+      const firstRow = rowMatches[0];
+      const headerMatches = firstRow.match(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/gi) || [];
+      const headers = headerMatches.map(h => h.replace(/<[^>]+>/g, '').trim());
+
+      let headerA = '';
+      let headerB = '';
+      let hasTopicCol = false;
+
+      if (headers.length >= 3) {
+        hasTopicCol = true;
+        headerA = headers[1] || (isEm ? 'Item A' : '\u0BAA\u0BBF\u0BB0\u0BBF\u0BB5\u0BC1 1');
+        headerB = headers[2] || (isEm ? 'Item B' : '\u0BAA\u0BBF\u0BB0\u0BBF\u0BB5\u0BC1 2');
+      } else if (headers.length === 2) {
+        headerA = headers[0] || (isEm ? 'Item A' : '\u0BAA\u0BBF\u0BB0\u0BBF\u0BB5\u0BC1 1');
+        headerB = headers[1] || (isEm ? 'Item B' : '\u0BAA\u0BBF\u0BB0\u0BBF\u0BB5\u0BC1 2');
+      } else {
+        return tableHtml;
+      }
+
+      headerA = headerA.replace(/\s*\([^)]*\)/g, '').trim();
+      headerB = headerB.replace(/\s*\([^)]*\)/g, '').trim();
+
+      const spokenRows = [];
+      for (let r = 1; r < rowMatches.length; r++) {
+        const row = rowMatches[r];
+        const cellMatches = row.match(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/gi) || [];
+        const cells = cellMatches.map(c => c.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim());
+        if (cells.length === 0) continue;
+
+        if (hasTopicCol && cells.length >= 3) {
+          const topic = cells[0].replace(/^\d+[\.\)]\s*/, '').trim();
+          const valA = cells[1].trim();
+          const valB = cells[2].trim();
+          if (topic) {
+            spokenRows.push(`${headerA}, ${topic}: ${valA}. ${headerB}, ${topic}: ${valB}.`);
+          } else {
+            spokenRows.push(`${headerA}: ${valA}. ${headerB}: ${valB}.`);
+          }
+        } else if (cells.length >= 2) {
+          const valA = (hasTopicCol && cells.length >= 3 ? cells[1] : cells[0]).trim();
+          const valB = (hasTopicCol && cells.length >= 3 ? cells[2] : cells[1]).trim();
+          spokenRows.push(`${headerA}: ${valA}. ${headerB}: ${valB}.`);
+        }
+      }
+
+      if (spokenRows.length > 0) {
+        return ' ' + spokenRows.join(' ') + ' ';
+      }
+      return tableHtml;
+    });
+  }
+  window.formatTableForSpeech = formatTableForSpeech;
+
   const teacherAudioPlayer = {
     currentId: null,
     isPlaying: false,
@@ -9259,6 +9416,8 @@ ${directLink}
 
     formatMathForSpeech: function(rawHtml, lang) {
       if (!rawHtml) return '';
+      const isEnglish = (lang && lang.startsWith('en')) || (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+      rawHtml = formatTableForSpeech(rawHtml, isEnglish);
       let text = rawHtml.replace(/<svg[\s\S]*?<\/svg>/gi, ' ');
       text = text.replace(/<\/td>\s*<td[^>]*>/gi, ', ');
       text = text.replace(/<\/th>\s*<th[^>]*>/gi, ', ');
@@ -10883,6 +11042,104 @@ ${directLink}
 
       let rawSteps = [];
 
+      // Strategy 0: Comparative Table Parsing (Differentiate Questions)
+      if (rawAns.includes('<table')) {
+        const tableMatches = rawAns.match(/<table[\s\S]*?<\/table>/gi);
+        if (tableMatches && tableMatches.length > 0) {
+          const tableHtml = tableMatches[0];
+          const rowMatches = tableHtml.match(/<tr[\s\S]*?<\/tr>/gi);
+          if (rowMatches && rowMatches.length >= 2) {
+            const firstRow = rowMatches[0];
+            const headerMatches = firstRow.match(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/gi) || [];
+            const headers = headerMatches.map(h => cleanText(h));
+            let headerA = '';
+            let headerB = '';
+            let hasTopicCol = false;
+
+            if (headers.length >= 3) {
+              hasTopicCol = true;
+              headerA = headers[1] || (isEm ? 'Item A' : '\u0BAA\u0BBF\u0BB0\u0BBF\u0BB5\u0BC1 A');
+              headerB = headers[2] || (isEm ? 'Item B' : '\u0BAA\u0BBF\u0BB0\u0BBF\u0BB5\u0BC1 B');
+            } else if (headers.length === 2) {
+              headerA = headers[0] || (isEm ? 'Item A' : '\u0BAA\u0BBF\u0BB0\u0BBF\u0BB5\u0BC1 A');
+              headerB = headers[1] || (isEm ? 'Item B' : '\u0BAA\u0BBF\u0BB0\u0BBF\u0BB5\u0BC1 B');
+            }
+
+            if (headerA && headerB) {
+              headerA = headerA.replace(/\s*\([^)]*\)/g, '').trim();
+              headerB = headerB.replace(/\s*\([^)]*\)/g, '').trim();
+              const tableSteps = [];
+              for (let r = 1; r < rowMatches.length; r++) {
+                const row = rowMatches[r];
+                const cellMatches = row.match(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/gi) || [];
+                const cells = cellMatches.map(c => c.replace(/<\/?t[hd][^>]*>/gi, '').trim());
+                if (cells.length === 0) continue;
+
+                let topic = '';
+                let valA = '';
+                let valB = '';
+
+                if (hasTopicCol && cells.length >= 3) {
+                  topic = cleanText(cells[0]).replace(/^\d+[\.\)]\s*/, '').trim();
+                  valA = cells[1].trim();
+                  valB = cells[2].trim();
+                } else if (cells.length >= 2) {
+                  valA = (hasTopicCol && cells.length >= 3 ? cells[1] : cells[0]).trim();
+                  valB = (hasTopicCol && cells.length >= 3 ? cells[2] : cells[1]).trim();
+                }
+
+                if (!valA && !valB) continue;
+
+                const stepNum = tableSteps.length + 1;
+                const badge = topic
+                  ? (isEm ? `\uD83D\uDCCC Point ${stepNum}: ${topic}` : `\uD83D\uDCCC \u0B95\u0BC1\u0BB1\u0BBF\u0BAA\u0BCD\u0BAA\u0BC1 ${stepNum}: ${topic}`)
+                  : (isEm ? `\uD83D\uDCCC Point ${stepNum}` : `\uD83D\uDCCC \u0B95\u0BC1\u0BB1\u0BBF\u0BAA\u0BCD\u0BAA\u0BC1 ${stepNum}`);
+
+                const cleanA = cleanText(valA);
+                const cleanB = cleanText(valB);
+
+                const spoken = topic
+                  ? `${headerA}, ${topic}: ${phoneticMath(cleanA)}. ${headerB}, ${topic}: ${phoneticMath(cleanB)}.`
+                  : `${headerA}: ${phoneticMath(cleanA)}. ${headerB}: ${phoneticMath(cleanB)}.`;
+
+                const chalkHtml = `
+                  <div class="bb-compare-card" style="margin-top:6px;">
+                    ${topic ? `<div class="bb-compare-title" style="color:#fde047; font-weight:800; font-size:14.5px; margin-bottom:8px;">\uD83D\uDCCC ${topic}</div>` : ''}
+                    <div class="bb-compare-row bb-row-west" style="margin-bottom:8px;">
+                      <span class="bb-compare-badge-west" style="background:#0284c7; color:#f0f9ff; font-size:12px; font-weight:800; padding:3px 8px; border-radius:4px;">${headerA}</span>
+                      <div class="bb-compare-text" style="color:#ffffff; font-size:14px; line-height:1.6;">${valA}</div>
+                    </div>
+                    <div class="bb-compare-row bb-row-east">
+                      <span class="bb-compare-badge-east" style="background:#16a34a; color:#f0fdf4; font-size:12px; font-weight:800; padding:3px 8px; border-radius:4px;">${headerB}</span>
+                      <div class="bb-compare-text" style="color:#ffffff; font-size:14px; line-height:1.6;">${valB}</div>
+                    </div>
+                  </div>
+                `;
+
+                tableSteps.push({
+                  stepNum: stepNum,
+                  badge: badge,
+                  badgeEn: badge,
+                  chalkHtml: chalkHtml,
+                  chalkHtmlEn: chalkHtml,
+                  audioScriptTa: spoken,
+                  audioScriptEn: spoken
+                });
+              }
+
+              if (tableSteps.length >= 2) {
+                const qSummary = cleanText(item.q).substring(0, 45);
+                return {
+                  title: isEm ? `Blackboard: ${qSummary}...` : `\u0B95\u0BB0\u0BC1\u0BAE\u0BCD\u0BAA\u0BB2\u0B95\u0BC8 \u0BB5\u0BBF\u0BB3\u0B95\u0BCD\u0B95\u0BAE\u0BCD: ${qSummary}...`,
+                  engTitle: `Blackboard: ${qSummary}...`,
+                  steps: tableSteps
+                };
+              }
+            }
+          }
+        }
+      }
+
       // Strategy 1: <p> tags
       if (rawAns.includes('<p>')) {
         const pMatches = rawAns.match(/<p>([\s\S]*?)<\/p>/gi);
@@ -11025,6 +11282,28 @@ ${directLink}
       }
     },
 
+    boardZoomLevel: 1.0,
+    zoomBoard: function(delta) {
+      if (delta === 0) {
+        this.boardZoomLevel = 1.0;
+      } else {
+        this.boardZoomLevel = Math.max(0.7, Math.min(2.5, Math.round((this.boardZoomLevel + delta) * 100) / 100));
+      }
+      const boardContent = document.querySelector('#bbFullBoardView .chalk-content') || document.getElementById('bbFullBoardView');
+      const resetBtn = document.getElementById('bbZoomResetBtn');
+      if (boardContent) {
+        boardContent.style.fontSize = Math.round(16 * this.boardZoomLevel) + 'px';
+        boardContent.style.lineHeight = '1.8';
+        const tables = boardContent.querySelectorAll('table');
+        tables.forEach(t => {
+          t.style.fontSize = Math.round(13.5 * this.boardZoomLevel) + 'px';
+        });
+      }
+      if (resetBtn) {
+        resetBtn.textContent = Math.round(this.boardZoomLevel * 100) + '%';
+      }
+    },
+
     switchView: function(viewMode, keepSilent) {
       this.currentView = viewMode;
       const tabSteps = document.getElementById('bbTabSteps');
@@ -11067,6 +11346,14 @@ ${directLink}
           } else if (this.currentQ && this.currentQ.blackboard && this.currentQ.blackboard.steps) {
             const isMath = currentSubject && currentSubject.id.startsWith('maths');
             let fullHtml = `
+              <div style="margin-bottom:14px; display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap;">
+                <div class="bb-zoom-toolbar" style="display:inline-flex; align-items:center; gap:6px; background:rgba(0,0,0,0.3); padding:4px 10px; border-radius:14px; border:1px solid rgba(255,255,255,0.1);">
+                  <span style="font-size:11.5px; color:#cbd5e1; font-weight:700;">\uD83D\uDD0D ${isEm ? 'Zoom:' : '\u0B85\u0BB3\u0BB5\u0BC1:'}</span>
+                  <button type="button" class="zoom-btn" onclick="blackboardPlayer.zoomBoard(0.15)" style="padding:2px 8px; font-size:11.5px; font-weight:800; background:rgba(255,255,255,0.15); color:#fff; border:1px solid rgba(255,255,255,0.25); border-radius:6px; cursor:pointer;" title="Zoom In">+</button>
+                  <button type="button" class="zoom-btn" onclick="blackboardPlayer.zoomBoard(-0.15)" style="padding:2px 8px; font-size:11.5px; font-weight:800; background:rgba(255,255,255,0.15); color:#fff; border:1px solid rgba(255,255,255,0.25); border-radius:6px; cursor:pointer;" title="Zoom Out">-</button>
+                  <button type="button" class="zoom-btn" id="bbZoomResetBtn" onclick="blackboardPlayer.zoomBoard(0)" style="padding:2px 8px; font-size:11.5px; font-weight:800; background:rgba(255,255,255,0.15); color:#fde047; border:1px solid rgba(255,255,255,0.25); border-radius:6px; cursor:pointer;" title="Reset Zoom">100%</button>
+                </div>
+              </div>
               <div style="margin-bottom:14px; text-align:center;">
                 <span style="font-size:12.5px; font-weight:700; color:#38bdf8; background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.35); padding:6px 14px; border-radius:14px;">
                   📖 ${isEm ? 'Complete Step-by-Step Blackboard (All Steps at Once)' : (isMath ? 'முழுமையான கரும்பலகைப் பாடம் - அனைத்துப் படிகளும் ஒரே பார்வையில்' : 'முழுமையான கரும்பலகைப் பாடம் - அனைத்துக் குறிப்புகளும் ஒரே பார்வையில்')}
@@ -11088,11 +11375,17 @@ ${directLink}
             fullBoardView.innerHTML = fullHtml;
           } else {
             const ansHtml = cleanMathEncoding(this.currentQ.ans || '');
-            const keyConcept = isEm ? (this.currentQ.explanation || this.currentQ.ansTamil) : (this.currentQ.ansTamil || this.currentQ.explanation);
+            const keyConcept = isEm ? (this.currentQ.explanation || '') : (this.currentQ.ansTamil || this.currentQ.explanation || '');
             fullBoardView.innerHTML = `
               <div style="text-align:left; padding:8px 12px;">
-                <div class="chalkboard-top-bar" style="margin-bottom:14px;">
+                <div class="chalkboard-top-bar" style="margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
                   <span class="chalk-badge-pill">\u2605 ${this.currentQ.mark || (isEm ? '2 Marks' : '2 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC6\u0BA3\u0BCD')}</span>
+                  <div class="bb-zoom-toolbar" style="display:inline-flex; align-items:center; gap:6px; background:rgba(0,0,0,0.3); padding:4px 10px; border-radius:14px; border:1px solid rgba(255,255,255,0.1);">
+                    <span style="font-size:11.5px; color:#cbd5e1; font-weight:700;">\uD83D\uDD0D ${isEm ? 'Zoom:' : '\u0B85\u0BB3\u0BB5\u0BC1:'}</span>
+                    <button type="button" class="zoom-btn" onclick="blackboardPlayer.zoomBoard(0.15)" style="padding:2px 8px; font-size:11.5px; font-weight:800; background:rgba(255,255,255,0.15); color:#fff; border:1px solid rgba(255,255,255,0.25); border-radius:6px; cursor:pointer;" title="Zoom In">+</button>
+                    <button type="button" class="zoom-btn" onclick="blackboardPlayer.zoomBoard(-0.15)" style="padding:2px 8px; font-size:11.5px; font-weight:800; background:rgba(255,255,255,0.15); color:#fff; border:1px solid rgba(255,255,255,0.25); border-radius:6px; cursor:pointer;" title="Zoom Out">-</button>
+                    <button type="button" class="zoom-btn" id="bbZoomResetBtn" onclick="blackboardPlayer.zoomBoard(0)" style="padding:2px 8px; font-size:11.5px; font-weight:800; background:rgba(255,255,255,0.15); color:#fde047; border:1px solid rgba(255,255,255,0.25); border-radius:6px; cursor:pointer;" title="Reset Zoom">100%</button>
+                  </div>
                   <span style="color:#94a3b8; font-size:12px;">\uD83C\uDFA8 ${isEm ? 'Full Classroom Chalkboard' : '\u0BAE\u0BC1\u0BB4\u0BC1 \u0BB5\u0B95\u0BC1\u0BAA\u0BCD\u0BAA\u0BB1\u0BC8\u0B95\u0BCD \u0B95\u0BB0\u0BC1\u0BAE\u0BCD\u0BAA\u0BB2\u0B95\u0BC8'}</span>
                 </div>
                 <div class="chalk-content" style="font-size:16.5px; line-height:2;">
@@ -11624,7 +11917,8 @@ ${directLink}
     const body = document.getElementById('solBody_' + qId);
     const arrow = document.getElementById('solArrow_' + qId);
     if (!body) return;
-    const isHidden = (body.style.display === 'none' || !body.style.display);
+    const computedDisplay = window.getComputedStyle(body).display;
+    const isHidden = (computedDisplay === 'none' || body.style.display === 'none');
     body.style.display = isHidden ? 'block' : 'none';
     if (arrow) arrow.textContent = isHidden ? '▲' : '▼';
   };
@@ -14007,6 +14301,9 @@ ${this.studentName || 'மாணவர்'}`;
 CRITICAL RULES:
 1. STRICT LANGUAGE MATCHING:
    - If the student's question, prompt, or context is in ENGLISH (or for English Medium / EM), respond 100% in clear, simple, fluent ENGLISH. Do NOT mix Tamil into English Medium explanations!
+   - For English Medium (EM):
+     * Strictly use English numbers (1, 2, 3...) and English words. NEVER use Tamil numbers, Tamil numerals, or Tamil number words.
+     * Express numeric ranges strictly in English: use "from ... to ..." (e.g. "from 5% to 8%") or hyphens ("5% - 8%"). NEVER write or say ranges in Tamil in English Medium.
    - If the question or prompt is in TAMIL (or for Tamil Medium / TM), respond warmly in friendly, simple Tamil.
 2. 100% ACCURATE NUMBERS & MATH:
    - Use the EXACT numbers, sets, and variables from the question and official answer. NEVER alter, hallucinate, or miscopy any number or sign. If a set is A = {2, -2, 3}, use strictly 2, -2, 3.
@@ -14831,7 +15128,7 @@ Important:
     const tamilChars = (text.match(/[\u0B80-\u0BFF]/g) || []).length;
     const englishWords = (text.match(/[a-zA-Z]{2,}/g) || []).length;
     const isSubjectEnglish = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
-    const isEnglish = (englishWords > 10 && tamilChars < 12) || (isSubjectEnglish && tamilChars < 15);
+    const isEnglish = isSubjectEnglish || (englishWords > 10 && tamilChars < 12);
     const lang = isEnglish ? 'en-IN' : 'ta-IN';
 
     // 11. Language-specific spoken substitutions
@@ -14882,7 +15179,16 @@ Important:
                  .replace(/\bn\s*\(\s*([A-Za-z])\s*\)/g, ' n of $1 ')
                  .replace(/\b([A-Za-z])\s*[×*]\s*([A-Za-z])\b/g, ' $1 cross $2 ');
 
-      text = text.replace(/[\u0B80-\u0BFF]+/g, ''); // strip stray Tamil in English answers
+      // Convert any Tamil range patterns to English
+      text = text.replace(/(\d+)\s*(?:\u0BAE\u0BC1\u0BA4\u0BB2\u0BCD|\u0B87\u0BB0\u0BC1\u0BA8\u0BCD\u0BA4\u0BC1)\s*(\d+)\s*\u0BB5\u0BB0\u0BC8/g, 'from $1 to $2');
+      text = text.replace(/\u0BAE\u0BC1\u0BA4\u0BB2\u0BCD\s+([^\u0BB5\u0BB0\u0BC8\n]+)\s+\u0BB5\u0BB0\u0BC8/g, 'from $1 to ');
+      // Convert any Tamil numerals to Arabic digits (0-9)
+      text = text.replace(/\u0BE6/g, '0').replace(/\u0BE7/g, '1').replace(/\u0BE8/g, '2').replace(/\u0BE9/g, '3').replace(/\u0BEA/g, '4')
+                 .replace(/\u0BEB/g, '5').replace(/\u0BEC/g, '6').replace(/\u0BED/g, '7').replace(/\u0BEE/g, '8').replace(/\u0BEF/g, '9');
+      // Convert stray Tamil number words in English answers
+      text = text.replace(/\b\u0B92\u0BA9\u0BCD\u0BB1\u0BC1\b/g, '1').replace(/\b\u0B87\u0BB0\u0BA3\u0BCD\u0B9F\u0BC1\b/g, '2').replace(/\b\u0BAE\u0BC2\u0BA9\u0BCD\u0BB1\u0BC1\b/g, '3')
+                 .replace(/\b\u0BA8\u0BBE\u0BA9\u0BCD\u0B95\u0BC1\b/g, '4').replace(/\b\u0B90\u0BA8\u0BCD\u0BA4\u0BC1\b/g, '5');
+      text = text.replace(/[\u0B80-\u0BFF]+/g, ' '); // strip stray Tamil in English answers
       text = text.replace(/\be\.g\.?/gi, 'for example');
       text = text.replace(/\bi\.e\.?/gi, 'that is');
       text = text.replace(/\betc\.?/gi, 'etcetera');

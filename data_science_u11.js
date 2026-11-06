@@ -118,27 +118,29 @@ const SCIENCE_UNIT_11_DATA = {
           examTag: "அரசு மாதிரி",
           q: "சோப்புகள் மற்றும் டிடர்ஜென்ட்கள் (சவர்க்காரங்கள்) ஆகியவற்றிற்கு இடையேயான ஏதேனும் இரண்டு வேறுபாடுகளை எழுதுக.",
           ans: `<div style="line-height:1.7;">
-            <table style="width:100%; border-collapse:collapse; margin:8px 0;">
-              <thead>
-                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
-                  <th style="padding:6px 8px;">பண்பு</th>
-                  <th style="padding:6px 8px;">சோப்பு</th>
-                  <th style="padding:6px 8px;">டிடர்ஜென்ட்</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:6px 8px; font-weight:700;">வேதி அமைப்பு</td>
-                  <td style="padding:6px 8px;">நீண்ட சங்கிலி கொழுப்பு அமிலங்களின் சோடியம் உப்பு.</td>
-                  <td style="padding:6px 8px;">சல்பானிக் அமிலங்களின் சோடியம் உப்பு.</td>
-                </tr>
-                <tr>
-                  <td style="padding:6px 8px; font-weight:700;">கடின நீரில் செயல்பாடு</td>
-                  <td style="padding:6px 8px;">கடின நீரில் நுரையைத் தராது; அழுக்கை நீக்காது.</td>
-                  <td style="padding:6px 8px;">கடின நீரிலும் நன்கு செயல்பட்டு நுரை தரும்.</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
+              <table style="width:100%; min-width:320px; border-collapse:collapse; margin:4px 0;">
+                <thead>
+                  <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
+                    <th style="padding:6px 8px; width:28%;">பண்பு</th>
+                    <th style="padding:6px 8px; width:36%;">சோப்பு</th>
+                    <th style="padding:6px 8px; width:36%;">டிடர்ஜென்ட்</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:6px 8px; font-weight:700;">வேதி அமைப்பு</td>
+                    <td style="padding:6px 8px;">நீண்ட சங்கிலி கொழுப்பு அமிலங்களின் சோடியம் உப்பு.</td>
+                    <td style="padding:6px 8px;">சல்பானிக் அமிலங்களின் சோடியம் உப்பு.</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px 8px; font-weight:700;">கடின நீரில் செயல்பாடு</td>
+                    <td style="padding:6px 8px;">கடின நீரில் நுரையைத் தராது; அழுக்கை நீக்காது.</td>
+                    <td style="padding:6px 8px;">கடின நீரிலும் நன்கு செயல்பட்டு நுரை தரும்.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>`,
           ansTamil: "சோப்பு கடின நீரில் நுரைக்காது; டிடர்ஜென்ட் கடின நீரிலும் நன்கு நுரைக்கும்."
         },

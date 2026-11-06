@@ -64,32 +64,34 @@ const SCIENCE_UNIT_12_DATA = {
           examTag: "அரசு பொதுத்தேர்வு",
           q: "இருவிதையிலை தாவர வேருக்கும் ஒருவிதையிலை தாவர வேருக்கும் உள்ள ஏதேனும் இரண்டு முக்கிய வேறுபாடுகளைத் தருக.",
           ans: `<div style="line-height:1.7;">
-            <table style="width:100%; border-collapse:collapse; margin:8px 0;">
-              <thead>
-                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
-                  <th style="padding:6px 8px;">பண்பு</th>
-                  <th style="padding:6px 8px;">இருவிதையிலை வேர் (அவரை)</th>
-                  <th style="padding:6px 8px;">ஒருவிதையிலை வேர் (மக்காச்சோளம்)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:6px 8px; font-weight:700;">சைலக் கற்றைகள்</td>
-                  <td style="padding:6px 8px;">நான்குக் கற்றை சைலம் (டெட்ரார்க்).</td>
-                  <td style="padding:6px 8px;">பல கற்றை சைலம் (பாலியார்க்).</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:6px 8px; font-weight:700;">கேம்பியம்</td>
-                  <td style="padding:6px 8px;">உள்ளது (இரண்டாம் நிலை வளர்ச்சி உண்டு).</td>
-                  <td style="padding:6px 8px;">இல்லை (இரண்டாம் நிலை வளர்ச்சி இல்லை).</td>
-                </tr>
-                <tr>
-                  <td style="padding:6px 8px; font-weight:700;">பித் (மையப்பகுதி)</td>
-                  <td style="padding:6px 8px;">பொதுவாக இல்லை அல்லது மிகச் சிறியது.</td>
-                  <td style="padding:6px 8px;">நன்கு வளர்ச்சியடைந்துள்ளது.</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
+              <table style="width:100%; min-width:340px; border-collapse:collapse; margin:4px 0;">
+                <thead>
+                  <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
+                    <th style="padding:6px 8px; width:28%;">பண்பு</th>
+                    <th style="padding:6px 8px; width:36%;">இருவிதையிலை வேர் (அவரை)</th>
+                    <th style="padding:6px 8px; width:36%;">ஒருவிதையிலை வேர் (மக்காச்சோளம்)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:6px 8px; font-weight:700;">சைலக் கற்றைகள்</td>
+                    <td style="padding:6px 8px;">நான்குக் கற்றை சைலம் (டெட்ரார்க்).</td>
+                    <td style="padding:6px 8px;">பல கற்றை சைலம் (பாலியார்க்).</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:6px 8px; font-weight:700;">கேம்பியம்</td>
+                    <td style="padding:6px 8px;">உள்ளது (இரண்டாம் நிலை வளர்ச்சி உண்டு).</td>
+                    <td style="padding:6px 8px;">இல்லை (இரண்டாம் நிலை வளர்ச்சி இல்லை).</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px 8px; font-weight:700;">பித் (மையப்பகுதி)</td>
+                    <td style="padding:6px 8px;">பொதுவாக இல்லை அல்லது மிகச் சிறியது.</td>
+                    <td style="padding:6px 8px;">நன்கு வளர்ச்சியடைந்துள்ளது.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>`,
           ansTamil: "இருவிதையிலை வேரில் 4 கற்றை சைலம், கேம்பியம் உண்டு; ஒருவிதையிலை வேரில் பல கற்றை சைலம், பித் உண்டு."
         },
@@ -143,32 +145,34 @@ const SCIENCE_UNIT_12_DATA = {
           examTag: "அரசு பொதுத்தேர்வு",
           q: "காற்று சுவாசம் (Aerobic) மற்றும் காற்றில்லா சுவாசம் (Anaerobic) வேறுபடுத்துக.",
           ans: `<div style="line-height:1.7;">
-            <table style="width:100%; border-collapse:collapse; margin:8px 0;">
-              <thead>
-                <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
-                  <th style="padding:6px 8px;">பண்பு</th>
-                  <th style="padding:6px 8px;">காற்று சுவாசம்</th>
-                  <th style="padding:6px 8px;">காற்றில்லா சுவாசம்</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:6px 8px; font-weight:700;">ஆக்ஸிஜன் தேவை</td>
-                  <td style="padding:6px 8px;">ஆக்ஸிஜன் முன்னிலையில் நடைபெறும்.</td>
-                  <td style="padding:6px 8px;">ஆக்ஸிஜன் இல்லாத நிலையில் நடைபெறும்.</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e2e8f0;">
-                  <td style="padding:6px 8px; font-weight:700;">இறுதி விளைபொருட்கள்</td>
-                  <td style="padding:6px 8px;">CO₂ மற்றும் நீர்.</td>
-                  <td style="padding:6px 8px;">எத்தில் ஆல்கஹால் அல்லது லாக்டிக் அமிலம் + CO₂.</td>
-                </tr>
-                <tr>
-                  <td style="padding:6px 8px; font-weight:700;">ஆற்றல் உற்பத்தி</td>
-                  <td style="padding:6px 8px;">அதிகம் (36 அல்லது 38 ATP).</td>
-                  <td style="padding:6px 8px;">மிகக் குறைவு (2 ATP மட்டுமே).</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
+              <table style="width:100%; min-width:340px; border-collapse:collapse; margin:4px 0;">
+                <thead>
+                  <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
+                    <th style="padding:6px 8px; width:28%;">பண்பு</th>
+                    <th style="padding:6px 8px; width:36%;">காற்று சுவாசம்</th>
+                    <th style="padding:6px 8px; width:36%;">காற்றில்லா சுவாசம்</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:6px 8px; font-weight:700;">ஆக்ஸிஜன் தேவை</td>
+                    <td style="padding:6px 8px;">ஆக்ஸிஜன் முன்னிலையில் நடைபெறும்.</td>
+                    <td style="padding:6px 8px;">ஆக்ஸிஜன் இல்லாத நிலையில் நடைபெறும்.</td>
+                  </tr>
+                  <tr style="border-bottom:1px solid #e2e8f0;">
+                    <td style="padding:6px 8px; font-weight:700;">இறுதி விளைபொருட்கள்</td>
+                    <td style="padding:6px 8px;">CO₂ மற்றும் நீர்.</td>
+                    <td style="padding:6px 8px;">எத்தில் ஆல்கஹால் அல்லது லாக்டிக் அமிலம் + CO₂.</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px 8px; font-weight:700;">ஆற்றல் உற்பத்தி</td>
+                    <td style="padding:6px 8px;">அதிகம் (36 அல்லது 38 ATP).</td>
+                    <td style="padding:6px 8px;">மிகக் குறைவு (2 ATP மட்டுமே).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>`,
           ansTamil: "காற்று சுவாசத்தில் 38 ATP மற்றும் CO2+நீர் உருவாகும்; காற்றில்லா சுவாசத்தில் 2 ATP மற்றும் ஆல்கஹால் உருவாகும்."
         },

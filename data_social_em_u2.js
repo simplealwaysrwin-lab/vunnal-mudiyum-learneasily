@@ -1,4 +1,4 @@
-﻿// 10th Standard Social Science - Geography Unit 1: India - Location, Relief and Drainage (English Medium)
+// 10th Standard Social Science - Geography Unit 1: India - Location, Relief and Drainage (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SOCIAL_EM_UNIT_2_DATA = {
@@ -657,7 +657,7 @@ const SOCIAL_EM_UNIT_2_DATA = {
             4. <b>Khadar:</b> Newer, younger alluvium deposited every year along river floodplains; exceptionally fertile for agriculture.
           </div>`,
           explanation: "The Northern plains feature Bhabar (pebbles), Tarai (marsh), Bhangar (older alluvium), and Khadar (newer fertile alluvium)."
-        }        },
+        },
         {
           id: "soc_em_2_9",
           type: "8m",
@@ -722,16 +722,16 @@ const SOCIAL_EM_UNIT_2_DATA = {
           <div style="margin-top:8px; font-size:13px; color:#0369a1; background:#f0f9ff; padding:8px 12px; border-radius:6px; border-left:4px solid #0284c7;">
             <b>Exam Tip:</b> For an 8-mark question: Tabulating all 8 comparison criteria ensures clarity and fetches full marks.
           </div>`,
-          ansTamil: "à®‡à®®à®¯à®®à®²à¯ˆ à®†à®±à¯à®•à®³à¯ à®ªà®©à®¿ à®‰à®°à¯à®•à¯à®µà®¤à®¾à®²à¯ à®ªà®¾à®¯à¯à®®à¯ à®µà®±à¯à®±à®¾à®¤ à®¨à¯€à®£à¯à®Ÿ à®œà¯€à®µ à®¨à®¤à®¿à®•à®³à¯ (à®•à®™à¯à®•à¯ˆ, à®šà®¿à®¨à¯à®¤à¯). à®¤à¯€à®ªà®•à®±à¯à®ª à®†à®±à¯à®•à®³à¯ à®®à®´à¯ˆà®¯à¯ˆà®šà¯ à®šà®¾à®°à¯à®¨à¯à®¤ à®•à¯à®±à¯à®•à®¿à®¯ à®ªà®°à¯à®µà®•à®¾à®² à®†à®±à¯à®•à®³à¯ (à®•à®¾à®µà®¿à®°à®¿, à®•à¯‹à®¤à®¾à®µà®°à®¿).",
+          ansTamil: "இமயமலை ஆறுகள் பனி உருகுவதால் பாயும் வற்றாத நீண்ட ஜீவ நதிகள் (கங்கை, சிந்து). தீபகற்ப ஆறுகள் மழையைச் சார்ந்த குறுகிய பருவகால ஆறுகள் (காவிரி, கோதாவரி).",
           checkpoints: [
-            { pt: 1, text: "Origin: Glaciers of the Himalayas vs Highlands and Western Ghats of Peninsular plateau.", taText: "à®¤à¯‹à®±à¯à®±à®®à¯: à®‡à®®à®¯à®®à®²à¯ˆà®¯à®¿à®©à¯ à®ªà®©à®¿à®ªà¯à®ªà®¾à®±à¯ˆà®•à®³à®¿à®²à¯ à®¤à¯‹à®©à¯à®±à¯à®ªà®µà¯ˆ vs à®¤à¯€à®ªà®•à®±à¯à®ª à®ªà¯€à®Ÿà®ªà¯‚à®®à®¿ à®®à®±à¯à®±à¯à®®à¯ à®®à¯‡à®±à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆà®¯à®¿à®²à¯ à®¤à¯‹à®©à¯à®±à¯à®ªà®µà¯ˆ." },
-            { pt: 2, text: "Water source: Fed by both snowmelt and rainfall vs purely rain-fed monsoon dependence.", taText: "à®¨à¯€à®°à¯ à®†à®¤à®¾à®°à®®à¯: à®ªà®©à®¿ à®‰à®°à¯à®•à¯à®¤à®²à¯ à®®à®±à¯à®±à¯à®®à¯ à®®à®´à¯ˆ à®‡à®°à®£à¯à®Ÿà®¿à®©à®¾à®²à¯à®®à¯ à®¨à¯€à®°à¯à®ªà¯†à®±à¯à®ªà®µà¯ˆ vs à®®à®´à¯ˆà®¯à¯ˆ à®®à®Ÿà¯à®Ÿà¯à®®à¯‡ à®¨à®®à¯à®ªà®¿à®¯à¯à®³à¯à®³à®µà¯ˆ." },
-            { pt: 3, text: "Flow nature: Perennial rivers flowing all year vs seasonal monsoon-dependent rivers.", taText: "à®†à®±à¯à®±à®¿à®©à¯ à®¤à®©à¯à®®à¯ˆ: à®†à®£à¯à®Ÿà¯ à®®à¯à®´à¯à®µà®¤à¯à®®à¯ à®“à®Ÿà¯à®®à¯ à®µà®±à¯à®±à®¾à®¤ à®œà¯€à®µ à®¨à®¤à®¿à®•à®³à¯ vs à®®à®´à¯ˆà®•à¯ à®•à®¾à®²à®¤à¯à®¤à®¿à®²à¯ à®®à®Ÿà¯à®Ÿà¯à®®à¯ à®ªà®¾à®¯à¯à®®à¯ à®ªà®°à¯à®µà®•à®¾à®² à®†à®±à¯à®•à®³à¯." },
-            { pt: 4, text: "Length and basin: Very long with vast drainage basins vs shorter length with smaller basins.", taText: "à®¨à¯€à®³à®®à¯ & à®µà®Ÿà®¿à®¨à®¿à®²à®®à¯: à®¨à¯€à®£à¯à®Ÿ à®¤à¯Šà®²à¯ˆà®µà¯ à®ªà®¾à®¯à¯à®®à¯ à®ªà¯†à®°à¯à®®à¯ à®µà®Ÿà®¿à®¨à®¿à®²à®™à¯à®•à®³à¯ vs à®’à®ªà¯à®ªà¯€à®Ÿà¯à®Ÿà®³à®µà®¿à®²à¯ à®•à¯à®±à¯à®•à®¿à®¯ à®šà®¿à®±à®¿à®¯ à®µà®Ÿà®¿à®¨à®¿à®²à®™à¯à®•à®³à¯." },
-            { pt: 5, text: "Valleys: Deep steep V-shaped valleys and gorges vs shallow, wide, graded valleys.", taText: "à®ªà®³à¯à®³à®¤à¯à®¤à®¾à®•à¯à®•à¯à®•à®³à¯: à®†à®´à®®à®¾à®© 'V' à®µà®Ÿà®¿à®µ à®ªà®³à¯à®³à®¤à¯à®¤à®¾à®•à¯à®•à¯à®•à®³à¯ vs à®…à®•à®²à®®à®¾à®© à®†à®´à®®à¯ à®•à¯à®±à¯ˆà®¨à¯à®¤ à®ªà®³à¯à®³à®¤à¯à®¤à®¾à®•à¯à®•à¯à®•à®³à¯." },
-            { pt: 6, text: "Deposition: Heavy sediment loads forming fertile alluvial plains vs lower sediment deposition.", taText: "à®ªà®Ÿà®¿à®µà¯à®•à®³à¯: à®šà¯†à®´à¯à®®à¯ˆà®¯à®¾à®© à®µà®£à¯à®Ÿà®²à¯ à®®à®£à¯ à®ªà®Ÿà®¿à®µà¯à®•à®³à¯ˆ à®‰à®°à¯à®µà®¾à®•à¯à®•à¯à®ªà®µà¯ˆ vs à®•à¯à®±à¯ˆà®µà®¾à®© à®µà®£à¯à®Ÿà®²à¯ à®ªà®Ÿà®¿à®µà¯à®•à®³à¯." },
-            { pt: 7, text: "Course and utility: Meandering course suitable for inland navigation vs straight course ideal for hydroelectricity.", taText: "à®ªà¯‹à®•à¯à®•à¯ & à®ªà®¯à®©à¯: à®µà®³à¯ˆà®¨à¯à®¤à¯ à®¨à¯†à®³à®¿à®¨à¯à®¤à¯ à®ªà®¾à®¯à¯à®¨à¯à®¤à¯ à®¨à¯€à®°à¯à®µà®´à®¿à®ªà¯ à®ªà¯‹à®•à¯à®•à¯à®µà®°à®¤à¯à®¤à®¿à®±à¯à®•à¯ à®‰à®•à®¨à¯à®¤à®µà¯ˆ vs à®¨à¯€à®°à¯à®®à®¿à®©à¯à®šà®¾à®° à®‰à®±à¯à®ªà®¤à¯à®¤à®¿à®•à¯à®•à¯ à®‰à®•à®¨à¯à®¤à®µà¯ˆ." },
-            { pt: 8, text: "Examples: Indus, Ganga, Brahmaputra vs Mahanadi, Godavari, Krishna, Cauvery, Narmada, Tapti.", taText: "à®Žà®Ÿà¯à®¤à¯à®¤à¯à®•à¯à®•à®¾à®Ÿà¯à®Ÿà¯: à®šà®¿à®¨à¯à®¤à¯, à®•à®™à¯à®•à¯ˆ, à®ªà®¿à®°à®®à¯à®®à®ªà¯à®¤à¯à®¤à®¿à®°à®¾ vs à®®à®•à®¾à®¨à®¤à®¿, à®•à¯‹à®¤à®¾à®µà®°à®¿, à®•à®¿à®°à¯à®·à¯à®£à®¾, à®•à®¾à®µà®¿à®°à®¿, à®¨à®°à¯à®®à®¤à¯ˆ, à®¤à®ªà®¤à®¿." }
+            { pt: 1, text: "Origin: Glaciers of the Himalayas vs Highlands and Western Ghats of Peninsular plateau.", taText: "தோற்றம்: இமயமலையின் பனிப்பாறைகளில் தோன்றுபவை vs தீபகற்ப பீடபூமி மற்றும் மேற்குத் தொடர்ச்சி மலையில் தோன்றுபவை." },
+            { pt: 2, text: "Water source: Fed by both snowmelt and rainfall vs purely rain-fed monsoon dependence.", taText: "நீர் ஆதாரம்: பனி உருகுதல் மற்றும் மழை இரண்டினாலும் நீர்பெறுபவை vs மழையை மட்டுமே நம்பியுள்ளவை." },
+            { pt: 3, text: "Flow nature: Perennial rivers flowing all year vs seasonal monsoon-dependent rivers.", taText: "ஆற்றின் தன்மை: ஆண்டு முழுவதும் ஓடும் வற்றாத ஜீவ நதிகள் vs மழைக் காலத்தில் மட்டும் பாயும் பருவகால ஆறுகள்." },
+            { pt: 4, text: "Length and basin: Very long with vast drainage basins vs shorter length with smaller basins.", taText: "நீளம் & வடிநிலம்: நீண்ட தொலைவு பாயும் பெரும் வடிநிலங்கள் vs ஒப்பீட்டளவில் குறுகிய சிறிய வடிநிலங்கள்." },
+            { pt: 5, text: "Valleys: Deep steep V-shaped valleys and gorges vs shallow, wide, graded valleys.", taText: "பள்ளத்தாக்குகள்: ஆழமான 'V' வடிவ பள்ளத்தாக்குகள் vs அகலமான ஆழம் குறைந்த பள்ளத்தாக்குகள்." },
+            { pt: 6, text: "Deposition: Heavy sediment loads forming fertile alluvial plains vs lower sediment deposition.", taText: "படிவுகள்: செழிமையான வண்டல் மண் படிவுகளை உருவாக்குபவை vs குறைவான வண்டல் படிவுகள்." },
+            { pt: 7, text: "Course and utility: Meandering course suitable for inland navigation vs straight course ideal for hydroelectricity.", taText: "போக்கு & பயன்: வளைந்து நெளிந்து பாய்ந்து நீர்வழிப் போக்குவரத்திற்கு உகந்தவை vs நீர்மின்சார உற்பத்திக்கு உகந்தவை." },
+            { pt: 8, text: "Examples: Indus, Ganga, Brahmaputra vs Mahanadi, Godavari, Krishna, Cauvery, Narmada, Tapti.", taText: "எடுத்துக்காட்டு: சிந்து, கங்கை, பிரம்மபுத்திரா vs மகாநதி, கோதாவரி, கிருஷ்ணா, காவிரி, நர்மதை, தபதி." }
           ]
         }
       ]

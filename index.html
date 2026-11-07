@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -6357,18 +6357,17 @@
       ${isSocial ? `
         <div style="background:linear-gradient(135deg, #0f172a, #1e293b); border:1.5px solid #0284c7; border-radius:14px; padding:16px 20px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; box-shadow:0 8px 24px rgba(2,132,199,0.25);">
           <div style="display:flex; align-items:center; gap:14px;">
-            <span style="font-size:38px;">ðŸ—ºï¸</span>
+            <span style="font-size:38px;">🗺️</span>
             <div>
-              <div style="font-size:17px; font-weight:800; color:#38bdf8;">${isEm ? 'Class 10 Map Tutor & Interactive Test' : '10-à®†à®®à¯ à®µà®•à¯à®ªà¯à®ªà¯ à®µà®°à¯ˆà®ªà®Ÿ à®µà®´à®¿à®•à®¾à®Ÿà¯à®Ÿà®¿ & à®Šà®Ÿà®¾à®Ÿà¯à®®à¯ à®¤à¯‡à®°à¯à®µà¯'}</div>
-              <div style="font-size:12.5px; color:#cbd5e1; margin-top:3px;">${isEm ? 'All 12 lessons covered â€¢ Blank vector maps â€¢ Voice-guided landmark cues â€¢ Tap-to-mark tests' : 'à®…à®©à¯ˆà®¤à¯à®¤à¯ 12 à®…à®²à®•à¯à®•à®³à¯ â€¢ à®µà¯†à®±à¯à®±à¯ à®µà®°à¯ˆà®ªà®Ÿà®®à¯ â€¢ à®•à¯à®°à®²à¯ à®µà®´à®¿à®•à®¾à®Ÿà¯à®Ÿà®¿ â€¢ à®¤à¯Šà®Ÿà¯à®Ÿà¯ à®•à¯à®±à®¿à®•à¯à®•à¯à®®à¯ à®¤à¯‡à®°à¯à®µà¯'}</div>
+              <div style="font-size:17px; font-weight:800; color:#38bdf8;">${isEm ? 'Class 10 Map Tutor & Interactive Test' : '10-ஆம் வகுப்பு வரைபட வழிகாட்டி & ஊடாடும் தேர்வு'}</div>
+              <div style="font-size:12.5px; color:#cbd5e1; margin-top:3px;">${isEm ? 'All 12 lessons covered • Blank vector maps • Voice-guided landmark cues • Tap-to-mark tests' : 'அனைத்து 12 அலகுகள் • வெற்று வரைபடம் • குரல் வழிகாட்டி • தொட்டு குறிக்கும் தேர்வு'}</div>
             </div>
           </div>
           <button type="button" class="tab-btn" onclick="openSocialMapTutor('all')" style="background:linear-gradient(135deg, #0284c7, #2563eb); color:#fff; font-weight:800; font-size:14px; padding:10px 20px; border-radius:10px; border:none; box-shadow:0 4px 14px rgba(2,132,199,0.4); cursor:pointer;">
-            ${isEm ? 'ðŸš€ Open Map Practice âž”' : 'ðŸš€ à®µà®°à¯ˆà®ªà®Ÿà®ªà¯ à®ªà®¯à®¿à®±à¯à®šà®¿à®¯à¯ˆà®¤à¯ à®¤à¯Šà®Ÿà®™à¯à®•à¯ âž”'}
+            ${isEm ? '🚀 Open Map Practice ➔' : '🚀 வரைபடப் பயிற்சியைத் தொடங்கு ➔'}
           </button>
         </div>
       ` : ''}
-      $1
         ${currentSubject.lessons.map(l => {
           resolveLessonData(l);
           const cpCount = (l.questions || []).filter(q => q.checkpoints && q.checkpoints.length > 0).length;
@@ -7369,8 +7368,8 @@
               <span>🏆 ${isEm ? 'Mock Test' : 'மாதிரித் தேர்வு'}</span>
             </button>
             ${isSocial ? `
-              <button type="button" class="filter-eq-btn" onclick="openSocialMapTutor('${currentLesson.unit || 2}')" style="background:linear-gradient(135deg, #0284c7, #2563eb); color:#fff; border:none; box-shadow:0 3px 10px rgba(2,132,199,0.35); font-weight:800;" title="${isEm ? 'Map Tutor & Practice Test' : 'à®µà®°à¯ˆà®ªà®Ÿà®ªà¯ à®ªà®¯à®¿à®±à¯à®šà®¿ & à®•à¯à®°à®²à¯ à®µà®´à®¿à®•à®¾à®Ÿà¯à®Ÿà®¿'}">
-                <span>ðŸ—ºï¸ ${isEm ? 'Map Tutor & Test' : 'à®µà®°à¯ˆà®ªà®Ÿà®®à¯ & à®¤à¯‡à®°à¯à®µà¯'}</span>
+              <button type="button" class="filter-eq-btn" onclick="openSocialMapTutor('${currentLesson.unit || 2}')" style="background:linear-gradient(135deg, #0284c7, #2563eb); color:#fff; border:none; box-shadow:0 3px 10px rgba(2,132,199,0.35); font-weight:800;" title="${isEm ? 'Map Tutor & Practice Test' : 'வரைபடப் பயிற்சி & குரல் வழிகாட்டி'}">
+                <span>🗺️ ${isEm ? 'Map Tutor & Test' : 'வரைபடம் & தேர்வு'}</span>
               </button>
             ` : ''}
           </div>

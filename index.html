@@ -89,7 +89,7 @@
 <script>
   // Build tracker
   (function() {
-    const CURRENT_BUILD = '20261107_v58';
+    const CURRENT_BUILD = '20261107_v59';
     try {
       localStorage.setItem('vm_build_ver', CURRENT_BUILD);
     } catch(e) {}
@@ -170,7 +170,7 @@
 <script src="data_social_u12.js?v=20261105_v57"></script>
 <script src="data_social_em_u11.js?v=20261105_v57"></script>
 <script src="data_social_em_u12.js?v=20261105_v57"></script>
-<script src="map_data_and_engine.js?v=20261107_v58"></script>
+<script src="map_data_and_engine.js?v=20261107_v59"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -7367,11 +7367,6 @@
             <button type="button" class="filter-eq-btn filter-eq-golden" onclick="openMockTestModal()" title="${isEm ? 'Take Mock Test & Student Competition' : 'மாதிரித் தேர்வு மற்றும் மாணவர் அறிவுப் போட்டி'}">
               <span>🏆 ${isEm ? 'Mock Test' : 'மாதிரித் தேர்வு'}</span>
             </button>
-            ${isSocial ? `
-              <button type="button" class="filter-eq-btn" onclick="openSocialMapTutor('${currentLesson.unit || 2}')" style="background:linear-gradient(135deg, #0284c7, #2563eb); color:#fff; border:none; box-shadow:0 3px 10px rgba(2,132,199,0.35); font-weight:800;" title="${isEm ? 'Map Tutor & Practice Test' : 'வரைபடப் பயிற்சி & குரல் வழிகாட்டி'}">
-                <span>🗺️ ${isEm ? 'Map Tutor & Test' : 'வரைபடம் & தேர்வு'}</span>
-              </button>
-            ` : ''}
           </div>
 
           <!-- Row 2: Dynamic Question Paper Blueprint Mark Buttons -->
@@ -12295,7 +12290,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261107_v58')
+        navigator.serviceWorker.register('./sw.js?v=20261107_v59')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

@@ -7,359 +7,162 @@
   'use strict';
 
   // ---------------------------------------------------------------------------
-  // 1. CURATED SYLLABUS MAP LOCATIONS (All 12 Lessons & Board Exam Sets)
+  // 1. BOARD EXAM MODEL QUESTION SET (8 Curated Standard Places)
   // ---------------------------------------------------------------------------
-  const SOCIAL_MAP_LOCATIONS = [
-    // --- LESSON 1: History Unit 1 (Outbreak of WWI) - World Map ---
-    {
-      id: "world_britain",
-      unit: 1,
-      unitTitle: "à®µà®°à®²à®¾à®±à¯ - à®…à®²à®•à¯ 1: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯",
-      category: "World War I (à®¨à¯‡à®š à®¨à®¾à®Ÿà¯à®•à®³à¯)",
-      mapType: "world",
-      nameTamil: "à®•à®¿à®°à¯‡à®Ÿà¯ à®ªà®¿à®°à®¿à®Ÿà¯à®Ÿà®©à¯ (à®²à®£à¯à®Ÿà®©à¯)",
-      nameEnglish: "Great Britain (London)",
-      coords: { x: 46.2, y: 31.5 },
-      type: "point",
-      teachScriptTamil: "à®•à®¿à®°à¯‡à®Ÿà¯ à®ªà®¿à®°à®¿à®Ÿà¯à®Ÿà®©à¯: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à®¿à®©à¯ à®¨à¯‡à®š à®¨à®¾à®Ÿà¯à®Ÿà¯à®¤à¯ à®¤à®²à¯ˆà®®à¯ˆ. à®à®°à¯‹à®ªà¯à®ªà®¾à®µà®¿à®©à¯ à®µà®Ÿà®®à¯‡à®±à¯à®•à¯à®ªà¯ à®ªà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®‰à®³à¯à®³ à®¤à®©à®¿à®¤à¯à®¤ à®ªà¯†à®°à®¿à®¯ à®¤à¯€à®µà¯ˆ à®µà®Ÿà¯à®Ÿà®®à®¿à®Ÿà¯à®Ÿà¯à®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
-      teachScriptEnglish: "Great Britain: Leading Allied power in WWI. Locate the large island off the northwest coast of mainland Europe.",
-      examTip: "à®à®°à¯‹à®ªà¯à®ªà®¾à®µà®¿à®©à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®¨à¯‡à®š à®¨à®¾à®Ÿà¯ à®…à®²à¯à®²à®¤à¯ à®¤à¯€à®µà¯ à®¨à®¾à®Ÿà¯ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®Ÿà®¾à®²à¯ à®ªà®¿à®°à®¿à®Ÿà¯à®Ÿà®©à¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯."
-    },
-    {
-      id: "world_france",
-      unit: 1,
-      unitTitle: "à®µà®°à®²à®¾à®±à¯ - à®…à®²à®•à¯ 1: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯",
-      category: "World War I (à®¨à¯‡à®š à®¨à®¾à®Ÿà¯à®•à®³à¯)",
-      mapType: "world",
-      nameTamil: "à®ªà®¿à®°à®¾à®©à¯à®¸à¯ (à®ªà®¾à®°à®¿à®¸à¯)",
-      nameEnglish: "France (Paris)",
-      coords: { x: 47.8, y: 36.2 },
-      type: "point",
-      teachScriptTamil: "à®ªà®¿à®°à®¾à®©à¯à®¸à¯: à®¨à¯‡à®š à®¨à®¾à®Ÿà¯à®•à®³à®¿à®©à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®à®°à¯‹à®ªà¯à®ªà®¿à®¯ à®¨à®¾à®Ÿà¯. à®‡à®™à¯à®•à®¿à®²à®¾à®¨à¯à®¤à¯à®•à¯à®•à¯ à®¨à¯‡à®°à¯ à®¤à¯†à®±à¯à®•à¯‡, à®†à®™à¯à®•à®¿à®²à®•à¯ à®•à®¾à®²à¯à®µà®¾à®¯à¯ˆà®•à¯ à®•à®Ÿà®¨à¯à®¤à®µà¯à®Ÿà®©à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®¨à®¿à®²à®ªà¯à®ªà®°à®ªà¯à®ªà¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
-      teachScriptEnglish: "France: Key Allied power in Europe. Directly south across the English Channel from Britain.",
-      examTip: "à®®à¯‡à®±à¯à®•à¯ à®à®°à¯‹à®ªà¯à®ªà®¿à®¯ à®¨à¯‡à®š à®¨à®¾à®Ÿà¯ à®…à®²à¯à®²à®¤à¯ à®ªà®¾à®°à®¿à®¸à¯ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®•à®ªà¯à®ªà®Ÿà®²à®¾à®®à¯."
-    },
-    {
-      id: "world_germany",
-      unit: 1,
-      unitTitle: "à®µà®°à®²à®¾à®±à¯ - à®…à®²à®•à¯ 1: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯",
-      category: "World War I (à®®à¯ˆà®¯ à®¨à®¾à®Ÿà¯à®•à®³à¯)",
-      mapType: "world",
-      nameTamil: "à®œà¯†à®°à¯à®®à®©à®¿ (à®ªà¯†à®°à¯à®²à®¿à®©à¯)",
-      nameEnglish: "Germany (Berlin)",
-      coords: { x: 50.8, y: 33.6 },
-      type: "point",
-      teachScriptTamil: "à®œà¯†à®°à¯à®®à®©à®¿: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à®¿à®©à¯ à®®à¯ˆà®¯ à®¨à®¾à®Ÿà¯à®•à®³à®¿à®©à¯ à®¤à®²à¯ˆà®®à¯ˆ à®¨à®¾à®Ÿà¯. à®ªà®¿à®°à®¾à®©à¯à®šà¯à®•à¯à®•à¯ à®•à®¿à®´à®•à¯à®•à¯‡ à®®à®¤à¯à®¤à®¿à®¯ à®à®°à¯‹à®ªà¯à®ªà®¾à®µà®¿à®²à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®ªà®•à¯à®¤à®¿à®¯à¯ˆ à®µà®Ÿà¯à®Ÿà®®à®¿à®Ÿà¯à®Ÿà¯à®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
-      teachScriptEnglish: "Germany: Leader of the Central Powers in WWI. Directly east of France in Central Europe.",
-      examTip: "à®®à¯à®¤à®²à¯ à®®à®±à¯à®±à¯à®®à¯ à®‡à®°à®£à¯à®Ÿà®¾à®®à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à®¿à®²à¯ à®®à¯ˆà®¯ à®¨à®¾à®Ÿà¯à®•à®³à¯ à®…à®²à¯à®²à®¤à¯ à®…à®šà¯à®šà¯ à®¨à®¾à®Ÿà¯à®•à®³à®¿à®©à¯ à®¤à®²à¯ˆà®®à¯ˆ à®œà¯†à®°à¯à®®à®©à®¿."
-    },
-    {
-      id: "world_italy",
-      unit: 1,
-      unitTitle: "à®µà®°à®²à®¾à®±à¯ - à®…à®²à®•à¯ 1: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯",
-      category: "World War I (à®®à¯ˆà®¯ à®¨à®¾à®Ÿà¯à®•à®³à¯)",
-      mapType: "world",
-      nameTamil: "à®‡à®¤à¯à®¤à®¾à®²à®¿ (à®°à¯‹à®®à¯)",
-      nameEnglish: "Italy (Rome)",
-      coords: { x: 50.5, y: 39.5 },
-      type: "point",
-      teachScriptTamil: "à®‡à®¤à¯à®¤à®¾à®²à®¿: à®®à®¤à¯à®¤à®¿à®¯ à®¤à®°à¯ˆà®•à¯à®•à®Ÿà®²à®¿à®²à¯ à®ªà¯‚à®Ÿà¯à®¸à¯ à®•à®¾à®²à®£à®¿ à®µà®Ÿà®¿à®µà®¿à®²à¯ à®¨à¯€à®£à¯à®Ÿà®¿à®°à¯à®•à¯à®•à¯à®®à¯ à®¤à¯€à®ªà®•à®±à¯à®ª à®¨à®¾à®Ÿà¯à®Ÿà¯ˆ à®…à®Ÿà¯ˆà®¯à®¾à®³à®®à¯ à®•à®£à¯à®Ÿà¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
-      teachScriptEnglish: "Italy: Boot-shaped peninsula jutting out into the Mediterranean Sea in Southern Europe.",
-      examTip: "à®ªà¯‚à®Ÿà¯à®¸à¯ à®•à®¾à®²à®£à®¿ à®µà®Ÿà®¿à®µ à®à®°à¯‹à®ªà¯à®ªà®¿à®¯ à®¨à®¾à®Ÿà¯ à®…à®²à¯à®²à®¤à¯ à®®à¯à®šà¯‹à®²à®¿à®©à®¿à®¯à®¿à®©à¯ à®ªà®¾à®šà®¿à®š à®¨à®¾à®Ÿà¯ à®‡à®¤à¯à®¤à®¾à®²à®¿."
-    },
-    {
-      id: "world_russia",
-      unit: 1,
-      unitTitle: "à®µà®°à®²à®¾à®±à¯ - à®…à®²à®•à¯ 1: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯",
-      category: "World War I (à®¨à¯‡à®š à®¨à®¾à®Ÿà¯à®•à®³à¯)",
-      mapType: "world",
-      nameTamil: "à®°à®·à¯à®¯à®¾ (à®®à®¾à®¸à¯à®•à¯‹)",
-      nameEnglish: "Russia (Moscow)",
-      coords: { x: 62.0, y: 25.0 },
-      type: "point",
-      teachScriptTamil: "à®°à®·à¯à®¯à®¾: à®à®°à¯‹à®ªà¯à®ªà®¾ à®®à®±à¯à®±à¯à®®à¯ à®†à®šà®¿à®¯à®¾à®µà®¿à®©à¯ à®µà®Ÿà®ªà®•à¯à®¤à®¿ à®®à¯à®´à¯à®µà®¤à¯ˆà®¯à¯à®®à¯ à®†à®•à¯à®•à®¿à®°à®®à®¿à®¤à¯à®¤à¯à®³à¯à®³ à®‰à®²à®•à®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà¯†à®°à®¿à®¯ à®¨à®¿à®²à®ªà¯à®ªà®°à®ªà¯à®ªà¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
-      teachScriptEnglish: "Russia: The vast northern landmass spanning across Eastern Europe and Northern Asia.",
-      examTip: "à®‰à®²à®•à®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà¯†à®°à®¿à®¯ à®¨à®¾à®Ÿà¯ à®…à®²à¯à®²à®¤à¯ à®šà¯‹à®µà®¿à®¯à®¤à¯ à®¯à¯‚à®©à®¿à®¯à®©à¯ (USSR) à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®•à®ªà¯à®ªà®Ÿà®²à®¾à®®à¯."
-    },
-
-    // --- LESSON 2: Geography Unit 1 (Location & Relief) - India Map ---
-    {
-      id: "ind_karakoram",
-      unit: 2,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
-      category: "Mountain Ranges (à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯)",
-      mapType: "india",
-      nameTamil: "à®•à®¾à®°à®•à¯‹à®°à®®à¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯",
-      nameEnglish: "Karakoram Range",
-      coords: { x: 41.5, y: 7.5 },
-      type: "range",
-      teachScriptTamil: "à®•à®¾à®°à®•à¯‹à®°à®®à¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®µà®Ÿà®•à¯à®•à¯ à®‰à®šà¯à®šà®¿à®¯à®¿à®²à¯, à®²à®Ÿà®¾à®•à¯ à®®à®±à¯à®±à¯à®®à¯ à®œà®®à¯à®®à¯ à®•à®¾à®·à¯à®®à¯€à®°à®¿à®©à¯ à®µà®Ÿà®ªà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®®à®¿à®• à®‰à®¯à®°à®®à®¾à®© à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯.",
-      teachScriptEnglish: "Karakoram Range: Located at the northernmost crown of India in Ladakh, north of the Himalayas.",
-      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®• à®µà®Ÿà®•à¯à®•à®¿à®²à¯ à®‰à®³à¯à®³ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®…à®²à¯à®²à®¤à¯ à®•à¯‡2 à®šà®¿à®•à®°à®®à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®•à®¾à®°à®•à¯‹à®°à®®à¯."
-    },
-    {
-      id: "ind_himalayas",
-      unit: 2,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
-      category: "Mountain Ranges (à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯)",
-      mapType: "india",
-      nameTamil: "à®‡à®®à®¯à®®à®²à¯ˆà®¤à¯ à®¤à¯Šà®Ÿà®°à¯",
-      nameEnglish: "The Great Himalayas",
-      coords: { x: 52.0, y: 19.5 },
-      type: "range",
-      teachScriptTamil: "à®‡à®®à®¯à®®à®²à¯ˆ: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®µà®Ÿà®•à¯à®•à¯ à®Žà®²à¯à®²à¯ˆà®¯à®¿à®²à¯ à®•à®¾à®·à¯à®®à¯€à®°à¯ à®®à¯à®¤à®²à¯ à®…à®°à¯à®£à®¾à®šà¯à®šà®²à®ªà¯ à®ªà®¿à®°à®¤à¯‡à®šà®®à¯ à®µà®°à¯ˆ à®µà®¿à®²à¯ à®ªà¯‹à®©à¯à®±à¯ à®µà®³à¯ˆà®¨à¯à®¤à¯ à®šà¯†à®²à¯à®²à¯à®®à¯ à®‰à®²à®•à®¿à®©à¯ à®®à®¿à®• à®‰à®¯à®°à®®à®¾à®© à®®à®Ÿà®¿à®ªà¯à®ªà¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯.",
-      teachScriptEnglish: "The Great Himalayas: An arc-shaped fold mountain barrier shielding Northern India from west to east.",
-      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®µà®Ÿà®•à¯à®•à¯ à®…à®°à®£à¯ à®…à®²à¯à®²à®¤à¯ à®‰à®¯à®°à®®à®¾à®© à®®à®Ÿà®¿à®ªà¯à®ªà¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®Ÿà®¾à®²à¯ à®‡à®®à®¯à®®à®²à¯ˆà®¯à¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯."
-    },
-    {
-      id: "ind_aravalli",
-      unit: 2,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
-      category: "Mountain Ranges (à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯)",
-      mapType: "india",
-      nameTamil: "à®†à®°à®µà®²à¯à®²à®¿ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯",
-      nameEnglish: "Aravalli Range",
-      coords: { x: 30.5, y: 35.5 },
-      type: "range",
-      teachScriptTamil: "à®†à®°à®µà®²à¯à®²à®¿ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà®´à®®à¯ˆà®¯à®¾à®© à®®à®Ÿà®¿à®ªà¯à®ªà¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯. à®°à®¾à®œà®¸à¯à®¤à®¾à®©à®¿à®©à¯ à®¤à¯†à®©à¯à®®à¯‡à®±à¯à®•à¯ à®®à¯à®¤à®²à¯ à®¤à®¿à®²à¯à®²à®¿ à®µà®°à¯ˆ à®•à¯à®±à¯à®•à¯à®•à®¾à®•à®šà¯ à®šà¯†à®²à¯à®²à¯à®®à¯ à®¤à¯Šà®Ÿà®°à¯.",
-      teachScriptEnglish: "Aravalli Range: The oldest fold mountains in India, running diagonally across Rajasthan towards Delhi.",
-      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà®´à®®à¯ˆà®¯à®¾à®© à®®à®Ÿà®¿à®ªà¯à®ªà¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®…à®²à¯à®²à®¤à¯ à®•à¯à®°à¯à®šà®¿à®•à®¾à®°à¯ à®šà®¿à®•à®°à®®à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®®à®²à¯ˆ à®†à®°à®µà®²à¯à®²à®¿."
-    },
-    {
-      id: "ind_western_ghats",
-      unit: 2,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
-      category: "Mountain Ranges (à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯)",
-      mapType: "india",
-      nameTamil: "à®®à¯‡à®±à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ",
-      nameEnglish: "Western Ghats (Sahyadris)",
-      coords: { x: 32.5, y: 72.0 },
-      type: "range",
-      teachScriptTamil: "à®®à¯‡à®±à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ: à®…à®°à®ªà®¿à®•à¯à®•à®Ÿà®²à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®•à¯à®•à¯ à®‡à®£à¯ˆà®¯à®¾à®• à®®à®•à®¾à®°à®¾à®·à¯à®Ÿà®¿à®°à®¾ à®®à¯à®¤à®²à¯ à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯ à®µà®°à¯ˆ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿à®¯à®¾à®• à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®‰à®¯à®°à®®à®¾à®© à®®à®²à¯ˆà®šà¯à®šà¯à®µà®°à¯.",
-      teachScriptEnglish: "Western Ghats: A continuous mountain wall parallel to the Arabian Sea coast from Maharashtra to Tamil Nadu.",
-      examTip: "à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿à®¯à®¾à®© à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®…à®²à¯à®²à®¤à¯ à®šà®¹à®¾à®¯à®¾à®¤à¯à®°à®¿ à®…à®²à¯à®²à®¤à¯ à®†à®©à¯ˆà®®à¯à®Ÿà®¿ à®šà®¿à®•à®°à®®à¯ à®‰à®³à¯à®³ à®®à®²à¯ˆ à®®à¯‡à®±à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ."
-    },
+  const EXAM_MODEL_PLACES = [
     {
       id: "ind_eastern_ghats",
-      unit: 2,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
-      category: "Mountain Ranges (à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯)",
-      mapType: "india",
-      nameTamil: "à®•à®¿à®´à®•à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ",
+      numLabel: "(i)",
+      nameTamil: "கிழக்குத் தொடர்ச்சி மலை",
       nameEnglish: "Eastern Ghats",
+      category: "Mountains",
       coords: { x: 53.0, y: 65.0 },
-      type: "range",
-      teachScriptTamil: "à®•à®¿à®´à®•à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®•à®¿à®´à®•à¯à®•à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®•à¯à®•à¯ à®‡à®£à¯ˆà®¯à®¾à®• à®’à®Ÿà®¿à®šà®¾ à®®à¯à®¤à®²à¯ à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯ à®µà®°à¯ˆ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿à®¯à®±à¯à®± à®‰à®Ÿà¯ˆà®¨à¯à®¤ à®•à¯à®©à¯à®±à¯à®•à®³à®¾à®• à®µà®°à¯ˆà®¯ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯.",
-      teachScriptEnglish: "Eastern Ghats: Discontinuous hills running along the eastern coast from Odisha to northern Tamil Nadu.",
-      examTip: "à®µà®™à¯à®•à®¾à®³ à®µà®¿à®°à®¿à®•à¯à®Ÿà®¾ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®•à¯à®•à¯ à®‡à®£à¯ˆà®¯à®¾à®• à®‰à®³à¯à®³ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿à®¯à®±à¯à®± à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®Ÿà®¾à®²à¯ à®•à®¿à®´à®•à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆà®¯à¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯."
-    },
-    {
-      id: "ind_river_ganga",
-      unit: 2,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
-      category: "Rivers (à®®à¯à®•à¯à®•à®¿à®¯ à®†à®±à¯à®•à®³à¯)",
-      mapType: "india",
-      nameTamil: "à®•à®™à¯à®•à¯ˆ à®†à®±à¯",
-      nameEnglish: "River Ganga",
-      coords: { x: 54.0, y: 36.0 },
-      type: "river",
-      teachScriptTamil: "à®•à®™à¯à®•à¯ˆ à®†à®±à¯: à®‡à®®à®¯à®®à®²à¯ˆà®¯à®¿à®²à¯ à®•à®™à¯à®•à¯‹à®¤à¯à®°à®¿à®¯à®¿à®²à¯ à®¤à¯Šà®Ÿà®™à¯à®•à®¿ à®‰à®¤à¯à®¤à®°à®•à®¾à®£à¯à®Ÿà¯, à®‰.à®ªà®¿, à®ªà¯€à®•à®¾à®°à¯, à®®à¯‡à®±à¯à®•à¯ à®µà®™à¯à®•à®¾à®³à®®à¯ à®µà®´à®¿à®¯à®¾à®• à®µà®™à¯à®•à®¾à®³ à®µà®¿à®°à®¿à®•à¯à®Ÿà®¾à®µà®¿à®²à¯ à®•à®²à®•à¯à®•à¯à®®à¯ à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®• à®¨à¯€à®³à®®à®¾à®© à®†à®±à¯.",
-      teachScriptEnglish: "River Ganga: Originates at Gangotri and flows 2,525 km through the northern plains into the Bay of Bengal.",
-      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®• à®¨à¯€à®³à®®à®¾à®© à®ªà¯à®©à®¿à®¤ à®†à®±à¯ à®…à®²à¯à®²à®¤à¯ à®µà®±à¯à®±à®¾à®¤ à®‡à®®à®¯à®®à®²à¯ˆ à®†à®±à¯ à®•à®™à¯à®•à¯ˆ."
-    },
-    {
-      id: "ind_river_cauvery",
-      unit: 2,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
-      category: "Rivers (à®®à¯à®•à¯à®•à®¿à®¯ à®†à®±à¯à®•à®³à¯)",
-      mapType: "india",
-      nameTamil: "à®•à®¾à®µà®¿à®°à®¿ à®†à®±à¯",
-      nameEnglish: "River Cauvery",
-      coords: { x: 42.0, y: 84.0 },
-      type: "river",
-      teachScriptTamil: "à®•à®¾à®µà®¿à®°à®¿ à®†à®±à¯: à®•à®°à¯à®¨à®¾à®Ÿà®•à®¾à®µà®¿à®©à¯ à®•à¯à®Ÿà®•à¯ à®®à®²à¯ˆà®¯à®¿à®²à¯ à®¤à®²à¯ˆà®•à¯à®•à®¾à®µà®¿à®°à®¿à®¯à®¿à®²à¯ à®¤à¯Šà®Ÿà®™à¯à®•à®¿ à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®µà®´à®¿à®¯à®¾à®•à®ªà¯ à®ªà®¾à®¯à¯à®¨à¯à®¤à¯ à®ªà¯‚à®®à¯à®ªà¯à®•à®¾à®°à¯ à®…à®°à¯à®•à¯‡ à®µà®™à¯à®•à®¾à®³ à®µà®¿à®°à®¿à®•à¯à®Ÿà®¾à®µà®¿à®²à¯ à®•à®²à®•à¯à®•à¯à®®à¯ à®†à®±à¯.",
-      teachScriptEnglish: "River Cauvery: Originates in Kodagu (Karnataka) and flows through Tamil Nadu into the Bay of Bengal.",
-      examTip: "à®¤à¯†à®©à¯à®©à®¿à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®•à®™à¯à®•à¯ˆ à®…à®²à¯à®²à®¤à¯ à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®¨à®¤à®¿ à®•à®¾à®µà®¿à®°à®¿ à®†à®±à¯."
-    },
-    {
-      id: "ind_river_narmada",
-      unit: 2,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
-      category: "Rivers (à®®à¯à®•à¯à®•à®¿à®¯ à®†à®±à¯à®•à®³à¯)",
-      mapType: "india",
-      nameTamil: "à®¨à®°à¯à®®à®¤à¯ˆ à®†à®±à¯",
-      nameEnglish: "River Narmada",
-      coords: { x: 34.0, y: 54.0 },
-      type: "river",
-      teachScriptTamil: "à®¨à®°à¯à®®à®¤à¯ˆ à®†à®±à¯: à®®à®¤à¯à®¤à®¿à®¯à®ªà¯ à®ªà®¿à®°à®¤à¯‡à®šà®¤à¯à®¤à®¿à®©à¯ à®…à®®à®°à¯à®•à®£à¯à®Ÿà®•à¯à®•à®¿à®²à¯ à®¤à¯Šà®Ÿà®™à¯à®•à®¿ à®µà®¿à®¨à¯à®¤à®¿à®¯, à®šà®¾à®¤à¯à®ªà¯‚à®°à®¾ à®®à®²à¯ˆà®•à®³à¯à®•à¯à®•à¯ à®‡à®Ÿà¯ˆà®¯à¯‡ à®ªà®¿à®³à®µà¯à®ªà¯ à®ªà®³à¯à®³à®¤à¯à®¤à®¾à®•à¯à®•à®¿à®²à¯ à®ªà®¾à®¯à¯à®¨à¯à®¤à¯ à®…à®°à®ªà®¿à®•à¯à®•à®Ÿà®²à®¿à®²à¯ à®•à®²à®•à¯à®•à¯à®®à¯ à®†à®±à¯.",
-      teachScriptEnglish: "River Narmada: Flows westward in a rift valley between Vindhya and Satpura ranges into the Arabian Sea.",
-      examTip: "à®®à¯‡à®±à¯à®•à¯ à®¨à¯‹à®•à¯à®•à®¿à®ªà¯ à®ªà®¾à®¯à¯à®®à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®¤à¯€à®ªà®•à®±à¯à®ª à®†à®±à¯ à®…à®²à¯à®²à®¤à¯ à®•à®¾à®®à¯à®ªà¯‡ à®µà®³à¯ˆà®•à¯à®Ÿà®¾à®µà®¿à®²à¯ à®•à®²à®•à¯à®•à¯à®®à¯ à®†à®±à¯ à®¨à®°à¯à®®à®¤à¯ˆ."
+      teachScriptTamil: "முதல் இடம்: கிழக்குத் தொடர்ச்சி மலை. இந்தியாவின் கிழக்கு கடற்கரைக்கு இணையாக ஒடிசா, ஆந்திரா வழியாக தமிழ்நாட்டின் வடபகுதி வரை தொடர்ச்சியற்ற உடைந்த குன்றுகளாக வரைய வேண்டும்.",
+      teachScriptEnglish: "First place: Eastern Ghats. Mark along the eastern coast of India from Odisha through Andhra Pradesh down towards northern Tamil Nadu as discontinuous broken hills.",
+      examTipTamil: "வங்காள விரிகுடா கடற்கரைக்கு இணையாக உள்ள தொடர்ச்சியற்ற மலைத்தொடர் எனக் கேட்டால் கிழக்குத் தொடர்ச்சி மலையைக் குறிக்கவும்.",
+      examTipEnglish: "If asked to mark the discontinuous mountain range parallel to the Bay of Bengal coast, mark the Eastern Ghats."
     },
     {
       id: "ind_gulf_of_mannar",
-      unit: 2,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
-      category: "Coastal Features (à®•à®Ÿà®±à¯à®•à®°à¯ˆà®ªà¯ à®ªà®•à¯à®¤à®¿à®•à®³à¯)",
-      mapType: "india",
-      nameTamil: "à®®à®©à¯à®©à®¾à®°à¯ à®µà®³à¯ˆà®•à¯à®Ÿà®¾",
+      numLabel: "(ii)",
+      nameTamil: "மன்னார் வளைகுடா",
       nameEnglish: "Gulf of Mannar",
+      category: "Water Body / Biosphere",
       coords: { x: 45.0, y: 97.0 },
-      type: "water",
-      teachScriptTamil: "à®®à®©à¯à®©à®¾à®°à¯ à®µà®³à¯ˆà®•à¯à®Ÿà®¾: à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®¤à¯†à®©à¯à®•à®¿à®´à®•à¯à®•à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®•à¯à®•à¯à®®à¯ à®‡à®²à®™à¯à®•à¯ˆà®•à¯à®•à¯à®®à¯ à®‡à®Ÿà¯ˆà®¯à¯‡ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®†à®´à®®à®±à¯à®± à®•à®Ÿà®²à¯ à®ªà®•à¯à®¤à®¿à®¯à®¾à®•à¯à®®à¯.",
-      teachScriptEnglish: "Gulf of Mannar: Shallow marine bay located between southeastern Tamil Nadu and northwestern Sri Lanka.",
-      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à¯à®¤à®²à¯ à®•à®Ÿà®²à¯à®šà®¾à®°à¯ à®‰à®¯à®¿à®°à¯à®•à¯à®•à¯‹à®³à®•à¯ à®•à®¾à®ªà¯à®ªà®•à®®à¯ à®®à®©à¯à®©à®¾à®°à¯ à®µà®³à¯ˆà®•à¯à®Ÿà®¾ à®†à®•à¯à®®à¯."
-    },
-    {
-      id: "ind_palk_strait",
-      unit: 2,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
-      category: "Coastal Features (à®•à®Ÿà®±à¯à®•à®°à¯ˆà®ªà¯ à®ªà®•à¯à®¤à®¿à®•à®³à¯)",
-      mapType: "india",
-      nameTamil: "à®ªà®¾à®•à¯à®•à¯ à®¨à¯€à®°à®¿à®£à¯ˆ",
-      nameEnglish: "Palk Strait",
-      coords: { x: 47.5, y: 92.5 },
-      type: "water",
-      teachScriptTamil: "à®ªà®¾à®•à¯à®•à¯ à®¨à¯€à®°à®¿à®£à¯ˆ: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà¯ˆà®¯à¯à®®à¯ à®‡à®²à®™à¯à®•à¯ˆà®¯à¯ˆà®¯à¯à®®à¯ à®ªà®¿à®°à®¿à®•à¯à®•à¯à®®à¯ à®•à¯à®±à¯à®•à®¿à®¯ à®†à®´à®®à®±à¯à®± à®¨à¯€à®°à¯à®ªà¯à®ªà®°à®ªà¯à®ªà¯. à®®à®©à¯à®©à®¾à®°à¯ à®µà®³à¯ˆà®•à¯à®Ÿà®¾à®µà®¿à®±à¯à®•à¯ à®µà®Ÿà®•à¯à®•à¯‡ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³à®¤à¯.",
-      teachScriptEnglish: "Palk Strait: Narrow shallow strait separating southeastern India and northern Sri Lanka.",
-      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà¯ˆà®¯à¯à®®à¯ à®‡à®²à®™à¯à®•à¯ˆà®¯à¯ˆà®¯à¯à®®à¯ à®ªà®¿à®°à®¿à®•à¯à®•à¯à®®à¯ à®¨à¯€à®°à®¿à®£à¯ˆ à®ªà®¾à®•à¯à®•à¯ à®¨à¯€à®°à®¿à®£à¯ˆ."
-    },
-    {
-      id: "ind_thar_desert",
-      unit: 6,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 2: à®•à®¾à®²à®¨à®¿à®²à¯ˆ & à®¤à®¾à®µà®°à®™à¯à®•à®³à¯",
-      category: "Soil & Physical Regions",
-      mapType: "india",
-      nameTamil: "à®ªà®¾à®²à¯ˆ à®®à®£à¯ à®ªà®•à¯à®¤à®¿ (à®¤à®¾à®°à¯ à®ªà®¾à®²à¯ˆà®µà®©à®®à¯)",
-      nameEnglish: "Desert soil region (Thar Desert)",
-      coords: { x: 25.5, y: 42.0 },
-      type: "polygon",
-      teachScriptTamil: "à®ªà®¾à®²à¯ˆ à®®à®£à¯ à®ªà®•à¯à®¤à®¿: à®°à®¾à®œà®¸à¯à®¤à®¾à®©à¯ à®®à®¾à®¨à®¿à®²à®¤à¯à®¤à®¿à®©à¯ à®®à¯‡à®±à¯à®•à¯à®ªà¯ à®ªà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®‰à®³à¯à®³ à®¤à®¾à®°à¯ à®ªà®¾à®²à¯ˆà®µà®©à®ªà¯ à®ªà®•à¯à®¤à®¿à®¯à®¾à®•à¯à®®à¯. à®†à®°à®µà®²à¯à®²à®¿ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à¯à®•à¯ à®®à¯‡à®±à¯à®•à¯‡ à®‰à®³à¯à®³ à®ªà®°à®¨à¯à®¤ à®¨à®¿à®²à®ªà¯à®ªà®°à®ªà¯à®ªà¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
-      teachScriptEnglish: "Desert soil region: Covering the Thar desert of western Rajasthan, west of the Aravalli range.",
-      examTip: "à®ªà®¾à®²à¯ˆ à®®à®£à¯ à®…à®²à¯à®²à®¤à¯ à®µà®±à®£à¯à®Ÿ à®®à®£à¯ à®…à®²à¯à®²à®¤à¯ à®¤à®¾à®°à¯ à®ªà®¾à®²à¯ˆà®µà®©à®®à¯ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®Ÿà®¾à®²à¯ à®°à®¾à®œà®¸à¯à®¤à®¾à®©à®¿à®©à¯ à®®à¯‡à®±à¯à®•à¯à®ªà¯ à®ªà®•à¯à®¤à®¿à®¯à¯ˆ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯."
+      teachScriptTamil: "இரண்டாவது இடம்: மன்னார் வளைகுடா. தமிழ்நாட்டின் தென்கிழக்கு கடற்கரைக்கும் இலங்கைக்கும் இடையே அமைந்துள்ள ஆழமற்ற கடல் பகுதியாகும். பாக் நீர்சந்திக்கு தெற்கே குறிக்கவும்.",
+      teachScriptEnglish: "Second place: Gulf of Mannar. Shallow marine bay located between southeastern Tamil Nadu and northwestern Sri Lanka, south of Palk Strait.",
+      examTipTamil: "இந்தியாவின் முதல் கடல்சார் உயிர்க்கோளக் காப்பகம் மன்னார் வளைகுடா ஆகும்.",
+      examTipEnglish: "India's first Marine Biosphere Reserve is the Gulf of Mannar."
     },
     {
       id: "ind_sundarbans",
-      unit: 6,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 2: à®•à®¾à®²à®¨à®¿à®²à¯ˆ & à®¤à®¾à®µà®°à®™à¯à®•à®³à¯",
-      category: "Forests & Vegetation",
-      mapType: "india",
-      nameTamil: "à®šà¯à®¨à¯à®¤à®°à®µà®©à®•à¯ à®•à®¾à®Ÿà¯à®•à®³à¯",
+      numLabel: "(iii)",
+      nameTamil: "சுந்தரவனக் காடுகள்",
       nameEnglish: "Sundarban",
+      category: "Forest / Delta",
       coords: { x: 69.5, y: 53.5 },
-      type: "polygon",
-      teachScriptTamil: "à®šà¯à®¨à¯à®¤à®°à®µà®©à®•à¯ à®•à®¾à®Ÿà¯à®•à®³à¯: à®®à¯‡à®±à¯à®•à¯ à®µà®™à¯à®•à®¾à®³à®®à¯ à®®à®±à¯à®±à¯à®®à¯ à®µà®™à¯à®•à®¾à®³à®¤à¯‡à®šà®®à¯ à®Žà®²à¯à®²à¯ˆà®¯à®¿à®²à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®‰à®²à®•à®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà¯†à®°à®¿à®¯ à®šà®¤à¯à®ªà¯à®ªà¯à®¨à®¿à®² à®®à®¾à®™à¯à®•à¯à®°à¯‹à®µà¯ à®Ÿà¯†à®²à¯à®Ÿà®¾ à®•à®¾à®Ÿà¯à®•à®³à¯ à®†à®•à¯à®®à¯.",
-      teachScriptEnglish: "Sundarbans: The world's largest tidal mangrove delta forest at the mouth of River Ganga in West Bengal.",
-      examTip: "à®šà®¤à¯à®ªà¯à®ªà¯à®¨à®¿à®²à®•à¯ à®•à®¾à®Ÿà¯à®•à®³à¯ à®…à®²à¯à®²à®¤à¯ à®®à®¾à®™à¯à®•à¯à®°à¯‹à®µà¯ à®•à®¾à®Ÿà¯à®•à®³à¯ à®…à®²à¯à®²à®¤à¯ à®°à®¾à®¯à®²à¯ à®ªà¯†à®™à¯à®•à®¾à®²à¯ à®ªà¯à®²à®¿à®•à®³à¯ à®šà®°à®£à®¾à®²à®¯à®®à¯ à®šà¯à®¨à¯à®¤à®°à®µà®©à®®à¯."
+      teachScriptTamil: "மூன்றாவது இடம்: சுந்தரவனக் காடுகள். மேற்கு வங்காளம் மற்றும் வங்காளதேசம் எல்லையில் அமைந்துள்ள உலகின் மிகப்பெரிய சதுப்புநில மாங்குரோவ் டெல்டா காடுகள் ஆகும்.",
+      teachScriptEnglish: "Third place: Sundarbans. The world's largest tidal mangrove delta forest located at the mouth of River Ganga and Brahmaputra in West Bengal.",
+      examTipTamil: "சதுப்புநிலக் காடுகள் அல்லது மாங்குரோவ் காடுகள் அல்லது ராயல் பெங்கால் புலிகள் வாழும் காடு சுந்தரவனம்.",
+      examTipEnglish: "Tidal mangrove forests or the home of Royal Bengal Tigers is Sundarbans."
+    },
+    {
+      id: "ind_thar_desert",
+      numLabel: "(iv)",
+      nameTamil: "பாலை மண் பகுதி",
+      nameEnglish: "Desert soil region",
+      category: "Soil / Physical Region",
+      coords: { x: 25.5, y: 42.0 },
+      teachScriptTamil: "நான்காவது இடம்: பாலை மண் பகுதி. ராஜஸ்தான் மாநிலத்தின் மேற்குப் பகுதியில் உள்ள தார் பாலைவனப் பகுதியாகும். ஆரவல்லி மலைக்கு மேற்கே உள்ள பகுதியை மஞ்சள் நிறத்திலோ அல்லது புள்ளியிட்டோ குறிக்கவும்.",
+      teachScriptEnglish: "Fourth place: Desert soil region. Located in the Thar desert of western Rajasthan, west of the Aravalli range. Shade this region in western Rajasthan.",
+      examTipTamil: "பாலை மண் அல்லது வறண்ட மண் அல்லது தார் பாலைவனம் எனக் கேட்டால் ராஜஸ்தானின் மேற்குப் பகுதியை குறிக்கவும்.",
+      examTipEnglish: "For desert soil or arid soil or the Great Indian Desert, shade western Rajasthan."
     },
     {
       id: "ind_mumbai",
-      unit: 10,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 3: à®µà¯‡à®³à®¾à®£à¯à®®à¯ˆ, à®¤à¯Šà®´à®¿à®²à¯ & à®ªà¯‹à®•à¯à®•à¯à®µà®°à®¤à¯à®¤à¯",
-      category: "Ports & Urban Centers",
-      mapType: "india",
-      nameTamil: "à®®à¯à®®à¯à®ªà¯ˆ à®¤à¯à®±à¯ˆà®®à¯à®•à®®à¯",
+      numLabel: "(v)",
+      nameTamil: "மும்பை துறைமுகம்",
       nameEnglish: "Mumbai",
+      category: "Port / City",
       coords: { x: 24.8, y: 63.5 },
-      type: "point",
-      teachScriptTamil: "à®®à¯à®®à¯à®ªà¯ˆ: à®®à®•à®¾à®°à®¾à®·à¯à®Ÿà®¿à®°à®¾ à®®à®¾à®¨à®¿à®²à®¤à¯à®¤à®¿à®©à¯ à®¤à®²à¯ˆà®¨à®•à®°à®®à¯ à®®à®±à¯à®±à¯à®®à¯ à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà¯†à®°à®¿à®¯ à®‡à®¯à®±à¯à®•à¯ˆ à®¤à¯à®±à¯ˆà®®à¯à®• à®¨à®•à®°à®®à¯. à®®à¯‡à®±à¯à®•à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®¯à®¿à®²à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®®à¯à®•à¯à®•à®¿à®¯ à®¤à¯€à®µà¯ à®¨à®•à®°à®¤à¯à®¤à¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
-      teachScriptEnglish: "Mumbai: Capital of Maharashtra and largest natural deepwater port on India's west coast.",
-      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®¨à¯à®´à¯ˆà®µà¯ à®µà®¾à®¯à®¿à®²à¯ à®…à®²à¯à®²à®¤à¯ à®¨à®¿à®¤à®¿à®¤à¯ à®¤à®²à¯ˆà®¨à®•à®°à®®à¯ à®…à®²à¯à®²à®¤à¯ à®ªà®°à¯à®¤à¯à®¤à®¿ à®†à®Ÿà¯ˆ à®¨à®•à®°à®®à¯ à®®à¯à®®à¯à®ªà¯ˆ."
+      teachScriptTamil: "ஐந்தாவது இடம்: மும்பை. மகாராஷ்டிரா மாநிலத்தின் தலைநகரம் மற்றும் இந்தியாவின் மிகப்பெரிய இயற்கை துறைமுக நகரம். மேற்கு கடற்கரையில் அமைந்துள்ள முக்கிய தீவு நகரத்தைக் குறிக்கவும்.",
+      teachScriptEnglish: "Fifth place: Mumbai. Capital of Maharashtra and largest natural deepwater port on India's western coast.",
+      examTipTamil: "இந்தியாவின் நுழைவு வாயில் அல்லது நிதித் தலைநகரம் அல்லது மேற்கு கடற்கரை துறைமுகம் மும்பை.",
+      examTipEnglish: "Gateway of India, financial capital, or major western port is Mumbai."
     },
     {
       id: "ind_air_chennai_kolkata",
-      unit: 10,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 3: à®ªà¯‹à®•à¯à®•à¯à®µà®°à®¤à¯à®¤à¯ & à®µà®¾à®©à¯à®µà®´à®¿",
-      category: "Transport & Routes",
-      mapType: "india",
-      nameTamil: "à®šà¯†à®©à¯à®©à¯ˆ - à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾ à®µà®¾à®©à¯à®µà®´à®¿à®ªà¯ à®ªà®¾à®¤à¯ˆ",
+      numLabel: "(vi)",
+      nameTamil: "சென்னை - கொல்கத்தா வான்வழிப் பாதை",
       nameEnglish: "Chennai to Kolkata Air route",
+      category: "Transport / Air Route",
       coords: { x: 58.5, y: 67.0 },
-      type: "route",
-      teachScriptTamil: "à®šà¯†à®©à¯à®©à¯ˆ - à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾ à®µà®¾à®©à¯à®µà®´à®¿à®ªà¯ à®ªà®¾à®¤à¯ˆ: à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®šà¯†à®©à¯à®©à¯ˆà®¯à¯ˆà®¯à¯à®®à¯ à®®à¯‡à®±à¯à®•à¯ à®µà®™à¯à®•à®¾à®³à®¤à¯à®¤à®¿à®©à¯ à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾à®µà¯ˆà®¯à¯à®®à¯ à®‡à®£à¯ˆà®•à¯à®•à¯à®®à¯ à®µà®³à¯ˆà®¨à¯à®¤ à®µà®¾à®©à¯à®µà®´à®¿à®ªà¯ à®ªà®¾à®¤à¯ˆà®¯à¯ˆ à®•à¯‹à®Ÿà®¾à®• à®µà®°à¯ˆà®¨à¯à®¤à¯ à®¨à®Ÿà¯à®µà®¿à®²à¯ à®µà®¿à®®à®¾à®©à®•à¯ à®•à¯à®±à®¿à®¯à¯€à®Ÿà¯ à®‡à®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯.",
-      teachScriptEnglish: "Chennai to Kolkata Air Route: Curved flight path connecting Chennai and Kolkata along the eastern coast with an airplane symbol.",
-      examTip: "à®•à®¿à®´à®•à¯à®•à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆ à®µà®¾à®©à¯à®µà®´à®¿à®ªà¯ à®ªà®¾à®¤à¯ˆ à®…à®²à¯à®²à®¤à¯ à®šà¯†à®©à¯à®©à¯ˆ - à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾ à®µà®¿à®®à®¾à®© à®µà®´à®¿ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®•à®ªà¯à®ªà®Ÿà¯à®®à¯."
+      teachScriptTamil: "ஆறாவது இடம்: சென்னை முதல் கொல்கத்தா வரையிலான வான்வழிப் பாதை. தமிழ்நாட்டின் சென்னையையும் மேற்கு வங்காளத்தின் கொல்கத்தாவையும் இணைக்கும் வளைந்த வான்வழிப் பாதையை கோடாக வரைந்து நடுவில் விமானக் குறியீடு இட வேண்டும்.",
+      teachScriptEnglish: "Sixth place: Chennai to Kolkata Air Route. Connect Chennai in Tamil Nadu to Kolkata in West Bengal with a coastal flight curve and an airplane symbol.",
+      examTipTamil: "கிழக்கு கடற்கரை வான்வழிப் பாதை அல்லது சென்னை - கொல்கத்தா விமான வழி எனக் கேட்கப்படும்.",
+      examTipEnglish: "Major eastern coastal flight corridor connecting Chennai and Kolkata."
     },
     {
       id: "ind_goa",
-      unit: 10,
-      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 3: à®®à®¾à®¨à®¿à®²à®™à¯à®•à®³à¯ & à®¤à¯à®±à¯ˆà®®à¯à®•à®®à¯",
-      category: "States & Ports",
-      mapType: "india",
-      nameTamil: "à®•à¯‹à®µà®¾",
+      numLabel: "(vii)",
+      nameTamil: "கோவா",
       nameEnglish: "Goa",
+      category: "State / Coast",
       coords: { x: 28.5, y: 78.0 },
-      type: "point",
-      teachScriptTamil: "à®•à¯‹à®µà®¾: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®•à®šà¯à®šà®¿à®±à®¿à®¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆ à®®à®¾à®¨à®¿à®²à®®à®¾à®•à¯à®®à¯. à®®à®•à®¾à®°à®¾à®·à¯à®Ÿà®¿à®°à®¾ à®®à®±à¯à®±à¯à®®à¯ à®•à®°à¯à®¨à®¾à®Ÿà®•à®¾à®µà®¿à®©à¯ à®Žà®²à¯à®²à¯ˆà®ªà¯ à®ªà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®‰à®³à¯à®³ à®•à¯Šà®™à¯à®•à®£à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®¯à®¿à®²à¯ à®•à¯‹à®µà®¾à®µà¯ˆ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
-      teachScriptEnglish: "Goa: India's smallest state located on the Konkan coast between Maharashtra and Karnataka, home to Marmagao Port.",
-      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®•à®šà¯à®šà®¿à®±à®¿à®¯ à®®à®¾à®¨à®¿à®²à®®à¯ à®…à®²à¯à®²à®¤à¯ à®®à®°à¯à®®à®•à¯‹à®µà®¾ à®¤à¯à®±à¯ˆà®®à¯à®•à®®à¯ à®‰à®³à¯à®³ à®®à®¾à®¨à®¿à®²à®®à¯ à®•à¯‹à®µà®¾."
+      teachScriptTamil: "ஏழாவது இடம்: கோவா. இந்தியாவின் மிகச்சிறிய கடற்கரை மாநிலமாகும். மகாராஷ்டிரா மற்றும் கர்நாடகாவின் எல்லைப் பகுதியில் உள்ள கொங்கண் கடற்கரையில் கோவாவை குறிக்கவும்.",
+      teachScriptEnglish: "Seventh place: Goa. India's smallest state located on the Konkan coast between Maharashtra and Karnataka, home to Marmagao Port.",
+      examTipTamil: "இந்தியாவின் மிகச்சிறிய மாநிலம் அல்லது மர்மகோவா துறைமுகம் உள்ள மாநிலம் கோவா.",
+      examTipEnglish: "Smallest state in India or Marmagao port state is Goa."
+    },
+    {
+      id: "ind_river_ganga",
+      numLabel: "(viii)",
+      nameTamil: "கங்கை ஆறு",
+      nameEnglish: "River Ganga",
+      category: "River",
+      coords: { x: 54.0, y: 36.0 },
+      teachScriptTamil: "எட்டாவது இடம்: கங்கை ஆறு. இமயமலையின் கங்கோத்ரியில் தொடங்கி உத்தரகாண்ட், உத்தரபிரதேசம், பீகார், மேற்கு வங்காளம் வழியாக வங்காள விரிகுடாவில் கலக்கும் வரை நீல நிற கோடாக வரைய வேண்டும்.",
+      teachScriptEnglish: "Eighth place: River Ganga. India's longest river flowing 2,525 km from Gangotri in the Himalayas through UP, Bihar, and West Bengal into the Bay of Bengal.",
+      examTipTamil: "இந்தியாவின் மிக நீளமான புனித ஆறு அல்லது வற்றாத இமயமலை ஆறு கங்கை.",
+      examTipEnglish: "India's longest perennial river flowing from Himalayas to Bay of Bengal is River Ganga."
     }
   ];
 
-  // ---------------------------------------------------------------------------
-  // 2. CURATED BOARD EXAM QUESTION SETS (Standard 8-Question Exam Papers)
-  // ---------------------------------------------------------------------------
-  const EXAM_QUESTION_SETS = [
-    {
-      id: "model_set_1",
-      titleTamil: "ðŸ“Œ à®…à®°à®šà¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà¯ à®®à®¾à®¤à®¿à®°à®¿ à®µà®¿à®©à®¾ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)",
-      titleEnglish: "ðŸ“Œ Board Exam Model Question (8 Places)",
-      mapType: "india",
-      introTamil: "à®®à®¾à®£à®µà®°à¯à®•à®³à¯‡! à®•à¯Šà®Ÿà¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà¯à®³à¯à®³ à®Žà®Ÿà¯à®Ÿà¯ à®‡à®Ÿà®™à¯à®•à®³à¯ˆ à®¨à®¾à®®à¯ à®‡à®¨à¯à®¤à®¿à®¯ à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®‡à®ªà¯à®ªà¯‹à®¤à¯ à®’à®µà¯à®µà¯Šà®©à¯à®±à®¾à®• à®Žà®™à¯à®•à¯, à®Žà®µà¯à®µà®¾à®±à¯ à®•à¯à®±à®¿à®ªà¯à®ªà®¤à¯ à®Žà®©à¯à®±à¯ à®ªà®¾à®°à¯à®ªà¯à®ªà¯‹à®®à¯.",
-      introEnglish: "Students, let us mark the following eight places one by one in the Indian map.",
-      placeIds: [
-        "ind_eastern_ghats",
-        "ind_gulf_of_mannar",
-        "ind_sundarbans",
-        "ind_thar_desert",
-        "ind_mumbai",
-        "ind_air_chennai_kolkata",
-        "ind_goa",
-        "ind_river_ganga"
-      ]
-    },
-    {
-      id: "model_set_2",
-      titleTamil: "ðŸ“Œ à®‡à®¨à¯à®¤à®¿à®¯ à®†à®±à¯à®•à®³à¯ & à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)",
-      titleEnglish: "ðŸ“Œ Major Rivers & Mountain Ranges (8 Places)",
-      mapType: "india",
-      introTamil: "à®®à®¾à®£à®µà®°à¯à®•à®³à¯‡! à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®†à®±à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯ˆ à®’à®µà¯à®µà¯Šà®©à¯à®±à®¾à®• à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®•à¯à®±à®¿à®¤à¯à®¤à¯à®ªà¯ à®ªà®´à®•à®²à®¾à®®à¯.",
-      introEnglish: "Students, let us mark the prominent rivers and mountain ranges of India.",
-      placeIds: [
-        "ind_himalayas",
-        "ind_karakoram",
-        "ind_aravalli",
-        "ind_western_ghats",
-        "ind_eastern_ghats",
-        "ind_river_ganga",
-        "ind_river_cauvery",
-        "ind_river_narmada"
-      ]
-    },
-    {
-      id: "model_set_3",
-      titleTamil: "ðŸ“Œ à®‰à®²à®• à®µà®°à¯ˆà®ªà®Ÿà®®à¯: à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)",
-      titleEnglish: "ðŸ“Œ World Map: World Wars (8 Places)",
-      mapType: "world",
-      introTamil: "à®®à®¾à®£à®µà®°à¯à®•à®³à¯‡! à®‰à®²à®• à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®®à¯à®¤à®²à¯ à®®à®±à¯à®±à¯à®®à¯ à®‡à®°à®£à¯à®Ÿà®¾à®®à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à®¿à®©à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®¨à®¾à®Ÿà¯à®•à®³à¯ˆ à®’à®µà¯à®µà¯Šà®©à¯à®±à®¾à®•à®•à¯ à®•à¯à®±à®¿à®ªà¯à®ªà¯‹à®®à¯.",
-      introEnglish: "Students, let us locate the major nations of the World Wars on the world map.",
-      placeIds: [
-        "world_britain",
-        "world_france",
-        "world_germany",
-        "world_italy",
-        "world_russia"
-      ]
-    }
-  ];
-
-  window.SOCIAL_MAP_LOCATIONS = SOCIAL_MAP_LOCATIONS;
-  window.EXAM_QUESTION_SETS = EXAM_QUESTION_SETS;
+  window.EXAM_MODEL_PLACES = EXAM_MODEL_PLACES;
 
   // ---------------------------------------------------------------------------
-  // 3. VECTOR SVG TEMPLATES WITH STATE BOUNDARIES (Pure Vector Graphics)
+  // 2. VECTOR SVG OUTLINE MAP OF INDIA WITH STATE BOUNDARIES
   // ---------------------------------------------------------------------------
-  const MAP_SVGS = {
-    india: `
+  function getIndiaMapSvgHtml(isEm) {
+    const statesHtml = isEm ? `
+      <text x="420" y="930">Tamil Nadu</text>
+      <text x="345" y="940">Kerala</text>
+      <text x="350" y="800">Karnataka</text>
+      <text x="268" y="760" fill="#f43f5e" font-weight="900">Goa</text>
+      <text x="475" y="760">Andhra Pradesh</text>
+      <text x="445" y="690">Telangana</text>
+      <text x="590" y="560">Odisha</text>
+      <text x="600" y="465">Jharkhand</text>
+      <text x="660" y="440">West Bengal</text>
+      <text x="560" y="380">Bihar</text>
+      <text x="450" y="350">Uttar Pradesh</text>
+      <text x="415" y="540">Madhya Pradesh</text>
+      <text x="330" y="650">Maharashtra</text>
+      <text x="200" y="540">Gujarat</text>
+      <text x="260" y="400">Rajasthan</text>
+      <text x="310" y="280">Punjab</text>
+      <text x="375" y="140">J&amp;K / Ladakh</text>
+    ` : `
+      <text x="420" y="930">தமிழ்நாடு</text>
+      <text x="345" y="940">கேரளா</text>
+      <text x="350" y="800">கர்நாடகா</text>
+      <text x="268" y="760" fill="#f43f5e" font-weight="900">கோவா</text>
+      <text x="475" y="760">ஆந்திரா</text>
+      <text x="445" y="690">தெலங்கானா</text>
+      <text x="590" y="560">ஒடிசா</text>
+      <text x="600" y="465">ஜார்க்கண்ட்</text>
+      <text x="660" y="440">மேற்கு வங்காளம்</text>
+      <text x="560" y="380">பீகார்</text>
+      <text x="450" y="350">உத்தர பிரதேசம்</text>
+      <text x="415" y="540">மத்திய பிரதேசம்</text>
+      <text x="330" y="650">மகாராஷ்டிரா</text>
+      <text x="200" y="540">குஜராத்</text>
+      <text x="260" y="400">ராஜஸ்தான்</text>
+      <text x="310" y="280">பஞ்சாப்</text>
+      <text x="375" y="140">காஷ்மீர் / லடாக்</text>
+    `;
+
+    const seaLabels = isEm ? `
+      <text x="140" y="780" fill="#38bdf8" opacity="0.45" font-size="22" font-weight="800" letter-spacing="4">ARABIAN SEA</text>
+      <text x="640" y="780" fill="#38bdf8" opacity="0.45" font-size="22" font-weight="800" letter-spacing="4">BAY OF BENGAL</text>
+      <text x="330" y="1120" fill="#38bdf8" opacity="0.45" font-size="20" font-weight="800" letter-spacing="4">INDIAN OCEAN</text>
+    ` : `
+      <text x="140" y="780" fill="#38bdf8" opacity="0.45" font-size="22" font-weight="800" letter-spacing="4">அரபிக்கடல்</text>
+      <text x="640" y="780" fill="#38bdf8" opacity="0.45" font-size="22" font-weight="800" letter-spacing="4">வங்காள விரிகுடா</text>
+      <text x="330" y="1120" fill="#38bdf8" opacity="0.45" font-size="20" font-weight="800" letter-spacing="4">இந்தியப் பெருங்கடல்</text>
+    `;
+
+    return `
       <svg id="tutor_svgIndiaMap" viewBox="0 0 1000 1150" class="vector-map-svg" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter id="mapGlow" x="-20%" y="-20%" width="140%" height="140%">
@@ -393,9 +196,7 @@
         </g>
 
         <!-- Ocean Water Body Labels -->
-        <text x="140" y="780" fill="#38bdf8" opacity="0.4" font-size="22" font-weight="800" letter-spacing="4">ARABIAN SEA (à®…à®°à®ªà®¿à®•à¯à®•à®Ÿà®²à¯)</text>
-        <text x="640" y="780" fill="#38bdf8" opacity="0.4" font-size="22" font-weight="800" letter-spacing="4">BAY OF BENGAL (à®µà®™à¯à®•à®¾à®³ à®µà®¿à®°à®¿à®•à¯à®Ÿà®¾)</text>
-        <text x="320" y="1120" fill="#38bdf8" opacity="0.4" font-size="20" font-weight="800" letter-spacing="4">INDIAN OCEAN (à®‡à®¨à¯à®¤à®¿à®¯à®ªà¯ à®ªà¯†à®°à¯à®™à¯à®•à®Ÿà®²à¯)</text>
+        ${seaLabels}
 
         <!-- Neighboring Landmarks -->
         <text x="120" y="280" fill="#64748b" opacity="0.5" font-size="16" font-weight="700">PAKISTAN</text>
@@ -449,7 +250,7 @@
              C 530 585, 510 610, 490 635 
              C 470 660, 455 690, 440 720 
              C 425 750, 410 780, 395 810 
-             C 380 840, 365 870 350 900 
+             C 380 840, 365 870, 350 900 
              C 340 920, 360 940, 380 960 
              C 400 980, 410 1000, 415 1010
              L 420 1010 
@@ -465,7 +266,7 @@
              C 405 200, 385 170, 375 140 
              C 365 110, 360 70, 370 40 Z" />
 
-        <!-- AUTHENTIC STATE BOUNDARIES (Classroom Atlas Lines) -->
+        <!-- STATE BOUNDARIES (Subtle classroom atlas lines) -->
         <g id="stateBoundaries" fill="none" stroke="#64748b" stroke-width="1.3" stroke-dasharray="3,3" opacity="0.75">
           <path d="M 420 1000 Q 395 940 380 880" />
           <path d="M 380 880 Q 405 860 435 850" />
@@ -488,25 +289,9 @@
           <path d="M 360 260 Q 430 250 500 285" />
         </g>
 
-        <!-- STATE LABELS (Matching Reference Photo: Odisha, Andhra Pradesh, Tamil Nadu, Jharkhand) -->
+        <!-- STATE LABELS -->
         <g id="stateLabels" fill="#94a3b8" font-size="12" font-weight="700" opacity="0.8" pointer-events="none">
-          <text x="420" y="930">Tamil Nadu</text>
-          <text x="345" y="940">Kerala</text>
-          <text x="350" y="800">Karnataka</text>
-          <text x="268" y="760" fill="#f43f5e" font-weight="800">Goa</text>
-          <text x="475" y="760">Andhra Pradesh</text>
-          <text x="445" y="690">Telangana</text>
-          <text x="590" y="560">Odisha</text>
-          <text x="600" y="465">Jharkhand</text>
-          <text x="660" y="440">West Bengal</text>
-          <text x="560" y="380">Bihar</text>
-          <text x="450" y="350">Uttar Pradesh</text>
-          <text x="415" y="540">Madhya Pradesh</text>
-          <text x="330" y="650">Maharashtra</text>
-          <text x="200" y="540">Gujarat</text>
-          <text x="260" y="400">Rajasthan</text>
-          <text x="310" y="280">Punjab</text>
-          <text x="375" y="140">J&amp;K / Ladakh</text>
+          ${statesHtml}
         </g>
 
         <!-- SRI LANKA OUTLINE -->
@@ -533,89 +318,21 @@
           <text x="830" y="790" fill="#38bdf8" font-size="11" font-weight="800">Andaman &amp; Nicobar</text>
         </g>
 
-        <!-- DYNAMIC TUTOR FEATURE & MARKER LAYER (Clean classroom feature illustration) -->
+        <!-- DYNAMIC TUTOR FEATURE LAYER (Clean feature drawing directly on map) -->
         <g id="tutorFeatureLayer"></g>
       </svg>
-    `,
-
-    world: `
-      <svg id="tutor_svgWorldMap" viewBox="0 0 1000 600" class="vector-map-svg" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="worldOcean" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#0a192f" />
-            <stop offset="100%" stop-color="#020c1b" />
-          </linearGradient>
-          <linearGradient id="worldLand" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#1e293b" />
-            <stop offset="100%" stop-color="#0f172a" />
-          </linearGradient>
-        </defs>
-
-        <!-- Ocean Background -->
-        <rect width="1000" height="600" fill="url(#worldOcean)" />
-
-        <!-- Ocean Labels -->
-        <text x="240" y="480" fill="#38bdf8" opacity="0.3" font-size="16" font-weight="800">PACIFIC OCEAN</text>
-        <text x="340" y="240" fill="#38bdf8" opacity="0.3" font-size="16" font-weight="800">ATLANTIC OCEAN</text>
-        <text x="680" y="440" fill="#38bdf8" opacity="0.3" font-size="16" font-weight="800">INDIAN OCEAN</text>
-        <text x="860" y="320" fill="#38bdf8" opacity="0.3" font-size="16" font-weight="800">PACIFIC OCEAN</text>
-
-        <!-- NORTH AMERICA OUTLINE -->
-        <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.8"
-          d="M 120 70 C 170 60, 230 70, 280 110 C 320 140, 290 190, 280 230 C 270 270, 240 310, 220 340 C 210 355, 195 330, 180 300 C 160 260, 130 220, 110 180 C 90 140, 95 90, 120 70 Z" />
-        <text x="190" y="200" fill="#64748b" opacity="0.6" font-size="14" font-weight="800">NORTH AMERICA</text>
-
-        <!-- SOUTH AMERICA OUTLINE -->
-        <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.8"
-          d="M 230 350 C 270 360, 310 390, 320 440 C 325 480, 295 530, 270 560 C 255 580, 240 560, 235 520 C 225 460, 215 410, 230 350 Z" />
-        <text x="250" y="450" fill="#64748b" opacity="0.6" font-size="13" font-weight="800">SOUTH AMERICA</text>
-
-        <!-- EURASIA (EUROPE + ASIA) OUTLINE -->
-        <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.8"
-          d="M 440 140 C 480 110, 540 100, 620 110 C 720 120, 810 130, 870 170 C 900 200, 880 250, 840 280 C 800 310, 780 350, 750 370 C 710 390, 670 380, 640 350 C 620 330, 580 340, 560 360 C 530 390, 500 370, 480 340 C 460 310, 480 280, 490 250 C 500 220, 450 200, 440 180 Z" />
-        <text x="490" y="220" fill="#64748b" opacity="0.6" font-size="13" font-weight="800">EUROPE</text>
-        <text x="700" y="220" fill="#64748b" opacity="0.6" font-size="14" font-weight="800">ASIA</text>
-
-        <!-- GREAT BRITAIN & IRELAND -->
-        <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.5"
-          d="M 455 170 C 465 160, 475 170, 470 190 C 465 200, 455 195, 455 170 Z" />
-
-        <!-- AFRICA OUTLINE -->
-        <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.8"
-          d="M 460 350 C 520 340, 570 380, 590 430 C 600 480, 570 540, 530 570 C 500 590, 480 560, 465 510 C 440 450, 430 400, 460 350 Z" />
-        <text x="500" y="460" fill="#64748b" opacity="0.6" font-size="14" font-weight="800">AFRICA</text>
-
-        <!-- AUSTRALIA OUTLINE -->
-        <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.8"
-          d="M 780 430 C 830 420, 870 440, 880 480 C 885 520, 840 550, 800 540 C 770 530, 750 490, 760 460 Z" />
-        <text x="800" y="490" fill="#64748b" opacity="0.6" font-size="13" font-weight="800">AUSTRALIA</text>
-
-        <!-- JAPAN ISLANDS -->
-        <g id="japanIslands" fill="#38bdf8" stroke="#38bdf8">
-          <ellipse cx="865" cy="225" rx="4" ry="12" transform="rotate(30 865 225)" />
-          <ellipse cx="875" cy="245" rx="5" ry="14" transform="rotate(25 875 245)" />
-          <text x="890" y="240" fill="#38bdf8" font-size="11" font-weight="800">JAPAN</text>
-        </g>
-
-        <g id="tutorFeatureLayer"></g>
-      </svg>
-    `
-  };
-
-  window.MAP_SVGS = MAP_SVGS;
+    `;
+  }
 
   // ---------------------------------------------------------------------------
-  // 4. MAP TUTOR CONTROLLER (Classroom Voice Teacher & Distraction-Free Map)
+  // 3. MAP TUTOR CONTROLLER (Classroom Voice Teacher & Distraction-Free Map)
   // ---------------------------------------------------------------------------
   const MapTutorEngine = {
-    currentSetId: "model_set_1",
     currentPlaceIndex: 0,
-    currentLang: "ta", // 'ta' for Tamil, 'en' for English
+    currentLang: "ta", // 'ta' for Tamil Medium, 'en' for English Medium
     isAutoPlaying: false,
     autoPlayTimer: null,
     isVoicePlaying: false,
-    showCumulative: false, // false = current place only; true = keep previous places marked
-    markedHistory: [],
     zoomLevel: 1.0,
     panX: 0,
     panY: 0,
@@ -623,12 +340,11 @@
     init() {
       if (document.getElementById('socialMapModal')) return;
 
-      // Auto detect language
+      // Auto detect language from active subject or body
       try {
-        const bodyText = document.body ? document.body.innerText : '';
         if (window.currentSubject && (window.currentSubject.id.endsWith('_em') || window.currentSubject.id === 'english')) {
           this.currentLang = 'en';
-        } else if (bodyText.includes('English Medium') && !bodyText.includes('à®¤à®®à®¿à®´à¯ à®µà®´à®¿')) {
+        } else if (document.body && document.body.innerText.includes('English Medium') && !document.body.innerText.includes('தமிழ் வழி')) {
           this.currentLang = 'en';
         }
       } catch (e) {
@@ -637,49 +353,53 @@
 
       const modalHtml = `
         <div id="socialMapModal" class="social-map-modal-overlay" style="display:none;" role="dialog" aria-modal="true">
+          
+          <!-- FIXED, PROMINENT, UNMISSABLE EXIT BUTTON AT TOP RIGHT -->
+          <button type="button" class="tutor-close-fixed-btn" onclick="MapTutorEngine.closeModal()" title="வரைபடத்தை மூடு (Exit Map)">
+            ❌ <span id="fixedExitLabel">வெளியேறு (Exit)</span>
+          </button>
+
           <div class="social-map-modal-container full-stage">
             
             <!-- Top Minimal Classroom Control Bar (No clutter!) -->
             <div class="tutor-top-bar">
               <div class="tutor-header-left">
-                <span style="font-size:22px; flex-shrink:0;">ðŸ—ºï¸</span>
-                <select id="tutorSetSelect" class="tutor-set-select" onchange="MapTutorEngine.switchQuestionSet(this.value)">
-                  <option value="model_set_1">ðŸ“Œ à®…à®°à®šà¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà¯ à®®à®¾à®¤à®¿à®°à®¿ à®µà®¿à®©à®¾ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)</option>
-                  <option value="model_set_2">ðŸ“Œ à®‡à®¨à¯à®¤à®¿à®¯ à®†à®±à¯à®•à®³à¯ & à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)</option>
-                  <option value="model_set_3">ðŸ“Œ à®‰à®²à®• à®µà®°à¯ˆà®ªà®Ÿà®®à¯: à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)</option>
-                  <option value="all_locations">ðŸ“š à®…à®©à¯ˆà®¤à¯à®¤à¯ 54 à®ªà®¾à®Ÿ à®‡à®Ÿà®™à¯à®•à®³à¯ (All Places)</option>
-                </select>
+                <span style="font-size:22px; flex-shrink:0;">🗺️</span>
+                <div class="exam-title-badge">
+                  <span id="examQnHeading" style="font-weight:800; font-size:13.5px; color:#38bdf8;">
+                    அரசு பொதுத்தேர்வு மாதிரி வினா (8 இடங்கள்)
+                  </span>
+                </div>
 
                 <div class="current-place-chip">
-                  <span id="tutorStepNumBadge" class="step-num-badge">(i) à®µà®¿à®©à®¾ 1/8</span>
-                  <span id="tutorCurrentPlaceTitle" class="current-place-name">EASTERN GHATS</span>
+                  <span id="tutorStepNumBadge" class="step-num-badge">(i) வினா 1/8</span>
+                  <span id="tutorCurrentPlaceTitle" class="current-place-name">கிழக்குத் தொடர்ச்சி மலை</span>
                 </div>
               </div>
 
               <!-- Action Controls -->
               <div class="tutor-header-right">
-                <button type="button" class="tutor-btn" onclick="MapTutorEngine.prevPlace()" title="à®®à¯à®¨à¯à®¤à¯ˆà®¯ à®‡à®Ÿà®®à¯">
-                  â®ï¸ <span class="btn-lbl">à®®à¯à®¨à¯à®¤à¯ˆà®¯à®¤à¯</span>
+                <button type="button" class="tutor-btn" onclick="MapTutorEngine.prevPlace()" title="முந்தைய இடம்">
+                  ⏮️ <span class="btn-lbl" id="lblPrev">முந்தையது</span>
                 </button>
-                <button type="button" id="btnAutoPlay" class="tutor-btn primary" onclick="MapTutorEngine.toggleAutoPlay()" title="à®µà®°à®¿à®šà¯ˆà®¯à®¾à®• à®¤à®¾à®©à®¾à®• à®•à®±à¯à®ªà®¿">
-                  â–¶ï¸ <span id="lblAutoPlay">à®µà®°à®¿à®šà¯ˆà®¯à®¾à®• à®•à®±à¯à®ªà®¿</span>
+                <button type="button" id="btnAutoPlay" class="tutor-btn primary" onclick="MapTutorEngine.toggleAutoPlay()" title="வரிசையாக தானாக கற்பி">
+                  ▶️ <span id="lblAutoPlay">வரிசையாக கற்பி</span>
                 </button>
-                <button type="button" class="tutor-btn primary" onclick="MapTutorEngine.nextPlace()" title="à®…à®Ÿà¯à®¤à¯à®¤ à®‡à®Ÿà®®à¯">
-                  <span class="btn-lbl">à®…à®Ÿà¯à®¤à¯à®¤à®¤à¯</span> â­ï¸
+                <button type="button" class="tutor-btn primary" onclick="MapTutorEngine.nextPlace()" title="அடுத்த இடம்">
+                  <span class="btn-lbl" id="lblNext">அடுத்தது</span> ⏭️
                 </button>
-                <button type="button" class="tutor-btn" onclick="MapTutorEngine.replayVoice()" title="à®•à¯à®°à®²à¯ à®µà®´à®¿à®•à®¾à®Ÿà¯à®Ÿà®²à¯ˆ à®®à¯€à®£à¯à®Ÿà¯à®®à¯ à®•à¯‡à®³à¯">
-                  ðŸ”„ <span class="btn-lbl">à®®à¯€à®£à¯à®Ÿà¯à®®à¯ à®šà¯Šà®²à¯</span>
+                <button type="button" class="tutor-btn" onclick="MapTutorEngine.replayVoice()" title="குரல் வழிகாட்டலை மீண்டும் சொல்">
+                  🔄 <span class="btn-lbl" id="lblReplay">மீண்டும் சொல்</span>
                 </button>
-                <button type="button" id="btnPlacesDrawer" class="tutor-btn" onclick="MapTutorEngine.togglePlacesDrawer()" title="à®µà®¿à®©à®¾à®µà®¿à®²à¯ à®‰à®³à¯à®³ 8 à®‡à®Ÿà®™à¯à®•à®³à®¿à®©à¯ à®ªà®Ÿà¯à®Ÿà®¿à®¯à®²à¯">
-                  ðŸ“‹ <span class="btn-lbl">8 à®‡à®Ÿà®™à¯à®•à®³à¯</span>
+                <button type="button" class="tutor-btn" onclick="MapTutorEngine.togglePlacesDrawer()" title="8 இடங்களின் பட்டியல்">
+                  📋 <span class="btn-lbl" id="lblPlacesDrawer">8 இடங்கள்</span>
                 </button>
-                <button type="button" id="btnLangToggle" class="tutor-btn" onclick="MapTutorEngine.toggleLanguage()" title="à®®à¯Šà®´à®¿ à®®à®¾à®±à¯à®±à¯ (Tamil / English)">
-                  ðŸŒ <span id="lblLang">English</span>
+                <button type="button" id="btnLangToggle" class="tutor-btn" onclick="MapTutorEngine.toggleLanguage()" title="மொழி மாற்று (Tamil / English)">
+                  🌐 <span id="lblLang">English</span>
                 </button>
-                <button type="button" class="tutor-btn" onclick="MapTutorEngine.downloadBlankMap()" title="à®µà¯†à®±à¯à®±à¯ à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à¯ˆà®ªà¯ à®ªà®¤à®¿à®µà®¿à®±à®•à¯à®•à¯ (Blank Map for Practice)">
-                  ðŸ“¥ <span class="btn-lbl">à®µà¯†à®±à¯à®±à¯ à®µà®°à¯ˆà®ªà®Ÿà®®à¯</span>
+                <button type="button" class="tutor-btn" onclick="MapTutorEngine.downloadBlankMap()" title="வெற்று வரைபடத்தைப் பதிவிறக்கு (Blank Map)">
+                  📥 <span class="btn-lbl" id="lblDownload">வெற்று வரைபடம்</span>
                 </button>
-                <button type="button" class="tutor-close-btn" onclick="MapTutorEngine.closeModal()" title="à®®à¯‚à®Ÿà¯">&times;</button>
               </div>
             </div>
 
@@ -689,25 +409,26 @@
 
               <!-- Floating Zoom & Pan Controls -->
               <div class="map-floating-zoom">
-                <button type="button" onclick="MapTutorEngine.zoom(1.25)" title="à®ªà¯†à®°à®¿à®¤à®¾à®•à¯à®•à¯ (Zoom In)">âž•</button>
-                <button type="button" onclick="MapTutorEngine.zoom(0.8)" title="à®šà®¿à®±à®¿à®¤à®¾à®•à¯à®•à¯ (Zoom Out)">âž–</button>
-                <button type="button" onclick="MapTutorEngine.resetZoom()" title="à®®à¯€à®Ÿà¯à®Ÿà®®à¯ˆ (Reset View)">ðŸŽ¯</button>
+                <button type="button" onclick="MapTutorEngine.zoom(1.25)" title="பெரிதாக்கு (Zoom In)">➕</button>
+                <button type="button" onclick="MapTutorEngine.zoom(0.8)" title="சிறிதாக்கு (Zoom Out)">➖</button>
+                <button type="button" onclick="MapTutorEngine.resetZoom()" title="மீட்டமை (Reset View)">🎯</button>
               </div>
 
               <!-- Sleek Bottom Audio Teacher Capsule -->
               <div class="teacher-voice-capsule" id="teacherVoiceCapsule">
                 <span class="pulsing-voice-dot"></span>
                 <div class="voice-capsule-text" id="voiceCapsuleText">
-                  à®†à®šà®¿à®°à®¿à®¯à®°à¯ à®•à¯à®°à®²à¯ à®µà®´à®¿à®•à®¾à®Ÿà¯à®Ÿà®²à¯ à®’à®²à®¿à®•à¯à®•à®¿à®±à®¤à¯...
+                  ஆசிரியர் குரல் வழிகாட்டல் ஒலிக்கிறது...
                 </div>
-                <button type="button" class="capsule-icon-btn" onclick="MapTutorEngine.replayVoice()" title="à®®à¯€à®£à¯à®Ÿà¯à®®à¯ à®•à¯‡à®³à¯">ðŸ”„</button>
-                <button type="button" class="capsule-icon-btn" onclick="MapTutorEngine.stopVoice()" title="à®’à®²à®¿à®¯à¯ˆ à®¨à®¿à®±à¯à®¤à¯à®¤à¯">â¹ï¸</button>
+                <button type="button" class="capsule-icon-btn" onclick="MapTutorEngine.replayVoice()" title="மீண்டும் சொல்">🔄</button>
+                <button type="button" class="capsule-icon-btn" onclick="MapTutorEngine.stopVoice()" title="ஒலியை நிறுத்து">⏹️</button>
+                <button type="button" class="capsule-exit-btn" onclick="MapTutorEngine.closeModal()" title="மூடு">❌</button>
               </div>
 
-              <!-- Slide-in Drawer for Question Places List (Hidden by default, opened on demand) -->
+              <!-- Slide-in Drawer for Question Places List -->
               <div id="placesDrawer" class="places-slide-drawer" style="display:none;">
                 <div class="drawer-header">
-                  <strong id="drawerHeading">ðŸ“‹ à®•à¯à®±à®¿à®•à¯à®• à®µà¯‡à®£à¯à®Ÿà®¿à®¯ à®‡à®Ÿà®™à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)</strong>
+                  <strong id="drawerHeading">📋 மாதிரி வினாவின் 8 இடங்கள்</strong>
                   <button type="button" class="drawer-close-btn" onclick="MapTutorEngine.togglePlacesDrawer()">&times;</button>
                 </div>
                 <div id="drawerListItems" class="drawer-list-items"></div>
@@ -719,6 +440,14 @@
       `;
 
       document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+      // Listen for Escape key to close modal
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          this.closeModal();
+        }
+      });
+
       this.injectStyles();
     },
 
@@ -728,7 +457,7 @@
         .social-map-modal-overlay {
           position: fixed;
           inset: 0;
-          z-index: 99999;
+          z-index: 9999999;
           background: rgba(3, 7, 18, 0.94);
           backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
@@ -744,17 +473,43 @@
           flex-direction: column;
           overflow: hidden;
           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          position: relative;
         }
         
+        /* Fixed, Prominent Red Close Button */
+        .tutor-close-fixed-btn {
+          position: fixed;
+          top: 10px;
+          right: 16px;
+          z-index: 999999999;
+          background: #dc2626;
+          color: #ffffff;
+          border: 2px solid #fecaca;
+          font-size: 13.5px;
+          font-weight: 900;
+          padding: 8px 16px;
+          border-radius: 24px;
+          cursor: pointer;
+          box-shadow: 0 4px 16px rgba(220, 38, 38, 0.65);
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          transition: all 0.2s;
+        }
+        .tutor-close-fixed-btn:hover {
+          background: #b91c1c;
+          transform: scale(1.05);
+        }
+
         /* Top Minimal Control Bar */
         .tutor-top-bar {
-          height: 54px;
+          height: 56px;
           background: #091424;
           border-bottom: 1.5px solid #1e3a5f;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 0 16px;
+          padding: 0 160px 0 16px; /* Right padding preserves room for fixed exit button */
           gap: 12px;
           flex-shrink: 0;
           z-index: 30;
@@ -766,24 +521,20 @@
           min-width: 0;
           flex: 1;
         }
-        .tutor-set-select {
+        .exam-title-badge {
           background: #142236;
           border: 1px solid #2d4566;
-          color: #f1f5f9;
-          font-weight: 700;
-          font-size: 13px;
-          padding: 6px 10px;
+          padding: 5px 12px;
           border-radius: 8px;
-          outline: none;
-          max-width: 320px;
+          white-space: nowrap;
         }
         .current-place-chip {
           display: flex;
           align-items: center;
           gap: 8px;
-          background: rgba(30, 41, 59, 0.85);
-          border: 1px solid #334155;
-          padding: 4px 12px;
+          background: rgba(30, 41, 59, 0.9);
+          border: 1px solid #38bdf8;
+          padding: 5px 14px;
           border-radius: 20px;
           white-space: nowrap;
           overflow: hidden;
@@ -797,7 +548,7 @@
           border-radius: 12px;
         }
         .current-place-name {
-          font-size: 15px;
+          font-size: 15.5px;
           font-weight: 900;
           color: #fbbf24;
           letter-spacing: 0.5px;
@@ -813,8 +564,8 @@
           border: 1px solid #2d4566;
           color: #38bdf8;
           font-weight: 700;
-          font-size: 12.5px;
-          padding: 6px 11px;
+          font-size: 12px;
+          padding: 6px 10px;
           border-radius: 7px;
           cursor: pointer;
           transition: all 0.2s;
@@ -833,16 +584,6 @@
           border: none;
           box-shadow: 0 3px 10px rgba(2, 132, 199, 0.4);
         }
-        .tutor-close-btn {
-          background: none;
-          border: none;
-          color: #94a3b8;
-          font-size: 28px;
-          cursor: pointer;
-          line-height: 1;
-          padding: 0 6px;
-        }
-        .tutor-close-btn:hover { color: #f87171; }
 
         /* Full Map Viewport */
         .map-stage-viewport {
@@ -911,11 +652,11 @@
           background: rgba(10, 20, 36, 0.94);
           border: 1.5px solid #0284c7;
           box-shadow: 0 10px 30px rgba(0,0,0,0.7), 0 0 20px rgba(2, 132, 199, 0.25);
-          padding: 8px 18px;
+          padding: 8px 16px;
           border-radius: 30px;
           display: flex;
           align-items: center;
-          gap: 12px;
+          gap: 10px;
           z-index: 20;
           backdrop-filter: blur(8px);
           max-width: 90vw;
@@ -933,7 +674,7 @@
           50% { transform: scale(1.6); opacity: 0.4; }
         }
         .voice-capsule-text {
-          font-size: 13.5px;
+          font-size: 13px;
           font-weight: 700;
           color: #f1f5f9;
           white-space: nowrap;
@@ -947,6 +688,19 @@
           font-size: 13px;
           width: 28px;
           height: 28px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .capsule-exit-btn {
+          background: #dc2626;
+          border: none;
+          color: #fff;
+          font-size: 12px;
+          width: 26px;
+          height: 26px;
           border-radius: 50%;
           cursor: pointer;
           display: flex;
@@ -1014,7 +768,7 @@
           color: #ffffff;
         }
 
-        /* Feature SVG Animations */
+        /* Feature Ripple Animation */
         .pin-ripple {
           animation: rippleRing 1.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
         }
@@ -1036,10 +790,15 @@
             overflow-x: auto;
           }
           .btn-lbl { display: none; }
-          .tutor-set-select { max-width: 100%; flex: 1; }
+          .tutor-close-fixed-btn {
+            top: 6px;
+            right: 8px;
+            padding: 5px 12px;
+            font-size: 12px;
+          }
           .teacher-voice-capsule {
-            bottom: 10px;
-            padding: 6px 14px;
+            bottom: 8px;
+            padding: 6px 12px;
             max-width: 95vw;
           }
         }
@@ -1053,25 +812,10 @@
     // -------------------------------------------------------------------------
     // OPEN / CLOSE CONTROLLER
     // -------------------------------------------------------------------------
-    openModal(targetUnit = 'all', targetLocId = null, mode = 'teach') {
+    openModal(targetUnit = 'all') {
       this.init();
       const modal = document.getElementById('socialMapModal');
       modal.style.display = 'flex';
-
-      // Pick question set
-      if (targetUnit && targetUnit !== 'all') {
-        const uNum = parseInt(targetUnit, 10);
-        if ([1, 5, 9].includes(uNum)) {
-          this.currentSetId = "model_set_3";
-        } else {
-          this.currentSetId = "model_set_1";
-        }
-      } else {
-        this.currentSetId = "model_set_1";
-      }
-
-      const sel = document.getElementById('tutorSetSelect');
-      if (sel) sel.value = this.currentSetId;
 
       this.currentPlaceIndex = 0;
       this.renderStage();
@@ -1087,27 +831,10 @@
       if (modal) modal.style.display = 'none';
     },
 
-    switchQuestionSet(setId) {
-      this.stopVoice();
-      this.currentSetId = setId;
-      this.currentPlaceIndex = 0;
-      this.renderStage();
-      this.teachPlace(0, true);
-    },
-
-    getActivePlacesList() {
-      if (this.currentSetId === 'all_locations') {
-        return SOCIAL_MAP_LOCATIONS;
-      }
-      const set = EXAM_QUESTION_SETS.find(s => s.id === this.currentSetId) || EXAM_QUESTION_SETS[0];
-      return set.placeIds.map(id => SOCIAL_MAP_LOCATIONS.find(l => l.id === id)).filter(Boolean);
-    },
-
     renderStage() {
-      const places = this.getActivePlacesList();
-      const currentMapType = (places[0] && places[0].mapType) ? places[0].mapType : 'india';
+      const isEm = this.currentLang === 'en';
       const wrapper = document.getElementById('mapSvgStageWrapper');
-      wrapper.innerHTML = MAP_SVGS[currentMapType];
+      wrapper.innerHTML = getIndiaMapSvgHtml(isEm);
       this.resetZoom();
       this.bindPan();
       this.renderDrawerList();
@@ -1117,26 +844,21 @@
     // TEACH PLACE (Full Visual Illustration on Map + Voice Narration)
     // -------------------------------------------------------------------------
     teachPlace(index, isGreeting = false) {
-      const places = this.getActivePlacesList();
-      if (places.length === 0) return;
-
-      if (index < 0) index = places.length - 1;
-      if (index >= places.length) index = 0;
+      if (index < 0) index = EXAM_MODEL_PLACES.length - 1;
+      if (index >= EXAM_MODEL_PLACES.length) index = 0;
       this.currentPlaceIndex = index;
 
-      const place = places[index];
+      const place = EXAM_MODEL_PLACES[index];
       const isEm = this.currentLang === 'en';
-      const total = places.length;
+      const total = EXAM_MODEL_PLACES.length;
 
       // Update Top Bar
       const stepBadge = document.getElementById('tutorStepNumBadge');
-      if (stepBadge) stepBadge.textContent = `(${index + 1}) à®µà®¿à®©à®¾ ${index + 1}/${total}`;
+      if (stepBadge) stepBadge.textContent = isEm ? `(${index + 1}) Qn ${index + 1}/${total}` : `(${index + 1}) வினா ${index + 1}/${total}`;
 
       const titleEl = document.getElementById('tutorCurrentPlaceTitle');
       if (titleEl) {
-        titleEl.textContent = isEm
-          ? `${place.nameEnglish} (${place.nameTamil})`
-          : `${place.nameTamil} (${place.nameEnglish})`;
+        titleEl.textContent = isEm ? place.nameEnglish : place.nameTamil;
       }
 
       // Draw Feature Directly on Map
@@ -1152,14 +874,12 @@
     },
 
     nextPlace() {
-      const places = this.getActivePlacesList();
-      this.currentPlaceIndex = (this.currentPlaceIndex + 1) % places.length;
+      this.currentPlaceIndex = (this.currentPlaceIndex + 1) % EXAM_MODEL_PLACES.length;
       this.teachPlace(this.currentPlaceIndex, false);
     },
 
     prevPlace() {
-      const places = this.getActivePlacesList();
-      this.currentPlaceIndex = (this.currentPlaceIndex - 1 + places.length) % places.length;
+      this.currentPlaceIndex = (this.currentPlaceIndex - 1 + EXAM_MODEL_PLACES.length) % EXAM_MODEL_PLACES.length;
       this.teachPlace(this.currentPlaceIndex, false);
     },
 
@@ -1167,21 +887,19 @@
     // RENDER FEATURE DIRECTLY ON SVG (Matching User's Reference Photo)
     // -------------------------------------------------------------------------
     renderFeatureOnMap(place) {
-      const svg = document.getElementById('tutor_svgIndiaMap') || document.getElementById('tutor_svgWorldMap');
+      const svg = document.getElementById('tutor_svgIndiaMap');
       if (!svg) return;
 
       const layer = svg.querySelector('#tutorFeatureLayer');
       if (!layer) return;
 
       const isEm = this.currentLang === 'en';
-      const namePrimary = isEm ? place.nameEnglish : place.nameTamil;
-      const nameSecondary = isEm ? place.nameTamil : place.nameEnglish;
+      const labelText = isEm ? place.nameEnglish.toUpperCase() : place.nameTamil;
 
       // 1. EASTERN GHATS (Orange/Red mountain corridor matching photo!)
       if (place.id === 'ind_eastern_ghats') {
         layer.innerHTML = `
           <g id="feature_eastern_ghats">
-            <!-- Mountain range boundary polygon running through Odisha, AP, TN -->
             <path d="M 640 470 
                      C 660 500, 650 540, 625 580 
                      C 600 620, 560 670, 520 720 
@@ -1192,7 +910,6 @@
                      C 615 470, 630 460, 640 470 Z" 
                   fill="rgba(239, 68, 68, 0.25)" stroke="#ef4444" stroke-width="4" stroke-linejoin="round" />
             
-            <!-- Mountain peak indicators inside the range -->
             <path d="M 625 520 L 632 505 L 639 520 Z 
                      M 590 580 L 598 565 L 606 580 Z 
                      M 545 660 L 553 645 L 561 660 Z 
@@ -1200,16 +917,11 @@
                      M 445 815 L 452 802 L 459 815 Z" 
                   fill="#ef4444" stroke="#ffffff" stroke-width="1.2" />
 
-            <!-- Center Marker Dot as in user photo -->
             <circle cx="530" cy="650" r="14" fill="#ef4444" stroke="#ffffff" stroke-width="2.5" class="pin-ripple" />
             <circle cx="530" cy="650" r="8" fill="#ef4444" />
 
-            <!-- Bold Text Directly on Map (Matching user photo!) -->
-            <text x="565" y="700" fill="#ef4444" font-size="26" font-weight="900" letter-spacing="2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              EASTERN GHATS
-            </text>
-            <text x="565" y="730" fill="#fca5a5" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              à®•à®¿à®´à®•à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ
+            <text x="565" y="700" fill="#ef4444" font-size="26" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              ${labelText}
             </text>
           </g>
         `;
@@ -1223,11 +935,8 @@
             <ellipse cx="450" cy="970" rx="42" ry="26" fill="rgba(6, 182, 212, 0.3)" stroke="#06b6d4" stroke-width="3" stroke-dasharray="6,4" />
             <path d="M 425 960 Q 440 952 455 960 T 475 960 M 425 978 Q 440 970 455 978 T 475 978" fill="none" stroke="#22d3ee" stroke-width="3" />
             <circle cx="450" cy="970" r="9" fill="#06b6d4" stroke="#ffffff" stroke-width="2.5" class="pin-ripple" />
-            <text x="495" y="965" fill="#06b6d4" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              GULF OF MANNAR
-            </text>
-            <text x="495" y="995" fill="#a5f3fc" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              à®®à®©à¯à®©à®¾à®°à¯ à®µà®³à¯ˆà®•à¯à®Ÿà®¾
+            <text x="495" y="970" fill="#06b6d4" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              ${labelText}
             </text>
           </g>
         `;
@@ -1241,11 +950,8 @@
             <path d="M 670 515 C 695 510, 730 515, 745 535 C 735 555, 700 565, 680 550 C 665 540, 660 525, 670 515 Z" 
                   fill="rgba(16, 185, 129, 0.35)" stroke="#10b981" stroke-width="3.5" />
             <circle cx="700" cy="535" r="10" fill="#10b981" stroke="#ffffff" stroke-width="2.5" class="pin-ripple" />
-            <text x="735" y="535" fill="#10b981" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              SUNDARBANS
-            </text>
-            <text x="735" y="565" fill="#6ee7b7" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              à®šà¯à®¨à¯à®¤à®°à®µà®©à®•à¯ à®•à®¾à®Ÿà¯à®•à®³à¯
+            <text x="735" y="540" fill="#10b981" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              ${labelText}
             </text>
           </g>
         `;
@@ -1259,11 +965,8 @@
             <path d="M 210 360 C 260 340, 300 370, 310 420 C 315 450, 290 480, 240 480 C 190 475, 180 420, 210 360 Z" 
                   fill="rgba(245, 158, 11, 0.28)" stroke="#f59e0b" stroke-width="3.5" stroke-dasharray="8,4" />
             <circle cx="255" cy="420" r="11" fill="#f59e0b" stroke="#ffffff" stroke-width="2.5" class="pin-ripple" />
-            <text x="210" y="335" fill="#f59e0b" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              DESERT SOIL REGION
-            </text>
-            <text x="210" y="365" fill="#fde68a" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              à®ªà®¾à®²à¯ˆ à®®à®£à¯ à®ªà®•à¯à®¤à®¿ (à®¤à®¾à®°à¯)
+            <text x="210" y="340" fill="#f59e0b" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              ${labelText}
             </text>
           </g>
         `;
@@ -1276,13 +979,9 @@
           <g id="feature_mumbai">
             <circle cx="248" cy="635" r="20" fill="none" stroke="#ef4444" stroke-width="2.5" class="pin-ripple" />
             <circle cx="248" cy="635" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
-            <!-- Anchor symbol -->
             <path d="M 248 625 L 248 642 M 242 632 L 254 632 M 241 640 Q 248 647 255 640" fill="none" stroke="#ffffff" stroke-width="2" />
-            <text x="120" y="625" fill="#ef4444" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              MUMBAI
-            </text>
-            <text x="120" y="655" fill="#fca5a5" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              à®®à¯à®®à¯à®ªà¯ˆ à®¤à¯à®±à¯ˆà®®à¯à®•à®®à¯
+            <text x="120" y="635" fill="#ef4444" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              ${labelText}
             </text>
           </g>
         `;
@@ -1295,18 +994,14 @@
           <g id="feature_air_chennai_kolkata">
             <path d="M 485 835 Q 610 680 685 505" fill="none" stroke="#a855f7" stroke-width="4.5" stroke-dasharray="9,6" />
             <circle cx="485" cy="835" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
-            <text x="500" y="845" fill="#e9d5ff" font-size="15" font-weight="800">Chennai (à®šà¯†à®©à¯à®©à¯ˆ)</text>
+            <text x="500" y="845" fill="#e9d5ff" font-size="15" font-weight="800">${isEm ? 'Chennai' : 'சென்னை'}</text>
             <circle cx="685" cy="505" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
-            <text x="700" y="500" fill="#e9d5ff" font-size="15" font-weight="800">Kolkata (à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾)</text>
-            <!-- Airplane Icon -->
+            <text x="700" y="500" fill="#e9d5ff" font-size="15" font-weight="800">${isEm ? 'Kolkata' : 'கொல்கத்தா'}</text>
             <g transform="translate(565, 660) rotate(-45)">
-              <text x="0" y="0" font-size="30" text-anchor="middle" dominant-baseline="middle">âœˆï¸</text>
+              <text x="0" y="0" font-size="30" text-anchor="middle" dominant-baseline="middle">✈️</text>
             </g>
-            <text x="590" y="615" fill="#c084fc" font-size="22" font-weight="900" letter-spacing="1" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              AIR ROUTE: CHENNAI âœˆ KOLKATA
-            </text>
-            <text x="590" y="645" fill="#f3e8ff" font-size="17" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              à®šà¯†à®©à¯à®©à¯ˆ - à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾ à®µà®¾à®©à¯à®µà®´à®¿à®ªà¯ à®ªà®¾à®¤à¯ˆ
+            <text x="590" y="625" fill="#c084fc" font-size="22" font-weight="900" letter-spacing="1" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              ${labelText}
             </text>
           </g>
         `;
@@ -1319,11 +1014,8 @@
           <g id="feature_goa">
             <circle cx="285" cy="780" r="18" fill="none" stroke="#ec4899" stroke-width="2.5" class="pin-ripple" />
             <circle cx="285" cy="780" r="9" fill="#ec4899" stroke="#ffffff" stroke-width="2" />
-            <text x="180" y="775" fill="#ec4899" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              GOA
-            </text>
-            <text x="180" y="805" fill="#fbcfe8" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              à®•à¯‹à®µà®¾ à®®à®¾à®¨à®¿à®²à®®à¯
+            <text x="180" y="785" fill="#ec4899" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              ${labelText}
             </text>
           </g>
         `;
@@ -1338,70 +1030,14 @@
                   fill="none" stroke="#0284c7" stroke-width="5.5" stroke-linecap="round" />
             <path d="M 500 330 L 512 336 L 506 345 Z M 600 425 L 612 432 L 606 441 Z" fill="#38bdf8" />
             <circle cx="430" cy="250" r="7" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
-            <text x="442" y="245" fill="#93c5fd" font-size="14" font-weight="800">Gangotri (à®•à®™à¯à®•à¯‹à®¤à¯à®°à®¿)</text>
-            <text x="520" y="335" fill="#38bdf8" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              RIVER GANGA
-            </text>
-            <text x="520" y="365" fill="#bfdbfe" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              à®•à®™à¯à®•à¯ˆ à®†à®±à¯ (2,525 à®•à®¿.à®®à¯€)
+            <text x="442" y="245" fill="#93c5fd" font-size="14" font-weight="800">${isEm ? 'Gangotri' : 'கங்கோத்ரி'}</text>
+            <text x="520" y="340" fill="#38bdf8" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              ${labelText}
             </text>
           </g>
         `;
         return;
       }
-
-      // 9. THE GREAT HIMALAYAS
-      if (place.id === 'ind_himalayas') {
-        layer.innerHTML = `
-          <g id="feature_himalayas">
-            <path d="M 370 120 Q 520 220 780 270" fill="none" stroke="#ef4444" stroke-width="5" stroke-linecap="round" />
-            <path d="M 420 160 L 428 140 L 436 160 Z M 520 215 L 530 190 L 540 215 Z M 650 250 L 660 225 L 670 250 Z M 740 275 L 750 250 L 760 275 Z" fill="#ef4444" />
-            <text x="510" y="180" fill="#ef4444" font-size="24" font-weight="900" letter-spacing="2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              THE HIMALAYAS
-            </text>
-            <text x="510" y="210" fill="#fca5a5" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              à®‡à®®à®¯à®®à®²à¯ˆà®¤à¯ à®¤à¯Šà®Ÿà®°à¯
-            </text>
-          </g>
-        `;
-        return;
-      }
-
-      // 10. WESTERN GHATS
-      if (place.id === 'ind_western_ghats') {
-        layer.innerHTML = `
-          <g id="feature_western_ghats">
-            <path d="M 270 635 C 265 670, 285 710, 305 750 C 325 790, 345 830, 365 870 C 385 910, 405 950, 415 990" 
-                  fill="none" stroke="#10b981" stroke-width="5" stroke-linecap="round" />
-            <text x="140" y="800" fill="#10b981" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              WESTERN GHATS
-            </text>
-            <text x="140" y="830" fill="#6ee7b7" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              à®®à¯‡à®±à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ
-            </text>
-          </g>
-        `;
-        return;
-      }
-
-      // DEFAULT FALLBACK: Standard High-Visibility Vector Marker
-      const viewBox = svg.viewBox.baseVal;
-      const vx = (place.coords.x / 100) * viewBox.width;
-      const vy = (place.coords.y / 100) * viewBox.height;
-
-      layer.innerHTML = `
-        <g id="feature_default">
-          <circle cx="${vx}" cy="${vy}" r="18" fill="none" stroke="#f59e0b" stroke-width="2.5" class="pin-ripple" />
-          <g transform="translate(${vx}, ${vy})">
-            <circle cx="0" cy="0" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2.5" filter="url(#mapGlow)" />
-            <path d="M 0 0 L -8 -22 A 9 9 0 1 1 8 -22 Z" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5" />
-            <circle cx="0" cy="-22" r="4" fill="#ffffff" />
-            
-            <rect x="14" y="-34" width="${Math.max(90, namePrimary.length * 10 + 20)}" height="26" rx="5" fill="#091220" stroke="#f59e0b" stroke-width="1.5" />
-            <text x="22" y="-17" fill="#ffffff" font-size="13" font-weight="900">${namePrimary}</text>
-          </g>
-        </g>
-      `;
     },
 
     // -------------------------------------------------------------------------
@@ -1415,22 +1051,21 @@
 
       let speechText = '';
       if (isGreeting) {
-        const greeting = isEm 
+        speechText = isEm 
           ? "Students, let us mark the following places one by one in the Indian map. "
-          : "à®®à®¾à®£à®µà®°à¯à®•à®³à¯‡! à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®•à¯Šà®Ÿà¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà¯à®³à¯à®³ à®‡à®Ÿà®™à¯à®•à®³à¯ˆ à®¨à®¾à®®à¯ à®‡à®ªà¯à®ªà¯‹à®¤à¯ à®’à®µà¯à®µà¯Šà®©à¯à®±à®¾à®• à®Žà®™à¯à®•à¯, à®Žà®µà¯à®µà®¾à®±à¯ à®•à¯à®±à®¿à®ªà¯à®ªà®¤à¯ à®Žà®©à¯à®±à¯ à®ªà®¾à®°à¯à®ªà¯à®ªà¯‹à®®à¯. ";
-        speechText = greeting;
+          : "மாணவர்களே! வரைபடத்தில் கொடுக்கப்பட்டுள்ள இடங்களை நாம் இப்போது ஒவ்வொன்றாக எங்கு, எவ்வாறு குறிப்பது என்று பார்ப்போம். ";
       }
 
       if (isEm) {
-        speechText += `${place.nameEnglish}. ${place.teachScriptEnglish} Board exam tip: ${place.examTip}`;
+        speechText += `${place.nameEnglish}. ${place.teachScriptEnglish} Board exam tip: ${place.examTipEnglish}`;
+        if (capText) {
+          capText.textContent = `Teacher: ${place.nameEnglish} - ${place.examTipEnglish}`;
+        }
       } else {
-        speechText += `${place.nameTamil}. ${place.teachScriptTamil} à®¤à¯‡à®°à¯à®µà¯ à®•à¯à®±à®¿à®ªà¯à®ªà¯: ${place.examTip}`;
-      }
-
-      if (capText) {
-        capText.textContent = isEm
-          ? `Teacher: ${place.nameEnglish} - ${place.examTip}`
-          : `à®†à®šà®¿à®°à®¿à®¯à®°à¯: ${place.nameTamil} - ${place.examTip}`;
+        speechText += `${place.nameTamil}. ${place.teachScriptTamil} தேர்வு குறிப்பு: ${place.examTipTamil}`;
+        if (capText) {
+          capText.textContent = `ஆசிரியர்: ${place.nameTamil} - ${place.examTipTamil}`;
+        }
       }
 
       if (!('speechSynthesis' in window)) return;
@@ -1462,8 +1097,7 @@
     },
 
     replayVoice() {
-      const places = this.getActivePlacesList();
-      const place = places[this.currentPlaceIndex];
+      const place = EXAM_MODEL_PLACES[this.currentPlaceIndex];
       if (place) {
         this.speakTeacherPlace(place, false);
       }
@@ -1478,7 +1112,7 @@
       if (this.autoPlayTimer) clearTimeout(this.autoPlayTimer);
       const btn = document.getElementById('btnAutoPlay');
       const isEm = this.currentLang === 'en';
-      if (btn) btn.querySelector('#lblAutoPlay').textContent = isEm ? 'Auto-Teach All' : 'à®µà®°à®¿à®šà¯ˆà®¯à®¾à®• à®•à®±à¯à®ªà®¿';
+      if (btn) btn.querySelector('#lblAutoPlay').textContent = isEm ? 'Auto-Teach All' : 'வரிசையாக கற்பி';
     },
 
     toggleAutoPlay() {
@@ -1489,19 +1123,17 @@
       this.isAutoPlaying = true;
       const btn = document.getElementById('btnAutoPlay');
       const isEm = this.currentLang === 'en';
-      if (btn) btn.querySelector('#lblAutoPlay').textContent = isEm ? 'Stop Playing' : 'à®¨à®¿à®±à¯à®¤à¯à®¤à¯';
+      if (btn) btn.querySelector('#lblAutoPlay').textContent = isEm ? 'Stop Playing' : 'நிறுத்து';
       this.teachPlace(this.currentPlaceIndex, false);
     },
 
     advanceAutoPlay() {
-      const places = this.getActivePlacesList();
       this.currentPlaceIndex++;
-      if (this.currentPlaceIndex < places.length) {
+      if (this.currentPlaceIndex < EXAM_MODEL_PLACES.length) {
         this.autoPlayTimer = setTimeout(() => {
           this.teachPlace(this.currentPlaceIndex, false);
         }, 2200);
       } else {
-        // Wrap up auto-play
         this.stopVoice();
         this.announceCompletion();
       }
@@ -1512,7 +1144,7 @@
       const isEm = this.currentLang === 'en';
       const msg = isEm
         ? "Excellent job students! We have completed all places on the map. Practice marking them on a blank paper map for your board exams!"
-        : "à®…à®°à¯à®®à¯ˆ à®®à®¾à®£à®µà®°à¯à®•à®³à¯‡! à®•à¯Šà®Ÿà¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®…à®©à¯ˆà®¤à¯à®¤à¯ à®‡à®Ÿà®™à¯à®•à®³à¯ˆà®¯à¯à®®à¯ à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®µà¯†à®±à¯à®±à®¿à®•à®°à®®à®¾à®•à®•à¯ à®•à¯à®±à®¿à®¤à¯à®¤à¯à®ªà¯ à®ªà®´à®•à®¿à®µà®¿à®Ÿà¯à®Ÿà¯‹à®®à¯. à®‡à®¨à¯à®¤ à®‡à®Ÿà®™à¯à®•à®³à¯ˆ à®µà¯†à®±à¯à®±à¯ à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®ªà¯†à®©à¯à®šà®¿à®²à®¾à®²à¯ à®µà®°à¯ˆà®¨à¯à®¤à¯ à®ªà®¯à®¿à®±à¯à®šà®¿ à®šà¯†à®¯à¯à®¯à¯à®™à¯à®•à®³à¯!";
+        : "அருமை மாணவர்களே! கொடுக்கப்பட்ட அனைத்து இடங்களையும் வரைபடத்தில் வெற்றிகரமாகக் குறித்துப் பழகிவிட்டோம். இந்த இடங்களை வெற்று வரைபடத்தில் பென்சிலால் வரைந்து பயிற்சி செய்யுங்கள்!";
       const utter = new SpeechSynthesisUtterance(msg);
       utter.lang = isEm ? 'en-IN' : 'ta-IN';
       utter.rate = 0.95;
@@ -1530,22 +1162,19 @@
     },
 
     renderDrawerList() {
-      const places = this.getActivePlacesList();
       const container = document.getElementById('drawerListItems');
       if (!container) return;
       const isEm = this.currentLang === 'en';
 
-      container.innerHTML = places.map((place, idx) => {
+      container.innerHTML = EXAM_MODEL_PLACES.map((place, idx) => {
         const title = isEm ? place.nameEnglish : place.nameTamil;
-        const sub = isEm ? place.nameTamil : place.nameEnglish;
         const isAct = idx === this.currentPlaceIndex;
         return `
           <div class="drawer-item ${isAct ? 'active' : ''}" onclick="MapTutorEngine.selectFromDrawer(${idx})">
             <div>
               <div style="font-weight:800; font-size:13px;">(${idx + 1}) ${title}</div>
-              <div style="font-size:11px; opacity:0.8;">${sub}</div>
             </div>
-            <span style="font-size:14px;">ðŸ“</span>
+            <span style="font-size:14px;">📍</span>
           </div>
         `;
       }).join('');
@@ -1562,22 +1191,44 @@
     toggleLanguage() {
       this.currentLang = this.currentLang === 'ta' ? 'en' : 'ta';
       this.updateLanguageTexts();
+      this.renderStage();
       this.teachPlace(this.currentPlaceIndex, false);
     },
 
     updateLanguageTexts() {
       const isEm = this.currentLang === 'en';
       const lblLang = document.getElementById('lblLang');
-      if (lblLang) lblLang.textContent = isEm ? 'à®¤à®®à®¿à®´à¯' : 'English';
+      if (lblLang) lblLang.textContent = isEm ? 'தமிழ்' : 'English';
+
+      const fixedExit = document.getElementById('fixedExitLabel');
+      if (fixedExit) fixedExit.textContent = isEm ? 'Exit (Close)' : 'வெளியேறு (Exit)';
+
+      const examHead = document.getElementById('examQnHeading');
+      if (examHead) examHead.textContent = isEm ? 'Board Exam Model Question (8 Places)' : 'அரசு பொதுத்தேர்வு மாதிரி வினா (8 இடங்கள்)';
+
+      const lblPrev = document.getElementById('lblPrev');
+      if (lblPrev) lblPrev.textContent = isEm ? 'Previous' : 'முந்தையது';
+
+      const lblNext = document.getElementById('lblNext');
+      if (lblNext) lblNext.textContent = isEm ? 'Next' : 'அடுத்தது';
+
+      const lblReplay = document.getElementById('lblReplay');
+      if (lblReplay) lblReplay.textContent = isEm ? 'Replay Voice' : 'மீண்டும் சொல்';
+
+      const lblDrawer = document.getElementById('lblPlacesDrawer');
+      if (lblDrawer) lblDrawer.textContent = isEm ? '8 Places' : '8 இடங்கள்';
+
+      const lblDl = document.getElementById('lblDownload');
+      if (lblDl) lblDl.textContent = isEm ? 'Blank Map' : 'வெற்று வரைபடம்';
 
       const drawerHead = document.getElementById('drawerHeading');
-      if (drawerHead) drawerHead.textContent = isEm ? 'ðŸ“‹ Locations in this Question (8 Places)' : 'ðŸ“‹ à®•à¯à®±à®¿à®•à¯à®• à®µà¯‡à®£à¯à®Ÿà®¿à®¯ à®‡à®Ÿà®™à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)';
+      if (drawerHead) drawerHead.textContent = isEm ? '📋 Locations in this Question (8 Places)' : '📋 மாதிரி வினாவின் 8 இடங்கள்';
 
       const autoBtn = document.getElementById('btnAutoPlay');
       if (autoBtn) {
         autoBtn.querySelector('#lblAutoPlay').textContent = this.isAutoPlaying
-          ? (isEm ? 'Stop Playing' : 'à®¨à®¿à®±à¯à®¤à¯à®¤à¯')
-          : (isEm ? 'Auto-Teach All' : 'à®µà®°à®¿à®šà¯ˆà®¯à®¾à®• à®•à®±à¯à®ªà®¿');
+          ? (isEm ? 'Stop Playing' : 'நிறுத்து')
+          : (isEm ? 'Auto-Teach All' : 'வரிசையாக கற்பி');
       }
 
       this.renderDrawerList();
@@ -1603,7 +1254,7 @@
     },
 
     applyTransform() {
-      const svg = document.getElementById('tutor_svgIndiaMap') || document.getElementById('tutor_svgWorldMap');
+      const svg = document.getElementById('tutor_svgIndiaMap');
       if (svg) {
         svg.style.transform = `translate(${this.panX}px, ${this.panY}px) scale(${this.zoomLevel})`;
         svg.style.transformOrigin = 'center center';
@@ -1641,7 +1292,7 @@
     // DOWNLOAD BLANK VECTOR MAP FOR PAPER EXAM PRACTICE
     // -------------------------------------------------------------------------
     downloadBlankMap() {
-      const svg = document.getElementById('tutor_svgIndiaMap') || document.getElementById('tutor_svgWorldMap');
+      const svg = document.getElementById('tutor_svgIndiaMap');
       if (!svg) return;
 
       const clone = svg.cloneNode(true);
@@ -1655,7 +1306,7 @@
 
       const downloadLink = document.createElement('a');
       downloadLink.href = svgUrl;
-      downloadLink.download = `Blank_Map_10th_Social_${Date.now()}.svg`;
+      downloadLink.download = `Blank_Map_India_10th_Social_${Date.now()}.svg`;
       document.body.appendChild(downloadLink);
       downloadLink.click();
       document.body.removeChild(downloadLink);
@@ -1663,15 +1314,15 @@
 
       const isEm = this.currentLang === 'en';
       const msg = isEm
-        ? 'âœ… Blank map downloaded successfully! Print this vector map to practice pencil markings for Board Exams.'
-        : 'âœ… à®µà¯†à®±à¯à®±à¯ à®µà®°à¯ˆà®ªà®Ÿà®®à¯ à®ªà®¤à®¿à®µà®¿à®±à®•à¯à®•à®®à¯ à®šà¯†à®¯à¯à®¯à®ªà¯à®ªà®Ÿà¯à®Ÿà®¤à¯! à®‡à®¤à¯ˆ à®ªà®¿à®°à®¿à®£à¯à®Ÿà¯ à®Žà®Ÿà¯à®¤à¯à®¤à¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà¯à®•à¯à®•à®¾à®• à®ªà¯†à®©à¯à®šà®¿à®²à®¾à®²à¯ à®•à¯à®±à®¿à®¤à¯à®¤à¯ à®ªà®¯à®¿à®±à¯à®šà®¿ à®ªà¯†à®±à®²à®¾à®®à¯.';
+        ? '✅ Blank map downloaded successfully! Print this vector map to practice pencil markings for Board Exams.'
+        : '✅ வெற்று வரைபடம் பதிவிறக்கம் செய்யப்பட்டது! இதை பிரிண்ட் எடுத்து பொதுத்தேர்வுக்காக பென்சிலால் குறித்து பயிற்சி பெறலாம்.';
       alert(msg);
     }
   };
 
   window.MapTutorEngine = MapTutorEngine;
-  window.openSocialMapTutor = function(unitId, locId, mode) {
-    MapTutorEngine.openModal(unitId, locId, mode);
+  window.openSocialMapTutor = function(unitId) {
+    MapTutorEngine.openModal(unitId);
   };
 
 })();

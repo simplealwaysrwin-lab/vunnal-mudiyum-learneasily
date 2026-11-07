@@ -657,6 +657,82 @@ const SOCIAL_EM_UNIT_2_DATA = {
             4. <b>Khadar:</b> Newer, younger alluvium deposited every year along river floodplains; exceptionally fertile for agriculture.
           </div>`,
           explanation: "The Northern plains feature Bhabar (pebbles), Tarai (marsh), Bhangar (older alluvium), and Khadar (newer fertile alluvium)."
+        }        },
+        {
+          id: "soc_em_2_9",
+          type: "8m",
+          mark: "8 Marks",
+          examYear: "2023",
+          examTag: "2023* 8M High Yield",
+          isImportant: true,
+          q: "Tabulate the differences between Himalayan Rivers and Peninsular Rivers.",
+          ans: `<div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
+            <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13.5px; line-height:1.6;">
+              <thead>
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:8px 10px; border:1px solid #94a3b8; text-align:left; width:18%;">Feature</th>
+                  <th style="padding:8px 10px; border:1px solid #94a3b8; text-align:left; width:41%;">Himalayan Rivers</th>
+                  <th style="padding:8px 10px; border:1px solid #94a3b8; text-align:left; width:41%;">Peninsular Rivers</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1; font-weight:700;">1. Origin</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Originate from the snow-covered peaks and glaciers of the Himalayas.</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Originate in the Peninsular plateau and Western Ghats.</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1; font-weight:700;">2. Water Source</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Fed by both melting glaciers and monsoon rainfall.</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Fed predominantly by seasonal southwest and northeast monsoons.</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1; font-weight:700;">3. Nature of Flow</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;"><b>Perennial rivers</b> (continuous water flow throughout the entire year).</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;"><b>Seasonal rivers</b> (heavy flow in monsoons; dry up or reduce to trickles in summer).</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1; font-weight:700;">4. Length & Basin</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Very long courses with gigantic catchment and drainage basins.</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Relatively shorter courses with smaller drainage basins.</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1; font-weight:700;">5. Valley Shape</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Form deep, precipitous 'V'-shaped valleys and steep gorges.</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Flow through shallow, broad, graded valleys with low gradients.</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1; font-weight:700;">6. Sediments & Alluvium</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Carry huge loads of alluvium, forming vast fertile depositional floodplains.</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Carry less sediment as they flow across hard, resistant rocky terrains.</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1; font-weight:700;">7. Course & Utility</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Meander actively in flat plains; well-suited for inland navigation and canal irrigation.</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Follow straight, stable channels with waterfalls; highly suitable for hydroelectric power generation.</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1; font-weight:700;">8. Examples</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Indus, Ganga, Brahmaputra.</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">Mahanadi, Godavari, Krishna, Cauvery, Narmada, Tapti.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="margin-top:8px; font-size:13px; color:#0369a1; background:#f0f9ff; padding:8px 12px; border-radius:6px; border-left:4px solid #0284c7;">
+            <b>Exam Tip:</b> For an 8-mark question: Tabulating all 8 comparison criteria ensures clarity and fetches full marks.
+          </div>`,
+          ansTamil: "à®‡à®®à®¯à®®à®²à¯ˆ à®†à®±à¯à®•à®³à¯ à®ªà®©à®¿ à®‰à®°à¯à®•à¯à®µà®¤à®¾à®²à¯ à®ªà®¾à®¯à¯à®®à¯ à®µà®±à¯à®±à®¾à®¤ à®¨à¯€à®£à¯à®Ÿ à®œà¯€à®µ à®¨à®¤à®¿à®•à®³à¯ (à®•à®™à¯à®•à¯ˆ, à®šà®¿à®¨à¯à®¤à¯). à®¤à¯€à®ªà®•à®±à¯à®ª à®†à®±à¯à®•à®³à¯ à®®à®´à¯ˆà®¯à¯ˆà®šà¯ à®šà®¾à®°à¯à®¨à¯à®¤ à®•à¯à®±à¯à®•à®¿à®¯ à®ªà®°à¯à®µà®•à®¾à®² à®†à®±à¯à®•à®³à¯ (à®•à®¾à®µà®¿à®°à®¿, à®•à¯‹à®¤à®¾à®µà®°à®¿).",
+          checkpoints: [
+            { pt: 1, text: "Origin: Glaciers of the Himalayas vs Highlands and Western Ghats of Peninsular plateau.", taText: "à®¤à¯‹à®±à¯à®±à®®à¯: à®‡à®®à®¯à®®à®²à¯ˆà®¯à®¿à®©à¯ à®ªà®©à®¿à®ªà¯à®ªà®¾à®±à¯ˆà®•à®³à®¿à®²à¯ à®¤à¯‹à®©à¯à®±à¯à®ªà®µà¯ˆ vs à®¤à¯€à®ªà®•à®±à¯à®ª à®ªà¯€à®Ÿà®ªà¯‚à®®à®¿ à®®à®±à¯à®±à¯à®®à¯ à®®à¯‡à®±à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆà®¯à®¿à®²à¯ à®¤à¯‹à®©à¯à®±à¯à®ªà®µà¯ˆ." },
+            { pt: 2, text: "Water source: Fed by both snowmelt and rainfall vs purely rain-fed monsoon dependence.", taText: "à®¨à¯€à®°à¯ à®†à®¤à®¾à®°à®®à¯: à®ªà®©à®¿ à®‰à®°à¯à®•à¯à®¤à®²à¯ à®®à®±à¯à®±à¯à®®à¯ à®®à®´à¯ˆ à®‡à®°à®£à¯à®Ÿà®¿à®©à®¾à®²à¯à®®à¯ à®¨à¯€à®°à¯à®ªà¯†à®±à¯à®ªà®µà¯ˆ vs à®®à®´à¯ˆà®¯à¯ˆ à®®à®Ÿà¯à®Ÿà¯à®®à¯‡ à®¨à®®à¯à®ªà®¿à®¯à¯à®³à¯à®³à®µà¯ˆ." },
+            { pt: 3, text: "Flow nature: Perennial rivers flowing all year vs seasonal monsoon-dependent rivers.", taText: "à®†à®±à¯à®±à®¿à®©à¯ à®¤à®©à¯à®®à¯ˆ: à®†à®£à¯à®Ÿà¯ à®®à¯à®´à¯à®µà®¤à¯à®®à¯ à®“à®Ÿà¯à®®à¯ à®µà®±à¯à®±à®¾à®¤ à®œà¯€à®µ à®¨à®¤à®¿à®•à®³à¯ vs à®®à®´à¯ˆà®•à¯ à®•à®¾à®²à®¤à¯à®¤à®¿à®²à¯ à®®à®Ÿà¯à®Ÿà¯à®®à¯ à®ªà®¾à®¯à¯à®®à¯ à®ªà®°à¯à®µà®•à®¾à®² à®†à®±à¯à®•à®³à¯." },
+            { pt: 4, text: "Length and basin: Very long with vast drainage basins vs shorter length with smaller basins.", taText: "à®¨à¯€à®³à®®à¯ & à®µà®Ÿà®¿à®¨à®¿à®²à®®à¯: à®¨à¯€à®£à¯à®Ÿ à®¤à¯Šà®²à¯ˆà®µà¯ à®ªà®¾à®¯à¯à®®à¯ à®ªà¯†à®°à¯à®®à¯ à®µà®Ÿà®¿à®¨à®¿à®²à®™à¯à®•à®³à¯ vs à®’à®ªà¯à®ªà¯€à®Ÿà¯à®Ÿà®³à®µà®¿à®²à¯ à®•à¯à®±à¯à®•à®¿à®¯ à®šà®¿à®±à®¿à®¯ à®µà®Ÿà®¿à®¨à®¿à®²à®™à¯à®•à®³à¯." },
+            { pt: 5, text: "Valleys: Deep steep V-shaped valleys and gorges vs shallow, wide, graded valleys.", taText: "à®ªà®³à¯à®³à®¤à¯à®¤à®¾à®•à¯à®•à¯à®•à®³à¯: à®†à®´à®®à®¾à®© 'V' à®µà®Ÿà®¿à®µ à®ªà®³à¯à®³à®¤à¯à®¤à®¾à®•à¯à®•à¯à®•à®³à¯ vs à®…à®•à®²à®®à®¾à®© à®†à®´à®®à¯ à®•à¯à®±à¯ˆà®¨à¯à®¤ à®ªà®³à¯à®³à®¤à¯à®¤à®¾à®•à¯à®•à¯à®•à®³à¯." },
+            { pt: 6, text: "Deposition: Heavy sediment loads forming fertile alluvial plains vs lower sediment deposition.", taText: "à®ªà®Ÿà®¿à®µà¯à®•à®³à¯: à®šà¯†à®´à¯à®®à¯ˆà®¯à®¾à®© à®µà®£à¯à®Ÿà®²à¯ à®®à®£à¯ à®ªà®Ÿà®¿à®µà¯à®•à®³à¯ˆ à®‰à®°à¯à®µà®¾à®•à¯à®•à¯à®ªà®µà¯ˆ vs à®•à¯à®±à¯ˆà®µà®¾à®© à®µà®£à¯à®Ÿà®²à¯ à®ªà®Ÿà®¿à®µà¯à®•à®³à¯." },
+            { pt: 7, text: "Course and utility: Meandering course suitable for inland navigation vs straight course ideal for hydroelectricity.", taText: "à®ªà¯‹à®•à¯à®•à¯ & à®ªà®¯à®©à¯: à®µà®³à¯ˆà®¨à¯à®¤à¯ à®¨à¯†à®³à®¿à®¨à¯à®¤à¯ à®ªà®¾à®¯à¯à®¨à¯à®¤à¯ à®¨à¯€à®°à¯à®µà®´à®¿à®ªà¯ à®ªà¯‹à®•à¯à®•à¯à®µà®°à®¤à¯à®¤à®¿à®±à¯à®•à¯ à®‰à®•à®¨à¯à®¤à®µà¯ˆ vs à®¨à¯€à®°à¯à®®à®¿à®©à¯à®šà®¾à®° à®‰à®±à¯à®ªà®¤à¯à®¤à®¿à®•à¯à®•à¯ à®‰à®•à®¨à¯à®¤à®µà¯ˆ." },
+            { pt: 8, text: "Examples: Indus, Ganga, Brahmaputra vs Mahanadi, Godavari, Krishna, Cauvery, Narmada, Tapti.", taText: "à®Žà®Ÿà¯à®¤à¯à®¤à¯à®•à¯à®•à®¾à®Ÿà¯à®Ÿà¯: à®šà®¿à®¨à¯à®¤à¯, à®•à®™à¯à®•à¯ˆ, à®ªà®¿à®°à®®à¯à®®à®ªà¯à®¤à¯à®¤à®¿à®°à®¾ vs à®®à®•à®¾à®¨à®¤à®¿, à®•à¯‹à®¤à®¾à®µà®°à®¿, à®•à®¿à®°à¯à®·à¯à®£à®¾, à®•à®¾à®µà®¿à®°à®¿, à®¨à®°à¯à®®à®¤à¯ˆ, à®¤à®ªà®¤à®¿." }
+          ]
         }
       ]
     }

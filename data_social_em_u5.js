@@ -62,30 +62,54 @@ const SOCIAL_EM_UNIT_5_DATA = {
           id: "soc_em_5_4",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Board Exam 5M High Yield",
-          q: "Explain the underlying causes and worldwide socio-economic impact of the Great Depression of 1929.",
-          ans: `<div style="line-height:1.7;">
-            <b>1. Causes of the Great Depression:</b><br>
-            • <b>Post-War Overproduction:</b> Industrial output and farm mechanization produced surplus goods that consumers could not afford due to low wages.<br>
-            • <b>Wall Street Stock Market Crash:</b> Wild financial speculation on Wall Street collapsed on 'Black Thursday' (October 24, 1929).<br>
-            • <b>Withdrawal of US Capital:</b> American banks abruptly recalled short-term loans from European nations, causing Germany and Britain to default.<br><br>
-            <b>2. Global Impact:</b><br>
-            • <b>Contraction of International Trade:</b> Protective tariffs (like the US Smoot-Hawley Act) shrank global exports by more than 50%.<br>
-            • <b>Rise of Totalitarian Dictators:</b> Severe economic distress eroded confidence in democracy, facilitating the rise of Hitler in Germany and Mussolini in Italy.<br>
-            • <b>Roosevelt's New Deal:</b> US President Franklin D. Roosevelt instituted the 'New Deal', implementing public works, social security, and financial reforms to restore employment.
+          examTag: "Board Exam 8M High Yield",
+          q: "Explain the causes and worldwide consequences of the Great Depression of 1929.",
+          ans: `<div style="line-height:1.75; font-size:14px;">
+            <div style="background:#f1f5f9; padding:8px 12px; border-radius:6px; border-left:4px solid #475569; margin-bottom:10px;">
+              <b>Introduction:</b><br>
+              The economic crisis that originated in the United States in 1929 rapidly spread across the world, creating the longest, deepest, and most devastating <b>Great Depression</b> in modern world history.
+            </div>
+
+            <div style="color:#b91c1c; font-weight:700; font-size:15px; margin:10px 0 4px 0;">I. Causes of the Great Depression:</div>
+            <ol style="margin:4px 0 12px 20px; padding-left:0;">
+              <li style="margin-bottom:6px;"><b>Stock Market Crash:</b> On October 24, 1929 ('Black Thursday'), stock prices on the New York Wall Street Exchange suffered a historic, catastrophic collapse.</li>
+              <li style="margin-bottom:6px;"><b>Overproduction:</b> Farm mechanization and post-war industrial expansion created a massive surplus of goods that drastically exceeded market demand.</li>
+              <li style="margin-bottom:6px;"><b>Drop in Purchasing Power:</b> Due to wage stagnation and farm distress, common consumers lacked the financial purchasing power to buy manufactured goods.</li>
+              <li style="margin-bottom:6px;"><b>Banking Crisis:</b> As borrowers defaulted and panicked depositors withdrew savings, over 9,000 commercial banks collapsed, freezing liquidity.</li>
+              <li style="margin-bottom:6px;"><b>Collapse of Credit:</b> Commercial banks suspended new lending; simultaneously, the US abruptly recalled short-term loans given to post-war European nations.</li>
+            </ol>
+
+            <div style="color:#1d4ed8; font-weight:700; font-size:15px; margin:10px 0 4px 0;">II. Worldwide Consequences:</div>
+            <ol style="margin:4px 0 12px 20px; padding-left:0;">
+              <li style="margin-bottom:6px;"><b>Mass Unemployment:</b> Tens of millions lost jobs worldwide; industrial unemployment surged beyond 25% to 30%.</li>
+              <li style="margin-bottom:6px;"><b>Closure of Industrial Units:</b> Vanishing consumer demand forced thousands of factories and businesses to curtail production or permanently shut down.</li>
+              <li style="margin-bottom:6px;"><b>Agricultural Ruin:</b> Crop and agricultural commodity prices plummeted by 60%, driving farmers into insurmountable debt and bankruptcy.</li>
+              <li style="margin-bottom:6px;"><b>Collapse of International Trade:</b> Nations enacted retaliatory protective import tariffs, resulting in international trade contracting by more than 50%.</li>
+              <li style="margin-bottom:6px;"><b>Surge in Poverty:</b> Millions lost their life savings, giving rise to acute poverty, homelessness, and economic destitution worldwide.</li>
+              <li style="margin-bottom:6px;"><b>Political Upheaval & Rise of Dictators:</b> The failure of democratic capitalism destroyed faith in parliamentary regimes, facilitating the rise of Fascism in Italy (Mussolini) and Nazism in Germany (Hitler).</li>
+            </ol>
+
+            <div style="background:#ecfdf5; padding:8px 12px; border-radius:6px; border-left:4px solid #10b981; margin-top:8px;">
+              <b>Conclusion:</b><br>
+              The Great Depression shattered global economic stability. Global recovery was eventually spearheaded by US President Franklin D. Roosevelt's <b>'New Deal'</b> programs, featuring public works investments, social welfare, and financial regulation.
+            </div>
+
+            <div style="margin-top:8px; font-size:13px; color:#6b21a8; background:#faf5ff; padding:6px 12px; border-radius:6px; border-left:4px solid #a855f7;">
+              <b>Exam Tip:</b> For an 8-mark question: Structure your answer under clear headings: Introduction + 5 Causes + 6 Worldwide Consequences + Conclusion to score full marks.
+            </div>
           </div>`,
-          ansTamil: "மிகை உற்பத்தி மற்றும் பங்குச் சந்தை வீழ்ச்சியால் பெரும் மந்தம் ஏற்பட்டது. வர்த்தகம் முடங்கியது, சர்வாதிகாரிகள் உருவாயினர்; ரூஸ்வெல்ட்டின் புதிய ஒப்பந்தம் மூலம் அமெரிக்கா மீண்டது.",
+          ansTamil: "1929 à®ªà®™à¯à®•à¯à®šà¯ à®šà®¨à¯à®¤à¯ˆ à®µà¯€à®´à¯à®šà¯à®šà®¿ à®®à®±à¯à®±à¯à®®à¯ à®®à®¿à®•à¯ˆ à®‰à®±à¯à®ªà®¤à¯à®¤à®¿à®¯à®¾à®²à¯ à®ªà¯†à®°à¯à®®à¯ à®®à®¨à¯à®¤à®®à¯ à®à®±à¯à®ªà®Ÿà¯à®Ÿà®¤à¯. à®µà®™à¯à®•à®¿à®•à®³à¯ à®®à¯à®Ÿà®•à¯à®•à®®à¯, à®µà¯‡à®²à¯ˆà®¯à®¿à®©à¯à®®à¯ˆ, à®šà®°à¯à®µà®¤à¯‡à®š à®µà®°à¯à®¤à¯à®¤à®• à®šà®°à®¿à®µà¯, à®µà®¿à®µà®šà®¾à®¯ à®ªà®¾à®¤à®¿à®ªà¯à®ªà¯ à®®à®±à¯à®±à¯à®®à¯ à®šà®°à¯à®µà®¾à®¤à®¿à®•à®¾à®°à®¿à®•à®³à¯ à®Žà®´à¯à®šà¯à®šà®¿à®•à¯à®•à¯ à®‡à®¤à¯ à®µà®¿à®¤à¯à®¤à®¿à®Ÿà¯à®Ÿà®¤à¯.",
           checkpoints: [
-            { pt: 1, text: "Wall Street Crash: Triggered on October 24, 1929 ('Black Thursday') in New York.", taText: "வால் ஸ்ட்ரீட் சரிவு: 1929 அக்டோபர் 24 'கருப்பு வியாழன்' அன்று நியூயார்க்கில் தொடங்கியது." },
-            { pt: 2, text: "Overproduction crisis: Industrial and agricultural supply drastically exceeded consumer demand.", taText: "மிகை உற்பத்தி: சந்தைத் தேவையை விட விவசாய மற்றும் தொழிற்சாலை உற்பத்தி பலமடங்கு அதிகரித்தது." },
-            { pt: 3, text: "Banking collapse: Over 9,000 commercial banks collapsed, wiping out life savings.", taText: "வங்கி முடக்கம்: பல்லாயிரக்கணக்கான வங்கிகள் திவாலாகி மக்களின் சேமிப்புகள் அழிந்தன." },
-            { pt: 4, text: "Global contagion: US abruptly withdrew loans, crippling European post-war economies.", taText: "உலகளாவிய தாக்கம்: அமெரிக்கா கடன்களைத் திரும்பப் பெற்றதால் ஐரோப்பிய நாடுகள் வீழ்ந்தன." },
-            { pt: 5, text: "Mass unemployment: Over 25% of the industrial workforce lost jobs worldwide.", taText: "கடும் வேலையின்மை: உலகளவில் தொழிலாளர்களில் 25% பேர் வேலை இழந்து தவித்தனர்." },
-            { pt: 6, text: "Agricultural depression: Farm commodity prices plunged by 60%, ruining small farmers.", taText: "விவசாய வீழ்ச்சி: தானிய விலைகள் 60% சரிந்து விவசாயிகள் கடனில் மூழ்கினர்." },
-            { pt: 7, text: "Trade collapse: Global international trade contracted by more than 50% under protectionism.", taText: "வணிக சரிவு: பாதுகாப்பு வரிகளால் சர்வதேச வணிகம் 50%-க்கும் மேல் முடங்கியது." },
-            { pt: 8, text: "Rise of dictators: Economic chaos fueled the rise of Hitler in Germany and Mussolini in Italy.", taText: "சர்வாதிகாரிகள் எழுச்சி: பொருளாதார நெருக்கடியைப் பயன்படுத்தி ஹிட்லரும் முசோலினியும் ஆட்சியைக் கைப்பற்றினர்." },
-            { pt: 9, text: "FDR New Deal: President Roosevelt launched massive public works programs for relief.", taText: "ரூஸ்வெல்ட் புதிய ஒப்பந்தம்: அரசு திட்டங்கள் மூலம் வேலைவாய்ப்புகளை உருவாக்கி அமெரிக்கா மீண்டது." },
-            { pt: 10, text: "Welfare state: Emphasized social security, minimum wages, and banking regulations.", taText: "மக்கள் நலம்: சமூக பாதுகாப்பு மற்றும் வங்கி ஒழுங்குமுறை சட்டங்கள் இயற்றப்பட்டன." }
+            { pt: 1, text: "Introduction: Severe worldwide economic depression triggered in 1929 originating in the USA.", taText: "à®…à®±à®¿à®®à¯à®•à®®à¯: 1929-à®²à¯ à®…à®®à¯†à®°à®¿à®•à¯à®•à®¾à®µà®¿à®²à¯ à®¤à¯Šà®Ÿà®™à¯à®•à®¿ à®‰à®²à®•à¯†à®™à¯à®•à¯à®®à¯ à®ªà®°à®µà®¿à®¯ à®ªà¯†à®°à¯à®®à¯ à®ªà¯Šà®°à¯à®³à®¾à®¤à®¾à®° à®®à®¨à¯à®¤à®¨à®¿à®²à¯ˆ." },
+            { pt: 2, text: "Stock market crash: Historic Wall Street crash on 'Black Thursday' (October 24, 1929).", taText: "à®•à®¾à®°à®£à®®à¯ 1 - à®ªà®™à¯à®•à¯à®šà¯ à®šà®¨à¯à®¤à¯ˆ à®µà¯€à®´à¯à®šà¯à®šà®¿: 1929 à®…à®•à¯à®Ÿà¯‹à®ªà®°à¯ 24 à®µà®¾à®²à¯ à®¸à¯à®Ÿà¯à®°à¯€à®Ÿà¯ à®ªà®™à¯à®•à¯à®šà¯ à®šà®¨à¯à®¤à¯ˆ à®µà¯€à®´à¯à®šà¯à®šà®¿." },
+            { pt: 3, text: "Overproduction crisis: Industrial and agricultural output far outpaced market demand.", taText: "à®•à®¾à®°à®£à®®à¯ 2 - à®…à®¤à®¿à®• à®‰à®±à¯à®ªà®¤à¯à®¤à®¿: à®µà®¿à®±à¯à®ªà®©à¯ˆà®¤à¯ à®¤à¯‡à®µà¯ˆà®¯à¯ˆ à®µà®¿à®Ÿ à®¤à¯Šà®´à®¿à®±à¯à®¤à¯à®±à¯ˆ, à®µà®¿à®µà®šà®¾à®¯à®ªà¯ à®ªà¯Šà®°à¯à®Ÿà¯à®•à®³à¯ à®•à¯à®µà®¿à®¨à¯à®¤à®©." },
+            { pt: 4, text: "Reduced purchasing power: Low wages and farmer debt severely restricted buying ability.", taText: "à®•à®¾à®°à®£à®®à¯ 3 - à®µà®¾à®™à¯à®•à¯à®®à¯ à®šà®•à¯à®¤à®¿ à®•à¯à®±à¯ˆà®µà¯: à®Šà®¤à®¿à®¯à®•à¯ à®•à¯à®±à¯ˆà®µà®¾à®²à¯ à®®à®•à¯à®•à®³à®¿à®Ÿà®®à¯ à®ªà¯Šà®°à¯à®Ÿà¯à®•à®³à¯ˆ à®µà®¾à®™à¯à®• à®ªà®£à®®à®¿à®²à¯à®²à¯ˆ." },
+            { pt: 5, text: "Banking collapse & loan drought: Thousands of banks closed, freezing liquidity and new credit.", taText: "à®•à®¾à®°à®£à®®à¯ 4 & 5 - à®µà®™à¯à®•à®¿à®•à®³à¯ à®¨à¯†à®°à¯à®•à¯à®•à®Ÿà®¿ & à®•à®Ÿà®©à¯ à®•à¯à®±à¯ˆà®µà¯: à®µà®™à¯à®•à®¿à®•à®³à¯ à®¤à®¿à®µà®¾à®²à®¾à®•à®¿ à®ªà¯à®¤à®¿à®¯ à®•à®Ÿà®©à¯à®•à®³à¯ˆ à®¨à®¿à®±à¯à®¤à¯à®¤à®¿à®©." },
+            { pt: 6, text: "Mass unemployment & factory closures: Millions lost livelihoods as factories shut down.", taText: "à®µà®¿à®³à¯ˆà®µà¯ 1 & 2 - à®µà¯‡à®²à¯ˆà®¯à®¿à®©à¯à®®à¯ˆ & à®¤à¯Šà®´à®¿à®±à¯à®šà®¾à®²à¯ˆà®•à®³à¯ à®®à¯‚à®Ÿà®²à¯: à®•à¯‹à®Ÿà®¿à®•à¯à®•à®£à®•à¯à®•à®¾à®©à¯‹à®°à¯ à®µà¯‡à®²à¯ˆà®¯à®¿à®´à®¨à¯à®¤à®©à®°à¯, à®†à®²à¯ˆà®•à®³à¯ à®®à¯‚à®Ÿà®ªà¯à®ªà®Ÿà¯à®Ÿà®©." },
+            { pt: 7, text: "Agricultural crisis: Crop prices plunged by 60%, ruining small farmers worldwide.", taText: "à®µà®¿à®³à¯ˆà®µà¯ 3 - à®µà®¿à®µà®šà®¾à®¯ à®ªà®¾à®¤à®¿à®ªà¯à®ªà¯: à®µà®¿à®³à¯ˆà®ªà¯Šà®°à¯à®Ÿà¯à®•à®³à¯ à®µà®¿à®²à¯ˆ 60% à®šà®°à®¿à®¨à¯à®¤à¯ à®µà®¿à®µà®šà®¾à®¯à®¿à®•à®³à¯ à®•à®Ÿà®©à®¿à®²à¯ à®®à¯‚à®´à¯à®•à®¿à®©à®°à¯." },
+            { pt: 8, text: "International trade collapse: High protective tariffs caused global trade to contract by over 50%.", taText: "à®µà®¿à®³à¯ˆà®µà¯ 4 - à®‰à®²à®• à®µà®°à¯à®¤à¯à®¤à®•à®®à¯ à®šà®°à®¿à®µà¯: à®ªà®¾à®¤à¯à®•à®¾à®ªà¯à®ªà¯ à®µà®°à®¿à®•à®³à®¾à®²à¯ à®šà®°à¯à®µà®¤à¯‡à®š à®µà®£à®¿à®•à®®à¯ à®ªà®¾à®¤à®¿à®¯à®¾à®•à®•à¯ à®•à¯à®±à¯ˆà®¨à¯à®¤à®¤à¯." },
+            { pt: 9, text: "Poverty & political unrest: Deep poverty paved way for Fascist and Nazi totalitarian dictators.", taText: "à®µà®¿à®³à¯ˆà®µà¯ 5 & 6 - à®µà®±à¯à®®à¯ˆ & à®…à®°à®šà®¿à®¯à®²à¯ à®®à®¾à®±à¯à®±à®™à¯à®•à®³à¯: à®µà®¾à®´à¯à®•à¯à®•à¯ˆà®¤à¯ à®¤à®°à®®à¯ à®šà®°à®¿à®¨à¯à®¤à¯ à®¹à®¿à®Ÿà¯à®²à®°à¯, à®®à¯à®šà¯‹à®²à®¿à®©à®¿ à®†à®Ÿà¯à®šà®¿à®¯à®®à¯ˆà®¤à¯à®¤à®©à®°à¯." },
+            { pt: 10, text: "Conclusion & FDR New Deal: Global recovery driven by public works and economic reforms.", taText: "à®®à¯à®Ÿà®¿à®µà¯à®°à¯ˆ: à®…à®¤à®¿à®ªà®°à¯ à®°à¯‚à®¸à¯à®µà¯†à®²à¯à®Ÿà¯à®Ÿà®¿à®©à¯ 'à®ªà¯à®¤à®¿à®¯ à®’à®ªà¯à®ªà®¨à¯à®¤à®®à¯' (New Deal) à®¤à®¿à®Ÿà¯à®Ÿà®™à¯à®•à®³à¯ à®®à¯‚à®²à®®à¯ à®‰à®²à®•à®®à¯ à®®à¯€à®£à¯à®Ÿà®¤à¯." }
           ]
         }
       ]

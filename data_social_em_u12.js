@@ -73,7 +73,8 @@ const SOCIAL_EM_UNIT_12_DATA = {
           examTag: "Distinguish",
           q: "Differentiate between Universal PDS and Targeted PDS.",
           ans: `<div style="line-height:1.7;">
-            <table style="width:100%; border-collapse:collapse; margin:8px 0;">
+            <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
+              <table style="width:100%; border-collapse:collapse; margin:8px 0;">
               <thead>
                 <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
                   <th style="padding:6px 8px;">Feature</th>
@@ -93,7 +94,8 @@ const SOCIAL_EM_UNIT_12_DATA = {
                   <td style="padding:6px 8px;">Practiced across most other Indian states.</td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
           </div>`,
           ansTamil: "உலகளாவிய முறையில் அனைவருக்கும் உணவு; இலக்கு முறையில் ஏழைகளுக்கு மட்டும் உணவு வழங்கப்படுகிறது."
         },

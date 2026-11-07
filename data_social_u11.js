@@ -123,7 +123,8 @@ const SOCIAL_UNIT_11_DATA = {
           examTag: "வேறுபடுத்துக",
           q: "சட்டமன்றப் பேரவை (கீழவை) மற்றும் சட்ட மேலவை (மேலவை) ஆகியவற்றுக்கு இடையேயான இரு வேறுபாடுகளைத் தருக.",
           ans: `<div style="line-height:1.7;">
-            <table style="width:100%; border-collapse:collapse; margin:8px 0;">
+            <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
+              <table style="width:100%; border-collapse:collapse; margin:8px 0;">
               <thead>
                 <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
                   <th style="padding:6px 8px;">அம்சம்</th>
@@ -143,7 +144,8 @@ const SOCIAL_UNIT_11_DATA = {
                   <td style="padding:6px 8px;">நிலையான அவை (உறுப்பினர் காலம் 6 ஆண்டுகள்); குறைந்தபட்ச வயது 30.</td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
           </div>`,
           ansTamil: "சட்டமன்றப் பேரவைக்கு மக்கள் வாக்களிப்பர் (வயது 25); மேலவை மறைமுகத் தேர்வு கொண்ட நிரந்தர அவை (வயது 30)."
         },

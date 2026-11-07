@@ -123,7 +123,8 @@ const SOCIAL_EM_UNIT_11_DATA = {
           examTag: "Distinguish",
           q: "Distinguish between the Legislative Assembly (Lower House) and the Legislative Council (Upper House).",
           ans: `<div style="line-height:1.7;">
-            <table style="width:100%; border-collapse:collapse; margin:8px 0;">
+            <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
+              <table style="width:100%; border-collapse:collapse; margin:8px 0;">
               <thead>
                 <tr style="background:#f1f5f9; border-bottom:2px solid #cbd5e1; text-align:left;">
                   <th style="padding:6px 8px;">Feature</th>
@@ -143,7 +144,8 @@ const SOCIAL_EM_UNIT_11_DATA = {
                   <td style="padding:6px 8px;">Permanent body (members serve 6 years, 1/3rd retire every 2 yrs); minimum age 30 years.</td>
                 </tr>
               </tbody>
-            </table>
+              </table>
+            </div>
           </div>`,
           ansTamil: "சட்டமன்றப் பேரவைக்கு மக்கள் வாக்களிப்பர் (வயது 25); மேலவை மறைமுகத் தேர்வு கொண்ட நிரந்தர அவை (வயது 30)."
         },

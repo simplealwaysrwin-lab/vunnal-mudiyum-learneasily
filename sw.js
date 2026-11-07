@@ -1,10 +1,10 @@
-﻿// =======================================================================
+// =======================================================================
 // உன்னால் முடியும் (Vunnal Mudiyum) - Progressive Web App Service Worker
 // Enables 100% Offline Study for 10th Standard Students
 // Zero-Downtime Architecture - Auto-Update on Deploy Engine
 // =======================================================================
 
-const CACHE_NAME = 'vm-offline-v20261105_v57';
+const CACHE_NAME = 'vm-offline-v20261107_v58';
 
 // Core essential assets for instant offline app shell and subject question banks
 const PRECACHE_ASSETS = [
@@ -13,6 +13,8 @@ const PRECACHE_ASSETS = [
   '/',
   '/index.html',
   'index.html',
+  './map_data_and_engine.js',
+  'map_data_and_engine.js',
   './manifest.json',
   './icon-192.png',
   './icon-512.png',
@@ -235,7 +237,7 @@ self.addEventListener('fetch', (event) => {
 
   // 3. Subject Data Files (data_*.js)
   // Network-First so updates on Cloudflare are fetched IMMEDIATELY! Offline seamlessly served from cache.
-  if (url.origin === self.location.origin && url.pathname.includes('data_')) {
+  if (url.origin === self.location.origin && (url.pathname.includes('data_') || url.pathname.includes('map_'))) {
     event.respondWith(
       fetch(req)
         .then((fresh) => {

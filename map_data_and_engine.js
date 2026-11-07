@@ -1067,152 +1067,344 @@
   window.MAP_SVGS = MAP_SVGS;
 
   // ---------------------------------------------------------------------------
-  // 3. MAP TUTOR & TEST ENGINE CONTROLLER
+  // 3. MAP TUTOR & TEST ENGINE CONTROLLER (Upgraded Voice Teacher & Split-Screen Test)
   // ---------------------------------------------------------------------------
   const MapTutorEngine = {
     currentMapType: 'india',
     currentUnit: 2,
+    currentLang: 'ta', // 'ta' for Tamil Medium, 'en' for English Medium
+    currentMode: 'teach', // 'teach' (Learn Mode) or 'test' (Split-Screen Test)
+
+    // Learn Mode State
+    learnLocations: [],
+    learnIndex: 0,
     activeLocation: null,
     isVoicePlaying: false,
+    isAutoPlaying: false,
     autoPlayTimer: null,
-    autoPlayList: [],
-    autoPlayIndex: 0,
-    
+    learnZoom: { scale: 1.0, panX: 0, panY: 0, isDragging: false, startX: 0, startY: 0, moved: 0 },
+
     // Test Mode State
-    isTestActive: false,
-    testModeType: 'tap', // 'tap' or 'mcq'
     testQuestions: [],
     currentTestIndex: 0,
     currentScore: 0,
     testResults: [],
+    isAnsweredCurrent: false,
+    currentUserMark: null,
+    mobileActiveTab: 'student', // 'student' or 'solution'
+    studentZoom: { scale: 1.0, panX: 0, panY: 0, isDragging: false, startX: 0, startY: 0, moved: 0 },
+    solutionZoom: { scale: 1.0, panX: 0, panY: 0 },
 
-    // Drawing Mode State
-    isDrawing: false,
-    penColor: '#ef4444',
-    penWidth: 3,
-
-    // Initialize Modal and Bind Events
+    // Initialize Modal and Inject UI
     init() {
       if (document.getElementById('socialMapModal')) return;
 
+      // Auto detect language from page context if available
+      try {
+        const bodyText = document.body ? document.body.innerText : '';
+        if (window.currentSubject && (window.currentSubject.id.endsWith('_em') || window.currentSubject.id === 'english')) {
+          this.currentLang = 'en';
+        } else if (bodyText.includes('English Medium') && !bodyText.includes('தமிழ் வழி')) {
+          this.currentLang = 'en';
+        }
+      } catch (e) {
+        this.currentLang = 'ta';
+      }
+
       const modalHtml = `
-        <div id="socialMapModal" class="social-map-modal-overlay" style="display:none;">
+        <div id="socialMapModal" class="social-map-modal-overlay" style="display:none;" role="dialog" aria-modal="true">
           <div class="social-map-modal-container">
-            <!-- Header -->
+            <!-- Modal Header -->
             <div class="map-modal-header">
-              <div style="display:flex; align-items:center; gap:10px;">
-                <span style="font-size:24px;">🗺️</span>
-                <div>
+              <div style="display:flex; align-items:center; gap:10px; min-width:0;">
+                <span style="font-size:26px; flex-shrink:0;">🗺️</span>
+                <div style="min-width:0;">
                   <h3 id="mapModalTitle" class="map-modal-heading">10-ஆம் வகுப்பு வரைபட வழிகாட்டி & தேர்வு</h3>
-                  <div id="mapModalSubTitle" style="font-size:12px; color:var(--text-muted, #94a3b8);">அனைத்து 12 அலகுகளின் வரைபட வினாக்கள் மற்றும் குரல் வழிகாட்டல்</div>
+                  <div id="mapModalSubTitle" class="map-modal-subheading">அனைத்து 12 அலகுகள் • குரல் வழிகாட்டி • ஊடாடும் இருபக்க தேர்வு முறை</div>
                 </div>
               </div>
-              <div style="display:flex; align-items:center; gap:8px;">
-              <button type="button" class="map-ctrl-btn" onclick="MapTutorEngine.downloadBlankMap()" title="வெற்று வரைபடத்தைப் பதிவிறக்கு (Download Blank Map)">📥 பதிவிறக்கு</button>
-                <button type="button" class="map-close-btn" onclick="MapTutorEngine.closeModal()">&times;</button>
+              <div class="map-header-actions">
+                <button type="button" id="btnToggleLang" class="map-ctrl-btn" onclick="MapTutorEngine.toggleLanguage()" title="மொழி மாற்று (Toggle Tamil / English)">
+                  🌐 <span id="langLabel">English</span>
+                </button>
+                <button type="button" class="map-ctrl-btn" onclick="MapTutorEngine.downloadBlankMap()" title="வெற்று வரைபடத்தைப் பதிவிறக்கு (Download Blank Map)">
+                  📥 <span id="downloadBtnText">வெற்று வரைபடம்</span>
+                </button>
+                <button type="button" class="map-close-btn" onclick="MapTutorEngine.closeModal()" title="மூடு (Close)">&times;</button>
               </div>
             </div>
 
-            <!-- Top Controls Toolbar -->
+            <!-- Global Map Toolbar -->
             <div class="map-toolbar">
-              <div class="map-pills-row">
-            <button id="btnMapTypeIndia" class="map-pill active" onclick="MapTutorEngine.setMapType('india')">🇮🇳 இந்தியா வரைபடம் (புவியியல்)</button>
-            <button id="btnMapTypeWorld" class="map-pill" onclick="MapTutorEngine.setMapType('world')">🌍 உலக வரைபடம் (வரலாறு)</button>
+              <div class="map-toolbar-row">
+                <div class="map-pills-row">
+                  <button id="btnMapTypeIndia" class="map-pill active" onclick="MapTutorEngine.setMapType('india')">
+                    🇮🇳 <span class="pill-text">இந்தியா வரைபடம் (புவியியல்)</span>
+                  </button>
+                  <button id="btnMapTypeWorld" class="map-pill" onclick="MapTutorEngine.setMapType('world')">
+                    🌍 <span class="pill-text">உலக வரைபடம் (வரலாறு)</span>
+                  </button>
+                </div>
+                
+                <div class="map-mode-switch-row">
+                  <button id="btnModeTeach" class="map-mode-btn active" onclick="MapTutorEngine.setMode('teach')">
+                    🎙️ <span class="mode-text">குரல் வழிகாட்டி (Learn)</span>
+                  </button>
+                  <button id="btnModeTest" class="map-mode-btn" onclick="MapTutorEngine.setMode('test')">
+                    📝 <span class="mode-text">வரைபடத் தேர்வு (Test)</span>
+                  </button>
+                </div>
               </div>
 
-              <div class="map-pills-row" style="margin-top:6px;">
+              <div class="map-toolbar-row" style="margin-top:8px;">
                 <select id="mapLessonSelect" class="map-unit-select" onchange="MapTutorEngine.filterByUnit(this.value)">
-              <option value="all">📚 அனைத்து அலகுகள் (All 12 Lessons)</option>
-              <option value="1">வரலாறு அலகு 1: முதல் உலகப்போர்</option>
-              <option value="2" selected>புவியியல் அலகு 1: அமைவிடம், வடிகாலமைப்பு</option>
-              <option value="3">குடிமையியல் அலகு 1: அரசியலமைப்பு</option>
-              <option value="4">பொருளியல் அலகு 1: GDP & வளர்ச்சி</option>
-              <option value="5">வரலாறு அலகு 2: இரு உலகப்போர்களுக்கு இடையே</option>
-              <option value="6">புவியியல் அலகு 2: காலநிலை & தாவரங்கள்</option>
-              <option value="7">குடிமையியல் அலகு 2: நடுவண் அரசு</option>
-              <option value="8">பொருளியல் அலகு 2: உலகமயமாதல் & வர்த்தகம்</option>
-              <option value="9">வரலாறு அலகு 3: இரண்டாம் உலகப்போர்</option>
-              <option value="10">புவியியல் அலகு 3: வேளாண்மை & பாசனம்</option>
-              <option value="11">குடிமையியல் அலகு 3: மாநில அரசு</option>
-              <option value="12">பொருளியல் அலகு 3: உணவு பாதுகாப்பு</option>
+                  <option value="all">📚 அனைத்து 12 அலகுகள் (All 12 Lessons)</option>
+                  <option value="1">வரலாறு அலகு 1: முதல் உலகப்போர் (World Map)</option>
+                  <option value="2" selected>புவியியல் அலகு 1: அமைவிடம் & வடிகாலமைப்பு (India Map)</option>
+                  <option value="3">குடிமையியல் அலகு 1: இந்திய அரசியலமைப்பு</option>
+                  <option value="4">பொருளியல் அலகு 1: மொத்த உள்நாட்டு உற்பத்தி</option>
+                  <option value="5">வரலாறு அலகு 2: இரு உலகப்போர்களுக்கு இடையே உலகம்</option>
+                  <option value="6">புவியியல் அலகு 2: காலநிலை & இயற்கை தாவரங்கள்</option>
+                  <option value="7">குடிமையியல் அலகு 2: நடுவண் அரசு (டெல்லி)</option>
+                  <option value="8">பொருளியல் அலகு 2: உலகமயமாதல் & வர்த்தகம்</option>
+                  <option value="9">வரலாறு அலகு 3: இரண்டாம் உலகப்போர்</option>
+                  <option value="10">புவியியல் அலகு 3: வேளாண்மை & முக்கிய பயிர்கள்</option>
+                  <option value="11">குடிமையியல் அலகு 3: மாநில அரசு (சென்னை)</option>
+                  <option value="12">பொருளியல் அலகு 3: உணவு பாதுகாப்பு & ஊட்டச்சத்து</option>
                 </select>
-
-                <div style="display:flex; gap:6px;">
-            <button id="btnModeTeach" class="map-mode-btn active" onclick="MapTutorEngine.setMode('teach')">🎙️ குரல் வழிகாட்டி</button>
-            <button id="btnModeTest" class="map-mode-btn" onclick="MapTutorEngine.setMode('test')">📝 வரைபடத் தேர்வு</button>
-                </div>
               </div>
             </div>
 
-            <!-- Main Interactive Map Area (Split layout: Sidebar + Map) -->
-            <div class="map-workspace">
-              <!-- Left: Location Picker / Test Prompt Sidebar -->
+            <!-- ============================================================= -->
+            <!-- VIEW 1: LEARN MODE WORKSPACE (Step-by-Step Voice Teacher)     -->
+            <!-- ============================================================= -->
+            <div id="mapLearnWorkspace" class="map-workspace">
+              <!-- Left Sidebar: Location Search & Navigation List -->
               <div id="mapSidebar" class="map-sidebar">
-                <div id="teachSidebarContent">
-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-              <span style="font-size:12.5px; font-weight:800; color:var(--primary, #38bdf8);">📍 குறிக்க வேண்டிய இடங்கள்:</span>
-              <button id="btnAutoPlayAll" class="map-action-sm-btn" onclick="MapTutorEngine.toggleAutoTeachAll()">▶️ அனைத்தையும் கற்பி</button>
-                  </div>
-            <input type="text" id="mapSearchInput" placeholder="🔍 இடத்தைத் தேடுக..." class="map-search-field" oninput="MapTutorEngine.filterSearch(this.value)" />
-                  <div id="mapPlacesList" class="map-places-list"></div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                  <span id="learnListHeader" style="font-size:12.5px; font-weight:800; color:#38bdf8;">📍 குறிக்க வேண்டிய இடங்கள்:</span>
+                  <button id="btnAutoPlayAll" class="map-action-sm-btn" onclick="MapTutorEngine.toggleAutoTeachAll()">▶️ வரிசையாக கற்பி</button>
                 </div>
-
-                <!-- Test Sidebar Content -->
-                <div id="testSidebarContent" style="display:none;">
-                  <div class="test-score-banner">
-              <div>வினா: <span id="testProgress">1 / 5</span></div>
-              <div>மதிப்பெண்: <span id="testScoreDisplay" style="color:#10b981; font-weight:900;">0 / 5</span></div>
-                  </div>
-                  <div id="testQuestionBox" class="test-q-box">
-                    <div id="testQuestionPrompt" style="font-size:16px; font-weight:800; color:#ffffff; line-height:1.5;"></div>
-            <div id="testInstructionTip" style="font-size:12.5px; color:#38bdf8; margin-top:6px;">👆 வரைபடத்தில் சரியான இடத்தைத் தொட்டு குறிக்கவும்</div>
-                  </div>
-                  <div id="testFeedbackBox" class="test-feedback-box" style="display:none;"></div>
-                  <div style="display:flex; gap:8px; margin-top:12px;">
-              <button id="btnNextTestQ" class="map-primary-btn" style="display:none;" onclick="MapTutorEngine.nextTestQuestion()">அடுத்த வினா ➔</button>
-              <button class="map-secondary-btn" onclick="MapTutorEngine.setMode('teach')">தேர்வை நிறுத்து</button>
-                  </div>
-                </div>
+                <input type="text" id="mapSearchInput" placeholder="🔍 இடத்தைத் தேடுக..." class="map-search-field" oninput="MapTutorEngine.filterSearch(this.value)" />
+                <div id="mapPlacesList" class="map-places-list"></div>
               </div>
 
-              <!-- Right: Map Viewport -->
-              <div class="map-viewport-container">
-                <div id="mapSvgWrapper" class="map-svg-wrapper"></div>
-
-                <!-- Floating Voice Controller Card (Shows current teaching tips) -->
-                <div id="voiceTeacherCard" class="voice-teacher-card" style="display:none;">
-                  <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
-                    <div style="display:flex; align-items:center; gap:8px;">
-                      <span class="pulsing-voice-dot"></span>
-                      <strong id="voicePlaceTitle" style="color:#38bdf8; font-size:15px;"></strong>
-                    </div>
-                    <div style="display:flex; align-items:center; gap:6px;">
-                <button type="button" class="voice-ctrl-icon-btn" onclick="MapTutorEngine.replayVoice()" title="மீண்டும் கேள்">🔄</button>
-                <button type="button" class="voice-ctrl-icon-btn" onclick="MapTutorEngine.stopVoice()" title="நிறுத்து">⏹️</button>
-                    </div>
+              <!-- Center/Right: Interactive Map Viewport -->
+              <div class="map-viewport-container" id="learnMapViewportContainer">
+                <!-- Top Learn Step Bar -->
+                <div class="learn-step-bar">
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <span class="learn-step-badge" id="learnStepBadge">இடம் 1 / 15</span>
+                    <strong id="learnStepTitle" style="color:#ffffff; font-size:14.5px;">இமயமலை</strong>
                   </div>
-                  <div id="voicePlaceGuide" style="margin-top:6px; font-size:13px; line-height:1.6; color:#f1f5f9;"></div>
-                  <div id="voiceExamTip" style="margin-top:6px; font-size:12px; color:#fbbf24; background:rgba(245,158,11,0.15); padding:4px 8px; border-radius:4px;"></div>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <button type="button" class="learn-nav-btn" onclick="MapTutorEngine.prevLearnLocation()" title="முந்தைய இடம்">⏮️ முந்தையது</button>
+                    <button type="button" class="learn-nav-btn primary" onclick="MapTutorEngine.nextLearnLocation()" title="அடுத்த இடம்">அடுத்தது ⏭️</button>
+                  </div>
                 </div>
 
-                <!-- Zoom and Pan Controls -->
+                <!-- SVG Map Wrapper -->
+                <div id="mapLearnSvgWrapper" class="map-svg-wrapper"></div>
+
+                <!-- Floating Voice Teacher Card -->
+                <div id="voiceTeacherCard" class="voice-teacher-card">
+                  <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+                    <div style="display:flex; align-items:center; gap:8px; min-width:0;">
+                      <span class="pulsing-voice-dot"></span>
+                      <strong id="voicePlaceTitle" class="voice-place-heading"></strong>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
+                      <button type="button" class="voice-ctrl-icon-btn" onclick="MapTutorEngine.replayVoice()" title="மீண்டும் கேள்">🔄</button>
+                      <button type="button" class="voice-ctrl-icon-btn" onclick="MapTutorEngine.stopVoice()" title="நிறுத்து">⏹️</button>
+                      <button type="button" class="map-action-sm-btn" style="background:#10b981; margin-left:4px;" onclick="MapTutorEngine.setMode('test')">📝 தேர்வு எழுது</button>
+                    </div>
+                  </div>
+                  <div id="voicePlaceGuide" class="voice-place-guide"></div>
+                  <div id="voiceExamTip" class="voice-exam-tip"></div>
+                </div>
+
+                <!-- Learn Map Zoom Controls -->
                 <div class="map-zoom-controls">
-              <button type="button" onclick="MapTutorEngine.zoomMap(1.2)" title="பெரிதாக்கு (Zoom In)">➕</button>
-              <button type="button" onclick="MapTutorEngine.zoomMap(0.8)" title="சிறிதாக்கு (Zoom Out)">➖</button>
-              <button type="button" onclick="MapTutorEngine.resetMapZoom()" title="மீட்டமை (Reset View)">🎯</button>
+                  <button type="button" onclick="MapTutorEngine.zoomLearnMap(1.25)" title="பெரிதாக்கு (Zoom In)">➕</button>
+                  <button type="button" onclick="MapTutorEngine.zoomLearnMap(0.8)" title="சிறிதாக்கு (Zoom Out)">➖</button>
+                  <button type="button" onclick="MapTutorEngine.resetLearnMapZoom()" title="மீட்டமை (Reset View)">🎯</button>
                 </div>
               </div>
             </div>
+
+            <!-- ============================================================= -->
+            <!-- VIEW 2: TEST MODE WORKSPACE (Split-Screen Interactive Test)   -->
+            <!-- ============================================================= -->
+            <div id="mapTestWorkspace" class="map-workspace" style="display:none; flex-direction:column;">
+              <!-- Test Top Status & Question Bar -->
+              <div class="map-test-header-bar">
+                <div class="test-header-q-info">
+                  <span id="testProgressBadge" class="test-q-badge">கேள்வி 1 / 5</span>
+                  <div style="min-width:0;">
+                    <div id="testQuestionPrompt" class="test-q-title">கேள்வி ஏற்றப்படுகிறது...</div>
+                    <div id="testInstructionTip" class="test-q-subtext">👆 இடதுபுற வரைபடத்தில் சரியான இடத்தைத் தொட்டு அல்லது கிளிக் செய்து குறிக்கவும்</div>
+                  </div>
+                </div>
+
+                <div class="test-header-actions">
+                  <div class="test-score-chip">
+                    <span id="testScoreLabel">மதிப்பெண்:</span> <strong id="testScoreVal" style="color:#10b981; font-size:16px;">0.0 / 5</strong>
+                  </div>
+                  <button type="button" id="btnFinishTestTop" class="btn-finish-test" onclick="MapTutorEngine.finishTest()" title="தேர்வை முடித்து முழு மதிப்பீட்டு அறிக்கையைப் பெறுங்கள்">
+                    🏁 <span class="finish-btn-text">தேர்வை முடி & மதிப்பீடு செய்</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mobile Switcher Tabs (Visible on small screens) -->
+              <div class="test-mobile-tabs">
+                <button type="button" id="btnTabStudent" class="mobile-tab-btn active" onclick="MapTutorEngine.switchMobileTestTab('student')">
+                  👈 உங்கள் வரைபடம் (Mark Map)
+                </button>
+                <button type="button" id="btnTabSolution" class="mobile-tab-btn" onclick="MapTutorEngine.switchMobileTestTab('solution')">
+                  👉 சரியான விடை & ஒப்பீடு 🎯
+                </button>
+              </div>
+
+              <!-- Dual Split Panes Container -->
+              <div class="map-test-panes-wrapper">
+                <!-- Left Pane: Student Marking Map -->
+                <div id="paneStudentMap" class="test-pane student-pane">
+                  <div class="test-pane-banner">
+                    <div style="display:flex; align-items:center; gap:6px;">
+                      <span style="font-size:15px;">👈</span>
+                      <strong id="studentPaneHeading">உங்கள் வரைபடம் (மாணவர் பகுதி)</strong>
+                    </div>
+                    <span id="studentMarkStatus" class="test-mark-indicator pulse">👆 வரைபடத்தில் தொட்டு குறிக்கவும்</span>
+                  </div>
+
+                  <div class="test-map-viewport" id="studentMapViewport">
+                    <div id="studentMapSvgWrapper" class="map-svg-wrapper"></div>
+                    <!-- Zoom Toolbar on Student Map -->
+                    <div class="map-zoom-controls">
+                      <button type="button" onclick="MapTutorEngine.zoomStudentMap(1.25)" title="பெரிதாக்கு (Zoom In)">➕</button>
+                      <button type="button" onclick="MapTutorEngine.zoomStudentMap(0.8)" title="சிறிதாக்கு (Zoom Out)">➖</button>
+                      <button type="button" onclick="MapTutorEngine.resetStudentMapZoom()" title="மீட்டமை (Reset View)">🎯</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right Pane: Solution Map & Instant Feedback -->
+                <div id="paneSolutionMap" class="test-pane solution-pane">
+                  <div class="test-pane-banner solution-banner">
+                    <div style="display:flex; align-items:center; gap:6px;">
+                      <span style="font-size:15px;">👉</span>
+                      <strong id="solutionPaneHeading">சரியான விடை & ஒப்பீடு (Answer Reveal)</strong>
+                    </div>
+                    <span id="solutionResultBadge" class="solution-badge-idle">காத்திருக்கிறது...</span>
+                  </div>
+
+                  <!-- Idle State (Before Student Marks) -->
+                  <div id="solutionIdlePrompt" class="solution-idle-box">
+                    <div style="font-size:42px; margin-bottom:10px; animation:bounce 2s infinite;">👈 🗺️</div>
+                    <div id="solutionIdleTitle" style="font-size:16px; font-weight:800; color:#38bdf8;">இடதுபுற வரைபடத்தில் இடத்தைக் குறிக்கவும்</div>
+                    <div id="solutionIdleSub" style="font-size:13px; color:#94a3b8; max-width:320px; margin-top:6px; line-height:1.5;">
+                      நீங்கள் தொட்டு குறித்தவுடன், உண்மையான இடம், துல்லிய இடைவெளி மற்றும் குரல் வழிகாட்டல் இங்கே உடனுக்குடன் தோன்றும்!
+                    </div>
+                  </div>
+
+                  <!-- Active State (After Student Marks) -->
+                  <div id="solutionActiveContent" class="solution-active-container" style="display:none;">
+                    <div class="test-map-viewport" id="solutionMapViewport" style="flex:1;">
+                      <div id="solutionMapSvgWrapper" class="map-svg-wrapper"></div>
+                    </div>
+
+                    <!-- Instant Feedback Card -->
+                    <div id="solutionFeedbackCard" class="solution-feedback-card">
+                      <div id="solutionStatusHeader" class="solution-status-header"></div>
+                      <div id="solutionDistanceInfo" class="solution-distance-info"></div>
+                      <div id="solutionTeacherGuide" class="solution-teacher-guide"></div>
+                      <div id="solutionExamTip" class="solution-exam-tip"></div>
+
+                      <div class="solution-action-row">
+                        <button type="button" id="btnTestNextQuestion" class="btn-test-next" onclick="MapTutorEngine.nextTestQuestion()">
+                          அடுத்த வினா ➔
+                        </button>
+                        <button type="button" class="btn-test-finish-sm" onclick="MapTutorEngine.finishTest()">
+                          🏁 தேர்வை முடித்து மதிப்பெண் பார்
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ============================================================= -->
+            <!-- VIEW 3: TEST EVALUATION DASHBOARD                             -->
+            <!-- ============================================================= -->
+            <div id="mapEvaluationWorkspace" class="map-workspace" style="display:none; overflow-y:auto; padding:20px; flex-direction:column; align-items:center;">
+              <div class="eval-dashboard-container">
+                <div style="text-align:center;">
+                  <div style="font-size:52px; margin-bottom:6px;">🏆</div>
+                  <h2 id="evalHeading" style="font-size:22px; font-weight:900; color:#38bdf8; margin:0 0 6px 0;">
+                    வரைபடத் தேர்வு மதிப்பீட்டு அறிக்கை
+                  </h2>
+                  <div id="evalSubHeading" style="font-size:13.5px; color:#94a3b8;">
+                    Class 10 Social Science Map Marking Evaluation
+                  </div>
+                </div>
+
+                <!-- Big Score Card -->
+                <div class="eval-score-card">
+                  <div style="font-size:13px; font-weight:700; color:#cbd5e1; text-transform:uppercase; letter-spacing:1px;">ஈட்டிய மொத்த மதிப்பெண்கள்</div>
+                  <div id="evalScoreNumber" class="eval-score-number">0.0 / 5 (0%)</div>
+                  <div id="evalMedalBadge" class="eval-medal-badge">🥇 தங்கப் பதக்கம் (Gold Medal)</div>
+                  <div id="evalVoiceSpeechNote" class="eval-voice-note">
+                    🔊 குரல் மதிப்பீடு ஒலிக்கிறது...
+                  </div>
+                </div>
+
+                <!-- Question Breakdown Table -->
+                <div style="width:100%; margin-top:20px;">
+                  <h4 id="evalBreakdownHeading" style="font-size:15px; font-weight:800; color:#f1f5f9; margin:0 0 10px 0;">
+                    📋 வினா வாரியான மதிப்பீட்டு விபரம்:
+                  </h4>
+                  <div class="eval-table-wrapper">
+                    <table class="eval-table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th id="thQuestionCol">வினா / இடம்</th>
+                          <th id="thResultCol">முடிவு</th>
+                          <th id="thScoreCol">மதிப்பெண்</th>
+                          <th id="thActionCol">பயிற்சி</th>
+                        </tr>
+                      </thead>
+                      <tbody id="evalTableBody"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- Action Controls Row -->
+                <div class="eval-actions-row">
+                  <button type="button" class="eval-action-btn primary" onclick="MapTutorEngine.startInteractiveTest()">
+                    🔄 மீண்டும் தேர்வு எழுது (Retake Test)
+                  </button>
+                  <button type="button" class="eval-action-btn secondary" onclick="MapTutorEngine.setMode('teach')">
+                    🎙️ குரல் வழிகாட்டிக்குச் செல் (Voice Tutor)
+                  </button>
+                  <button type="button" class="eval-action-btn secondary" onclick="MapTutorEngine.downloadBlankMap()">
+                    📥 வெற்று வரைபடம் பதிவிறக்கு
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       `;
 
       document.body.insertAdjacentHTML('beforeend', modalHtml);
-
-      // Inject Map CSS Styles
       this.injectStyles();
     },
 
+    // Inject Responsive CSS
     injectStyles() {
       if (document.getElementById('socialMapStyles')) return;
       const css = `
@@ -1220,39 +1412,55 @@
           position: fixed;
           inset: 0;
           z-index: 99999;
-          background: rgba(3, 7, 18, 0.88);
+          background: rgba(3, 7, 18, 0.90);
           backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 10px;
+          padding: 8px;
         }
         .social-map-modal-container {
           background: #091220;
           border: 1.5px solid #1e3a5f;
-          border-radius: 16px;
+          border-radius: 14px;
           width: 98vw;
-          max-width: 1200px;
-          height: 94vh;
+          max-width: 1350px;
+          height: 95vh;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(56, 189, 248, 0.2);
+          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(56, 189, 248, 0.2);
           overflow: hidden;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         .map-modal-header {
-          padding: 12px 18px;
+          padding: 10px 16px;
           background: #0c1829;
           border-bottom: 1px solid #1e3a5f;
           display: flex;
           align-items: center;
           justify-content: space-between;
+          gap: 10px;
         }
         .map-modal-heading {
-          font-size: 18px;
+          font-size: 17px;
           font-weight: 800;
           color: #ffffff;
           margin: 0;
+          line-height: 1.25;
+        }
+        .map-modal-subheading {
+          font-size: 11.5px;
+          color: #94a3b8;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .map-header-actions {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          flex-shrink: 0;
         }
         .map-close-btn {
           background: none;
@@ -1261,6 +1469,7 @@
           font-size: 28px;
           cursor: pointer;
           line-height: 1;
+          padding: 0 4px;
         }
         .map-close-btn:hover { color: #f87171; }
         .map-ctrl-btn {
@@ -1268,17 +1477,30 @@
           border: 1px solid #334155;
           color: #38bdf8;
           font-weight: 700;
-          font-size: 12.5px;
-          padding: 6px 12px;
-          border-radius: 8px;
+          font-size: 12px;
+          padding: 6px 10px;
+          border-radius: 7px;
           cursor: pointer;
+          transition: all 0.2s;
+          white-space: nowrap;
+        }
+        .map-ctrl-btn:hover {
+          background: #334155;
+          border-color: #38bdf8;
         }
         .map-toolbar {
-          padding: 10px 18px;
+          padding: 8px 16px;
           background: #0f1c30;
           border-bottom: 1px solid #1e3a5f;
         }
-        .map-pills-row {
+        .map-toolbar-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+          flex-wrap: wrap;
+        }
+        .map-pills-row, .map-mode-switch-row {
           display: flex;
           align-items: center;
           gap: 8px;
@@ -1289,8 +1511,8 @@
           border: 1px solid #334155;
           color: #cbd5e1;
           font-weight: 700;
-          font-size: 13px;
-          padding: 7px 14px;
+          font-size: 12.5px;
+          padding: 6px 12px;
           border-radius: 20px;
           cursor: pointer;
           transition: all 0.2s;
@@ -1299,17 +1521,17 @@
           background: linear-gradient(135deg, #0284c7, #2563eb);
           border-color: #38bdf8;
           color: #ffffff;
-          box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+          box-shadow: 0 3px 10px rgba(2, 132, 199, 0.4);
         }
         .map-unit-select {
           flex: 1;
-          min-width: 240px;
+          min-width: 260px;
           background: #1e293b;
           border: 1px solid #334155;
           color: #f1f5f9;
           font-weight: 700;
-          font-size: 13px;
-          padding: 8px 12px;
+          font-size: 12.5px;
+          padding: 7px 10px;
           border-radius: 8px;
           outline: none;
         }
@@ -1318,26 +1540,31 @@
           border: 1.5px solid #334155;
           color: #94a3b8;
           font-weight: 800;
-          font-size: 13px;
-          padding: 7px 14px;
+          font-size: 12.5px;
+          padding: 6px 14px;
           border-radius: 8px;
           cursor: pointer;
+          transition: all 0.2s;
         }
         .map-mode-btn.active {
           background: #10b981;
           border-color: #34d399;
           color: #ffffff;
+          box-shadow: 0 3px 12px rgba(16, 185, 129, 0.35);
         }
         .map-workspace {
           flex: 1;
           display: flex;
           overflow: hidden;
+          position: relative;
         }
+        
+        /* Sidebar styles */
         .map-sidebar {
-          width: 320px;
+          width: 310px;
           background: #0a1424;
           border-right: 1px solid #1e3a5f;
-          padding: 14px;
+          padding: 12px;
           display: flex;
           flex-direction: column;
           overflow-y: auto;
@@ -1347,10 +1574,10 @@
           background: #16243b;
           border: 1px solid #2d4566;
           color: #fff;
-          font-size: 13px;
+          font-size: 12.5px;
           padding: 7px 10px;
           border-radius: 6px;
-          margin-bottom: 10px;
+          margin-bottom: 8px;
           box-sizing: border-box;
         }
         .map-places-list {
@@ -1358,13 +1585,13 @@
           overflow-y: auto;
           display: flex;
           flex-direction: column;
-          gap: 6px;
+          gap: 5px;
         }
         .map-place-item {
           background: #122036;
           border: 1px solid #203552;
           border-radius: 8px;
-          padding: 8px 12px;
+          padding: 7px 10px;
           cursor: pointer;
           transition: all 0.2s;
           display: flex;
@@ -1374,13 +1601,13 @@
         .map-place-item:hover {
           background: #1a2f4d;
           border-color: #38bdf8;
-          transform: translateX(3px);
+          transform: translateX(2px);
         }
         .map-place-item.active {
           background: linear-gradient(135deg, #0369a1, #1d4ed8);
           border-color: #38bdf8;
           color: #fff;
-          box-shadow: 0 4px 12px rgba(3, 105, 161, 0.4);
+          box-shadow: 0 3px 10px rgba(3, 105, 161, 0.4);
         }
         .map-viewport-container {
           flex: 1;
@@ -1388,45 +1615,103 @@
           background: #050d1a;
           overflow: hidden;
           display: flex;
+          flex-direction: column;
+        }
+        .learn-step-bar {
+          background: rgba(12, 24, 41, 0.95);
+          border-bottom: 1px solid #1e3a5f;
+          padding: 7px 14px;
+          display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-between;
+          z-index: 5;
+        }
+        .learn-step-badge {
+          background: #1e3a5f;
+          color: #38bdf8;
+          font-weight: 800;
+          font-size: 11.5px;
+          padding: 3px 8px;
+          border-radius: 12px;
+        }
+        .learn-nav-btn {
+          background: #1e293b;
+          border: 1px solid #334155;
+          color: #cbd5e1;
+          font-size: 12px;
+          font-weight: 700;
+          padding: 4px 10px;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        .learn-nav-btn.primary {
+          background: #0284c7;
+          border-color: #38bdf8;
+          color: #ffffff;
         }
         .map-svg-wrapper {
+          flex: 1;
           width: 100%;
           height: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: crosshair;
+          touch-action: none;
+          user-select: none;
+          position: relative;
         }
         .vector-map-svg {
           width: 100%;
           height: 100%;
-          max-height: 80vh;
+          max-height: 82vh;
           user-select: none;
-          transition: transform 0.3s ease;
+          pointer-events: auto;
+          transition: transform 0.08s ease-out;
         }
         .voice-teacher-card {
           position: absolute;
-          bottom: 16px;
-          left: 16px;
+          bottom: 14px;
+          left: 14px;
           right: 70px;
-          background: rgba(15, 23, 42, 0.95);
+          background: rgba(15, 23, 42, 0.96);
           border: 1.5px solid #38bdf8;
           border-radius: 12px;
-          padding: 12px 16px;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+          padding: 10px 14px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.7);
           backdrop-filter: blur(8px);
-          max-width: 650px;
+          max-width: 680px;
           z-index: 10;
         }
+        .voice-place-heading {
+          color: #38bdf8;
+          font-size: 14.5px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .voice-place-guide {
+          margin-top: 5px;
+          font-size: 12.5px;
+          line-height: 1.55;
+          color: #f1f5f9;
+        }
+        .voice-exam-tip {
+          margin-top: 5px;
+          font-size: 11.5px;
+          color: #fbbf24;
+          background: rgba(245,158,11,0.15);
+          padding: 4px 8px;
+          border-radius: 5px;
+        }
         .pulsing-voice-dot {
-          width: 10px;
-          height: 10px;
+          width: 9px;
+          height: 9px;
           background: #ef4444;
           border-radius: 50%;
           display: inline-block;
           animation: voicePulse 1.2s infinite;
+          flex-shrink: 0;
         }
         @keyframes voicePulse {
           0%, 100% { transform: scale(1); opacity: 1; }
@@ -1436,30 +1721,10 @@
           background: #1e293b;
           border: 1px solid #334155;
           color: #fff;
-          font-size: 14px;
-          width: 30px;
-          height: 30px;
+          font-size: 13px;
+          width: 28px;
+          height: 28px;
           border-radius: 6px;
-          cursor: pointer;
-        }
-        .map-zoom-controls {
-          position: absolute;
-          top: 16px;
-          right: 16px;
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-          z-index: 10;
-        }
-        .map-zoom-controls button {
-          width: 36px;
-          height: 36px;
-          background: #1e293b;
-          border: 1px solid #334155;
-          color: #38bdf8;
-          font-size: 16px;
-          font-weight: 800;
-          border-radius: 8px;
           cursor: pointer;
         }
         .map-action-sm-btn {
@@ -1471,75 +1736,423 @@
           padding: 4px 8px;
           border-radius: 6px;
           cursor: pointer;
+          white-space: nowrap;
         }
-        .test-score-banner {
-          background: #16243b;
-          border-radius: 8px;
-          padding: 8px 12px;
+        .map-zoom-controls {
+          position: absolute;
+          top: 14px;
+          right: 14px;
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
+          gap: 6px;
+          z-index: 10;
+        }
+        .map-zoom-controls button {
+          width: 34px;
+          height: 34px;
+          background: rgba(30, 41, 59, 0.9);
+          border: 1px solid #334155;
+          color: #38bdf8;
+          font-size: 15px;
           font-weight: 800;
-          font-size: 13px;
-          margin-bottom: 12px;
-        }
-        .test-q-box {
-          background: #122036;
-          border: 1.5px solid #2563eb;
-          border-radius: 10px;
-          padding: 14px;
-          margin-bottom: 12px;
-        }
-        .test-feedback-box {
-          padding: 10px 14px;
           border-radius: 8px;
-          font-size: 13px;
-          font-weight: 700;
-          line-height: 1.5;
-        }
-        .map-primary-btn {
-          flex: 1;
-          background: linear-gradient(135deg, #10b981, #059669);
-          color: #fff;
-          border: none;
-          padding: 10px 14px;
-          border-radius: 8px;
-          font-weight: 800;
-          font-size: 13.5px;
           cursor: pointer;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
-        .map-secondary-btn {
+        .map-zoom-controls button:hover {
           background: #334155;
-          color: #cbd5e1;
-          border: none;
-          padding: 10px 14px;
-          border-radius: 8px;
-          font-weight: 700;
-          font-size: 13px;
-          cursor: pointer;
+          color: #ffffff;
         }
 
-        /* Marker Animations */
+        /* ============================================================== */
+        /* TEST MODE SPLIT SCREEN STYLES                                  */
+        /* ============================================================== */
+        .map-test-header-bar {
+          background: #0a1424;
+          border-bottom: 1.5px solid #1e3a5f;
+          padding: 8px 16px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+        .test-header-q-info {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex: 1;
+          min-width: 240px;
+        }
+        .test-q-badge {
+          background: linear-gradient(135deg, #2563eb, #1d4ed8);
+          color: #ffffff;
+          font-size: 12px;
+          font-weight: 800;
+          padding: 4px 10px;
+          border-radius: 12px;
+          white-space: nowrap;
+        }
+        .test-q-title {
+          font-size: 15.5px;
+          font-weight: 800;
+          color: #ffffff;
+          line-height: 1.3;
+        }
+        .test-q-subtext {
+          font-size: 11.5px;
+          color: #38bdf8;
+          margin-top: 2px;
+        }
+        .test-header-actions {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-shrink: 0;
+        }
+        .test-score-chip {
+          background: #16243b;
+          border: 1px solid #2d4566;
+          padding: 5px 12px;
+          border-radius: 8px;
+          font-size: 12.5px;
+          font-weight: 700;
+          color: #cbd5e1;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+        .btn-finish-test {
+          background: linear-gradient(135deg, #ef4444, #dc2626);
+          border: none;
+          color: #ffffff;
+          font-weight: 800;
+          font-size: 13px;
+          padding: 7px 14px;
+          border-radius: 8px;
+          cursor: pointer;
+          box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+          transition: all 0.2s;
+          white-space: nowrap;
+        }
+        .btn-finish-test:hover {
+          background: linear-gradient(135deg, #dc2626, #b91c1c);
+          transform: translateY(-1px);
+        }
+        .test-mobile-tabs {
+          display: none;
+          background: #0f1c30;
+          border-bottom: 1px solid #1e3a5f;
+          padding: 6px 10px;
+          gap: 8px;
+        }
+        .mobile-tab-btn {
+          flex: 1;
+          background: #1e293b;
+          border: 1px solid #334155;
+          color: #94a3b8;
+          font-size: 12px;
+          font-weight: 800;
+          padding: 8px 10px;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        .mobile-tab-btn.active {
+          background: #0284c7;
+          border-color: #38bdf8;
+          color: #ffffff;
+        }
+
+        /* Split Panes Wrapper */
+        .map-test-panes-wrapper {
+          flex: 1;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          overflow: hidden;
+          background: #030812;
+        }
+        .test-pane {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          position: relative;
+        }
+        .student-pane {
+          border-right: 1.5px solid #1e3a5f;
+          background: #050d1a;
+        }
+        .solution-pane {
+          background: #071324;
+        }
+        .test-pane-banner {
+          background: #0d1a2d;
+          border-bottom: 1px solid #1e3a5f;
+          padding: 7px 14px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 12.5px;
+          color: #e2e8f0;
+          z-index: 5;
+        }
+        .solution-banner {
+          background: #0b1d33;
+        }
+        .test-mark-indicator {
+          font-size: 11px;
+          font-weight: 800;
+          padding: 3px 8px;
+          border-radius: 12px;
+          background: #1e293b;
+          color: #38bdf8;
+        }
+        .test-mark-indicator.pulse {
+          animation: badgeGlow 1.5s infinite;
+        }
+        @keyframes badgeGlow {
+          0%, 100% { background: #1e293b; }
+          50% { background: #0369a1; color: #ffffff; }
+        }
+        .test-map-viewport {
+          flex: 1;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .solution-idle-box {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 24px;
+          text-align: center;
+        }
+        .solution-active-container {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          overflow: hidden;
+        }
+        .solution-feedback-card {
+          background: rgba(11, 22, 39, 0.96);
+          border-top: 1.5px solid #1e3a5f;
+          padding: 10px 14px;
+          box-shadow: 0 -8px 25px rgba(0,0,0,0.5);
+          backdrop-filter: blur(8px);
+          max-height: 220px;
+          overflow-y: auto;
+          z-index: 10;
+        }
+        .solution-status-header {
+          font-size: 14.5px;
+          font-weight: 900;
+          line-height: 1.35;
+          margin-bottom: 4px;
+        }
+        .solution-distance-info {
+          font-size: 11.5px;
+          font-weight: 700;
+          color: #94a3b8;
+          margin-bottom: 4px;
+        }
+        .solution-teacher-guide {
+          font-size: 12.5px;
+          line-height: 1.5;
+          color: #f1f5f9;
+        }
+        .solution-exam-tip {
+          margin-top: 5px;
+          font-size: 11.5px;
+          color: #fbbf24;
+          background: rgba(245, 158, 11, 0.15);
+          padding: 4px 8px;
+          border-radius: 4px;
+        }
+        .solution-action-row {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 8px;
+        }
+        .btn-test-next {
+          flex: 1;
+          background: linear-gradient(135deg, #10b981, #059669);
+          border: none;
+          color: #ffffff;
+          font-weight: 800;
+          font-size: 13.5px;
+          padding: 8px 14px;
+          border-radius: 7px;
+          cursor: pointer;
+          box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+        }
+        .btn-test-finish-sm {
+          background: #334155;
+          border: none;
+          color: #cbd5e1;
+          font-weight: 700;
+          font-size: 12px;
+          padding: 8px 12px;
+          border-radius: 7px;
+          cursor: pointer;
+          white-space: nowrap;
+        }
+
+        /* Marker Styles */
         .glowing-pin {
           transform-origin: center;
           animation: pinBounce 1.5s infinite;
         }
         @keyframes pinBounce {
           0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-8px); }
+          50% { transform: translateY(-7px); }
         }
         .pin-ripple {
           animation: rippleRing 1.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
         }
         @keyframes rippleRing {
           0% { r: 5; opacity: 1; stroke-width: 3; }
-          100% { r: 40; opacity: 0; stroke-width: 0.5; }
+          100% { r: 35; opacity: 0; stroke-width: 0.5; }
         }
 
-        @media (max-width: 768px) {
-          .map-workspace { flex-direction: column-reverse; }
-          .map-sidebar { width: 100%; height: 210px; border-right: none; border-top: 1px solid #1e3a5f; }
-          .social-map-modal-container { width: 100vw; height: 100vh; border-radius: 0; }
-          .voice-teacher-card { left: 8px; right: 55px; bottom: 8px; padding: 8px 12px; }
+        /* ============================================================== */
+        /* EVALUATION DASHBOARD STYLES                                    */
+        /* ============================================================== */
+        .eval-dashboard-container {
+          max-width: 760px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .eval-score-card {
+          width: 100%;
+          background: linear-gradient(135deg, #0f1c30, #132742);
+          border: 1.5px solid #2563eb;
+          border-radius: 14px;
+          padding: 20px;
+          margin-top: 16px;
+          text-align: center;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+          box-sizing: border-box;
+        }
+        .eval-score-number {
+          font-size: 38px;
+          font-weight: 900;
+          color: #10b981;
+          margin: 6px 0;
+          letter-spacing: -0.5px;
+        }
+        .eval-medal-badge {
+          display: inline-block;
+          font-size: 16px;
+          font-weight: 800;
+          color: #fbbf24;
+          background: rgba(245, 158, 11, 0.15);
+          border: 1px solid rgba(245, 158, 11, 0.35);
+          padding: 6px 16px;
+          border-radius: 20px;
+          margin-top: 4px;
+        }
+        .eval-voice-note {
+          font-size: 12px;
+          color: #38bdf8;
+          margin-top: 10px;
+        }
+        .eval-table-wrapper {
+          width: 100%;
+          border: 1px solid #1e3a5f;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+        .eval-table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 13px;
+          text-align: left;
+        }
+        .eval-table th {
+          background: #0f1c30;
+          color: #94a3b8;
+          padding: 9px 12px;
+          font-weight: 800;
+          border-bottom: 1px solid #1e3a5f;
+        }
+        .eval-table td {
+          padding: 8px 12px;
+          border-bottom: 1px solid #16243b;
+          color: #f1f5f9;
+        }
+        .eval-table tr:last-child td { border-bottom: none; }
+        .eval-actions-row {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 24px;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 100%;
+        }
+        .eval-action-btn {
+          padding: 10px 18px;
+          font-size: 13.5px;
+          font-weight: 800;
+          border-radius: 8px;
+          cursor: pointer;
+          border: none;
+          transition: all 0.2s;
+        }
+        .eval-action-btn.primary {
+          background: linear-gradient(135deg, #10b981, #059669);
+          color: #ffffff;
+          box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+        }
+        .eval-action-btn.secondary {
+          background: #1e293b;
+          border: 1px solid #334155;
+          color: #38bdf8;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 860px) {
+          .map-test-panes-wrapper {
+            display: flex;
+            flex-direction: column;
+          }
+          .test-mobile-tabs {
+            display: flex;
+          }
+          .test-pane.student-pane {
+            border-right: none;
+          }
+          .test-pane.solution-pane {
+            border-top: 1px solid #1e3a5f;
+          }
+          .map-workspace {
+            flex-direction: column-reverse;
+          }
+          .map-sidebar {
+            width: 100%;
+            height: 190px;
+            border-right: none;
+            border-top: 1px solid #1e3a5f;
+          }
+          .social-map-modal-container {
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+            padding: 0;
+          }
+          .voice-teacher-card {
+            left: 8px;
+            right: 55px;
+            bottom: 8px;
+            padding: 8px 10px;
+          }
         }
       `;
       const st = document.createElement('style');
@@ -1548,7 +2161,31 @@
       document.head.appendChild(st);
     },
 
-    // Open Modal
+    // -------------------------------------------------------------------------
+    // HELPER: SVG GENERATOR WITH UNIQUE ID PREFIX
+    // -------------------------------------------------------------------------
+    getMapSvgHtml(mapType, prefix = 'main') {
+      const template = MAP_SVGS[mapType] || MAP_SVGS.india;
+      return template
+        .replace(/id="svgIndiaMap"/g, `id="${prefix}_svgIndiaMap"`)
+        .replace(/id="svgWorldMap"/g, `id="${prefix}_svgWorldMap"`)
+        .replace(/id="dynamicMarkerLayer"/g, `id="${prefix}_dynamicMarkerLayer"`)
+        .replace(/id="userDrawLayer"/g, `id="${prefix}_userDrawLayer"`)
+        .replace(/id="mapGlow"/g, `id="${prefix}_mapGlow"`)
+        .replace(/url\(#mapGlow\)/g, `url(#${prefix}_mapGlow)`)
+        .replace(/id="oceanGrad"/g, `id="${prefix}_oceanGrad"`)
+        .replace(/url\(#oceanGrad\)/g, `url(#${prefix}_oceanGrad)`)
+        .replace(/id="landGrad"/g, `id="${prefix}_landGrad"`)
+        .replace(/url\(#landGrad\)/g, `url(#${prefix}_landGrad)`)
+        .replace(/id="worldOcean"/g, `id="${prefix}_worldOcean"`)
+        .replace(/url\(#worldOcean\)/g, `url(#${prefix}_worldOcean)`)
+        .replace(/id="worldLand"/g, `id="${prefix}_worldLand"`)
+        .replace(/url\(#worldLand\)/g, `url(#${prefix}_worldLand)`);
+    },
+
+    // -------------------------------------------------------------------------
+    // MODAL OPEN / CLOSE CONTROLLERS
+    // -------------------------------------------------------------------------
     openModal(targetUnit = 'all', targetLocId = null, mode = 'teach') {
       this.init();
       const modal = document.getElementById('socialMapModal');
@@ -1558,8 +2195,9 @@
       if (targetUnit && targetUnit !== 'all') {
         const uNum = parseInt(targetUnit, 10);
         this.currentUnit = isNaN(uNum) ? 'all' : uNum;
-        document.getElementById('mapLessonSelect').value = this.currentUnit;
-        
+        const sel = document.getElementById('mapLessonSelect');
+        if (sel) sel.value = this.currentUnit;
+
         // Auto select world or india based on unit
         if ([1, 5, 9].includes(this.currentUnit)) {
           this.setMapType('world', false);
@@ -1568,20 +2206,23 @@
         }
       }
 
-      this.renderCurrentMap();
-      this.renderPlacesList();
-
-      if (targetLocId) {
-        this.selectLocation(targetLocId, true);
-      } else {
-        // Pick first item in list
-        const list = this.getFilteredLocations();
-        if (list.length > 0) {
-          this.selectLocation(list[0].id, false);
-        }
-      }
-
+      this.updateLanguageTexts();
       this.setMode(mode);
+
+      if (mode === 'teach') {
+        this.renderLearnMap();
+        this.renderPlacesList();
+        if (targetLocId) {
+          this.selectLocation(targetLocId, true);
+        } else {
+          const list = this.getFilteredLocations();
+          if (list.length > 0) {
+            this.selectLocation(list[0].id, false);
+          }
+        }
+      } else {
+        this.startInteractiveTest();
+      }
     },
 
     closeModal() {
@@ -1590,32 +2231,75 @@
       if (modal) modal.style.display = 'none';
     },
 
+    toggleLanguage() {
+      this.currentLang = this.currentLang === 'ta' ? 'en' : 'ta';
+      this.updateLanguageTexts();
+
+      // Refresh current view
+      if (this.currentMode === 'teach') {
+        this.renderPlacesList();
+        if (this.activeLocation) {
+          this.selectLocation(this.activeLocation.id, false);
+        }
+      } else if (this.currentMode === 'test') {
+        this.renderTestQuestion();
+      }
+    },
+
+    updateLanguageTexts() {
+      const isEm = this.currentLang === 'en';
+      const langBtn = document.getElementById('langLabel');
+      if (langBtn) langBtn.textContent = isEm ? 'தமிழ்' : 'English';
+
+      const title = document.getElementById('mapModalTitle');
+      if (title) title.textContent = isEm ? 'Class 10 Social Science Map Tutor & Test' : '10-ஆம் வகுப்பு வரைபட வழிகாட்டி & தேர்வு';
+
+      const sub = document.getElementById('mapModalSubTitle');
+      if (sub) sub.textContent = isEm ? 'All 12 Lessons • Voice Guide • Split-Screen Interactive Test Arena' : 'அனைத்து 12 அலகுகள் • குரல் வழிகாட்டி • ஊடாடும் இருபக்க தேர்வு முறை';
+
+      const dl = document.getElementById('downloadBtnText');
+      if (dl) dl.textContent = isEm ? 'Blank Map' : 'வெற்று வரைபடம்';
+
+      const modeTeach = document.getElementById('btnModeTeach');
+      if (modeTeach) modeTeach.querySelector('.mode-text').textContent = isEm ? 'Voice Tutor (Learn)' : 'குரல் வழிகாட்டி (Learn)';
+
+      const modeTest = document.getElementById('btnModeTest');
+      if (modeTest) modeTest.querySelector('.mode-text').textContent = isEm ? 'Interactive Test' : 'வரைபடத் தேர்வு (Test)';
+
+      const learnHeader = document.getElementById('learnListHeader');
+      if (learnHeader) learnHeader.textContent = isEm ? '📍 Locations to Mark:' : '📍 குறிக்க வேண்டிய இடங்கள்:';
+
+      const autoBtn = document.getElementById('btnAutoPlayAll');
+      if (autoBtn) autoBtn.textContent = this.isAutoPlaying ? (isEm ? '⏹️ Stop' : '⏹️ நிறுத்து') : (isEm ? '▶️ Auto-Teach All' : '▶️ வரிசையாக கற்பி');
+
+      const search = document.getElementById('mapSearchInput');
+      if (search) search.placeholder = isEm ? '🔍 Search location...' : '🔍 இடத்தைத் தேடுக...';
+
+      const studentHeading = document.getElementById('studentPaneHeading');
+      if (studentHeading) studentHeading.textContent = isEm ? 'Your Map (Student Canvas)' : 'உங்கள் வரைபடம் (மாணவர் பகுதி)';
+
+      const solutionHeading = document.getElementById('solutionPaneHeading');
+      if (solutionHeading) solutionHeading.textContent = isEm ? 'Correct Answer & Comparison' : 'சரியான விடை & ஒப்பீடு (Answer Reveal)';
+
+      const finishBtn = document.getElementById('btnFinishTestTop');
+      if (finishBtn) finishBtn.querySelector('.finish-btn-text').textContent = isEm ? 'Finish & Evaluate' : 'தேர்வை முடி & மதிப்பீடு செய்';
+    },
+
     setMapType(type, reRender = true) {
       this.stopVoice();
       this.currentMapType = type;
       document.getElementById('btnMapTypeIndia').classList.toggle('active', type === 'india');
       document.getElementById('btnMapTypeWorld').classList.toggle('active', type === 'world');
+
       if (reRender) {
-        this.renderCurrentMap();
-        this.renderPlacesList();
-        const list = this.getFilteredLocations();
-        if (list.length > 0) this.selectLocation(list[0].id, false);
-      }
-    },
-
-    setMode(mode) {
-      this.stopVoice();
-      const isTeach = mode === 'teach';
-      document.getElementById('btnModeTeach').classList.toggle('active', isTeach);
-      document.getElementById('btnModeTest').classList.toggle('active', !isTeach);
-      document.getElementById('teachSidebarContent').style.display = isTeach ? 'block' : 'none';
-      document.getElementById('testSidebarContent').style.display = isTeach ? 'none' : 'block';
-
-      if (!isTeach) {
-        this.startInteractiveTest();
-      } else {
-        this.isTestActive = false;
-        this.renderPlacesList();
+        if (this.currentMode === 'teach') {
+          this.renderLearnMap();
+          this.renderPlacesList();
+          const list = this.getFilteredLocations();
+          if (list.length > 0) this.selectLocation(list[0].id, false);
+        } else if (this.currentMode === 'test') {
+          this.startInteractiveTest();
+        }
       }
     },
 
@@ -1626,7 +2310,41 @@
       } else if (this.currentUnit !== 'all') {
         this.setMapType('india', true);
       } else {
+        if (this.currentMode === 'teach') {
+          this.renderPlacesList();
+          const list = this.getFilteredLocations();
+          if (list.length > 0) this.selectLocation(list[0].id, false);
+        } else if (this.currentMode === 'test') {
+          this.startInteractiveTest();
+        }
+      }
+    },
+
+    setMode(mode) {
+      this.stopVoice();
+      this.currentMode = mode;
+      const isTeach = mode === 'teach';
+
+      document.getElementById('btnModeTeach').classList.toggle('active', isTeach);
+      document.getElementById('btnModeTest').classList.toggle('active', !isTeach);
+
+      const learnWs = document.getElementById('mapLearnWorkspace');
+      const testWs = document.getElementById('mapTestWorkspace');
+      const evalWs = document.getElementById('mapEvaluationWorkspace');
+
+      if (evalWs) evalWs.style.display = 'none';
+
+      if (isTeach) {
+        if (learnWs) learnWs.style.display = 'flex';
+        if (testWs) testWs.style.display = 'none';
+        this.renderLearnMap();
         this.renderPlacesList();
+        const list = this.getFilteredLocations();
+        if (list.length > 0) this.selectLocation(list[0].id, false);
+      } else {
+        if (learnWs) learnWs.style.display = 'none';
+        if (testWs) testWs.style.display = 'flex';
+        this.startInteractiveTest();
       }
     },
 
@@ -1641,7 +2359,7 @@
         let matchSearch = true;
         if (search.trim()) {
           const s = search.toLowerCase();
-          matchSearch = loc.nameTamil.toLowerCase().includes(s) || 
+          matchSearch = loc.nameTamil.toLowerCase().includes(s) ||
                         loc.nameEnglish.toLowerCase().includes(s) ||
                         loc.category.toLowerCase().includes(s);
         }
@@ -1649,35 +2367,37 @@
       });
     },
 
-    renderCurrentMap() {
-      const wrapper = document.getElementById('mapSvgWrapper');
-      wrapper.innerHTML = MAP_SVGS[this.currentMapType];
-
-      // Bind Map Click event for Tap-to-Mark Test
-      const svgEl = wrapper.querySelector('svg');
-      if (svgEl) {
-        svgEl.addEventListener('click', (e) => this.handleMapClick(e));
-      }
+    // =========================================================================
+    // 1. LEARN MODE ENGINE (Question-by-Question Voice Teacher)
+    // =========================================================================
+    renderLearnMap() {
+      const wrapper = document.getElementById('mapLearnSvgWrapper');
+      wrapper.innerHTML = this.getMapSvgHtml(this.currentMapType, 'learn');
+      this.resetLearnMapZoom();
+      this.bindPanAndZoom('mapLearnSvgWrapper', 'learnZoom', null);
     },
 
     renderPlacesList(search = '') {
       const container = document.getElementById('mapPlacesList');
       const list = this.getFilteredLocations(search);
+      const isEm = this.currentLang === 'en';
 
       if (list.length === 0) {
-      container.innerHTML = `<div style="color:#64748b; font-size:12.5px; padding:12px; text-align:center;">இடங்கள் ஏதுமில்லை</div>`;
+        container.innerHTML = `<div style="color:#64748b; font-size:12px; padding:12px; text-align:center;">${isEm ? 'No locations found' : 'இடங்கள் ஏதுமில்லை'}</div>`;
         return;
       }
 
-      container.innerHTML = list.map(loc => {
+      container.innerHTML = list.map((loc, idx) => {
         const isAct = this.activeLocation && this.activeLocation.id === loc.id;
+        const title = isEm ? loc.nameEnglish : loc.nameTamil;
+        const sub = isEm ? loc.nameTamil : loc.nameEnglish;
         return `
           <div class="map-place-item ${isAct ? 'active' : ''}" onclick="MapTutorEngine.selectLocation('${loc.id}', true)">
-            <div>
-              <div style="font-weight:700; font-size:13px;">${loc.nameTamil}</div>
-              <div style="font-size:11px; opacity:0.8;">${loc.nameEnglish}</div>
+            <div style="min-width:0;">
+              <div style="font-weight:700; font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${title}</div>
+              <div style="font-size:11px; opacity:0.8;">${sub}</div>
             </div>
-          <span style="font-size:14px;">📍</span>
+            <span style="font-size:13px; flex-shrink:0;">📍</span>
           </div>
         `;
       }).join('');
@@ -1688,72 +2408,626 @@
       if (!loc) return;
 
       this.activeLocation = loc;
+      const isEm = this.currentLang === 'en';
+      const list = this.getFilteredLocations();
+      const currentIdx = list.findIndex(l => l.id === loc.id);
+      this.learnIndex = currentIdx >= 0 ? currentIdx : 0;
 
-      // Update Sidebar active state
+      // Update Step Bar
+      const badge = document.getElementById('learnStepBadge');
+      if (badge) badge.textContent = `${isEm ? 'Question' : 'இடம்'} ${this.learnIndex + 1} / ${list.length}`;
+
+      const title = document.getElementById('learnStepTitle');
+      if (title) title.textContent = `${isEm ? loc.nameEnglish : loc.nameTamil} (${isEm ? loc.nameTamil : loc.nameEnglish})`;
+
+      // Update Sidebar Items
       document.querySelectorAll('.map-place-item').forEach(el => {
-        el.classList.toggle('active', el.textContent.includes(loc.nameTamil));
+        el.classList.toggle('active', el.textContent.includes(loc.nameTamil) || el.textContent.includes(loc.nameEnglish));
       });
 
-      // Render Dynamic Pin on SVG
-      this.dropPinOnMap(loc);
+      // Drop Animated Pin on Learn Map
+      this.dropPinOnSvg('learn', loc, '#f59e0b', true);
 
       // Show Voice Teacher Card
       const card = document.getElementById('voiceTeacherCard');
       card.style.display = 'block';
-      document.getElementById('voicePlaceTitle').textContent = loc.nameTamil + ' (' + loc.nameEnglish + ')';
-      document.getElementById('voicePlaceGuide').textContent = loc.teachScriptTamil;
-    document.getElementById('voiceExamTip').textContent = '💡 தேர்வு குறிப்பு: ' + loc.examTip;
+      document.getElementById('voicePlaceTitle').textContent = isEm
+        ? `${loc.nameEnglish} (${loc.nameTamil})`
+        : `${loc.nameTamil} (${loc.nameEnglish})`;
+
+      document.getElementById('voicePlaceGuide').textContent = isEm ? loc.teachScriptEnglish : loc.teachScriptTamil;
+      document.getElementById('voiceExamTip').textContent = `${isEm ? '💡 Board Exam Tip: ' : '💡 தேர்வு குறிப்பு: '}${loc.examTip}`;
 
       if (shouldSpeak) {
         this.speakLocation(loc);
       }
     },
 
-    dropPinOnMap(loc, isSuccess = null) {
-      const svg = document.getElementById('svgIndiaMap') || document.getElementById('svgWorldMap');
+    nextLearnLocation() {
+      const list = this.getFilteredLocations();
+      if (list.length === 0) return;
+      this.learnIndex = (this.learnIndex + 1) % list.length;
+      this.selectLocation(list[this.learnIndex].id, true);
+    },
+
+    prevLearnLocation() {
+      const list = this.getFilteredLocations();
+      if (list.length === 0) return;
+      this.learnIndex = (this.learnIndex - 1 + list.length) % list.length;
+      this.selectLocation(list[this.learnIndex].id, true);
+    },
+
+    toggleAutoTeachAll() {
+      if (this.isAutoPlaying) {
+        this.stopVoice();
+        return;
+      }
+      const list = this.getFilteredLocations();
+      if (list.length === 0) return;
+
+      this.isAutoPlaying = true;
+      const isEm = this.currentLang === 'en';
+      document.getElementById('btnAutoPlayAll').textContent = isEm ? '⏹️ Stop' : '⏹️ நிறுத்து';
+      this.runAutoTeachStep();
+    },
+
+    runAutoTeachStep() {
+      const list = this.getFilteredLocations();
+      if (!this.isAutoPlaying || this.learnIndex >= list.length) {
+        this.stopVoice();
+        return;
+      }
+      const loc = list[this.learnIndex];
+      this.selectLocation(loc.id, true);
+    },
+
+    advanceAutoTeach() {
+      const list = this.getFilteredLocations();
+      this.learnIndex++;
+      if (this.learnIndex < list.length) {
+        this.autoPlayTimer = setTimeout(() => {
+          this.runAutoTeachStep();
+        }, 1600);
+      } else {
+        this.stopVoice();
+      }
+    },
+
+    // -------------------------------------------------------------------------
+    // DROP PIN ON ANY SVG (Learn, Student, or Solution Map)
+    // -------------------------------------------------------------------------
+    dropPinOnSvg(prefix, loc, pinColor = '#10b981', showRipple = true, customLabel = null) {
+      const svg = document.getElementById(`${prefix}_svgIndiaMap`) || document.getElementById(`${prefix}_svgWorldMap`);
       if (!svg) return;
 
-      const layer = svg.querySelector('#dynamicMarkerLayer');
+      const layer = svg.querySelector(`#${prefix}_dynamicMarkerLayer`);
       if (!layer) return;
 
-      // Convert percentage coordinates to SVG viewBox coords
       const viewBox = svg.viewBox.baseVal;
       const vx = (loc.coords.x / 100) * viewBox.width;
       const vy = (loc.coords.y / 100) * viewBox.height;
 
-      const pinColor = isSuccess === false ? '#ef4444' : (isSuccess === true ? '#10b981' : '#f59e0b');
+      const isEm = this.currentLang === 'en';
+      const labelText = customLabel || (isEm ? loc.nameEnglish : loc.nameTamil);
+      const labelWidth = Math.max(80, labelText.length * 9 + 20);
 
       layer.innerHTML = `
-        <!-- Animated Ripple Ring -->
-        <circle cx="${vx}" cy="${vy}" r="15" fill="none" stroke="${pinColor}" stroke-width="2.5" class="pin-ripple" />
+        ${showRipple ? `<circle cx="${vx}" cy="${vy}" r="15" fill="none" stroke="${pinColor}" stroke-width="2.5" class="pin-ripple" />` : ''}
         
-        <!-- Glowing Pin Point -->
         <g class="glowing-pin" transform="translate(${vx}, ${vy})">
-          <circle cx="0" cy="0" r="7" fill="${pinColor}" stroke="#ffffff" stroke-width="2.5" filter="url(#mapGlow)" />
+          <circle cx="0" cy="0" r="7" fill="${pinColor}" stroke="#ffffff" stroke-width="2.5" filter="url(#${prefix}_mapGlow)" />
           <path d="M 0 0 L -8 -22 A 9 9 0 1 1 8 -22 Z" fill="${pinColor}" stroke="#ffffff" stroke-width="1.5" />
           <circle cx="0" cy="-22" r="4" fill="#ffffff" />
           
           <!-- Label Tooltip -->
-          <rect x="14" y="-32" width="${loc.nameTamil.length * 10 + 20}" height="24" rx="5" fill="#091220" stroke="${pinColor}" stroke-width="1.5" />
-          <text x="22" y="-16" fill="#ffffff" font-size="12" font-weight="800">${loc.nameTamil}</text>
+          <rect x="14" y="-32" width="${labelWidth}" height="24" rx="5" fill="#091220" stroke="${pinColor}" stroke-width="1.5" />
+          <text x="22" y="-16" fill="#ffffff" font-size="12" font-weight="800">${labelText}</text>
         </g>
       `;
     },
 
-    // -------------------------------------------------------------------------
-    // VOICE TEACHER (Web Speech API Narration)
-    // -------------------------------------------------------------------------
-    speakLocation(loc) {
-      this.stopVoice();
+    dropUserMarkerOnStudentMap(pctX, pctY) {
+      const svg = document.getElementById('student_svgIndiaMap') || document.getElementById('student_svgWorldMap');
+      if (!svg) return;
 
-      if (!('speechSynthesis' in window)) {
-        console.warn('Speech synthesis not supported');
+      const layer = svg.querySelector('#student_dynamicMarkerLayer');
+      if (!layer) return;
+
+      const viewBox = svg.viewBox.baseVal;
+      const vx = (pctX / 100) * viewBox.width;
+      const vy = (pctY / 100) * viewBox.height;
+      const isEm = this.currentLang === 'en';
+      const label = isEm ? '📍 Your Mark' : '📍 உங்கள் தேர்வு';
+
+      layer.innerHTML = `
+        <circle cx="${vx}" cy="${vy}" r="14" fill="none" stroke="#38bdf8" stroke-width="3" class="pin-ripple" />
+        <g transform="translate(${vx}, ${vy})">
+          <circle cx="0" cy="0" r="8" fill="#0284c7" stroke="#ffffff" stroke-width="2.5" />
+          <path d="M 0 0 L -7 -20 A 8 8 0 1 1 7 -20 Z" fill="#0284c7" stroke="#ffffff" stroke-width="1.5" />
+          <circle cx="0" cy="-20" r="3.5" fill="#ffffff" />
+          <rect x="12" y="-28" width="100" height="22" rx="4" fill="#091220" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="18" y="-13" fill="#38bdf8" font-size="11.5" font-weight="800">${label}</text>
+        </g>
+      `;
+    },
+
+    // =========================================================================
+    // 2. TEST MODE ENGINE (Split-Screen Interactive Marking & Immediate Feedback)
+    // =========================================================================
+    startInteractiveTest() {
+      this.stopVoice();
+      this.isTestActive = true;
+      const list = this.getFilteredLocations();
+
+      // Pick 5 to 10 curated questions for this test session
+      const sampleCount = Math.min(10, Math.max(5, list.length));
+      if (list.length <= sampleCount) {
+        this.testQuestions = [...list].sort(() => 0.5 - Math.random());
+      } else {
+        this.testQuestions = [...list].sort(() => 0.5 - Math.random()).slice(0, sampleCount);
+      }
+
+      this.currentTestIndex = 0;
+      this.currentScore = 0;
+      this.testResults = [];
+      this.isAnsweredCurrent = false;
+
+      // Render Student Map (Left) and Solution Map (Right)
+      this.renderStudentMap();
+      this.renderSolutionMap();
+
+      // Switch to Student tab on mobile initially
+      this.switchMobileTestTab('student');
+
+      // Render Question 1
+      this.renderTestQuestion();
+    },
+
+    renderStudentMap() {
+      const wrapper = document.getElementById('studentMapSvgWrapper');
+      wrapper.innerHTML = this.getMapSvgHtml(this.currentMapType, 'student');
+      this.resetStudentMapZoom();
+      this.bindPanAndZoom('studentMapSvgWrapper', 'studentZoom', (clientX, clientY) => {
+        this.handleStudentMapMark(clientX, clientY);
+      });
+    },
+
+    renderSolutionMap() {
+      const wrapper = document.getElementById('solutionMapSvgWrapper');
+      wrapper.innerHTML = this.getMapSvgHtml(this.currentMapType, 'solution');
+    },
+
+    renderTestQuestion() {
+      const q = this.testQuestions[this.currentTestIndex];
+      if (!q) {
+        this.finishTest();
         return;
       }
 
-    const text = `${loc.nameTamil}. ${loc.teachScriptTamil} தேர்வு குறிப்பு: ${loc.examTip}`;
+      this.isAnsweredCurrent = false;
+      this.currentUserMark = null;
+      const isEm = this.currentLang === 'en';
+      const total = this.testQuestions.length;
+
+      // Update Top Status Bar
+      const prog = document.getElementById('testProgressBadge');
+      if (prog) prog.textContent = `${isEm ? 'Question' : 'கேள்வி'} ${this.currentTestIndex + 1} / ${total}`;
+
+      const scoreVal = document.getElementById('testScoreVal');
+      if (scoreVal) scoreVal.textContent = `${this.currentScore.toFixed(1)} / ${total}`;
+
+      const prompt = document.getElementById('testQuestionPrompt');
+      if (prompt) {
+        prompt.innerHTML = `
+          <span>${isEm ? 'Locate & Mark:' : 'வரைபடத்தில் குறிக்கவும்:'}</span> 
+          <span style="color:#fbbf24;">"${isEm ? q.nameEnglish : q.nameTamil}"</span> 
+          <span style="font-size:13px; color:#cbd5e1;">(${isEm ? q.nameTamil : q.nameEnglish})</span>
+        `;
+      }
+
+      const tip = document.getElementById('testInstructionTip');
+      if (tip) tip.textContent = isEm
+        ? '👆 Tap or click on the left map to mark this location'
+        : '👆 இடதுபுற வரைபடத்தில் சரியான இடத்தைத் தொட்டு அல்லது கிளிக் செய்து குறிக்கவும்';
+
+      // Reset Left Map Pin
+      const svgStudent = document.getElementById('student_svgIndiaMap') || document.getElementById('student_svgWorldMap');
+      if (svgStudent) {
+        const layer = svgStudent.querySelector('#student_dynamicMarkerLayer');
+        if (layer) layer.innerHTML = '';
+      }
+
+      // Reset Left Indicator
+      const markIndicator = document.getElementById('studentMarkStatus');
+      if (markIndicator) {
+        markIndicator.className = 'test-mark-indicator pulse';
+        markIndicator.textContent = isEm ? '👆 Tap to mark location' : '👆 வரைபடத்தில் தொட்டு குறிக்கவும்';
+      }
+
+      // Reset Right Solution Pane to Idle State
+      const idleBox = document.getElementById('solutionIdlePrompt');
+      const activeContent = document.getElementById('solutionActiveContent');
+      if (idleBox) idleBox.style.display = 'flex';
+      if (activeContent) activeContent.style.display = 'none';
+
+      const resBadge = document.getElementById('solutionResultBadge');
+      if (resBadge) {
+        resBadge.className = 'solution-badge-idle';
+        resBadge.textContent = isEm ? 'Waiting for your mark...' : 'காத்திருக்கிறது...';
+      }
+
+      // Switch mobile tab back to student if on small screen
+      this.switchMobileTestTab('student');
+    },
+
+    // -------------------------------------------------------------------------
+    // MARKING CLICK HANDLER (Accurate Coordinate Transformation via getScreenCTM)
+    // -------------------------------------------------------------------------
+    handleStudentMapMark(clientX, clientY) {
+      if (this.isAnsweredCurrent) return; // Prevent multiple markings per question
+
+      const q = this.testQuestions[this.currentTestIndex];
+      if (!q) return;
+
+      const svg = document.getElementById('student_svgIndiaMap') || document.getElementById('student_svgWorldMap');
+      if (!svg) return;
+
+      // Coordinate transformation with full zoom/pan immunity:
+      const pt = svg.createSVGPoint();
+      pt.x = clientX;
+      pt.y = clientY;
+      const svgPoint = pt.matrixTransform(svg.getScreenCTM().inverse());
+      const viewBox = svg.viewBox.baseVal;
+      const userPctX = (svgPoint.x / viewBox.width) * 100;
+      const userPctY = (svgPoint.y / viewBox.height) * 100;
+
+      // Drop User Mark on Left Map
+      this.dropUserMarkerOnStudentMap(userPctX, userPctY);
+      this.isAnsweredCurrent = true;
+      this.currentUserMark = { x: userPctX, y: userPctY };
+
+      // Calculate Euclidean distance error in SVG percentage space
+      const dx = userPctX - q.coords.x;
+      const dy = userPctY - q.coords.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      // Evaluate and reveal on Right Panel
+      this.evaluateAndRevealAnswer(distance, userPctX, userPctY, q);
+    },
+
+    evaluateAndRevealAnswer(distance, userX, userY, q) {
+      const isEm = this.currentLang === 'en';
+      const isBullseye = distance <= 5.5;  // <= 5.5% radius = 1.0 full mark
+      const isClose = distance <= 11.5;    // <= 11.5% radius = 0.5 partial mark
+
+      let markEarned = 0;
+      let statusKey = 'wrong';
+      let statusHeader = '';
+      let statusColor = '#ef4444';
+      let badgeText = '';
+
+      if (isBullseye) {
+        markEarned = 1.0;
+        this.currentScore += 1.0;
+        statusKey = 'bullseye';
+        statusColor = '#10b981';
+        badgeText = isEm ? '🎯 Accurate (+1.0 Mark)' : '🎯 துல்லியமானது (+1.0)';
+        statusHeader = isEm
+          ? `🎯 Outstanding! Accurate Location! (+1.0 Mark)`
+          : `🎯 அற்புதம்! துல்லியமாகக் குறித்துள்ளீர்கள்! (+1.0 மதிப்பெண்)`;
+        this.playAudioChime(true);
+      } else if (isClose) {
+        markEarned = 0.5;
+        this.currentScore += 0.5;
+        statusKey = 'close';
+        statusColor = '#f59e0b';
+        badgeText = isEm ? '👍 Close (+0.5 Mark)' : '👍 மிக அருகில் (+0.5)';
+        statusHeader = isEm
+          ? `👍 Very Close! Good Try! (+0.5 Mark)`
+          : `👍 மிக அருகில் உள்ளது! நன்று! (+0.5 மதிப்பெண்)`;
+        this.playAudioChime(true);
+      } else {
+        markEarned = 0;
+        statusKey = 'wrong';
+        statusColor = '#ef4444';
+        badgeText = isEm ? '❌ Incorrect (0 Mark)' : '❌ தவறானது (0)';
+        statusHeader = isEm
+          ? `❌ Incorrect Location! Actual location shown in green.`
+          : `❌ இடம் மாறியுள்ளது! உண்மையான இடம் பச்சை நிறத்தில் ஒளிர்கிறது.`;
+        this.playAudioChime(false);
+      }
+
+      this.testResults.push({
+        question: q,
+        distance,
+        markEarned,
+        statusKey,
+        userX,
+        userY
+      });
+
+      // Update Left Mark Indicator
+      const markIndicator = document.getElementById('studentMarkStatus');
+      if (markIndicator) {
+        markIndicator.className = 'test-mark-indicator';
+        markIndicator.style.background = statusColor;
+        markIndicator.style.color = '#ffffff';
+        markIndicator.textContent = isEm ? `Marked (${markEarned} pt)` : `குறிக்கப்பட்டது (+${markEarned})`;
+      }
+
+      // Reveal Right Map and Feedback Card
+      const idleBox = document.getElementById('solutionIdlePrompt');
+      const activeContent = document.getElementById('solutionActiveContent');
+      if (idleBox) idleBox.style.display = 'none';
+      if (activeContent) activeContent.style.display = 'flex';
+
+      // Drop Green Solution Pin on Right Map
+      this.dropPinOnSvg('solution', q, '#10b981', true, (isEm ? q.nameEnglish : q.nameTamil) + ' ✅');
+
+      // Update Feedback Card Texts
+      const resBadge = document.getElementById('solutionResultBadge');
+      if (resBadge) {
+        resBadge.className = 'test-mark-indicator';
+        resBadge.style.background = statusColor;
+        resBadge.style.color = '#ffffff';
+        resBadge.textContent = badgeText;
+      }
+
+      const sHeader = document.getElementById('solutionStatusHeader');
+      if (sHeader) {
+        sHeader.style.color = statusColor;
+        sHeader.textContent = statusHeader;
+      }
+
+      const distInfo = document.getElementById('solutionDistanceInfo');
+      if (distInfo) {
+        distInfo.textContent = isEm
+          ? `Distance deviation: ${distance.toFixed(1)}% | Exact Target: ${q.nameEnglish}`
+          : `துல்லிய இடைவெளி: ${distance.toFixed(1)}% | சரியான இலக்கு: ${q.nameTamil}`;
+      }
+
+      const guide = document.getElementById('solutionTeacherGuide');
+      if (guide) {
+        guide.textContent = isEm ? q.teachScriptEnglish : q.teachScriptTamil;
+      }
+
+      const examTip = document.getElementById('solutionExamTip');
+      if (examTip) {
+        examTip.textContent = `${isEm ? '💡 Board Exam Tip: ' : '💡 தேர்வு குறிப்பு: '}${q.examTip}`;
+      }
+
+      // Update Score Display
+      const scoreVal = document.getElementById('testScoreVal');
+      if (scoreVal) scoreVal.textContent = `${this.currentScore.toFixed(1)} / ${this.testQuestions.length}`;
+
+      // Voice Audio Narration of Right / Wrong
+      this.speakTestFeedback(statusKey, q);
+
+      // On Mobile: Automatically switch to Solution Tab so student sees the result!
+      if (window.innerWidth <= 860) {
+        setTimeout(() => {
+          this.switchMobileTestTab('solution');
+        }, 350);
+      }
+    },
+
+    nextTestQuestion() {
+      this.currentTestIndex++;
+      if (this.currentTestIndex < this.testQuestions.length) {
+        this.renderTestQuestion();
+      } else {
+        this.finishTest();
+      }
+    },
+
+    switchMobileTestTab(tab) {
+      this.mobileActiveTab = tab;
+      const btnStudent = document.getElementById('btnTabStudent');
+      const btnSolution = document.getElementById('btnTabSolution');
+      const paneStudent = document.getElementById('paneStudentMap');
+      const paneSolution = document.getElementById('paneSolutionMap');
+
+      if (btnStudent && btnSolution && paneStudent && paneSolution) {
+        btnStudent.classList.toggle('active', tab === 'student');
+        btnSolution.classList.toggle('active', tab === 'solution');
+
+        if (window.innerWidth <= 860) {
+          paneStudent.style.display = tab === 'student' ? 'flex' : 'none';
+          paneSolution.style.display = tab === 'solution' ? 'flex' : 'none';
+        } else {
+          paneStudent.style.display = 'flex';
+          paneSolution.style.display = 'flex';
+        }
+      }
+    },
+
+    // =========================================================================
+    // 3. FINISH BUTTON & TEST EVALUATION DASHBOARD
+    // =========================================================================
+    finishTest() {
+      this.stopVoice();
+      this.isTestActive = false;
+
+      const testWs = document.getElementById('mapTestWorkspace');
+      const evalWs = document.getElementById('mapEvaluationWorkspace');
+      if (testWs) testWs.style.display = 'none';
+      if (evalWs) evalWs.style.display = 'flex';
+
+      const isEm = this.currentLang === 'en';
+      const total = this.testQuestions.length;
+      const pct = total > 0 ? Math.round((this.currentScore / total) * 100) : 0;
+
+      let medal = '';
+      let medalTitle = '';
+      if (pct >= 80) {
+        medal = '🥇 ' + (isEm ? 'Gold Medal - Outstanding!' : 'தங்கப் பதக்கம் - மிகச் சிறந்த சாதனை!');
+        medalTitle = isEm ? 'Gold Medal' : 'தங்கப் பதக்கம்';
+      } else if (pct >= 50) {
+        medal = '🥈 ' + (isEm ? 'Silver Medal - Good Effort!' : 'வெள்ளிப் பதக்கம் - நல்ல முயற்சி!');
+        medalTitle = isEm ? 'Silver Medal' : 'வெள்ளிப் பதக்கம்';
+      } else {
+        medal = '🥉 ' + (isEm ? 'Bronze Medal - More Practice Needed' : 'வெண்கலப் பதக்கம் - கூடுதல் பயிற்சி தேவை');
+        medalTitle = isEm ? 'Bronze Medal' : 'வெண்கலப் பதக்கம்';
+      }
+
+      // Update Dashboard Texts
+      const scoreNum = document.getElementById('evalScoreNumber');
+      if (scoreNum) scoreNum.textContent = `${this.currentScore.toFixed(1)} / ${total} (${pct}%)`;
+
+      const medalBadge = document.getElementById('evalMedalBadge');
+      if (medalBadge) medalBadge.textContent = medal;
+
+      // Populate Table
+      const tBody = document.getElementById('evalTableBody');
+      if (tBody) {
+        tBody.innerHTML = this.testQuestions.map((q, idx) => {
+          const res = this.testResults.find(r => r.question.id === q.id);
+          let statusHtml = '';
+          let scoreHtml = '';
+
+          if (!res) {
+            statusHtml = `<span style="color:#94a3b8;">${isEm ? '⏭️ Skipped' : '⏭️ விடப்பட்டது'}</span>`;
+            scoreHtml = '0.0';
+          } else if (res.statusKey === 'bullseye') {
+            statusHtml = `<span style="color:#10b981; font-weight:800;">${isEm ? '🎯 Accurate' : '🎯 துல்லியம்'}</span>`;
+            scoreHtml = '+1.0';
+          } else if (res.statusKey === 'close') {
+            statusHtml = `<span style="color:#f59e0b; font-weight:800;">${isEm ? '👍 Close' : '👍 அருகில்'}</span>`;
+            scoreHtml = '+0.5';
+          } else {
+            statusHtml = `<span style="color:#ef4444; font-weight:800;">${isEm ? '❌ Incorrect' : '❌ தவறு'}</span>`;
+            scoreHtml = '0.0';
+          }
+
+          const qName = isEm ? q.nameEnglish : q.nameTamil;
+          return `
+            <tr>
+              <td style="font-weight:800; color:#94a3b8;">${idx + 1}</td>
+              <td style="font-weight:700;">${qName}</td>
+              <td>${statusHtml}</td>
+              <td style="font-weight:800; color:#38bdf8;">${scoreHtml}</td>
+              <td>
+                <button type="button" class="map-action-sm-btn" onclick="MapTutorEngine.reviewQuestionInTeach('${q.id}')">
+                  ${isEm ? '🔍 View on Map' : '🔍 வரைபடத்தில் பார்'}
+                </button>
+              </td>
+            </tr>
+          `;
+        }).join('');
+      }
+
+      // Spoken Audio Summary Evaluation
+      this.speakEvaluationSummary(this.currentScore, total, medalTitle);
+    },
+
+    reviewQuestionInTeach(locId) {
+      this.setMode('teach');
+      this.selectLocation(locId, true);
+    },
+
+    // =========================================================================
+    // 4. ZOOM & PAN ENGINE FOR SVG MAPS
+    // =========================================================================
+    zoomLearnMap(factor) {
+      this.learnZoom.scale = Math.max(1.0, Math.min(3.5, this.learnZoom.scale * factor));
+      if (this.learnZoom.scale === 1.0) {
+        this.learnZoom.panX = 0;
+        this.learnZoom.panY = 0;
+      }
+      this.applyTransform('learn', this.learnZoom);
+    },
+
+    resetLearnMapZoom() {
+      this.learnZoom.scale = 1.0;
+      this.learnZoom.panX = 0;
+      this.learnZoom.panY = 0;
+      this.applyTransform('learn', this.learnZoom);
+    },
+
+    zoomStudentMap(factor) {
+      this.studentZoom.scale = Math.max(1.0, Math.min(3.5, this.studentZoom.scale * factor));
+      if (this.studentZoom.scale === 1.0) {
+        this.studentZoom.panX = 0;
+        this.studentZoom.panY = 0;
+      }
+      this.applyTransform('student', this.studentZoom);
+    },
+
+    resetStudentMapZoom() {
+      this.studentZoom.scale = 1.0;
+      this.studentZoom.panX = 0;
+      this.studentZoom.panY = 0;
+      this.applyTransform('student', this.studentZoom);
+    },
+
+    applyTransform(prefix, zoomState) {
+      const svg = document.getElementById(`${prefix}_svgIndiaMap`) || document.getElementById(`${prefix}_svgWorldMap`);
+      if (svg) {
+        svg.style.transform = `translate(${zoomState.panX}px, ${zoomState.panY}px) scale(${zoomState.scale})`;
+        svg.style.transformOrigin = 'center center';
+      }
+    },
+
+    bindPanAndZoom(containerId, zoomStateKey, tapCallback) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+
+      const zState = this[zoomStateKey];
+
+      let isDown = false;
+      let startX = 0;
+      let startY = 0;
+      let movedDist = 0;
+
+      container.onpointerdown = (e) => {
+        isDown = true;
+        startX = e.clientX - zState.panX;
+        startY = e.clientY - zState.panY;
+        movedDist = 0;
+      };
+
+      container.onpointermove = (e) => {
+        if (!isDown) return;
+        const currentPanX = e.clientX - startX;
+        const currentPanY = e.clientY - startY;
+        movedDist += Math.abs(currentPanX - zState.panX) + Math.abs(currentPanY - zState.panY);
+
+        if (zState.scale > 1.0) {
+          zState.panX = currentPanX;
+          zState.panY = currentPanY;
+          this.applyTransform(containerId.includes('learn') ? 'learn' : 'student', zState);
+        }
+      };
+
+      container.onpointerup = (e) => {
+        if (!isDown) return;
+        isDown = false;
+
+        // If movement was minimal (< 8px), it was a tap/click!
+        if (movedDist < 8 && tapCallback) {
+          tapCallback(e.clientX, e.clientY);
+        }
+      };
+
+      container.onpointercancel = () => {
+        isDown = false;
+      };
+    },
+
+    // =========================================================================
+    // 5. VOICE NARRATION (Speech Synthesis Web API) & AUDIO CHIMES
+    // =========================================================================
+    speakLocation(loc) {
+      this.stopVoice();
+      if (!('speechSynthesis' in window)) return;
+
+      const isEm = this.currentLang === 'en';
+      const text = isEm
+        ? `${loc.nameEnglish}. ${loc.teachScriptEnglish} Board exam tip: ${loc.examTip}`
+        : `${loc.nameTamil}. ${loc.teachScriptTamil} தேர்வு குறிப்பு: ${loc.examTip}`;
+
       const utter = new SpeechSynthesisUtterance(text);
-      utter.lang = 'ta-IN';
+      utter.lang = isEm ? 'en-IN' : 'ta-IN';
       utter.rate = 0.95;
       utter.pitch = 1.0;
 
@@ -1778,6 +3052,66 @@
       window.speechSynthesis.speak(utter);
     },
 
+    speakTestFeedback(statusKey, q) {
+      this.stopVoice();
+      if (!('speechSynthesis' in window)) return;
+
+      const isEm = this.currentLang === 'en';
+      let phrase = '';
+
+      if (statusKey === 'bullseye') {
+        phrase = isEm
+          ? `Excellent! Correct answer! You marked ${q.nameEnglish} accurately.`
+          : `அற்புதம்! சரியான விடை! ${q.nameTamil} இடத்தை நீங்கள் மிகத் துல்லியமாகக் குறித்துள்ளீர்கள்.`;
+      } else if (statusKey === 'close') {
+        phrase = isEm
+          ? `Very close! Good try. The exact location of ${q.nameEnglish} is shown on the right side.`
+          : `மிக அருகில் உள்ளது, நன்று! ${q.nameTamil} சரியான இடம் வலதுபுற வரைபடத்தில் பச்சை நிறத்தில் காட்டப்பட்டுள்ளது, கவனித்துக் கொள்ளுங்கள்.`;
+      } else {
+        phrase = isEm
+          ? `Incorrect location. The correct location of ${q.nameEnglish} is shown on the right side map.`
+          : `தவறான இடம். ${q.nameTamil} சரியான இடம் வலதுபுற வரைபடத்தில் காட்டப்பட்டுள்ளது, கவனித்துக் கொள்ளுங்கள்.`;
+      }
+
+      const utter = new SpeechSynthesisUtterance(phrase);
+      utter.lang = isEm ? 'en-IN' : 'ta-IN';
+      utter.rate = 0.95;
+      utter.pitch = 1.0;
+      window.speechSynthesis.speak(utter);
+    },
+
+    speakEvaluationSummary(score, total, medalTitle) {
+      this.stopVoice();
+      if (!('speechSynthesis' in window)) return;
+
+      const isEm = this.currentLang === 'en';
+      const pct = total > 0 ? Math.round((score / total) * 100) : 0;
+      let advice = '';
+
+      if (pct >= 80) {
+        advice = isEm
+          ? 'Outstanding performance! You have mastered 10th Social Science map marking.'
+          : 'அருமையான சாதனை! 10-ஆம் வகுப்பு வரைபடக் குறியீடுகளில் நீங்கள் முழுத் தேர்ச்சி பெற்றுள்ளீர்கள்!';
+      } else if (pct >= 50) {
+        advice = isEm
+          ? 'Good effort! Review the missed questions to score full marks in board exams.'
+          : 'நல்ல முயற்சி! பொதுத்தேர்வில் முழு மதிப்பெண் பெற விடுபட்ட இடங்களை மீண்டும் பயிற்சி செய்யுங்கள்.';
+      } else {
+        advice = isEm
+          ? 'More practice is required. Use the voice tutor to study each location step by step.'
+          : 'கூடுதல் பயிற்சி தேவை. குரல் வழிகாட்டியைப் பயன்படுத்தி ஒவ்வொரு இடத்தையும் கவனமாகப் படியுங்கள்.';
+      }
+
+      const text = isEm
+        ? `Test complete. Your score is ${score.toFixed(1)} out of ${total}. You have won the ${medalTitle}! ${advice}`
+        : `தேர்வு நிறைவடைந்தது. உங்கள் மதிப்பெண் ${total}-க்கு ${score.toFixed(1)}. நீங்கள் ${medalTitle} வென்றுள்ளீர்கள்! ${advice}`;
+
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = isEm ? 'en-IN' : 'ta-IN';
+      utter.rate = 0.95;
+      window.speechSynthesis.speak(utter);
+    },
+
     replayVoice() {
       if (this.activeLocation) {
         this.speakLocation(this.activeLocation);
@@ -1791,216 +3125,11 @@
       this.isVoicePlaying = false;
       this.isAutoPlaying = false;
       if (this.autoPlayTimer) clearTimeout(this.autoPlayTimer);
+      const isEm = this.currentLang === 'en';
       const btn = document.getElementById('btnAutoPlayAll');
-    if (btn) btn.textContent = '▶️ அனைத்தையும் கற்பி';
+      if (btn) btn.textContent = isEm ? '▶️ Auto-Teach All' : '▶️ வரிசையாக கற்பி';
     },
 
-    toggleAutoTeachAll() {
-      if (this.isAutoPlaying) {
-        this.stopVoice();
-        return;
-      }
-
-      const list = this.getFilteredLocations();
-      if (list.length === 0) return;
-
-      this.isAutoPlaying = true;
-      this.autoPlayList = list;
-      this.autoPlayIndex = 0;
-    document.getElementById('btnAutoPlayAll').textContent = '⏹️ நிறுத்து';
-      this.runAutoTeachStep();
-    },
-
-    runAutoTeachStep() {
-      if (!this.isAutoPlaying || this.autoPlayIndex >= this.autoPlayList.length) {
-        this.stopVoice();
-        return;
-      }
-
-      const loc = this.autoPlayList[this.autoPlayIndex];
-      this.selectLocation(loc.id, true);
-    },
-
-    advanceAutoTeach() {
-      this.autoPlayIndex++;
-      if (this.autoPlayIndex < this.autoPlayList.length) {
-        this.autoPlayTimer = setTimeout(() => {
-          this.runAutoTeachStep();
-        }, 1500);
-      } else {
-        this.stopVoice();
-      }
-    },
-
-    // -------------------------------------------------------------------------
-    // INTERACTIVE MAP TEST (Tap-to-Mark & Coordinates Tolerance Check)
-    // -------------------------------------------------------------------------
-    startInteractiveTest() {
-      this.stopVoice();
-      this.isTestActive = true;
-      const list = this.getFilteredLocations();
-
-      if (list.length < 3) {
-        // Pull general 5 questions
-        this.testQuestions = [...SOCIAL_MAP_LOCATIONS.filter(l => l.mapType === this.currentMapType)].sort(() => 0.5 - Math.random()).slice(0, 5);
-      } else {
-        this.testQuestions = [...list].sort(() => 0.5 - Math.random()).slice(0, 5);
-      }
-
-      this.currentTestIndex = 0;
-      this.currentScore = 0;
-      this.testResults = [];
-
-      // Clear SVG pin
-      const svg = document.getElementById('svgIndiaMap') || document.getElementById('svgWorldMap');
-      if (svg) {
-        const layer = svg.querySelector('#dynamicMarkerLayer');
-        if (layer) layer.innerHTML = '';
-      }
-      document.getElementById('voiceTeacherCard').style.display = 'none';
-
-      this.renderTestQuestion();
-    },
-
-    renderTestQuestion() {
-      const q = this.testQuestions[this.currentTestIndex];
-      if (!q) {
-        this.finishTest();
-        return;
-      }
-
-      document.getElementById('testProgress').textContent = `${this.currentTestIndex + 1} / ${this.testQuestions.length}`;
-      document.getElementById('testScoreDisplay').textContent = `${this.currentScore} / ${this.testQuestions.length}`;
-      document.getElementById('testQuestionPrompt').innerHTML = `
-        <span style="color:#fbbf24;">கேள்வி ${this.currentTestIndex + 1}:</span><br>
-        "${q.nameTamil}"<br>
-        <span style="font-size:13px; color:#cbd5e1;">(${q.nameEnglish}) - வரைபடத்தில் குறிக்கவும்.</span>
-      `;
-      document.getElementById('testInstructionTip').style.display = 'block';
-      document.getElementById('testFeedbackBox').style.display = 'none';
-      document.getElementById('btnNextTestQ').style.display = 'none';
-
-      // Clear dynamic marker
-      const svg = document.getElementById('svgIndiaMap') || document.getElementById('svgWorldMap');
-      if (svg) {
-        const layer = svg.querySelector('#dynamicMarkerLayer');
-        if (layer) layer.innerHTML = '';
-      }
-    },
-
-    handleMapClick(event) {
-      if (!this.isTestActive) return;
-
-      const q = this.testQuestions[this.currentTestIndex];
-      if (!q) return;
-
-      // Calculate clicked coordinates percentage relative to SVG viewBox
-      const svg = event.currentTarget;
-      const rect = svg.getBoundingClientRect();
-      const clickX = event.clientX - rect.left;
-      const clickY = event.clientY - rect.top;
-
-      const pctX = (clickX / rect.width) * 100;
-      const pctY = (clickY / rect.height) * 100;
-
-      // Measure Euclidean distance to target
-      const dx = pctX - q.coords.x;
-      const dy = pctY - q.coords.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-
-      this.evaluateTestAnswer(dist, pctX, pctY, q);
-    },
-
-    evaluateTestAnswer(distance, userX, userY, q) {
-      const isBullseye = distance <= 5.5; // Within 5.5% radius
-      const isClose = distance <= 11.0;   // Within 11% radius
-
-      let markEarned = 0;
-      let statusText = '';
-      let feedbackBg = '';
-
-      if (isBullseye) {
-        markEarned = 1.0;
-        this.currentScore += 1.0;
-      statusText = `🎯 அற்புதம்! துல்லியமாகக் குறித்துள்ளீர்கள்! (+1.0 மதிப்பெண்)`;
-        feedbackBg = '#065f46';
-        this.playAudioChime(true);
-      } else if (isClose) {
-        markEarned = 0.5;
-        this.currentScore += 0.5;
-      statusText = `👍 மிக அருகில் உள்ளது! சரியான இடம் சிறிது இடைவெளியில் உள்ளது. (+0.5 மதிப்பெண்)`;
-        feedbackBg = '#854d0e';
-        this.playAudioChime(true);
-      } else {
-        markEarned = 0;
-      statusText = `❌ இடம் மாறியுள்ளது! உண்மையான இடம் வரைபடத்தில் ஒளிர்கிறது. (0 மதிப்பெண்)`;
-        feedbackBg = '#7f1d1d';
-        this.playAudioChime(false);
-      }
-
-      this.testResults.push({
-        question: q,
-        distance,
-        markEarned
-      });
-
-      // Reveal actual target pin
-      this.dropPinOnMap(q, isBullseye);
-
-      // Render Feedback
-      const fBox = document.getElementById('testFeedbackBox');
-      fBox.style.display = 'block';
-      fBox.style.background = feedbackBg;
-      fBox.style.color = '#ffffff';
-      fBox.innerHTML = `
-        ${statusText}<br>
-        <span style="font-size:12px; opacity:0.9;">${q.teachScriptTamil}</span>
-      `;
-
-      document.getElementById('testInstructionTip').style.display = 'none';
-      document.getElementById('testScoreDisplay').textContent = `${this.currentScore} / ${this.testQuestions.length}`;
-      document.getElementById('btnNextTestQ').style.display = 'block';
-    },
-
-    nextTestQuestion() {
-      this.currentTestIndex++;
-      if (this.currentTestIndex < this.testQuestions.length) {
-        this.renderTestQuestion();
-      } else {
-        this.finishTest();
-      }
-    },
-
-    finishTest() {
-      this.isTestActive = false;
-      const total = this.testQuestions.length;
-      const pct = Math.round((this.currentScore / total) * 100);
-
-    let medal = '🥇 தங்கம் (Gold Medal)';
-    if (pct < 50) medal = '🥉 பயிற்சி தேவை (Keep Practicing)';
-    else if (pct < 80) medal = '🥈 வெள்ளி (Silver Medal)';
-
-      document.getElementById('testQuestionPrompt').innerHTML = `
-        <div style="text-align:center; padding:10px 0;">
-      <div style="font-size:32px;">🏆</div>
-      <div style="font-size:18px; font-weight:800; color:#38bdf8; margin:6px 0;">தேர்வு முடிவு (Test Complete)</div>
-      <div style="font-size:24px; font-weight:900; color:#10b981;">${this.currentScore} / ${total} மதிப்பெண்கள் (${pct}%)</div>
-          <div style="margin-top:8px; font-weight:700; color:#fbbf24;">${medal}</div>
-        </div>
-      `;
-
-      document.getElementById('testInstructionTip').style.display = 'none';
-      document.getElementById('testFeedbackBox').style.display = 'none';
-      document.getElementById('btnNextTestQ').style.display = 'none';
-
-      document.getElementById('testSidebarContent').insertAdjacentHTML('beforeend', `
-        <button id="btnRetakeTest" class="map-primary-btn" style="margin-top:10px; width:100%;" onclick="this.remove(); MapTutorEngine.startInteractiveTest();">
-        🔄 மீண்டும் தேர்வு எழுது
-        </button>
-      `);
-    },
-
-    // Simple Web Audio API Synthesizer (Chime for correct, Chord for wrong)
     playAudioChime(isSuccess) {
       try {
         const AudioCtx = window.AudioContext || window.webkitAudioContext;
@@ -2019,29 +3148,32 @@
           osc.start();
           osc.stop(ctx.currentTime + 0.4);
         } else {
-          osc.frequency.setValueAtTime(320.00, ctx.currentTime);
-          osc.frequency.setValueAtTime(220.00, ctx.currentTime + 0.15);
+          osc.frequency.setValueAtTime(330.00, ctx.currentTime);
+          osc.frequency.setValueAtTime(220.00, ctx.currentTime + 0.14);
           gain.gain.setValueAtTime(0.18, ctx.currentTime);
           gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.35);
           osc.start();
           osc.stop(ctx.currentTime + 0.35);
         }
       } catch (err) {
-        // audio fail silent
+        // silent fail
       }
     },
 
-    // -------------------------------------------------------------------------
-    // DOWNLOAD BLANK MAP (For printing & paper practice)
-    // -------------------------------------------------------------------------
+    // =========================================================================
+    // 6. BLANK VECTOR MAP DOWNLOAD (For Paper & Pencil Board Exam Practice)
+    // =========================================================================
     downloadBlankMap() {
-      const svg = document.getElementById('svgIndiaMap') || document.getElementById('svgWorldMap');
+      const svg = document.getElementById('learn_svgIndiaMap') ||
+                  document.getElementById('learn_svgWorldMap') ||
+                  document.getElementById('student_svgIndiaMap') ||
+                  document.getElementById('student_svgWorldMap');
       if (!svg) return;
 
-      // Clone SVG without markers
       const clone = svg.cloneNode(true);
-      const mLayer = clone.querySelector('#dynamicMarkerLayer');
+      const mLayer = clone.querySelector('[id$="dynamicMarkerLayer"]');
       if (mLayer) mLayer.innerHTML = '';
+      clone.removeAttribute('style');
 
       const svgData = new XMLSerializer().serializeToString(clone);
       const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
@@ -2055,25 +3187,11 @@
       document.body.removeChild(downloadLink);
       URL.revokeObjectURL(svgUrl);
 
-    alert('✅ வெற்று வரைபடம் பதிவிறக்கம் செய்யப்பட்டது! (Blank Map Downloaded). இதை பிரிண்ட் எடுத்து பென்சிலால் குறித்து பயிற்சி பெறலாம்.');
-    },
-
-    // Zoom Controls
-    zoomLevel: 1.0,
-    zoomMap(factor) {
-      this.zoomLevel = Math.max(0.7, Math.min(3.0, this.zoomLevel * factor));
-      const svg = document.querySelector('.vector-map-svg');
-      if (svg) {
-        svg.style.transform = `scale(${this.zoomLevel})`;
-      }
-    },
-
-    resetMapZoom() {
-      this.zoomLevel = 1.0;
-      const svg = document.querySelector('.vector-map-svg');
-      if (svg) {
-        svg.style.transform = 'scale(1)';
-      }
+      const isEm = this.currentLang === 'en';
+      const msg = isEm
+        ? '✅ Blank map downloaded successfully! Print this vector map to practice pencil markings for Board Exams.'
+        : '✅ வெற்று வரைபடம் பதிவிறக்கம் செய்யப்பட்டது! இதை பிரிண்ட் எடுத்து பொதுத்தேர்வுக்காக பென்சிலால் குறித்து பயிற்சி பெறலாம்.';
+      alert(msg);
     }
   };
 

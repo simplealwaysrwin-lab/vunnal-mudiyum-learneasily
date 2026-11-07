@@ -1,816 +1,374 @@
 // =============================================================================
-// SOCIAL SCIENCE MAP TEACHING, TESTING & EVALUATION ENGINE
-// Covers all 12 Social Science Lessons (History, Geography, Civics, Economics)
-// Interactive Vector Blank Maps (India & World), Voice Teacher (TTS),
-// Tap-to-Mark Map Tests, and Blank Map Download
+// 10th Social Science - Interactive Map Tutor Engine & Curriculum Data
+// Tamil Nadu State Board Class 10 Social Science Syllabus (Pure UTF-8)
 // =============================================================================
 
 (function() {
   'use strict';
 
   // ---------------------------------------------------------------------------
-  // 1. CURATED SYLLABUS MAP LOCATIONS (All 12 Lessons)
-  // Coordinates are normalized percentages (0 to 100) relative to SVG viewBox
-  // ---------------------------------------------------------------------------
-  // ---------------------------------------------------------------------------
-  // 1. CURATED SYLLABUS MAP LOCATIONS (All 12 Lessons)
-  // Coordinates are normalized percentages (0 to 100) relative to SVG viewBox
+  // 1. CURATED SYLLABUS MAP LOCATIONS (All 12 Lessons & Board Exam Sets)
   // ---------------------------------------------------------------------------
   const SOCIAL_MAP_LOCATIONS = [
     // --- LESSON 1: History Unit 1 (Outbreak of WWI) - World Map ---
     {
       id: "world_britain",
       unit: 1,
-      unitTitle: "வரலாறு - அலகு 1: முதல் உலகப்போர்",
-      category: "World War I (நேச நாடுகள்)",
+      unitTitle: "à®µà®°à®²à®¾à®±à¯ - à®…à®²à®•à¯ 1: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯",
+      category: "World War I (à®¨à¯‡à®š à®¨à®¾à®Ÿà¯à®•à®³à¯)",
       mapType: "world",
-      nameTamil: "கிரேட் பிரிட்டன் (லண்டன்)",
+      nameTamil: "à®•à®¿à®°à¯‡à®Ÿà¯ à®ªà®¿à®°à®¿à®Ÿà¯à®Ÿà®©à¯ (à®²à®£à¯à®Ÿà®©à¯)",
       nameEnglish: "Great Britain (London)",
       coords: { x: 46.2, y: 31.5 },
       type: "point",
-      teachScriptTamil: "கிரேட் பிரிட்டன்: முதல் உலகப்போரின் நேச நாட்டுத் தலைமை. வரைபடத்தில் குறிக்க: ஐரோப்பாவின் வடமேற்குப் பகுதியில் உள்ள தனித்த பெரிய தீவை அடையாளம் கண்டு வட்டமிட்டு 'பிரிட்டன்' என எழுதவும்.",
-      teachScriptEnglish: "Great Britain: Leading Allied power in WWI. To mark: Locate the large island off the northwest coast of mainland Europe and label it Great Britain.",
-      examTip: "ஐரோப்பாவின் முக்கிய நேச நாடு அல்லது தீவு நாடு எனக் கேட்டால் பிரிட்டனைக் குறிக்கவும்."
+      teachScriptTamil: "à®•à®¿à®°à¯‡à®Ÿà¯ à®ªà®¿à®°à®¿à®Ÿà¯à®Ÿà®©à¯: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à®¿à®©à¯ à®¨à¯‡à®š à®¨à®¾à®Ÿà¯à®Ÿà¯à®¤à¯ à®¤à®²à¯ˆà®®à¯ˆ. à®à®°à¯‹à®ªà¯à®ªà®¾à®µà®¿à®©à¯ à®µà®Ÿà®®à¯‡à®±à¯à®•à¯à®ªà¯ à®ªà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®‰à®³à¯à®³ à®¤à®©à®¿à®¤à¯à®¤ à®ªà¯†à®°à®¿à®¯ à®¤à¯€à®µà¯ˆ à®µà®Ÿà¯à®Ÿà®®à®¿à®Ÿà¯à®Ÿà¯à®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
+      teachScriptEnglish: "Great Britain: Leading Allied power in WWI. Locate the large island off the northwest coast of mainland Europe.",
+      examTip: "à®à®°à¯‹à®ªà¯à®ªà®¾à®µà®¿à®©à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®¨à¯‡à®š à®¨à®¾à®Ÿà¯ à®…à®²à¯à®²à®¤à¯ à®¤à¯€à®µà¯ à®¨à®¾à®Ÿà¯ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®Ÿà®¾à®²à¯ à®ªà®¿à®°à®¿à®Ÿà¯à®Ÿà®©à¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯."
     },
     {
       id: "world_france",
       unit: 1,
-      unitTitle: "வரலாறு - அலகு 1: முதல் உலகப்போர்",
-      category: "World War I (நேச நாடுகள்)",
+      unitTitle: "à®µà®°à®²à®¾à®±à¯ - à®…à®²à®•à¯ 1: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯",
+      category: "World War I (à®¨à¯‡à®š à®¨à®¾à®Ÿà¯à®•à®³à¯)",
       mapType: "world",
-      nameTamil: "பிரான்ஸ் (பாரிஸ்)",
+      nameTamil: "à®ªà®¿à®°à®¾à®©à¯à®¸à¯ (à®ªà®¾à®°à®¿à®¸à¯)",
       nameEnglish: "France (Paris)",
       coords: { x: 47.8, y: 36.2 },
       type: "point",
-      teachScriptTamil: "பிரான்ஸ்: நேச நாடுகளின் முக்கிய ஐரோப்பிய நாடு. வரைபடத்தில் குறிக்க: இங்கிலாந்துக்கு நேர் தெற்கே, ஆங்கிலக் கால்வாயைக் கடந்தவுடன் அமைந்துள்ள நிலப்பரப்பைக் குறிக்கவும்.",
-      teachScriptEnglish: "France: Key Allied power in Europe. To mark: Directly south across the English Channel from Britain.",
-      examTip: "மேற்கு ஐரோப்பிய நேச நாடு அல்லது பாரிஸ் எனக் கேட்கப்படலாம்."
+      teachScriptTamil: "à®ªà®¿à®°à®¾à®©à¯à®¸à¯: à®¨à¯‡à®š à®¨à®¾à®Ÿà¯à®•à®³à®¿à®©à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®à®°à¯‹à®ªà¯à®ªà®¿à®¯ à®¨à®¾à®Ÿà¯. à®‡à®™à¯à®•à®¿à®²à®¾à®¨à¯à®¤à¯à®•à¯à®•à¯ à®¨à¯‡à®°à¯ à®¤à¯†à®±à¯à®•à¯‡, à®†à®™à¯à®•à®¿à®²à®•à¯ à®•à®¾à®²à¯à®µà®¾à®¯à¯ˆà®•à¯ à®•à®Ÿà®¨à¯à®¤à®µà¯à®Ÿà®©à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®¨à®¿à®²à®ªà¯à®ªà®°à®ªà¯à®ªà¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
+      teachScriptEnglish: "France: Key Allied power in Europe. Directly south across the English Channel from Britain.",
+      examTip: "à®®à¯‡à®±à¯à®•à¯ à®à®°à¯‹à®ªà¯à®ªà®¿à®¯ à®¨à¯‡à®š à®¨à®¾à®Ÿà¯ à®…à®²à¯à®²à®¤à¯ à®ªà®¾à®°à®¿à®¸à¯ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®•à®ªà¯à®ªà®Ÿà®²à®¾à®®à¯."
     },
     {
       id: "world_germany",
       unit: 1,
-      unitTitle: "வரலாறு - அலகு 1: முதல் உலகப்போர்",
-      category: "World War I (மைய நாடுகள்)",
+      unitTitle: "à®µà®°à®²à®¾à®±à¯ - à®…à®²à®•à¯ 1: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯",
+      category: "World War I (à®®à¯ˆà®¯ à®¨à®¾à®Ÿà¯à®•à®³à¯)",
       mapType: "world",
-      nameTamil: "ஜெர்மனி (பெர்லின்)",
+      nameTamil: "à®œà¯†à®°à¯à®®à®©à®¿ (à®ªà¯†à®°à¯à®²à®¿à®©à¯)",
       nameEnglish: "Germany (Berlin)",
       coords: { x: 50.8, y: 33.6 },
       type: "point",
-      teachScriptTamil: "ஜெர்மனி: முதல் உலகப்போரின் மைய நாடுகளின் தலைமை நாடு. பிரான்சுக்கு கிழக்கே மத்திய ஐரோப்பாவில் அமைந்துள்ள பகுதியை வட்டமிட்டுக் குறிக்கவும்.",
+      teachScriptTamil: "à®œà¯†à®°à¯à®®à®©à®¿: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à®¿à®©à¯ à®®à¯ˆà®¯ à®¨à®¾à®Ÿà¯à®•à®³à®¿à®©à¯ à®¤à®²à¯ˆà®®à¯ˆ à®¨à®¾à®Ÿà¯. à®ªà®¿à®°à®¾à®©à¯à®šà¯à®•à¯à®•à¯ à®•à®¿à®´à®•à¯à®•à¯‡ à®®à®¤à¯à®¤à®¿à®¯ à®à®°à¯‹à®ªà¯à®ªà®¾à®µà®¿à®²à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®ªà®•à¯à®¤à®¿à®¯à¯ˆ à®µà®Ÿà¯à®Ÿà®®à®¿à®Ÿà¯à®Ÿà¯à®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
       teachScriptEnglish: "Germany: Leader of the Central Powers in WWI. Directly east of France in Central Europe.",
-      examTip: "மைய நாடுகள் அல்லது பெர்லின் எனக் கேட்டால் ஜெர்மனியைக் குறிக்கவும்."
+      examTip: "à®®à¯à®¤à®²à¯ à®®à®±à¯à®±à¯à®®à¯ à®‡à®°à®£à¯à®Ÿà®¾à®®à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à®¿à®²à¯ à®®à¯ˆà®¯ à®¨à®¾à®Ÿà¯à®•à®³à¯ à®…à®²à¯à®²à®¤à¯ à®…à®šà¯à®šà¯ à®¨à®¾à®Ÿà¯à®•à®³à®¿à®©à¯ à®¤à®²à¯ˆà®®à¯ˆ à®œà¯†à®°à¯à®®à®©à®¿."
     },
     {
       id: "world_italy",
       unit: 1,
-      unitTitle: "வரலாறு - அலகு 1: முதல் உலகப்போர்",
-      category: "World War I (நேச நாடுகள்)",
+      unitTitle: "à®µà®°à®²à®¾à®±à¯ - à®…à®²à®•à¯ 1: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯",
+      category: "World War I (à®®à¯ˆà®¯ à®¨à®¾à®Ÿà¯à®•à®³à¯)",
       mapType: "world",
-      nameTamil: "இத்தாலி (ரோம்)",
+      nameTamil: "à®‡à®¤à¯à®¤à®¾à®²à®¿ (à®°à¯‹à®®à¯)",
       nameEnglish: "Italy (Rome)",
-      coords: { x: 51.5, y: 39.5 },
+      coords: { x: 50.5, y: 39.5 },
       type: "point",
-      teachScriptTamil: "இத்தாலி: மத்திய தரைக்கடலில் பூட்ஸ் காலணி போன்ற வடிவத்தில் தெற்கு நோக்கி நீண்டு அமைந்துள்ள தீபகற்ப நாடே இத்தாலி ஆகும்.",
-      teachScriptEnglish: "Italy: Boot-shaped peninsula extending south into the Mediterranean Sea.",
-      examTip: "பூட்ஸ் காலணி வடிவ நாடு அல்லது ரோம் எனக் கேட்டால் இத்தாலியைக் குறிக்கவும்."
+      teachScriptTamil: "à®‡à®¤à¯à®¤à®¾à®²à®¿: à®®à®¤à¯à®¤à®¿à®¯ à®¤à®°à¯ˆà®•à¯à®•à®Ÿà®²à®¿à®²à¯ à®ªà¯‚à®Ÿà¯à®¸à¯ à®•à®¾à®²à®£à®¿ à®µà®Ÿà®¿à®µà®¿à®²à¯ à®¨à¯€à®£à¯à®Ÿà®¿à®°à¯à®•à¯à®•à¯à®®à¯ à®¤à¯€à®ªà®•à®±à¯à®ª à®¨à®¾à®Ÿà¯à®Ÿà¯ˆ à®…à®Ÿà¯ˆà®¯à®¾à®³à®®à¯ à®•à®£à¯à®Ÿà¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
+      teachScriptEnglish: "Italy: Boot-shaped peninsula jutting out into the Mediterranean Sea in Southern Europe.",
+      examTip: "à®ªà¯‚à®Ÿà¯à®¸à¯ à®•à®¾à®²à®£à®¿ à®µà®Ÿà®¿à®µ à®à®°à¯‹à®ªà¯à®ªà®¿à®¯ à®¨à®¾à®Ÿà¯ à®…à®²à¯à®²à®¤à¯ à®®à¯à®šà¯‹à®²à®¿à®©à®¿à®¯à®¿à®©à¯ à®ªà®¾à®šà®¿à®š à®¨à®¾à®Ÿà¯ à®‡à®¤à¯à®¤à®¾à®²à®¿."
     },
     {
       id: "world_russia",
       unit: 1,
-      unitTitle: "வரலாறு - அலகு 1: முதல் உலகப்போர்",
-      category: "World War I (நேச நாடுகள்)",
+      unitTitle: "à®µà®°à®²à®¾à®±à¯ - à®…à®²à®•à¯ 1: à®®à¯à®¤à®²à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯",
+      category: "World War I (à®¨à¯‡à®š à®¨à®¾à®Ÿà¯à®•à®³à¯)",
       mapType: "world",
-      nameTamil: "ரஷ்யா (மாஸ்கோ)",
+      nameTamil: "à®°à®·à¯à®¯à®¾ (à®®à®¾à®¸à¯à®•à¯‹)",
       nameEnglish: "Russia (Moscow)",
-      coords: { x: 62.0, y: 28.0 },
+      coords: { x: 62.0, y: 25.0 },
       type: "point",
-      teachScriptTamil: "ரஷ்யா: கிழக்கு ஐரோப்பா முதல் வடக்கு ஆசியா வரை பரவியுள்ள உலகின் மிகப்பெரிய நிலப்பரப்பைக் கொண்ட நேச நாடு.",
-      teachScriptEnglish: "Russia: Vast territory spanning Eastern Europe and Northern Asia.",
-      examTip: "கிழக்கு ஐரோப்பிய நேச நாடு அல்லது மாஸ்கோவைக் குறிக்க."
-    },
-    {
-      id: "world_mediterranean",
-      unit: 1,
-      unitTitle: "வரலாறு - அலகு 1: முதல் உலகப்போர்",
-      category: "Seas & Oceans",
-      mapType: "world",
-      coords: { x: 52.0, y: 43.0 },
-      type: "point",
-      nameTamil: "மத்திய தரைக்கடல் (Mediterranean Sea)",
-      nameEnglish: "Mediterranean Sea",
-      teachScriptTamil: "மத்திய தரைக்கடல்: ஐரோப்பாவிற்கும் ஆப்பிரிக்காவிற்கும் இடையில் அமைந்துள்ள வரலாற்றுப் புகழ்பெற்ற உள்நாட்டுக் கடல்.",
-      teachScriptEnglish: "Mediterranean Sea: Strategic sea separating Southern Europe from Northern Africa.",
-      examTip: "ஐரோப்பாவிற்கும் ஆப்பிரிக்காவிற்கும் இடையே உள்ள கடல்."
-    },
-    {
-      id: "world_north_sea",
-      unit: 1,
-      unitTitle: "வரலாறு - அலகு 1: முதல் உலகப்போர்",
-      category: "Seas & Oceans",
-      mapType: "world",
-      coords: { x: 48.5, y: 29.5 },
-      type: "point",
-      nameTamil: "வட கடல் (North Sea)",
-      nameEnglish: "North Sea",
-      teachScriptTamil: "வட கடல்: பிரிட்டன் தீவுக்கும் நார்வே / டென்மார்க் நாடுகளுக்கும் இடையில் அமைந்துள்ள முக்கிய கடல் பகுதி.",
-      teachScriptEnglish: "North Sea: Sea between Great Britain and northwestern Europe.",
-      examTip: "பிரிட்டனுக்குக் கிழக்கே அமைந்துள்ள கடல் வட கடல்."
+      teachScriptTamil: "à®°à®·à¯à®¯à®¾: à®à®°à¯‹à®ªà¯à®ªà®¾ à®®à®±à¯à®±à¯à®®à¯ à®†à®šà®¿à®¯à®¾à®µà®¿à®©à¯ à®µà®Ÿà®ªà®•à¯à®¤à®¿ à®®à¯à®´à¯à®µà®¤à¯ˆà®¯à¯à®®à¯ à®†à®•à¯à®•à®¿à®°à®®à®¿à®¤à¯à®¤à¯à®³à¯à®³ à®‰à®²à®•à®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà¯†à®°à®¿à®¯ à®¨à®¿à®²à®ªà¯à®ªà®°à®ªà¯à®ªà¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
+      teachScriptEnglish: "Russia: The vast northern landmass spanning across Eastern Europe and Northern Asia.",
+      examTip: "à®‰à®²à®•à®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà¯†à®°à®¿à®¯ à®¨à®¾à®Ÿà¯ à®…à®²à¯à®²à®¤à¯ à®šà¯‹à®µà®¿à®¯à®¤à¯ à®¯à¯‚à®©à®¿à®¯à®©à¯ (USSR) à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®•à®ªà¯à®ªà®Ÿà®²à®¾à®®à¯."
     },
 
-    // --- LESSON 2: Geography Unit 1 (India - Relief & Drainage) ---
+    // --- LESSON 2: Geography Unit 1 (Location & Relief) - India Map ---
     {
       id: "ind_karakoram",
       unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Mountains (மலைகள்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
+      category: "Mountain Ranges (à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯)",
       mapType: "india",
-      nameTamil: "காரகோரம் மலைத்தொடர் (Karakoram Range)",
+      nameTamil: "à®•à®¾à®°à®•à¯‹à®°à®®à¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯",
       nameEnglish: "Karakoram Range",
-      coords: { x: 38.0, y: 13.0 },
-      type: "line",
-      teachScriptTamil: "காரகோரம் மலைத்தொடர்: இந்தியாவின் வடமுனையில் லடாக் பகுதியில் கிழக்கு-மேற்காக அமைந்துள்ள மிக உயர்ந்த மலைத்தொடர்.",
-      teachScriptEnglish: "Karakoram Range: Northernmost mountain range in Ladakh / Trans-Himalayas.",
-      examTip: "இந்தியாவின் வடமுனை மலைத்தொடர் காரகோரம்."
-    },
-    {
-      id: "ind_k2",
-      unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Peaks (சிகரங்கள்)",
-      mapType: "india",
-      nameTamil: "கே2 சிகரம் / காட்வின் ஆஸ்டின் (8,611 மீ)",
-      nameEnglish: "K2 Peak / Godwin Austen (8,611 m)",
-      coords: { x: 39.5, y: 13.8 },
-      type: "point",
-      teachScriptTamil: "கே2 சிகரம்: காரகோரம் தொடரில் அமைந்துள்ள இந்தியாவின் மிக உயர்ந்த சிகரம் (உலகின் 2-வது உயர்ந்த சிகரம்).",
-      teachScriptEnglish: "K2 (Mount Godwin Austen): Highest peak in India (8,611m), 2nd highest in the world.",
-      examTip: "இந்தியாவின் மிக உயர்ந்த சிகரம் கே2 அல்லது காட்வின் ஆஸ்டின்."
+      coords: { x: 41.5, y: 7.5 },
+      type: "range",
+      teachScriptTamil: "à®•à®¾à®°à®•à¯‹à®°à®®à¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®µà®Ÿà®•à¯à®•à¯ à®‰à®šà¯à®šà®¿à®¯à®¿à®²à¯, à®²à®Ÿà®¾à®•à¯ à®®à®±à¯à®±à¯à®®à¯ à®œà®®à¯à®®à¯ à®•à®¾à®·à¯à®®à¯€à®°à®¿à®©à¯ à®µà®Ÿà®ªà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®®à®¿à®• à®‰à®¯à®°à®®à®¾à®© à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯.",
+      teachScriptEnglish: "Karakoram Range: Located at the northernmost crown of India in Ladakh, north of the Himalayas.",
+      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®• à®µà®Ÿà®•à¯à®•à®¿à®²à¯ à®‰à®³à¯à®³ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®…à®²à¯à®²à®¤à¯ à®•à¯‡2 à®šà®¿à®•à®°à®®à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®•à®¾à®°à®•à¯‹à®°à®®à¯."
     },
     {
       id: "ind_himalayas",
       unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Mountains (மலைகள்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
+      category: "Mountain Ranges (à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯)",
       mapType: "india",
-      nameTamil: "இமயமலைத் தொடர் (The Himalayas)",
+      nameTamil: "à®‡à®®à®¯à®®à®²à¯ˆà®¤à¯ à®¤à¯Šà®Ÿà®°à¯",
       nameEnglish: "The Great Himalayas",
-      coords: { x: 50.0, y: 24.0 },
-      type: "line",
-      teachScriptTamil: "இமயமலைத் தொடர்: இந்தியாவின் வடக்கு எல்லையில் காஷ்மீர் முதல் அருணாச்சலப் பிரதேசம் வரை 2,500 கி.மீ வில் வடிவில் அமைந்த இளம் மடிப்பு மலை.",
-      teachScriptEnglish: "The Himalayas: Arc-shaped young fold mountains running along northern India.",
-      examTip: "இந்தியாவின் வடக்கு இயற்கை அரண் அல்லது இமயமலை."
-    },
-    {
-      id: "ind_kanchenjunga",
-      unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Peaks (சிகரங்கள்)",
-      mapType: "india",
-      nameTamil: "கஞ்சன்ஜங்கா சிகரம் (8,586 மீ)",
-      nameEnglish: "Mt. Kanchenjunga (8,586 m)",
-      coords: { x: 67.5, y: 27.5 },
-      type: "point",
-      teachScriptTamil: "கஞ்சன்ஜங்கா சிகரம்: சிக்கிம் மற்றும் நேபாள எல்லையில் இமயமலையில் அமைந்துள்ள இந்தியாவின் இரண்டாவது உயர்ந்த சிகரம்.",
-      teachScriptEnglish: "Kanchenjunga: Located in Sikkim, 3rd highest peak in the world.",
-      examTip: "சிக்கிமில் அமைந்துள்ள இமயமலை சிகரம்."
+      coords: { x: 52.0, y: 19.5 },
+      type: "range",
+      teachScriptTamil: "à®‡à®®à®¯à®®à®²à¯ˆ: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®µà®Ÿà®•à¯à®•à¯ à®Žà®²à¯à®²à¯ˆà®¯à®¿à®²à¯ à®•à®¾à®·à¯à®®à¯€à®°à¯ à®®à¯à®¤à®²à¯ à®…à®°à¯à®£à®¾à®šà¯à®šà®²à®ªà¯ à®ªà®¿à®°à®¤à¯‡à®šà®®à¯ à®µà®°à¯ˆ à®µà®¿à®²à¯ à®ªà¯‹à®©à¯à®±à¯ à®µà®³à¯ˆà®¨à¯à®¤à¯ à®šà¯†à®²à¯à®²à¯à®®à¯ à®‰à®²à®•à®¿à®©à¯ à®®à®¿à®• à®‰à®¯à®°à®®à®¾à®© à®®à®Ÿà®¿à®ªà¯à®ªà¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯.",
+      teachScriptEnglish: "The Great Himalayas: An arc-shaped fold mountain barrier shielding Northern India from west to east.",
+      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®µà®Ÿà®•à¯à®•à¯ à®…à®°à®£à¯ à®…à®²à¯à®²à®¤à¯ à®‰à®¯à®°à®®à®¾à®© à®®à®Ÿà®¿à®ªà¯à®ªà¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®Ÿà®¾à®²à¯ à®‡à®®à®¯à®®à®²à¯ˆà®¯à¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯."
     },
     {
       id: "ind_aravalli",
       unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Mountains (மலைகள்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
+      category: "Mountain Ranges (à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯)",
       mapType: "india",
-      nameTamil: "ஆரவல்லி மலைத்தொடர் (Aravalli Range)",
-      nameEnglish: "Aravalli Range (Oldest Fold Mountains)",
-      coords: { x: 30.0, y: 35.0 },
-      type: "line",
-      teachScriptTamil: "ஆரவல்லி மலைத்தொடர்: இந்தியாவின் மிகப்பழமையான மடிப்பு மலைத்தொடர்; ராஜஸ்தானில் தென்மேற்கிலிருந்து வடகிழக்காக நீள்கிறது.",
-      teachScriptEnglish: "Aravalli Range: Oldest fold mountains in India running through Rajasthan.",
-      examTip: "இந்தியாவின் மிகப்பழமையான மடிப்பு மலைத்தொடர் ஆரவல்லி."
+      nameTamil: "à®†à®°à®µà®²à¯à®²à®¿ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯",
+      nameEnglish: "Aravalli Range",
+      coords: { x: 30.5, y: 35.5 },
+      type: "range",
+      teachScriptTamil: "à®†à®°à®µà®²à¯à®²à®¿ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà®´à®®à¯ˆà®¯à®¾à®© à®®à®Ÿà®¿à®ªà¯à®ªà¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯. à®°à®¾à®œà®¸à¯à®¤à®¾à®©à®¿à®©à¯ à®¤à¯†à®©à¯à®®à¯‡à®±à¯à®•à¯ à®®à¯à®¤à®²à¯ à®¤à®¿à®²à¯à®²à®¿ à®µà®°à¯ˆ à®•à¯à®±à¯à®•à¯à®•à®¾à®•à®šà¯ à®šà¯†à®²à¯à®²à¯à®®à¯ à®¤à¯Šà®Ÿà®°à¯.",
+      teachScriptEnglish: "Aravalli Range: The oldest fold mountains in India, running diagonally across Rajasthan towards Delhi.",
+      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà®´à®®à¯ˆà®¯à®¾à®© à®®à®Ÿà®¿à®ªà¯à®ªà¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®…à®²à¯à®²à®¤à¯ à®•à¯à®°à¯à®šà®¿à®•à®¾à®°à¯ à®šà®¿à®•à®°à®®à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®®à®²à¯ˆ à®†à®°à®µà®²à¯à®²à®¿."
     },
     {
       id: "ind_western_ghats",
       unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Mountains (மலைகள்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
+      category: "Mountain Ranges (à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯)",
       mapType: "india",
-      nameTamil: "மேற்குத் தொடர்ச்சி மலை (Western Ghats)",
+      nameTamil: "à®®à¯‡à®±à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ",
       nameEnglish: "Western Ghats (Sahyadris)",
-      coords: { x: 32.0, y: 65.0 },
-      type: "line",
-      teachScriptTamil: "மேற்குத் தொடர்ச்சி மலை: தீபகற்ப இந்தியாவின் மேற்கு கடற்கரைக்கு இணையாக தொடர்ச்சியாக அமைந்துள்ள மலைத்தொடர்.",
-      teachScriptEnglish: "Western Ghats: Continuous mountain chain parallel to western coast of India.",
-      examTip: "தீபகற்ப இந்தியாவின் தொடர்ச்சியான மேற்கு மலைத்தொடர்."
+      coords: { x: 32.5, y: 72.0 },
+      type: "range",
+      teachScriptTamil: "à®®à¯‡à®±à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ: à®…à®°à®ªà®¿à®•à¯à®•à®Ÿà®²à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®•à¯à®•à¯ à®‡à®£à¯ˆà®¯à®¾à®• à®®à®•à®¾à®°à®¾à®·à¯à®Ÿà®¿à®°à®¾ à®®à¯à®¤à®²à¯ à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯ à®µà®°à¯ˆ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿à®¯à®¾à®• à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®‰à®¯à®°à®®à®¾à®© à®®à®²à¯ˆà®šà¯à®šà¯à®µà®°à¯.",
+      teachScriptEnglish: "Western Ghats: A continuous mountain wall parallel to the Arabian Sea coast from Maharashtra to Tamil Nadu.",
+      examTip: "à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿à®¯à®¾à®© à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®…à®²à¯à®²à®¤à¯ à®šà®¹à®¾à®¯à®¾à®¤à¯à®°à®¿ à®…à®²à¯à®²à®¤à¯ à®†à®©à¯ˆà®®à¯à®Ÿà®¿ à®šà®¿à®•à®°à®®à¯ à®‰à®³à¯à®³ à®®à®²à¯ˆ à®®à¯‡à®±à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ."
     },
     {
       id: "ind_eastern_ghats",
       unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Mountains (மலைகள்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
+      category: "Mountain Ranges (à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯)",
       mapType: "india",
-      nameTamil: "கிழக்குத் தொடர்ச்சி மலை (Eastern Ghats)",
-      nameEnglish: "Eastern Ghats (Discontinuous)",
-      coords: { x: 55.0, y: 62.0 },
-      type: "line",
-      teachScriptTamil: "கிழக்குத் தொடர்ச்சி மலை: ஆறுகளால் அரிக்கப்பட்டு தொடர்ச்சியற்று காணப்படும் கிழக்கு கடற்கரைக்கு இணையான மலைப்பகுதி.",
-      teachScriptEnglish: "Eastern Ghats: Discontinuous hills along India's eastern coast.",
-      examTip: "ஆறுகளால் அரிக்கப்பட்ட தொடர்ச்சியற்ற மலைத்தொடர்."
-    },
-    {
-      id: "ind_anaimudi",
-      unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Peaks (சிகரங்கள்)",
-      mapType: "india",
-      nameTamil: "ஆனைமுடி சிகரம் (2,695 மீ)",
-      nameEnglish: "Anamudi Peak (2,695 m)",
-      coords: { x: 35.5, y: 80.5 },
-      type: "point",
-      teachScriptTamil: "ஆனைமுடி: தென்னிந்தியாவின் மற்றும் தீபகற்ப பீடபூமியின் மிக உயர்ந்த சிகரம்; ஆனைமலையில் அமைந்துள்ளது.",
-      teachScriptEnglish: "Anamudi: Highest peak in South India / Western Ghats (2,695m) in Kerala.",
-      examTip: "தென்னிந்தியாவின் மிக உயர்ந்த சிகரம் ஆனைமுடி."
+      nameTamil: "à®•à®¿à®´à®•à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ",
+      nameEnglish: "Eastern Ghats",
+      coords: { x: 53.0, y: 65.0 },
+      type: "range",
+      teachScriptTamil: "à®•à®¿à®´à®•à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®•à®¿à®´à®•à¯à®•à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®•à¯à®•à¯ à®‡à®£à¯ˆà®¯à®¾à®• à®’à®Ÿà®¿à®šà®¾ à®®à¯à®¤à®²à¯ à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯ à®µà®°à¯ˆ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿à®¯à®±à¯à®± à®‰à®Ÿà¯ˆà®¨à¯à®¤ à®•à¯à®©à¯à®±à¯à®•à®³à®¾à®• à®µà®°à¯ˆà®¯ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯.",
+      teachScriptEnglish: "Eastern Ghats: Discontinuous hills running along the eastern coast from Odisha to northern Tamil Nadu.",
+      examTip: "à®µà®™à¯à®•à®¾à®³ à®µà®¿à®°à®¿à®•à¯à®Ÿà®¾ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®•à¯à®•à¯ à®‡à®£à¯ˆà®¯à®¾à®• à®‰à®³à¯à®³ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿à®¯à®±à¯à®± à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®Ÿà®¾à®²à¯ à®•à®¿à®´à®•à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆà®¯à¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯."
     },
     {
       id: "ind_river_ganga",
       unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Rivers (ஆறுகள்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
+      category: "Rivers (à®®à¯à®•à¯à®•à®¿à®¯ à®†à®±à¯à®•à®³à¯)",
       mapType: "india",
-      nameTamil: "கங்கை ஆறு (River Ganga - 2,525 கி.மீ)",
-      nameEnglish: "River Ganga (2,525 km)",
-      coords: { x: 55.0, y: 31.0 },
-      type: "line",
-      teachScriptTamil: "கங்கை ஆறு: இமயமலையின் கங்கோத்ரி பனிப்பாறையில் பாகிரதியாக உற்பத்தியாகி வங்காள விரிகுடாவில் கலக்கும் இந்தியாவின் மிக நீளமான தேசிய நதி.",
-      teachScriptEnglish: "River Ganga: Longest river in India (2,525 km) flowing into Bay of Bengal.",
-      examTip: "இந்தியாவின் தேசிய நதி அல்லது வற்றாத ஜீவ நதி கங்கை."
+      nameTamil: "à®•à®™à¯à®•à¯ˆ à®†à®±à¯",
+      nameEnglish: "River Ganga",
+      coords: { x: 54.0, y: 36.0 },
+      type: "river",
+      teachScriptTamil: "à®•à®™à¯à®•à¯ˆ à®†à®±à¯: à®‡à®®à®¯à®®à®²à¯ˆà®¯à®¿à®²à¯ à®•à®™à¯à®•à¯‹à®¤à¯à®°à®¿à®¯à®¿à®²à¯ à®¤à¯Šà®Ÿà®™à¯à®•à®¿ à®‰à®¤à¯à®¤à®°à®•à®¾à®£à¯à®Ÿà¯, à®‰.à®ªà®¿, à®ªà¯€à®•à®¾à®°à¯, à®®à¯‡à®±à¯à®•à¯ à®µà®™à¯à®•à®¾à®³à®®à¯ à®µà®´à®¿à®¯à®¾à®• à®µà®™à¯à®•à®¾à®³ à®µà®¿à®°à®¿à®•à¯à®Ÿà®¾à®µà®¿à®²à¯ à®•à®²à®•à¯à®•à¯à®®à¯ à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®• à®¨à¯€à®³à®®à®¾à®© à®†à®±à¯.",
+      teachScriptEnglish: "River Ganga: Originates at Gangotri and flows 2,525 km through the northern plains into the Bay of Bengal.",
+      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®• à®¨à¯€à®³à®®à®¾à®© à®ªà¯à®©à®¿à®¤ à®†à®±à¯ à®…à®²à¯à®²à®¤à¯ à®µà®±à¯à®±à®¾à®¤ à®‡à®®à®¯à®®à®²à¯ˆ à®†à®±à¯ à®•à®™à¯à®•à¯ˆ."
     },
     {
       id: "ind_river_cauvery",
       unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Rivers (ஆறுகள்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
+      category: "Rivers (à®®à¯à®•à¯à®•à®¿à®¯ à®†à®±à¯à®•à®³à¯)",
       mapType: "india",
-      nameTamil: "காவிரி ஆறு (தென்னிந்தியாவின் கங்கை)",
-      nameEnglish: "River Cauvery (Dakshin Ganga)",
-      coords: { x: 42.0, y: 77.0 },
-      type: "line",
-      teachScriptTamil: "காவிரி ஆறு: கர்நாடகத்தின் குடகு மலையில் தலைக்காவிரியில் உற்பத்தியாகி தமிழ்நாடு வழியாகப் பாய்ந்து பூம்புகார் அருகே வங்கக்கடலில் கலக்கிறது.",
-      teachScriptEnglish: "River Cauvery: Originates at Talakaveri in Karnataka, flows through Tamil Nadu.",
-      examTip: "தென்னிந்தியாவின் கங்கை அல்லது தமிழ்நாட்டின் முக்கிய நதி காவிரி."
+      nameTamil: "à®•à®¾à®µà®¿à®°à®¿ à®†à®±à¯",
+      nameEnglish: "River Cauvery",
+      coords: { x: 42.0, y: 84.0 },
+      type: "river",
+      teachScriptTamil: "à®•à®¾à®µà®¿à®°à®¿ à®†à®±à¯: à®•à®°à¯à®¨à®¾à®Ÿà®•à®¾à®µà®¿à®©à¯ à®•à¯à®Ÿà®•à¯ à®®à®²à¯ˆà®¯à®¿à®²à¯ à®¤à®²à¯ˆà®•à¯à®•à®¾à®µà®¿à®°à®¿à®¯à®¿à®²à¯ à®¤à¯Šà®Ÿà®™à¯à®•à®¿ à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®µà®´à®¿à®¯à®¾à®•à®ªà¯ à®ªà®¾à®¯à¯à®¨à¯à®¤à¯ à®ªà¯‚à®®à¯à®ªà¯à®•à®¾à®°à¯ à®…à®°à¯à®•à¯‡ à®µà®™à¯à®•à®¾à®³ à®µà®¿à®°à®¿à®•à¯à®Ÿà®¾à®µà®¿à®²à¯ à®•à®²à®•à¯à®•à¯à®®à¯ à®†à®±à¯.",
+      teachScriptEnglish: "River Cauvery: Originates in Kodagu (Karnataka) and flows through Tamil Nadu into the Bay of Bengal.",
+      examTip: "à®¤à¯†à®©à¯à®©à®¿à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®•à®™à¯à®•à¯ˆ à®…à®²à¯à®²à®¤à¯ à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®¨à®¤à®¿ à®•à®¾à®µà®¿à®°à®¿ à®†à®±à¯."
     },
     {
       id: "ind_river_narmada",
       unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Rivers (ஆறுகள்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
+      category: "Rivers (à®®à¯à®•à¯à®•à®¿à®¯ à®†à®±à¯à®•à®³à¯)",
       mapType: "india",
-      nameTamil: "நர்மதை ஆறு (மேற்கு நோக்கிப் பாயும் ஆறு)",
-      nameEnglish: "River Narmada (West flowing)",
-      coords: { x: 38.0, y: 47.0 },
-      type: "line",
-      teachScriptTamil: "நர்மதை ஆறு: மத்தியப் பிரதேசத்தின் அமர்கண்டக் பீடபூமியில் தோன்றி பிளவுப் பள்ளத்தாக்கு வழியாக மேற்கு நோக்கிப் பாய்ந்து அரபிக்கடலில் கலக்கிறது.",
-      teachScriptEnglish: "River Narmada: Flows westwards through a rift valley into the Arabian Sea.",
-      examTip: "மேற்கு நோக்கிப் பாய்ந்து அரபிக்கடலில் கலக்கும் முக்கிய ஆறு நர்மதை."
+      nameTamil: "à®¨à®°à¯à®®à®¤à¯ˆ à®†à®±à¯",
+      nameEnglish: "River Narmada",
+      coords: { x: 34.0, y: 54.0 },
+      type: "river",
+      teachScriptTamil: "à®¨à®°à¯à®®à®¤à¯ˆ à®†à®±à¯: à®®à®¤à¯à®¤à®¿à®¯à®ªà¯ à®ªà®¿à®°à®¤à¯‡à®šà®¤à¯à®¤à®¿à®©à¯ à®…à®®à®°à¯à®•à®£à¯à®Ÿà®•à¯à®•à®¿à®²à¯ à®¤à¯Šà®Ÿà®™à¯à®•à®¿ à®µà®¿à®¨à¯à®¤à®¿à®¯, à®šà®¾à®¤à¯à®ªà¯‚à®°à®¾ à®®à®²à¯ˆà®•à®³à¯à®•à¯à®•à¯ à®‡à®Ÿà¯ˆà®¯à¯‡ à®ªà®¿à®³à®µà¯à®ªà¯ à®ªà®³à¯à®³à®¤à¯à®¤à®¾à®•à¯à®•à®¿à®²à¯ à®ªà®¾à®¯à¯à®¨à¯à®¤à¯ à®…à®°à®ªà®¿à®•à¯à®•à®Ÿà®²à®¿à®²à¯ à®•à®²à®•à¯à®•à¯à®®à¯ à®†à®±à¯.",
+      teachScriptEnglish: "River Narmada: Flows westward in a rift valley between Vindhya and Satpura ranges into the Arabian Sea.",
+      examTip: "à®®à¯‡à®±à¯à®•à¯ à®¨à¯‹à®•à¯à®•à®¿à®ªà¯ à®ªà®¾à®¯à¯à®®à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®¤à¯€à®ªà®•à®±à¯à®ª à®†à®±à¯ à®…à®²à¯à®²à®¤à¯ à®•à®¾à®®à¯à®ªà¯‡ à®µà®³à¯ˆà®•à¯à®Ÿà®¾à®µà®¿à®²à¯ à®•à®²à®•à¯à®•à¯à®®à¯ à®†à®±à¯ à®¨à®°à¯à®®à®¤à¯ˆ."
     },
     {
       id: "ind_gulf_of_mannar",
       unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Coastal Features",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
+      category: "Coastal Features (à®•à®Ÿà®±à¯à®•à®°à¯ˆà®ªà¯ à®ªà®•à¯à®¤à®¿à®•à®³à¯)",
       mapType: "india",
-      nameTamil: "மன்னார் வளைகுடா (Gulf of Mannar)",
-      nameEnglish: "Gulf of Mannar (Biosphere Reserve)",
-      coords: { x: 44.0, y: 86.5 },
-      type: "point",
-      teachScriptTamil: "மன்னார் வளைகுடா: தமிழ்நாட்டின் தென்கிழக்குக் கடற்கரைக்கும் இலங்கைக்கும் இடையில் அமைந்துள்ள பல்லுயிர் வளம் மிகுந்த ஆழமற்ற கடல் பகுதி.",
-      teachScriptEnglish: "Gulf of Mannar: Shallow bay between southeastern coast of Tamil Nadu and Sri Lanka.",
-      examTip: "தமிழ்நாட்டிற்கும் இலங்கைக்கும் இடைப்பட்ட வளைகுடா."
+      nameTamil: "à®®à®©à¯à®©à®¾à®°à¯ à®µà®³à¯ˆà®•à¯à®Ÿà®¾",
+      nameEnglish: "Gulf of Mannar",
+      coords: { x: 45.0, y: 97.0 },
+      type: "water",
+      teachScriptTamil: "à®®à®©à¯à®©à®¾à®°à¯ à®µà®³à¯ˆà®•à¯à®Ÿà®¾: à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®¤à¯†à®©à¯à®•à®¿à®´à®•à¯à®•à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®•à¯à®•à¯à®®à¯ à®‡à®²à®™à¯à®•à¯ˆà®•à¯à®•à¯à®®à¯ à®‡à®Ÿà¯ˆà®¯à¯‡ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®†à®´à®®à®±à¯à®± à®•à®Ÿà®²à¯ à®ªà®•à¯à®¤à®¿à®¯à®¾à®•à¯à®®à¯.",
+      teachScriptEnglish: "Gulf of Mannar: Shallow marine bay located between southeastern Tamil Nadu and northwestern Sri Lanka.",
+      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à¯à®¤à®²à¯ à®•à®Ÿà®²à¯à®šà®¾à®°à¯ à®‰à®¯à®¿à®°à¯à®•à¯à®•à¯‹à®³à®•à¯ à®•à®¾à®ªà¯à®ªà®•à®®à¯ à®®à®©à¯à®©à®¾à®°à¯ à®µà®³à¯ˆà®•à¯à®Ÿà®¾ à®†à®•à¯à®®à¯."
     },
     {
       id: "ind_palk_strait",
       unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Coastal Features",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 1: à®…à®®à¯ˆà®µà®¿à®Ÿà®®à¯, à®¨à®¿à®²à®¤à¯à®¤à¯‹à®±à¯à®±à®®à¯",
+      category: "Coastal Features (à®•à®Ÿà®±à¯à®•à®°à¯ˆà®ªà¯ à®ªà®•à¯à®¤à®¿à®•à®³à¯)",
       mapType: "india",
-      nameTamil: "பாக்கு நீரிணை (Palk Strait)",
+      nameTamil: "à®ªà®¾à®•à¯à®•à¯ à®¨à¯€à®°à®¿à®£à¯ˆ",
       nameEnglish: "Palk Strait",
-      coords: { x: 45.0, y: 83.5 },
-      type: "point",
-      teachScriptTamil: "பாக்கு நீரிணை: இந்தியாவையும் இலங்கையையும் பிரிக்கும் குறுகிய ஆழமற்ற நீர்ப்பகுதி.",
-      teachScriptEnglish: "Palk Strait: Narrow strait separating Tamil Nadu from Sri Lanka.",
-      examTip: "இந்தியாவையும் இலங்கையையும் பிரிக்கும் நீரிணை பாக்கு நீரிணை."
-    },
-    {
-      id: "ind_rann_of_kutch",
-      unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Coastal Features",
-      mapType: "india",
-      nameTamil: "கட்ச் வளைகுடா / கட்ச் ரான் (Gulf of Kutch)",
-      nameEnglish: "Gulf of Kutch / Rann of Kutch",
-      coords: { x: 23.0, y: 42.0 },
-      type: "point",
-      teachScriptTamil: "கட்ச் வளைகுடா: குஜராத்தின் மேற்குக் கடற்கரையில் கட்ச் தீபகற்பத்திற்கும் கத்தியவார் தீபகற்பத்திற்கும் இடையில் அமைந்துள்ள உவர்நில சதுப்புப் பகுதி.",
-      teachScriptEnglish: "Gulf of Kutch: Inlet of Arabian Sea along western Gujarat.",
-      examTip: "குஜராத் கடற்கரையில் உள்ள வளைகுடா."
-    },
-    {
-      id: "ind_coromandel_coast",
-      unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Coastal Plains",
-      mapType: "india",
-      nameTamil: "சோழமண்டலக் கடற்கரை (Coromandel Coast)",
-      nameEnglish: "Coromandel Coast (Tamil Nadu & AP)",
-      coords: { x: 48.0, y: 72.0 },
-      type: "line",
-      teachScriptTamil: "சோழமண்டலக் கடற்கரை: கிழக்கு கடற்கரைச் சமவெளியின் தென்பகுதி (ஆந்திரா மற்றும் தமிழ்நாடு கடற்கரை); வடகிழக்குப் பருவமழையால் அதிக மழை பெறுகிறது.",
-      teachScriptEnglish: "Coromandel Coast: Southeastern coastal plain of India getting rainfall from NE monsoon.",
-      examTip: "வடகிழக்குப் பருவமழையால் அதிக மழை பெறும் தமிழகக் கடற்கரை."
-    },
-    {
-      id: "ind_malabar_coast",
-      unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Coastal Plains",
-      mapType: "india",
-      nameTamil: "மலபார் கடற்கரை (Malabar Coast - Kerala)",
-      nameEnglish: "Malabar Coast (Kerala Coast)",
-      coords: { x: 33.5, y: 75.0 },
-      type: "line",
-      teachScriptTamil: "மலபார் கடற்கரை: மேற்கு கடற்கரைச் சமவெளியின் தென்பகுதி (கேரளக் கடற்கரை); காயல்கள் (Lagoons / Backwaters) இங்கு அமைந்துள்ளன.",
-      teachScriptEnglish: "Malabar Coast: Southwestern coastal strip in Kerala known for backwaters / lagoons.",
-      examTip: "காயல்கள் நிறைந்த கேரளக் கடற்கரை மலபார் கடற்கரை."
-    },
-    {
-      id: "ind_andaman_nicobar",
-      unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Islands (தீவுகள்)",
-      mapType: "india",
-      nameTamil: "அந்தமான் மற்றும் நிக்கோபார் தீவுகள்",
-      nameEnglish: "Andaman and Nicobar Islands",
-      coords: { x: 78.0, y: 70.0 },
-      type: "point",
-      teachScriptTamil: "அந்தமான் மற்றும் நிக்கோபார் தீவுகள்: வங்காள விரிகுடாவில் அமைந்துள்ள இந்தியாவின் யூனியன் பிரதேச தீவுக்கூட்டம் (இந்திரா முனை இங்குள்ளது).",
-      teachScriptEnglish: "Andaman and Nicobar Islands: Union territory archipelago in the Bay of Bengal.",
-      examTip: "வங்கக்கடலில் உள்ள இந்தியத் தீவுகள் அந்தமான் நிக்கோபார்."
-    },
-    {
-      id: "ind_lakshadweep",
-      unit: 2,
-      unitTitle: "புவியியல் - அலகு 1: அமைவிடம், நிலத்தோற்றம் & வடிகாலமைப்பு",
-      category: "Islands (தீவுகள்)",
-      mapType: "india",
-      nameTamil: "லட்சத்தீவுகள் (பவளத்தீவுகள்)",
-      nameEnglish: "Lakshadweep Islands (Coral origin)",
-      coords: { x: 28.0, y: 76.0 },
-      type: "point",
-      teachScriptTamil: "லட்சத்தீவுகள்: அரபிக்கடலில் கேரள கடற்கரைக்கு மேற்கே அமைந்துள்ள இந்தியாவின் பவளப்பாறை தீவுக்கூட்டம்.",
-      teachScriptEnglish: "Lakshadweep: Coral island archipelago in Arabian Sea off Kerala coast.",
-      examTip: "அரபிக்கடலில் உள்ள பவளத் தீவுகள் லட்சத்தீவுகள்."
-    },
-
-    // --- LESSON 3: Civics Unit 1 (Indian Constitution) ---
-    {
-      id: "ind_delhi_const",
-      unit: 3,
-      unitTitle: "குடிமையியல் - அலகு 1: இந்திய அரசியலமைப்பு",
-      category: "Capital & Judiciary",
-      mapType: "india",
-      nameTamil: "புது தில்லி (நாடாளுமன்றம் & உச்சநீதிமன்றம்)",
-      nameEnglish: "New Delhi (Parliament & Supreme Court)",
-      coords: { x: 39.0, y: 28.0 },
-      type: "point",
-      teachScriptTamil: "புது தில்லி: இந்திய குடியரசின் தலைநகரம். இந்திய அரசியலமைப்பு சபை கூடி அரசியலமைப்பை உருவாக்கிய இடம் மற்றும் உச்சநீதிமன்றம் அமைந்துள்ள இடம்.",
-      teachScriptEnglish: "New Delhi: Capital of India, seat of Parliament and the Supreme Court.",
-      examTip: "இந்தியாவின் தலைநகரம் அல்லது உச்சநீதிமன்றம் அமைந்துள்ள இடம் புது தில்லி."
-    },
-    {
-      id: "ind_chennai_hc",
-      unit: 3,
-      unitTitle: "குடிமையியல் - அலகு 1: இந்திய அரசியலமைப்பு",
-      category: "High Courts",
-      mapType: "india",
-      nameTamil: "சென்னை (மெட்ராஸ் உயர்நீதிமன்றம்)",
-      nameEnglish: "Chennai (Madras High Court)",
-      coords: { x: 47.0, y: 75.0 },
-      type: "point",
-      teachScriptTamil: "சென்னை: தமிழ்நாட்டின் தலைநகரம்; 1862-ல் நிறுவப்பட்ட வரலாற்றுப் புகழ்பெற்ற மெட்ராஸ் உயர்நீதிமன்றம் அமைந்துள்ள இடம்.",
-      teachScriptEnglish: "Chennai: Seat of the historic Madras High Court established in 1862.",
-      examTip: "தமிழ்நாட்டின் உயர்நீதிமன்றம் அமைந்துள்ள இடம் சென்னை."
-    },
-
-    // --- LESSON 4: Economics Unit 1 (GDP & Growth) ---
-    {
-      id: "ind_mumbai_finance",
-      unit: 4,
-      unitTitle: "பொருளியல் - அலகு 1: மொத்த உள்நாட்டு உற்பத்தி (GDP)",
-      category: "Financial Hub",
-      mapType: "india",
-      nameTamil: "மும்பை (இந்தியாவின் நிதித் தலைநகரம்)",
-      nameEnglish: "Mumbai (Financial Capital of India)",
-      coords: { x: 30.5, y: 55.0 },
-      type: "point",
-      teachScriptTamil: "மும்பை: இந்தியாவின் பொருளாதாரத் தலைநகரம்; இந்திய ரிசர்வ் வங்கி (RBI) மற்றும் மும்பை பங்குச் சந்தை (BSE) அமைந்துள்ள பெருநகரம்.",
-      teachScriptEnglish: "Mumbai: Financial capital of India, headquarters of Reserve Bank of India (RBI).",
-      examTip: "இந்தியாவின் நிதித் தலைநகரம் அல்லது RBI தலைமையகம் உள்ள இடம் மும்பை."
-    },
-    {
-      id: "ind_bengaluru_it",
-      unit: 4,
-      unitTitle: "பொருளியல் - அலகு 1: மொத்த உள்நாட்டு உற்பத்தி (GDP)",
-      category: "IT Hub",
-      mapType: "india",
-      nameTamil: "பெங்களூரு (சிலிகான் பள்ளத்தாக்கு)",
-      nameEnglish: "Bengaluru (Silicon Valley of India - IT Hub)",
-      coords: { x: 39.5, y: 73.0 },
-      type: "point",
-      teachScriptTamil: "பெங்களூரு: இந்தியாவின் சிலிகான் பள்ளத்தாக்கு என்று அழைக்கப்படும் முன்னணி தகவல் தொழில்நுட்ப (IT) சேவைத் தலைநகரம்.",
-      teachScriptEnglish: "Bengaluru: The Silicon Valley of India, premier IT services and tech capital.",
-      examTip: "இந்தியாவின் சிலிகான் பள்ளத்தாக்கு அல்லது IT தலைநகரம் பெங்களூரு."
-    },
-
-    // --- LESSON 5: History Unit 2 (World between Two Wars) - World Map ---
-    {
-      id: "world_rome",
-      unit: 5,
-      unitTitle: "வரலாறு - அலகு 2: இரு உலகப்போர்களுக்கு இடையே உலகம்",
-      category: "Fascism & Interwar",
-      mapType: "world",
-      nameTamil: "ரோம் (இத்தாலி - பாசிசத் தலைநகரம்)",
-      nameEnglish: "Rome (Capital of Fascist Italy under Mussolini)",
-      coords: { x: 51.5, y: 39.5 },
-      type: "point",
-      teachScriptTamil: "ரோம்: இத்தாலியின் தலைநகரம். முசோலினி 'ரோம் நோக்கிய அணிவகுப்பு' (March on Rome - 1922) நடத்தி பாசிச ஆட்சியை நிறுவிய வரலாற்று நகரம்.",
-      teachScriptEnglish: "Rome: Capital of Italy where Mussolini established Fascist regime after March on Rome (1922).",
-      examTip: "பாசிசத்தின் பிறப்பிடம் அல்லது முசோலினியின் தலைநகரம் ரோம்."
-    },
-    {
-      id: "world_berlin",
-      unit: 5,
-      unitTitle: "வரலாறு - அலகு 2: இரு உலகப்போர்களுக்கு இடையே உலகம்",
-      category: "Nazism & Interwar",
-      mapType: "world",
-      nameTamil: "பெர்லின் (ஜெர்மனி - நாசிசத் தலைநகரம்)",
-      nameEnglish: "Berlin (Capital of Nazi Germany under Hitler)",
-      coords: { x: 50.8, y: 33.6 },
-      type: "point",
-      teachScriptTamil: "பெர்லின்: ஜெர்மனியின் தலைநகரம். 1933-ல் ஹிட்லர் ஜெர்மனியின் சான்சலராகப் பதவியேற்று நாசிச சர்வாதிகார ஆட்சியை நிறுவிய இடம்.",
-      teachScriptEnglish: "Berlin: Capital of Germany, center of Adolf Hitler's Nazi Third Reich.",
-      examTip: "நாசிச சர்வாதிகாரத்தின் மையம் அல்லது ஹிட்லரின் தலைநகரம் பெர்லின்."
-    },
-    {
-      id: "world_ethiopia",
-      unit: 5,
-      unitTitle: "வரலாறு - அலகு 2: இரு உலகப்போர்களுக்கு இடையே உலகம்",
-      category: "Invasions",
-      mapType: "world",
-      nameTamil: "எத்தியோப்பியா / அபிசீனியா (ஆப்பிரிக்கா)",
-      nameEnglish: "Ethiopia / Abyssinia (Invaded by Italy 1935)",
-      coords: { x: 58.0, y: 55.0 },
-      type: "point",
-      teachScriptTamil: "எத்தியோப்பியா (அபிசீனியா): கிழக்கு ஆப்பிரிக்க நாடு. 1935-ல் இத்தாலியின் பாசிச சர்வாதிகாரி முசோலினி ஆக்கிரமித்த ஆப்பிரிக்க சுதந்திர நாடு.",
-      teachScriptEnglish: "Ethiopia (Abyssinia): East African nation invaded and annexed by Mussolini's Italy in 1935.",
-      examTip: "1935-ல் முசோலினியால் ஆக்கிரமிக்கப்பட்ட ஆப்பிரிக்க நாடு எத்தியோப்பியா."
-    },
-
-    // --- LESSON 6: Geography Unit 2 (Climate & Vegetation of India) ---
-    {
-      id: "ind_sw_monsoon",
-      unit: 6,
-      unitTitle: "புவியியல் - அலகு 2: காலநிலை & இயற்கை தாவரங்கள்",
-      category: "Monsoon Winds",
-      mapType: "india",
-      nameTamil: "தென்மேற்குப் பருவமழைக் காற்று (SW Monsoon)",
-      nameEnglish: "South-West Monsoon Wind (June to Sept)",
-      coords: { x: 26.0, y: 64.0 },
-      type: "line",
-      teachScriptTamil: "தென்மேற்குப் பருவமழை: ஜூன் முதல் செப்டம்பர் வரை அரபிக்கடலில் இருந்து இந்தியா நோக்கி வீசும் காற்று; மேற்குத் தொடர்ச்சி மலையில் கனமழை பொழிகிறது.",
-      teachScriptEnglish: "South-West Monsoon: Primary monsoon bringing 75% of India's rainfall between June and September.",
-      examTip: "அரபிக்கடலில் இருந்து இந்தியா நோக்கி வீசும் தென்மேற்குப் பருவமழைக் காற்று அம்புக்குறி."
-    },
-    {
-      id: "ind_ne_monsoon",
-      unit: 6,
-      unitTitle: "புவியியல் - அலகு 2: காலநிலை & இயற்கை தாவரங்கள்",
-      category: "Monsoon Winds",
-      mapType: "india",
-      nameTamil: "வடகிழக்குப் பருவமழைக் காற்று (Retreating Monsoon)",
-      nameEnglish: "North-East Monsoon Wind (Oct to Dec)",
-      coords: { x: 56.0, y: 55.0 },
-      type: "line",
-      teachScriptTamil: "வடகிழக்குப் பருவமழை: அக்டோபர் முதல் டிசம்பர் வரை நிலத்திலிருந்து வங்கக்கடல் வழியாகத் திரும்பி வீசி தமிழ்நாட்டிற்கு 50% மழையைத் தரும் காற்று.",
-      teachScriptEnglish: "North-East (Retreating) Monsoon: Brings heavy rainfall to coastal Tamil Nadu in winter.",
-      examTip: "தமிழ்நாட்டிற்கு அதிக மழை தரும் வடகிழக்குப் பருவமழைக் காற்று அம்புக்குறி."
-    },
-    {
-      id: "ind_mawsynram",
-      unit: 6,
-      unitTitle: "புவியியல் - அலகு 2: காலநிலை & இயற்கை தாவரங்கள்",
-      category: "Rainfall Extremes",
-      mapType: "india",
-      nameTamil: "மௌசின்ராம் (அதிக மழைபெறும் இடம் - 1,141 செ.மீ)",
-      nameEnglish: "Mawsynram (Wettest Place on Earth - Meghalaya)",
-      coords: { x: 74.5, y: 31.0 },
-      type: "point",
-      teachScriptTamil: "மௌசின்ராம்: மேகாலயாவின் காசி குன்றுகளில் அமைந்துள்ள உலகின் மிக அதிக மழைபெறும் இடம் (ஆண்டுக்கு சுமார் 1,141 செ.மீ மழை).",
-      teachScriptEnglish: "Mawsynram: Located in Meghalaya's Khasi Hills, the wettest place on Earth (1,141 cm rain).",
-      examTip: "இந்தியாவின் மற்றும் உலகின் மிக அதிக மழைபெறும் இடம் மௌசின்ராம்."
+      coords: { x: 47.5, y: 92.5 },
+      type: "water",
+      teachScriptTamil: "à®ªà®¾à®•à¯à®•à¯ à®¨à¯€à®°à®¿à®£à¯ˆ: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà¯ˆà®¯à¯à®®à¯ à®‡à®²à®™à¯à®•à¯ˆà®¯à¯ˆà®¯à¯à®®à¯ à®ªà®¿à®°à®¿à®•à¯à®•à¯à®®à¯ à®•à¯à®±à¯à®•à®¿à®¯ à®†à®´à®®à®±à¯à®± à®¨à¯€à®°à¯à®ªà¯à®ªà®°à®ªà¯à®ªà¯. à®®à®©à¯à®©à®¾à®°à¯ à®µà®³à¯ˆà®•à¯à®Ÿà®¾à®µà®¿à®±à¯à®•à¯ à®µà®Ÿà®•à¯à®•à¯‡ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³à®¤à¯.",
+      teachScriptEnglish: "Palk Strait: Narrow shallow strait separating southeastern India and northern Sri Lanka.",
+      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà¯ˆà®¯à¯à®®à¯ à®‡à®²à®™à¯à®•à¯ˆà®¯à¯ˆà®¯à¯à®®à¯ à®ªà®¿à®°à®¿à®•à¯à®•à¯à®®à¯ à®¨à¯€à®°à®¿à®£à¯ˆ à®ªà®¾à®•à¯à®•à¯ à®¨à¯€à®°à®¿à®£à¯ˆ."
     },
     {
       id: "ind_thar_desert",
       unit: 6,
-      unitTitle: "புவியியல் - அலகு 2: காலநிலை & இயற்கை தாவரங்கள்",
-      category: "Deserts (பாலைவனம்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 2: à®•à®¾à®²à®¨à®¿à®²à¯ˆ & à®¤à®¾à®µà®°à®™à¯à®•à®³à¯",
+      category: "Soil & Physical Regions",
       mapType: "india",
-      nameTamil: "தார் பாலைவனம் (பெரிய இந்தியப் பாலைவனம்)",
-      nameEnglish: "Thar Desert (The Great Indian Desert)",
-      coords: { x: 27.0, y: 31.0 },
-      type: "point",
-      teachScriptTamil: "தார் பாலைவனம்: ராஜஸ்தானில் அமைந்துள்ள இந்தியாவின் மிகப்பெரிய வறண்ட மணல் பாலைவனம்; ஆண்டுக்கு 25 செ.மீ-க்கும் குறைவான மழையே பெறுகிறது.",
-      teachScriptEnglish: "Thar Desert: Arid desert region in Rajasthan receiving less than 25 cm of rainfall annually.",
-      examTip: "இந்தியாவின் மிகப்பெரிய பாலைவனம் தார் பாலைவனம்."
+      nameTamil: "à®ªà®¾à®²à¯ˆ à®®à®£à¯ à®ªà®•à¯à®¤à®¿ (à®¤à®¾à®°à¯ à®ªà®¾à®²à¯ˆà®µà®©à®®à¯)",
+      nameEnglish: "Desert soil region (Thar Desert)",
+      coords: { x: 25.5, y: 42.0 },
+      type: "polygon",
+      teachScriptTamil: "à®ªà®¾à®²à¯ˆ à®®à®£à¯ à®ªà®•à¯à®¤à®¿: à®°à®¾à®œà®¸à¯à®¤à®¾à®©à¯ à®®à®¾à®¨à®¿à®²à®¤à¯à®¤à®¿à®©à¯ à®®à¯‡à®±à¯à®•à¯à®ªà¯ à®ªà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®‰à®³à¯à®³ à®¤à®¾à®°à¯ à®ªà®¾à®²à¯ˆà®µà®©à®ªà¯ à®ªà®•à¯à®¤à®¿à®¯à®¾à®•à¯à®®à¯. à®†à®°à®µà®²à¯à®²à®¿ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à¯à®•à¯ à®®à¯‡à®±à¯à®•à¯‡ à®‰à®³à¯à®³ à®ªà®°à®¨à¯à®¤ à®¨à®¿à®²à®ªà¯à®ªà®°à®ªà¯à®ªà¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
+      teachScriptEnglish: "Desert soil region: Covering the Thar desert of western Rajasthan, west of the Aravalli range.",
+      examTip: "à®ªà®¾à®²à¯ˆ à®®à®£à¯ à®…à®²à¯à®²à®¤à¯ à®µà®±à®£à¯à®Ÿ à®®à®£à¯ à®…à®²à¯à®²à®¤à¯ à®¤à®¾à®°à¯ à®ªà®¾à®²à¯ˆà®µà®©à®®à¯ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®Ÿà®¾à®²à¯ à®°à®¾à®œà®¸à¯à®¤à®¾à®©à®¿à®©à¯ à®®à¯‡à®±à¯à®•à¯à®ªà¯ à®ªà®•à¯à®¤à®¿à®¯à¯ˆ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯."
     },
     {
       id: "ind_sundarbans",
       unit: 6,
-      unitTitle: "புவியியல் - அலகு 2: காலநிலை & இயற்கை தாவரங்கள்",
-      category: "Forests (காடுகள்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 2: à®•à®¾à®²à®¨à®¿à®²à¯ˆ & à®¤à®¾à®µà®°à®™à¯à®•à®³à¯",
+      category: "Forests & Vegetation",
       mapType: "india",
-      nameTamil: "சுந்தரவனக் காடுகள் (சதுப்புநிலக் காடுகள்)",
-      nameEnglish: "Sundarbans (Mangrove Tidal Forests)",
-      coords: { x: 67.0, y: 40.0 },
-      type: "point",
-      teachScriptTamil: "சுந்தரவனக் காடுகள்: மேற்கு வங்கத்தில் கங்கை-பிரம்மபுத்திரா டெல்டாவில் அமைந்துள்ள உலகின் மிகப்பெரிய சதுப்புநில (மாங்குரோவ்) காடு; வங்காளப் புலி இங்கு வாழ்கிறது.",
-      teachScriptEnglish: "Sundarbans: World's largest mangrove forest delta in West Bengal, home of Royal Bengal Tiger.",
-      examTip: "இந்தியாவின் சதுப்புநிலக் காடு அல்லது சுந்தரவனம்."
-    },
-
-    // --- LESSON 7: Civics Unit 2 (Central Government) ---
-    {
-      id: "ind_delhi_central",
-      unit: 7,
-      unitTitle: "குடிமையியல் - அலகு 2: நடுவண் அரசு",
-      category: "Central Government Seat",
-      mapType: "india",
-      nameTamil: "புது தில்லி (மத்திய அரசு - குடியரசுத் தலைவர் மாளிகை)",
-      nameEnglish: "New Delhi (Rashtrapati Bhavan & Parliament)",
-      coords: { x: 39.0, y: 28.0 },
-      type: "point",
-      teachScriptTamil: "புது தில்லி: இந்திய நடுவண் அரசின் தலைமைப் பீடம். குடியரசுத் தலைவர் மாளிகை, பிரதமர் அலுவலகம் (South Block) மற்றும் புதிய நாடாளுமன்றக் கட்டடம் அமைந்துள்ள இடம்.",
-      teachScriptEnglish: "New Delhi: Capital seat of Union Government, Rashtrapati Bhavan, PMO, and Parliament.",
-      examTip: "இந்திய நடுவண் அரசு அமைந்துள்ள இடம் புது தில்லி."
-    },
-
-    // --- LESSON 8: Economics Unit 2 (Globalization & Trade) ---
-    {
-      id: "ind_mumbai_port",
-      unit: 8,
-      unitTitle: "பொருளியல் - அலகு 2: உலகமயமாதல் & வர்த்தகம்",
-      category: "Major Sea Ports",
-      mapType: "india",
-      nameTamil: "மும்பை துறைமுகம் (ஜவஹர்லால் நேரு துறைமுகம்)",
-      nameEnglish: "Mumbai Port & JNPT (Largest Container Port)",
-      coords: { x: 30.5, y: 55.0 },
-      type: "point",
-      teachScriptTamil: "மும்பை துறைமுகம்: இந்தியாவின் மிகப்பெரிய இயற்கை துறைமுகம் மற்றும் ஜவஹர்லால் நேரு துறைமுகம் (JNPT) அமைந்துள்ள முன்னணி கொள்கலன் துறைமுக நகரம்.",
-      teachScriptEnglish: "Mumbai Port & JNPT: India's premier natural harbour and largest container handling port.",
-      examTip: "அரபிக்கடலில் அமைந்துள்ள இந்தியாவின் மிகப்பெரிய துறைமுகம் மும்பை."
+      nameTamil: "à®šà¯à®¨à¯à®¤à®°à®µà®©à®•à¯ à®•à®¾à®Ÿà¯à®•à®³à¯",
+      nameEnglish: "Sundarban",
+      coords: { x: 69.5, y: 53.5 },
+      type: "polygon",
+      teachScriptTamil: "à®šà¯à®¨à¯à®¤à®°à®µà®©à®•à¯ à®•à®¾à®Ÿà¯à®•à®³à¯: à®®à¯‡à®±à¯à®•à¯ à®µà®™à¯à®•à®¾à®³à®®à¯ à®®à®±à¯à®±à¯à®®à¯ à®µà®™à¯à®•à®¾à®³à®¤à¯‡à®šà®®à¯ à®Žà®²à¯à®²à¯ˆà®¯à®¿à®²à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®‰à®²à®•à®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà¯†à®°à®¿à®¯ à®šà®¤à¯à®ªà¯à®ªà¯à®¨à®¿à®² à®®à®¾à®™à¯à®•à¯à®°à¯‹à®µà¯ à®Ÿà¯†à®²à¯à®Ÿà®¾ à®•à®¾à®Ÿà¯à®•à®³à¯ à®†à®•à¯à®®à¯.",
+      teachScriptEnglish: "Sundarbans: The world's largest tidal mangrove delta forest at the mouth of River Ganga in West Bengal.",
+      examTip: "à®šà®¤à¯à®ªà¯à®ªà¯à®¨à®¿à®²à®•à¯ à®•à®¾à®Ÿà¯à®•à®³à¯ à®…à®²à¯à®²à®¤à¯ à®®à®¾à®™à¯à®•à¯à®°à¯‹à®µà¯ à®•à®¾à®Ÿà¯à®•à®³à¯ à®…à®²à¯à®²à®¤à¯ à®°à®¾à®¯à®²à¯ à®ªà¯†à®™à¯à®•à®¾à®²à¯ à®ªà¯à®²à®¿à®•à®³à¯ à®šà®°à®£à®¾à®²à®¯à®®à¯ à®šà¯à®¨à¯à®¤à®°à®µà®©à®®à¯."
     },
     {
-      id: "ind_chennai_port",
-      unit: 8,
-      unitTitle: "பொருளியல் - அலகு 2: உலகமயமாதல் & வர்த்தகம்",
-      category: "Major Sea Ports",
-      mapType: "india",
-      nameTamil: "சென்னை துறைமுகம் (செயற்கைத் துறைமுகம்)",
-      nameEnglish: "Chennai Port (Historic Artificial Harbour)",
-      coords: { x: 47.0, y: 75.0 },
-      type: "point",
-      teachScriptTamil: "சென்னை துறைமுகம்: வங்காள விரிகுடாவில் அமைந்துள்ள இந்தியாவின் இரண்டாவது மிகப்பெரிய மற்றும் பழமையான செயற்கைத் துறைமுகம்.",
-      teachScriptEnglish: "Chennai Port: Major artificial port on the Coromandel Coast and gateway of South India.",
-      examTip: "கிழக்குக் கடற்கரையில் உள்ள செயற்கைத் துறைமுகம் சென்னை."
-    },
-    {
-      id: "ind_tuticorin_port",
-      unit: 8,
-      unitTitle: "பொருளியல் - அலகு 2: உலகமயமாதல் & வர்த்தகம்",
-      category: "Major Sea Ports",
-      mapType: "india",
-      nameTamil: "தூத்துக்குடி துறைமுகம் (வ.உ.சி துறைமுகம்)",
-      nameEnglish: "Tuticorin Port (V.O. Chidambaranar Port)",
-      coords: { x: 43.0, y: 84.5 },
-      type: "point",
-      teachScriptTamil: "தூத்துக்குடி துறைமுகம்: தமிழ்நாட்டின் தென்முனையில் மன்னார் வளைகுடாவில் அமைந்துள்ள முக்கிய அனைத்துப் பருவ செயற்கைத் துறைமுகம்.",
-      teachScriptEnglish: "Tuticorin (V.O.C) Port: Deep-water port in southern Tamil Nadu handling thermal coal and exports.",
-      examTip: "தமிழ்நாட்டின் தென்பகுதி துறைமுகம் அல்லது முத்து நகரம் தூத்துக்குடி."
-    },
-
-    // --- LESSON 9: History Unit 3 (World War II) - World Map ---
-    {
-      id: "world_pearl_harbor",
-      unit: 9,
-      unitTitle: "வரலாறு - அலகு 3: இரண்டாம் உலகப்போர்",
-      category: "WWII Turning Points",
-      mapType: "world",
-      nameTamil: "பேர்ல் துறைமுகம் (ஹவாய் - அமெரிக்கா)",
-      nameEnglish: "Pearl Harbor (Hawaii - US Pacific Fleet)",
-      coords: { x: 10.0, y: 48.0 },
-      type: "point",
-      teachScriptTamil: "பேர்ல் துறைமுகம்: பசிபிக் பெருங்கடலில் உள்ள அமெரிக்காவின் கடற்படை தளம். 1941 டிசம்பர் 7 அன்று ஜப்பான் இங்கு குண்டுவீசி அமெரிக்காவை இரண்டாம் உலகப்போரில் ஈடுபட வைத்தது.",
-      teachScriptEnglish: "Pearl Harbor: US naval base in Hawaii attacked by Japanese aircraft on Dec 7, 1941.",
-      examTip: "1941-ல் ஜப்பானால் தாக்கப்பட்ட அமெரிக்க கடற்படை தளம் பேர்ல் துறைமுகம்."
-    },
-    {
-      id: "world_japan_hiroshima",
-      unit: 9,
-      unitTitle: "வரலாறு - அலகு 3: இரண்டாம் உலகப்போர்",
-      category: "WWII Turning Points",
-      mapType: "world",
-      nameTamil: "ஹிரோஷிமா (ஜப்பான் - முதல் அணுகுண்டு)",
-      nameEnglish: "Hiroshima (Japan - First Atomic Bomb site)",
-      coords: { x: 84.5, y: 41.5 },
-      type: "point",
-      teachScriptTamil: "ஹிரோஷிமா: ஜப்பான் நாட்டின் முக்கிய நகரம். 1945 ஆகஸ்ட் 6 அன்று அமெரிக்கா உலகின் முதல் அணுகுண்டை ('லிட்டில் பாய்') வீசிய வரலாற்று நகரம்.",
-      teachScriptEnglish: "Hiroshima: Japanese city targeted with the world's first atomic bomb by USA on August 6, 1945.",
-      examTip: "உலகின் முதல் அணுகுண்டு வீசப்பட்ட இடம் ஹிரோஷிமா."
-    },
-    {
-      id: "world_stalingrad",
-      unit: 9,
-      unitTitle: "வரலாறு - அலகு 3: இரண்டாம் உலகப்போர்",
-      category: "WWII Turning Points",
-      mapType: "world",
-      nameTamil: "ஸ்டாலின்கிராட் (ரஷ்யா - உலகப்போர் திருப்புமுனை)",
-      nameEnglish: "Stalingrad (Volgograd, Russia - Turning Point)",
-      coords: { x: 58.5, y: 34.0 },
-      type: "point",
-      teachScriptTamil: "ஸ்டாலின்கிராட்: வோல்கா நதிக்கரையில் அமைந்துள்ள ரஷ்ய நகரம். 1942-1943 போரில் சோவியத் படைகள் ஹிட்லரின் ஜெர்மன் இராணுவத்தை முழுமையாகத் தோற்கடித்த திருப்புமுனை தளம்.",
-      teachScriptEnglish: "Stalingrad: Historic turning point of WWII where Soviet Red Army defeated Nazi 6th Army.",
-      examTip: "இரண்டாம் உலகப்போரில் ஜெர்மனி தோற்கடிக்கப்பட்ட திருப்புமுனை நகரம் ஸ்டாலின்கிராட்."
-    },
-
-    // --- LESSON 10: Geography Unit 3 (India - Agriculture & Irrigation) ---
-    {
-      id: "ind_alluvial_soil",
+      id: "ind_mumbai",
       unit: 10,
-      unitTitle: "புவியியல் - அலகு 3: இந்தியா - வேளாண்மை",
-      category: "Soil Regions (மண்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 3: à®µà¯‡à®³à®¾à®£à¯à®®à¯ˆ, à®¤à¯Šà®´à®¿à®²à¯ & à®ªà¯‹à®•à¯à®•à¯à®µà®°à®¤à¯à®¤à¯",
+      category: "Ports & Urban Centers",
       mapType: "india",
-      nameTamil: "வண்டல் மண் பகுதி (கங்கைச் சமவெளி)",
-      nameEnglish: "Alluvial Soil Region (Indo-Gangetic Plain)",
-      coords: { x: 50.0, y: 32.0 },
+      nameTamil: "à®®à¯à®®à¯à®ªà¯ˆ à®¤à¯à®±à¯ˆà®®à¯à®•à®®à¯",
+      nameEnglish: "Mumbai",
+      coords: { x: 24.8, y: 63.5 },
       type: "point",
-      teachScriptTamil: "வண்டல் மண் பகுதி: கங்கை மற்றும் பிரம்மபுத்திரா ஆறுகளின் படிவுகளால் உருவான இந்தியாவின் மிக வளமான விவசாய மண் பகுதி (நெல், கோதுமை பயிர்கள்).",
-      teachScriptEnglish: "Alluvial Soil Region: Highly fertile soil deposited by Himalayan rivers in northern plains.",
-      examTip: "இந்தியாவின் மிக வளமான மண் அல்லது நெல், கோதுமை விளையும் மண் வண்டல் மண்."
+      teachScriptTamil: "à®®à¯à®®à¯à®ªà¯ˆ: à®®à®•à®¾à®°à®¾à®·à¯à®Ÿà®¿à®°à®¾ à®®à®¾à®¨à®¿à®²à®¤à¯à®¤à®¿à®©à¯ à®¤à®²à¯ˆà®¨à®•à®°à®®à¯ à®®à®±à¯à®±à¯à®®à¯ à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®•à®ªà¯à®ªà¯†à®°à®¿à®¯ à®‡à®¯à®±à¯à®•à¯ˆ à®¤à¯à®±à¯ˆà®®à¯à®• à®¨à®•à®°à®®à¯. à®®à¯‡à®±à¯à®•à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®¯à®¿à®²à¯ à®…à®®à¯ˆà®¨à¯à®¤à¯à®³à¯à®³ à®®à¯à®•à¯à®•à®¿à®¯ à®¤à¯€à®µà¯ à®¨à®•à®°à®¤à¯à®¤à¯ˆà®•à¯ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
+      teachScriptEnglish: "Mumbai: Capital of Maharashtra and largest natural deepwater port on India's west coast.",
+      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®¨à¯à®´à¯ˆà®µà¯ à®µà®¾à®¯à®¿à®²à¯ à®…à®²à¯à®²à®¤à¯ à®¨à®¿à®¤à®¿à®¤à¯ à®¤à®²à¯ˆà®¨à®•à®°à®®à¯ à®…à®²à¯à®²à®¤à¯ à®ªà®°à¯à®¤à¯à®¤à®¿ à®†à®Ÿà¯ˆ à®¨à®•à®°à®®à¯ à®®à¯à®®à¯à®ªà¯ˆ."
     },
     {
-      id: "ind_black_soil",
+      id: "ind_air_chennai_kolkata",
       unit: 10,
-      unitTitle: "புவியியல் - அலகு 3: இந்தியா - வேளாண்மை",
-      category: "Soil Regions (மண்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 3: à®ªà¯‹à®•à¯à®•à¯à®µà®°à®¤à¯à®¤à¯ & à®µà®¾à®©à¯à®µà®´à®¿",
+      category: "Transport & Routes",
       mapType: "india",
-      nameTamil: "கரிசல் மண் பகுதி (டெக்கான் பீடபூமி - பருத்தி மண்)",
-      nameEnglish: "Black Soil Region (Regur / Cotton Soil)",
-      coords: { x: 38.0, y: 53.0 },
-      type: "point",
-      teachScriptTamil: "கரிசல் மண் பகுதி: தக்காண லாவா பாறைகள் சிதைவடைந்ததால் உருவான கருமை நிற மண்; பருத்தி விளைய மிகவும் ஏற்றது (ரீகர் மண்).",
-      teachScriptEnglish: "Black Soil Region: Formed from Deccan basalt lava, ideal for cotton cultivation (Regur soil).",
-      examTip: "பருத்தி விளைய ஏற்ற ரீகர் மண் அல்லது கரிசல் மண் பகுதி."
+      nameTamil: "à®šà¯†à®©à¯à®©à¯ˆ - à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾ à®µà®¾à®©à¯à®µà®´à®¿à®ªà¯ à®ªà®¾à®¤à¯ˆ",
+      nameEnglish: "Chennai to Kolkata Air route",
+      coords: { x: 58.5, y: 67.0 },
+      type: "route",
+      teachScriptTamil: "à®šà¯†à®©à¯à®©à¯ˆ - à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾ à®µà®¾à®©à¯à®µà®´à®¿à®ªà¯ à®ªà®¾à®¤à¯ˆ: à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯à®Ÿà®¿à®©à¯ à®šà¯†à®©à¯à®©à¯ˆà®¯à¯ˆà®¯à¯à®®à¯ à®®à¯‡à®±à¯à®•à¯ à®µà®™à¯à®•à®¾à®³à®¤à¯à®¤à®¿à®©à¯ à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾à®µà¯ˆà®¯à¯à®®à¯ à®‡à®£à¯ˆà®•à¯à®•à¯à®®à¯ à®µà®³à¯ˆà®¨à¯à®¤ à®µà®¾à®©à¯à®µà®´à®¿à®ªà¯ à®ªà®¾à®¤à¯ˆà®¯à¯ˆ à®•à¯‹à®Ÿà®¾à®• à®µà®°à¯ˆà®¨à¯à®¤à¯ à®¨à®Ÿà¯à®µà®¿à®²à¯ à®µà®¿à®®à®¾à®©à®•à¯ à®•à¯à®±à®¿à®¯à¯€à®Ÿà¯ à®‡à®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯.",
+      teachScriptEnglish: "Chennai to Kolkata Air Route: Curved flight path connecting Chennai and Kolkata along the eastern coast with an airplane symbol.",
+      examTip: "à®•à®¿à®´à®•à¯à®•à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆ à®µà®¾à®©à¯à®µà®´à®¿à®ªà¯ à®ªà®¾à®¤à¯ˆ à®…à®²à¯à®²à®¤à¯ à®šà¯†à®©à¯à®©à¯ˆ - à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾ à®µà®¿à®®à®¾à®© à®µà®´à®¿ à®Žà®©à®•à¯ à®•à¯‡à®Ÿà¯à®•à®ªà¯à®ªà®Ÿà¯à®®à¯."
     },
     {
-      id: "ind_tea_assam",
+      id: "ind_goa",
       unit: 10,
-      unitTitle: "புவியியல் - அலகு 3: இந்தியா - வேளாண்மை",
-      category: "Crops (பயிர் வளரும் பகுதிகள்)",
+      unitTitle: "à®ªà¯à®µà®¿à®¯à®¿à®¯à®²à¯ - à®…à®²à®•à¯ 3: à®®à®¾à®¨à®¿à®²à®™à¯à®•à®³à¯ & à®¤à¯à®±à¯ˆà®®à¯à®•à®®à¯",
+      category: "States & Ports",
       mapType: "india",
-      nameTamil: "தேயிலை விளையும் பகுதி (அசாம்)",
-      nameEnglish: "Tea Cultivating Region (Assam Valley)",
-      coords: { x: 75.0, y: 28.0 },
+      nameTamil: "à®•à¯‹à®µà®¾",
+      nameEnglish: "Goa",
+      coords: { x: 28.5, y: 78.0 },
       type: "point",
-      teachScriptTamil: "தேயிலை விளையும் பகுதி: அசாமின் பிரம்மபுத்திரா பள்ளத்தாக்கு மலைச்சரிவுகள்; இந்தியாவில் அதிக தேயிலை உற்பத்தி செய்யும் முதன்மை மாநிலம்.",
-      teachScriptEnglish: "Tea Cultivating Region: Assam is the largest producer of tea in India.",
-      examTip: "இந்தியாவில் தேயிலை அதிகம் விளையும் மாநிலம் அசாம்."
-    },
-    {
-      id: "ind_coffee_karnataka",
-      unit: 10,
-      unitTitle: "புவியியல் - அலகு 3: இந்தியா - வேளாண்மை",
-      category: "Crops (பயிர் வளரும் பகுதிகள்)",
-      mapType: "india",
-      nameTamil: "காபி விளையும் பகுதி (கர்நாடகா - குடகு)",
-      nameEnglish: "Coffee Cultivating Region (Karnataka / Kodagu)",
-      coords: { x: 36.0, y: 72.0 },
-      type: "point",
-      teachScriptTamil: "காபி விளையும் பகுதி: கர்நாடகத்தின் குடகு, சிக்மகளூரு மலைச்சரிவுகள்; இந்தியாவில் 70% காபி உற்பத்தி செய்யும் முதன்மை மாநிலம்.",
-      teachScriptEnglish: "Coffee Cultivating Region: Karnataka is the leading producer of coffee (over 70%) in India.",
-      examTip: "இந்தியாவில் காபி அதிகம் விளையும் மாநிலம் கர்நாடகா."
-    },
-    {
-      id: "ind_cotton_gujarat",
-      unit: 10,
-      unitTitle: "புவியியல் - அலகு 3: இந்தியா - வேளாண்மை",
-      category: "Crops (பயிர் வளரும் பகுதிகள்)",
-      mapType: "india",
-      nameTamil: "பருத்தி விளையும் பகுதி (குஜராத்)",
-      nameEnglish: "Cotton Cultivating Region (Gujarat)",
-      coords: { x: 26.0, y: 46.0 },
-      type: "point",
-      teachScriptTamil: "பருத்தி விளையும் பகுதி: குஜராத்தின் கரிசல் மண் பகுதிகள்; இந்தியாவில் பருத்தி உற்பத்தியில் முதலிடம் வகிக்கும் மாநிலம்.",
-      teachScriptEnglish: "Cotton Cultivating Region: Gujarat is the leading producer of cotton in India.",
-      examTip: "பருத்தி அதிகம் விளையும் மாநிலம் குஜராத்."
-    },
-    {
-      id: "ind_dam_bhakra_nangal",
-      unit: 10,
-      unitTitle: "புவியியல் - அலகு 3: இந்தியா - வேளாண்மை",
-      category: "Dams (அணைகள்)",
-      mapType: "india",
-      nameTamil: "பக்ரா நங்கல் அணை (சட்லஜ் ஆறு - பஞ்சாப்/இமாச்சல)",
-      nameEnglish: "Bhakra Nangal Dam (River Sutlej - Highest Gravity Dam)",
-      coords: { x: 37.0, y: 21.0 },
-      type: "point",
-      teachScriptTamil: "பக்ரா-நங்கல் அணை: சட்லஜ் ஆற்றின் குறுக்கே கட்டப்பட்ட இந்தியாவின் மிக உயரமான புவியீர்ப்பு அணை (கோபிந்த் சாகர் நீர்த்தேக்கம்).",
-      teachScriptEnglish: "Bhakra Nangal Dam: One of the highest gravity dams in the world built across Sutlej river.",
-      examTip: "சட்லஜ் நதியின் குறுக்கே கட்டப்பட்டுள்ள புவியீர்ப்பு அணை பக்ரா-நங்கல்."
-    },
-    {
-      id: "ind_dam_hirakud",
-      unit: 10,
-      unitTitle: "புவியியல் - அலகு 3: இந்தியா - வேளாண்மை",
-      category: "Dams (அணைகள்)",
-      mapType: "india",
-      nameTamil: "ஹிராகுட் அணை (மகாநதி - ஒடிசா)",
-      nameEnglish: "Hirakud Dam (River Mahanadi, Odisha - Longest Dam)",
-      coords: { x: 57.0, y: 47.0 },
-      type: "point",
-      teachScriptTamil: "ஹிராகுட் அணை: ஒடிசாவில் மகாநதியின் குறுக்கே கட்டப்பட்ட உலகின் மிக நீளமான அணை (நீளம் சுமார் 25.8 கி.மீ).",
-      teachScriptEnglish: "Hirakud Dam: Longest major earthen dam in the world built across Mahanadi river in Odisha.",
-      examTip: "உலகின் மிக நீளமான அணை அல்லது மகாநதி அணை ஹிராகுட்."
-    },
-    {
-      id: "ind_dam_mettur",
-      unit: 10,
-      unitTitle: "புவியியல் - அலகு 3: இந்தியா - வேளாண்மை",
-      category: "Dams (அணைகள்)",
-      mapType: "india",
-      nameTamil: "மேட்டூர் அணை (காவிரி ஆறு - தமிழ்நாடு)",
-      nameEnglish: "Mettur Dam / Stanley Reservoir (River Cauvery, TN)",
-      coords: { x: 42.0, y: 76.5 },
-      type: "point",
-      teachScriptTamil: "மேட்டூர் அணை (ஸ்டான்லி நீர்த்தேக்கம்): தமிழ்நாட்டின் சேலம் மாவட்டத்தில் காவிரி ஆற்றின் குறுக்கே கட்டப்பட்ட வரலாற்றுச் சிறப்புமிக்க பழமையான அணை.",
-      teachScriptEnglish: "Mettur Dam: Major multipurpose dam across River Cauvery in Salem, Tamil Nadu.",
-      examTip: "தமிழ்நாட்டில் காவிரி ஆற்றின் குறுக்கே உள்ள அணை மேட்டூர் அணை."
-    },
-
-    // --- LESSON 11: Civics Unit 3 (State Government) ---
-    {
-      id: "ind_tn_secretariat",
-      unit: 11,
-      unitTitle: "குடிமையியல் - அலகு 3: மாநில அரசு",
-      category: "State Governance",
-      mapType: "india",
-      nameTamil: "சென்னை (புனித ஜார்ஜ் கோட்டை - தமிழ்நாடு தலைமைச் செயலகம்)",
-      nameEnglish: "Chennai (Fort St. George - Tamil Nadu Secretariat)",
-      coords: { x: 47.0, y: 75.0 },
-      type: "point",
-      teachScriptTamil: "சென்னை (புனித ஜார்ஜ் கோட்டை): தமிழ்நாடு மாநில அரசின் தலைமைச் செயலகம் மற்றும் சட்டமன்றப் பேரவை அமைந்துள்ள வரலாற்று தளம்.",
-      teachScriptEnglish: "Chennai (Fort St. George): Seat of Tamil Nadu State Government and Legislative Assembly.",
-      examTip: "தமிழ்நாடு மாநில அரசின் தலைமைச் செயலகம் அமைந்துள்ள இடம் சென்னை."
-    },
-
-    // --- LESSON 12: Economics Unit 3 (Food Security & Nutrition) ---
-    {
-      id: "ind_green_revolution_belt",
-      unit: 12,
-      unitTitle: "பொருளியல் - அலகு 3: உணவு பாதுகாப்பு & ஊட்டச்சத்து",
-      category: "Food Production Belt",
-      mapType: "india",
-      nameTamil: "பசுமைப் புரட்சி பகுதி (பஞ்சாப் & ஹரியானா - உணவுக் களஞ்சியம்)",
-      nameEnglish: "Green Revolution Belt (Punjab & Haryana - Food Granary)",
-      coords: { x: 34.0, y: 24.0 },
-      type: "point",
-      teachScriptTamil: "பசுமைப் புரட்சி பகுதி: அதிக விளைச்சல் தரும் வீரிய விதைகள் (HYV) மற்றும் ரசாயன உரங்கள் மூலம் இந்தியாவின் உணவு உற்பத்தியில் தன்னிறைவு ஏற்படுத்திய பஞ்சாப்-ஹரியானா பகுதிகள்.",
-      teachScriptEnglish: "Green Revolution Region: Punjab and Haryana, the granary of India leading national food security.",
-      examTip: "இந்தியாவின் உணவுக் களஞ்சியம் அல்லது பசுமைப் புரட்சி தொடங்கிய பஞ்சாப்-ஹரியானா."
+      teachScriptTamil: "à®•à¯‹à®µà®¾: à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®•à®šà¯à®šà®¿à®±à®¿à®¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆ à®®à®¾à®¨à®¿à®²à®®à®¾à®•à¯à®®à¯. à®®à®•à®¾à®°à®¾à®·à¯à®Ÿà®¿à®°à®¾ à®®à®±à¯à®±à¯à®®à¯ à®•à®°à¯à®¨à®¾à®Ÿà®•à®¾à®µà®¿à®©à¯ à®Žà®²à¯à®²à¯ˆà®ªà¯ à®ªà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®‰à®³à¯à®³ à®•à¯Šà®™à¯à®•à®£à¯ à®•à®Ÿà®±à¯à®•à®°à¯ˆà®¯à®¿à®²à¯ à®•à¯‹à®µà®¾à®µà¯ˆ à®•à¯à®±à®¿à®•à¯à®•à®µà¯à®®à¯.",
+      teachScriptEnglish: "Goa: India's smallest state located on the Konkan coast between Maharashtra and Karnataka, home to Marmagao Port.",
+      examTip: "à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à®¿à®•à®šà¯à®šà®¿à®±à®¿à®¯ à®®à®¾à®¨à®¿à®²à®®à¯ à®…à®²à¯à®²à®¤à¯ à®®à®°à¯à®®à®•à¯‹à®µà®¾ à®¤à¯à®±à¯ˆà®®à¯à®•à®®à¯ à®‰à®³à¯à®³ à®®à®¾à®¨à®¿à®²à®®à¯ à®•à¯‹à®µà®¾."
     }
   ];
-  // 2. VECTOR SVG OUTLINE MAP TEMPLATES (Pure Scalable Vector graphics)
+
+  // ---------------------------------------------------------------------------
+  // 2. CURATED BOARD EXAM QUESTION SETS (Standard 8-Question Exam Papers)
+  // ---------------------------------------------------------------------------
+  const EXAM_QUESTION_SETS = [
+    {
+      id: "model_set_1",
+      titleTamil: "ðŸ“Œ à®…à®°à®šà¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà¯ à®®à®¾à®¤à®¿à®°à®¿ à®µà®¿à®©à®¾ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)",
+      titleEnglish: "ðŸ“Œ Board Exam Model Question (8 Places)",
+      mapType: "india",
+      introTamil: "à®®à®¾à®£à®µà®°à¯à®•à®³à¯‡! à®•à¯Šà®Ÿà¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà¯à®³à¯à®³ à®Žà®Ÿà¯à®Ÿà¯ à®‡à®Ÿà®™à¯à®•à®³à¯ˆ à®¨à®¾à®®à¯ à®‡à®¨à¯à®¤à®¿à®¯ à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®‡à®ªà¯à®ªà¯‹à®¤à¯ à®’à®µà¯à®µà¯Šà®©à¯à®±à®¾à®• à®Žà®™à¯à®•à¯, à®Žà®µà¯à®µà®¾à®±à¯ à®•à¯à®±à®¿à®ªà¯à®ªà®¤à¯ à®Žà®©à¯à®±à¯ à®ªà®¾à®°à¯à®ªà¯à®ªà¯‹à®®à¯.",
+      introEnglish: "Students, let us mark the following eight places one by one in the Indian map.",
+      placeIds: [
+        "ind_eastern_ghats",
+        "ind_gulf_of_mannar",
+        "ind_sundarbans",
+        "ind_thar_desert",
+        "ind_mumbai",
+        "ind_air_chennai_kolkata",
+        "ind_goa",
+        "ind_river_ganga"
+      ]
+    },
+    {
+      id: "model_set_2",
+      titleTamil: "ðŸ“Œ à®‡à®¨à¯à®¤à®¿à®¯ à®†à®±à¯à®•à®³à¯ & à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)",
+      titleEnglish: "ðŸ“Œ Major Rivers & Mountain Ranges (8 Places)",
+      mapType: "india",
+      introTamil: "à®®à®¾à®£à®µà®°à¯à®•à®³à¯‡! à®‡à®¨à¯à®¤à®¿à®¯à®¾à®µà®¿à®©à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®†à®±à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯ˆ à®’à®µà¯à®µà¯Šà®©à¯à®±à®¾à®• à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®•à¯à®±à®¿à®¤à¯à®¤à¯à®ªà¯ à®ªà®´à®•à®²à®¾à®®à¯.",
+      introEnglish: "Students, let us mark the prominent rivers and mountain ranges of India.",
+      placeIds: [
+        "ind_himalayas",
+        "ind_karakoram",
+        "ind_aravalli",
+        "ind_western_ghats",
+        "ind_eastern_ghats",
+        "ind_river_ganga",
+        "ind_river_cauvery",
+        "ind_river_narmada"
+      ]
+    },
+    {
+      id: "model_set_3",
+      titleTamil: "ðŸ“Œ à®‰à®²à®• à®µà®°à¯ˆà®ªà®Ÿà®®à¯: à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)",
+      titleEnglish: "ðŸ“Œ World Map: World Wars (8 Places)",
+      mapType: "world",
+      introTamil: "à®®à®¾à®£à®µà®°à¯à®•à®³à¯‡! à®‰à®²à®• à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®®à¯à®¤à®²à¯ à®®à®±à¯à®±à¯à®®à¯ à®‡à®°à®£à¯à®Ÿà®¾à®®à¯ à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à®¿à®©à¯ à®®à¯à®•à¯à®•à®¿à®¯ à®¨à®¾à®Ÿà¯à®•à®³à¯ˆ à®’à®µà¯à®µà¯Šà®©à¯à®±à®¾à®•à®•à¯ à®•à¯à®±à®¿à®ªà¯à®ªà¯‹à®®à¯.",
+      introEnglish: "Students, let us locate the major nations of the World Wars on the world map.",
+      placeIds: [
+        "world_britain",
+        "world_france",
+        "world_germany",
+        "world_italy",
+        "world_russia"
+      ]
+    }
+  ];
+
+  window.SOCIAL_MAP_LOCATIONS = SOCIAL_MAP_LOCATIONS;
+  window.EXAM_QUESTION_SETS = EXAM_QUESTION_SETS;
+
+  // ---------------------------------------------------------------------------
+  // 3. VECTOR SVG TEMPLATES WITH STATE BOUNDARIES (Pure Vector Graphics)
   // ---------------------------------------------------------------------------
   const MAP_SVGS = {
-    // INDIA OUTLINE MAP: viewBox="0 0 1000 1150"
     india: `
-      <svg id="svgIndiaMap" viewBox="0 0 1000 1150" class="vector-map-svg" xmlns="http://www.w3.org/2000/svg">
+      <svg id="tutor_svgIndiaMap" viewBox="0 0 1000 1150" class="vector-map-svg" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter id="mapGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feGaussianBlur stdDeviation="3.5" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
           <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#0c1d37" />
-            <stop offset="100%" stop-color="#071324" />
+            <stop offset="0%" stop-color="#0a192f" />
+            <stop offset="100%" stop-color="#030c1b" />
           </linearGradient>
           <linearGradient id="landGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#1e293b" />
@@ -822,7 +380,7 @@
         <rect width="1000" height="1150" fill="url(#oceanGrad)" />
 
         <!-- Compass Rose -->
-        <g transform="translate(870, 110)" opacity="0.75">
+        <g transform="translate(870, 110)" opacity="0.8">
           <circle cx="0" cy="0" r="32" fill="none" stroke="#38bdf8" stroke-dasharray="3,3" stroke-width="1.5" />
           <polygon points="0,-28 6,-6 0,0 -6,-6" fill="#ef4444" />
           <polygon points="0,28 6,6 0,0 -6,6" fill="#94a3b8" />
@@ -835,9 +393,9 @@
         </g>
 
         <!-- Ocean Water Body Labels -->
-        <text x="140" y="780" fill="#38bdf8" opacity="0.35" font-size="22" font-weight="800" letter-spacing="4">ARABIAN SEA (அரபிக்கடல்)</text>
-        <text x="640" y="780" fill="#38bdf8" opacity="0.35" font-size="22" font-weight="800" letter-spacing="4">BAY OF BENGAL (வங்காள விரிகுடா)</text>
-        <text x="320" y="1120" fill="#38bdf8" opacity="0.35" font-size="20" font-weight="800" letter-spacing="4">INDIAN OCEAN (இந்தியப் பெருங்கடல்)</text>
+        <text x="140" y="780" fill="#38bdf8" opacity="0.4" font-size="22" font-weight="800" letter-spacing="4">ARABIAN SEA (à®…à®°à®ªà®¿à®•à¯à®•à®Ÿà®²à¯)</text>
+        <text x="640" y="780" fill="#38bdf8" opacity="0.4" font-size="22" font-weight="800" letter-spacing="4">BAY OF BENGAL (à®µà®™à¯à®•à®¾à®³ à®µà®¿à®°à®¿à®•à¯à®Ÿà®¾)</text>
+        <text x="320" y="1120" fill="#38bdf8" opacity="0.4" font-size="20" font-weight="800" letter-spacing="4">INDIAN OCEAN (à®‡à®¨à¯à®¤à®¿à®¯à®ªà¯ à®ªà¯†à®°à¯à®™à¯à®•à®Ÿà®²à¯)</text>
 
         <!-- Neighboring Landmarks -->
         <text x="120" y="280" fill="#64748b" opacity="0.5" font-size="16" font-weight="700">PAKISTAN</text>
@@ -907,13 +465,53 @@
              C 405 200, 385 170, 375 140 
              C 365 110, 360 70, 370 40 Z" />
 
+        <!-- AUTHENTIC STATE BOUNDARIES (Classroom Atlas Lines) -->
+        <g id="stateBoundaries" fill="none" stroke="#64748b" stroke-width="1.3" stroke-dasharray="3,3" opacity="0.75">
+          <path d="M 420 1000 Q 395 940 380 880" />
+          <path d="M 380 880 Q 405 860 435 850" />
+          <path d="M 435 850 Q 460 835 485 815" />
+          <path d="M 330 840 Q 360 850 380 880" />
+          <path d="M 285 750 Q 350 730 420 720" />
+          <path d="M 420 720 Q 425 780 435 850" />
+          <path d="M 435 850 Q 470 760 520 700" />
+          <path d="M 520 700 Q 580 650 635 600" />
+          <path d="M 520 700 Q 560 620 575 560 Q 610 520 640 480" />
+          <path d="M 640 480 Q 660 475 680 475" />
+          <path d="M 680 475 Q 640 430 635 360 Q 655 330 660 305" />
+          <path d="M 265 620 Q 350 600 480 600 Q 520 650 520 700" />
+          <path d="M 265 620 Q 235 600 270 600" />
+          <path d="M 220 500 Q 260 490 280 500" />
+          <path d="M 280 500 Q 350 460 380 410" />
+          <path d="M 290 320 Q 330 330 360 350" />
+          <path d="M 540 380 Q 535 440 550 480" />
+          <path d="M 380 410 Q 450 440 535 440" />
+          <path d="M 360 260 Q 430 250 500 285" />
+        </g>
+
+        <!-- STATE LABELS (Matching Reference Photo: Odisha, Andhra Pradesh, Tamil Nadu, Jharkhand) -->
+        <g id="stateLabels" fill="#94a3b8" font-size="12" font-weight="700" opacity="0.8" pointer-events="none">
+          <text x="420" y="930">Tamil Nadu</text>
+          <text x="345" y="940">Kerala</text>
+          <text x="350" y="800">Karnataka</text>
+          <text x="268" y="760" fill="#f43f5e" font-weight="800">Goa</text>
+          <text x="475" y="760">Andhra Pradesh</text>
+          <text x="445" y="690">Telangana</text>
+          <text x="590" y="560">Odisha</text>
+          <text x="600" y="465">Jharkhand</text>
+          <text x="660" y="440">West Bengal</text>
+          <text x="560" y="380">Bihar</text>
+          <text x="450" y="350">Uttar Pradesh</text>
+          <text x="415" y="540">Madhya Pradesh</text>
+          <text x="330" y="650">Maharashtra</text>
+          <text x="200" y="540">Gujarat</text>
+          <text x="260" y="400">Rajasthan</text>
+          <text x="310" y="280">Punjab</text>
+          <text x="375" y="140">J&amp;K / Ladakh</text>
+        </g>
+
         <!-- SRI LANKA OUTLINE -->
         <path id="sriLanka" fill="url(#landGrad)" stroke="#38bdf8" stroke-width="2"
-          d="M 470 940 
-             C 490 925, 515 940, 520 965 
-             C 525 990, 510 1020, 490 1040 
-             C 475 1050, 460 1045, 455 1025 
-             C 450 1000, 455 960, 470 940 Z" />
+          d="M 470 940 C 490 925, 515 940, 520 965 C 525 990, 510 1020, 490 1040 C 475 1050, 460 1045, 455 1025 C 450 1000, 455 960, 470 940 Z" />
         <text x="495" y="1060" fill="#94a3b8" font-size="12" font-weight="700" text-anchor="middle">SRI LANKA</text>
 
         <!-- LAKSHADWEEP ISLANDS -->
@@ -932,40 +530,16 @@
           <ellipse cx="808" cy="805" rx="6" ry="16" />
           <ellipse cx="820" cy="855" rx="5" ry="10" />
           <ellipse cx="825" cy="885" rx="6" ry="12" />
-          <text x="830" y="790" fill="#38bdf8" font-size="11" font-weight="800">Andaman & Nicobar</text>
+          <text x="830" y="790" fill="#38bdf8" font-size="11" font-weight="800">Andaman &amp; Nicobar</text>
         </g>
 
-        <!-- SUBTLE RIVER OVERLAYS (Faint blue for reference) -->
-        <g id="riverGuides" fill="none" stroke="#0284c7" stroke-width="2" opacity="0.55" stroke-linecap="round">
-          <!-- Ganga -->
-          <path d="M 430 250 Q 480 320 540 360 T 630 460 T 660 520" />
-          <!-- Indus -->
-          <path d="M 440 100 Q 380 140 330 220 T 260 360 T 200 480" />
-          <!-- Brahmaputra -->
-          <path d="M 520 180 Q 640 190 750 250 T 820 330 T 780 410 T 680 480" />
-          <!-- Narmada -->
-          <path d="M 480 540 Q 380 540 250 545" />
-          <!-- Tapti -->
-          <path d="M 450 575 Q 360 575 260 580" />
-          <!-- Godavari -->
-          <path d="M 280 635 Q 400 650 550 670 T 595 680" />
-          <!-- Krishna -->
-          <path d="M 300 700 Q 420 715 520 735 T 575 745" />
-          <!-- Cauvery -->
-          <path d="M 330 820 Q 380 820 440 840 T 475 850" />
-        </g>
-
-        <!-- INTERACTIVE MARKER / PIN LAYER -->
-        <g id="dynamicMarkerLayer"></g>
-
-        <!-- DRAWING CANVAS / USER TOUCH LAYER -->
-        <g id="userDrawLayer"></g>
+        <!-- DYNAMIC TUTOR FEATURE & MARKER LAYER (Clean classroom feature illustration) -->
+        <g id="tutorFeatureLayer"></g>
       </svg>
     `,
 
-    // WORLD OUTLINE MAP: viewBox="0 0 1000 600"
     world: `
-      <svg id="svgWorldMap" viewBox="0 0 1000 600" class="vector-map-svg" xmlns="http://www.w3.org/2000/svg">
+      <svg id="tutor_svgWorldMap" viewBox="0 0 1000 600" class="vector-map-svg" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="worldOcean" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#0a192f" />
@@ -988,36 +562,17 @@
 
         <!-- NORTH AMERICA OUTLINE -->
         <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.8"
-          d="M 120 70 
-             C 170 60, 230 70, 280 110 
-             C 320 140, 290 190, 280 230 
-             C 270 270, 240 310, 220 340 
-             C 210 355, 195 330, 180 300 
-             C 160 260, 130 220, 110 180 
-             C 90 140, 95 90, 120 70 Z" />
+          d="M 120 70 C 170 60, 230 70, 280 110 C 320 140, 290 190, 280 230 C 270 270, 240 310, 220 340 C 210 355, 195 330, 180 300 C 160 260, 130 220, 110 180 C 90 140, 95 90, 120 70 Z" />
         <text x="190" y="200" fill="#64748b" opacity="0.6" font-size="14" font-weight="800">NORTH AMERICA</text>
 
         <!-- SOUTH AMERICA OUTLINE -->
         <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.8"
-          d="M 230 350 
-             C 270 360, 310 390, 320 440 
-             C 325 480, 295 530, 270 560 
-             C 255 580, 240 560, 235 520 
-             C 225 460, 215 410, 230 350 Z" />
+          d="M 230 350 C 270 360, 310 390, 320 440 C 325 480, 295 530, 270 560 C 255 580, 240 560, 235 520 C 225 460, 215 410, 230 350 Z" />
         <text x="250" y="450" fill="#64748b" opacity="0.6" font-size="13" font-weight="800">SOUTH AMERICA</text>
 
         <!-- EURASIA (EUROPE + ASIA) OUTLINE -->
         <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.8"
-          d="M 440 140 
-             C 480 110, 540 100, 620 110 
-             C 720 120, 810 130, 870 170 
-             C 900 200, 880 250, 840 280 
-             C 800 310, 780 350, 750 370 
-             C 710 390, 670 380, 640 350 
-             C 620 330, 580 340, 560 360 
-             C 530 390, 500 370, 480 340 
-             C 460 310, 480 280, 490 250 
-             C 500 220, 450 200, 440 180 Z" />
+          d="M 440 140 C 480 110, 540 100, 620 110 C 720 120, 810 130, 870 170 C 900 200, 880 250, 840 280 C 800 310, 780 350, 750 370 C 710 390, 670 380, 640 350 C 620 330, 580 340, 560 360 C 530 390, 500 370, 480 340 C 460 310, 480 280, 490 250 C 500 220, 450 200, 440 180 Z" />
         <text x="490" y="220" fill="#64748b" opacity="0.6" font-size="13" font-weight="800">EUROPE</text>
         <text x="700" y="220" fill="#64748b" opacity="0.6" font-size="14" font-weight="800">ASIA</text>
 
@@ -1027,19 +582,12 @@
 
         <!-- AFRICA OUTLINE -->
         <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.8"
-          d="M 460 350 
-             C 520 340, 570 380, 590 430 
-             C 600 480, 570 540, 530 570 
-             C 500 590, 480 560, 465 510 
-             C 440 450, 430 400, 460 350 Z" />
+          d="M 460 350 C 520 340, 570 380, 590 430 C 600 480, 570 540, 530 570 C 500 590, 480 560, 465 510 C 440 450, 430 400, 460 350 Z" />
         <text x="500" y="460" fill="#64748b" opacity="0.6" font-size="14" font-weight="800">AFRICA</text>
 
         <!-- AUSTRALIA OUTLINE -->
         <path class="map-land-path" fill="url(#worldLand)" stroke="#38bdf8" stroke-width="1.8"
-          d="M 780 430 
-             C 830 420, 870 440, 880 480 
-             C 885 520, 840 550, 800 540 
-             C 770 530, 750 490, 760 460 Z" />
+          d="M 780 430 C 830 420, 870 440, 880 480 C 885 520, 840 550, 800 540 C 770 530, 750 490, 760 460 Z" />
         <text x="800" y="490" fill="#64748b" opacity="0.6" font-size="13" font-weight="800">AUSTRALIA</text>
 
         <!-- JAPAN ISLANDS -->
@@ -1049,17 +597,7 @@
           <text x="890" y="240" fill="#38bdf8" font-size="11" font-weight="800">JAPAN</text>
         </g>
 
-        <!-- HAWAII / PEARL HARBOR -->
-        <g id="hawaiiIslands" fill="#ef4444" stroke="#ef4444">
-          <circle cx="135" cy="265" r="4" />
-          <text x="145" y="270" fill="#fca5a5" font-size="11" font-weight="800">Hawaii</text>
-        </g>
-
-        <!-- INTERACTIVE MARKER / PIN LAYER -->
-        <g id="dynamicMarkerLayer"></g>
-
-        <!-- DRAWING CANVAS / USER TOUCH LAYER -->
-        <g id="userDrawLayer"></g>
+        <g id="tutorFeatureLayer"></g>
       </svg>
     `
   };
@@ -1067,44 +605,30 @@
   window.MAP_SVGS = MAP_SVGS;
 
   // ---------------------------------------------------------------------------
-  // 3. MAP TUTOR & TEST ENGINE CONTROLLER (Upgraded Voice Teacher & Split-Screen Test)
+  // 4. MAP TUTOR CONTROLLER (Classroom Voice Teacher & Distraction-Free Map)
   // ---------------------------------------------------------------------------
   const MapTutorEngine = {
-    currentMapType: 'india',
-    currentUnit: 2,
-    currentLang: 'ta', // 'ta' for Tamil Medium, 'en' for English Medium
-    currentMode: 'teach', // 'teach' (Learn Mode) or 'test' (Split-Screen Test)
-
-    // Learn Mode State
-    learnLocations: [],
-    learnIndex: 0,
-    activeLocation: null,
-    isVoicePlaying: false,
+    currentSetId: "model_set_1",
+    currentPlaceIndex: 0,
+    currentLang: "ta", // 'ta' for Tamil, 'en' for English
     isAutoPlaying: false,
     autoPlayTimer: null,
-    learnZoom: { scale: 1.0, panX: 0, panY: 0, isDragging: false, startX: 0, startY: 0, moved: 0 },
+    isVoicePlaying: false,
+    showCumulative: false, // false = current place only; true = keep previous places marked
+    markedHistory: [],
+    zoomLevel: 1.0,
+    panX: 0,
+    panY: 0,
 
-    // Test Mode State
-    testQuestions: [],
-    currentTestIndex: 0,
-    currentScore: 0,
-    testResults: [],
-    isAnsweredCurrent: false,
-    currentUserMark: null,
-    mobileActiveTab: 'student', // 'student' or 'solution'
-    studentZoom: { scale: 1.0, panX: 0, panY: 0, isDragging: false, startX: 0, startY: 0, moved: 0 },
-    solutionZoom: { scale: 1.0, panX: 0, panY: 0 },
-
-    // Initialize Modal and Inject UI
     init() {
       if (document.getElementById('socialMapModal')) return;
 
-      // Auto detect language from page context if available
+      // Auto detect language
       try {
         const bodyText = document.body ? document.body.innerText : '';
         if (window.currentSubject && (window.currentSubject.id.endsWith('_em') || window.currentSubject.id === 'english')) {
           this.currentLang = 'en';
-        } else if (bodyText.includes('English Medium') && !bodyText.includes('தமிழ் வழி')) {
+        } else if (bodyText.includes('English Medium') && !bodyText.includes('à®¤à®®à®¿à®´à¯ à®µà®´à®¿')) {
           this.currentLang = 'en';
         }
       } catch (e) {
@@ -1113,286 +637,80 @@
 
       const modalHtml = `
         <div id="socialMapModal" class="social-map-modal-overlay" style="display:none;" role="dialog" aria-modal="true">
-          <div class="social-map-modal-container">
-            <!-- Modal Header -->
-            <div class="map-modal-header">
-              <div style="display:flex; align-items:center; gap:10px; min-width:0;">
-                <span style="font-size:26px; flex-shrink:0;">🗺️</span>
-                <div style="min-width:0;">
-                  <h3 id="mapModalTitle" class="map-modal-heading">10-ஆம் வகுப்பு வரைபட வழிகாட்டி & தேர்வு</h3>
-                  <div id="mapModalSubTitle" class="map-modal-subheading">அனைத்து 12 அலகுகள் • குரல் வழிகாட்டி • ஊடாடும் இருபக்க தேர்வு முறை</div>
-                </div>
-              </div>
-              <div class="map-header-actions">
-                <button type="button" id="btnToggleLang" class="map-ctrl-btn" onclick="MapTutorEngine.toggleLanguage()" title="மொழி மாற்று (Toggle Tamil / English)">
-                  🌐 <span id="langLabel">English</span>
-                </button>
-                <button type="button" class="map-ctrl-btn" onclick="MapTutorEngine.downloadBlankMap()" title="வெற்று வரைபடத்தைப் பதிவிறக்கு (Download Blank Map)">
-                  📥 <span id="downloadBtnText">வெற்று வரைபடம்</span>
-                </button>
-                <button type="button" class="map-close-btn" onclick="MapTutorEngine.closeModal()" title="மூடு (Close)">&times;</button>
-              </div>
-            </div>
-
-            <!-- Global Map Toolbar -->
-            <div class="map-toolbar">
-              <div class="map-toolbar-row">
-                <div class="map-pills-row">
-                  <button id="btnMapTypeIndia" class="map-pill active" onclick="MapTutorEngine.setMapType('india')">
-                    🇮🇳 <span class="pill-text">இந்தியா வரைபடம் (புவியியல்)</span>
-                  </button>
-                  <button id="btnMapTypeWorld" class="map-pill" onclick="MapTutorEngine.setMapType('world')">
-                    🌍 <span class="pill-text">உலக வரைபடம் (வரலாறு)</span>
-                  </button>
-                </div>
-                
-                <div class="map-mode-switch-row">
-                  <button id="btnModeTeach" class="map-mode-btn active" onclick="MapTutorEngine.setMode('teach')">
-                    🎙️ <span class="mode-text">குரல் வழிகாட்டி (Learn)</span>
-                  </button>
-                  <button id="btnModeTest" class="map-mode-btn" onclick="MapTutorEngine.setMode('test')">
-                    📝 <span class="mode-text">வரைபடத் தேர்வு (Test)</span>
-                  </button>
-                </div>
-              </div>
-
-              <div class="map-toolbar-row" style="margin-top:8px;">
-                <select id="mapLessonSelect" class="map-unit-select" onchange="MapTutorEngine.filterByUnit(this.value)">
-                  <option value="all">📚 அனைத்து 12 அலகுகள் (All 12 Lessons)</option>
-                  <option value="1">வரலாறு அலகு 1: முதல் உலகப்போர் (World Map)</option>
-                  <option value="2" selected>புவியியல் அலகு 1: அமைவிடம் & வடிகாலமைப்பு (India Map)</option>
-                  <option value="3">குடிமையியல் அலகு 1: இந்திய அரசியலமைப்பு</option>
-                  <option value="4">பொருளியல் அலகு 1: மொத்த உள்நாட்டு உற்பத்தி</option>
-                  <option value="5">வரலாறு அலகு 2: இரு உலகப்போர்களுக்கு இடையே உலகம்</option>
-                  <option value="6">புவியியல் அலகு 2: காலநிலை & இயற்கை தாவரங்கள்</option>
-                  <option value="7">குடிமையியல் அலகு 2: நடுவண் அரசு (டெல்லி)</option>
-                  <option value="8">பொருளியல் அலகு 2: உலகமயமாதல் & வர்த்தகம்</option>
-                  <option value="9">வரலாறு அலகு 3: இரண்டாம் உலகப்போர்</option>
-                  <option value="10">புவியியல் அலகு 3: வேளாண்மை & முக்கிய பயிர்கள்</option>
-                  <option value="11">குடிமையியல் அலகு 3: மாநில அரசு (சென்னை)</option>
-                  <option value="12">பொருளியல் அலகு 3: உணவு பாதுகாப்பு & ஊட்டச்சத்து</option>
+          <div class="social-map-modal-container full-stage">
+            
+            <!-- Top Minimal Classroom Control Bar (No clutter!) -->
+            <div class="tutor-top-bar">
+              <div class="tutor-header-left">
+                <span style="font-size:22px; flex-shrink:0;">ðŸ—ºï¸</span>
+                <select id="tutorSetSelect" class="tutor-set-select" onchange="MapTutorEngine.switchQuestionSet(this.value)">
+                  <option value="model_set_1">ðŸ“Œ à®…à®°à®šà¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà¯ à®®à®¾à®¤à®¿à®°à®¿ à®µà®¿à®©à®¾ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)</option>
+                  <option value="model_set_2">ðŸ“Œ à®‡à®¨à¯à®¤à®¿à®¯ à®†à®±à¯à®•à®³à¯ & à®®à®²à¯ˆà®¤à¯à®¤à¯Šà®Ÿà®°à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)</option>
+                  <option value="model_set_3">ðŸ“Œ à®‰à®²à®• à®µà®°à¯ˆà®ªà®Ÿà®®à¯: à®‰à®²à®•à®ªà¯à®ªà¯‹à®°à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)</option>
+                  <option value="all_locations">ðŸ“š à®…à®©à¯ˆà®¤à¯à®¤à¯ 54 à®ªà®¾à®Ÿ à®‡à®Ÿà®™à¯à®•à®³à¯ (All Places)</option>
                 </select>
-              </div>
-            </div>
 
-            <!-- ============================================================= -->
-            <!-- VIEW 1: LEARN MODE WORKSPACE (Step-by-Step Voice Teacher)     -->
-            <!-- ============================================================= -->
-            <div id="mapLearnWorkspace" class="map-workspace">
-              <!-- Left Sidebar: Location Search & Navigation List -->
-              <div id="mapSidebar" class="map-sidebar">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                  <span id="learnListHeader" style="font-size:12.5px; font-weight:800; color:#38bdf8;">📍 குறிக்க வேண்டிய இடங்கள்:</span>
-                  <button id="btnAutoPlayAll" class="map-action-sm-btn" onclick="MapTutorEngine.toggleAutoTeachAll()">▶️ வரிசையாக கற்பி</button>
-                </div>
-                <input type="text" id="mapSearchInput" placeholder="🔍 இடத்தைத் தேடுக..." class="map-search-field" oninput="MapTutorEngine.filterSearch(this.value)" />
-                <div id="mapPlacesList" class="map-places-list"></div>
-              </div>
-
-              <!-- Center/Right: Interactive Map Viewport -->
-              <div class="map-viewport-container" id="learnMapViewportContainer">
-                <!-- Top Learn Step Bar -->
-                <div class="learn-step-bar">
-                  <div style="display:flex; align-items:center; gap:8px;">
-                    <span class="learn-step-badge" id="learnStepBadge">இடம் 1 / 15</span>
-                    <strong id="learnStepTitle" style="color:#ffffff; font-size:14.5px;">இமயமலை</strong>
-                  </div>
-                  <div style="display:flex; align-items:center; gap:6px;">
-                    <button type="button" class="learn-nav-btn" onclick="MapTutorEngine.prevLearnLocation()" title="முந்தைய இடம்">⏮️ முந்தையது</button>
-                    <button type="button" class="learn-nav-btn primary" onclick="MapTutorEngine.nextLearnLocation()" title="அடுத்த இடம்">அடுத்தது ⏭️</button>
-                  </div>
-                </div>
-
-                <!-- SVG Map Wrapper -->
-                <div id="mapLearnSvgWrapper" class="map-svg-wrapper"></div>
-
-                <!-- Floating Voice Teacher Card -->
-                <div id="voiceTeacherCard" class="voice-teacher-card">
-                  <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
-                    <div style="display:flex; align-items:center; gap:8px; min-width:0;">
-                      <span class="pulsing-voice-dot"></span>
-                      <strong id="voicePlaceTitle" class="voice-place-heading"></strong>
-                    </div>
-                    <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
-                      <button type="button" class="voice-ctrl-icon-btn" onclick="MapTutorEngine.replayVoice()" title="மீண்டும் கேள்">🔄</button>
-                      <button type="button" class="voice-ctrl-icon-btn" onclick="MapTutorEngine.stopVoice()" title="நிறுத்து">⏹️</button>
-                      <button type="button" class="map-action-sm-btn" style="background:#10b981; margin-left:4px;" onclick="MapTutorEngine.setMode('test')">📝 தேர்வு எழுது</button>
-                    </div>
-                  </div>
-                  <div id="voicePlaceGuide" class="voice-place-guide"></div>
-                  <div id="voiceExamTip" class="voice-exam-tip"></div>
-                </div>
-
-                <!-- Learn Map Zoom Controls -->
-                <div class="map-zoom-controls">
-                  <button type="button" onclick="MapTutorEngine.zoomLearnMap(1.25)" title="பெரிதாக்கு (Zoom In)">➕</button>
-                  <button type="button" onclick="MapTutorEngine.zoomLearnMap(0.8)" title="சிறிதாக்கு (Zoom Out)">➖</button>
-                  <button type="button" onclick="MapTutorEngine.resetLearnMapZoom()" title="மீட்டமை (Reset View)">🎯</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- ============================================================= -->
-            <!-- VIEW 2: TEST MODE WORKSPACE (Split-Screen Interactive Test)   -->
-            <!-- ============================================================= -->
-            <div id="mapTestWorkspace" class="map-workspace" style="display:none; flex-direction:column;">
-              <!-- Test Top Status & Question Bar -->
-              <div class="map-test-header-bar">
-                <div class="test-header-q-info">
-                  <span id="testProgressBadge" class="test-q-badge">கேள்வி 1 / 5</span>
-                  <div style="min-width:0;">
-                    <div id="testQuestionPrompt" class="test-q-title">கேள்வி ஏற்றப்படுகிறது...</div>
-                    <div id="testInstructionTip" class="test-q-subtext">👆 இடதுபுற வரைபடத்தில் சரியான இடத்தைத் தொட்டு அல்லது கிளிக் செய்து குறிக்கவும்</div>
-                  </div>
-                </div>
-
-                <div class="test-header-actions">
-                  <div class="test-score-chip">
-                    <span id="testScoreLabel">மதிப்பெண்:</span> <strong id="testScoreVal" style="color:#10b981; font-size:16px;">0.0 / 5</strong>
-                  </div>
-                  <button type="button" id="btnFinishTestTop" class="btn-finish-test" onclick="MapTutorEngine.finishTest()" title="தேர்வை முடித்து முழு மதிப்பீட்டு அறிக்கையைப் பெறுங்கள்">
-                    🏁 <span class="finish-btn-text">தேர்வை முடி & மதிப்பீடு செய்</span>
-                  </button>
+                <div class="current-place-chip">
+                  <span id="tutorStepNumBadge" class="step-num-badge">(i) à®µà®¿à®©à®¾ 1/8</span>
+                  <span id="tutorCurrentPlaceTitle" class="current-place-name">EASTERN GHATS</span>
                 </div>
               </div>
 
-              <!-- Mobile Switcher Tabs (Visible on small screens) -->
-              <div class="test-mobile-tabs">
-                <button type="button" id="btnTabStudent" class="mobile-tab-btn active" onclick="MapTutorEngine.switchMobileTestTab('student')">
-                  👈 உங்கள் வரைபடம் (Mark Map)
+              <!-- Action Controls -->
+              <div class="tutor-header-right">
+                <button type="button" class="tutor-btn" onclick="MapTutorEngine.prevPlace()" title="à®®à¯à®¨à¯à®¤à¯ˆà®¯ à®‡à®Ÿà®®à¯">
+                  â®ï¸ <span class="btn-lbl">à®®à¯à®¨à¯à®¤à¯ˆà®¯à®¤à¯</span>
                 </button>
-                <button type="button" id="btnTabSolution" class="mobile-tab-btn" onclick="MapTutorEngine.switchMobileTestTab('solution')">
-                  👉 சரியான விடை & ஒப்பீடு 🎯
+                <button type="button" id="btnAutoPlay" class="tutor-btn primary" onclick="MapTutorEngine.toggleAutoPlay()" title="à®µà®°à®¿à®šà¯ˆà®¯à®¾à®• à®¤à®¾à®©à®¾à®• à®•à®±à¯à®ªà®¿">
+                  â–¶ï¸ <span id="lblAutoPlay">à®µà®°à®¿à®šà¯ˆà®¯à®¾à®• à®•à®±à¯à®ªà®¿</span>
                 </button>
-              </div>
-
-              <!-- Dual Split Panes Container -->
-              <div class="map-test-panes-wrapper">
-                <!-- Left Pane: Student Marking Map -->
-                <div id="paneStudentMap" class="test-pane student-pane">
-                  <div class="test-pane-banner">
-                    <div style="display:flex; align-items:center; gap:6px;">
-                      <span style="font-size:15px;">👈</span>
-                      <strong id="studentPaneHeading">உங்கள் வரைபடம் (மாணவர் பகுதி)</strong>
-                    </div>
-                    <span id="studentMarkStatus" class="test-mark-indicator pulse">👆 வரைபடத்தில் தொட்டு குறிக்கவும்</span>
-                  </div>
-
-                  <div class="test-map-viewport" id="studentMapViewport">
-                    <div id="studentMapSvgWrapper" class="map-svg-wrapper"></div>
-                    <!-- Zoom Toolbar on Student Map -->
-                    <div class="map-zoom-controls">
-                      <button type="button" onclick="MapTutorEngine.zoomStudentMap(1.25)" title="பெரிதாக்கு (Zoom In)">➕</button>
-                      <button type="button" onclick="MapTutorEngine.zoomStudentMap(0.8)" title="சிறிதாக்கு (Zoom Out)">➖</button>
-                      <button type="button" onclick="MapTutorEngine.resetStudentMapZoom()" title="மீட்டமை (Reset View)">🎯</button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Right Pane: Solution Map & Instant Feedback -->
-                <div id="paneSolutionMap" class="test-pane solution-pane">
-                  <div class="test-pane-banner solution-banner">
-                    <div style="display:flex; align-items:center; gap:6px;">
-                      <span style="font-size:15px;">👉</span>
-                      <strong id="solutionPaneHeading">சரியான விடை & ஒப்பீடு (Answer Reveal)</strong>
-                    </div>
-                    <span id="solutionResultBadge" class="solution-badge-idle">காத்திருக்கிறது...</span>
-                  </div>
-
-                  <!-- Idle State (Before Student Marks) -->
-                  <div id="solutionIdlePrompt" class="solution-idle-box">
-                    <div style="font-size:42px; margin-bottom:10px; animation:bounce 2s infinite;">👈 🗺️</div>
-                    <div id="solutionIdleTitle" style="font-size:16px; font-weight:800; color:#38bdf8;">இடதுபுற வரைபடத்தில் இடத்தைக் குறிக்கவும்</div>
-                    <div id="solutionIdleSub" style="font-size:13px; color:#94a3b8; max-width:320px; margin-top:6px; line-height:1.5;">
-                      நீங்கள் தொட்டு குறித்தவுடன், உண்மையான இடம், துல்லிய இடைவெளி மற்றும் குரல் வழிகாட்டல் இங்கே உடனுக்குடன் தோன்றும்!
-                    </div>
-                  </div>
-
-                  <!-- Active State (After Student Marks) -->
-                  <div id="solutionActiveContent" class="solution-active-container" style="display:none;">
-                    <div class="test-map-viewport" id="solutionMapViewport" style="flex:1;">
-                      <div id="solutionMapSvgWrapper" class="map-svg-wrapper"></div>
-                    </div>
-
-                    <!-- Instant Feedback Card -->
-                    <div id="solutionFeedbackCard" class="solution-feedback-card">
-                      <div id="solutionStatusHeader" class="solution-status-header"></div>
-                      <div id="solutionDistanceInfo" class="solution-distance-info"></div>
-                      <div id="solutionTeacherGuide" class="solution-teacher-guide"></div>
-                      <div id="solutionExamTip" class="solution-exam-tip"></div>
-
-                      <div class="solution-action-row">
-                        <button type="button" id="btnTestNextQuestion" class="btn-test-next" onclick="MapTutorEngine.nextTestQuestion()">
-                          அடுத்த வினா ➔
-                        </button>
-                        <button type="button" class="btn-test-finish-sm" onclick="MapTutorEngine.finishTest()">
-                          🏁 தேர்வை முடித்து மதிப்பெண் பார்
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <button type="button" class="tutor-btn primary" onclick="MapTutorEngine.nextPlace()" title="à®…à®Ÿà¯à®¤à¯à®¤ à®‡à®Ÿà®®à¯">
+                  <span class="btn-lbl">à®…à®Ÿà¯à®¤à¯à®¤à®¤à¯</span> â­ï¸
+                </button>
+                <button type="button" class="tutor-btn" onclick="MapTutorEngine.replayVoice()" title="à®•à¯à®°à®²à¯ à®µà®´à®¿à®•à®¾à®Ÿà¯à®Ÿà®²à¯ˆ à®®à¯€à®£à¯à®Ÿà¯à®®à¯ à®•à¯‡à®³à¯">
+                  ðŸ”„ <span class="btn-lbl">à®®à¯€à®£à¯à®Ÿà¯à®®à¯ à®šà¯Šà®²à¯</span>
+                </button>
+                <button type="button" id="btnPlacesDrawer" class="tutor-btn" onclick="MapTutorEngine.togglePlacesDrawer()" title="à®µà®¿à®©à®¾à®µà®¿à®²à¯ à®‰à®³à¯à®³ 8 à®‡à®Ÿà®™à¯à®•à®³à®¿à®©à¯ à®ªà®Ÿà¯à®Ÿà®¿à®¯à®²à¯">
+                  ðŸ“‹ <span class="btn-lbl">8 à®‡à®Ÿà®™à¯à®•à®³à¯</span>
+                </button>
+                <button type="button" id="btnLangToggle" class="tutor-btn" onclick="MapTutorEngine.toggleLanguage()" title="à®®à¯Šà®´à®¿ à®®à®¾à®±à¯à®±à¯ (Tamil / English)">
+                  ðŸŒ <span id="lblLang">English</span>
+                </button>
+                <button type="button" class="tutor-btn" onclick="MapTutorEngine.downloadBlankMap()" title="à®µà¯†à®±à¯à®±à¯ à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à¯ˆà®ªà¯ à®ªà®¤à®¿à®µà®¿à®±à®•à¯à®•à¯ (Blank Map for Practice)">
+                  ðŸ“¥ <span class="btn-lbl">à®µà¯†à®±à¯à®±à¯ à®µà®°à¯ˆà®ªà®Ÿà®®à¯</span>
+                </button>
+                <button type="button" class="tutor-close-btn" onclick="MapTutorEngine.closeModal()" title="à®®à¯‚à®Ÿà¯">&times;</button>
               </div>
             </div>
 
-            <!-- ============================================================= -->
-            <!-- VIEW 3: TEST EVALUATION DASHBOARD                             -->
-            <!-- ============================================================= -->
-            <div id="mapEvaluationWorkspace" class="map-workspace" style="display:none; overflow-y:auto; padding:20px; flex-direction:column; align-items:center;">
-              <div class="eval-dashboard-container">
-                <div style="text-align:center;">
-                  <div style="font-size:52px; margin-bottom:6px;">🏆</div>
-                  <h2 id="evalHeading" style="font-size:22px; font-weight:900; color:#38bdf8; margin:0 0 6px 0;">
-                    வரைபடத் தேர்வு மதிப்பீட்டு அறிக்கை
-                  </h2>
-                  <div id="evalSubHeading" style="font-size:13.5px; color:#94a3b8;">
-                    Class 10 Social Science Map Marking Evaluation
-                  </div>
-                </div>
+            <!-- Full Stage Map Viewport (NO TEXT CLUTTER OTHER THAN MAP & PLACE!) -->
+            <div class="map-stage-viewport" id="mapStageViewport">
+              <div id="mapSvgStageWrapper" class="map-stage-wrapper"></div>
 
-                <!-- Big Score Card -->
-                <div class="eval-score-card">
-                  <div style="font-size:13px; font-weight:700; color:#cbd5e1; text-transform:uppercase; letter-spacing:1px;">ஈட்டிய மொத்த மதிப்பெண்கள்</div>
-                  <div id="evalScoreNumber" class="eval-score-number">0.0 / 5 (0%)</div>
-                  <div id="evalMedalBadge" class="eval-medal-badge">🥇 தங்கப் பதக்கம் (Gold Medal)</div>
-                  <div id="evalVoiceSpeechNote" class="eval-voice-note">
-                    🔊 குரல் மதிப்பீடு ஒலிக்கிறது...
-                  </div>
-                </div>
+              <!-- Floating Zoom & Pan Controls -->
+              <div class="map-floating-zoom">
+                <button type="button" onclick="MapTutorEngine.zoom(1.25)" title="à®ªà¯†à®°à®¿à®¤à®¾à®•à¯à®•à¯ (Zoom In)">âž•</button>
+                <button type="button" onclick="MapTutorEngine.zoom(0.8)" title="à®šà®¿à®±à®¿à®¤à®¾à®•à¯à®•à¯ (Zoom Out)">âž–</button>
+                <button type="button" onclick="MapTutorEngine.resetZoom()" title="à®®à¯€à®Ÿà¯à®Ÿà®®à¯ˆ (Reset View)">ðŸŽ¯</button>
+              </div>
 
-                <!-- Question Breakdown Table -->
-                <div style="width:100%; margin-top:20px;">
-                  <h4 id="evalBreakdownHeading" style="font-size:15px; font-weight:800; color:#f1f5f9; margin:0 0 10px 0;">
-                    📋 வினா வாரியான மதிப்பீட்டு விபரம்:
-                  </h4>
-                  <div class="eval-table-wrapper">
-                    <table class="eval-table">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th id="thQuestionCol">வினா / இடம்</th>
-                          <th id="thResultCol">முடிவு</th>
-                          <th id="thScoreCol">மதிப்பெண்</th>
-                          <th id="thActionCol">பயிற்சி</th>
-                        </tr>
-                      </thead>
-                      <tbody id="evalTableBody"></tbody>
-                    </table>
-                  </div>
+              <!-- Sleek Bottom Audio Teacher Capsule -->
+              <div class="teacher-voice-capsule" id="teacherVoiceCapsule">
+                <span class="pulsing-voice-dot"></span>
+                <div class="voice-capsule-text" id="voiceCapsuleText">
+                  à®†à®šà®¿à®°à®¿à®¯à®°à¯ à®•à¯à®°à®²à¯ à®µà®´à®¿à®•à®¾à®Ÿà¯à®Ÿà®²à¯ à®’à®²à®¿à®•à¯à®•à®¿à®±à®¤à¯...
                 </div>
+                <button type="button" class="capsule-icon-btn" onclick="MapTutorEngine.replayVoice()" title="à®®à¯€à®£à¯à®Ÿà¯à®®à¯ à®•à¯‡à®³à¯">ðŸ”„</button>
+                <button type="button" class="capsule-icon-btn" onclick="MapTutorEngine.stopVoice()" title="à®’à®²à®¿à®¯à¯ˆ à®¨à®¿à®±à¯à®¤à¯à®¤à¯">â¹ï¸</button>
+              </div>
 
-                <!-- Action Controls Row -->
-                <div class="eval-actions-row">
-                  <button type="button" class="eval-action-btn primary" onclick="MapTutorEngine.startInteractiveTest()">
-                    🔄 மீண்டும் தேர்வு எழுது (Retake Test)
-                  </button>
-                  <button type="button" class="eval-action-btn secondary" onclick="MapTutorEngine.setMode('teach')">
-                    🎙️ குரல் வழிகாட்டிக்குச் செல் (Voice Tutor)
-                  </button>
-                  <button type="button" class="eval-action-btn secondary" onclick="MapTutorEngine.downloadBlankMap()">
-                    📥 வெற்று வரைபடம் பதிவிறக்கு
-                  </button>
+              <!-- Slide-in Drawer for Question Places List (Hidden by default, opened on demand) -->
+              <div id="placesDrawer" class="places-slide-drawer" style="display:none;">
+                <div class="drawer-header">
+                  <strong id="drawerHeading">ðŸ“‹ à®•à¯à®±à®¿à®•à¯à®• à®µà¯‡à®£à¯à®Ÿà®¿à®¯ à®‡à®Ÿà®™à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)</strong>
+                  <button type="button" class="drawer-close-btn" onclick="MapTutorEngine.togglePlacesDrawer()">&times;</button>
                 </div>
+                <div id="drawerListItems" class="drawer-list-items"></div>
               </div>
             </div>
 
@@ -1404,7 +722,6 @@
       this.injectStyles();
     },
 
-    // Inject Responsive CSS
     injectStyles() {
       if (document.getElementById('socialMapStyles')) return;
       const css = `
@@ -1412,251 +729,140 @@
           position: fixed;
           inset: 0;
           z-index: 99999;
-          background: rgba(3, 7, 18, 0.90);
+          background: rgba(3, 7, 18, 0.94);
           backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 8px;
         }
-        .social-map-modal-container {
-          background: #091220;
-          border: 1.5px solid #1e3a5f;
-          border-radius: 14px;
-          width: 98vw;
-          max-width: 1350px;
-          height: 95vh;
+        .social-map-modal-container.full-stage {
+          background: #060d19;
+          width: 100vw;
+          height: 100vh;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(56, 189, 248, 0.2);
           overflow: hidden;
           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
-        .map-modal-header {
-          padding: 10px 16px;
-          background: #0c1829;
-          border-bottom: 1px solid #1e3a5f;
+        
+        /* Top Minimal Control Bar */
+        .tutor-top-bar {
+          height: 54px;
+          background: #091424;
+          border-bottom: 1.5px solid #1e3a5f;
           display: flex;
           align-items: center;
           justify-content: space-between;
+          padding: 0 16px;
+          gap: 12px;
+          flex-shrink: 0;
+          z-index: 30;
+        }
+        .tutor-header-left {
+          display: flex;
+          align-items: center;
           gap: 10px;
+          min-width: 0;
+          flex: 1;
         }
-        .map-modal-heading {
-          font-size: 17px;
-          font-weight: 800;
-          color: #ffffff;
-          margin: 0;
-          line-height: 1.25;
+        .tutor-set-select {
+          background: #142236;
+          border: 1px solid #2d4566;
+          color: #f1f5f9;
+          font-weight: 700;
+          font-size: 13px;
+          padding: 6px 10px;
+          border-radius: 8px;
+          outline: none;
+          max-width: 320px;
         }
-        .map-modal-subheading {
-          font-size: 11.5px;
-          color: #94a3b8;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        .map-header-actions {
+        .current-place-chip {
           display: flex;
           align-items: center;
           gap: 8px;
+          background: rgba(30, 41, 59, 0.85);
+          border: 1px solid #334155;
+          padding: 4px 12px;
+          border-radius: 20px;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .step-num-badge {
+          background: #0284c7;
+          color: #ffffff;
+          font-size: 12px;
+          font-weight: 800;
+          padding: 3px 8px;
+          border-radius: 12px;
+        }
+        .current-place-name {
+          font-size: 15px;
+          font-weight: 900;
+          color: #fbbf24;
+          letter-spacing: 0.5px;
+        }
+        .tutor-header-right {
+          display: flex;
+          align-items: center;
+          gap: 6px;
           flex-shrink: 0;
         }
-        .map-close-btn {
+        .tutor-btn {
+          background: #132238;
+          border: 1px solid #2d4566;
+          color: #38bdf8;
+          font-weight: 700;
+          font-size: 12.5px;
+          padding: 6px 11px;
+          border-radius: 7px;
+          cursor: pointer;
+          transition: all 0.2s;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          white-space: nowrap;
+        }
+        .tutor-btn:hover {
+          background: #1e3a5f;
+          border-color: #38bdf8;
+        }
+        .tutor-btn.primary {
+          background: linear-gradient(135deg, #0284c7, #2563eb);
+          color: #ffffff;
+          border: none;
+          box-shadow: 0 3px 10px rgba(2, 132, 199, 0.4);
+        }
+        .tutor-close-btn {
           background: none;
           border: none;
           color: #94a3b8;
           font-size: 28px;
           cursor: pointer;
           line-height: 1;
-          padding: 0 4px;
+          padding: 0 6px;
         }
-        .map-close-btn:hover { color: #f87171; }
-        .map-ctrl-btn {
-          background: #1e293b;
-          border: 1px solid #334155;
-          color: #38bdf8;
-          font-weight: 700;
-          font-size: 12px;
-          padding: 6px 10px;
-          border-radius: 7px;
-          cursor: pointer;
-          transition: all 0.2s;
-          white-space: nowrap;
-        }
-        .map-ctrl-btn:hover {
-          background: #334155;
-          border-color: #38bdf8;
-        }
-        .map-toolbar {
-          padding: 8px 16px;
-          background: #0f1c30;
-          border-bottom: 1px solid #1e3a5f;
-        }
-        .map-toolbar-row {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 8px;
-          flex-wrap: wrap;
-        }
-        .map-pills-row, .map-mode-switch-row {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          flex-wrap: wrap;
-        }
-        .map-pill {
-          background: #1e293b;
-          border: 1px solid #334155;
-          color: #cbd5e1;
-          font-weight: 700;
-          font-size: 12.5px;
-          padding: 6px 12px;
-          border-radius: 20px;
-          cursor: pointer;
-          transition: all 0.2s;
-        }
-        .map-pill.active {
-          background: linear-gradient(135deg, #0284c7, #2563eb);
-          border-color: #38bdf8;
-          color: #ffffff;
-          box-shadow: 0 3px 10px rgba(2, 132, 199, 0.4);
-        }
-        .map-unit-select {
+        .tutor-close-btn:hover { color: #f87171; }
+
+        /* Full Map Viewport */
+        .map-stage-viewport {
           flex: 1;
-          min-width: 260px;
-          background: #1e293b;
-          border: 1px solid #334155;
-          color: #f1f5f9;
-          font-weight: 700;
-          font-size: 12.5px;
-          padding: 7px 10px;
-          border-radius: 8px;
-          outline: none;
-        }
-        .map-mode-btn {
-          background: #1e293b;
-          border: 1.5px solid #334155;
-          color: #94a3b8;
-          font-weight: 800;
-          font-size: 12.5px;
-          padding: 6px 14px;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: all 0.2s;
-        }
-        .map-mode-btn.active {
-          background: #10b981;
-          border-color: #34d399;
-          color: #ffffff;
-          box-shadow: 0 3px 12px rgba(16, 185, 129, 0.35);
-        }
-        .map-workspace {
-          flex: 1;
-          display: flex;
-          overflow: hidden;
-          position: relative;
-        }
-        
-        /* Sidebar styles */
-        .map-sidebar {
-          width: 310px;
-          background: #0a1424;
-          border-right: 1px solid #1e3a5f;
-          padding: 12px;
-          display: flex;
-          flex-direction: column;
-          overflow-y: auto;
-        }
-        .map-search-field {
           width: 100%;
-          background: #16243b;
-          border: 1px solid #2d4566;
-          color: #fff;
-          font-size: 12.5px;
-          padding: 7px 10px;
-          border-radius: 6px;
-          margin-bottom: 8px;
-          box-sizing: border-box;
-        }
-        .map-places-list {
-          flex: 1;
-          overflow-y: auto;
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-        }
-        .map-place-item {
-          background: #122036;
-          border: 1px solid #203552;
-          border-radius: 8px;
-          padding: 7px 10px;
-          cursor: pointer;
-          transition: all 0.2s;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-        .map-place-item:hover {
-          background: #1a2f4d;
-          border-color: #38bdf8;
-          transform: translateX(2px);
-        }
-        .map-place-item.active {
-          background: linear-gradient(135deg, #0369a1, #1d4ed8);
-          border-color: #38bdf8;
-          color: #fff;
-          box-shadow: 0 3px 10px rgba(3, 105, 161, 0.4);
-        }
-        .map-viewport-container {
-          flex: 1;
+          height: 100%;
           position: relative;
-          background: #050d1a;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-        }
-        .learn-step-bar {
-          background: rgba(12, 24, 41, 0.95);
-          border-bottom: 1px solid #1e3a5f;
-          padding: 7px 14px;
+          background: #050c18;
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          z-index: 5;
+          justify-content: center;
+          overflow: hidden;
         }
-        .learn-step-badge {
-          background: #1e3a5f;
-          color: #38bdf8;
-          font-weight: 800;
-          font-size: 11.5px;
-          padding: 3px 8px;
-          border-radius: 12px;
-        }
-        .learn-nav-btn {
-          background: #1e293b;
-          border: 1px solid #334155;
-          color: #cbd5e1;
-          font-size: 12px;
-          font-weight: 700;
-          padding: 4px 10px;
-          border-radius: 6px;
-          cursor: pointer;
-        }
-        .learn-nav-btn.primary {
-          background: #0284c7;
-          border-color: #38bdf8;
-          color: #ffffff;
-        }
-        .map-svg-wrapper {
-          flex: 1;
+        .map-stage-wrapper {
           width: 100%;
           height: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
-          cursor: crosshair;
+          cursor: grab;
           touch-action: none;
           user-select: none;
           position: relative;
@@ -1664,52 +870,61 @@
         .vector-map-svg {
           width: 100%;
           height: 100%;
-          max-height: 82vh;
+          max-height: 94vh;
           user-select: none;
-          pointer-events: auto;
           transition: transform 0.08s ease-out;
         }
-        .voice-teacher-card {
+
+        /* Floating Zoom Controls */
+        .map-floating-zoom {
           position: absolute;
-          bottom: 14px;
-          left: 14px;
-          right: 70px;
-          background: rgba(15, 23, 42, 0.96);
-          border: 1.5px solid #38bdf8;
-          border-radius: 12px;
-          padding: 10px 14px;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-          backdrop-filter: blur(8px);
-          max-width: 680px;
-          z-index: 10;
+          top: 16px;
+          right: 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          z-index: 20;
         }
-        .voice-place-heading {
+        .map-floating-zoom button {
+          width: 36px;
+          height: 36px;
+          background: rgba(15, 23, 42, 0.9);
+          border: 1px solid #334155;
           color: #38bdf8;
-          font-size: 14.5px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          font-size: 16px;
+          font-weight: 800;
+          border-radius: 8px;
+          cursor: pointer;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.5);
         }
-        .voice-place-guide {
-          margin-top: 5px;
-          font-size: 12.5px;
-          line-height: 1.55;
-          color: #f1f5f9;
+        .map-floating-zoom button:hover {
+          background: #1e3a5f;
+          color: #ffffff;
         }
-        .voice-exam-tip {
-          margin-top: 5px;
-          font-size: 11.5px;
-          color: #fbbf24;
-          background: rgba(245,158,11,0.15);
-          padding: 4px 8px;
-          border-radius: 5px;
+
+        /* Teacher Voice Status Capsule (Minimalist Floating Bottom Bar) */
+        .teacher-voice-capsule {
+          position: absolute;
+          bottom: 18px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(10, 20, 36, 0.94);
+          border: 1.5px solid #0284c7;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.7), 0 0 20px rgba(2, 132, 199, 0.25);
+          padding: 8px 18px;
+          border-radius: 30px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          z-index: 20;
+          backdrop-filter: blur(8px);
+          max-width: 90vw;
         }
         .pulsing-voice-dot {
-          width: 9px;
-          height: 9px;
+          width: 10px;
+          height: 10px;
           background: #ef4444;
           border-radius: 50%;
-          display: inline-block;
           animation: voicePulse 1.2s infinite;
           flex-shrink: 0;
         }
@@ -1717,441 +932,115 @@
           0%, 100% { transform: scale(1); opacity: 1; }
           50% { transform: scale(1.6); opacity: 0.4; }
         }
-        .voice-ctrl-icon-btn {
+        .voice-capsule-text {
+          font-size: 13.5px;
+          font-weight: 700;
+          color: #f1f5f9;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .capsule-icon-btn {
           background: #1e293b;
           border: 1px solid #334155;
-          color: #fff;
+          color: #38bdf8;
           font-size: 13px;
           width: 28px;
           height: 28px;
-          border-radius: 6px;
+          border-radius: 50%;
           cursor: pointer;
-        }
-        .map-action-sm-btn {
-          background: #0284c7;
-          border: none;
-          color: #fff;
-          font-size: 11px;
-          font-weight: 800;
-          padding: 4px 8px;
-          border-radius: 6px;
-          cursor: pointer;
-          white-space: nowrap;
-        }
-        .map-zoom-controls {
-          position: absolute;
-          top: 14px;
-          right: 14px;
           display: flex;
-          flex-direction: column;
-          gap: 6px;
-          z-index: 10;
-        }
-        .map-zoom-controls button {
-          width: 34px;
-          height: 34px;
-          background: rgba(30, 41, 59, 0.9);
-          border: 1px solid #334155;
-          color: #38bdf8;
-          font-size: 15px;
-          font-weight: 800;
-          border-radius: 8px;
-          cursor: pointer;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-        }
-        .map-zoom-controls button:hover {
-          background: #334155;
-          color: #ffffff;
+          align-items: center;
+          justify-content: center;
         }
 
-        /* ============================================================== */
-        /* TEST MODE SPLIT SCREEN STYLES                                  */
-        /* ============================================================== */
-        .map-test-header-bar {
-          background: #0a1424;
-          border-bottom: 1.5px solid #1e3a5f;
-          padding: 8px 16px;
+        /* Slide-in Places Drawer */
+        .places-slide-drawer {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 320px;
+          height: 100%;
+          background: rgba(9, 18, 32, 0.96);
+          border-left: 1.5px solid #1e3a5f;
+          box-shadow: -10px 0 30px rgba(0,0,0,0.7);
+          z-index: 25;
+          display: flex;
+          flex-direction: column;
+          backdrop-filter: blur(10px);
+        }
+        .drawer-header {
+          padding: 14px 16px;
+          border-bottom: 1px solid #1e3a5f;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 12px;
-          flex-wrap: wrap;
+          font-size: 14px;
+          color: #ffffff;
         }
-        .test-header-q-info {
-          display: flex;
-          align-items: center;
-          gap: 10px;
+        .drawer-close-btn {
+          background: none;
+          border: none;
+          color: #94a3b8;
+          font-size: 24px;
+          cursor: pointer;
+        }
+        .drawer-list-items {
           flex: 1;
-          min-width: 240px;
-        }
-        .test-q-badge {
-          background: linear-gradient(135deg, #2563eb, #1d4ed8);
-          color: #ffffff;
-          font-size: 12px;
-          font-weight: 800;
-          padding: 4px 10px;
-          border-radius: 12px;
-          white-space: nowrap;
-        }
-        .test-q-title {
-          font-size: 15.5px;
-          font-weight: 800;
-          color: #ffffff;
-          line-height: 1.3;
-        }
-        .test-q-subtext {
-          font-size: 11.5px;
-          color: #38bdf8;
-          margin-top: 2px;
-        }
-        .test-header-actions {
+          overflow-y: auto;
+          padding: 12px;
           display: flex;
-          align-items: center;
-          gap: 10px;
-          flex-shrink: 0;
-        }
-        .test-score-chip {
-          background: #16243b;
-          border: 1px solid #2d4566;
-          padding: 5px 12px;
-          border-radius: 8px;
-          font-size: 12.5px;
-          font-weight: 700;
-          color: #cbd5e1;
-          display: flex;
-          align-items: center;
+          flex-direction: column;
           gap: 6px;
         }
-        .btn-finish-test {
-          background: linear-gradient(135deg, #ef4444, #dc2626);
-          border: none;
-          color: #ffffff;
-          font-weight: 800;
-          font-size: 13px;
-          padding: 7px 14px;
+        .drawer-item {
+          background: #132238;
+          border: 1px solid #243b59;
           border-radius: 8px;
+          padding: 10px 12px;
           cursor: pointer;
-          box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
           transition: all 0.2s;
-          white-space: nowrap;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
         }
-        .btn-finish-test:hover {
-          background: linear-gradient(135deg, #dc2626, #b91c1c);
-          transform: translateY(-1px);
+        .drawer-item:hover {
+          background: #1e3a5f;
+          border-color: #38bdf8;
         }
-        .test-mobile-tabs {
-          display: none;
-          background: #0f1c30;
-          border-bottom: 1px solid #1e3a5f;
-          padding: 6px 10px;
-          gap: 8px;
-        }
-        .mobile-tab-btn {
-          flex: 1;
-          background: #1e293b;
-          border: 1px solid #334155;
-          color: #94a3b8;
-          font-size: 12px;
-          font-weight: 800;
-          padding: 8px 10px;
-          border-radius: 6px;
-          cursor: pointer;
-        }
-        .mobile-tab-btn.active {
-          background: #0284c7;
+        .drawer-item.active {
+          background: linear-gradient(135deg, #0284c7, #2563eb);
           border-color: #38bdf8;
           color: #ffffff;
         }
 
-        /* Split Panes Wrapper */
-        .map-test-panes-wrapper {
-          flex: 1;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          overflow: hidden;
-          background: #030812;
-        }
-        .test-pane {
-          display: flex;
-          flex-direction: column;
-          overflow: hidden;
-          position: relative;
-        }
-        .student-pane {
-          border-right: 1.5px solid #1e3a5f;
-          background: #050d1a;
-        }
-        .solution-pane {
-          background: #071324;
-        }
-        .test-pane-banner {
-          background: #0d1a2d;
-          border-bottom: 1px solid #1e3a5f;
-          padding: 7px 14px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          font-size: 12.5px;
-          color: #e2e8f0;
-          z-index: 5;
-        }
-        .solution-banner {
-          background: #0b1d33;
-        }
-        .test-mark-indicator {
-          font-size: 11px;
-          font-weight: 800;
-          padding: 3px 8px;
-          border-radius: 12px;
-          background: #1e293b;
-          color: #38bdf8;
-        }
-        .test-mark-indicator.pulse {
-          animation: badgeGlow 1.5s infinite;
-        }
-        @keyframes badgeGlow {
-          0%, 100% { background: #1e293b; }
-          50% { background: #0369a1; color: #ffffff; }
-        }
-        .test-map-viewport {
-          flex: 1;
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .solution-idle-box {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 24px;
-          text-align: center;
-        }
-        .solution-active-container {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          overflow: hidden;
-        }
-        .solution-feedback-card {
-          background: rgba(11, 22, 39, 0.96);
-          border-top: 1.5px solid #1e3a5f;
-          padding: 10px 14px;
-          box-shadow: 0 -8px 25px rgba(0,0,0,0.5);
-          backdrop-filter: blur(8px);
-          max-height: 220px;
-          overflow-y: auto;
-          z-index: 10;
-        }
-        .solution-status-header {
-          font-size: 14.5px;
-          font-weight: 900;
-          line-height: 1.35;
-          margin-bottom: 4px;
-        }
-        .solution-distance-info {
-          font-size: 11.5px;
-          font-weight: 700;
-          color: #94a3b8;
-          margin-bottom: 4px;
-        }
-        .solution-teacher-guide {
-          font-size: 12.5px;
-          line-height: 1.5;
-          color: #f1f5f9;
-        }
-        .solution-exam-tip {
-          margin-top: 5px;
-          font-size: 11.5px;
-          color: #fbbf24;
-          background: rgba(245, 158, 11, 0.15);
-          padding: 4px 8px;
-          border-radius: 4px;
-        }
-        .solution-action-row {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          margin-top: 8px;
-        }
-        .btn-test-next {
-          flex: 1;
-          background: linear-gradient(135deg, #10b981, #059669);
-          border: none;
-          color: #ffffff;
-          font-weight: 800;
-          font-size: 13.5px;
-          padding: 8px 14px;
-          border-radius: 7px;
-          cursor: pointer;
-          box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
-        }
-        .btn-test-finish-sm {
-          background: #334155;
-          border: none;
-          color: #cbd5e1;
-          font-weight: 700;
-          font-size: 12px;
-          padding: 8px 12px;
-          border-radius: 7px;
-          cursor: pointer;
-          white-space: nowrap;
-        }
-
-        /* Marker Styles */
-        .glowing-pin {
-          transform-origin: center;
-          animation: pinBounce 1.5s infinite;
-        }
-        @keyframes pinBounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-7px); }
-        }
+        /* Feature SVG Animations */
         .pin-ripple {
           animation: rippleRing 1.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
         }
         @keyframes rippleRing {
-          0% { r: 5; opacity: 1; stroke-width: 3; }
+          0% { r: 6; opacity: 1; stroke-width: 3; }
           100% { r: 35; opacity: 0; stroke-width: 0.5; }
         }
 
-        /* ============================================================== */
-        /* EVALUATION DASHBOARD STYLES                                    */
-        /* ============================================================== */
-        .eval-dashboard-container {
-          max-width: 760px;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .eval-score-card {
-          width: 100%;
-          background: linear-gradient(135deg, #0f1c30, #132742);
-          border: 1.5px solid #2563eb;
-          border-radius: 14px;
-          padding: 20px;
-          margin-top: 16px;
-          text-align: center;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-          box-sizing: border-box;
-        }
-        .eval-score-number {
-          font-size: 38px;
-          font-weight: 900;
-          color: #10b981;
-          margin: 6px 0;
-          letter-spacing: -0.5px;
-        }
-        .eval-medal-badge {
-          display: inline-block;
-          font-size: 16px;
-          font-weight: 800;
-          color: #fbbf24;
-          background: rgba(245, 158, 11, 0.15);
-          border: 1px solid rgba(245, 158, 11, 0.35);
-          padding: 6px 16px;
-          border-radius: 20px;
-          margin-top: 4px;
-        }
-        .eval-voice-note {
-          font-size: 12px;
-          color: #38bdf8;
-          margin-top: 10px;
-        }
-        .eval-table-wrapper {
-          width: 100%;
-          border: 1px solid #1e3a5f;
-          border-radius: 10px;
-          overflow: hidden;
-        }
-        .eval-table {
-          width: 100%;
-          border-collapse: collapse;
-          font-size: 13px;
-          text-align: left;
-        }
-        .eval-table th {
-          background: #0f1c30;
-          color: #94a3b8;
-          padding: 9px 12px;
-          font-weight: 800;
-          border-bottom: 1px solid #1e3a5f;
-        }
-        .eval-table td {
-          padding: 8px 12px;
-          border-bottom: 1px solid #16243b;
-          color: #f1f5f9;
-        }
-        .eval-table tr:last-child td { border-bottom: none; }
-        .eval-actions-row {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-top: 24px;
-          flex-wrap: wrap;
-          justify-content: center;
-          width: 100%;
-        }
-        .eval-action-btn {
-          padding: 10px 18px;
-          font-size: 13.5px;
-          font-weight: 800;
-          border-radius: 8px;
-          cursor: pointer;
-          border: none;
-          transition: all 0.2s;
-        }
-        .eval-action-btn.primary {
-          background: linear-gradient(135deg, #10b981, #059669);
-          color: #ffffff;
-          box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
-        }
-        .eval-action-btn.secondary {
-          background: #1e293b;
-          border: 1px solid #334155;
-          color: #38bdf8;
-        }
-
-        /* Mobile Responsiveness */
         @media (max-width: 860px) {
-          .map-test-panes-wrapper {
-            display: flex;
+          .tutor-top-bar {
+            height: auto;
             flex-direction: column;
-          }
-          .test-mobile-tabs {
-            display: flex;
-          }
-          .test-pane.student-pane {
-            border-right: none;
-          }
-          .test-pane.solution-pane {
-            border-top: 1px solid #1e3a5f;
-          }
-          .map-workspace {
-            flex-direction: column-reverse;
-          }
-          .map-sidebar {
-            width: 100%;
-            height: 190px;
-            border-right: none;
-            border-top: 1px solid #1e3a5f;
-          }
-          .social-map-modal-container {
-            width: 100vw;
-            height: 100vh;
-            border-radius: 0;
-            padding: 0;
-          }
-          .voice-teacher-card {
-            left: 8px;
-            right: 55px;
-            bottom: 8px;
             padding: 8px 10px;
+            gap: 6px;
+          }
+          .tutor-header-left, .tutor-header-right {
+            width: 100%;
+            justify-content: space-between;
+            overflow-x: auto;
+          }
+          .btn-lbl { display: none; }
+          .tutor-set-select { max-width: 100%; flex: 1; }
+          .teacher-voice-capsule {
+            bottom: 10px;
+            padding: 6px 14px;
+            max-width: 95vw;
           }
         }
       `;
@@ -2162,67 +1051,34 @@
     },
 
     // -------------------------------------------------------------------------
-    // HELPER: SVG GENERATOR WITH UNIQUE ID PREFIX
-    // -------------------------------------------------------------------------
-    getMapSvgHtml(mapType, prefix = 'main') {
-      const template = MAP_SVGS[mapType] || MAP_SVGS.india;
-      return template
-        .replace(/id="svgIndiaMap"/g, `id="${prefix}_svgIndiaMap"`)
-        .replace(/id="svgWorldMap"/g, `id="${prefix}_svgWorldMap"`)
-        .replace(/id="dynamicMarkerLayer"/g, `id="${prefix}_dynamicMarkerLayer"`)
-        .replace(/id="userDrawLayer"/g, `id="${prefix}_userDrawLayer"`)
-        .replace(/id="mapGlow"/g, `id="${prefix}_mapGlow"`)
-        .replace(/url\(#mapGlow\)/g, `url(#${prefix}_mapGlow)`)
-        .replace(/id="oceanGrad"/g, `id="${prefix}_oceanGrad"`)
-        .replace(/url\(#oceanGrad\)/g, `url(#${prefix}_oceanGrad)`)
-        .replace(/id="landGrad"/g, `id="${prefix}_landGrad"`)
-        .replace(/url\(#landGrad\)/g, `url(#${prefix}_landGrad)`)
-        .replace(/id="worldOcean"/g, `id="${prefix}_worldOcean"`)
-        .replace(/url\(#worldOcean\)/g, `url(#${prefix}_worldOcean)`)
-        .replace(/id="worldLand"/g, `id="${prefix}_worldLand"`)
-        .replace(/url\(#worldLand\)/g, `url(#${prefix}_worldLand)`);
-    },
-
-    // -------------------------------------------------------------------------
-    // MODAL OPEN / CLOSE CONTROLLERS
+    // OPEN / CLOSE CONTROLLER
     // -------------------------------------------------------------------------
     openModal(targetUnit = 'all', targetLocId = null, mode = 'teach') {
       this.init();
       const modal = document.getElementById('socialMapModal');
       modal.style.display = 'flex';
 
-      // Set Unit
+      // Pick question set
       if (targetUnit && targetUnit !== 'all') {
         const uNum = parseInt(targetUnit, 10);
-        this.currentUnit = isNaN(uNum) ? 'all' : uNum;
-        const sel = document.getElementById('mapLessonSelect');
-        if (sel) sel.value = this.currentUnit;
-
-        // Auto select world or india based on unit
-        if ([1, 5, 9].includes(this.currentUnit)) {
-          this.setMapType('world', false);
+        if ([1, 5, 9].includes(uNum)) {
+          this.currentSetId = "model_set_3";
         } else {
-          this.setMapType('india', false);
-        }
-      }
-
-      this.updateLanguageTexts();
-      this.setMode(mode);
-
-      if (mode === 'teach') {
-        this.renderLearnMap();
-        this.renderPlacesList();
-        if (targetLocId) {
-          this.selectLocation(targetLocId, true);
-        } else {
-          const list = this.getFilteredLocations();
-          if (list.length > 0) {
-            this.selectLocation(list[0].id, false);
-          }
+          this.currentSetId = "model_set_1";
         }
       } else {
-        this.startInteractiveTest();
+        this.currentSetId = "model_set_1";
       }
+
+      const sel = document.getElementById('tutorSetSelect');
+      if (sel) sel.value = this.currentSetId;
+
+      this.currentPlaceIndex = 0;
+      this.renderStage();
+      this.updateLanguageTexts();
+
+      // Start teaching with teacher greeting!
+      this.teachPlace(0, true);
     },
 
     closeModal() {
@@ -2231,802 +1087,355 @@
       if (modal) modal.style.display = 'none';
     },
 
-    toggleLanguage() {
-      this.currentLang = this.currentLang === 'ta' ? 'en' : 'ta';
-      this.updateLanguageTexts();
-
-      // Refresh current view
-      if (this.currentMode === 'teach') {
-        this.renderPlacesList();
-        if (this.activeLocation) {
-          this.selectLocation(this.activeLocation.id, false);
-        }
-      } else if (this.currentMode === 'test') {
-        this.renderTestQuestion();
-      }
-    },
-
-    updateLanguageTexts() {
-      const isEm = this.currentLang === 'en';
-      const langBtn = document.getElementById('langLabel');
-      if (langBtn) langBtn.textContent = isEm ? 'தமிழ்' : 'English';
-
-      const title = document.getElementById('mapModalTitle');
-      if (title) title.textContent = isEm ? 'Class 10 Social Science Map Tutor & Test' : '10-ஆம் வகுப்பு வரைபட வழிகாட்டி & தேர்வு';
-
-      const sub = document.getElementById('mapModalSubTitle');
-      if (sub) sub.textContent = isEm ? 'All 12 Lessons • Voice Guide • Split-Screen Interactive Test Arena' : 'அனைத்து 12 அலகுகள் • குரல் வழிகாட்டி • ஊடாடும் இருபக்க தேர்வு முறை';
-
-      const dl = document.getElementById('downloadBtnText');
-      if (dl) dl.textContent = isEm ? 'Blank Map' : 'வெற்று வரைபடம்';
-
-      const modeTeach = document.getElementById('btnModeTeach');
-      if (modeTeach) modeTeach.querySelector('.mode-text').textContent = isEm ? 'Voice Tutor (Learn)' : 'குரல் வழிகாட்டி (Learn)';
-
-      const modeTest = document.getElementById('btnModeTest');
-      if (modeTest) modeTest.querySelector('.mode-text').textContent = isEm ? 'Interactive Test' : 'வரைபடத் தேர்வு (Test)';
-
-      const learnHeader = document.getElementById('learnListHeader');
-      if (learnHeader) learnHeader.textContent = isEm ? '📍 Locations to Mark:' : '📍 குறிக்க வேண்டிய இடங்கள்:';
-
-      const autoBtn = document.getElementById('btnAutoPlayAll');
-      if (autoBtn) autoBtn.textContent = this.isAutoPlaying ? (isEm ? '⏹️ Stop' : '⏹️ நிறுத்து') : (isEm ? '▶️ Auto-Teach All' : '▶️ வரிசையாக கற்பி');
-
-      const search = document.getElementById('mapSearchInput');
-      if (search) search.placeholder = isEm ? '🔍 Search location...' : '🔍 இடத்தைத் தேடுக...';
-
-      const studentHeading = document.getElementById('studentPaneHeading');
-      if (studentHeading) studentHeading.textContent = isEm ? 'Your Map (Student Canvas)' : 'உங்கள் வரைபடம் (மாணவர் பகுதி)';
-
-      const solutionHeading = document.getElementById('solutionPaneHeading');
-      if (solutionHeading) solutionHeading.textContent = isEm ? 'Correct Answer & Comparison' : 'சரியான விடை & ஒப்பீடு (Answer Reveal)';
-
-      const finishBtn = document.getElementById('btnFinishTestTop');
-      if (finishBtn) finishBtn.querySelector('.finish-btn-text').textContent = isEm ? 'Finish & Evaluate' : 'தேர்வை முடி & மதிப்பீடு செய்';
-    },
-
-    setMapType(type, reRender = true) {
+    switchQuestionSet(setId) {
       this.stopVoice();
-      this.currentMapType = type;
-      document.getElementById('btnMapTypeIndia').classList.toggle('active', type === 'india');
-      document.getElementById('btnMapTypeWorld').classList.toggle('active', type === 'world');
+      this.currentSetId = setId;
+      this.currentPlaceIndex = 0;
+      this.renderStage();
+      this.teachPlace(0, true);
+    },
 
-      if (reRender) {
-        if (this.currentMode === 'teach') {
-          this.renderLearnMap();
-          this.renderPlacesList();
-          const list = this.getFilteredLocations();
-          if (list.length > 0) this.selectLocation(list[0].id, false);
-        } else if (this.currentMode === 'test') {
-          this.startInteractiveTest();
-        }
+    getActivePlacesList() {
+      if (this.currentSetId === 'all_locations') {
+        return SOCIAL_MAP_LOCATIONS;
       }
+      const set = EXAM_QUESTION_SETS.find(s => s.id === this.currentSetId) || EXAM_QUESTION_SETS[0];
+      return set.placeIds.map(id => SOCIAL_MAP_LOCATIONS.find(l => l.id === id)).filter(Boolean);
     },
 
-    filterByUnit(unitVal) {
-      this.currentUnit = unitVal === 'all' ? 'all' : parseInt(unitVal, 10);
-      if ([1, 5, 9].includes(this.currentUnit)) {
-        this.setMapType('world', true);
-      } else if (this.currentUnit !== 'all') {
-        this.setMapType('india', true);
-      } else {
-        if (this.currentMode === 'teach') {
-          this.renderPlacesList();
-          const list = this.getFilteredLocations();
-          if (list.length > 0) this.selectLocation(list[0].id, false);
-        } else if (this.currentMode === 'test') {
-          this.startInteractiveTest();
-        }
-      }
-    },
-
-    setMode(mode) {
-      this.stopVoice();
-      this.currentMode = mode;
-      const isTeach = mode === 'teach';
-
-      document.getElementById('btnModeTeach').classList.toggle('active', isTeach);
-      document.getElementById('btnModeTest').classList.toggle('active', !isTeach);
-
-      const learnWs = document.getElementById('mapLearnWorkspace');
-      const testWs = document.getElementById('mapTestWorkspace');
-      const evalWs = document.getElementById('mapEvaluationWorkspace');
-
-      if (evalWs) evalWs.style.display = 'none';
-
-      if (isTeach) {
-        if (learnWs) learnWs.style.display = 'flex';
-        if (testWs) testWs.style.display = 'none';
-        this.renderLearnMap();
-        this.renderPlacesList();
-        const list = this.getFilteredLocations();
-        if (list.length > 0) this.selectLocation(list[0].id, false);
-      } else {
-        if (learnWs) learnWs.style.display = 'none';
-        if (testWs) testWs.style.display = 'flex';
-        this.startInteractiveTest();
-      }
-    },
-
-    filterSearch(query) {
-      this.renderPlacesList(query);
-    },
-
-    getFilteredLocations(search = '') {
-      return SOCIAL_MAP_LOCATIONS.filter(loc => {
-        const matchMap = loc.mapType === this.currentMapType;
-        const matchUnit = (this.currentUnit === 'all') || (loc.unit === this.currentUnit);
-        let matchSearch = true;
-        if (search.trim()) {
-          const s = search.toLowerCase();
-          matchSearch = loc.nameTamil.toLowerCase().includes(s) ||
-                        loc.nameEnglish.toLowerCase().includes(s) ||
-                        loc.category.toLowerCase().includes(s);
-        }
-        return matchMap && matchUnit && matchSearch;
-      });
-    },
-
-    // =========================================================================
-    // 1. LEARN MODE ENGINE (Question-by-Question Voice Teacher)
-    // =========================================================================
-    renderLearnMap() {
-      const wrapper = document.getElementById('mapLearnSvgWrapper');
-      wrapper.innerHTML = this.getMapSvgHtml(this.currentMapType, 'learn');
-      this.resetLearnMapZoom();
-      this.bindPanAndZoom('mapLearnSvgWrapper', 'learnZoom', null);
-    },
-
-    renderPlacesList(search = '') {
-      const container = document.getElementById('mapPlacesList');
-      const list = this.getFilteredLocations(search);
-      const isEm = this.currentLang === 'en';
-
-      if (list.length === 0) {
-        container.innerHTML = `<div style="color:#64748b; font-size:12px; padding:12px; text-align:center;">${isEm ? 'No locations found' : 'இடங்கள் ஏதுமில்லை'}</div>`;
-        return;
-      }
-
-      container.innerHTML = list.map((loc, idx) => {
-        const isAct = this.activeLocation && this.activeLocation.id === loc.id;
-        const title = isEm ? loc.nameEnglish : loc.nameTamil;
-        const sub = isEm ? loc.nameTamil : loc.nameEnglish;
-        return `
-          <div class="map-place-item ${isAct ? 'active' : ''}" onclick="MapTutorEngine.selectLocation('${loc.id}', true)">
-            <div style="min-width:0;">
-              <div style="font-weight:700; font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${title}</div>
-              <div style="font-size:11px; opacity:0.8;">${sub}</div>
-            </div>
-            <span style="font-size:13px; flex-shrink:0;">📍</span>
-          </div>
-        `;
-      }).join('');
-    },
-
-    selectLocation(locId, shouldSpeak = false) {
-      const loc = SOCIAL_MAP_LOCATIONS.find(l => l.id === locId);
-      if (!loc) return;
-
-      this.activeLocation = loc;
-      const isEm = this.currentLang === 'en';
-      const list = this.getFilteredLocations();
-      const currentIdx = list.findIndex(l => l.id === loc.id);
-      this.learnIndex = currentIdx >= 0 ? currentIdx : 0;
-
-      // Update Step Bar
-      const badge = document.getElementById('learnStepBadge');
-      if (badge) badge.textContent = `${isEm ? 'Question' : 'இடம்'} ${this.learnIndex + 1} / ${list.length}`;
-
-      const title = document.getElementById('learnStepTitle');
-      if (title) title.textContent = `${isEm ? loc.nameEnglish : loc.nameTamil} (${isEm ? loc.nameTamil : loc.nameEnglish})`;
-
-      // Update Sidebar Items
-      document.querySelectorAll('.map-place-item').forEach(el => {
-        el.classList.toggle('active', el.textContent.includes(loc.nameTamil) || el.textContent.includes(loc.nameEnglish));
-      });
-
-      // Drop Animated Pin on Learn Map
-      this.dropPinOnSvg('learn', loc, '#f59e0b', true);
-
-      // Show Voice Teacher Card
-      const card = document.getElementById('voiceTeacherCard');
-      card.style.display = 'block';
-      document.getElementById('voicePlaceTitle').textContent = isEm
-        ? `${loc.nameEnglish} (${loc.nameTamil})`
-        : `${loc.nameTamil} (${loc.nameEnglish})`;
-
-      document.getElementById('voicePlaceGuide').textContent = isEm ? loc.teachScriptEnglish : loc.teachScriptTamil;
-      document.getElementById('voiceExamTip').textContent = `${isEm ? '💡 Board Exam Tip: ' : '💡 தேர்வு குறிப்பு: '}${loc.examTip}`;
-
-      if (shouldSpeak) {
-        this.speakLocation(loc);
-      }
-    },
-
-    nextLearnLocation() {
-      const list = this.getFilteredLocations();
-      if (list.length === 0) return;
-      this.learnIndex = (this.learnIndex + 1) % list.length;
-      this.selectLocation(list[this.learnIndex].id, true);
-    },
-
-    prevLearnLocation() {
-      const list = this.getFilteredLocations();
-      if (list.length === 0) return;
-      this.learnIndex = (this.learnIndex - 1 + list.length) % list.length;
-      this.selectLocation(list[this.learnIndex].id, true);
-    },
-
-    toggleAutoTeachAll() {
-      if (this.isAutoPlaying) {
-        this.stopVoice();
-        return;
-      }
-      const list = this.getFilteredLocations();
-      if (list.length === 0) return;
-
-      this.isAutoPlaying = true;
-      const isEm = this.currentLang === 'en';
-      document.getElementById('btnAutoPlayAll').textContent = isEm ? '⏹️ Stop' : '⏹️ நிறுத்து';
-      this.runAutoTeachStep();
-    },
-
-    runAutoTeachStep() {
-      const list = this.getFilteredLocations();
-      if (!this.isAutoPlaying || this.learnIndex >= list.length) {
-        this.stopVoice();
-        return;
-      }
-      const loc = list[this.learnIndex];
-      this.selectLocation(loc.id, true);
-    },
-
-    advanceAutoTeach() {
-      const list = this.getFilteredLocations();
-      this.learnIndex++;
-      if (this.learnIndex < list.length) {
-        this.autoPlayTimer = setTimeout(() => {
-          this.runAutoTeachStep();
-        }, 1600);
-      } else {
-        this.stopVoice();
-      }
+    renderStage() {
+      const places = this.getActivePlacesList();
+      const currentMapType = (places[0] && places[0].mapType) ? places[0].mapType : 'india';
+      const wrapper = document.getElementById('mapSvgStageWrapper');
+      wrapper.innerHTML = MAP_SVGS[currentMapType];
+      this.resetZoom();
+      this.bindPan();
+      this.renderDrawerList();
     },
 
     // -------------------------------------------------------------------------
-    // DROP PIN ON ANY SVG (Learn, Student, or Solution Map)
+    // TEACH PLACE (Full Visual Illustration on Map + Voice Narration)
     // -------------------------------------------------------------------------
-    dropPinOnSvg(prefix, loc, pinColor = '#10b981', showRipple = true, customLabel = null) {
-      const svg = document.getElementById(`${prefix}_svgIndiaMap`) || document.getElementById(`${prefix}_svgWorldMap`);
+    teachPlace(index, isGreeting = false) {
+      const places = this.getActivePlacesList();
+      if (places.length === 0) return;
+
+      if (index < 0) index = places.length - 1;
+      if (index >= places.length) index = 0;
+      this.currentPlaceIndex = index;
+
+      const place = places[index];
+      const isEm = this.currentLang === 'en';
+      const total = places.length;
+
+      // Update Top Bar
+      const stepBadge = document.getElementById('tutorStepNumBadge');
+      if (stepBadge) stepBadge.textContent = `(${index + 1}) à®µà®¿à®©à®¾ ${index + 1}/${total}`;
+
+      const titleEl = document.getElementById('tutorCurrentPlaceTitle');
+      if (titleEl) {
+        titleEl.textContent = isEm
+          ? `${place.nameEnglish} (${place.nameTamil})`
+          : `${place.nameTamil} (${place.nameEnglish})`;
+      }
+
+      // Draw Feature Directly on Map
+      this.renderFeatureOnMap(place);
+
+      // Voice Narration
+      this.speakTeacherPlace(place, isGreeting);
+
+      // Update Drawer Active Item
+      document.querySelectorAll('.drawer-item').forEach((el, idx) => {
+        el.classList.toggle('active', idx === index);
+      });
+    },
+
+    nextPlace() {
+      const places = this.getActivePlacesList();
+      this.currentPlaceIndex = (this.currentPlaceIndex + 1) % places.length;
+      this.teachPlace(this.currentPlaceIndex, false);
+    },
+
+    prevPlace() {
+      const places = this.getActivePlacesList();
+      this.currentPlaceIndex = (this.currentPlaceIndex - 1 + places.length) % places.length;
+      this.teachPlace(this.currentPlaceIndex, false);
+    },
+
+    // -------------------------------------------------------------------------
+    // RENDER FEATURE DIRECTLY ON SVG (Matching User's Reference Photo)
+    // -------------------------------------------------------------------------
+    renderFeatureOnMap(place) {
+      const svg = document.getElementById('tutor_svgIndiaMap') || document.getElementById('tutor_svgWorldMap');
       if (!svg) return;
 
-      const layer = svg.querySelector(`#${prefix}_dynamicMarkerLayer`);
+      const layer = svg.querySelector('#tutorFeatureLayer');
       if (!layer) return;
 
-      const viewBox = svg.viewBox.baseVal;
-      const vx = (loc.coords.x / 100) * viewBox.width;
-      const vy = (loc.coords.y / 100) * viewBox.height;
-
       const isEm = this.currentLang === 'en';
-      const labelText = customLabel || (isEm ? loc.nameEnglish : loc.nameTamil);
-      const labelWidth = Math.max(80, labelText.length * 9 + 20);
+      const namePrimary = isEm ? place.nameEnglish : place.nameTamil;
+      const nameSecondary = isEm ? place.nameTamil : place.nameEnglish;
+
+      // 1. EASTERN GHATS (Orange/Red mountain corridor matching photo!)
+      if (place.id === 'ind_eastern_ghats') {
+        layer.innerHTML = `
+          <g id="feature_eastern_ghats">
+            <!-- Mountain range boundary polygon running through Odisha, AP, TN -->
+            <path d="M 640 470 
+                     C 660 500, 650 540, 625 580 
+                     C 600 620, 560 670, 520 720 
+                     C 490 760, 460 800, 440 840 
+                     C 425 850, 415 840, 425 820 
+                     C 445 770, 480 710, 510 650 
+                     C 540 600, 580 540, 605 490 
+                     C 615 470, 630 460, 640 470 Z" 
+                  fill="rgba(239, 68, 68, 0.25)" stroke="#ef4444" stroke-width="4" stroke-linejoin="round" />
+            
+            <!-- Mountain peak indicators inside the range -->
+            <path d="M 625 520 L 632 505 L 639 520 Z 
+                     M 590 580 L 598 565 L 606 580 Z 
+                     M 545 660 L 553 645 L 561 660 Z 
+                     M 485 750 L 493 735 L 501 750 Z 
+                     M 445 815 L 452 802 L 459 815 Z" 
+                  fill="#ef4444" stroke="#ffffff" stroke-width="1.2" />
+
+            <!-- Center Marker Dot as in user photo -->
+            <circle cx="530" cy="650" r="14" fill="#ef4444" stroke="#ffffff" stroke-width="2.5" class="pin-ripple" />
+            <circle cx="530" cy="650" r="8" fill="#ef4444" />
+
+            <!-- Bold Text Directly on Map (Matching user photo!) -->
+            <text x="565" y="700" fill="#ef4444" font-size="26" font-weight="900" letter-spacing="2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              EASTERN GHATS
+            </text>
+            <text x="565" y="730" fill="#fca5a5" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              à®•à®¿à®´à®•à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ
+            </text>
+          </g>
+        `;
+        return;
+      }
+
+      // 2. GULF OF MANNAR (Marine blue water bracket & ripples)
+      if (place.id === 'ind_gulf_of_mannar') {
+        layer.innerHTML = `
+          <g id="feature_gulf_of_mannar">
+            <ellipse cx="450" cy="970" rx="42" ry="26" fill="rgba(6, 182, 212, 0.3)" stroke="#06b6d4" stroke-width="3" stroke-dasharray="6,4" />
+            <path d="M 425 960 Q 440 952 455 960 T 475 960 M 425 978 Q 440 970 455 978 T 475 978" fill="none" stroke="#22d3ee" stroke-width="3" />
+            <circle cx="450" cy="970" r="9" fill="#06b6d4" stroke="#ffffff" stroke-width="2.5" class="pin-ripple" />
+            <text x="495" y="965" fill="#06b6d4" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              GULF OF MANNAR
+            </text>
+            <text x="495" y="995" fill="#a5f3fc" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              à®®à®©à¯à®©à®¾à®°à¯ à®µà®³à¯ˆà®•à¯à®Ÿà®¾
+            </text>
+          </g>
+        `;
+        return;
+      }
+
+      // 3. SUNDARBANS (Emerald green mangrove delta polygon)
+      if (place.id === 'ind_sundarbans') {
+        layer.innerHTML = `
+          <g id="feature_sundarbans">
+            <path d="M 670 515 C 695 510, 730 515, 745 535 C 735 555, 700 565, 680 550 C 665 540, 660 525, 670 515 Z" 
+                  fill="rgba(16, 185, 129, 0.35)" stroke="#10b981" stroke-width="3.5" />
+            <circle cx="700" cy="535" r="10" fill="#10b981" stroke="#ffffff" stroke-width="2.5" class="pin-ripple" />
+            <text x="735" y="535" fill="#10b981" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              SUNDARBANS
+            </text>
+            <text x="735" y="565" fill="#6ee7b7" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              à®šà¯à®¨à¯à®¤à®°à®µà®©à®•à¯ à®•à®¾à®Ÿà¯à®•à®³à¯
+            </text>
+          </g>
+        `;
+        return;
+      }
+
+      // 4. DESERT SOIL REGION (Sandy-ochre polygon over western Rajasthan)
+      if (place.id === 'ind_thar_desert') {
+        layer.innerHTML = `
+          <g id="feature_desert_soil">
+            <path d="M 210 360 C 260 340, 300 370, 310 420 C 315 450, 290 480, 240 480 C 190 475, 180 420, 210 360 Z" 
+                  fill="rgba(245, 158, 11, 0.28)" stroke="#f59e0b" stroke-width="3.5" stroke-dasharray="8,4" />
+            <circle cx="255" cy="420" r="11" fill="#f59e0b" stroke="#ffffff" stroke-width="2.5" class="pin-ripple" />
+            <text x="210" y="335" fill="#f59e0b" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              DESERT SOIL REGION
+            </text>
+            <text x="210" y="365" fill="#fde68a" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              à®ªà®¾à®²à¯ˆ à®®à®£à¯ à®ªà®•à¯à®¤à®¿ (à®¤à®¾à®°à¯)
+            </text>
+          </g>
+        `;
+        return;
+      }
+
+      // 5. MUMBAI (Harbor node on Maharashtra coast)
+      if (place.id === 'ind_mumbai') {
+        layer.innerHTML = `
+          <g id="feature_mumbai">
+            <circle cx="248" cy="635" r="20" fill="none" stroke="#ef4444" stroke-width="2.5" class="pin-ripple" />
+            <circle cx="248" cy="635" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+            <!-- Anchor symbol -->
+            <path d="M 248 625 L 248 642 M 242 632 L 254 632 M 241 640 Q 248 647 255 640" fill="none" stroke="#ffffff" stroke-width="2" />
+            <text x="120" y="625" fill="#ef4444" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              MUMBAI
+            </text>
+            <text x="120" y="655" fill="#fca5a5" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              à®®à¯à®®à¯à®ªà¯ˆ à®¤à¯à®±à¯ˆà®®à¯à®•à®®à¯
+            </text>
+          </g>
+        `;
+        return;
+      }
+
+      // 6. CHENNAI TO KOLKATA AIR ROUTE (Coastal flight curve with airplane icon)
+      if (place.id === 'ind_air_chennai_kolkata') {
+        layer.innerHTML = `
+          <g id="feature_air_chennai_kolkata">
+            <path d="M 485 835 Q 610 680 685 505" fill="none" stroke="#a855f7" stroke-width="4.5" stroke-dasharray="9,6" />
+            <circle cx="485" cy="835" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
+            <text x="500" y="845" fill="#e9d5ff" font-size="15" font-weight="800">Chennai (à®šà¯†à®©à¯à®©à¯ˆ)</text>
+            <circle cx="685" cy="505" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
+            <text x="700" y="500" fill="#e9d5ff" font-size="15" font-weight="800">Kolkata (à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾)</text>
+            <!-- Airplane Icon -->
+            <g transform="translate(565, 660) rotate(-45)">
+              <text x="0" y="0" font-size="30" text-anchor="middle" dominant-baseline="middle">âœˆï¸</text>
+            </g>
+            <text x="590" y="615" fill="#c084fc" font-size="22" font-weight="900" letter-spacing="1" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              AIR ROUTE: CHENNAI âœˆ KOLKATA
+            </text>
+            <text x="590" y="645" fill="#f3e8ff" font-size="17" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              à®šà¯†à®©à¯à®©à¯ˆ - à®•à¯Šà®²à¯à®•à®¤à¯à®¤à®¾ à®µà®¾à®©à¯à®µà®´à®¿à®ªà¯ à®ªà®¾à®¤à¯ˆ
+            </text>
+          </g>
+        `;
+        return;
+      }
+
+      // 7. GOA (Konkan coast pinpoint)
+      if (place.id === 'ind_goa') {
+        layer.innerHTML = `
+          <g id="feature_goa">
+            <circle cx="285" cy="780" r="18" fill="none" stroke="#ec4899" stroke-width="2.5" class="pin-ripple" />
+            <circle cx="285" cy="780" r="9" fill="#ec4899" stroke="#ffffff" stroke-width="2" />
+            <text x="180" y="775" fill="#ec4899" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              GOA
+            </text>
+            <text x="180" y="805" fill="#fbcfe8" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              à®•à¯‹à®µà®¾ à®®à®¾à®¨à®¿à®²à®®à¯
+            </text>
+          </g>
+        `;
+        return;
+      }
+
+      // 8. RIVER GANGA (Flowing blue river path with arrows)
+      if (place.id === 'ind_river_ganga') {
+        layer.innerHTML = `
+          <g id="feature_river_ganga">
+            <path d="M 430 250 Q 480 320 540 360 T 630 460 T 680 500 T 695 535" 
+                  fill="none" stroke="#0284c7" stroke-width="5.5" stroke-linecap="round" />
+            <path d="M 500 330 L 512 336 L 506 345 Z M 600 425 L 612 432 L 606 441 Z" fill="#38bdf8" />
+            <circle cx="430" cy="250" r="7" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+            <text x="442" y="245" fill="#93c5fd" font-size="14" font-weight="800">Gangotri (à®•à®™à¯à®•à¯‹à®¤à¯à®°à®¿)</text>
+            <text x="520" y="335" fill="#38bdf8" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              RIVER GANGA
+            </text>
+            <text x="520" y="365" fill="#bfdbfe" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              à®•à®™à¯à®•à¯ˆ à®†à®±à¯ (2,525 à®•à®¿.à®®à¯€)
+            </text>
+          </g>
+        `;
+        return;
+      }
+
+      // 9. THE GREAT HIMALAYAS
+      if (place.id === 'ind_himalayas') {
+        layer.innerHTML = `
+          <g id="feature_himalayas">
+            <path d="M 370 120 Q 520 220 780 270" fill="none" stroke="#ef4444" stroke-width="5" stroke-linecap="round" />
+            <path d="M 420 160 L 428 140 L 436 160 Z M 520 215 L 530 190 L 540 215 Z M 650 250 L 660 225 L 670 250 Z M 740 275 L 750 250 L 760 275 Z" fill="#ef4444" />
+            <text x="510" y="180" fill="#ef4444" font-size="24" font-weight="900" letter-spacing="2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              THE HIMALAYAS
+            </text>
+            <text x="510" y="210" fill="#fca5a5" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              à®‡à®®à®¯à®®à®²à¯ˆà®¤à¯ à®¤à¯Šà®Ÿà®°à¯
+            </text>
+          </g>
+        `;
+        return;
+      }
+
+      // 10. WESTERN GHATS
+      if (place.id === 'ind_western_ghats') {
+        layer.innerHTML = `
+          <g id="feature_western_ghats">
+            <path d="M 270 635 C 265 670, 285 710, 305 750 C 325 790, 345 830, 365 870 C 385 910, 405 950, 415 990" 
+                  fill="none" stroke="#10b981" stroke-width="5" stroke-linecap="round" />
+            <text x="140" y="800" fill="#10b981" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              WESTERN GHATS
+            </text>
+            <text x="140" y="830" fill="#6ee7b7" font-size="18" font-weight="800" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
+              à®®à¯‡à®±à¯à®•à¯à®¤à¯ à®¤à¯Šà®Ÿà®°à¯à®šà¯à®šà®¿ à®®à®²à¯ˆ
+            </text>
+          </g>
+        `;
+        return;
+      }
+
+      // DEFAULT FALLBACK: Standard High-Visibility Vector Marker
+      const viewBox = svg.viewBox.baseVal;
+      const vx = (place.coords.x / 100) * viewBox.width;
+      const vy = (place.coords.y / 100) * viewBox.height;
 
       layer.innerHTML = `
-        ${showRipple ? `<circle cx="${vx}" cy="${vy}" r="15" fill="none" stroke="${pinColor}" stroke-width="2.5" class="pin-ripple" />` : ''}
-        
-        <g class="glowing-pin" transform="translate(${vx}, ${vy})">
-          <circle cx="0" cy="0" r="7" fill="${pinColor}" stroke="#ffffff" stroke-width="2.5" filter="url(#${prefix}_mapGlow)" />
-          <path d="M 0 0 L -8 -22 A 9 9 0 1 1 8 -22 Z" fill="${pinColor}" stroke="#ffffff" stroke-width="1.5" />
-          <circle cx="0" cy="-22" r="4" fill="#ffffff" />
-          
-          <!-- Label Tooltip -->
-          <rect x="14" y="-32" width="${labelWidth}" height="24" rx="5" fill="#091220" stroke="${pinColor}" stroke-width="1.5" />
-          <text x="22" y="-16" fill="#ffffff" font-size="12" font-weight="800">${labelText}</text>
+        <g id="feature_default">
+          <circle cx="${vx}" cy="${vy}" r="18" fill="none" stroke="#f59e0b" stroke-width="2.5" class="pin-ripple" />
+          <g transform="translate(${vx}, ${vy})">
+            <circle cx="0" cy="0" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2.5" filter="url(#mapGlow)" />
+            <path d="M 0 0 L -8 -22 A 9 9 0 1 1 8 -22 Z" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5" />
+            <circle cx="0" cy="-22" r="4" fill="#ffffff" />
+            
+            <rect x="14" y="-34" width="${Math.max(90, namePrimary.length * 10 + 20)}" height="26" rx="5" fill="#091220" stroke="#f59e0b" stroke-width="1.5" />
+            <text x="22" y="-17" fill="#ffffff" font-size="13" font-weight="900">${namePrimary}</text>
+          </g>
         </g>
       `;
     },
 
-    dropUserMarkerOnStudentMap(pctX, pctY) {
-      const svg = document.getElementById('student_svgIndiaMap') || document.getElementById('student_svgWorldMap');
-      if (!svg) return;
-
-      const layer = svg.querySelector('#student_dynamicMarkerLayer');
-      if (!layer) return;
-
-      const viewBox = svg.viewBox.baseVal;
-      const vx = (pctX / 100) * viewBox.width;
-      const vy = (pctY / 100) * viewBox.height;
-      const isEm = this.currentLang === 'en';
-      const label = isEm ? '📍 Your Mark' : '📍 உங்கள் தேர்வு';
-
-      layer.innerHTML = `
-        <circle cx="${vx}" cy="${vy}" r="14" fill="none" stroke="#38bdf8" stroke-width="3" class="pin-ripple" />
-        <g transform="translate(${vx}, ${vy})">
-          <circle cx="0" cy="0" r="8" fill="#0284c7" stroke="#ffffff" stroke-width="2.5" />
-          <path d="M 0 0 L -7 -20 A 8 8 0 1 1 7 -20 Z" fill="#0284c7" stroke="#ffffff" stroke-width="1.5" />
-          <circle cx="0" cy="-20" r="3.5" fill="#ffffff" />
-          <rect x="12" y="-28" width="100" height="22" rx="4" fill="#091220" stroke="#38bdf8" stroke-width="1.5" />
-          <text x="18" y="-13" fill="#38bdf8" font-size="11.5" font-weight="800">${label}</text>
-        </g>
-      `;
-    },
-
-    // =========================================================================
-    // 2. TEST MODE ENGINE (Split-Screen Interactive Marking & Immediate Feedback)
-    // =========================================================================
-    startInteractiveTest() {
-      this.stopVoice();
-      this.isTestActive = true;
-      const list = this.getFilteredLocations();
-
-      // Pick 5 to 10 curated questions for this test session
-      const sampleCount = Math.min(10, Math.max(5, list.length));
-      if (list.length <= sampleCount) {
-        this.testQuestions = [...list].sort(() => 0.5 - Math.random());
-      } else {
-        this.testQuestions = [...list].sort(() => 0.5 - Math.random()).slice(0, sampleCount);
-      }
-
-      this.currentTestIndex = 0;
-      this.currentScore = 0;
-      this.testResults = [];
-      this.isAnsweredCurrent = false;
-
-      // Render Student Map (Left) and Solution Map (Right)
-      this.renderStudentMap();
-      this.renderSolutionMap();
-
-      // Switch to Student tab on mobile initially
-      this.switchMobileTestTab('student');
-
-      // Render Question 1
-      this.renderTestQuestion();
-    },
-
-    renderStudentMap() {
-      const wrapper = document.getElementById('studentMapSvgWrapper');
-      wrapper.innerHTML = this.getMapSvgHtml(this.currentMapType, 'student');
-      this.resetStudentMapZoom();
-      this.bindPanAndZoom('studentMapSvgWrapper', 'studentZoom', (clientX, clientY) => {
-        this.handleStudentMapMark(clientX, clientY);
-      });
-    },
-
-    renderSolutionMap() {
-      const wrapper = document.getElementById('solutionMapSvgWrapper');
-      wrapper.innerHTML = this.getMapSvgHtml(this.currentMapType, 'solution');
-    },
-
-    renderTestQuestion() {
-      const q = this.testQuestions[this.currentTestIndex];
-      if (!q) {
-        this.finishTest();
-        return;
-      }
-
-      this.isAnsweredCurrent = false;
-      this.currentUserMark = null;
-      const isEm = this.currentLang === 'en';
-      const total = this.testQuestions.length;
-
-      // Update Top Status Bar
-      const prog = document.getElementById('testProgressBadge');
-      if (prog) prog.textContent = `${isEm ? 'Question' : 'கேள்வி'} ${this.currentTestIndex + 1} / ${total}`;
-
-      const scoreVal = document.getElementById('testScoreVal');
-      if (scoreVal) scoreVal.textContent = `${this.currentScore.toFixed(1)} / ${total}`;
-
-      const prompt = document.getElementById('testQuestionPrompt');
-      if (prompt) {
-        prompt.innerHTML = `
-          <span>${isEm ? 'Locate & Mark:' : 'வரைபடத்தில் குறிக்கவும்:'}</span> 
-          <span style="color:#fbbf24;">"${isEm ? q.nameEnglish : q.nameTamil}"</span> 
-          <span style="font-size:13px; color:#cbd5e1;">(${isEm ? q.nameTamil : q.nameEnglish})</span>
-        `;
-      }
-
-      const tip = document.getElementById('testInstructionTip');
-      if (tip) tip.textContent = isEm
-        ? '👆 Tap or click on the left map to mark this location'
-        : '👆 இடதுபுற வரைபடத்தில் சரியான இடத்தைத் தொட்டு அல்லது கிளிக் செய்து குறிக்கவும்';
-
-      // Reset Left Map Pin
-      const svgStudent = document.getElementById('student_svgIndiaMap') || document.getElementById('student_svgWorldMap');
-      if (svgStudent) {
-        const layer = svgStudent.querySelector('#student_dynamicMarkerLayer');
-        if (layer) layer.innerHTML = '';
-      }
-
-      // Reset Left Indicator
-      const markIndicator = document.getElementById('studentMarkStatus');
-      if (markIndicator) {
-        markIndicator.className = 'test-mark-indicator pulse';
-        markIndicator.textContent = isEm ? '👆 Tap to mark location' : '👆 வரைபடத்தில் தொட்டு குறிக்கவும்';
-      }
-
-      // Reset Right Solution Pane to Idle State
-      const idleBox = document.getElementById('solutionIdlePrompt');
-      const activeContent = document.getElementById('solutionActiveContent');
-      if (idleBox) idleBox.style.display = 'flex';
-      if (activeContent) activeContent.style.display = 'none';
-
-      const resBadge = document.getElementById('solutionResultBadge');
-      if (resBadge) {
-        resBadge.className = 'solution-badge-idle';
-        resBadge.textContent = isEm ? 'Waiting for your mark...' : 'காத்திருக்கிறது...';
-      }
-
-      // Switch mobile tab back to student if on small screen
-      this.switchMobileTestTab('student');
-    },
-
     // -------------------------------------------------------------------------
-    // MARKING CLICK HANDLER (Accurate Coordinate Transformation via getScreenCTM)
+    // TEACHER VOICE (Web Speech API Narration)
     // -------------------------------------------------------------------------
-    handleStudentMapMark(clientX, clientY) {
-      if (this.isAnsweredCurrent) return; // Prevent multiple markings per question
-
-      const q = this.testQuestions[this.currentTestIndex];
-      if (!q) return;
-
-      const svg = document.getElementById('student_svgIndiaMap') || document.getElementById('student_svgWorldMap');
-      if (!svg) return;
-
-      // Coordinate transformation with full zoom/pan immunity:
-      const pt = svg.createSVGPoint();
-      pt.x = clientX;
-      pt.y = clientY;
-      const svgPoint = pt.matrixTransform(svg.getScreenCTM().inverse());
-      const viewBox = svg.viewBox.baseVal;
-      const userPctX = (svgPoint.x / viewBox.width) * 100;
-      const userPctY = (svgPoint.y / viewBox.height) * 100;
-
-      // Drop User Mark on Left Map
-      this.dropUserMarkerOnStudentMap(userPctX, userPctY);
-      this.isAnsweredCurrent = true;
-      this.currentUserMark = { x: userPctX, y: userPctY };
-
-      // Calculate Euclidean distance error in SVG percentage space
-      const dx = userPctX - q.coords.x;
-      const dy = userPctY - q.coords.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-      // Evaluate and reveal on Right Panel
-      this.evaluateAndRevealAnswer(distance, userPctX, userPctY, q);
-    },
-
-    evaluateAndRevealAnswer(distance, userX, userY, q) {
-      const isEm = this.currentLang === 'en';
-      const isBullseye = distance <= 5.5;  // <= 5.5% radius = 1.0 full mark
-      const isClose = distance <= 11.5;    // <= 11.5% radius = 0.5 partial mark
-
-      let markEarned = 0;
-      let statusKey = 'wrong';
-      let statusHeader = '';
-      let statusColor = '#ef4444';
-      let badgeText = '';
-
-      if (isBullseye) {
-        markEarned = 1.0;
-        this.currentScore += 1.0;
-        statusKey = 'bullseye';
-        statusColor = '#10b981';
-        badgeText = isEm ? '🎯 Accurate (+1.0 Mark)' : '🎯 துல்லியமானது (+1.0)';
-        statusHeader = isEm
-          ? `🎯 Outstanding! Accurate Location! (+1.0 Mark)`
-          : `🎯 அற்புதம்! துல்லியமாகக் குறித்துள்ளீர்கள்! (+1.0 மதிப்பெண்)`;
-        this.playAudioChime(true);
-      } else if (isClose) {
-        markEarned = 0.5;
-        this.currentScore += 0.5;
-        statusKey = 'close';
-        statusColor = '#f59e0b';
-        badgeText = isEm ? '👍 Close (+0.5 Mark)' : '👍 மிக அருகில் (+0.5)';
-        statusHeader = isEm
-          ? `👍 Very Close! Good Try! (+0.5 Mark)`
-          : `👍 மிக அருகில் உள்ளது! நன்று! (+0.5 மதிப்பெண்)`;
-        this.playAudioChime(true);
-      } else {
-        markEarned = 0;
-        statusKey = 'wrong';
-        statusColor = '#ef4444';
-        badgeText = isEm ? '❌ Incorrect (0 Mark)' : '❌ தவறானது (0)';
-        statusHeader = isEm
-          ? `❌ Incorrect Location! Actual location shown in green.`
-          : `❌ இடம் மாறியுள்ளது! உண்மையான இடம் பச்சை நிறத்தில் ஒளிர்கிறது.`;
-        this.playAudioChime(false);
-      }
-
-      this.testResults.push({
-        question: q,
-        distance,
-        markEarned,
-        statusKey,
-        userX,
-        userY
-      });
-
-      // Update Left Mark Indicator
-      const markIndicator = document.getElementById('studentMarkStatus');
-      if (markIndicator) {
-        markIndicator.className = 'test-mark-indicator';
-        markIndicator.style.background = statusColor;
-        markIndicator.style.color = '#ffffff';
-        markIndicator.textContent = isEm ? `Marked (${markEarned} pt)` : `குறிக்கப்பட்டது (+${markEarned})`;
-      }
-
-      // Reveal Right Map and Feedback Card
-      const idleBox = document.getElementById('solutionIdlePrompt');
-      const activeContent = document.getElementById('solutionActiveContent');
-      if (idleBox) idleBox.style.display = 'none';
-      if (activeContent) activeContent.style.display = 'flex';
-
-      // Drop Green Solution Pin on Right Map
-      this.dropPinOnSvg('solution', q, '#10b981', true, (isEm ? q.nameEnglish : q.nameTamil) + ' ✅');
-
-      // Update Feedback Card Texts
-      const resBadge = document.getElementById('solutionResultBadge');
-      if (resBadge) {
-        resBadge.className = 'test-mark-indicator';
-        resBadge.style.background = statusColor;
-        resBadge.style.color = '#ffffff';
-        resBadge.textContent = badgeText;
-      }
-
-      const sHeader = document.getElementById('solutionStatusHeader');
-      if (sHeader) {
-        sHeader.style.color = statusColor;
-        sHeader.textContent = statusHeader;
-      }
-
-      const distInfo = document.getElementById('solutionDistanceInfo');
-      if (distInfo) {
-        distInfo.textContent = isEm
-          ? `Distance deviation: ${distance.toFixed(1)}% | Exact Target: ${q.nameEnglish}`
-          : `துல்லிய இடைவெளி: ${distance.toFixed(1)}% | சரியான இலக்கு: ${q.nameTamil}`;
-      }
-
-      const guide = document.getElementById('solutionTeacherGuide');
-      if (guide) {
-        guide.textContent = isEm ? q.teachScriptEnglish : q.teachScriptTamil;
-      }
-
-      const examTip = document.getElementById('solutionExamTip');
-      if (examTip) {
-        examTip.textContent = `${isEm ? '💡 Board Exam Tip: ' : '💡 தேர்வு குறிப்பு: '}${q.examTip}`;
-      }
-
-      // Update Score Display
-      const scoreVal = document.getElementById('testScoreVal');
-      if (scoreVal) scoreVal.textContent = `${this.currentScore.toFixed(1)} / ${this.testQuestions.length}`;
-
-      // Voice Audio Narration of Right / Wrong
-      this.speakTestFeedback(statusKey, q);
-
-      // On Mobile: Automatically switch to Solution Tab so student sees the result!
-      if (window.innerWidth <= 860) {
-        setTimeout(() => {
-          this.switchMobileTestTab('solution');
-        }, 350);
-      }
-    },
-
-    nextTestQuestion() {
-      this.currentTestIndex++;
-      if (this.currentTestIndex < this.testQuestions.length) {
-        this.renderTestQuestion();
-      } else {
-        this.finishTest();
-      }
-    },
-
-    switchMobileTestTab(tab) {
-      this.mobileActiveTab = tab;
-      const btnStudent = document.getElementById('btnTabStudent');
-      const btnSolution = document.getElementById('btnTabSolution');
-      const paneStudent = document.getElementById('paneStudentMap');
-      const paneSolution = document.getElementById('paneSolutionMap');
-
-      if (btnStudent && btnSolution && paneStudent && paneSolution) {
-        btnStudent.classList.toggle('active', tab === 'student');
-        btnSolution.classList.toggle('active', tab === 'solution');
-
-        if (window.innerWidth <= 860) {
-          paneStudent.style.display = tab === 'student' ? 'flex' : 'none';
-          paneSolution.style.display = tab === 'solution' ? 'flex' : 'none';
-        } else {
-          paneStudent.style.display = 'flex';
-          paneSolution.style.display = 'flex';
-        }
-      }
-    },
-
-    // =========================================================================
-    // 3. FINISH BUTTON & TEST EVALUATION DASHBOARD
-    // =========================================================================
-    finishTest() {
+    speakTeacherPlace(place, isGreeting = false) {
       this.stopVoice();
-      this.isTestActive = false;
-
-      const testWs = document.getElementById('mapTestWorkspace');
-      const evalWs = document.getElementById('mapEvaluationWorkspace');
-      if (testWs) testWs.style.display = 'none';
-      if (evalWs) evalWs.style.display = 'flex';
 
       const isEm = this.currentLang === 'en';
-      const total = this.testQuestions.length;
-      const pct = total > 0 ? Math.round((this.currentScore / total) * 100) : 0;
+      const capText = document.getElementById('voiceCapsuleText');
 
-      let medal = '';
-      let medalTitle = '';
-      if (pct >= 80) {
-        medal = '🥇 ' + (isEm ? 'Gold Medal - Outstanding!' : 'தங்கப் பதக்கம் - மிகச் சிறந்த சாதனை!');
-        medalTitle = isEm ? 'Gold Medal' : 'தங்கப் பதக்கம்';
-      } else if (pct >= 50) {
-        medal = '🥈 ' + (isEm ? 'Silver Medal - Good Effort!' : 'வெள்ளிப் பதக்கம் - நல்ல முயற்சி!');
-        medalTitle = isEm ? 'Silver Medal' : 'வெள்ளிப் பதக்கம்';
+      let speechText = '';
+      if (isGreeting) {
+        const greeting = isEm 
+          ? "Students, let us mark the following places one by one in the Indian map. "
+          : "à®®à®¾à®£à®µà®°à¯à®•à®³à¯‡! à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®•à¯Šà®Ÿà¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà¯à®³à¯à®³ à®‡à®Ÿà®™à¯à®•à®³à¯ˆ à®¨à®¾à®®à¯ à®‡à®ªà¯à®ªà¯‹à®¤à¯ à®’à®µà¯à®µà¯Šà®©à¯à®±à®¾à®• à®Žà®™à¯à®•à¯, à®Žà®µà¯à®µà®¾à®±à¯ à®•à¯à®±à®¿à®ªà¯à®ªà®¤à¯ à®Žà®©à¯à®±à¯ à®ªà®¾à®°à¯à®ªà¯à®ªà¯‹à®®à¯. ";
+        speechText = greeting;
+      }
+
+      if (isEm) {
+        speechText += `${place.nameEnglish}. ${place.teachScriptEnglish} Board exam tip: ${place.examTip}`;
       } else {
-        medal = '🥉 ' + (isEm ? 'Bronze Medal - More Practice Needed' : 'வெண்கலப் பதக்கம் - கூடுதல் பயிற்சி தேவை');
-        medalTitle = isEm ? 'Bronze Medal' : 'வெண்கலப் பதக்கம்';
+        speechText += `${place.nameTamil}. ${place.teachScriptTamil} à®¤à¯‡à®°à¯à®µà¯ à®•à¯à®±à®¿à®ªà¯à®ªà¯: ${place.examTip}`;
       }
 
-      // Update Dashboard Texts
-      const scoreNum = document.getElementById('evalScoreNumber');
-      if (scoreNum) scoreNum.textContent = `${this.currentScore.toFixed(1)} / ${total} (${pct}%)`;
-
-      const medalBadge = document.getElementById('evalMedalBadge');
-      if (medalBadge) medalBadge.textContent = medal;
-
-      // Populate Table
-      const tBody = document.getElementById('evalTableBody');
-      if (tBody) {
-        tBody.innerHTML = this.testQuestions.map((q, idx) => {
-          const res = this.testResults.find(r => r.question.id === q.id);
-          let statusHtml = '';
-          let scoreHtml = '';
-
-          if (!res) {
-            statusHtml = `<span style="color:#94a3b8;">${isEm ? '⏭️ Skipped' : '⏭️ விடப்பட்டது'}</span>`;
-            scoreHtml = '0.0';
-          } else if (res.statusKey === 'bullseye') {
-            statusHtml = `<span style="color:#10b981; font-weight:800;">${isEm ? '🎯 Accurate' : '🎯 துல்லியம்'}</span>`;
-            scoreHtml = '+1.0';
-          } else if (res.statusKey === 'close') {
-            statusHtml = `<span style="color:#f59e0b; font-weight:800;">${isEm ? '👍 Close' : '👍 அருகில்'}</span>`;
-            scoreHtml = '+0.5';
-          } else {
-            statusHtml = `<span style="color:#ef4444; font-weight:800;">${isEm ? '❌ Incorrect' : '❌ தவறு'}</span>`;
-            scoreHtml = '0.0';
-          }
-
-          const qName = isEm ? q.nameEnglish : q.nameTamil;
-          return `
-            <tr>
-              <td style="font-weight:800; color:#94a3b8;">${idx + 1}</td>
-              <td style="font-weight:700;">${qName}</td>
-              <td>${statusHtml}</td>
-              <td style="font-weight:800; color:#38bdf8;">${scoreHtml}</td>
-              <td>
-                <button type="button" class="map-action-sm-btn" onclick="MapTutorEngine.reviewQuestionInTeach('${q.id}')">
-                  ${isEm ? '🔍 View on Map' : '🔍 வரைபடத்தில் பார்'}
-                </button>
-              </td>
-            </tr>
-          `;
-        }).join('');
+      if (capText) {
+        capText.textContent = isEm
+          ? `Teacher: ${place.nameEnglish} - ${place.examTip}`
+          : `à®†à®šà®¿à®°à®¿à®¯à®°à¯: ${place.nameTamil} - ${place.examTip}`;
       }
 
-      // Spoken Audio Summary Evaluation
-      this.speakEvaluationSummary(this.currentScore, total, medalTitle);
-    },
-
-    reviewQuestionInTeach(locId) {
-      this.setMode('teach');
-      this.selectLocation(locId, true);
-    },
-
-    // =========================================================================
-    // 4. ZOOM & PAN ENGINE FOR SVG MAPS
-    // =========================================================================
-    zoomLearnMap(factor) {
-      this.learnZoom.scale = Math.max(1.0, Math.min(3.5, this.learnZoom.scale * factor));
-      if (this.learnZoom.scale === 1.0) {
-        this.learnZoom.panX = 0;
-        this.learnZoom.panY = 0;
-      }
-      this.applyTransform('learn', this.learnZoom);
-    },
-
-    resetLearnMapZoom() {
-      this.learnZoom.scale = 1.0;
-      this.learnZoom.panX = 0;
-      this.learnZoom.panY = 0;
-      this.applyTransform('learn', this.learnZoom);
-    },
-
-    zoomStudentMap(factor) {
-      this.studentZoom.scale = Math.max(1.0, Math.min(3.5, this.studentZoom.scale * factor));
-      if (this.studentZoom.scale === 1.0) {
-        this.studentZoom.panX = 0;
-        this.studentZoom.panY = 0;
-      }
-      this.applyTransform('student', this.studentZoom);
-    },
-
-    resetStudentMapZoom() {
-      this.studentZoom.scale = 1.0;
-      this.studentZoom.panX = 0;
-      this.studentZoom.panY = 0;
-      this.applyTransform('student', this.studentZoom);
-    },
-
-    applyTransform(prefix, zoomState) {
-      const svg = document.getElementById(`${prefix}_svgIndiaMap`) || document.getElementById(`${prefix}_svgWorldMap`);
-      if (svg) {
-        svg.style.transform = `translate(${zoomState.panX}px, ${zoomState.panY}px) scale(${zoomState.scale})`;
-        svg.style.transformOrigin = 'center center';
-      }
-    },
-
-    bindPanAndZoom(containerId, zoomStateKey, tapCallback) {
-      const container = document.getElementById(containerId);
-      if (!container) return;
-
-      const zState = this[zoomStateKey];
-
-      let isDown = false;
-      let startX = 0;
-      let startY = 0;
-      let movedDist = 0;
-
-      container.onpointerdown = (e) => {
-        isDown = true;
-        startX = e.clientX - zState.panX;
-        startY = e.clientY - zState.panY;
-        movedDist = 0;
-      };
-
-      container.onpointermove = (e) => {
-        if (!isDown) return;
-        const currentPanX = e.clientX - startX;
-        const currentPanY = e.clientY - startY;
-        movedDist += Math.abs(currentPanX - zState.panX) + Math.abs(currentPanY - zState.panY);
-
-        if (zState.scale > 1.0) {
-          zState.panX = currentPanX;
-          zState.panY = currentPanY;
-          this.applyTransform(containerId.includes('learn') ? 'learn' : 'student', zState);
-        }
-      };
-
-      container.onpointerup = (e) => {
-        if (!isDown) return;
-        isDown = false;
-
-        // If movement was minimal (< 8px), it was a tap/click!
-        if (movedDist < 8 && tapCallback) {
-          tapCallback(e.clientX, e.clientY);
-        }
-      };
-
-      container.onpointercancel = () => {
-        isDown = false;
-      };
-    },
-
-    // =========================================================================
-    // 5. VOICE NARRATION (Speech Synthesis Web API) & AUDIO CHIMES
-    // =========================================================================
-    speakLocation(loc) {
-      this.stopVoice();
       if (!('speechSynthesis' in window)) return;
 
-      const isEm = this.currentLang === 'en';
-      const text = isEm
-        ? `${loc.nameEnglish}. ${loc.teachScriptEnglish} Board exam tip: ${loc.examTip}`
-        : `${loc.nameTamil}. ${loc.teachScriptTamil} தேர்வு குறிப்பு: ${loc.examTip}`;
-
-      const utter = new SpeechSynthesisUtterance(text);
+      const utter = new SpeechSynthesisUtterance(speechText);
       utter.lang = isEm ? 'en-IN' : 'ta-IN';
       utter.rate = 0.95;
       utter.pitch = 1.0;
@@ -3038,83 +1447,25 @@
       utter.onend = () => {
         this.isVoicePlaying = false;
         if (this.isAutoPlaying) {
-          this.advanceAutoTeach();
+          this.advanceAutoPlay();
         }
       };
 
       utter.onerror = () => {
         this.isVoicePlaying = false;
         if (this.isAutoPlaying) {
-          this.advanceAutoTeach();
+          this.advanceAutoPlay();
         }
       };
 
       window.speechSynthesis.speak(utter);
     },
 
-    speakTestFeedback(statusKey, q) {
-      this.stopVoice();
-      if (!('speechSynthesis' in window)) return;
-
-      const isEm = this.currentLang === 'en';
-      let phrase = '';
-
-      if (statusKey === 'bullseye') {
-        phrase = isEm
-          ? `Excellent! Correct answer! You marked ${q.nameEnglish} accurately.`
-          : `அற்புதம்! சரியான விடை! ${q.nameTamil} இடத்தை நீங்கள் மிகத் துல்லியமாகக் குறித்துள்ளீர்கள்.`;
-      } else if (statusKey === 'close') {
-        phrase = isEm
-          ? `Very close! Good try. The exact location of ${q.nameEnglish} is shown on the right side.`
-          : `மிக அருகில் உள்ளது, நன்று! ${q.nameTamil} சரியான இடம் வலதுபுற வரைபடத்தில் பச்சை நிறத்தில் காட்டப்பட்டுள்ளது, கவனித்துக் கொள்ளுங்கள்.`;
-      } else {
-        phrase = isEm
-          ? `Incorrect location. The correct location of ${q.nameEnglish} is shown on the right side map.`
-          : `தவறான இடம். ${q.nameTamil} சரியான இடம் வலதுபுற வரைபடத்தில் காட்டப்பட்டுள்ளது, கவனித்துக் கொள்ளுங்கள்.`;
-      }
-
-      const utter = new SpeechSynthesisUtterance(phrase);
-      utter.lang = isEm ? 'en-IN' : 'ta-IN';
-      utter.rate = 0.95;
-      utter.pitch = 1.0;
-      window.speechSynthesis.speak(utter);
-    },
-
-    speakEvaluationSummary(score, total, medalTitle) {
-      this.stopVoice();
-      if (!('speechSynthesis' in window)) return;
-
-      const isEm = this.currentLang === 'en';
-      const pct = total > 0 ? Math.round((score / total) * 100) : 0;
-      let advice = '';
-
-      if (pct >= 80) {
-        advice = isEm
-          ? 'Outstanding performance! You have mastered 10th Social Science map marking.'
-          : 'அருமையான சாதனை! 10-ஆம் வகுப்பு வரைபடக் குறியீடுகளில் நீங்கள் முழுத் தேர்ச்சி பெற்றுள்ளீர்கள்!';
-      } else if (pct >= 50) {
-        advice = isEm
-          ? 'Good effort! Review the missed questions to score full marks in board exams.'
-          : 'நல்ல முயற்சி! பொதுத்தேர்வில் முழு மதிப்பெண் பெற விடுபட்ட இடங்களை மீண்டும் பயிற்சி செய்யுங்கள்.';
-      } else {
-        advice = isEm
-          ? 'More practice is required. Use the voice tutor to study each location step by step.'
-          : 'கூடுதல் பயிற்சி தேவை. குரல் வழிகாட்டியைப் பயன்படுத்தி ஒவ்வொரு இடத்தையும் கவனமாகப் படியுங்கள்.';
-      }
-
-      const text = isEm
-        ? `Test complete. Your score is ${score.toFixed(1)} out of ${total}. You have won the ${medalTitle}! ${advice}`
-        : `தேர்வு நிறைவடைந்தது. உங்கள் மதிப்பெண் ${total}-க்கு ${score.toFixed(1)}. நீங்கள் ${medalTitle} வென்றுள்ளீர்கள்! ${advice}`;
-
-      const utter = new SpeechSynthesisUtterance(text);
-      utter.lang = isEm ? 'en-IN' : 'ta-IN';
-      utter.rate = 0.95;
-      window.speechSynthesis.speak(utter);
-    },
-
     replayVoice() {
-      if (this.activeLocation) {
-        this.speakLocation(this.activeLocation);
+      const places = this.getActivePlacesList();
+      const place = places[this.currentPlaceIndex];
+      if (place) {
+        this.speakTeacherPlace(place, false);
       }
     },
 
@@ -3125,53 +1476,176 @@
       this.isVoicePlaying = false;
       this.isAutoPlaying = false;
       if (this.autoPlayTimer) clearTimeout(this.autoPlayTimer);
+      const btn = document.getElementById('btnAutoPlay');
       const isEm = this.currentLang === 'en';
-      const btn = document.getElementById('btnAutoPlayAll');
-      if (btn) btn.textContent = isEm ? '▶️ Auto-Teach All' : '▶️ வரிசையாக கற்பி';
+      if (btn) btn.querySelector('#lblAutoPlay').textContent = isEm ? 'Auto-Teach All' : 'à®µà®°à®¿à®šà¯ˆà®¯à®¾à®• à®•à®±à¯à®ªà®¿';
     },
 
-    playAudioChime(isSuccess) {
-      try {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (!AudioCtx) return;
-        const ctx = new AudioCtx();
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.connect(gain);
-        gain.connect(ctx.destination);
+    toggleAutoPlay() {
+      if (this.isAutoPlaying) {
+        this.stopVoice();
+        return;
+      }
+      this.isAutoPlaying = true;
+      const btn = document.getElementById('btnAutoPlay');
+      const isEm = this.currentLang === 'en';
+      if (btn) btn.querySelector('#lblAutoPlay').textContent = isEm ? 'Stop Playing' : 'à®¨à®¿à®±à¯à®¤à¯à®¤à¯';
+      this.teachPlace(this.currentPlaceIndex, false);
+    },
 
-        if (isSuccess) {
-          osc.frequency.setValueAtTime(587.33, ctx.currentTime); // D5
-          osc.frequency.setValueAtTime(880.00, ctx.currentTime + 0.12); // A5
-          gain.gain.setValueAtTime(0.2, ctx.currentTime);
-          gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.4);
-          osc.start();
-          osc.stop(ctx.currentTime + 0.4);
-        } else {
-          osc.frequency.setValueAtTime(330.00, ctx.currentTime);
-          osc.frequency.setValueAtTime(220.00, ctx.currentTime + 0.14);
-          gain.gain.setValueAtTime(0.18, ctx.currentTime);
-          gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.35);
-          osc.start();
-          osc.stop(ctx.currentTime + 0.35);
-        }
-      } catch (err) {
-        // silent fail
+    advanceAutoPlay() {
+      const places = this.getActivePlacesList();
+      this.currentPlaceIndex++;
+      if (this.currentPlaceIndex < places.length) {
+        this.autoPlayTimer = setTimeout(() => {
+          this.teachPlace(this.currentPlaceIndex, false);
+        }, 2200);
+      } else {
+        // Wrap up auto-play
+        this.stopVoice();
+        this.announceCompletion();
       }
     },
 
-    // =========================================================================
-    // 6. BLANK VECTOR MAP DOWNLOAD (For Paper & Pencil Board Exam Practice)
-    // =========================================================================
+    announceCompletion() {
+      if (!('speechSynthesis' in window)) return;
+      const isEm = this.currentLang === 'en';
+      const msg = isEm
+        ? "Excellent job students! We have completed all places on the map. Practice marking them on a blank paper map for your board exams!"
+        : "à®…à®°à¯à®®à¯ˆ à®®à®¾à®£à®µà®°à¯à®•à®³à¯‡! à®•à¯Šà®Ÿà¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®…à®©à¯ˆà®¤à¯à®¤à¯ à®‡à®Ÿà®™à¯à®•à®³à¯ˆà®¯à¯à®®à¯ à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®µà¯†à®±à¯à®±à®¿à®•à®°à®®à®¾à®•à®•à¯ à®•à¯à®±à®¿à®¤à¯à®¤à¯à®ªà¯ à®ªà®´à®•à®¿à®µà®¿à®Ÿà¯à®Ÿà¯‹à®®à¯. à®‡à®¨à¯à®¤ à®‡à®Ÿà®™à¯à®•à®³à¯ˆ à®µà¯†à®±à¯à®±à¯ à®µà®°à¯ˆà®ªà®Ÿà®¤à¯à®¤à®¿à®²à¯ à®ªà¯†à®©à¯à®šà®¿à®²à®¾à®²à¯ à®µà®°à¯ˆà®¨à¯à®¤à¯ à®ªà®¯à®¿à®±à¯à®šà®¿ à®šà¯†à®¯à¯à®¯à¯à®™à¯à®•à®³à¯!";
+      const utter = new SpeechSynthesisUtterance(msg);
+      utter.lang = isEm ? 'en-IN' : 'ta-IN';
+      utter.rate = 0.95;
+      window.speechSynthesis.speak(utter);
+    },
+
+    // -------------------------------------------------------------------------
+    // QUESTION PLACES LIST DRAWER
+    // -------------------------------------------------------------------------
+    togglePlacesDrawer() {
+      const drawer = document.getElementById('placesDrawer');
+      if (!drawer) return;
+      const isOpen = drawer.style.display !== 'none';
+      drawer.style.display = isOpen ? 'none' : 'flex';
+    },
+
+    renderDrawerList() {
+      const places = this.getActivePlacesList();
+      const container = document.getElementById('drawerListItems');
+      if (!container) return;
+      const isEm = this.currentLang === 'en';
+
+      container.innerHTML = places.map((place, idx) => {
+        const title = isEm ? place.nameEnglish : place.nameTamil;
+        const sub = isEm ? place.nameTamil : place.nameEnglish;
+        const isAct = idx === this.currentPlaceIndex;
+        return `
+          <div class="drawer-item ${isAct ? 'active' : ''}" onclick="MapTutorEngine.selectFromDrawer(${idx})">
+            <div>
+              <div style="font-weight:800; font-size:13px;">(${idx + 1}) ${title}</div>
+              <div style="font-size:11px; opacity:0.8;">${sub}</div>
+            </div>
+            <span style="font-size:14px;">ðŸ“</span>
+          </div>
+        `;
+      }).join('');
+    },
+
+    selectFromDrawer(index) {
+      this.teachPlace(index, false);
+      this.togglePlacesDrawer();
+    },
+
+    // -------------------------------------------------------------------------
+    // LANGUAGE TOGGLE
+    // -------------------------------------------------------------------------
+    toggleLanguage() {
+      this.currentLang = this.currentLang === 'ta' ? 'en' : 'ta';
+      this.updateLanguageTexts();
+      this.teachPlace(this.currentPlaceIndex, false);
+    },
+
+    updateLanguageTexts() {
+      const isEm = this.currentLang === 'en';
+      const lblLang = document.getElementById('lblLang');
+      if (lblLang) lblLang.textContent = isEm ? 'à®¤à®®à®¿à®´à¯' : 'English';
+
+      const drawerHead = document.getElementById('drawerHeading');
+      if (drawerHead) drawerHead.textContent = isEm ? 'ðŸ“‹ Locations in this Question (8 Places)' : 'ðŸ“‹ à®•à¯à®±à®¿à®•à¯à®• à®µà¯‡à®£à¯à®Ÿà®¿à®¯ à®‡à®Ÿà®™à¯à®•à®³à¯ (8 à®‡à®Ÿà®™à¯à®•à®³à¯)';
+
+      const autoBtn = document.getElementById('btnAutoPlay');
+      if (autoBtn) {
+        autoBtn.querySelector('#lblAutoPlay').textContent = this.isAutoPlaying
+          ? (isEm ? 'Stop Playing' : 'à®¨à®¿à®±à¯à®¤à¯à®¤à¯')
+          : (isEm ? 'Auto-Teach All' : 'à®µà®°à®¿à®šà¯ˆà®¯à®¾à®• à®•à®±à¯à®ªà®¿');
+      }
+
+      this.renderDrawerList();
+    },
+
+    // -------------------------------------------------------------------------
+    // ZOOM & PAN ENGINE
+    // -------------------------------------------------------------------------
+    zoom(factor) {
+      this.zoomLevel = Math.max(1.0, Math.min(3.5, this.zoomLevel * factor));
+      if (this.zoomLevel === 1.0) {
+        this.panX = 0;
+        this.panY = 0;
+      }
+      this.applyTransform();
+    },
+
+    resetZoom() {
+      this.zoomLevel = 1.0;
+      this.panX = 0;
+      this.panY = 0;
+      this.applyTransform();
+    },
+
+    applyTransform() {
+      const svg = document.getElementById('tutor_svgIndiaMap') || document.getElementById('tutor_svgWorldMap');
+      if (svg) {
+        svg.style.transform = `translate(${this.panX}px, ${this.panY}px) scale(${this.zoomLevel})`;
+        svg.style.transformOrigin = 'center center';
+      }
+    },
+
+    bindPan() {
+      const wrapper = document.getElementById('mapSvgStageWrapper');
+      if (!wrapper) return;
+
+      let isDown = false;
+      let startX = 0;
+      let startY = 0;
+
+      wrapper.onpointerdown = (e) => {
+        isDown = true;
+        startX = e.clientX - this.panX;
+        startY = e.clientY - this.panY;
+      };
+
+      wrapper.onpointermove = (e) => {
+        if (!isDown) return;
+        if (this.zoomLevel > 1.0) {
+          this.panX = e.clientX - startX;
+          this.panY = e.clientY - startY;
+          this.applyTransform();
+        }
+      };
+
+      wrapper.onpointerup = () => { isDown = false; };
+      wrapper.onpointercancel = () => { isDown = false; };
+    },
+
+    // -------------------------------------------------------------------------
+    // DOWNLOAD BLANK VECTOR MAP FOR PAPER EXAM PRACTICE
+    // -------------------------------------------------------------------------
     downloadBlankMap() {
-      const svg = document.getElementById('learn_svgIndiaMap') ||
-                  document.getElementById('learn_svgWorldMap') ||
-                  document.getElementById('student_svgIndiaMap') ||
-                  document.getElementById('student_svgWorldMap');
+      const svg = document.getElementById('tutor_svgIndiaMap') || document.getElementById('tutor_svgWorldMap');
       if (!svg) return;
 
       const clone = svg.cloneNode(true);
-      const mLayer = clone.querySelector('[id$="dynamicMarkerLayer"]');
+      const mLayer = clone.querySelector('#tutorFeatureLayer');
       if (mLayer) mLayer.innerHTML = '';
       clone.removeAttribute('style');
 
@@ -3181,7 +1655,7 @@
 
       const downloadLink = document.createElement('a');
       downloadLink.href = svgUrl;
-      downloadLink.download = `Blank_Map_${this.currentMapType.toUpperCase()}_10th_Social.svg`;
+      downloadLink.download = `Blank_Map_10th_Social_${Date.now()}.svg`;
       document.body.appendChild(downloadLink);
       downloadLink.click();
       document.body.removeChild(downloadLink);
@@ -3189,8 +1663,8 @@
 
       const isEm = this.currentLang === 'en';
       const msg = isEm
-        ? '✅ Blank map downloaded successfully! Print this vector map to practice pencil markings for Board Exams.'
-        : '✅ வெற்று வரைபடம் பதிவிறக்கம் செய்யப்பட்டது! இதை பிரிண்ட் எடுத்து பொதுத்தேர்வுக்காக பென்சிலால் குறித்து பயிற்சி பெறலாம்.';
+        ? 'âœ… Blank map downloaded successfully! Print this vector map to practice pencil markings for Board Exams.'
+        : 'âœ… à®µà¯†à®±à¯à®±à¯ à®µà®°à¯ˆà®ªà®Ÿà®®à¯ à®ªà®¤à®¿à®µà®¿à®±à®•à¯à®•à®®à¯ à®šà¯†à®¯à¯à®¯à®ªà¯à®ªà®Ÿà¯à®Ÿà®¤à¯! à®‡à®¤à¯ˆ à®ªà®¿à®°à®¿à®£à¯à®Ÿà¯ à®Žà®Ÿà¯à®¤à¯à®¤à¯ à®ªà¯Šà®¤à¯à®¤à¯à®¤à¯‡à®°à¯à®µà¯à®•à¯à®•à®¾à®• à®ªà¯†à®©à¯à®šà®¿à®²à®¾à®²à¯ à®•à¯à®±à®¿à®¤à¯à®¤à¯ à®ªà®¯à®¿à®±à¯à®šà®¿ à®ªà¯†à®±à®²à®¾à®®à¯.';
       alert(msg);
     }
   };

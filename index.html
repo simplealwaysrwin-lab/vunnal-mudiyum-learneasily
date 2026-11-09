@@ -87,11 +87,27 @@
 <meta name="twitter:description" content="🎯 10-ஆம் வகுப்பு பொதுத்தேர்வில் 450+ மதிப்பெண்கள் பெற உதவும் டிஜிட்டல் வழிகாட்டி செயலி! அனைத்து பாட வினா-விடைகள், கரும்பலகை விளக்கம் & மாதிரித் தேர்வுகள்.">
 <meta name="twitter:image" content="https://vunnalmudiyum.dharsanganesh90.workers.dev/images/og_banner.jpg">
 <script>
-  // Build tracker
+  // Build tracker & Auto-Cache Invalidator for Instant Updates
   (function() {
-    const CURRENT_BUILD = '20261107_v59';
+    const CURRENT_BUILD = '20261109_v60';
     try {
-      localStorage.setItem('vm_build_ver', CURRENT_BUILD);
+      const prevBuild = localStorage.getItem('vm_build_ver');
+      if (prevBuild && prevBuild !== CURRENT_BUILD) {
+        console.log('[App] New version detected (' + CURRENT_BUILD + ' vs ' + prevBuild + '). Purging stale cache...');
+        localStorage.setItem('vm_build_ver', CURRENT_BUILD);
+        if ('caches' in window) {
+          caches.keys().then(function(names) {
+            names.forEach(function(n) { caches.delete(n); });
+          });
+        }
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function(regs) {
+            regs.forEach(function(r) { r.update(); });
+          });
+        }
+      } else {
+        localStorage.setItem('vm_build_ver', CURRENT_BUILD);
+      }
     } catch(e) {}
   })();
 </script>
@@ -170,7 +186,7 @@
 <script src="data_social_u12.js?v=20261105_v57"></script>
 <script src="data_social_em_u11.js?v=20261105_v57"></script>
 <script src="data_social_em_u12.js?v=20261105_v57"></script>
-<script src="map_data_and_engine.js?v=20261107_v59"></script>
+<script src="map_data_and_engine.js?v=20261109_v60"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -12333,7 +12349,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261107_v59')
+        navigator.serviceWorker.register('./sw.js?v=20261109_v60')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

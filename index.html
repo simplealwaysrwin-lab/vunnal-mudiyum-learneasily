@@ -89,7 +89,7 @@
 <script>
   // Build tracker & Auto-Cache Invalidator for Instant Updates
   (function() {
-    const CURRENT_BUILD = '20261109_v60';
+    const CURRENT_BUILD = '20261109_v61';
     try {
       const prevBuild = localStorage.getItem('vm_build_ver');
       if (prevBuild && prevBuild !== CURRENT_BUILD) {
@@ -186,7 +186,7 @@
 <script src="data_social_u12.js?v=20261105_v57"></script>
 <script src="data_social_em_u11.js?v=20261105_v57"></script>
 <script src="data_social_em_u12.js?v=20261105_v57"></script>
-<script src="map_data_and_engine.js?v=20261109_v60"></script>
+<script src="map_data_and_engine.js?v=20261109_v61"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -12349,7 +12349,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261109_v60')
+        navigator.serviceWorker.register('./sw.js?v=20261109_v61')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

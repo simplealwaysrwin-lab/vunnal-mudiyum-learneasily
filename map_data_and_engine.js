@@ -379,13 +379,16 @@
 
               <!-- Action Controls -->
               <div class="tutor-header-right">
-                <button type="button" class="tutor-btn" onclick="MapTutorEngine.prevPlace()" title="முந்தைய இடம்">
+                <button type="button" class="tutor-btn" onclick="MapTutorEngine.showQuestionScreen()" title="மாதிரி வினாத்தாள் (Question Paper)">
+                  📝 <span class="btn-lbl" id="lblQuestionBtn">மாதிரி வினா</span>
+                </button>
+                <button type="button" class="tutor-btn" onclick="MapTutorEngine.prevPlace()" title="முந்தையது">
                   ⏮️ <span class="btn-lbl" id="lblPrev">முந்தையது</span>
                 </button>
                 <button type="button" id="btnAutoPlay" class="tutor-btn primary" onclick="MapTutorEngine.toggleAutoPlay()" title="வரிசையாக தானாக கற்பி">
                   ▶️ <span id="lblAutoPlay">வரிசையாக கற்பி</span>
                 </button>
-                <button type="button" class="tutor-btn primary" onclick="MapTutorEngine.nextPlace()" title="அடுத்த இடம்">
+                <button type="button" class="tutor-btn primary" onclick="MapTutorEngine.nextPlace()" title="அடுத்தது">
                   <span class="btn-lbl" id="lblNext">அடுத்தது</span> ⏭️
                 </button>
                 <button type="button" class="tutor-btn" onclick="MapTutorEngine.replayVoice()" title="குரல் வழிகாட்டலை மீண்டும் சொல்">
@@ -397,15 +400,21 @@
                 <button type="button" id="btnLangToggle" class="tutor-btn" onclick="MapTutorEngine.toggleLanguage()" title="மொழி மாற்று (Tamil / English)">
                   🌐 <span id="lblLang">English</span>
                 </button>
-                <button type="button" class="tutor-btn" onclick="MapTutorEngine.downloadBlankMap()" title="வெற்று வரைபடத்தைப் பதிவிறக்கு (Blank Map)">
-                  📥 <span class="btn-lbl" id="lblDownload">வெற்று வரைபடம்</span>
+                <button type="button" class="tutor-btn" onclick="MapTutorEngine.handleDownloadClick()" title="வரைபடத்தைப் பதிவிறக்கு (Download Map)">
+                  📥 <span class="btn-lbl" id="lblDownload">வரைபடம்</span>
                 </button>
               </div>
             </div>
 
-            <!-- Full Stage Map Viewport (NO TEXT CLUTTER OTHER THAN MAP & PLACE!) -->
+            <!-- Full Stage Map Viewport -->
             <div class="map-stage-viewport" id="mapStageViewport">
               <div id="mapSvgStageWrapper" class="map-stage-wrapper"></div>
+
+              <!-- Question First Screen Overlay -->
+              <div id="mapQuestionOverlay" class="map-question-overlay" style="display:none;"></div>
+
+              <!-- Full Completed Map Celebration & Promo Banner -->
+              <div id="mapCompletionBanner" class="map-completion-banner" style="display:none;"></div>
 
               <!-- Floating Zoom & Pan Controls -->
               <div class="map-floating-zoom">
@@ -616,6 +625,175 @@
           transition: transform 0.08s ease-out;
         }
 
+        /* Question First Overlay Styles */
+        .map-question-overlay {
+          position: absolute;
+          inset: 0;
+          z-index: 25;
+          background: rgba(3, 7, 18, 0.88);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 16px;
+          overflow-y: auto;
+          animation: fadeInQuestion 0.25s ease-out;
+        }
+        @keyframes fadeInQuestion {
+          from { opacity: 0; transform: scale(0.97); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        .map-question-card {
+          background: linear-gradient(145deg, #0b192c, #071322);
+          border: 2px solid #38bdf8;
+          border-radius: 20px;
+          max-width: 780px;
+          width: 100%;
+          padding: 24px 28px;
+          box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 32px rgba(56, 189, 248, 0.25);
+          color: #f8fafc;
+        }
+        .map-question-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          background: rgba(56, 189, 248, 0.15);
+          color: #38bdf8;
+          border: 1px solid rgba(56, 189, 248, 0.4);
+          padding: 4px 12px;
+          border-radius: 12px;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.5px;
+        }
+        .map-question-title {
+          font-size: 22px;
+          font-weight: 900;
+          color: #ffffff;
+          margin: 12px 0 6px 0;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        .map-question-desc {
+          font-size: 14px;
+          color: #94a3b8;
+          margin-bottom: 18px;
+          line-height: 1.5;
+        }
+        .map-places-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 10px;
+          margin-bottom: 22px;
+        }
+        .map-place-pill {
+          background: rgba(15, 23, 42, 0.75);
+          border: 1px solid #1e3a5f;
+          border-radius: 10px;
+          padding: 10px 14px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transition: all 0.2s;
+          cursor: pointer;
+        }
+        .map-place-pill:hover {
+          border-color: #38bdf8;
+          background: rgba(30, 58, 95, 0.5);
+          transform: translateY(-1px);
+        }
+        .map-place-pill-num {
+          background: #0284c7;
+          color: #ffffff;
+          font-size: 12px;
+          font-weight: 800;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .map-place-pill-name {
+          font-size: 14px;
+          font-weight: 700;
+          color: #f1f5f9;
+        }
+        .btn-start-marking {
+          background: linear-gradient(135deg, #0284c7, #0369a1);
+          color: #ffffff;
+          border: 2px solid #38bdf8;
+          font-size: 16px;
+          font-weight: 900;
+          padding: 13px 28px;
+          border-radius: 14px;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          box-shadow: 0 8px 24px rgba(2, 132, 199, 0.45);
+          transition: all 0.2s;
+          width: 100%;
+          justify-content: center;
+        }
+        .btn-start-marking:hover {
+          background: linear-gradient(135deg, #0369a1, #075985);
+          transform: translateY(-2px);
+          box-shadow: 0 10px 28px rgba(2, 132, 199, 0.6);
+        }
+
+        /* Completion Banner Styles */
+        .map-completion-banner {
+          position: absolute;
+          top: 14px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 24;
+          background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(6, 13, 25, 0.97));
+          border: 2px solid #f59e0b;
+          border-radius: 16px;
+          padding: 14px 22px;
+          box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8), 0 0 24px rgba(245, 158, 11, 0.35);
+          max-width: 92vw;
+          width: 720px;
+          text-align: center;
+          animation: slideDownBanner 0.35s ease-out;
+        }
+        @keyframes slideDownBanner {
+          from { opacity: 0; transform: translate(-50%, -20px); }
+          to { opacity: 1; transform: translate(-50%, 0); }
+        }
+        .completion-gold-title {
+          font-size: 16.5px;
+          font-weight: 900;
+          color: #fbbf24;
+          margin-bottom: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+        .completion-gold-sub {
+          font-size: 13.5px;
+          color: #f1f5f9;
+          font-weight: 700;
+          line-height: 1.45;
+        }
+        .completion-promo-box {
+          margin-top: 10px;
+          background: rgba(2, 132, 199, 0.18);
+          border: 1px dashed #38bdf8;
+          border-radius: 10px;
+          padding: 8px 12px;
+          font-size: 13px;
+          color: #7dd3fc;
+          font-weight: 800;
+          line-height: 1.45;
+        }
+
         /* Floating Zoom Controls */
         .map-floating-zoom {
           position: absolute;
@@ -821,8 +999,8 @@
       this.renderStage();
       this.updateLanguageTexts();
 
-      // Start teaching with teacher greeting!
-      this.teachPlace(0, true);
+      // Show Question Screen first as requested by User!
+      this.showQuestionScreen();
     },
 
     closeModal() {
@@ -841,11 +1019,135 @@
     },
 
     // -------------------------------------------------------------------------
-    // TEACH PLACE (Full Visual Illustration on Map + Voice Narration)
+    // 1. QUESTION FIRST SCREEN (Places to Mark + Audio: Let us mark one by one)
+    // -------------------------------------------------------------------------
+    showQuestionScreen() {
+      this.currentStage = 'question';
+      this.stopVoice();
+
+      const overlay = document.getElementById('mapQuestionOverlay');
+      const compBanner = document.getElementById('mapCompletionBanner');
+      if (compBanner) compBanner.style.display = 'none';
+
+      // Clear map features to show pristine blank outline map
+      const svg = document.getElementById('tutor_svgIndiaMap');
+      if (svg) {
+        const layer = svg.querySelector('#tutorFeatureLayer');
+        if (layer) layer.innerHTML = '';
+      }
+
+      const isEm = this.currentLang === 'en';
+
+      // Update Top Bar
+      const stepBadge = document.getElementById('tutorStepNumBadge');
+      if (stepBadge) stepBadge.textContent = isEm ? '📋 Model Question' : '📋 மாதிரி வினா';
+
+      const titleEl = document.getElementById('tutorCurrentPlaceTitle');
+      if (titleEl) {
+        titleEl.textContent = isEm ? '8 Locations to Mark' : 'குறிக்க வேண்டிய 8 இடங்கள்';
+      }
+
+      const lblPrev = document.getElementById('lblPrev');
+      if (lblPrev) lblPrev.textContent = isEm ? 'Previous' : 'முந்தையது';
+
+      const lblNext = document.getElementById('lblNext');
+      if (lblNext) lblNext.textContent = isEm ? 'Start Marking ▶️' : 'குறிக்கத் தொடங்கு ▶️';
+
+      // Render Question Overlay
+      if (overlay) {
+        overlay.innerHTML = `
+          <div class="map-question-card">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+              <span class="map-question-badge">
+                ${isEm ? '🎯 Tamil Nadu State Board Class 10 Social Science' : '🎯 தமிழ்நாடு அரசு 10-ஆம் வகுப்பு சமூக அறிவியல்'}
+              </span>
+              <span style="font-size:12px; font-weight:800; color:#38bdf8; background:rgba(56,189,248,0.12); padding:4px 10px; border-radius:8px;">
+                ${isEm ? 'Exam Model • 8 Marks' : 'பொதுத்தேர்வு மாதிரி • 8 மதிப்பெண்கள்'}
+              </span>
+            </div>
+            
+            <h2 class="map-question-title">
+              <span>📝</span>
+              <span>${isEm ? 'India Outline Map - Question (8 Places)' : 'இந்திய வரைபடம் - மாதிரி வினா (8 இடங்கள்)'}</span>
+            </h2>
+
+            <div class="map-question-desc">
+              ${isEm 
+                ? '<strong>Question Prompt:</strong> Mark the following 8 locations accurately on the given outline map of India:'
+                : '<strong>வினா:</strong> வழங்கப்பட்டுள்ள இந்திய வரைபடத்தில் கீழ்க்கண்ட 8 இடங்களை வரிசையாகக் குறித்துப் பெயரிடுக:'}
+            </div>
+
+            <div class="map-places-grid">
+              ${EXAM_MODEL_PLACES.map((p, idx) => `
+                <div class="map-place-pill" onclick="MapTutorEngine.teachPlace(${idx})">
+                  <div class="map-place-pill-num">${idx + 1}</div>
+                  <div class="map-place-pill-name">${isEm ? p.nameEnglish : p.nameTamil}</div>
+                  <span style="margin-left:auto; font-size:12px; color:#38bdf8;">📍</span>
+                </div>
+              `).join('')}
+            </div>
+
+            <button type="button" class="btn-start-marking" onclick="MapTutorEngine.startMarkingOneByOne()">
+              <span>🎯</span>
+              <span>${isEm ? 'Let us mark one by one ▶️' : 'வாருங்கள், ஒவ்வொன்றாகக் குறிப்போம்! ▶️'}</span>
+            </button>
+          </div>
+        `;
+        overlay.style.display = 'flex';
+      }
+
+      // Voice Narration: Question Announcement
+      this.speakQuestionVoice();
+    },
+
+    startMarkingOneByOne() {
+      this.teachPlace(0, false);
+    },
+
+    speakQuestionVoice() {
+      this.stopVoice();
+      const isEm = this.currentLang === 'en';
+      const capText = document.getElementById('voiceCapsuleText');
+
+      let speechText = '';
+      if (isEm) {
+        speechText = "Students, here is the Board Exam Model Map Question. Places to mark: "
+          + "1, Eastern Ghats. 2, Gulf of Mannar. 3, Sundarbans. 4, Desert soil region. 5, Mumbai. 6, Chennai to Kolkata Air route. 7, Goa. 8, River Ganga. "
+          + "Let us mark the places one by one!";
+        if (capText) {
+          capText.textContent = "Teacher: Board Exam Model Map Question (8 Places) - Let us mark one by one!";
+        }
+      } else {
+        speechText = "மாணவர்களே! அரசு பொதுத்தேர்வு மாதிரி வரைபட வினா. குறிக்க வேண்டிய எட்டு இடங்கள்: "
+          + "ஒன்று, கிழக்குத் தொடர்ச்சி மலை. இரண்டு, மன்னார் வளைகுடா. மூன்று, சுந்தரவனக் காடுகள். நான்கு, பாலை மண் பகுதி. ஐந்து, மும்பை துறைமுகம். ஆறு, சென்னை முதல் கொல்கத்தா வான்வழிப் பாதை. ஏழு, கோவா. எட்டு, கங்கை ஆறு. "
+          + "வாருங்கள்! இந்த இடங்களை வரைபடத்தில் ஒவ்வொன்றாக எப்படிக் குறிப்பது என்று பார்ப்போம்!";
+        if (capText) {
+          capText.textContent = "ஆசிரியர்: மாதிரி வரைபட வினா (8 இடங்கள்) - வாருங்கள், ஒவ்வொன்றாகக் குறிப்போம்!";
+        }
+      }
+
+      this.executeTutorSpeech(speechText, () => {
+        if (this.isAutoPlaying) {
+          this.advanceAutoPlay();
+        }
+      });
+    },
+
+    // -------------------------------------------------------------------------
+    // 2. TEACH PLACE ONE BY ONE (Full Visual Illustration on Map + Teacher Voice)
     // -------------------------------------------------------------------------
     teachPlace(index, isGreeting = false) {
-      if (index < 0) index = EXAM_MODEL_PLACES.length - 1;
-      if (index >= EXAM_MODEL_PLACES.length) index = 0;
+      this.currentStage = 'teaching';
+      const overlay = document.getElementById('mapQuestionOverlay');
+      if (overlay) overlay.style.display = 'none';
+      const compBanner = document.getElementById('mapCompletionBanner');
+      if (compBanner) compBanner.style.display = 'none';
+
+      if (index < 0) index = 0;
+      if (index >= EXAM_MODEL_PLACES.length) {
+        this.showFullCompletedMap();
+        return;
+      }
       this.currentPlaceIndex = index;
 
       const place = EXAM_MODEL_PLACES[index];
@@ -861,6 +1163,12 @@
         titleEl.textContent = isEm ? place.nameEnglish : place.nameTamil;
       }
 
+      const lblPrev = document.getElementById('lblPrev');
+      if (lblPrev) lblPrev.textContent = (index === 0) ? (isEm ? 'Question' : 'மாதிரி வினா') : (isEm ? 'Previous' : 'முந்தையது');
+
+      const lblNext = document.getElementById('lblNext');
+      if (lblNext) lblNext.textContent = (index === total - 1) ? (isEm ? 'Full Map 🏁' : 'முழு வரைபடம் 🏁') : (isEm ? 'Next' : 'அடுத்தது');
+
       // Draw Feature Directly on Map
       this.renderFeatureOnMap(place);
 
@@ -874,31 +1182,44 @@
     },
 
     nextPlace() {
-      this.currentPlaceIndex = (this.currentPlaceIndex + 1) % EXAM_MODEL_PLACES.length;
-      this.teachPlace(this.currentPlaceIndex, false);
+      if (this.currentStage === 'question') {
+        this.teachPlace(0, false);
+      } else if (this.currentStage === 'teaching') {
+        if (this.currentPlaceIndex < EXAM_MODEL_PLACES.length - 1) {
+          this.teachPlace(this.currentPlaceIndex + 1, false);
+        } else {
+          this.showFullCompletedMap();
+        }
+      } else if (this.currentStage === 'completed') {
+        this.teachPlace(0, false);
+      }
     },
 
     prevPlace() {
-      this.currentPlaceIndex = (this.currentPlaceIndex - 1 + EXAM_MODEL_PLACES.length) % EXAM_MODEL_PLACES.length;
-      this.teachPlace(this.currentPlaceIndex, false);
+      if (this.currentStage === 'completed') {
+        this.teachPlace(EXAM_MODEL_PLACES.length - 1, false);
+      } else if (this.currentStage === 'teaching') {
+        if (this.currentPlaceIndex > 0) {
+          this.teachPlace(this.currentPlaceIndex - 1, false);
+        } else {
+          this.showQuestionScreen();
+        }
+      } else if (this.currentStage === 'question') {
+        // already on question screen
+      }
     },
 
     // -------------------------------------------------------------------------
-    // RENDER FEATURE DIRECTLY ON SVG (Matching User's Reference Photo)
+    // 3. SVG FEATURE BUILDER (Individual Feature SVG markup)
     // -------------------------------------------------------------------------
-    renderFeatureOnMap(place) {
-      const svg = document.getElementById('tutor_svgIndiaMap');
-      if (!svg) return;
-
-      const layer = svg.querySelector('#tutorFeatureLayer');
-      if (!layer) return;
-
-      const isEm = this.currentLang === 'en';
+    getFeatureSvg(placeId, isEm) {
+      const place = EXAM_MODEL_PLACES.find(p => p.id === placeId);
+      if (!place) return '';
       const labelText = isEm ? place.nameEnglish.toUpperCase() : place.nameTamil;
 
-      // 1. EASTERN GHATS (Orange/Red mountain corridor matching photo!)
-      if (place.id === 'ind_eastern_ghats') {
-        layer.innerHTML = `
+      // 1. EASTERN GHATS
+      if (placeId === 'ind_eastern_ghats') {
+        return `
           <g id="feature_eastern_ghats">
             <path d="M 640 470 
                      C 660 500, 650 540, 625 580 
@@ -909,28 +1230,24 @@
                      C 540 600, 580 540, 605 490 
                      C 615 470, 630 460, 640 470 Z" 
                   fill="rgba(239, 68, 68, 0.25)" stroke="#ef4444" stroke-width="4" stroke-linejoin="round" />
-            
             <path d="M 625 520 L 632 505 L 639 520 Z 
                      M 590 580 L 598 565 L 606 580 Z 
                      M 545 660 L 553 645 L 561 660 Z 
                      M 485 750 L 493 735 L 501 750 Z 
                      M 445 815 L 452 802 L 459 815 Z" 
                   fill="#ef4444" stroke="#ffffff" stroke-width="1.2" />
-
             <circle cx="530" cy="650" r="14" fill="#ef4444" stroke="#ffffff" stroke-width="2.5" class="pin-ripple" />
             <circle cx="530" cy="650" r="8" fill="#ef4444" />
-
             <text x="565" y="700" fill="#ef4444" font-size="26" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
               ${labelText}
             </text>
           </g>
         `;
-        return;
       }
 
-      // 2. GULF OF MANNAR (Marine blue water bracket & ripples)
-      if (place.id === 'ind_gulf_of_mannar') {
-        layer.innerHTML = `
+      // 2. GULF OF MANNAR
+      if (placeId === 'ind_gulf_of_mannar') {
+        return `
           <g id="feature_gulf_of_mannar">
             <ellipse cx="450" cy="970" rx="42" ry="26" fill="rgba(6, 182, 212, 0.3)" stroke="#06b6d4" stroke-width="3" stroke-dasharray="6,4" />
             <path d="M 425 960 Q 440 952 455 960 T 475 960 M 425 978 Q 440 970 455 978 T 475 978" fill="none" stroke="#22d3ee" stroke-width="3" />
@@ -940,12 +1257,11 @@
             </text>
           </g>
         `;
-        return;
       }
 
-      // 3. SUNDARBANS (Emerald green mangrove delta polygon)
-      if (place.id === 'ind_sundarbans') {
-        layer.innerHTML = `
+      // 3. SUNDARBANS
+      if (placeId === 'ind_sundarbans') {
+        return `
           <g id="feature_sundarbans">
             <path d="M 670 515 C 695 510, 730 515, 745 535 C 735 555, 700 565, 680 550 C 665 540, 660 525, 670 515 Z" 
                   fill="rgba(16, 185, 129, 0.35)" stroke="#10b981" stroke-width="3.5" />
@@ -955,12 +1271,11 @@
             </text>
           </g>
         `;
-        return;
       }
 
-      // 4. DESERT SOIL REGION (Sandy-ochre polygon over western Rajasthan)
-      if (place.id === 'ind_thar_desert') {
-        layer.innerHTML = `
+      // 4. DESERT SOIL REGION
+      if (placeId === 'ind_thar_desert') {
+        return `
           <g id="feature_desert_soil">
             <path d="M 210 360 C 260 340, 300 370, 310 420 C 315 450, 290 480, 240 480 C 190 475, 180 420, 210 360 Z" 
                   fill="rgba(245, 158, 11, 0.28)" stroke="#f59e0b" stroke-width="3.5" stroke-dasharray="8,4" />
@@ -970,12 +1285,11 @@
             </text>
           </g>
         `;
-        return;
       }
 
-      // 5. MUMBAI (Harbor node on Maharashtra coast)
-      if (place.id === 'ind_mumbai') {
-        layer.innerHTML = `
+      // 5. MUMBAI
+      if (placeId === 'ind_mumbai') {
+        return `
           <g id="feature_mumbai">
             <circle cx="248" cy="635" r="20" fill="none" stroke="#ef4444" stroke-width="2.5" class="pin-ripple" />
             <circle cx="248" cy="635" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
@@ -985,12 +1299,11 @@
             </text>
           </g>
         `;
-        return;
       }
 
-      // 6. CHENNAI TO KOLKATA AIR ROUTE (Coastal flight curve with airplane icon)
-      if (place.id === 'ind_air_chennai_kolkata') {
-        layer.innerHTML = `
+      // 6. CHENNAI TO KOLKATA AIR ROUTE
+      if (placeId === 'ind_air_chennai_kolkata') {
+        return `
           <g id="feature_air_chennai_kolkata">
             <path d="M 485 835 Q 610 680 685 505" fill="none" stroke="#a855f7" stroke-width="4.5" stroke-dasharray="9,6" />
             <circle cx="485" cy="835" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
@@ -1005,12 +1318,11 @@
             </text>
           </g>
         `;
-        return;
       }
 
-      // 7. GOA (Konkan coast pinpoint)
-      if (place.id === 'ind_goa') {
-        layer.innerHTML = `
+      // 7. GOA
+      if (placeId === 'ind_goa') {
+        return `
           <g id="feature_goa">
             <circle cx="285" cy="780" r="18" fill="none" stroke="#ec4899" stroke-width="2.5" class="pin-ripple" />
             <circle cx="285" cy="780" r="9" fill="#ec4899" stroke="#ffffff" stroke-width="2" />
@@ -1019,12 +1331,11 @@
             </text>
           </g>
         `;
-        return;
       }
 
-      // 8. RIVER GANGA (Flowing blue river path with arrows)
-      if (place.id === 'ind_river_ganga') {
-        layer.innerHTML = `
+      // 8. RIVER GANGA
+      if (placeId === 'ind_river_ganga') {
+        return `
           <g id="feature_river_ganga">
             <path d="M 430 250 Q 480 320 540 360 T 630 460 T 680 500 T 695 535" 
                   fill="none" stroke="#0284c7" stroke-width="5.5" stroke-linecap="round" />
@@ -1036,12 +1347,124 @@
             </text>
           </g>
         `;
-        return;
       }
+
+      return '';
+    },
+
+    renderFeatureOnMap(place) {
+      const svg = document.getElementById('tutor_svgIndiaMap');
+      if (!svg) return;
+      const layer = svg.querySelector('#tutorFeatureLayer');
+      if (!layer) return;
+      const isEm = this.currentLang === 'en';
+      layer.innerHTML = this.getFeatureSvg(place.id, isEm);
+    },
+
+    renderAllFeaturesOnMap() {
+      const svg = document.getElementById('tutor_svgIndiaMap');
+      if (!svg) return;
+      const layer = svg.querySelector('#tutorFeatureLayer');
+      if (!layer) return;
+      const isEm = this.currentLang === 'en';
+      layer.innerHTML = EXAM_MODEL_PLACES.map(p => this.getFeatureSvg(p.id, isEm)).join('\n');
     },
 
     // -------------------------------------------------------------------------
-    // TEACHER VOICE (Web Speech API Narration)
+    // 4. FULL COMPLETED MAP VIEW (All 8 Places Marked + Full Marks + Promo Voice)
+    // -------------------------------------------------------------------------
+    showFullCompletedMap() {
+      this.currentStage = 'completed';
+      this.stopVoice();
+
+      const overlay = document.getElementById('mapQuestionOverlay');
+      if (overlay) overlay.style.display = 'none';
+
+      // Render ALL 8 features simultaneously!
+      this.renderAllFeaturesOnMap();
+
+      const isEm = this.currentLang === 'en';
+
+      // Update Top Bar
+      const stepBadge = document.getElementById('tutorStepNumBadge');
+      if (stepBadge) stepBadge.textContent = isEm ? '🏆 Full Map (8/8)' : '🏆 முழு வரைபடம் (8/8)';
+
+      const titleEl = document.getElementById('tutorCurrentPlaceTitle');
+      if (titleEl) {
+        titleEl.textContent = isEm ? 'All 8 Places Marked' : '8 இடங்களும் குறிக்கப்பட்டுள்ளன';
+      }
+
+      const lblPrev = document.getElementById('lblPrev');
+      if (lblPrev) lblPrev.textContent = isEm ? 'Place 8' : 'எட்டாவது இடம்';
+
+      const lblNext = document.getElementById('lblNext');
+      if (lblNext) lblNext.textContent = isEm ? 'Restart 🔄' : 'மீண்டும் 🔄';
+
+      // Show Completion Banner
+      const compBanner = document.getElementById('mapCompletionBanner');
+      if (compBanner) {
+        compBanner.innerHTML = `
+          <div class="completion-gold-title">
+            <span>🏆</span>
+            <span>${isEm ? 'Board Exam Model Map Completed!' : 'அரசு பொதுத்தேர்வு மாதிரி வரைபடம் நிறைவடைந்தது!'}</span>
+          </div>
+          <div class="completion-gold-sub">
+            ${isEm 
+              ? 'All 8 locations are accurately marked on the India Map. Mark like this and get full marks in map!'
+              : '8 இடங்களும் வரைபடத்தில் துல்லியமாகக் குறிக்கப்பட்டுள்ளன. வரைபடத்தில் இதுபோல் தெளிவாகக் குறித்து முழு மதிப்பெண்களையும் பெறுங்கள்!'}
+          </div>
+          <div class="completion-promo-box">
+            📲 ${isEm 
+              ? 'To learn 10th lessons easily download Vunnal Mudiyum Learn Easily app! Share to your classmates!' 
+              : 'பத்தாம் வகுப்பு பாடங்களை எளிதாகக் கற்க \'உன்னால் முடியும் Learn Easily\' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள்!'}
+          </div>
+          <div style="display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px; flex-wrap:wrap;">
+            <button type="button" class="tutor-btn primary" onclick="MapTutorEngine.downloadCompletedMap()" style="padding:6px 14px; font-size:12px;">
+              📥 ${isEm ? 'Download Full Marked Map SVG' : 'முழு வரைபடத்தைப் பதிவிறக்கு'}
+            </button>
+            <button type="button" class="tutor-btn" onclick="MapTutorEngine.teachPlace(0)" style="padding:6px 14px; font-size:12px;">
+              🔄 ${isEm ? 'Practice Again' : 'மீண்டும் பயிற்சி'}
+            </button>
+            <button type="button" class="tutor-btn" onclick="MapTutorEngine.showQuestionScreen()" style="padding:6px 14px; font-size:12px;">
+              📝 ${isEm ? 'View Question' : 'வினாவைக் காண்க'}
+            </button>
+          </div>
+        `;
+        compBanner.style.display = 'block';
+      }
+
+      // Voice Narration: Completion & Promo Sentence
+      this.speakCompletionVoice();
+    },
+
+    speakCompletionVoice() {
+      this.stopVoice();
+      const isEm = this.currentLang === 'en';
+      const capText = document.getElementById('voiceCapsuleText');
+
+      let speechText = '';
+      if (isEm) {
+        speechText = "All places are marked! Mark like this and get full marks in map. "
+          + "To learn 10th lessons easily download Vunnal Mudiyum Learn Easily app. Share to your classmates!";
+        if (capText) {
+          capText.textContent = "Teacher: Mark like this and get full marks in map! To learn 10th lessons easily download Vunnal Mudiyum Learn Easily app. Share to your classmates!";
+        }
+      } else {
+        // Crucial: Use 'ஆப்பை' so the Tamil voice pronounces 'Aappai' and NEVER 'off'
+        speechText = "அனைத்து இடங்களும் வரைபடத்தில் குறிக்கப்பட்டு விட்டன. வரைபடத்தில் இதுபோல் தெளிவாகக் குறித்து முழு மதிப்பெண்களையும் பெறுங்கள்! "
+          + "பத்தாம் வகுப்பு பாடங்களை எளிதாகக் கற்க 'உன்னால் முடியும் Learn Easily' ஆப்பை டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள்!";
+        if (capText) {
+          capText.textContent = "ஆசிரியர்: வரைபடத்தில் இதுபோல் குறித்து முழு மதிப்பெண்களைப் பெறுங்கள்! 'உன்னால் முடியும்' ஆப் டவுன்லோட் செய்யுங்கள். வகுப்புத் தோழர்களுக்குப் பகிருங்கள்!";
+        }
+      }
+
+      this.executeTutorSpeech(speechText, () => {
+        this.stopVoice();
+      });
+    },
+
+    // -------------------------------------------------------------------------
+    // 5. TEACHER VOICE ENGINE (Web Speech API Narration)
     // -------------------------------------------------------------------------
     speakTeacherPlace(place, isGreeting = false) {
       this.stopVoice();
@@ -1052,8 +1475,8 @@
       let speechText = '';
       if (isGreeting) {
         speechText = isEm 
-          ? "Students, let us mark the following places one by one in the Indian map. "
-          : "மாணவர்களே! வரைபடத்தில் கொடுக்கப்பட்டுள்ள இடங்களை நாம் இப்போது ஒவ்வொன்றாக எங்கு, எவ்வாறு குறிப்பது என்று பார்ப்போம். ";
+          ? "Let us mark this place on the map: "
+          : "வரைபடத்தில் இந்த இடத்தைக் குறிப்போம்: ";
       }
 
       if (isEm) {
@@ -1068,11 +1491,24 @@
         }
       }
 
-      if (!('speechSynthesis' in window)) return;
+      this.executeTutorSpeech(speechText, () => {
+        if (this.isAutoPlaying) {
+          this.advanceAutoPlay();
+        }
+      });
+    },
 
+    executeTutorSpeech(speechText, onEndCallback) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      }
+
+      const isEm = this.currentLang === 'en';
       const utter = new SpeechSynthesisUtterance(speechText);
       utter.lang = isEm ? 'en-IN' : 'ta-IN';
-      utter.rate = 0.95;
+      utter.rate = isEm ? 0.95 : 0.92;
       utter.pitch = 1.0;
 
       utter.onstart = () => {
@@ -1081,25 +1517,27 @@
 
       utter.onend = () => {
         this.isVoicePlaying = false;
-        if (this.isAutoPlaying) {
-          this.advanceAutoPlay();
-        }
+        if (typeof onEndCallback === 'function') onEndCallback();
       };
 
       utter.onerror = () => {
         this.isVoicePlaying = false;
-        if (this.isAutoPlaying) {
-          this.advanceAutoPlay();
-        }
+        if (typeof onEndCallback === 'function') onEndCallback();
       };
 
       window.speechSynthesis.speak(utter);
     },
 
     replayVoice() {
-      const place = EXAM_MODEL_PLACES[this.currentPlaceIndex];
-      if (place) {
-        this.speakTeacherPlace(place, false);
+      if (this.currentStage === 'question') {
+        this.speakQuestionVoice();
+      } else if (this.currentStage === 'completed') {
+        this.speakCompletionVoice();
+      } else {
+        const place = EXAM_MODEL_PLACES[this.currentPlaceIndex];
+        if (place) {
+          this.speakTeacherPlace(place, false);
+        }
       }
     },
 
@@ -1112,7 +1550,10 @@
       if (this.autoPlayTimer) clearTimeout(this.autoPlayTimer);
       const btn = document.getElementById('btnAutoPlay');
       const isEm = this.currentLang === 'en';
-      if (btn) btn.querySelector('#lblAutoPlay').textContent = isEm ? 'Auto-Teach All' : 'வரிசையாக கற்பி';
+      if (btn) {
+        const span = btn.querySelector('#lblAutoPlay');
+        if (span) span.textContent = isEm ? 'Auto-Teach All' : 'வரிசையாக கற்பி';
+      }
     },
 
     toggleAutoPlay() {
@@ -1123,36 +1564,42 @@
       this.isAutoPlaying = true;
       const btn = document.getElementById('btnAutoPlay');
       const isEm = this.currentLang === 'en';
-      if (btn) btn.querySelector('#lblAutoPlay').textContent = isEm ? 'Stop Playing' : 'நிறுத்து';
-      this.teachPlace(this.currentPlaceIndex, false);
-    },
+      if (btn) {
+        const span = btn.querySelector('#lblAutoPlay');
+        if (span) span.textContent = isEm ? 'Stop Playing' : 'நிறுத்து';
+      }
 
-    advanceAutoPlay() {
-      this.currentPlaceIndex++;
-      if (this.currentPlaceIndex < EXAM_MODEL_PLACES.length) {
-        this.autoPlayTimer = setTimeout(() => {
-          this.teachPlace(this.currentPlaceIndex, false);
-        }, 2200);
+      if (this.currentStage === 'question') {
+        this.speakQuestionVoice();
+      } else if (this.currentStage === 'completed') {
+        this.teachPlace(0, false);
       } else {
-        this.stopVoice();
-        this.announceCompletion();
+        this.teachPlace(this.currentPlaceIndex, false);
       }
     },
 
-    announceCompletion() {
-      if (!('speechSynthesis' in window)) return;
-      const isEm = this.currentLang === 'en';
-      const msg = isEm
-        ? "Excellent job students! We have completed all places on the map. Practice marking them on a blank paper map for your board exams!"
-        : "அருமை மாணவர்களே! கொடுக்கப்பட்ட அனைத்து இடங்களையும் வரைபடத்தில் வெற்றிகரமாகக் குறித்துப் பழகிவிட்டோம். இந்த இடங்களை வெற்று வரைபடத்தில் பென்சிலால் வரைந்து பயிற்சி செய்யுங்கள்!";
-      const utter = new SpeechSynthesisUtterance(msg);
-      utter.lang = isEm ? 'en-IN' : 'ta-IN';
-      utter.rate = 0.95;
-      window.speechSynthesis.speak(utter);
+    advanceAutoPlay() {
+      if (this.currentStage === 'question') {
+        this.autoPlayTimer = setTimeout(() => {
+          this.teachPlace(0, false);
+        }, 1800);
+      } else if (this.currentStage === 'teaching') {
+        if (this.currentPlaceIndex < EXAM_MODEL_PLACES.length - 1) {
+          this.autoPlayTimer = setTimeout(() => {
+            this.teachPlace(this.currentPlaceIndex + 1, false);
+          }, 2000);
+        } else {
+          this.autoPlayTimer = setTimeout(() => {
+            this.showFullCompletedMap();
+          }, 1500);
+        }
+      } else {
+        this.stopVoice();
+      }
     },
 
     // -------------------------------------------------------------------------
-    // QUESTION PLACES LIST DRAWER
+    // 6. QUESTION PLACES LIST DRAWER
     // -------------------------------------------------------------------------
     togglePlacesDrawer() {
       const drawer = document.getElementById('placesDrawer');
@@ -1168,7 +1615,7 @@
 
       container.innerHTML = EXAM_MODEL_PLACES.map((place, idx) => {
         const title = isEm ? place.nameEnglish : place.nameTamil;
-        const isAct = idx === this.currentPlaceIndex;
+        const isAct = idx === this.currentPlaceIndex && this.currentStage === 'teaching';
         return `
           <div class="drawer-item ${isAct ? 'active' : ''}" onclick="MapTutorEngine.selectFromDrawer(${idx})">
             <div>
@@ -1186,13 +1633,19 @@
     },
 
     // -------------------------------------------------------------------------
-    // LANGUAGE TOGGLE
+    // 7. LANGUAGE TOGGLE
     // -------------------------------------------------------------------------
     toggleLanguage() {
       this.currentLang = this.currentLang === 'ta' ? 'en' : 'ta';
       this.updateLanguageTexts();
       this.renderStage();
-      this.teachPlace(this.currentPlaceIndex, false);
+      if (this.currentStage === 'question') {
+        this.showQuestionScreen();
+      } else if (this.currentStage === 'completed') {
+        this.showFullCompletedMap();
+      } else {
+        this.teachPlace(this.currentPlaceIndex, false);
+      }
     },
 
     updateLanguageTexts() {
@@ -1205,6 +1658,9 @@
 
       const examHead = document.getElementById('examQnHeading');
       if (examHead) examHead.textContent = isEm ? 'Board Exam Model Question (8 Places)' : 'அரசு பொதுத்தேர்வு மாதிரி வினா (8 இடங்கள்)';
+
+      const qBtn = document.getElementById('lblQuestionBtn');
+      if (qBtn) qBtn.textContent = isEm ? 'Question' : 'மாதிரி வினா';
 
       const lblPrev = document.getElementById('lblPrev');
       if (lblPrev) lblPrev.textContent = isEm ? 'Previous' : 'முந்தையது';
@@ -1219,23 +1675,26 @@
       if (lblDrawer) lblDrawer.textContent = isEm ? '8 Places' : '8 இடங்கள்';
 
       const lblDl = document.getElementById('lblDownload');
-      if (lblDl) lblDl.textContent = isEm ? 'Blank Map' : 'வெற்று வரைபடம்';
+      if (lblDl) lblDl.textContent = isEm ? 'Map Download' : 'வரைபடம்';
 
       const drawerHead = document.getElementById('drawerHeading');
       if (drawerHead) drawerHead.textContent = isEm ? '📋 Locations in this Question (8 Places)' : '📋 மாதிரி வினாவின் 8 இடங்கள்';
 
       const autoBtn = document.getElementById('btnAutoPlay');
       if (autoBtn) {
-        autoBtn.querySelector('#lblAutoPlay').textContent = this.isAutoPlaying
-          ? (isEm ? 'Stop Playing' : 'நிறுத்து')
-          : (isEm ? 'Auto-Teach All' : 'வரிசையாக கற்பி');
+        const span = autoBtn.querySelector('#lblAutoPlay');
+        if (span) {
+          span.textContent = this.isAutoPlaying
+            ? (isEm ? 'Stop Playing' : 'நிறுத்து')
+            : (isEm ? 'Auto-Teach All' : 'வரிசையாக கற்பி');
+        }
       }
 
       this.renderDrawerList();
     },
 
     // -------------------------------------------------------------------------
-    // ZOOM & PAN ENGINE
+    // 8. ZOOM & PAN ENGINE
     // -------------------------------------------------------------------------
     zoom(factor) {
       this.zoomLevel = Math.max(1.0, Math.min(3.5, this.zoomLevel * factor));
@@ -1286,6 +1745,43 @@
 
       wrapper.onpointerup = () => { isDown = false; };
       wrapper.onpointercancel = () => { isDown = false; };
+    },
+
+    // -------------------------------------------------------------------------
+    // DOWNLOAD CONTROLLER (Completed Map / Blank Map)
+    // -------------------------------------------------------------------------
+    handleDownloadClick() {
+      if (this.currentStage === 'completed') {
+        this.downloadCompletedMap();
+      } else {
+        this.downloadBlankMap();
+      }
+    },
+
+    downloadCompletedMap() {
+      const svg = document.getElementById('tutor_svgIndiaMap');
+      if (!svg) return;
+
+      const clone = svg.cloneNode(true);
+      clone.removeAttribute('style');
+
+      const svgData = new XMLSerializer().serializeToString(clone);
+      const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+      const svgUrl = URL.createObjectURL(svgBlob);
+
+      const downloadLink = document.createElement('a');
+      downloadLink.href = svgUrl;
+      downloadLink.download = `Completed_Exam_Map_India_10th_Social_${Date.now()}.svg`;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+      URL.revokeObjectURL(svgUrl);
+
+      const isEm = this.currentLang === 'en';
+      const msg = isEm
+        ? '✅ Full marked exam map downloaded successfully! Practice pencil markings on paper to get full marks!'
+        : '✅ 8 இடங்களும் குறிக்கப்பட்ட முழு மாதிரி வரைபடம் பதிவிறக்கம் செய்யப்பட்டது! இதை வைத்து உங்கள் பொதுத்தேர்வுக்கு பயிற்சி செய்யுங்கள்.';
+      alert(msg);
     },
 
     // -------------------------------------------------------------------------

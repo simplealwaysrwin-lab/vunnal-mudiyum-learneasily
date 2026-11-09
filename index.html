@@ -9479,6 +9479,11 @@ ${directLink}
       text = text.replace(/(?:^|\s)\d+[\.\)](?!\d)\s*/g, '. ');
 
       if (lang.startsWith('ta')) {
+        // Phonetic correction: Ensure English "App"/"app" or Tamil "ஆப்" is never mispronounced as "ஆஃப்" ("off")
+        text = text.replace(/\b[aA]pp\b/g, ' ஆப்பை ');
+        text = text.replace(/\b[aA]pps\b/g, ' ஆப்ஸ்களை ');
+        text = text.replace(/ஆப்\b(?!\u0BC8)/g, ' ஆப்பை ');
+
         // Physics and Math variables with subscripts in Tamil (m1, m2, u1, u2, v1, v2, p1, p2, F1, F2)
         text = text.replace(/\b(m|M)[_\s]*1\b/g, ' எம் ஒன்று ')
                    .replace(/\b(m|M)[_\s]*2\b/g, ' எம் இரண்டு ')
@@ -10227,20 +10232,37 @@ ${directLink}
 
     finishPlaylist: function() {
       const isEnglish = currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em'));
-      const msg = (this.mode === 'manapaadam')
-        ? (isEnglish ? 'Memory poems recitation completed! Great job!' : 'அனைத்து மனப்பாடப் பாடல்களும் நிறைவடைந்தன! நல்வாழ்த்துகள்!')
-        : (isEnglish ? 'All 2-mark questions and answers completed! Great job!' : 'அனைத்து இரண்டு மதிப்பெண் வினாக்களும் நிறைவடைந்தன! நல்வாழ்த்துகள்!');
+      let msg = '';
+      let statusMsg = '';
+
+      if (this.mode === 'manapaadam') {
+        msg = isEnglish
+          ? 'Memory poems recitation completed! To learn 10th lessons easily download Vunnal Mudiyum Learn Easily app. Share to your classmates.'
+          : 'அனைத்து மனப்பாடப் பாடல்களும் நிறைவடைந்தன! பத்தாம் வகுப்பு பாடங்களை எளிதாகக் கற்க \'உன்னால் முடியும் Learn Easily\' ஆப்பை டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள்!';
+        statusMsg = isEnglish
+          ? 'To learn 10th lessons easily download Vunnal Mudiyum Learn Easily app! Share to your classmates!'
+          : 'பத்தாம் வகுப்பு பாடங்களை எளிதாகக் கற்க \'உன்னால் முடியும் Learn Easily\' ஆப் டவுன்லோட் செய்யுங்கள். வகுப்புத் தோழர்களுக்கும் பகிருங்கள்!';
+      } else {
+        msg = isEnglish
+          ? 'All 2-mark questions and answers completed! To learn 10th lessons easily download Vunnal Mudiyum Learn Easily app. Share to your classmates.'
+          : 'அனைத்து இரண்டு மதிப்பெண் வினாக்களும் நிறைவடைந்தன! பத்தாம் வகுப்பு பாடங்களை எளிதாகக் கற்க \'உன்னால் முடியும் Learn Easily\' ஆப்பை டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள்!';
+        statusMsg = isEnglish
+          ? 'To learn 10th lessons easily download Vunnal Mudiyum Learn Easily app! Share to your classmates!'
+          : 'பத்தாம் வகுப்பு பாடங்களை எளிதாகக் கற்க \'உன்னால் முடியும் Learn Easily\' ஆப் டவுன்லோட் செய்யுங்கள். வகுப்புத் தோழர்களுக்கும் பகிருங்கள்!';
+      }
 
       const statusEl = document.getElementById('audioDockStatus');
-      if (statusEl) statusEl.textContent = isEnglish ? 'Completed!' : 'முழுமையாக நிறைவடைந்தது!';
+      if (statusEl) statusEl.textContent = statusMsg;
 
-      speechQueueEngine.play([msg], {
+      const chunks = chunkTextForSpeech(msg, isEnglish ? 220 : 130);
+
+      speechQueueEngine.play(chunks, {
         lang: isEnglish ? 'en-IN' : 'ta-IN',
-        rate: 1.0,
+        rate: isEnglish ? 0.95 : 0.92,
         pitch: 1.0,
         voice: teacherAudioPlayer.getBestVoice(isEnglish ? 'en-IN' : 'ta-IN')
       }, null, () => {
-        this.stop();
+        setTimeout(() => { this.stop(); }, 1200);
       });
     },
 
@@ -10497,7 +10519,28 @@ ${directLink}
                 }
               }, 500);
             } else {
-              this.stop();
+              const isEn = (lang === 'en');
+              const promoClosing = isEn
+                ? 'Story narration completed! To learn 10th lessons easily download Vunnal Mudiyum Learn Easily app. Share to your classmates.'
+                : 'கதை விளக்கம் நிறைவடைந்தது! பத்தாம் வகுப்பு பாடங்களை எளிதாகக் கற்க \'உன்னால் முடியும் Learn Easily\' ஆப்பை டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள்!';
+
+              const statusEl = document.getElementById('audioDockStatus');
+              if (statusEl) {
+                statusEl.textContent = isEn
+                  ? 'To learn 10th lessons easily download Vunnal Mudiyum Learn Easily app! Share to classmates!'
+                  : 'பத்தாம் வகுப்பு பாடங்களை எளிதாகக் கற்க \'உன்னால் முடியும் Learn Easily\' ஆப் டவுன்லோட் செய்யுங்கள். நண்பர்களுக்கும் பகிருங்கள்!';
+              }
+
+              const closingChunks = chunkTextForSpeech(promoClosing, isEn ? 200 : 120);
+              speechQueueEngine.play(closingChunks, {
+                lang: isEn ? 'en-IN' : 'ta-IN',
+                rate: isEn ? 0.95 : 0.92,
+                pitch: 1.0,
+                voice: (typeof teacherAudioPlayer !== 'undefined' && teacherAudioPlayer.getBestVoice)
+                  ? teacherAudioPlayer.getBestVoice(isEn ? 'en-IN' : 'ta-IN') : null
+              }, null, () => {
+                setTimeout(() => { this.stop(); }, 1200);
+              });
             }
           }
         );

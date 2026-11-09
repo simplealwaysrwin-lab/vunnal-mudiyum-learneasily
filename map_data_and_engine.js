@@ -16,7 +16,7 @@
       nameTamil: "கிழக்குத் தொடர்ச்சி மலை",
       nameEnglish: "Eastern Ghats",
       category: "Mountains",
-      coords: { x: 53.0, y: 65.0 },
+      coords: { x: 55.5, y: 67.5 },
       teachScriptTamil: "முதல் இடம்: கிழக்குத் தொடர்ச்சி மலை. இந்தியாவின் கிழக்கு கடற்கரைக்கு இணையாக ஒடிசா, ஆந்திரா வழியாக தமிழ்நாட்டின் வடபகுதி வரை தொடர்ச்சியற்ற உடைந்த குன்றுகளாக வரைய வேண்டும்.",
       teachScriptEnglish: "First place: Eastern Ghats. Mark along the eastern coast of India from Odisha through Andhra Pradesh down towards northern Tamil Nadu as discontinuous broken hills.",
       examTipTamil: "வங்காள விரிகுடா கடற்கரைக்கு இணையாக உள்ள தொடர்ச்சியற்ற மலைத்தொடர் எனக் கேட்டால் கிழக்குத் தொடர்ச்சி மலையைக் குறிக்கவும்.",
@@ -100,7 +100,7 @@
       nameTamil: "கங்கை ஆறு",
       nameEnglish: "River Ganga",
       category: "River",
-      coords: { x: 54.0, y: 36.0 },
+      coords: { x: 51.5, y: 34.5 },
       teachScriptTamil: "எட்டாவது இடம்: கங்கை ஆறு. இமயமலையின் கங்கோத்ரியில் தொடங்கி உத்தரகாண்ட், உத்தரபிரதேசம், பீகார், மேற்கு வங்காளம் வழியாக வங்காள விரிகுடாவில் கலக்கும் வரை நீல நிற கோடாக வரைய வேண்டும்.",
       teachScriptEnglish: "Eighth place: River Ganga. India's longest river flowing 2,525 km from Gangotri in the Himalayas through UP, Bihar, and West Bengal into the Bay of Bengal.",
       examTipTamil: "இந்தியாவின் மிக நீளமான புனித ஆறு அல்லது வற்றாத இமயமலை ஆறு கங்கை.",
@@ -1224,41 +1224,38 @@
       if (!place) return '';
       const labelText = isEm ? place.nameEnglish.toUpperCase() : place.nameTamil;
 
-      // 1. EASTERN GHATS
-      // 1. EASTERN GHATS (Narrow, discontinuous mountain chain along Odisha, AP, northern TN)
+      // 1. EASTERN GHATS (Narrow, discontinuous mountain chain along eastern edge of Deccan Plateau)
       if (placeId === 'ind_eastern_ghats') {
         return `
           <g id="feature_eastern_ghats">
-            <!-- Discontinuous narrow mountain ridge lines following the eastern range -->
-            <!-- Section 1: Odisha -->
-            <path d="M 618 525 Q 600 555 580 585" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" />
-            <polygon points="618,515 612,525 624,525" fill="#ef4444" stroke="#ffffff" stroke-width="0.8" />
-            <polygon points="600,545 594,555 606,555" fill="#ef4444" stroke="#ffffff" stroke-width="0.8" />
-            <polygon points="580,575 574,585 586,585" fill="#ef4444" stroke="#ffffff" stroke-width="0.8" />
+            <!-- Segment 1: Odisha (Along eastern edge of plateau, SW of Mahanadi) -->
+            <path d="M 632 525 Q 618 560 602 595" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6,3" />
+            <polygon points="632,517 626,527 638,527" fill="#ef4444" stroke="#ffffff" stroke-width="0.7" />
+            <polygon points="617,552 611,562 623,562" fill="#ef4444" stroke="#ffffff" stroke-width="0.7" />
+            <polygon points="602,587 596,597 608,597" fill="#ef4444" stroke="#ffffff" stroke-width="0.7" />
 
-            <!-- Gap for Godavari/Krishna -->
+            <!-- River gap (Godavari delta) -->
 
-            <!-- Section 2: Andhra Pradesh (Nallamala / Velikonda ranges) -->
-            <path d="M 565 625 Q 535 675 510 735" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" />
-            <polygon points="562,618 556,628 568,628" fill="#ef4444" stroke="#ffffff" stroke-width="0.8" />
-            <polygon points="545,650 539,660 551,660" fill="#ef4444" stroke="#ffffff" stroke-width="0.8" />
-            <polygon points="528,685 522,695 534,695" fill="#ef4444" stroke="#ffffff" stroke-width="0.8" />
-            <polygon points="510,722 504,732 516,732" fill="#ef4444" stroke="#ffffff" stroke-width="0.8" />
+            <!-- Segment 2: Andhra Pradesh (Eastern edge of Deccan Plateau, behind coastal plain) -->
+            <path d="M 585 625 Q 555 680 525 745" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6,3" />
+            <polygon points="585,617 579,627 591,627" fill="#ef4444" stroke="#ffffff" stroke-width="0.7" />
+            <polygon points="565,655 559,665 571,665" fill="#ef4444" stroke="#ffffff" stroke-width="0.7" />
+            <polygon points="545,695 539,705 551,705" fill="#ef4444" stroke="#ffffff" stroke-width="0.7" />
+            <polygon points="525,737 519,747 531,747" fill="#ef4444" stroke="#ffffff" stroke-width="0.7" />
 
-            <!-- Gap for Pennar -->
+            <!-- River gap (Krishna/Pennar) -->
 
-            <!-- Section 3: Southern AP & Northern Tamil Nadu (Javadi, Shevaroy hills) -->
-            <path d="M 498 755 Q 475 795 448 835" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" />
-            <polygon points="495,748 489,758 501,758" fill="#ef4444" stroke="#ffffff" stroke-width="0.8" />
-            <polygon points="475,785 469,795 481,795" fill="#ef4444" stroke="#ffffff" stroke-width="0.8" />
-            <polygon points="450,822 444,832 456,832" fill="#ef4444" stroke="#ffffff" stroke-width="0.8" />
+            <!-- Segment 3: Southern AP & Northern Tamil Nadu (Javadi, Shevaroy hills) -->
+            <path d="M 508 765 Q 482 805 455 845" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6,3" />
+            <polygon points="508,757 502,767 514,767" fill="#ef4444" stroke="#ffffff" stroke-width="0.7" />
+            <polygon points="482,797 476,807 488,807" fill="#ef4444" stroke="#ffffff" stroke-width="0.7" />
+            <polygon points="455,837 449,847 461,847" fill="#ef4444" stroke="#ffffff" stroke-width="0.7" />
 
-            <!-- Focal ripple pin in Andhra Pradesh -->
-            <circle cx="530" cy="675" r="14" fill="#ef4444" stroke="#ffffff" stroke-width="2" class="pin-ripple" />
-            <circle cx="530" cy="675" r="7" fill="#ef4444" />
+            <!-- Center marker pin -->
+            <circle cx="555" cy="675" r="5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5" />
 
-            <!-- Clear Label positioned away from air route -->
-            <text x="560" y="725" fill="#ef4444" font-size="22" font-weight="900" letter-spacing="1" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.95))">
+            <!-- Label positioned clearly along the eastern edge -->
+            <text x="575" y="715" fill="#ef4444" font-size="20" font-weight="900" letter-spacing="1" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.95))">
               ${labelText}
             </text>
           </g>
@@ -1353,35 +1350,28 @@
         `;
       }
 
-      // 8. RIVER GANGA (Continuous river line Gangotri -> UP -> Bihar -> West Bengal -> Delta)
+      // 8. RIVER GANGA (Continuous unbroken river line Gangotri -> UP -> Bihar -> West Bengal -> Delta)
       if (placeId === 'ind_river_ganga') {
         return `
           <g id="feature_river_ganga">
-            <!-- Continuous Ganga River Path following official course from Himalayas to Delta -->
-            <path d="M 430 235
-                     C 422 255, 420 280, 440 305
-                     C 455 320, 470 330, 490 345
-                     C 505 355, 525 365, 545 370
-                     C 565 375, 585 376, 605 380
-                     C 620 385, 635 395, 650 415
-                     C 660 430, 665 450, 672 475
-                     C 678 495, 686 515, 695 535"
-                  fill="none" stroke="#0284c7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+            <!-- Continuous unbroken River Ganga course from Gangotri -> UP -> Bihar -> West Bengal -> Delta -->
+            <path d="M 425 230 
+                     C 428 260, 445 295, 470 325 
+                     C 490 345, 510 360, 535 365 
+                     C 560 370, 585 372, 610 375 
+                     C 635 378, 650 390, 658 415 
+                     C 666 445, 672 475, 680 500 
+                     C 685 515, 688 528, 692 538" 
+                  fill="none" stroke="#0ea5e9" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
 
-            <!-- Directional River Flow Arrows -->
-            <path d="M 465 325 L 474 330 L 468 337 Z" fill="#38bdf8" />
-            <path d="M 570 372 L 580 376 L 573 383 Z" fill="#38bdf8" />
-            <path d="M 662 445 L 668 455 L 659 458 Z" fill="#38bdf8" />
-
-            <!-- Gangotri Origin Marker -->
-            <circle cx="430" cy="235" r="7" fill="#38bdf8" stroke="#ffffff" stroke-width="2" class="pin-ripple" />
-            <circle cx="430" cy="235" r="4" fill="#0284c7" />
-            <text x="442" y="238" fill="#bae6fd" font-size="14" font-weight="800" filter="drop-shadow(0 2px 3px rgba(0,0,0,0.9))">
+            <!-- Gangotri Origin Pin -->
+            <circle cx="425" cy="230" r="5" fill="#38bdf8" stroke="#ffffff" stroke-width="1.5" />
+            <text x="435" y="233" fill="#bae6fd" font-size="13" font-weight="800" filter="drop-shadow(0 1px 3px rgba(0,0,0,0.9))">
               ${isEm ? 'Gangotri (Origin)' : 'கங்கோத்ரி (தோற்றம்)'}
             </text>
 
-            <!-- River Name Label -->
-            <text x="500" y="335" fill="#38bdf8" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.95))">
+            <!-- Ganga River Name Label -->
+            <text x="515" y="345" fill="#38bdf8" font-size="22" font-weight="900" letter-spacing="1.2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.95))">
               ${labelText}
             </text>
           </g>

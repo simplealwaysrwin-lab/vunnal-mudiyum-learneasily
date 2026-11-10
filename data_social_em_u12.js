@@ -39,8 +39,7 @@ const SOCIAL_EM_UNIT_12_DATA = {
           examTag: "Public Exam",
           q: "Which Indian state uniquely operates a 'Universal Public Distribution System' (Universal PDS) covering all cardholders without poverty-line discrimination?",
           options: ["A) Kerala", "B) Tamil Nadu", "C) Gujarat", "D) Punjab"],
-          ans: "Answer: <b>B) Tamil Nadu</b><br>Explanation: Tamil Nadu adopted the Universal Public Distribution System where every household holding a rice card is entitled to free food grains without any Above/Below Poverty Line distinction.",
-          ansTamil: "உலகளாவிய பொது விநியோக முறையைச் செயல்படுத்தும் மாநிலம் தமிழ்நாடு."
+          ans: "Answer: <b>B) Tamil Nadu</b><br>Explanation: Tamil Nadu adopted the Universal Public Distribution System where every household holding a rice card is entitled to free food grains without any Above/Below Poverty Line distinction."
         },
         {
           id: "soc_em_12_2",
@@ -49,8 +48,7 @@ const SOCIAL_EM_UNIT_12_DATA = {
           examTag: "Govt Model",
           q: "In which year was the landmark National Food Security Act (NFSA) passed by the Indian Parliament?",
           options: ["A) 2005", "B) 2010", "C) 2013", "D) 2016"],
-          ans: "Answer: <b>C) 2013</b><br>Explanation: The National Food Security Act (NFSA) was passed in 2013, creating a legal right to food grains at highly subsidized prices for priority households.",
-          ansTamil: "தேசிய உணவுப் பாதுகாப்புச் சட்டம் 2013-ல் இயற்றப்பட்டது."
+          ans: "Answer: <b>C) 2013</b><br>Explanation: The National Food Security Act (NFSA) was passed in 2013, creating a legal right to food grains at highly subsidized prices for priority households."
         },
         {
           id: "soc_em_12_3",
@@ -63,8 +61,7 @@ const SOCIAL_EM_UNIT_12_DATA = {
             1. <b>Availability of Food:</b> Physical existence of food stocks in desired quantities through domestic production, public storage, and imports.<br>
             2. <b>Access to Food:</b> Economic and physical capacity of households to acquire adequate nutritious food at all times without financial distress.<br>
             3. <b>Absorption of Food:</b> Biological utilization of food through clean drinking water, sanitation, and healthcare to absorb nutrients into the body.
-          </div>`,
-          ansTamil: "உணவு கிடைத்தல், உணவுக்கான அணுகல், உணவு உறிஞ்சுதல் ஆகியவை உணவுப் பாதுகாப்பின் மூன்று கூறுகள்."
+          </div>`
         },
         {
           id: "soc_em_12_4",
@@ -96,8 +93,7 @@ const SOCIAL_EM_UNIT_12_DATA = {
               </tbody>
               </table>
             </div>
-          </div>`,
-          ansTamil: "உலகளாவிய முறையில் அனைவருக்கும் உணவு; இலக்கு முறையில் ஏழைகளுக்கு மட்டும் உணவு வழங்கப்படுகிறது."
+          </div>`
         },
         {
           id: "soc_em_12_5",
@@ -141,8 +137,7 @@ const SOCIAL_EM_UNIT_12_DATA = {
             <b>Primary Objectives:</b><br>
             1. To distribute food grains to deficit regions and distressed families during natural disasters, droughts, or crop failures.<br>
             2. To stabilize open-market commodity prices by releasing grain stocks during seasonal price spikes.
-          </div>`,
-          ansTamil: "FCI சேமிக்கும் தானியக் கையிருப்பு தாங்கு இருப்பு ஆகும்; இது பற்றாக்குறை மற்றும் விலை உயர்வைத் தடுக்கிறது."
+          </div>`
         },
         {
           id: "soc_em_12_7",
@@ -154,8 +149,7 @@ const SOCIAL_EM_UNIT_12_DATA = {
             <b>Minimum Support Price (MSP):</b><br>
             • An advance guaranteed procurement price announced by the Government of India prior to the sowing season on recommendations of the CACP.<br>
             • If market prices crash due to surplus harvests, government procurement agencies (like FCI) purchase crops directly from farmers at the assured MSP, preventing debt and distress sales.
-          </div>`,
-          ansTamil: "விவசாயிகளுக்கு நஷ்டம் ஏற்படாமல் பாதுகாக்க அரசு உறுதி செய்யும் உத்திரவாதக் கொள்முதல் விலை MSP ஆகும்."
+          </div>`
         },
         {
           id: "soc_em_12_8",
@@ -215,30 +209,7 @@ const SOCIAL_EM_UNIT_12_DATA = {
             </div>
           </div>`,
           explanation: "Key agrarian granary states, grain procurement centers, and public food distribution management hubs in India.",
-          diagramSvg: `<svg viewBox="0 0 1000 1150" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="oceanG_em_u12" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
-              <linearGradient id="landG_em_u12" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
-            </defs>
-            <rect width="1000" height="1150" fill="url(#oceanG_em_u12)"/>
-            <path fill="url(#landG_em_u12)" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round" d="M 370 40 C 385 30, 415 30, 430 45 C 450 65, 460 95, 450 120 C 470 125, 495 140, 485 165 C 465 175, 445 190, 430 215 C 415 235, 400 245, 375 250 C 350 255, 330 270, 315 295 C 300 315, 275 330, 255 350 C 235 370, 215 390, 205 420 C 195 440, 160 455, 140 480 C 120 500, 155 520, 190 525 C 220 530, 240 515, 255 530 C 265 545, 250 560, 220 575 C 195 590, 175 605, 195 625 C 225 635, 260 620, 280 600 C 295 580, 275 605, 270 638 C 265 670, 285 710, 305 750 C 325 790, 345 830, 365 870 C 385 910, 405 950, 420 990 C 425 1000, 435 995, 440 980 C 455 940, 465 900, 475 860 C 485 820, 495 780, 520 750 C 545 720, 575 690, 605 660 C 635 630, 660 600, 640 570 C 625 550, 645 530, 665 515 C 685 500, 695 480, 675 465 C 655 450, 630 460, 615 440 C 600 420, 580 405, 560 395 C 540 380, 560 360, 585 345 C 610 330, 635 315, 660 305 C 685 295, 715 295, 730 315 C 745 330, 775 320, 805 325 C 835 330, 860 345, 855 365 C 850 385, 825 395, 800 405 C 780 415, 755 435, 775 455 C 795 470, 770 490, 745 490 C 720 490, 705 470, 680 475 C 660 480, 645 495, 630 515 C 615 535, 585 550, 560 565 C 530 585, 510 610, 490 635 C 540 700, 570 670, 595 640 C 615 615, 630 585, 640 555 C 645 530, 625 510, 605 490 C 585 470, 565 440, 545 410 C 525 380, 505 350, 485 320 C 465 290, 445 260, 425 230 C 405 200, 385 170, 375 140 C 365 110, 360 70, 370 40 Z"/>
-            <path fill="url(#landG_em_u12)" stroke="#38bdf8" stroke-width="2" d="M 470 940 C 490 925, 515 940, 520 965 C 525 990, 510 1020, 490 1040 C 475 1050, 460 1045, 455 1025 C 450 1000, 455 960, 470 940 Z"/>
-            <!-- 1. Punjab -->
-            <circle cx="340" cy="270" r="9" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
-            <text x="220" y="275" fill="#f59e0b" font-size="18" font-weight="900">Punjab (Granary of India)</text>
-            <!-- 2. Haryana -->
-            <circle cx="370" cy="300" r="7" fill="#10b981" stroke="#ffffff" stroke-width="2" />
-            <text x="250" y="325" fill="#10b981" font-size="16" font-weight="900">Haryana (Surplus Wheat)</text>
-            <!-- 3. Uttar Pradesh -->
-            <circle cx="480" cy="380" r="9" fill="#00f0ff" stroke="#ffffff" stroke-width="2" />
-            <text x="495" y="385" fill="#00f0ff" font-size="18" font-weight="900">Uttar Pradesh (Sugarcane &amp; Grain)</text>
-            <!-- 4. Chennai -->
-            <circle cx="485" cy="835" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
-            <text x="505" y="840" fill="#38bdf8" font-size="18" font-weight="900">Chennai (TNCSC Headquarters)</text>
-            <!-- 5. Thanjavur -->
-            <circle cx="465" cy="905" r="9" fill="#22c55e" stroke="#ffffff" stroke-width="2" />
-            <text x="485" y="915" fill="#22c55e" font-size="19" font-weight="900">🌾 Thanjavur (Rice Bowl of TN)</text>
-          </svg>`,
+          diagramImg: "images/soc_food_map.jpg",
           diagramCaption: "India Map: Food Security Powerhouses and Granaries of India"
         }
       ]

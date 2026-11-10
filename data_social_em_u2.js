@@ -722,16 +722,15 @@ const SOCIAL_EM_UNIT_2_DATA = {
           <div style="margin-top:8px; font-size:13px; color:#0369a1; background:#f0f9ff; padding:8px 12px; border-radius:6px; border-left:4px solid #0284c7;">
             <b>Exam Tip:</b> For an 8-mark question: Tabulating all 8 comparison criteria ensures clarity and fetches full marks.
           </div>`,
-          ansTamil: "இமயமலை ஆறுகள் பனி உருகுவதால் பாயும் வற்றாத நீண்ட ஜீவ நதிகள் (கங்கை, சிந்து). தீபகற்ப ஆறுகள் மழையைச் சார்ந்த குறுகிய பருவகால ஆறுகள் (காவிரி, கோதாவரி).",
           checkpoints: [
-            { pt: 1, text: "Origin: Glaciers of the Himalayas vs Highlands and Western Ghats of Peninsular plateau.", taText: "தோற்றம்: இமயமலையின் பனிப்பாறைகளில் தோன்றுபவை vs தீபகற்ப பீடபூமி மற்றும் மேற்குத் தொடர்ச்சி மலையில் தோன்றுபவை." },
-            { pt: 2, text: "Water source: Fed by both snowmelt and rainfall vs purely rain-fed monsoon dependence.", taText: "நீர் ஆதாரம்: பனி உருகுதல் மற்றும் மழை இரண்டினாலும் நீர்பெறுபவை vs மழையை மட்டுமே நம்பியுள்ளவை." },
-            { pt: 3, text: "Flow nature: Perennial rivers flowing all year vs seasonal monsoon-dependent rivers.", taText: "ஆற்றின் தன்மை: ஆண்டு முழுவதும் ஓடும் வற்றாத ஜீவ நதிகள் vs மழைக் காலத்தில் மட்டும் பாயும் பருவகால ஆறுகள்." },
-            { pt: 4, text: "Length and basin: Very long with vast drainage basins vs shorter length with smaller basins.", taText: "நீளம் & வடிநிலம்: நீண்ட தொலைவு பாயும் பெரும் வடிநிலங்கள் vs ஒப்பீட்டளவில் குறுகிய சிறிய வடிநிலங்கள்." },
-            { pt: 5, text: "Valleys: Deep steep V-shaped valleys and gorges vs shallow, wide, graded valleys.", taText: "பள்ளத்தாக்குகள்: ஆழமான 'V' வடிவ பள்ளத்தாக்குகள் vs அகலமான ஆழம் குறைந்த பள்ளத்தாக்குகள்." },
-            { pt: 6, text: "Deposition: Heavy sediment loads forming fertile alluvial plains vs lower sediment deposition.", taText: "படிவுகள்: செழிமையான வண்டல் மண் படிவுகளை உருவாக்குபவை vs குறைவான வண்டல் படிவுகள்." },
-            { pt: 7, text: "Course and utility: Meandering course suitable for inland navigation vs straight course ideal for hydroelectricity.", taText: "போக்கு & பயன்: வளைந்து நெளிந்து பாய்ந்து நீர்வழிப் போக்குவரத்திற்கு உகந்தவை vs நீர்மின்சார உற்பத்திக்கு உகந்தவை." },
-            { pt: 8, text: "Examples: Indus, Ganga, Brahmaputra vs Mahanadi, Godavari, Krishna, Cauvery, Narmada, Tapti.", taText: "எடுத்துக்காட்டு: சிந்து, கங்கை, பிரம்மபுத்திரா vs மகாநதி, கோதாவரி, கிருஷ்ணா, காவிரி, நர்மதை, தபதி." }
+            { pt: 1, text: "Origin: Glaciers of the Himalayas vs Highlands and Western Ghats of Peninsular plateau." },
+            { pt: 2, text: "Water source: Fed by both snowmelt and rainfall vs purely rain-fed monsoon dependence." },
+            { pt: 3, text: "Flow nature: Perennial rivers flowing all year vs seasonal monsoon-dependent rivers." },
+            { pt: 4, text: "Length and basin: Very long with vast drainage basins vs shorter length with smaller basins." },
+            { pt: 5, text: "Valleys: Deep steep V-shaped valleys and gorges vs shallow, wide, graded valleys." },
+            { pt: 6, text: "Deposition: Heavy sediment loads forming fertile alluvial plains vs lower sediment deposition." },
+            { pt: 7, text: "Course and utility: Meandering course suitable for inland navigation vs straight course ideal for hydroelectricity." },
+            { pt: 8, text: "Examples: Indus, Ganga, Brahmaputra vs Mahanadi, Godavari, Krishna, Cauvery, Narmada, Tapti." }
           ]
         }
       ]
@@ -766,61 +765,7 @@ const SOCIAL_EM_UNIT_2_DATA = {
             </div>
           </div>`,
           explanation: "Major perennial Himalayan rivers (Indus, Ganga, Brahmaputra) and seasonal Peninsular rivers (Narmada, Tapti, Mahanadi, Godavari, Krishna, Kaveri).",
-          diagramSvg: `<svg viewBox="0 0 1000 1150" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="oceanG_em_u2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
-              <linearGradient id="landG_em_u2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
-              <filter id="glow_em_u2" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3.5" result="blur"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
-            </defs>
-            <rect width="1000" height="1150" fill="url(#oceanG_em_u2)"/>
-            <g transform="translate(880, 110)" opacity="0.85"><circle cx="0" cy="0" r="28" fill="none" stroke="#38bdf8" stroke-dasharray="3,3" stroke-width="1.5"/><polygon points="0,-24 5,-5 0,0 -5,-5" fill="#ef4444"/><polygon points="0,24 5,5 0,0 -5,5" fill="#94a3b8"/><polygon points="24,0 5,5 0,0 5,-5" fill="#94a3b8"/><polygon points="-24,0 -5,5 0,0 -5,-5" fill="#94a3b8"/><text x="0" y="-30" fill="#ef4444" font-size="13" font-weight="900" text-anchor="middle">N</text></g>
-            <text x="130" y="780" fill="#38bdf8" opacity="0.38" font-size="20" font-weight="800" letter-spacing="3">ARABIAN SEA</text>
-            <text x="630" y="780" fill="#38bdf8" opacity="0.38" font-size="20" font-weight="800" letter-spacing="3">BAY OF BENGAL</text>
-            <text x="320" y="1120" fill="#38bdf8" opacity="0.38" font-size="18" font-weight="800" letter-spacing="3">INDIAN OCEAN</text>
-            <path fill="url(#landG_em_u2)" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round" d="M 370 40 C 385 30, 415 30, 430 45 C 450 65, 460 95, 450 120 C 470 125, 495 140, 485 165 C 465 175, 445 190, 430 215 C 415 235, 400 245, 375 250 C 350 255, 330 270, 315 295 C 300 315, 275 330, 255 350 C 235 370, 215 390, 205 420 C 195 440, 160 455, 140 480 C 120 500, 155 520, 190 525 C 220 530, 240 515, 255 530 C 265 545, 250 560, 220 575 C 195 590, 175 605, 195 625 C 225 635, 260 620, 280 600 C 295 580, 275 605, 270 638 C 265 670, 285 710, 305 750 C 325 790, 345 830, 365 870 C 385 910, 405 950, 420 990 C 425 1000, 435 995, 440 980 C 455 940, 465 900, 475 860 C 485 820, 495 780, 520 750 C 545 720, 575 690, 605 660 C 635 630, 660 600, 640 570 C 625 550, 645 530, 665 515 C 685 500, 695 480, 675 465 C 655 450, 630 460, 615 440 C 600 420, 580 405, 560 395 C 540 380, 560 360, 585 345 C 610 330, 635 315, 660 305 C 685 295, 715 295, 730 315 C 745 330, 775 320, 805 325 C 835 330, 860 345, 855 365 C 850 385, 825 395, 800 405 C 780 415, 755 435, 775 455 C 795 470, 770 490, 745 490 C 720 490, 705 470, 680 475 C 660 480, 645 495, 630 515 C 615 535, 585 550, 560 565 C 530 585, 510 610, 490 635 C 540 700, 570 670, 595 640 C 615 615, 630 585, 640 555 C 645 530, 625 510, 605 490 C 585 470, 565 440, 545 410 C 525 380, 505 350, 485 320 C 465 290, 445 260, 425 230 C 405 200, 385 170, 375 140 C 365 110, 360 70, 370 40 Z"/>
-            <path fill="url(#landG_em_u2)" stroke="#38bdf8" stroke-width="2" d="M 470 940 C 490 925, 515 940, 520 965 C 525 990, 510 1020, 490 1040 C 475 1050, 460 1045, 455 1025 C 450 1000, 455 960, 470 940 Z"/>
-            <!-- RIVERS -->
-            <path d="M 480 180 C 440 150, 400 120, 345 100 C 310 90, 275 110, 240 140" fill="none" stroke="#00f0ff" stroke-width="3.5" stroke-linecap="round" filter="url(#glow_em_u2)" />
-            <circle cx="480" cy="180" r="5" fill="#00f0ff" stroke="#fff" stroke-width="1.5" />
-            <text x="310" y="85" fill="#00f0ff" font-size="16" font-weight="900">River Indus</text>
-            <path d="M 425 230 C 428 260, 445 295, 470 325 C 490 345, 510 360, 535 365 C 565 370, 600 375, 630 400 C 645 415, 650 435, 655 460 C 660 480, 675 510, 680 535" fill="none" stroke="#38bdf8" stroke-width="4.5" stroke-linecap="round" filter="url(#glow_em_u2)" />
-            <circle cx="425" cy="230" r="6" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
-            <text x="490" y="325" fill="#38bdf8" font-size="19" font-weight="900">River Ganga</text>
-            <path d="M 560 190 C 630 200, 720 220, 810 280 C 835 310, 810 330, 770 350 C 730 375, 690 430, 680 535" fill="none" stroke="#67e8f9" stroke-width="4.5" stroke-linecap="round" filter="url(#glow_em_u2)" />
-            <circle cx="560" cy="190" r="5" fill="#67e8f9" stroke="#fff" stroke-width="1.5" />
-            <text x="730" y="315" fill="#67e8f9" font-size="18" font-weight="900">River Brahmaputra</text>
-            <path d="M 520 560 C 460 565, 380 575, 275 600" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" />
-            <circle cx="520" cy="560" r="5" fill="#22d3ee" stroke="#fff" stroke-width="1.5" />
-            <text x="330" y="555" fill="#22d3ee" font-size="17" font-weight="900">River Narmada âž” West</text>
-            <path d="M 510 590 C 450 600, 370 610, 265 625" fill="none" stroke="#06b6d4" stroke-width="3.5" stroke-linecap="round" />
-            <circle cx="510" cy="590" r="5" fill="#06b6d4" stroke="#fff" stroke-width="1.5" />
-            <text x="330" y="625" fill="#06b6d4" font-size="16" font-weight="900">River Tapti âž” West</text>
-            <path d="M 540 580 C 570 570, 600 565, 635 565" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
-            <circle cx="540" cy="580" r="5" fill="#38bdf8" stroke="#fff" stroke-width="1.5" />
-            <text x="590" y="555" fill="#38bdf8" font-size="17" font-weight="900">River Mahanadi</text>
-            <path d="M 300 660 C 370 670, 450 675, 520 685 C 560 690, 590 695, 615 700" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
-            <circle cx="300" cy="660" r="5" fill="#38bdf8" stroke="#fff" stroke-width="1.5" />
-            <text x="430" y="665" fill="#38bdf8" font-size="18" font-weight="900">River Godavari</text>
-            <path d="M 290 710 C 360 720, 430 735, 490 740 C 530 745, 555 750, 565 760" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" />
-            <circle cx="290" cy="710" r="5" fill="#60a5fa" stroke="#fff" stroke-width="1.5" />
-            <text x="390" y="725" fill="#60a5fa" font-size="17" font-weight="900">River Krishna</text>
-            <path d="M 340 860 C 380 870, 420 885, 455 895 C 475 900, 485 905, 495 910" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
-            <circle cx="340" cy="860" r="5" fill="#38bdf8" stroke="#fff" stroke-width="1.5" />
-            <text x="390" y="870" fill="#38bdf8" font-size="17" font-weight="900">River Kaveri</text>
-            <!-- Legend -->
-            <g transform="translate(60, 920)" opacity="0.95">
-              <rect width="270" height="180" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="1.5" />
-              <text x="15" y="28" fill="#38bdf8" font-size="15" font-weight="900">Rivers Legend</text>
-              <line x1="15" y1="52" x2="45" y2="52" stroke="#38bdf8" stroke-width="3" />
-              <text x="55" y="56" fill="#e2e8f0" font-size="13">East-Flowing Rivers (Bay of Bengal)</text>
-              <line x1="15" y1="82" x2="45" y2="82" stroke="#22d3ee" stroke-width="3" />
-              <text x="55" y="86" fill="#e2e8f0" font-size="13">West-Flowing Rivers (Arabian Sea)</text>
-              <circle cx="30" cy="112" r="4.5" fill="#38bdf8" stroke="#fff" stroke-width="1.5" />
-              <text x="55" y="116" fill="#e2e8f0" font-size="13">River Origin Source Point</text>
-              <text x="15" y="152" fill="#94a3b8" font-size="12">Class 10 State Board Curriculum</text>
-            </g>
-          </svg>`,
-          diagramCaption: "India Map: Major River Systems of India"
+          diagramImg: "images/soc_rivers_map.jpg",`n          diagramCaption: "India Map: Major River Systems of India (Indus, Ganga, Brahmaputra, Narmada, Tapti, Mahanadi, Godavari, Krishna, Kaveri)"
         }
       ]
     }

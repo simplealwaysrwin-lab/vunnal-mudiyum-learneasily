@@ -1,4 +1,4 @@
-﻿// 10-ஆம் வகுப்பு சமூக அறிவியல் - புவியியல் அலகு 1: இந்தியா - அமைவிடம், நிலத்தோற்றம் மற்றும் வடிகாலமைப்பு
+// 10-ஆம் வகுப்பு சமூக அறிவியல் - புவியியல் அலகு 1: இந்தியா - அமைவிடம், நிலத்தோற்றம் மற்றும் வடிகாலமைப்பு
 // தமிழ்நாடு அரசு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி
 
 const SOCIAL_UNIT_2_DATA = {
@@ -991,43 +991,8 @@ const SOCIAL_UNIT_2_DATA = {
             </div>
           </div>`,
           ansTamil: "இமயமலை ஆறுகள்: சிந்து, கங்கை, பிரம்மபுத்திரா. தீபகற்ப ஆறுகள்: நர்மதை, தபதி (மேற்குப் பாயும் ஆறுகள்); மகாநதி, கோதாவரி, கிருஷ்ணா, காவிரி (கிழக்குப் பாயும் ஆறுகள்).",
-          diagramSvg: `<svg viewBox="0 0 1000 1150" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="oceanG_u2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
-              <linearGradient id="landG_u2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
-            </defs>
-            <rect width="1000" height="1150" fill="url(#oceanG_u2)"/>
-            <path fill="url(#landG_u2)" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round" d="M 370 40 C 385 30, 415 30, 430 45 C 450 65, 460 95, 450 120 C 470 125, 495 140, 485 165 C 465 175, 445 190, 430 215 C 415 235, 400 245, 375 250 C 350 255, 330 270, 315 295 C 300 315, 275 330, 255 350 C 235 370, 215 390, 205 420 C 195 440, 160 455, 140 480 C 120 500, 155 520, 190 525 C 220 530, 240 515, 255 530 C 265 545, 250 560, 220 575 C 195 590, 175 605, 195 625 C 225 635, 260 620, 280 600 C 295 580, 275 605, 270 638 C 265 670, 285 710, 305 750 C 325 790, 345 830, 365 870 C 385 910, 405 950, 420 990 C 425 1000, 435 995, 440 980 C 455 940, 465 900, 475 860 C 485 820, 495 780, 520 750 C 545 720, 575 690, 605 660 C 635 630, 660 600, 640 570 C 625 550, 645 530, 665 515 C 685 500, 695 480, 675 465 C 655 450, 630 460, 615 440 C 600 420, 580 405, 560 395 C 540 380, 560 360, 585 345 C 610 330, 635 315, 660 305 C 685 295, 715 295, 730 315 C 745 330, 775 320, 805 325 C 835 330, 860 345, 855 365 C 850 385, 825 395, 800 405 C 780 415, 755 435, 775 455 C 795 470, 770 490, 745 490 C 720 490, 705 470, 680 475 C 660 480, 645 495, 630 515 C 615 535, 585 550, 560 565 C 530 585, 510 610, 490 635 C 540 700, 570 670, 595 640 C 615 615, 630 585, 640 555 C 645 530, 625 510, 605 490 C 585 470, 565 440, 545 410 C 525 380, 505 350, 485 320 C 465 290, 445 260, 425 230 C 405 200, 385 170, 375 140 C 365 110, 360 70, 370 40 Z"/>
-            <path fill="url(#landG_u2)" stroke="#38bdf8" stroke-width="2" d="M 470 940 C 490 925, 515 940, 520 965 C 525 990, 510 1020, 490 1040 C 475 1050, 460 1045, 455 1025 C 450 1000, 455 960, 470 940 Z"/>
-            <!-- 1. River Indus -->
-            <path d="M 470 140 Q 380 90 320 180 T 260 340 T 210 470" fill="none" stroke="#00f0ff" stroke-width="3" stroke-linecap="round" />
-            <text x="145" y="320" fill="#00f0ff" font-size="16" font-weight="900">சிந்து ஆறு (Indus)</text>
-            <!-- 2. River Ganga -->
-            <path d="M 410 240 Q 480 290 560 340 T 670 470" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" />
-            <text x="460" y="300" fill="#38bdf8" font-size="18" font-weight="900">கங்கை ஆறு (Ganga)</text>
-            <!-- 3. River Brahmaputra -->
-            <path d="M 500 170 Q 650 150 780 190 T 870 280 T 780 380 T 680 470" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-linecap="round" />
-            <text x="730" y="270" fill="#22d3ee" font-size="17" font-weight="900">பிரம்மபுத்திரா</text>
-            <!-- 4. River Narmada -->
-            <path d="M 480 540 Q 370 545 250 565" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
-            <text x="310" y="535" fill="#38bdf8" font-size="16" font-weight="900">நர்மதை (Narmada)</text>
-            <!-- 5. River Tapti -->
-            <path d="M 440 575 Q 350 580 245 595" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" />
-            <text x="290" y="605" fill="#38bdf8" font-size="15" font-weight="900">தபதி (Tapti)</text>
-            <!-- 6. River Mahanadi -->
-            <path d="M 520 540 Q 580 540 640 560" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
-            <text x="590" y="540" fill="#38bdf8" font-size="16" font-weight="900">மகாநதி</text>
-            <!-- 7. River Godavari -->
-            <path d="M 310 650 Q 450 660 590 710" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" />
-            <text x="430" y="660" fill="#38bdf8" font-size="17" font-weight="900">கோதாவரி (Godavari)</text>
-            <!-- 8. River Krishna -->
-            <path d="M 330 730 Q 440 735 540 770" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
-            <text x="410" y="745" fill="#38bdf8" font-size="16" font-weight="900">கிருஷ்ணா (Krishna)</text>
-            <!-- 9. River Kaveri -->
-            <path d="M 370 860 Q 430 870 475 880" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
-            <text x="390" y="855" fill="#38bdf8" font-size="16" font-weight="900">காவிரி (Kaveri)</text>
-          </svg>`,
-          diagramCaption: "இந்திய வரைபடம்: முக்கிய ஆறுகள் - கங்கை, பிரம்மபுத்திரா, சிந்து, நர்மதை, தபதி, மகாநதி, கோதாவரி, கிருஷ்ணா, காவிரி"
+          diagramImg: "images/soc_rivers_map.jpg",
+          diagramCaption: "இந்திய வரைபடம்: முக்கிய ஆறுகள் (India: Major River Systems - Indus, Ganga, Brahmaputra, Narmada, Tapti, Mahanadi, Godavari, Krishna, Kaveri)"
         }
       ]
     }

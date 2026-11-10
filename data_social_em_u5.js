@@ -33,8 +33,7 @@ const SOCIAL_EM_UNIT_5_DATA = {
           examTag: "Board Exam",
           q: "What was the collapse of the New York Stock Exchange on October 24, 1929 known as?",
           options: ["A) Black Thursday", "B) Bloody Sunday", "C) Good Friday", "D) Independence Day"],
-          ans: "Answer: <b>A) Black Thursday</b><br>Explanation: On October 24, 1929, share prices on Wall Street crashed catastrophically, triggering the worldwide Great Depression.",
-          ansTamil: "அமெரிக்க பங்குச் சந்தை சரிந்த நாள் 'கருப்பு வியாழன்' எனப்பட்டது."
+          ans: "Answer: <b>A) Black Thursday</b><br>Explanation: On October 24, 1929, share prices on Wall Street crashed catastrophically, triggering the worldwide Great Depression."
         },
         {
           id: "soc_em_5_2",
@@ -43,8 +42,7 @@ const SOCIAL_EM_UNIT_5_DATA = {
           examTag: "Govt Model",
           q: "What was the color of the shirts worn by Benito Mussolini's paramilitary fascist squads?",
           options: ["A) Red Shirts", "B) Black Shirts", "C) Blue Shirts", "D) Brown Shirts"],
-          ans: "Answer: <b>B) Black Shirts</b><br>Explanation: Mussolini organized armed volunteer squads named the 'Squadristi' who wore black shirts to intimidate trade unionists and political rivals.",
-          ansTamil: "முசோலினியின் தொண்டர்கள் கருப்புச் சட்டை அணிந்திருந்தனர்."
+          ans: "Answer: <b>B) Black Shirts</b><br>Explanation: Mussolini organized armed volunteer squads named the 'Squadristi' who wore black shirts to intimidate trade unionists and political rivals."
         },
         {
           id: "soc_em_5_3",
@@ -55,8 +53,7 @@ const SOCIAL_EM_UNIT_5_DATA = {
           ans: `<div style="line-height:1.7;">
             1. <b>Banking and Business Collapse:</b> Over 9,000 banks in the US failed, wiping out public deposits and forcing thousands of factories to shut down.<br>
             2. <b>Rampant Unemployment and Poverty:</b> Millions of industrial workers lost their jobs, while agrarian prices plummeted by 60%, pushing farmers into bankruptcy.
-          </div>`,
-          ansTamil: "வங்கிகள் மூடல், வேலையின்மை மற்றும் விவசாயப் பொருட்கள் விலை வீழ்ச்சி ஆகியவை ஏற்பட்டன."
+          </div>`
         },
         {
           id: "soc_em_5_4",
@@ -98,18 +95,17 @@ const SOCIAL_EM_UNIT_5_DATA = {
               <b>Exam Tip:</b> For an 8-mark question: Structure your answer under clear headings: Introduction + 5 Causes + 6 Worldwide Consequences + Conclusion to score full marks.
             </div>
           </div>`,
-          ansTamil: "1929 பங்குச் சந்தை வீழ்ச்சி மற்றும் மிகை உற்பத்தியால் பெரும் மந்தம் ஏற்பட்டது. வங்கிகள் முடக்கம், வேலையின்மை, சர்வதேச வர்த்தக சரிவு, விவசாய பாதிப்பு மற்றும் சர்வாதிகாரிகள் எழுச்சிக்கு இது வித்திட்டது.",
           checkpoints: [
-            { pt: 1, text: "Introduction: Severe worldwide economic depression triggered in 1929 originating in the USA.", taText: "அறிமுகம்: 1929-ல் அமெரிக்காவில் தொடங்கி உலகெங்கும் பரவிய பெரும் பொருளாதார மந்தநிலை." },
-            { pt: 2, text: "Stock market crash: Historic Wall Street crash on 'Black Thursday' (October 24, 1929).", taText: "காரணம் 1 - பங்குச் சந்தை வீழ்ச்சி: 1929 அக்டோபர் 24 வால் ஸ்ட்ரீட் பங்குச் சந்தை வீழ்ச்சி." },
-            { pt: 3, text: "Overproduction crisis: Industrial and agricultural output far outpaced market demand.", taText: "காரணம் 2 - அதிக உற்பத்தி: விற்பனைத் தேவையை விட தொழிற்துறை, விவசாயப் பொருட்கள் குவிந்தன." },
-            { pt: 4, text: "Reduced purchasing power: Low wages and farmer debt severely restricted buying ability.", taText: "காரணம் 3 - வாங்கும் சக்தி குறைவு: ஊதியக் குறைவால் மக்களிடம் பொருட்களை வாங்க பணமில்லை." },
-            { pt: 5, text: "Banking collapse & loan drought: Thousands of banks closed, freezing liquidity and new credit.", taText: "காரணம் 4 & 5 - வங்கிகள் நெருக்கடி & கடன் குறைவு: வங்கிகள் திவாலாகி புதிய கடன்களை நிறுத்தின." },
-            { pt: 6, text: "Mass unemployment & factory closures: Millions lost livelihoods as factories shut down.", taText: "விளைவு 1 & 2 - வேலையின்மை & தொழிற்சாலைகள் மூடல்: கோடிக்கணக்கானோர் வேலையிழந்தனர், ஆலைகள் மூடப்பட்டன." },
-            { pt: 7, text: "Agricultural crisis: Crop prices plunged by 60%, ruining small farmers worldwide.", taText: "விளைவு 3 - விவசாய பாதிப்பு: விளைபொருட்கள் விலை 60% சரிந்து விவசாயிகள் கடனில் மூழ்கினர்." },
-            { pt: 8, text: "International trade collapse: High protective tariffs caused global trade to contract by over 50%.", taText: "விளைவு 4 - உலக வர்த்தகம் சரிவு: பாதுகாப்பு வரிகளால் சர்வதேச வணிகம் பாதியாகக் குறைந்தது." },
-            { pt: 9, text: "Poverty & political unrest: Deep poverty paved way for Fascist and Nazi totalitarian dictators.", taText: "விளைவு 5 & 6 - வறுமை & அரசியல் மாற்றங்கள்: வாழ்க்கைத் தரம் சரிந்து ஹிட்லர், முசோலினி ஆட்சியமைத்தனர்." },
-            { pt: 10, text: "Conclusion & FDR New Deal: Global recovery driven by public works and economic reforms.", taText: "முடிவுரை: அதிபர் ரூஸ்வெல்ட்டின் 'புதிய ஒப்பந்தம்' (New Deal) திட்டங்கள் மூலம் உலகம் மீண்டது." }
+            { pt: 1, text: "Introduction: Severe worldwide economic depression triggered in 1929 originating in the USA." },
+            { pt: 2, text: "Stock market crash: Historic Wall Street crash on 'Black Thursday' (October 24, 1929)." },
+            { pt: 3, text: "Overproduction crisis: Industrial and agricultural output far outpaced market demand." },
+            { pt: 4, text: "Reduced purchasing power: Low wages and farmer debt severely restricted buying ability." },
+            { pt: 5, text: "Banking collapse & loan drought: Thousands of banks closed, freezing liquidity and new credit." },
+            { pt: 6, text: "Mass unemployment & factory closures: Millions lost livelihoods as factories shut down." },
+            { pt: 7, text: "Agricultural crisis: Crop prices plunged by 60%, ruining small farmers worldwide." },
+            { pt: 8, text: "International trade collapse: High protective tariffs caused global trade to contract by over 50%." },
+            { pt: 9, text: "Poverty & political unrest: Deep poverty paved way for Fascist and Nazi totalitarian dictators." },
+            { pt: 10, text: "Conclusion & FDR New Deal: Global recovery driven by public works and economic reforms." }
           ]
         }
       ]
@@ -133,8 +129,7 @@ const SOCIAL_EM_UNIT_5_DATA = {
             • Signed in 1929 between the Italian government under Mussolini and Pope Pius XI.<br>
             • Recognised the <b>Vatican City</b> as an independent sovereign state ruled by the Pope.<br>
             • In return, the Pope recognised the Kingdom of Italy, securing church support for Mussolini's regime.
-          </div>`,
-          ansTamil: "லாட்டரன் உடன்படிக்கை மூலம் வாடிகன் தனி நாடானது; போப் ஆதரவை முசோலினி பெற்றார்."
+          </div>`
         },
         {
           id: "soc_em_5_6",
@@ -153,18 +148,17 @@ const SOCIAL_EM_UNIT_5_DATA = {
             • <b>Totalitarian 'Il Duce':</b> Disbanded all opposition parties, silenced the press, and banned strikes, creating a corporatist police state.<br>
             • <b>Aggressive Foreign Policy:</b> Invaded Ethiopia in 1935 and forged the Rome-Berlin Axis with Hitler.
           </div>`,
-          ansTamil: "போர் ஏமாற்றம், வேலையின்மை மற்றும் கம்யூனிச பயத்தால் முசோலினி ஆட்சியைக் கைப்பற்றினார். கருப்புச் சட்டையினர் மூலம் சர்வாதிகாரியாக மாறினார்.",
           checkpoints: [
-            { pt: 1, text: "National humiliation: Italy felt betrayed at Versailles despite being on winning side.", taText: "தேசிய ஏமாற்றம்: போரில் வென்றும் இத்தாலிக்கு உரிய நிலப்பகுதிகள் கிடைக்கவில்லை." },
-            { pt: 2, text: "Economic turmoil: Post-war inflation, national debt, and strikes crippled factories.", taText: "பொருளாதார நெருக்கடி: பணவீக்கம், கடன் சுமை மற்றும் தொடர் வேலைநிறுத்தங்களால் நாடு தத்தளித்தது." },
-            { pt: 3, text: "Fear of Communism: Landlords and industrial tycoons backed Mussolini to crush socialists.", taText: "கம்யூனிச பயம்: பொதுவுடைமைப் பரவலைத் தடுக்க நிலச்சுவான்தாரர்கள் முசோலினியை ஆதரித்தனர்." },
-            { pt: 4, text: "Fasci di Combattimento: Founded by Benito Mussolini in Milan in 1919.", taText: "பாசிசக் கட்சி: 1919-ல் மிலன் நகரில் முசோலினியால் பாசிச அமைப்பு தொடங்கப்பட்டது." },
-            { pt: 5, text: "Black Shirts (Squadristi): Armed paramilitary squads terrorized political opponents.", taText: "கருப்புச் சட்டையினர்: வன்முறைப் படை மூலம் கம்யூனிஸ்டுகளையும் எதிரிகளையும் தாக்கினர்." },
-            { pt: 6, text: "March on Rome (1922): Mussolini seized power as King Emmanuel III appointed him PM.", taText: "ரோம் அணிவகுப்பு: 1922-ல் ரோம் நோக்கி அணிவகுத்து மன்னரிடமிருந்து ஆட்சியைக் கைப்பற்றினார்." },
-            { pt: 7, text: "Totalitarian control: Banned opposition parties, independent newspapers, and trade unions.", taText: "முழு சர்வாதிகாரம்: அனைத்து எதிர்க் கட்சிகள் மற்றும் பத்திரிகைகளைத் தடை செய்தார்." },
-            { pt: 8, text: "Title of 'Il Duce': Mussolini proclaimed himself supreme dictator of the Italian state.", taText: "டூஸ் பட்டம்: தன்னை நாட்டின் முழுமுதல் தலைவராக அறிவித்துக் கொண்டார்." },
-            { pt: 9, text: "Lateran Treaty (1929): Granted independence to Vatican City and won Papal goodwill.", taText: "லாட்டரன் உடன்படிக்கை: வாடிகன் நகருக்கு தன்னாட்சி வழங்கி போப்பின் ஆதரவைப் பெற்றார்." },
-            { pt: 10, text: "Imperial aggression: Invaded Ethiopia in 1935, cementing the Rome-Berlin Axis.", taText: "ஆக்கிரமிப்பு போர்: 1935-ல் எத்தியோப்பியாவை ஆக்கிரமித்து ஹிட்லருடன் கைகோர்த்தார்." }
+            { pt: 1, text: "National humiliation: Italy felt betrayed at Versailles despite being on winning side." },
+            { pt: 2, text: "Economic turmoil: Post-war inflation, national debt, and strikes crippled factories." },
+            { pt: 3, text: "Fear of Communism: Landlords and industrial tycoons backed Mussolini to crush socialists." },
+            { pt: 4, text: "Fasci di Combattimento: Founded by Benito Mussolini in Milan in 1919." },
+            { pt: 5, text: "Black Shirts (Squadristi): Armed paramilitary squads terrorized political opponents." },
+            { pt: 6, text: "March on Rome (1922): Mussolini seized power as King Emmanuel III appointed him PM." },
+            { pt: 7, text: "Totalitarian control: Banned opposition parties, independent newspapers, and trade unions." },
+            { pt: 8, text: "Title of 'Il Duce': Mussolini proclaimed himself supreme dictator of the Italian state." },
+            { pt: 9, text: "Lateran Treaty (1929): Granted independence to Vatican City and won Papal goodwill." },
+            { pt: 10, text: "Imperial aggression: Invaded Ethiopia in 1935, cementing the Rome-Berlin Axis." }
           ]
         }
       ]
@@ -196,30 +190,7 @@ const SOCIAL_EM_UNIT_5_DATA = {
             </div>
           </div>`,
           explanation: "Geopolitical flashpoints between 1919 and 1939: Rise of Fascism, Nazism, League of Nations, and anti-colonial movements.",
-          diagramSvg: `<svg viewBox="0 0 1000 650" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="wOceanG_em_u5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
-              <linearGradient id="wLandG_em_u5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
-            </defs>
-            <rect width="1000" height="650" fill="url(#wOceanG_em_u5)"/>
-            <path fill="url(#wLandG_em_u5)" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round" d="M 330 140 C 370 120, 420 110, 480 120 C 530 110, 600 130, 680 150 C 710 180, 720 220, 670 240 C 640 260, 600 250, 580 270 C 540 290, 520 330, 480 340 C 440 360, 410 380, 380 360 C 350 340, 370 310, 350 280 C 330 250, 310 220, 330 180 Z" />
-            <path fill="url(#wLandG_em_u5)" stroke="#38bdf8" stroke-width="2" d="M 440 330 C 460 340, 480 380, 475 420 C 460 425, 450 400, 435 360 Z" />
-            <path fill="url(#wLandG_em_u5)" stroke="#38bdf8" stroke-width="2" d="M 280 430 C 380 420, 500 425, 580 440 C 600 480, 570 560, 500 620 C 440 640, 380 610, 340 550 C 300 500, 260 460, 280 430 Z" />
-            <path fill="url(#wLandG_em_u5)" stroke="#38bdf8" stroke-width="2" d="M 680 150 C 760 140, 850 170, 920 200 C 940 260, 900 320, 850 350 C 780 370, 720 320, 680 280 Z" />
-            <!-- Markers -->
-            <circle cx="435" cy="255" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
-            <text x="445" y="245" fill="#ef4444" font-size="16" font-weight="900">Germany (Berlin - Nazism)</text>
-            <circle cx="410" cy="295" r="7" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
-            <text x="290" y="295" fill="#38bdf8" font-size="15" font-weight="900">Geneva (League of Nations)</text>
-            <circle cx="445" cy="365" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
-            <text x="458" y="375" fill="#ef4444" font-size="16" font-weight="900">Italy (Rome - Fascism)</text>
-            <circle cx="480" cy="595" r="8" fill="#10b981" stroke="#ffffff" stroke-width="2" />
-            <text x="495" y="605" fill="#10b981" font-size="16" font-weight="900">South Africa (ANC)</text>
-            <circle cx="750" cy="380" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
-            <text x="765" y="385" fill="#f59e0b" font-size="16" font-weight="900">Vietnam (Ho Chi Minh)</text>
-            <circle cx="890" cy="260" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
-            <text x="810" y="245" fill="#a855f7" font-size="16" font-weight="900">Japan (Manchurian Invasion)</text>
-          </svg>`,
+          diagramImg: "images/soc_interwar_map.jpg",
           diagramCaption: "World Map: The World between the Two World Wars (1919-1939)"
         }
       ]

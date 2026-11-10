@@ -175,36 +175,7 @@ const SOCIAL_UNIT_9_DATA = {
             </div>
           </div>`,
           ansTamil: "நேச நாடுகள் மையம்: பிரிட்டன், நார்மண்டி (D-Day 1944). அச்சு நாடுகள்: ஜெர்மனி. திருப்புமுனை: ஸ்டாலின்கிராட். பசிபிக் போர்: பேர்ல் ஹார்பர் (1941), ஹிரோஷிமா & நாகசாகி (1945).",
-          diagramSvg: `<svg viewBox="0 0 1000 650" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="oceanG_u9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
-              <linearGradient id="landG_u9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
-            </defs>
-            <rect width="1000" height="650" fill="url(#oceanG_u9)"/>
-            <path fill="url(#landG_u9)" stroke="#38bdf8" stroke-width="2" d="M 120 420 C 140 370, 200 360, 220 320 C 240 280, 230 240, 270 210 C 310 180, 370 190, 420 170 C 470 150, 520 140, 580 160 C 650 180, 720 170, 800 190 C 850 200, 920 220, 960 260 L 960 480 C 880 500, 820 460, 750 480 C 700 490, 640 520, 580 500 C 520 480, 480 510, 430 490 C 380 470, 320 530, 260 520 C 200 510, 150 470, 120 420 Z"/>
-            <!-- UK Island -->
-            <path fill="url(#landG_u9)" stroke="#38bdf8" stroke-width="1.8" d="M 270 180 C 290 150, 330 140, 340 170 C 350 200, 330 240, 300 250 C 270 260, 250 220, 270 180 Z"/>
-            <!-- 1. Great Britain -->
-            <circle cx="310" cy="190" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
-            <text x="180" y="195" fill="#38bdf8" font-size="16" font-weight="900">பிரிட்டன் (சர்ச்சில்)</text>
-            <!-- 2. Normandy Beach -->
-            <circle cx="330" cy="270" r="8" fill="#22c55e" stroke="#ffffff" stroke-width="2" />
-            <text x="170" y="275" fill="#22c55e" font-size="16" font-weight="900">நார்மண்டி (D-Day 1944)</text>
-            <!-- 3. Germany (Berlin) -->
-            <circle cx="450" cy="250" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
-            <text x="465" y="245" fill="#ef4444" font-size="16" font-weight="900">ஜெர்மனி (பெர்லின்)</text>
-            <!-- 4. Stalingrad -->
-            <circle cx="680" cy="280" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
-            <text x="695" y="285" fill="#f59e0b" font-size="16" font-weight="900">ஸ்டாலின்கிராட் (1942-43)</text>
-            <!-- 5. Hiroshima & Nagasaki -->
-            <circle cx="910" cy="340" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
-            <text x="750" y="380" fill="#ef4444" font-size="16" font-weight="900">ஹிரோஷிமா &amp; நாகசாகி (1945)</text>
-            <!-- 6. Pearl Harbor (inset box) -->
-            <rect x="50" y="500" width="220" height="90" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
-            <circle cx="80" cy="545" r="7" fill="#f59e0b" stroke="#fff" stroke-width="1.5" />
-            <text x="100" y="540" fill="#f59e0b" font-size="14" font-weight="900">பேர்ல் ஹார்பர்</text>
-            <text x="100" y="560" fill="#94a3b8" font-size="12">ஹவாய் (டிசம்பர் 7, 1941)</text>
-          </svg>`,
+          diagramImg: "images/soc_ww2_map.jpg",
           diagramCaption: "உலக வரைபடம்: இரண்டாம் உலகப் போர் திருப்புமுனை நிகழ்விடங்கள் (WWII Key Theaters & D-Day)"
         }
       ]

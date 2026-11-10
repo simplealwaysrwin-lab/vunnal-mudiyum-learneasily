@@ -39,8 +39,7 @@ const SOCIAL_EM_UNIT_11_DATA = {
           examTag: "Public Exam",
           q: "What is the minimum age required to be appointed as the Governor of a State in India?",
           options: ["A) 25 years", "B) 30 years", "C) 35 years", "D) 40 years"],
-          ans: "Answer: <b>C) 35 years</b><br>Explanation: Under Article 157 of the Indian Constitution, a citizen must have completed 35 years of age and not hold any office of profit to be eligible for appointment as Governor.",
-          ansTamil: "ஆளுநராக நியமிக்கப்பட குறைந்தபட்ச வயது 35 ஆகும்."
+          ans: "Answer: <b>C) 35 years</b><br>Explanation: Under Article 157 of the Indian Constitution, a citizen must have completed 35 years of age and not hold any office of profit to be eligible for appointment as Governor."
         },
         {
           id: "soc_em_11_2",
@@ -49,8 +48,7 @@ const SOCIAL_EM_UNIT_11_DATA = {
           examTag: "Govt Model",
           q: "On which date was the Tamil Nadu Legislative Council officially abolished?",
           options: ["A) 26th January 1950", "B) 1st November 1986", "C) 15th August 1991", "D) 1st November 2000"],
-          ans: "Answer: <b>B) 1st November 1986</b><br>Explanation: The Tamil Nadu Legislative Council (Abolition) Act came into force on 1st November 1986, converting Tamil Nadu into a unicameral legislature.",
-          ansTamil: "தமிழகத்தில் 1986 நவம்பர் 1 முதல் சட்ட மேலவை நீக்கப்பட்டது."
+          ans: "Answer: <b>B) 1st November 1986</b><br>Explanation: The Tamil Nadu Legislative Council (Abolition) Act came into force on 1st November 1986, converting Tamil Nadu into a unicameral legislature."
         },
         {
           id: "soc_em_11_3",
@@ -64,8 +62,7 @@ const SOCIAL_EM_UNIT_11_DATA = {
             2. He / She must have completed 35 years of age.<br>
             3. He / She must not be a member of either House of Parliament or a State Legislature.<br>
             4. He / She must not hold any other office of profit under the government.
-          </div>`,
-          ansTamil: "இந்தியக் குடிமகன், 35 வயது பூர்த்தி, எப்பதவியிலும் இருக்கக்கூடாது என்பவை ஆளுநரின் தகுதிகள்."
+          </div>`
         },
         {
           id: "soc_em_11_4",
@@ -76,8 +73,7 @@ const SOCIAL_EM_UNIT_11_DATA = {
           ans: `<div style="line-height:1.7;">
             1. <b>Formation of Ministry:</b> Recommends the names of ministers to the Governor and allocates portfolios among them.<br>
             2. <b>Chief Policy Maker:</b> Guides and coordinates policies across departments, acting as the chief government spokesperson on the floor of the Assembly.
-          </div>`,
-          ansTamil: "அமைச்சர்களைத் தேர்வு செய்தல் மற்றும் மாநில அரசின் கொள்கைகளை வகுத்தல் முதலமைச்சரின் பணிகளாகும்."
+          </div>`
         },
         {
           id: "soc_em_11_5",
@@ -146,8 +142,7 @@ const SOCIAL_EM_UNIT_11_DATA = {
               </tbody>
               </table>
             </div>
-          </div>`,
-          ansTamil: "சட்டமன்றப் பேரவைக்கு மக்கள் வாக்களிப்பர் (வயது 25); மேலவை மறைமுகத் தேர்வு கொண்ட நிரந்தர அவை (வயது 30)."
+          </div>`
         },
         {
           id: "soc_em_11_7",
@@ -162,8 +157,7 @@ const SOCIAL_EM_UNIT_11_DATA = {
             3. <i>Prohibition</i> (to prevent lower courts from exceeding jurisdiction)<br>
             4. <i>Certiorari</i> (to quash illegal orders of lower judicial bodies)<br>
             5. <i>Quo-Warranto</i> (to challenge unauthorized occupation of public office).
-          </div>`,
-          ansTamil: "சரத்து 226-ன் கீழ் உயர் நீதிமன்றம் 5 வகையான நீதிப்பேராணைகளை வெளியிடுகிறது."
+          </div>`
         },
         {
           id: "soc_em_11_8",
@@ -224,30 +218,7 @@ const SOCIAL_EM_UNIT_11_DATA = {
             </div>
           </div>`,
           explanation: "State administrative headquarters, executive secretariats, and High Court judicial seats in South India.",
-          diagramSvg: `<svg viewBox="0 0 1000 1150" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="oceanG_em_u11" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
-              <linearGradient id="landG_em_u11" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
-            </defs>
-            <rect width="1000" height="1150" fill="url(#oceanG_em_u11)"/>
-            <path fill="url(#landG_em_u11)" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round" d="M 370 40 C 385 30, 415 30, 430 45 C 450 65, 460 95, 450 120 C 470 125, 495 140, 485 165 C 465 175, 445 190, 430 215 C 415 235, 400 245, 375 250 C 350 255, 330 270, 315 295 C 300 315, 275 330, 255 350 C 235 370, 215 390, 205 420 C 195 440, 160 455, 140 480 C 120 500, 155 520, 190 525 C 220 530, 240 515, 255 530 C 265 545, 250 560, 220 575 C 195 590, 175 605, 195 625 C 225 635, 260 620, 280 600 C 295 580, 275 605, 270 638 C 265 670, 285 710, 305 750 C 325 790, 345 830, 365 870 C 385 910, 405 950, 420 990 C 425 1000, 435 995, 440 980 C 455 940, 465 900, 475 860 C 485 820, 495 780, 520 750 C 545 720, 575 690, 605 660 C 635 630, 660 600, 640 570 C 625 550, 645 530, 665 515 C 685 500, 695 480, 675 465 C 655 450, 630 460, 615 440 C 600 420, 580 405, 560 395 C 540 380, 560 360, 585 345 C 610 330, 635 315, 660 305 C 685 295, 715 295, 730 315 C 745 330, 775 320, 805 325 C 835 330, 860 345, 855 365 C 850 385, 825 395, 800 405 C 780 415, 755 435, 775 455 C 795 470, 770 490, 745 490 C 720 490, 705 470, 680 475 C 660 480, 645 495, 630 515 C 615 535, 585 550, 560 565 C 530 585, 510 610, 490 635 C 540 700, 570 670, 595 640 C 615 615, 630 585, 640 555 C 645 530, 625 510, 605 490 C 585 470, 565 440, 545 410 C 525 380, 505 350, 485 320 C 465 290, 445 260, 425 230 C 405 200, 385 170, 375 140 C 365 110, 360 70, 370 40 Z"/>
-            <path fill="url(#landG_em_u11)" stroke="#38bdf8" stroke-width="2" d="M 470 940 C 490 925, 515 940, 520 965 C 525 990, 510 1020, 490 1040 C 475 1050, 460 1045, 455 1025 C 450 1000, 455 960, 470 940 Z"/>
-            <!-- 1. Chennai -->
-            <circle cx="485" cy="835" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
-            <text x="505" y="835" fill="#ef4444" font-size="19" font-weight="900">🏛️ CHENNAI (Fort St. George &amp; Madras High Court)</text>
-            <!-- 2. Madurai -->
-            <circle cx="440" cy="930" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
-            <text x="455" y="935" fill="#f59e0b" font-size="18" font-weight="900">Madurai (High Court Bench 2004)</text>
-            <!-- 3. Bengaluru -->
-            <circle cx="410" cy="810" r="8" fill="#10b981" stroke="#ffffff" stroke-width="2" />
-            <text x="210" y="810" fill="#10b981" font-size="17" font-weight="900">Bengaluru (Karnataka Capital)</text>
-            <!-- 4. Thiruvananthapuram -->
-            <circle cx="380" cy="970" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
-            <text x="170" y="975" fill="#38bdf8" font-size="17" font-weight="900">Thiruvananthapuram (Kerala)</text>
-            <!-- 5. Hyderabad -->
-            <circle cx="460" cy="680" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
-            <text x="475" y="685" fill="#a855f7" font-size="17" font-weight="900">Hyderabad (Telangana Capital)</text>
-          </svg>`,
+          diagramImg: "images/soc_stategov_map.jpg",
           diagramCaption: "India Map: State Capitals and High Court Seats of South India"
         }
       ]

@@ -1,4 +1,4 @@
-﻿// 10-ஆம் வகுப்பு சமூக அறிவியல் - வரலாறு அலகு 1: முதல் உலகப்போரின் வெடிப்பும் அதன் பின்விளைவுகளும்
+// 10-ஆம் வகுப்பு சமூக அறிவியல் - வரலாறு அலகு 1: முதல் உலகப்போரின் வெடிப்பும் அதன் பின்விளைவுகளும்
 // தமிழ்நாடு அரசு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி
 
 const SOCIAL_UNIT_1_DATA = {
@@ -806,39 +806,8 @@ const SOCIAL_UNIT_1_DATA = {
             </div>
           </div>`,
           ansTamil: "நேச நாடுகள்: பிரிட்டன், பிரான்ஸ், ரஷ்யா. மைய நாடுகள்: ஜெர்மனி, ஆஸ்திரிய-ஹங்கேரி, துருக்கி. போர் வெடித்த இடம்: சரஜீவோ.",
-          diagramSvg: `<svg viewBox="0 0 1000 650" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="oceanG_u1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
-              <linearGradient id="landG_u1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
-            </defs>
-            <rect width="1000" height="650" fill="url(#oceanG_u1)"/>
-            <!-- Simplified Europe Outline for WWI -->
-            <path fill="url(#landG_u1)" stroke="#38bdf8" stroke-width="2" d="M 120 420 C 140 370, 200 360, 220 320 C 240 280, 230 240, 270 210 C 310 180, 370 190, 420 170 C 470 150, 520 140, 580 160 C 650 180, 720 170, 800 190 C 850 200, 920 220, 960 260 L 960 480 C 880 500, 820 460, 750 480 C 700 490, 640 520, 580 500 C 520 480, 480 510, 430 490 C 380 470, 320 530, 260 520 C 200 510, 150 470, 120 420 Z"/>
-            <!-- UK Island -->
-            <path fill="url(#landG_u1)" stroke="#38bdf8" stroke-width="1.8" d="M 270 180 C 290 150, 330 140, 340 170 C 350 200, 330 240, 300 250 C 270 260, 250 220, 270 180 Z"/>
-            <!-- 1. Great Britain -->
-            <circle cx="310" cy="190" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
-            <text x="180" y="195" fill="#38bdf8" font-size="16" font-weight="900">1. கிரேட் பிரிட்டன் (நேச நாடு)</text>
-            <!-- 2. France -->
-            <circle cx="350" cy="300" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
-            <text x="210" y="325" fill="#38bdf8" font-size="16" font-weight="900">2. பிரான்ஸ் (நேச நாடு)</text>
-            <!-- 3. Germany -->
-            <circle cx="450" cy="270" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
-            <text x="465" y="265" fill="#ef4444" font-size="16" font-weight="900">4. ஜெர்மனி (மைய நாடு)</text>
-            <!-- 4. Austria-Hungary -->
-            <circle cx="510" cy="330" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
-            <text x="525" y="335" fill="#ef4444" font-size="16" font-weight="900">5. ஆஸ்திரிய-ஹங்கேரி</text>
-            <!-- 5. Russia -->
-            <circle cx="720" cy="230" r="10" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
-            <text x="740" y="235" fill="#38bdf8" font-size="17" font-weight="900">3. ரஷ்யா (நேச நாடு)</text>
-            <!-- 6. Sarajevo -->
-            <circle cx="520" cy="400" r="7" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
-            <text x="535" y="405" fill="#f59e0b" font-size="15" font-weight="900">7. சரஜீவோ (போர் வெடித்த இடம்)</text>
-            <!-- 7. Turkey -->
-            <circle cx="680" cy="440" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
-            <text x="700" y="445" fill="#ef4444" font-size="16" font-weight="900">6. துருக்கி / ஒட்டோமான்</text>
-          </svg>`,
-          diagramCaption: "உலக வரைபடம்: முதல் உலகப் போர் நேச நாடுகள் & மைய நாடுகள் (Allied & Central Powers)"
+          diagramImg: "images/soc_ww1_map.jpg",
+          diagramCaption: "உலக வரைபடம்: முதல் உலகப் போர் நேச நாடுகள் & மைய நாடுகள் (World War I: Allied & Central Powers - 1914)"
         }
       ]
     }

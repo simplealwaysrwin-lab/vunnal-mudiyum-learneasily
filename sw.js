@@ -1,10 +1,10 @@
-// =======================================================================
+﻿// =======================================================================
 // உன்னால் முடியும் (Vunnal Mudiyum) - Progressive Web App Service Worker
 // Enables 100% Offline Study for 10th Standard Students
 // Zero-Downtime Architecture - Auto-Update on Deploy Engine
 // =======================================================================
 
-const CACHE_NAME = 'vm-offline-v20261110_v63';
+const CACHE_NAME = 'vm-offline-v20261110_v64';
 
 // Core essential assets for instant offline app shell and subject question banks
 const PRECACHE_ASSETS = [
@@ -67,6 +67,30 @@ const PRECACHE_ASSETS = [
   './images/sci_bb_myopia_hypermetropia.jpg',
   './images/sci_bb_hypermetropia.jpg',
   './images/sci_bb_myopia.jpg',
+  './images/soc_ww1_map.jpg',
+  './soc_ww1_map.jpg',
+  './images/soc_rivers_map.jpg',
+  './soc_rivers_map.jpg',
+  './images/soc_constitution_map.jpg',
+  './soc_constitution_map.jpg',
+  './images/soc_industry_map.jpg',
+  './soc_industry_map.jpg',
+  './images/soc_interwar_map.jpg',
+  './soc_interwar_map.jpg',
+  './images/soc_climate_map.jpg',
+  './soc_climate_map.jpg',
+  './images/soc_union_map.jpg',
+  './soc_union_map.jpg',
+  './images/soc_ports_map.jpg',
+  './soc_ports_map.jpg',
+  './images/soc_ww2_map.jpg',
+  './soc_ww2_map.jpg',
+  './images/soc_soils_map.jpg',
+  './soc_soils_map.jpg',
+  './images/soc_stategov_map.jpg',
+  './soc_stategov_map.jpg',
+  './images/soc_food_map.jpg',
+  './soc_food_map.jpg',
   // All 32 Subject Data Banks (Units 1-4 across all subjects)
   './data_tamil_u1.js',
   './data_tamil_u2.js',

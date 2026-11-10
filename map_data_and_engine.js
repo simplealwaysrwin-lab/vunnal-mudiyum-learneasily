@@ -62,13 +62,13 @@
       id: "ind_mumbai",
       numLabel: "(v)",
       nameTamil: "மும்பை துறைமுகம்",
-      nameEnglish: "Mumbai",
-      category: "Port / City",
-      coords: { x: 24.8, y: 63.5 },
-      teachScriptTamil: "ஐந்தாவது இடம்: மும்பை. மகாராஷ்டிரா மாநிலத்தின் தலைநகரம் மற்றும் இந்தியாவின் மிகப்பெரிய இயற்கை துறைமுக நகரம். மேற்கு கடற்கரையில் அமைந்துள்ள முக்கிய தீவு நகரத்தைக் குறிக்கவும்.",
-      teachScriptEnglish: "Fifth place: Mumbai. Capital of Maharashtra and largest natural deepwater port on India's western coast.",
-      examTipTamil: "இந்தியாவின் நுழைவு வாயில் அல்லது நிதித் தலைநகரம் அல்லது மேற்கு கடற்கரை துறைமுகம் மும்பை.",
-      examTipEnglish: "Gateway of India, financial capital, or major western port is Mumbai."
+      nameEnglish: "Mumbai Port",
+      category: "Port / Coastal City",
+      coords: { x: 27.0, y: 63.8 },
+      teachScriptTamil: "ஐந்தாவது இடம்: மும்பை துறைமுகம். மகாராஷ்டிரா மாநிலத்தின் மேற்கு கடற்கரை வளைவில் அமைந்துள்ள இந்தியாவின் மிகப்பெரிய இயற்கை ஆழ்கடல் துறைமுகம் ஆகும். மேற்கு கடற்கரைக் கோட்டின் விளிம்பில் துல்லியமாகக் குறிக்கவும்.",
+      teachScriptEnglish: "Fifth place: Mumbai Port. Capital of Maharashtra and largest natural deepwater port on India's western coast, located directly on the coastal edge at the indentation in Maharashtra.",
+      examTipTamil: "மேற்கு கடற்கரைக் கோட்டின் வளைவுப் புள்ளியில் துல்லியமாக புள்ளியிட்டு 'மும்பை துறைமுகம்' எனப் பெயரிடவும்.",
+      examTipEnglish: "Mark the indicator dot directly on the western coastal edge at the indentation in Maharashtra and label as 'Mumbai Port'."
     },
     {
       id: "ind_air_chennai_kolkata",
@@ -1304,15 +1304,22 @@
         `;
       }
 
-      // 5. MUMBAI
+      // 5. MUMBAI PORT (Sitting directly on the western coastline at the Maharashtra indentation)
       if (placeId === 'ind_mumbai') {
+        const portLabel = isEm ? 'MUMBAI PORT' : 'மும்பை துறைமுகம்';
         return `
           <g id="feature_mumbai">
-            <circle cx="248" cy="635" r="20" fill="none" stroke="#ef4444" stroke-width="2.5" class="pin-ripple" />
-            <circle cx="248" cy="635" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
-            <path d="M 248 625 L 248 642 M 242 632 L 254 632 M 241 640 Q 248 647 255 640" fill="none" stroke="#ffffff" stroke-width="2" />
-            <text x="120" y="635" fill="#ef4444" font-size="24" font-weight="900" letter-spacing="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">
-              ${labelText}
+            <!-- Ripple pulse effect centered on the coastal edge -->
+            <circle cx="270" cy="638" r="20" fill="none" stroke="#ef4444" stroke-width="2.5" class="pin-ripple" />
+            <!-- Pin circle directly sitting on the coastal edge -->
+            <circle cx="270" cy="638" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+            <!-- Anchor symbol -->
+            <path d="M 270 630 L 270 644 M 264 636 L 276 636 M 263 642 Q 270 648 277 642" fill="none" stroke="#ffffff" stroke-width="1.8" />
+            <!-- Leader pointer line from label to coastal dot -->
+            <line x1="242" y1="638" x2="258" y2="638" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" />
+            <!-- Label in Arabian Sea area pointing to coastal dot -->
+            <text x="238" y="643" text-anchor="end" fill="#ef4444" font-size="22" font-weight="900" letter-spacing="1.2" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.95))">
+              ${portLabel}
             </text>
           </g>
         `;

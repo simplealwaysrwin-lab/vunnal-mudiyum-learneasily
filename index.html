@@ -89,7 +89,7 @@
 <script>
   // Build tracker & Auto-Cache Invalidator for Instant Updates
   (function() {
-    const CURRENT_BUILD = '20261110_v65';
+    const CURRENT_BUILD = '20261110_v66';
     try {
       const prevBuild = localStorage.getItem('vm_build_ver');
       if (prevBuild && prevBuild !== CURRENT_BUILD) {
@@ -7789,7 +7789,7 @@
                             </button>
                           </div>
                           <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
-                            <img src="${(isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png' ? 'images/math_bb_ex1_4_en.png' : item.diagramImg}" alt="${(item.diagramCaption || item.q || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" class="diagram-img" onerror="handleDiagramImgError(this)" onclick="openImageModalFromWrap(this)">
+                            <img src="${((isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png') ? 'images/math_bb_ex1_4_en.png' : (item.diagramImg && item.diagramImg.startsWith('images/soc_') ? item.diagramImg.replace('images/', '') : item.diagramImg)}" alt="${(item.diagramCaption || item.q || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" class="diagram-img" onerror="handleDiagramImgError(this)" onclick="openImageModalFromWrap(this)">
                             <div class="diagram-zoom-hint" onclick="openImageModalFromWrap(this)">
                               <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
                             </div>
@@ -7891,7 +7891,7 @@
                         </button>
                       </div>
                       <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
-                        <img src="${(isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png' ? 'images/math_bb_ex1_4_en.png' : item.diagramImg}" alt="${(item.diagramCaption || item.q || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" class="diagram-img" onerror="handleDiagramImgError(this)" onclick="openImageModalFromWrap(this)">
+                        <img src="${((isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png') ? 'images/math_bb_ex1_4_en.png' : (item.diagramImg && item.diagramImg.startsWith('images/soc_') ? item.diagramImg.replace('images/', '') : item.diagramImg)}" alt="${(item.diagramCaption || item.q || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" class="diagram-img" onerror="handleDiagramImgError(this)" onclick="openImageModalFromWrap(this)">
                         <div class="diagram-zoom-hint" onclick="openImageModalFromWrap(this)">
                           <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
                         </div>
@@ -8342,6 +8342,9 @@
   }
 
   function openImageModal(imgSrc, title, cardId) {
+    if (imgSrc && imgSrc.indexOf('images/soc_') !== -1) {
+      imgSrc = imgSrc.replace('images/soc_', 'soc_');
+    }
     lastImageScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
     if (cardId) {
       lastViewedQuestionCardId = cardId;

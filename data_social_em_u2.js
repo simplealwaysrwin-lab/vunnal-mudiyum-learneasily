@@ -765,9 +765,12 @@ const SOCIAL_EM_UNIT_2_DATA = {
             </div>
           </div>`,
           explanation: "Major perennial Himalayan rivers (Indus, Ganga, Brahmaputra) and seasonal Peninsular rivers (Narmada, Tapti, Mahanadi, Godavari, Krishna, Kaveri).",
-          diagramImg: "images/soc_rivers_map.jpg",`n          diagramCaption: "India Map: Major River Systems of India (Indus, Ganga, Brahmaputra, Narmada, Tapti, Mahanadi, Godavari, Krishna, Kaveri)"
+          diagramImg: "images/soc_rivers_map.jpg",
+          diagramCaption: "India Map: Major River Systems of India (Indus, Ganga, Brahmaputra, Narmada, Tapti, Mahanadi, Godavari, Krishna, Kaveri)"
         }
       ]
     }
   ]
 };
+
+if (typeof window !== 'undefined') { window.SOCIAL_EM_UNIT_2_DATA = SOCIAL_EM_UNIT_2_DATA; }

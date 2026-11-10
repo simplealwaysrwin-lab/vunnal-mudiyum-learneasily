@@ -685,9 +685,12 @@ const SOCIAL_EM_UNIT_1_DATA = {
             </div>
           </div>`,
           explanation: "Allied Powers (Britain, France, Russia, Italy) vs Central Powers (Germany, Austria-Hungary, Turkey) and the spark at Sarajevo.",
-          diagramImg: "images/soc_ww1_map.jpg",`n          diagramCaption: "World Map: World War I - Allied and Central Powers (1914)"
+          diagramImg: "images/soc_ww1_map.jpg",
+          diagramCaption: "World Map: World War I - Allied and Central Powers (1914)"
         }
       ]
     }
   ]
 };
+
+if (typeof window !== 'undefined') { window.SOCIAL_EM_UNIT_1_DATA = SOCIAL_EM_UNIT_1_DATA; }

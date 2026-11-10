@@ -150,6 +150,67 @@ const SOCIAL_EM_UNIT_9_DATA = {
         }
       ]
     }
+  ,
+    {
+      id: "sec_soc_em_9_map",
+      title: "Map Identification & Practice: World War II (8M)",
+      author: "History Unit 3 Map Tutor",
+      questions: [
+        {
+          id: "soc_em_9_map_1",
+          type: "8m",
+          mark: "5 / 8 Marks Map",
+          examYear: "2024",
+          examTag: "Board Exam Model Map",
+          isImportant: true,
+          q: "On the given outline map of the World, mark and label the key nations and historic theaters of World War II:<br>1. Great Britain (Allied Power)<br>2. France / Normandy Coast (D-Day Allied landings, June 1944)<br>3. Germany (Axis Power - Berlin)<br>4. USSR / Russia (Stalingrad - Historic turning point battle)<br>5. USA / Hawaii (Pearl Harbor naval base attack, December 1941)<br>6. Japan (Hiroshima and Nagasaki - Atomic bomb sites, August 1945)",
+          ans: `<div style="line-height:1.8;">
+            <b style="color:#0284c7; font-size:15px;">World War II Map Marking Guidelines for Board Exam:</b><br><br>
+            <b>1. Great Britain:</b> Leader of the Western Allies under Winston Churchill; resisted Luftwaffe during the Battle of Britain.<br>
+            <b>2. France / Normandy:</b> Site of Operation Overlord (D-Day, 6 June 1944), when Allied amphibious forces landed in northern France to liberate western Europe.<br>
+            <b>3. Germany (Berlin):</b> Heart of the Axis powers under Nazi rule; surrendered in May 1945 following the Battle of Berlin.<br>
+            <b>4. USSR / Stalingrad:</b> Heroic Soviet defense from August 1942 to February 1943 that destroyed the German 6th Army and turned the tide of World War II.<br>
+            <b>5. USA / Pearl Harbor:</b> American naval fleet base in Oahu, Hawaii, subjected to a surprise attack by Japan on 7 December 1941, bringing the US into the war.<br>
+            <b>6. Japan / Hiroshima & Nagasaki:</b> Target cities struck by US atomic bombs on 6 and 9 August 1945, bringing unconditional Japanese surrender.<br><br>
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
+              <b>ðŸŽ¯ Board Exam Tip:</b> Color-code the factions clearly: Allied Powers (Britain, France, USSR, USA) and Axis Powers (Germany, Italy, Japan). Accurately mark Stalingrad in southern Russia and Normandy in northern France.
+            </div>
+          </div>`,
+          explanation: "Principal nations and strategic theaters of World War II in Europe and the Pacific.",
+          diagramSvg: `<svg viewBox="0 0 1000 650" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="wOceanG_em_u9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
+              <linearGradient id="wLandG_em_u9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+            </defs>
+            <rect width="1000" height="650" fill="url(#wOceanG_em_u9)"/>
+            <path fill="url(#wLandG_em_u9)" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round" d="M 330 140 C 370 120, 420 110, 480 120 C 530 110, 600 130, 680 150 C 710 180, 720 220, 670 240 C 640 260, 600 250, 580 270 C 540 290, 520 330, 480 340 C 440 360, 410 380, 380 360 C 350 340, 370 310, 350 280 C 330 250, 310 220, 330 180 Z" />
+            <path fill="url(#wLandG_em_u9)" stroke="#38bdf8" stroke-width="2" d="M 320 200 C 340 180, 360 210, 350 250 C 330 270, 310 250, 320 200 Z" />
+            <path fill="url(#wLandG_em_u9)" stroke="#38bdf8" stroke-width="2" d="M 680 150 C 760 140, 850 170, 920 200 C 940 260, 900 320, 850 350 C 780 370, 720 320, 680 280 Z" />
+            <path fill="url(#wLandG_em_u9)" stroke="#38bdf8" stroke-width="2" d="M 80 160 C 130 140, 180 170, 190 240 C 170 300, 130 330, 100 310 C 60 280, 50 200, 80 160 Z" />
+            <!-- Markers -->
+            <!-- 1. Great Britain -->
+            <circle cx="335" cy="225" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+            <text x="230" y="215" fill="#38bdf8" font-size="16" font-weight="900">GREAT BRITAIN (Allied)</text>
+            <!-- 2. Normandy -->
+            <circle cx="360" cy="285" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+            <text x="240" y="295" fill="#38bdf8" font-size="15" font-weight="900">Normandy (D-Day 1944)</text>
+            <!-- 3. Germany -->
+            <circle cx="435" cy="255" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+            <text x="445" y="240" fill="#ef4444" font-size="16" font-weight="900">GERMANY (Axis)</text>
+            <!-- 4. Stalingrad -->
+            <circle cx="580" cy="260" r="9" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+            <text x="595" y="265" fill="#10b981" font-size="17" font-weight="900">Stalingrad (USSR)</text>
+            <!-- 5. Pearl Harbor -->
+            <circle cx="120" cy="380" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
+            <text x="135" y="385" fill="#f59e0b" font-size="16" font-weight="900">Pearl Harbor (Hawaii 1941)</text>
+            <!-- 6. Hiroshima & Nagasaki -->
+            <circle cx="880" cy="280" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+            <text x="730" y="310" fill="#ef4444" font-size="16" font-weight="900">â˜¢ï¸ Hiroshima &amp; Nagasaki (1945)</text>
+          </svg>`,
+          diagramCaption: "World Map: Key Nations and Strategic Theaters of World War II"
+        }
+      ]
+    }
   ]
 };
 

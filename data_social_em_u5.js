@@ -1,4 +1,4 @@
-// Class 10 Social Science - History Unit 2: The World between two World Wars
+﻿// Class 10 Social Science - History Unit 2: The World between two World Wars
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SOCIAL_EM_UNIT_5_DATA = {
@@ -166,6 +166,61 @@ const SOCIAL_EM_UNIT_5_DATA = {
             { pt: 9, text: "Lateran Treaty (1929): Granted independence to Vatican City and won Papal goodwill.", taText: "லாட்டரன் உடன்படிக்கை: வாடிகன் நகருக்கு தன்னாட்சி வழங்கி போப்பின் ஆதரவைப் பெற்றார்." },
             { pt: 10, text: "Imperial aggression: Invaded Ethiopia in 1935, cementing the Rome-Berlin Axis.", taText: "ஆக்கிரமிப்பு போர்: 1935-ல் எத்தியோப்பியாவை ஆக்கிரமித்து ஹிட்லருடன் கைகோர்த்தார்." }
           ]
+        }
+      ]
+    }
+  ,
+    {
+      id: "sec_soc_em_5_map",
+      title: "Map Identification & Practice: Interwar World (8M)",
+      author: "History Unit 2 Map Tutor",
+      questions: [
+        {
+          id: "soc_em_5_map_1",
+          type: "8m",
+          mark: "5 / 8 Marks Map",
+          examYear: "2024",
+          examTag: "Board Exam Model Map",
+          isImportant: true,
+          q: "On the given outline map of the World, mark and label the following key nations and centers of the Interwar Period (1919â€“1939):<br>1. Italy (Rome - Rise of Fascism under Mussolini)<br>2. Germany (Berlin - Rise of Nazism under Hitler)<br>3. Switzerland (Geneva - Headquarters of the League of Nations)<br>4. South Africa (Rise of the African National Congress)<br>5. Vietnam (Anti-colonial liberation under Ho Chi Minh)<br>6. Japan (Tokyo - Imperial militarist expansion)",
+          ans: `<div style="line-height:1.8;">
+            <b style="color:#0284c7; font-size:15px;">Interwar Period World Map Guide:</b><br><br>
+            <b>1. Italy (Rome):</b> Benito Mussolini formed the Fascist party and seized power after the 'March on Rome' in October 1922.<br>
+            <b>2. Germany (Berlin):</b> Adolf Hitler capitalized on the Great Depression and anti-Versailles resentment to establish Nazi dictatorship in 1933.<br>
+            <b>3. Switzerland (Geneva):</b> Neutral Alpine nation chosen as the permanent headquarters for the League of Nations established in 1920.<br>
+            <b>4. South Africa:</b> Birthplace of the African National Congress (ANC) in 1912 to oppose racial oppression and apartheid.<br>
+            <b>5. Vietnam:</b> Center of Indochinese anti-colonial resistance led by Ho Chi Minh against French imperial rule.<br>
+            <b>6. Japan (Tokyo):</b> Aggressive East Asian military power that invaded Manchuria in 1931 and pulled out of the League of Nations.<br><br>
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
+              <b>ðŸŽ¯ Board Exam Tip:</b> Identify totalitarian fascist centers (Berlin, Rome), peace diplomacy headquarters (Geneva), anti-colonial movements (Vietnam, South Africa), and aggressive militarism (Japan).
+            </div>
+          </div>`,
+          explanation: "Geopolitical flashpoints between 1919 and 1939: Rise of Fascism, Nazism, League of Nations, and anti-colonial movements.",
+          diagramSvg: `<svg viewBox="0 0 1000 650" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="wOceanG_em_u5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
+              <linearGradient id="wLandG_em_u5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+            </defs>
+            <rect width="1000" height="650" fill="url(#wOceanG_em_u5)"/>
+            <path fill="url(#wLandG_em_u5)" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round" d="M 330 140 C 370 120, 420 110, 480 120 C 530 110, 600 130, 680 150 C 710 180, 720 220, 670 240 C 640 260, 600 250, 580 270 C 540 290, 520 330, 480 340 C 440 360, 410 380, 380 360 C 350 340, 370 310, 350 280 C 330 250, 310 220, 330 180 Z" />
+            <path fill="url(#wLandG_em_u5)" stroke="#38bdf8" stroke-width="2" d="M 440 330 C 460 340, 480 380, 475 420 C 460 425, 450 400, 435 360 Z" />
+            <path fill="url(#wLandG_em_u5)" stroke="#38bdf8" stroke-width="2" d="M 280 430 C 380 420, 500 425, 580 440 C 600 480, 570 560, 500 620 C 440 640, 380 610, 340 550 C 300 500, 260 460, 280 430 Z" />
+            <path fill="url(#wLandG_em_u5)" stroke="#38bdf8" stroke-width="2" d="M 680 150 C 760 140, 850 170, 920 200 C 940 260, 900 320, 850 350 C 780 370, 720 320, 680 280 Z" />
+            <!-- Markers -->
+            <circle cx="435" cy="255" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+            <text x="445" y="245" fill="#ef4444" font-size="16" font-weight="900">Germany (Berlin - Nazism)</text>
+            <circle cx="410" cy="295" r="7" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+            <text x="290" y="295" fill="#38bdf8" font-size="15" font-weight="900">Geneva (League of Nations)</text>
+            <circle cx="445" cy="365" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+            <text x="458" y="375" fill="#ef4444" font-size="16" font-weight="900">Italy (Rome - Fascism)</text>
+            <circle cx="480" cy="595" r="8" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+            <text x="495" y="605" fill="#10b981" font-size="16" font-weight="900">South Africa (ANC)</text>
+            <circle cx="750" cy="380" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
+            <text x="765" y="385" fill="#f59e0b" font-size="16" font-weight="900">Vietnam (Ho Chi Minh)</text>
+            <circle cx="890" cy="260" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
+            <text x="810" y="245" fill="#a855f7" font-size="16" font-weight="900">Japan (Manchurian Invasion)</text>
+          </svg>`,
+          diagramCaption: "World Map: The World between the Two World Wars (1919-1939)"
         }
       ]
     }

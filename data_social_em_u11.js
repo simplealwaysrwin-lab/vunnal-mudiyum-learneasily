@@ -1,4 +1,4 @@
-// Class 10 Social Science - Civics Unit 3: State Government
+﻿// Class 10 Social Science - Civics Unit 3: State Government
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SOCIAL_EM_UNIT_11_DATA = {
@@ -195,6 +195,60 @@ const SOCIAL_EM_UNIT_11_DATA = {
             step2: "Writ jurisdiction under Article 226 for fundamental and legal rights",
             step3: "Supervisory control over subordinate judiciary and status as Court of Record"
           }
+        }
+      ]
+    }
+  ,
+    {
+      id: "sec_soc_em_11_map",
+      title: "Map Identification & Practice: State Government & High Courts (8M)",
+      author: "Civics Unit 3 Map Tutor",
+      questions: [
+        {
+          id: "soc_em_11_map_1",
+          type: "8m",
+          mark: "5 / 8 Marks Map",
+          examYear: "2024",
+          examTag: "Board Exam Model Map",
+          isImportant: true,
+          q: "On the given outline map of India, mark and label the state administrative capitals and High Court seats:<br>1. Chennai (Tamil Nadu State Secretariat at Fort St. George & Madras High Court, est. 1862)<br>2. Madurai (Madurai Bench of the Madras High Court, est. 2004)<br>3. Thiruvananthapuram (Capital city of Kerala State)<br>4. Bengaluru (Capital city of Karnataka State)<br>5. Hyderabad / Amaravati (Capitals of Telangana and Andhra Pradesh)",
+          ans: `<div style="line-height:1.8;">
+            <b style="color:#0284c7; font-size:15px;">State Government Capitals & High Court Seats Map Guide:</b><br><br>
+            <b>1. Chennai:</b> Capital of Tamil Nadu; seat of Fort St. George (State Secretariat and Legislative Assembly) and the Principal Seat of the Madras High Court.<br>
+            <b>2. Madurai:</b> Cultural capital of southern Tamil Nadu; home to the permanent Madurai Bench of the Madras High Court inaugurated in 2004.<br>
+            <b>3. Thiruvananthapuram:</b> Administrative capital of the neighbouring state of Kerala.<br>
+            <b>4. Bengaluru:</b> Capital of Karnataka; seat of the Vidhana Soudha (State Legislature) and the High Court of Karnataka.<br>
+            <b>5. Hyderabad / Amaravati:</b> Administrative capitals of Telangana and Andhra Pradesh.<br><br>
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
+              <b>🎯 Board Exam Tip:</b> Under Article 214, each state has a High Court. Distinctly mark the two judicial seats of Tamil Nadu: Chennai (Principal Seat, 1862) and Madurai (Circuit Bench, 2004).
+            </div>
+          </div>`,
+          explanation: "State administrative headquarters, executive secretariats, and High Court judicial seats in South India.",
+          diagramSvg: `<svg viewBox="0 0 1000 1150" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="oceanG_em_u11" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
+              <linearGradient id="landG_em_u11" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+            </defs>
+            <rect width="1000" height="1150" fill="url(#oceanG_em_u11)"/>
+            <path fill="url(#landG_em_u11)" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round" d="M 370 40 C 385 30, 415 30, 430 45 C 450 65, 460 95, 450 120 C 470 125, 495 140, 485 165 C 465 175, 445 190, 430 215 C 415 235, 400 245, 375 250 C 350 255, 330 270, 315 295 C 300 315, 275 330, 255 350 C 235 370, 215 390, 205 420 C 195 440, 160 455, 140 480 C 120 500, 155 520, 190 525 C 220 530, 240 515, 255 530 C 265 545, 250 560, 220 575 C 195 590, 175 605, 195 625 C 225 635, 260 620, 280 600 C 295 580, 275 605, 270 638 C 265 670, 285 710, 305 750 C 325 790, 345 830, 365 870 C 385 910, 405 950, 420 990 C 425 1000, 435 995, 440 980 C 455 940, 465 900, 475 860 C 485 820, 495 780, 520 750 C 545 720, 575 690, 605 660 C 635 630, 660 600, 640 570 C 625 550, 645 530, 665 515 C 685 500, 695 480, 675 465 C 655 450, 630 460, 615 440 C 600 420, 580 405, 560 395 C 540 380, 560 360, 585 345 C 610 330, 635 315, 660 305 C 685 295, 715 295, 730 315 C 745 330, 775 320, 805 325 C 835 330, 860 345, 855 365 C 850 385, 825 395, 800 405 C 780 415, 755 435, 775 455 C 795 470, 770 490, 745 490 C 720 490, 705 470, 680 475 C 660 480, 645 495, 630 515 C 615 535, 585 550, 560 565 C 530 585, 510 610, 490 635 C 540 700, 570 670, 595 640 C 615 615, 630 585, 640 555 C 645 530, 625 510, 605 490 C 585 470, 565 440, 545 410 C 525 380, 505 350, 485 320 C 465 290, 445 260, 425 230 C 405 200, 385 170, 375 140 C 365 110, 360 70, 370 40 Z"/>
+            <path fill="url(#landG_em_u11)" stroke="#38bdf8" stroke-width="2" d="M 470 940 C 490 925, 515 940, 520 965 C 525 990, 510 1020, 490 1040 C 475 1050, 460 1045, 455 1025 C 450 1000, 455 960, 470 940 Z"/>
+            <!-- 1. Chennai -->
+            <circle cx="485" cy="835" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+            <text x="505" y="835" fill="#ef4444" font-size="19" font-weight="900">🏛️ CHENNAI (Fort St. George &amp; Madras High Court)</text>
+            <!-- 2. Madurai -->
+            <circle cx="440" cy="930" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
+            <text x="455" y="935" fill="#f59e0b" font-size="18" font-weight="900">Madurai (High Court Bench 2004)</text>
+            <!-- 3. Bengaluru -->
+            <circle cx="410" cy="810" r="8" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+            <text x="210" y="810" fill="#10b981" font-size="17" font-weight="900">Bengaluru (Karnataka Capital)</text>
+            <!-- 4. Thiruvananthapuram -->
+            <circle cx="380" cy="970" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+            <text x="170" y="975" fill="#38bdf8" font-size="17" font-weight="900">Thiruvananthapuram (Kerala)</text>
+            <!-- 5. Hyderabad -->
+            <circle cx="460" cy="680" r="8" fill="#a855f7" stroke="#ffffff" stroke-width="2" />
+            <text x="475" y="685" fill="#a855f7" font-size="17" font-weight="900">Hyderabad (Telangana Capital)</text>
+          </svg>`,
+          diagramCaption: "India Map: State Capitals and High Court Seats of South India"
         }
       ]
     }

@@ -656,5 +656,77 @@ const SOCIAL_EM_UNIT_1_DATA = {
       ]
     }
 
+  ,
+    {
+      id: "sec_soc_em_1_map",
+      title: "Map Identification & Practice (8M)",
+      author: "History Unit 1 Map Tutor",
+      questions: [
+        {
+          id: "soc_em_1_map_1",
+          type: "8m",
+          mark: "5 / 8 Marks Map",
+          examYear: "2024",
+          examTag: "Board Exam Model Map",
+          isImportant: true,
+          q: "On the given outline map of the World, mark and label the following countries and places associated with World War I:<br>1. Great Britain (Allied Power)<br>2. France (Allied Power)<br>3. Russia (Allied Power)<br>4. Italy (Allied Power)<br>5. Germany (Central Power)<br>6. Austria-Hungary (Central Power)<br>7. Turkey / Ottoman Empire (Central Power)<br>8. Bosnia / Sarajevo (Immediate cause of WWI)",
+          ans: `<div style="line-height:1.8;">
+            <b style="color:#0284c7; font-size:15px;">World War I Map Marking Guidelines for Board Exam:</b><br><br>
+            <b>1. Great Britain:</b> Island nation located northwest of mainland Europe; led the Allied naval blockade.<br>
+            <b>2. France:</b> Located south of Great Britain across the English Channel (capital Paris; Western Front trenches).<br>
+            <b>3. Germany:</b> Central European power between France and Russia; leader of the Central Powers (capital Berlin).<br>
+            <b>4. Austria-Hungary:</b> Dual monarchy located south of Germany; its ultimatum to Serbia ignited World War I.<br>
+            <b>5. Italy:</b> Boot-shaped peninsula in the Mediterranean Sea; entered the war on the Allied side in 1915.<br>
+            <b>6. Russia:</b> Expansive eastern empire; fought on the Eastern Front until the 1917 Bolshevik Revolution.<br>
+            <b>7. Turkey (Ottoman Empire):</b> Controlled the strategic Black Sea straits (Gallipoli campaign).<br>
+            <b>8. Sarajevo:</b> Capital of Bosnia where Austrian Archduke Franz Ferdinand was assassinated on 28 June 1914.<br><br>
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
+              <b>ðŸŽ¯ Board Exam Tip:</b> Color-code the opposing alliances clearly: Blue for Allied Powers (Britain, France, Russia, Italy) and Amber/Orange for Central Powers (Germany, Austria-Hungary, Turkey). Pinpoint Sarajevo in Bosnia with an indicator star or dot.
+            </div>
+          </div>`,
+          explanation: "Allied Powers (Britain, France, Russia, Italy) vs Central Powers (Germany, Austria-Hungary, Turkey) and the spark at Sarajevo.",
+          diagramSvg: `<svg viewBox="0 0 1000 650" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="wOceanG_em_u1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
+              <linearGradient id="wLandG_em_u1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+            </defs>
+            <rect width="1000" height="650" fill="url(#wOceanG_em_u1)" />
+            <path fill="url(#wLandG_em_u1)" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round" d="M 330 140 C 370 120, 420 110, 480 120 C 530 110, 600 130, 680 150 C 710 180, 720 220, 670 240 C 640 260, 600 250, 580 270 C 540 290, 520 330, 480 340 C 440 360, 410 380, 380 360 C 350 340, 370 310, 350 280 C 330 250, 310 220, 330 180 Z" />
+            <path fill="url(#wLandG_em_u1)" stroke="#38bdf8" stroke-width="2" d="M 320 200 C 340 180, 360 210, 350 250 C 330 270, 310 250, 320 200 Z" />
+            <path fill="url(#wLandG_em_u1)" stroke="#38bdf8" stroke-width="2" d="M 440 330 C 460 340, 480 380, 475 420 C 460 425, 450 400, 435 360 Z" />
+            <path fill="url(#wLandG_em_u1)" stroke="#38bdf8" stroke-width="2" d="M 280 430 C 380 420, 500 425, 580 440 C 600 480, 570 560, 500 620 C 440 640, 380 610, 340 550 C 300 500, 260 460, 280 430 Z" />
+            <!-- Markers -->
+            <circle cx="335" cy="225" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+            <text x="240" y="215" fill="#38bdf8" font-size="16" font-weight="900">GREAT BRITAIN (Allied)</text>
+            <circle cx="375" cy="295" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+            <text x="290" y="310" fill="#38bdf8" font-size="16" font-weight="900">FRANCE (Allied)</text>
+            <circle cx="435" cy="255" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
+            <text x="445" y="240" fill="#f59e0b" font-size="16" font-weight="900">GERMANY (Central)</text>
+            <circle cx="460" cy="295" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
+            <text x="475" y="295" fill="#f59e0b" font-size="15" font-weight="900">AUSTRIA-HUNGARY</text>
+            <circle cx="445" cy="365" r="8" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+            <text x="380" y="395" fill="#38bdf8" font-size="16" font-weight="900">ITALY (Allied)</text>
+            <circle cx="590" cy="210" r="9" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+            <text x="590" y="190" fill="#38bdf8" font-size="18" font-weight="900">RUSSIA (Allied)</text>
+            <circle cx="530" cy="365" r="8" fill="#f59e0b" stroke="#ffffff" stroke-width="2" />
+            <text x="545" y="385" fill="#f59e0b" font-size="16" font-weight="900">TURKEY (Central)</text>
+            <circle cx="468" cy="335" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2" />
+            <text x="480" y="345" fill="#ef4444" font-size="15" font-weight="900">ðŸ“ SARAJEVO (Immediate Cause)</text>
+            <!-- Legend -->
+            <g transform="translate(60, 480)">
+              <rect width="250" height="130" rx="8" fill="#0f172a" stroke="#0284c7" stroke-width="1.5" />
+              <text x="15" y="25" fill="#38bdf8" font-size="14" font-weight="800">Map Legend</text>
+              <circle cx="25" cy="50" r="6" fill="#38bdf8" />
+              <text x="40" y="55" fill="#e2e8f0" font-size="13">Allied Powers</text>
+              <circle cx="25" cy="80" r="6" fill="#f59e0b" />
+              <text x="40" y="85" fill="#e2e8f0" font-size="13">Central Powers</text>
+              <circle cx="25" cy="110" r="6" fill="#ef4444" />
+              <text x="40" y="115" fill="#e2e8f0" font-size="13">Sarajevo (Assassination site)</text>
+            </g>
+          </svg>`,
+          diagramCaption: "World Map: World War I - Allied and Central Powers"
+        }
+      ]
+    }
   ]
 };

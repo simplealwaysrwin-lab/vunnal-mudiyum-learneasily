@@ -1,4 +1,4 @@
-// 10th Standard Social Science - Geography Unit 1: India - Location, Relief and Drainage (English Medium)
+﻿// 10th Standard Social Science - Geography Unit 1: India - Location, Relief and Drainage (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SOCIAL_EM_UNIT_2_DATA = {
@@ -733,6 +733,94 @@ const SOCIAL_EM_UNIT_2_DATA = {
             { pt: 7, text: "Course and utility: Meandering course suitable for inland navigation vs straight course ideal for hydroelectricity.", taText: "போக்கு & பயன்: வளைந்து நெளிந்து பாய்ந்து நீர்வழிப் போக்குவரத்திற்கு உகந்தவை vs நீர்மின்சார உற்பத்திக்கு உகந்தவை." },
             { pt: 8, text: "Examples: Indus, Ganga, Brahmaputra vs Mahanadi, Godavari, Krishna, Cauvery, Narmada, Tapti.", taText: "எடுத்துக்காட்டு: சிந்து, கங்கை, பிரம்மபுத்திரா vs மகாநதி, கோதாவரி, கிருஷ்ணா, காவிரி, நர்மதை, தபதி." }
           ]
+        }
+      ]
+    }
+  ,
+    {
+      id: "sec_soc_em_2_map",
+      title: "Map Identification & Practice: Rivers of India (8M)",
+      author: "Geography Unit 1 Map Tutor",
+      questions: [
+        {
+          id: "soc_em_2_map_1",
+          type: "8m",
+          mark: "5 / 8 Marks Map",
+          examYear: "2024",
+          examTag: "Board Exam Model Map",
+          isImportant: true,
+          q: "Mark and label the following major river systems on the given outline map of India:<br>1. River Ganga<br>2. River Brahmaputra<br>3. River Indus<br>4. River Narmada<br>5. River Tapti<br>6. River Mahanadi<br>7. River Godavari<br>8. River Krishna<br>9. River Kaveri",
+          ans: `<div style="line-height:1.8;">
+            <b style="color:#0284c7; font-size:15px;">Step-by-Step River Marking Guide for Board Examination:</b><br><br>
+            <b>1. River Ganga:</b> Originates at Gangotri Glacier in Uttarakhand, flows eastwards through Uttar Pradesh, Bihar, and West Bengal, and empties into the Bay of Bengal (2,525 km).<br>
+            <b>2. River Brahmaputra:</b> Originates in Tibet as Tsangpo, enters India through Arunachal Pradesh, flows through Assam Valley, and merges with Ganga into the Bay of Bengal.<br>
+            <b>3. River Indus:</b> Originates near Lake Manasarovar in Tibet, flows northwest through Ladakh into Pakistan and empties into the Arabian Sea.<br>
+            <b>4. River Narmada:</b> Originates at Amarkantak Plateau in Madhya Pradesh, flows westwards through a rift valley between the Vindhya and Satpura ranges, and drains into the Gulf of Khambhat.<br>
+            <b>5. River Tapti:</b> Originates at Multai in Betul district of Madhya Pradesh, flows westwards parallel to Narmada into the Arabian Sea.<br>
+            <b>6. River Mahanadi:</b> Originates in Chhattisgarh, flows eastwards through Odisha, and forms a fertile delta in the Bay of Bengal.<br>
+            <b>7. River Godavari:</b> Originates at Trimbak near Nashik in Maharashtra, flows eastwards across the Deccan Plateau through Telangana and Andhra Pradesh into the Bay of Bengal (Dakshin Ganga - longest Peninsular river).<br>
+            <b>8. River Krishna:</b> Originates at Mahabaleshwar in Maharashtra, flows through Karnataka and Andhra Pradesh into the Bay of Bengal.<br>
+            <b>9. River Kaveri:</b> Originates at Talakaveri in the Brahmagiri Hills of Kodagu (Karnataka), flows southeast through Tamil Nadu and the fertile Thanjavur Delta into the Bay of Bengal.<br><br>
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
+              <b>ðŸŽ¯ Board Exam Tip:</b> Draw rivers as smooth, unbroken blue curves from their origin to the sea, indicating the flow direction with an arrowhead. Remember that Narmada and Tapti flow West into the Arabian Sea, while Ganga, Brahmaputra, Mahanadi, Godavari, Krishna, and Kaveri flow East into the Bay of Bengal.
+            </div>
+          </div>`,
+          explanation: "Major perennial Himalayan rivers (Indus, Ganga, Brahmaputra) and seasonal Peninsular rivers (Narmada, Tapti, Mahanadi, Godavari, Krishna, Kaveri).",
+          diagramSvg: `<svg viewBox="0 0 1000 1150" style="width:100%; max-width:650px; height:auto; margin:10px auto; display:block; background:#0a192f; border-radius:12px; border:1px solid #334155; box-shadow:0 4px 20px rgba(0,0,0,0.4);" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="oceanG_em_u2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a192f"/><stop offset="100%" stop-color="#030c1b"/></linearGradient>
+              <linearGradient id="landG_em_u2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+              <filter id="glow_em_u2" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3.5" result="blur"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
+            </defs>
+            <rect width="1000" height="1150" fill="url(#oceanG_em_u2)"/>
+            <g transform="translate(880, 110)" opacity="0.85"><circle cx="0" cy="0" r="28" fill="none" stroke="#38bdf8" stroke-dasharray="3,3" stroke-width="1.5"/><polygon points="0,-24 5,-5 0,0 -5,-5" fill="#ef4444"/><polygon points="0,24 5,5 0,0 -5,5" fill="#94a3b8"/><polygon points="24,0 5,5 0,0 5,-5" fill="#94a3b8"/><polygon points="-24,0 -5,5 0,0 -5,-5" fill="#94a3b8"/><text x="0" y="-30" fill="#ef4444" font-size="13" font-weight="900" text-anchor="middle">N</text></g>
+            <text x="130" y="780" fill="#38bdf8" opacity="0.38" font-size="20" font-weight="800" letter-spacing="3">ARABIAN SEA</text>
+            <text x="630" y="780" fill="#38bdf8" opacity="0.38" font-size="20" font-weight="800" letter-spacing="3">BAY OF BENGAL</text>
+            <text x="320" y="1120" fill="#38bdf8" opacity="0.38" font-size="18" font-weight="800" letter-spacing="3">INDIAN OCEAN</text>
+            <path fill="url(#landG_em_u2)" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round" d="M 370 40 C 385 30, 415 30, 430 45 C 450 65, 460 95, 450 120 C 470 125, 495 140, 485 165 C 465 175, 445 190, 430 215 C 415 235, 400 245, 375 250 C 350 255, 330 270, 315 295 C 300 315, 275 330, 255 350 C 235 370, 215 390, 205 420 C 195 440, 160 455, 140 480 C 120 500, 155 520, 190 525 C 220 530, 240 515, 255 530 C 265 545, 250 560, 220 575 C 195 590, 175 605, 195 625 C 225 635, 260 620, 280 600 C 295 580, 275 605, 270 638 C 265 670, 285 710, 305 750 C 325 790, 345 830, 365 870 C 385 910, 405 950, 420 990 C 425 1000, 435 995, 440 980 C 455 940, 465 900, 475 860 C 485 820, 495 780, 520 750 C 545 720, 575 690, 605 660 C 635 630, 660 600, 640 570 C 625 550, 645 530, 665 515 C 685 500, 695 480, 675 465 C 655 450, 630 460, 615 440 C 600 420, 580 405, 560 395 C 540 380, 560 360, 585 345 C 610 330, 635 315, 660 305 C 685 295, 715 295, 730 315 C 745 330, 775 320, 805 325 C 835 330, 860 345, 855 365 C 850 385, 825 395, 800 405 C 780 415, 755 435, 775 455 C 795 470, 770 490, 745 490 C 720 490, 705 470, 680 475 C 660 480, 645 495, 630 515 C 615 535, 585 550, 560 565 C 530 585, 510 610, 490 635 C 540 700, 570 670, 595 640 C 615 615, 630 585, 640 555 C 645 530, 625 510, 605 490 C 585 470, 565 440, 545 410 C 525 380, 505 350, 485 320 C 465 290, 445 260, 425 230 C 405 200, 385 170, 375 140 C 365 110, 360 70, 370 40 Z"/>
+            <path fill="url(#landG_em_u2)" stroke="#38bdf8" stroke-width="2" d="M 470 940 C 490 925, 515 940, 520 965 C 525 990, 510 1020, 490 1040 C 475 1050, 460 1045, 455 1025 C 450 1000, 455 960, 470 940 Z"/>
+            <!-- RIVERS -->
+            <path d="M 480 180 C 440 150, 400 120, 345 100 C 310 90, 275 110, 240 140" fill="none" stroke="#00f0ff" stroke-width="3.5" stroke-linecap="round" filter="url(#glow_em_u2)" />
+            <circle cx="480" cy="180" r="5" fill="#00f0ff" stroke="#fff" stroke-width="1.5" />
+            <text x="310" y="85" fill="#00f0ff" font-size="16" font-weight="900">River Indus</text>
+            <path d="M 425 230 C 428 260, 445 295, 470 325 C 490 345, 510 360, 535 365 C 565 370, 600 375, 630 400 C 645 415, 650 435, 655 460 C 660 480, 675 510, 680 535" fill="none" stroke="#38bdf8" stroke-width="4.5" stroke-linecap="round" filter="url(#glow_em_u2)" />
+            <circle cx="425" cy="230" r="6" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+            <text x="490" y="325" fill="#38bdf8" font-size="19" font-weight="900">River Ganga</text>
+            <path d="M 560 190 C 630 200, 720 220, 810 280 C 835 310, 810 330, 770 350 C 730 375, 690 430, 680 535" fill="none" stroke="#67e8f9" stroke-width="4.5" stroke-linecap="round" filter="url(#glow_em_u2)" />
+            <circle cx="560" cy="190" r="5" fill="#67e8f9" stroke="#fff" stroke-width="1.5" />
+            <text x="730" y="315" fill="#67e8f9" font-size="18" font-weight="900">River Brahmaputra</text>
+            <path d="M 520 560 C 460 565, 380 575, 275 600" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" />
+            <circle cx="520" cy="560" r="5" fill="#22d3ee" stroke="#fff" stroke-width="1.5" />
+            <text x="330" y="555" fill="#22d3ee" font-size="17" font-weight="900">River Narmada âž” West</text>
+            <path d="M 510 590 C 450 600, 370 610, 265 625" fill="none" stroke="#06b6d4" stroke-width="3.5" stroke-linecap="round" />
+            <circle cx="510" cy="590" r="5" fill="#06b6d4" stroke="#fff" stroke-width="1.5" />
+            <text x="330" y="625" fill="#06b6d4" font-size="16" font-weight="900">River Tapti âž” West</text>
+            <path d="M 540 580 C 570 570, 600 565, 635 565" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+            <circle cx="540" cy="580" r="5" fill="#38bdf8" stroke="#fff" stroke-width="1.5" />
+            <text x="590" y="555" fill="#38bdf8" font-size="17" font-weight="900">River Mahanadi</text>
+            <path d="M 300 660 C 370 670, 450 675, 520 685 C 560 690, 590 695, 615 700" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+            <circle cx="300" cy="660" r="5" fill="#38bdf8" stroke="#fff" stroke-width="1.5" />
+            <text x="430" y="665" fill="#38bdf8" font-size="18" font-weight="900">River Godavari</text>
+            <path d="M 290 710 C 360 720, 430 735, 490 740 C 530 745, 555 750, 565 760" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" />
+            <circle cx="290" cy="710" r="5" fill="#60a5fa" stroke="#fff" stroke-width="1.5" />
+            <text x="390" y="725" fill="#60a5fa" font-size="17" font-weight="900">River Krishna</text>
+            <path d="M 340 860 C 380 870, 420 885, 455 895 C 475 900, 485 905, 495 910" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+            <circle cx="340" cy="860" r="5" fill="#38bdf8" stroke="#fff" stroke-width="1.5" />
+            <text x="390" y="870" fill="#38bdf8" font-size="17" font-weight="900">River Kaveri</text>
+            <!-- Legend -->
+            <g transform="translate(60, 920)" opacity="0.95">
+              <rect width="270" height="180" rx="10" fill="#0f172a" stroke="#0284c7" stroke-width="1.5" />
+              <text x="15" y="28" fill="#38bdf8" font-size="15" font-weight="900">Rivers Legend</text>
+              <line x1="15" y1="52" x2="45" y2="52" stroke="#38bdf8" stroke-width="3" />
+              <text x="55" y="56" fill="#e2e8f0" font-size="13">East-Flowing Rivers (Bay of Bengal)</text>
+              <line x1="15" y1="82" x2="45" y2="82" stroke="#22d3ee" stroke-width="3" />
+              <text x="55" y="86" fill="#e2e8f0" font-size="13">West-Flowing Rivers (Arabian Sea)</text>
+              <circle cx="30" cy="112" r="4.5" fill="#38bdf8" stroke="#fff" stroke-width="1.5" />
+              <text x="55" y="116" fill="#e2e8f0" font-size="13">River Origin Source Point</text>
+              <text x="15" y="152" fill="#94a3b8" font-size="12">Class 10 State Board Curriculum</text>
+            </g>
+          </svg>`,
+          diagramCaption: "India Map: Major River Systems of India"
         }
       ]
     }

@@ -1,4 +1,4 @@
-﻿// 10th Standard Social Science - Geography Unit 1: India - Location, Relief and Drainage (English Medium)
+// 10th Standard Social Science - Geography Unit 1: India - Location, Relief and Drainage (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SOCIAL_EM_UNIT_2_DATA = {
@@ -748,20 +748,23 @@ const SOCIAL_EM_UNIT_2_DATA = {
           examYear: "2024",
           examTag: "Board Exam Model Map",
           isImportant: true,
-          q: "Mark and label the following major river systems on the given outline map of India:<br>1. River Ganga<br>2. River Brahmaputra<br>3. River Indus<br>4. River Narmada<br>5. River Tapti<br>6. River Mahanadi<br>7. River Godavari<br>8. River Krishna<br>9. River Kaveri",
+          q: "Mark and label the following major river systems on the given outline map of India, indicating their origin points, exact courses, and mouths:<br>1. River Indus (Manasarovar -> Ladakh -> Pakistan -> Arabian Sea)<br>2. River Ganga (Gangotri -> Haridwar -> Prayagraj -> Sundarbans Delta / Bay of Bengal)<br>3. River Brahmaputra (Chemayungdung -> Tsangpo -> Assam -> Bay of Bengal)<br>4. River Narmada (Amarkantak -> Rift Valley -> Gulf of Khambhat)<br>5. River Tapi (Multai -> Betul -> Gulf of Khambhat)<br>6. River Mahanadi (Sihawa -> Odisha -> Paradip Delta / Bay of Bengal)<br>7. River Godavari (Trimbak -> Nashik -> Rajahmundry Delta / Bay of Bengal)<br>8. River Krishna (Mahabaleshwar -> Andhra Pradesh -> Bay of Bengal)<br>9. River Kaveri (Talakaveri -> Karnataka -> Tamil Nadu -> Poompuhar / Bay of Bengal)",
           ans: `<div style="line-height:1.8;">
             <b style="color:#0284c7; font-size:15px;">Step-by-Step River Marking Guide for Board Examination:</b><br><br>
-            <b>1. River Ganga:</b> Originates at Gangotri Glacier in Uttarakhand, flows eastwards through Uttar Pradesh, Bihar, and West Bengal, and empties into the Bay of Bengal (2,525 km).<br>
-            <b>2. River Brahmaputra:</b> Originates in Tibet as Tsangpo, enters India through Arunachal Pradesh, flows through Assam Valley, and merges with Ganga into the Bay of Bengal.<br>
-            <b>3. River Indus:</b> Originates near Lake Manasarovar in Tibet, flows northwest through Ladakh into Pakistan and empties into the Arabian Sea.<br>
-            <b>4. River Narmada:</b> Originates at Amarkantak Plateau in Madhya Pradesh, flows westwards through a rift valley between the Vindhya and Satpura ranges, and drains into the Gulf of Khambhat.<br>
-            <b>5. River Tapti:</b> Originates at Multai in Betul district of Madhya Pradesh, flows westwards parallel to Narmada into the Arabian Sea.<br>
-            <b>6. River Mahanadi:</b> Originates in Chhattisgarh, flows eastwards through Odisha, and forms a fertile delta in the Bay of Bengal.<br>
-            <b>7. River Godavari:</b> Originates at Trimbak near Nashik in Maharashtra, flows eastwards across the Deccan Plateau through Telangana and Andhra Pradesh into the Bay of Bengal (Dakshin Ganga - longest Peninsular river).<br>
-            <b>8. River Krishna:</b> Originates at Mahabaleshwar in Maharashtra, flows through Karnataka and Andhra Pradesh into the Bay of Bengal.<br>
-            <b>9. River Kaveri:</b> Originates at Talakaveri in the Brahmagiri Hills of Kodagu (Karnataka), flows southeast through Tamil Nadu and the fertile Thanjavur Delta into the Bay of Bengal.<br><br>
+            <b>1. River Indus:</b> Originates near Lake Manasarovar (Bokhar Chu Glacier) in Tibet; flows northwest through Ladakh between the Ladakh and Zaskar ranges, turns southwest through Pakistan, and empties into the Arabian Sea near Karachi.<br>
+            <b>2. River Ganga:</b> Originates at Gangotri Glacier (Gaumukh) in Uttarakhand as Bhagirathi; joins Alaknanda at Devprayag, flows southeast across Uttar Pradesh, Bihar, and West Bengal (2,525 km), and enters the Bay of Bengal through the world's largest delta (Sundarbans).<br>
+            <b>3. River Brahmaputra:</b> Originates at Chemayungdung Glacier east of Lake Manasarovar in Tibet; flows eastwards as the Tsangpo, takes a hairpin bend at Namcha Barwa into Arunachal Pradesh (Dihang), flows west-southwest through Assam Valley, and merges with the Ganga (Padma/Meghna) into the Bay of Bengal.<br>
+            <b>4. River Narmada:</b> Originates at the Amarkantak Plateau in Madhya Pradesh (1,057 m); flows westwards (1,312 km) through a tectonic rift valley between the Vindhya and Satpura ranges, and empties into the Gulf of Khambhat (Arabian Sea).<br>
+            <b>5. River Tapi:</b> Originates at Multai in Betul district of Madhya Pradesh (752 m); flows westwards (724 km) south of the Satpura range through Maharashtra and Gujarat into the Gulf of Khambhat (Arabian Sea).<br>
+            <b>6. River Mahanadi:</b> Originates near Sihawa in Raipur/Dhamtari district of Chhattisgarh; flows eastwards (851 km) through Odisha, forms the Hirakud reservoir, and empties into the Bay of Bengal at False Point (Paradip).<br>
+            <b>7. River Godavari:</b> Originates at Trimbakeshwar near Nashik in the Western Ghats of Maharashtra; flows southeast (1,465 km - Dakshin Ganga, longest Peninsular river) across Maharashtra, Telangana, and Andhra Pradesh into the Bay of Bengal at Rajahmundry.<br>
+            <b>8. River Krishna:</b> Originates from a spring near Mahabaleshwar in the Western Ghats of Maharashtra; flows eastwards (1,400 km) through Maharashtra, Karnataka, and Andhra Pradesh into the Bay of Bengal at Hamsaladeevi.<br>
+            <b>9. River Kaveri:</b> Originates at Talakaveri in the Brahmagiri Hills of Kodagu/Coorg (Karnataka); flows southeast (800 km) through Karnataka (Shivanasamudra falls) and Tamil Nadu (Hogenakkal, Mettur Dam, Tiruchirappalli) and enters the Bay of Bengal at Poompuhar through the fertile Cauvery Delta.<br><br>
             <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
-              <b>ðŸŽ¯ Board Exam Tip:</b> Draw rivers as smooth, unbroken blue curves from their origin to the sea, indicating the flow direction with an arrowhead. Remember that Narmada and Tapti flow West into the Arabian Sea, while Ganga, Brahmaputra, Mahanadi, Godavari, Krishna, and Kaveri flow East into the Bay of Bengal.
+              <b>🎯 Critical Board Exam Traps & Rules:</b><br>
+              • <b>Exact Origins:</b> Always mark the origin circle clearly (e.g. Talakaveri in Coorg, Mahabaleshwar, Trimbak, Gangotri, Amarkantak).<br>
+              • <b>Flow Direction:</b> Draw flow arrowheads pointing downstream. Remember that <b>Narmada & Tapi</b> flow WEST into the Arabian Sea; <b>Ganga, Brahmaputra, Mahanadi, Godavari, Krishna, and Kaveri</b> flow EAST into the Bay of Bengal.<br>
+              • <b>River Mouths:</b> Rivers must not stop in the mid-interior! Ensure lines reach their actual coastal mouths / deltas at the sea.
             </div>
           </div>`,
           explanation: "Major perennial Himalayan rivers (Indus, Ganga, Brahmaputra) and seasonal Peninsular rivers (Narmada, Tapti, Mahanadi, Godavari, Krishna, Kaveri).",

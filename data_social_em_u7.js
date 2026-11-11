@@ -1,4 +1,4 @@
-﻿// 10th Standard Social Science - Civics Unit 2: Central Government
+// 10th Standard Social Science - Civics Unit 2: Central Government
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions (English Medium)
 
 const SOCIAL_EM_UNIT_7_DATA = {
@@ -152,22 +152,27 @@ const SOCIAL_EM_UNIT_7_DATA = {
           examYear: "2024",
           examTag: "Board Exam Model Map",
           isImportant: true,
-          q: "On the given outline map of India, mark and label the principal administrative centers of the Union Government and Union Territories of India:<br>1. New Delhi (National Capital Territory - Rashtrapati Bhavan & Parliament House)<br>2. Andaman and Nicobar Islands (Port Blair - Union Territory)<br>3. Lakshadweep (Kavaratti - Coral Island Union Territory)<br>4. Puducherry (Union Territory with Legislative Assembly)<br>5. Ladakh (Leh - Northern Union Territory)<br>6. Chandigarh (Joint Capital Union Territory)",
+          q: "On the given outline map of India, mark and label the principal administrative centers of the Union Government and all 8 Union Territories (UTs) of India:<br>1. New Delhi (National Capital Territory - Rashtrapati Bhavan & Parliament House)<br>2. Jammu and Kashmir (Srinagar / Jammu - Legislative UT reorganized 2019)<br>3. Ladakh (Leh - Northern High-Altitude UT reorganized 2019)<br>4. Chandigarh (Joint Capital UT of Punjab & Haryana)<br>5. Dadra and Nagar Haveli and Daman and Diu (Daman - Merged West Coast UT 2020)<br>6. Puducherry (Coromandel Coast - Legislative UT)<br>7. Lakshadweep (Kavaratti - Coral Island Archipelago in Arabian Sea)<br>8. Andaman and Nicobar Islands (Port Blair - Archipelago in Bay of Bengal & Indira Point)",
           ans: `<div style="line-height:1.8;">
-            <b style="color:#0284c7; font-size:15px;">Union Government & Union Territories Map Guide:</b><br><br>
-            <b>1. New Delhi:</b> National Capital Territory (NCT); seat of the Union Government, Rashtrapati Bhavan (President's official residence), Parliament House (Lok Sabha & Rajya Sabha), and the Central Secretariat.<br>
-            <b>2. Andaman and Nicobar Islands:</b> Archipelago Union Territory in the Bay of Bengal; administrative headquarters at Port Blair (India's southernmost point, Indira Point, is located at Great Nicobar).<br>
-            <b>3. Lakshadweep:</b> Coral reef archipelago Union Territory in the Arabian Sea; administrative headquarters at Kavaratti.<br>
-            <b>4. Puducherry:</b> Union Territory on the southeast coast of Tamil Nadu possessing its own elected Legislative Assembly and Council of Ministers.<br>
-            <b>5. Ladakh:</b> Northernmost high-altitude Union Territory established in 2019; capital at Leh.<br>
-            <b>6. Chandigarh:</b> Beautifully planned Union Territory serving as the joint capital of both Punjab and Haryana.<br><br>
+            <b style="color:#0284c7; font-size:15px;">Union Government & All 8 Union Territories (UTs) Map Guide:</b><br><br>
+            <b>1. New Delhi (National Capital Territory - NCT):</b> Seat of the Union Government of India, Rashtrapati Bhavan (President's official residence), Sansad Bhavan (Parliament of India), Supreme Court of India, and Central Secretariat.<br>
+            <b>2. Jammu and Kashmir UT:</b> Reorganized as a Union Territory under the J&K Reorganisation Act, 2019; has its own Legislative Assembly. Summer capital: Srinagar; Winter capital: Jammu.<br>
+            <b>3. Ladakh UT:</b> Northernmost high-altitude Union Territory established on October 31, 2019 (without legislature); administrative headquarters at Leh and Kargil.<br>
+            <b>4. Chandigarh UT:</b> Master-planned modern city serving as the joint capital of both Punjab and Haryana; directly administered by the Union Government.<br>
+            <b>5. Dadra and Nagar Haveli and Daman and Diu UT:</b> Merged into a single Union Territory on January 26, 2020; administrative capital at Daman (located along Gujarat coast / Gulf of Khambhat with Diu island and DNH).<br>
+            <b>6. Puducherry UT:</b> Located on the Coromandel coast (Tamil Nadu) with enclaves at Karaikal, Mahe (Kerala), and Yanam (Andhra Pradesh); possesses an elected Legislative Assembly and Chief Minister.<br>
+            <b>7. Lakshadweep UT:</b> Coral reef archipelago of 36 islands in the Arabian Sea; administrative headquarters at Kavaratti.<br>
+            <b>8. Andaman and Nicobar Islands UT:</b> Volcanic and tectonic archipelago in the Bay of Bengal; administrative headquarters at Port Blair. India's southernmost geographical point, <b>Indira Point (6°45' N)</b>, is located on Great Nicobar Island.<br><br>
             <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
-              <b>ðŸŽ¯ Board Exam Tip:</b> Only 3 Union Territories have their own elected Legislative Assemblies: Delhi, Puducherry, and Jammu & Kashmir. Delhi and Puducherry MLAs participate in the Presidential Electoral College (70th Constitutional Amendment).
+              <b>🎯 Critical Board Exam Rules & Reorganization Facts:</b><br>
+              • <b>Total Count:</b> India currently comprises <b>28 States and 8 Union Territories</b>.<br>
+              • <b>Legislative Assemblies:</b> Only <b>3 UTs</b> possess their own elected Legislative Assemblies: Delhi (NCT), Puducherry, and Jammu & Kashmir. Elected MLAs of Delhi and Puducherry vote in the Presidential Election (70th Constitutional Amendment Act).<br>
+              • <b>Cartographic Pinning:</b> Smaller UTs (Chandigarh, Delhi NCT, DNH & DD, Puducherry) are highlighted with high-visibility cyan locator rings so they are clearly distinguishable on board outline maps.
             </div>
           </div>`,
-          explanation: "Constitutional administrative capitals of the Union of India and strategically located Union Territories.",
+          explanation: "Constitutional administrative capitals of the Union of India, all 8 Union Territories, and post-2019 reorganization boundaries.",
           diagramImg: "images/soc_union_map.jpg",
-          diagramCaption: "India Map: Central Government Administrative Centers & Union Territories"
+          diagramCaption: "India Map: Central Government Administrative Centers & 8 Union Territories (UTs)"
         }
       ]
     }
@@ -177,3 +182,5 @@ const SOCIAL_EM_UNIT_7_DATA = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = SOCIAL_EM_UNIT_7_DATA;
 }
+
+if (typeof window !== 'undefined') { window.SOCIAL_EM_UNIT_7_DATA = SOCIAL_EM_UNIT_7_DATA; }

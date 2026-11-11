@@ -1,4 +1,4 @@
-﻿// Class 10 Social Science - Economics Unit 3: Food Security and Nutrition
+// Class 10 Social Science - Economics Unit 3: Food Security and Nutrition
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SOCIAL_EM_UNIT_12_DATA = {
@@ -186,7 +186,7 @@ const SOCIAL_EM_UNIT_12_DATA = {
   ,
     {
       id: "sec_soc_em_12_map",
-      title: "Map Identification & Practice: Food Security & Granaries (8M)",
+            title: "Map Identification & Practice: Food Security & Granaries (8M)",
       author: "Economics Unit 3 Map Tutor",
       questions: [
         {
@@ -196,21 +196,25 @@ const SOCIAL_EM_UNIT_12_DATA = {
           examYear: "2024",
           examTag: "Board Exam Model Map",
           isImportant: true,
-          q: "On the given outline map of India, mark and label the key states and centers associated with Food Security, the Green Revolution, and grain procurement:<br>1. Punjab (Granary of India - Cradle of the Green Revolution)<br>2. Haryana (Major surplus wheat and rice procurement state for central buffer stocks)<br>3. Thanjavur (Granary of South India / Rice Bowl of Tamil Nadu - Cauvery Delta)<br>4. Chennai (Headquarters of Tamil Nadu Civil Supplies Corporation - TNCSC)<br>5. Uttar Pradesh (India's leading producer of sugarcane, wheat, and foodgrains)",
+          q: "On the given outline map of India, mark and label the key agrarian granaries, Green Revolution centers, and PDS management nodes:<br>1. Punjab (Granary of India - Cradle of Green Revolution with HYV wheat seeds & canals)<br>2. Haryana (Surplus wheat and dairy producing powerhouse - continuous North-Western Wheat Belt)<br>3. Uttar Pradesh (India's leading producer of wheat, sugarcane, and food grains)<br>4. Thanjavur / Cauvery Delta (Granary of South India / Rice Bowl of Tamil Nadu)<br>5. Chennai (Headquarters of Tamil Nadu Civil Supplies Corporation - TNCSC Universal PDS)<br>6. New Delhi (National Headquarters of Food Corporation of India - FCI Central Buffer Stocks)",
           ans: `<div style="line-height:1.8;">
-            <b style="color:#0284c7; font-size:15px;">Food Security and Granaries of India Map Guide:</b><br><br>
-            <b>1. Punjab:</b> Granary of India; pioneer state of the Green Revolution during the 1960s utilizing High Yielding Variety (HYV) seeds, modern irrigation canals, and fertilizers.<br>
-            <b>2. Haryana:</b> Major contributor to the Food Corporation of India (FCI) national buffer stocks through intensive grain procurement.<br>
-            <b>3. Thanjavur:</b> Granary of South India / Rice Bowl of Tamil Nadu; fertile alluvial delta of River Cauvery supporting intensive triple-crop paddy farming.<br>
-            <b>4. Chennai:</b> Headquarters of the Tamil Nadu Civil Supplies Corporation (TNCSC), which operates the state's Universal Public Distribution System (PDS).<br>
-            <b>5. Uttar Pradesh:</b> Most populous agrarian state, ranking first in national wheat, sugarcane, and potato production.<br><br>
+            <b style="color:#0284c7; font-size:15px;">Food Security, Granaries & PDS Hubs Map Guide:</b><br><br>
+            <b>1. Punjab:</b> 'Granary of India'; pioneer state of the Green Revolution in the 1960s led by Dr. M.S. Swaminathan utilizing High Yielding Variety (HYV) Kalyan Sona seeds, tube-well irrigation, and chemical fertilizers.<br>
+            <b>2. Haryana:</b> Key North-Western surplus food grain producer; forms a continuous agricultural wheat belt with Punjab and Western UP, contributing heavily to central buffer stocks.<br>
+            <b>3. Uttar Pradesh:</b> India's most populous agrarian state; ranks first in total national production of wheat, sugarcane, and potato, feeding national PDS grain allocation.<br>
+            <b>4. Thanjavur (Cauvery Delta):</b> 'Rice Bowl of Tamil Nadu' and 'Granary of South India'; fertile alluvial delta of River Cauvery supporting intensive triple-crop paddy cultivation.<br>
+            <b>5. Chennai:</b> Headquarters of the Tamil Nadu Civil Supplies Corporation (TNCSC), operating the pioneering Universal Public Distribution System (PDS) covering all families with free rice entitlement.<br>
+            <b>6. New Delhi:</b> National Headquarters of the Food Corporation of India (FCI), established under the Food Corporation Act 1964 to procure foodgrains at Minimum Support Price (MSP) and maintain national buffer stocks.<br><br>
             <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
-              <b>🎯 Board Exam Tip:</b> Dr. M.S. Swaminathan led India's Green Revolution. Mark Punjab in the northwest as the national granary and Thanjavur in Tamil Nadu as the regional rice bowl.
+              <b>🎯 Critical Board Exam Traps & Rules:</b><br>
+              • <b>Wheat Belt Uniformity:</b> Haryana is a core surplus wheat producer and must be shaded in the same amber/yellow tone as Punjab and UP, not green!<br>
+              • <b>Cauvery Delta vs. State Shading:</b> Never shade the entire state of Tamil Nadu green as a "Rice Delta"! Shade strictly the Cauvery Delta coastal district cluster (Thanjavur, Tiruvarur, Nagapattinam) with the indicator dot right at Thanjavur.<br>
+              • <b>PDS Hierarchy:</b> Distinguish between national buffer stock management (FCI HQ, New Delhi) and state universal distribution (TNCSC HQ, Chennai).
             </div>
           </div>`,
           explanation: "Key agrarian granary states, grain procurement centers, and public food distribution management hubs in India.",
           diagramImg: "images/soc_food_map.jpg",
-          diagramCaption: "India Map: Food Security Powerhouses and Granaries of India"
+          diagramCaption: "India Map: Food Security Powerhouses, Wheat Belt, Rice Delta and PDS Nodes"
         }
       ]
     }
@@ -220,3 +224,5 @@ const SOCIAL_EM_UNIT_12_DATA = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = SOCIAL_EM_UNIT_12_DATA;
 }
+
+if (typeof window !== 'undefined') { window.SOCIAL_EM_UNIT_12_DATA = SOCIAL_EM_UNIT_12_DATA; }

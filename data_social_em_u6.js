@@ -1,4 +1,4 @@
-﻿// Class 10 Social Science - Geography Unit 2: India - Climate and Natural Vegetation
+// Class 10 Social Science - Geography Unit 2: India - Climate and Natural Vegetation
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SOCIAL_EM_UNIT_6_DATA = {
@@ -157,7 +157,7 @@ const SOCIAL_EM_UNIT_6_DATA = {
   ,
     {
       id: "sec_soc_em_6_map",
-      title: "Map Identification & Practice: Climate & Vegetation (8M)",
+            title: "Map Identification & Practice: Climate & Vegetation (8M)",
       author: "Geography Unit 2 Map Tutor",
       questions: [
         {
@@ -167,25 +167,30 @@ const SOCIAL_EM_UNIT_6_DATA = {
           examYear: "2024",
           examTag: "Board Exam Model Map",
           isImportant: true,
-          q: "On the given outline map of India, mark and label the following geographical features related to Climate and Natural Vegetation:<br>1. Mawsynram (Wettest place in the world - 1141 cm rainfall)<br>2. Tropical Evergreen Forest belt along the Western Coast<br>3. Sundarbans Mangrove Forest (Ganga-Brahmaputra Delta)<br>4. Thar Desert Arid Scrub Vegetation region<br>5. Nilgiri Biosphere Reserve (India's first biosphere reserve)<br>6. Gulf of Mannar Marine Biosphere Reserve<br>7. Direction of South-West Monsoon Winds (Arabian Sea branch)",
+          q: "On the given outline map of India, mark and label the following geographical features related to Climate and Natural Vegetation:<br>1. Mawsynram (Wettest place in the world - 1,141 cm rainfall in Khasi Hills, Meghalaya)<br>2. Tropical Evergreen Forests (Western slopes of Western Ghats & Northeast India hill states)<br>3. Sundarbans (Tidal Mangrove Forest in the Ganga-Brahmaputra Delta)<br>4. Thar Desert (Arid Thorny Scrub Vegetation region of western Rajasthan)<br>5. Nilgiri Biosphere Reserve (India's first biosphere reserve established in 1986)<br>6. Gulf of Mannar Marine Biosphere Reserve (Southeastern coast of Tamil Nadu)<br>7. South-West Monsoon Winds (Arabian Sea branch & Bay of Bengal branch)",
           ans: `<div style="line-height:1.8;">
             <b style="color:#0284c7; font-size:15px;">Climate, Rainfall & Natural Vegetation Map Guide:</b><br><br>
-            <b>1. Mawsynram:</b> Located in the Khasi Hills of Meghalaya; receives the highest average annual rainfall in the world (1,141 cm) due to the funnel-shaped relief trapping Bay of Bengal monsoon winds.<br>
-            <b>2. Tropical Evergreen Forests:</b> Dense evergreen belt along the windward slopes of the Western Ghats receiving more than 200 cm rainfall (Rosewood, Ebony, Mahogany, Bamboo).<br>
-            <b>3. Sundarbans:</b> World's largest tidal halophytic mangrove forest situated in the Ganga-Brahmaputra delta across West Bengal (Sundari trees, Royal Bengal Tiger habitat).<br>
-            <b>4. Thar Desert:</b> Arid desert scrub and thorny vegetation in western Rajasthan receiving less than 25 cm annual rainfall (Khejri, Cacti, Babool).<br>
-            <b>5. Nilgiri Biosphere Reserve:</b> India's first designated biosphere reserve (1986), situated at the tri-junction of Tamil Nadu, Kerala, and Karnataka.<br>
-            <b>6. Gulf of Mannar Marine Biosphere Reserve:</b> India's first marine biosphere reserve located off the southeastern coast of Tamil Nadu.<br>
-            <b>7. South-West Monsoon Winds:</b> Southwest to northeast wind arrows depicting the Arabian Sea branch striking the Western Ghats.<br><br>
+            <b>1. Mawsynram:</b> Located in the Khasi Hills of Meghalaya; receives the highest average annual rainfall in the world (1,141 cm) due to the funnel-shaped relief trapping moisture-laden Bay of Bengal monsoon winds.<br>
+            <b>2. Tropical Evergreen Forests:</b> Found in areas receiving more than 200 cm rainfall: (a) A narrow continuous strip along the windward western slopes of the Western Ghats (Kerala, Karnataka, Maharashtra), (b) Upper Assam and Arunachal Pradesh foothills in Northeast India, and (c) Andaman and Nicobar Islands.<br>
+            <b>3. Sundarbans Mangrove Forest:</b> World's largest tidal halophytic mangrove delta located at the coastal mouth of Ganga and Brahmaputra in West Bengal (Sundari trees, Royal Bengal Tiger). Must be marked at the coast, distinctly from inland forests.<br>
+            <b>4. Thar Desert:</b> Arid desert scrub and thorny vegetation in western Rajasthan receiving less than 25 cm annual rainfall (Khejri, Cacti, Babool, Acacia).<br>
+            <b>5. Nilgiri Biosphere Reserve:</b> India's first designated biosphere reserve (1986), situated at the mountainous tri-junction of Tamil Nadu, Kerala, and Karnataka.<br>
+            <b>6. Gulf of Mannar Marine Biosphere Reserve:</b> India's first marine biosphere reserve located in the shallow waters between southeastern Tamil Nadu and Sri Lanka.<br>
+            <b>7. South-West Monsoon Winds:</b> Depict both branches using directional arrows: (a) <i>Arabian Sea branch</i> striking the Western Ghats from south-west to north-east, and (b) <i>Bay of Bengal branch</i> moving north-east into Assam and recurving westward along the Himalayas across the Gangetic plain.<br><br>
             <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
-              <b>ðŸŽ¯ Board Exam Tip:</b> Clearly distinguish forest shading (dark green for evergreen, striped green for mangroves) and use distinct direction arrows for the South-West Monsoon.
+              <b>🎯 Critical Board Exam Traps & Rules:</b><br>
+              • <b>Deciduous vs. Evergreen:</b> Never shade Bihar, Jharkhand, or inland Gangetic plains as Evergreen! They receive 100–200 cm rainfall and are strictly <i>Tropical Deciduous (Moist & Dry Deciduous) Forests</i>.<br>
+              • <b>Sundarbans:</b> Shade specifically as <i>Mangrove / Tidal Forest</i> at the delta shoreline, never merged with inland evergreen.<br>
+              • <b>Monsoon Winds:</b> Always draw both the Arabian Sea and Bay of Bengal branches to secure full marks.
             </div>
           </div>`,
-          explanation: "Distribution of high-rainfall zones, monsoon wind trajectories, and natural forest ecosystems in India.",
+          explanation: "Accurate cartographic distribution of high-rainfall zones, monsoon wind branches, biosphere reserves, and natural forest ecosystems in India.",
           diagramImg: "images/soc_climate_map.jpg",
-          diagramCaption: "India Map: Climate, Rainfall Zones and Natural Vegetation of India"
+          diagramCaption: "India Map: Climate, Rainfall Zones, Monsoon Branches and Natural Vegetation of India"
         }
       ]
     }
   ]
 };
+
+if (typeof window !== 'undefined') { window.SOCIAL_EM_UNIT_6_DATA = SOCIAL_EM_UNIT_6_DATA; }

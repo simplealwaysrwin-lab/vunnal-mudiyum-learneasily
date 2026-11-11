@@ -1,4 +1,4 @@
-﻿// Class 10 Social Science - Civics Unit 3: State Government
+// Class 10 Social Science - Civics Unit 3: State Government
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SOCIAL_EM_UNIT_11_DATA = {
@@ -195,7 +195,7 @@ const SOCIAL_EM_UNIT_11_DATA = {
   ,
     {
       id: "sec_soc_em_11_map",
-      title: "Map Identification & Practice: State Government & High Courts (8M)",
+            title: "Map Identification & Practice: State Government & High Courts (8M)",
       author: "Civics Unit 3 Map Tutor",
       questions: [
         {
@@ -205,21 +205,25 @@ const SOCIAL_EM_UNIT_11_DATA = {
           examYear: "2024",
           examTag: "Board Exam Model Map",
           isImportant: true,
-          q: "On the given outline map of India, mark and label the state administrative capitals and High Court seats:<br>1. Chennai (Tamil Nadu State Secretariat at Fort St. George & Madras High Court, est. 1862)<br>2. Madurai (Madurai Bench of the Madras High Court, est. 2004)<br>3. Thiruvananthapuram (Capital city of Kerala State)<br>4. Bengaluru (Capital city of Karnataka State)<br>5. Hyderabad / Amaravati (Capitals of Telangana and Andhra Pradesh)",
+          q: "On the given outline map of India, mark and label the key administrative capitals, State Secretariats, and High Court seats of Peninsular India:<br>1. Chennai (Fort St. George - Tamil Nadu State Secretariat & Principal Seat of Madras High Court, est. 1862)<br>2. Madurai (Permanent Madurai Bench of the Madras High Court, inaugurated July 24, 2004)<br>3. Bengaluru (Capital of Karnataka State; seat of Vidhana Soudha State Legislature & Karnataka High Court - Attara Kacheri)<br>4. Thiruvananthapuram (Administrative capital & Secretariat of Kerala - Note: High Court of Kerala is at Kochi/Ernakulam)<br>5. Hyderabad (Capital city & Secretariat of Telangana State, seat of Telangana High Court)<br>6. Amaravati (Capital of Andhra Pradesh situated along River Krishna, seat of AP High Court at Nelapadu)",
           ans: `<div style="line-height:1.8;">
-            <b style="color:#0284c7; font-size:15px;">State Government Capitals & High Court Seats Map Guide:</b><br><br>
-            <b>1. Chennai:</b> Capital of Tamil Nadu; seat of Fort St. George (State Secretariat and Legislative Assembly) and the Principal Seat of the Madras High Court.<br>
-            <b>2. Madurai:</b> Cultural capital of southern Tamil Nadu; home to the permanent Madurai Bench of the Madras High Court inaugurated in 2004.<br>
-            <b>3. Thiruvananthapuram:</b> Administrative capital of the neighbouring state of Kerala.<br>
-            <b>4. Bengaluru:</b> Capital of Karnataka; seat of the Vidhana Soudha (State Legislature) and the High Court of Karnataka.<br>
-            <b>5. Hyderabad / Amaravati:</b> Administrative capitals of Telangana and Andhra Pradesh.<br><br>
+            <b style="color:#0284c7; font-size:15px;">Peninsular State Capitals & High Courts Map Guide:</b><br><br>
+            <b>1. Chennai:</b> Capital of Tamil Nadu located on the Coromandel coast; seat of Fort St. George (State Secretariat and Legislative Assembly) and the historic Madras High Court chartered in 1862.<br>
+            <b>2. Madurai:</b> Cultural hub of southern Tamil Nadu; home to the permanent Madurai Bench of the Madras High Court inaugurated on July 24, 2004, serving 14 southern districts.<br>
+            <b>3. Bengaluru:</b> Capital of Karnataka; seat of the Vidhana Soudha (State Legislature) and High Court of Karnataka (Attara Kacheri).<br>
+            <b>4. Thiruvananthapuram:</b> Administrative capital and State Secretariat of Kerala located at the southern tip. (Crucial exam point: High Court of Kerala and Lakshadweep is situated at Kochi/Ernakulam, not in the capital).<br>
+            <b>5. Hyderabad:</b> Capital of Telangana located in central-western Telangana; seat of the Telangana State Secretariat and Telangana High Court.<br>
+            <b>6. Amaravati:</b> De jure capital city of Andhra Pradesh situated on the banks of River Krishna near Vijayawada/Guntur; seat of the Andhra Pradesh High Court at Nelapadu.<br><br>
             <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
-              <b>🎯 Board Exam Tip:</b> Under Article 214, each state has a High Court. Distinctly mark the two judicial seats of Tamil Nadu: Chennai (Principal Seat, 1862) and Madurai (Circuit Bench, 2004).
+              <b>🎯 Critical Board Exam Traps & Rules:</b><br>
+              • <b>Separate Hyderabad and Amaravati:</b> Never bundle them on the border! Mark Hyderabad distinctly in central-western Telangana and Amaravati in central coastal Andhra Pradesh along the Krishna River.<br>
+              • <b>Judicial Seats Outside Capitals:</b> In Kerala, the High Court is at <i>Kochi (Ernakulam)</i>, not Thiruvananthapuram. In Tamil Nadu, distinctly mark both Chennai (Principal Seat, 1862) and Madurai (Circuit Bench, 2004).<br>
+              • <b>Palk Strait:</b> Lies exclusively between southeastern Tamil Nadu and northern Sri Lanka (never off the Andhra coast).
             </div>
           </div>`,
-          explanation: "State administrative headquarters, executive secretariats, and High Court judicial seats in South India.",
+          explanation: "Accurate cartographic positioning of state executive secretariats, legislative assemblies, and High Court judicial seats in Peninsular India.",
           diagramImg: "images/soc_stategov_map.jpg",
-          diagramCaption: "India Map: State Capitals and High Court Seats of South India"
+          diagramCaption: "India Map: State Capitals, Secretariats and High Courts of Peninsular India"
         }
       ]
     }
@@ -229,3 +233,5 @@ const SOCIAL_EM_UNIT_11_DATA = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = SOCIAL_EM_UNIT_11_DATA;
 }
+
+if (typeof window !== 'undefined') { window.SOCIAL_EM_UNIT_11_DATA = SOCIAL_EM_UNIT_11_DATA; }

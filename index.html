@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -186,8 +186,8 @@
 <script src="data_social_u12.js?v=20261111_v67"></script>
 <script src="data_social_em_u11.js?v=20261111_v67"></script>
 <script src="data_social_em_u12.js?v=20261111_v67"></script>
-<script src="map_data_and_engine.js?v=20261112_v68"></script>
-<script src="map_practice_evaluator.js?v=20261112_v68"></script>
+<script src="map_data_and_engine.js?v=20261112_v69"></script>
+<script src="map_practice_evaluator.js?v=20261112_v69"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -12509,7 +12509,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261111_v68')
+        navigator.serviceWorker.register('./sw.js?v=20261112_v69')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 
@@ -15686,16 +15686,39 @@ Important:
   function openAnswerEvaluationModal(qId) {
     let qItem = findQuestionById(qId);
     if (!qItem) {
-      const cardEl = document.getElementById('card_' + qId);
-      if (cardEl) {
-        const qTextEl = cardEl.querySelector('.q-text') || cardEl;
-        const ansTextEl = cardEl.querySelector('.ans-text') || cardEl.querySelector('.sol-box');
+      const qLower = (qId || '').toLowerCase();
+      if (qLower === 'board_model' || qLower.includes('map') || qLower.startsWith('soc_')) {
+        const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+        let qTitle = isEm ? 'Board Exam Model Map Practice (8 Marks)' : 'அரசுப் பொதுத்தேர்வு மாதிரி வரைபடம் (8 மதிப்பெண்கள்)';
+        if (qLower.includes('ww1') || qLower.includes('soc_1')) {
+          qTitle = isEm ? 'World War I Nations & Theatres (History Unit 1)' : 'முதல் உலகப் போர் நாடுகள் வரைபடம் (வரலாறு அலகு 1)';
+        } else if (qLower.includes('ww2') || qLower.includes('soc_9')) {
+          qTitle = isEm ? 'World War II Powers & Theatres (History Unit 3)' : 'இரண்டாம் உலகப் போர் நாடுகள் வரைபடம் (வரலாறு அலகு 3)';
+        } else if (qLower.includes('river') || qLower.includes('soc_2')) {
+          qTitle = isEm ? 'Major Rivers of India (Geography Unit 1)' : 'இந்தியாவின் முக்கிய நதிகள் (புவியியல் அலகு 1)';
+        } else if (qLower.includes('port') || qLower.includes('soc_8') || qLower.includes('soc_3')) {
+          qTitle = isEm ? 'Major Sea Ports of India (Geography Unit 2)' : 'இந்தியாவின் முக்கிய துறைமுகங்கள் (புவியியல் அலகு 2)';
+        } else if (qLower.includes('soil') || qLower.includes('dam') || qLower.includes('soc_10')) {
+          qTitle = isEm ? 'Soils, Crops & Multipurpose Dams of India' : 'மண் வகைகள், பயிர்கள் & அணைகள் (புவியியல்)';
+        }
         qItem = {
           id: qId,
-          q: (qTextEl ? qTextEl.innerText : '').substring(0, 250),
-          ans: (ansTextEl ? ansTextEl.innerText : ''),
-          mark: 'வினா'
+          q: qTitle,
+          ans: isEm ? 'Mark on the blank map and evaluate' : 'வெற்று வரைபடத்தில் குறித்து மதிப்பீடு செய்யவும்',
+          mark: isEm ? '8 Marks Map' : '8 மதிப்பெண் வரைபடம்'
         };
+      } else {
+        const cardEl = document.getElementById('card_' + qId);
+        if (cardEl) {
+          const qTextEl = cardEl.querySelector('.q-text') || cardEl;
+          const ansTextEl = cardEl.querySelector('.ans-text') || cardEl.querySelector('.sol-box');
+          qItem = {
+            id: qId,
+            q: (qTextEl ? qTextEl.innerText : '').substring(0, 250),
+            ans: (ansTextEl ? ansTextEl.innerText : ''),
+            mark: 'வினா'
+          };
+        }
       }
     }
     if (!qItem) {
@@ -15750,6 +15773,17 @@ Important:
     }
   }
   window.openAnswerEvaluationModal = openAnswerEvaluationModal;
+
+  function openSocialMapTutor(targetUnit = 'all') {
+    if (targetUnit === 'soc_ww1' || targetUnit === 'soc_1') {
+      openAnswerEvaluationModal('soc_1_map_1');
+    } else if (targetUnit === 'soc_ww2' || targetUnit === 'soc_9') {
+      openAnswerEvaluationModal('soc_9_map_1');
+    } else {
+      openAnswerEvaluationModal('board_model');
+    }
+  }
+  window.openSocialMapTutor = openSocialMapTutor;
 
   function closeAIEvaluatorModal() {
     stopAISpeech();

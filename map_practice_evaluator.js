@@ -1,6 +1,6 @@
-﻿// =============================================================================
-// 10th Social Science - Interactive Map Marking Practice & Evaluation Engine
-// Pure UTF-8 • Full Touch & Mouse Support • Real-time Scoring & Examiner Feedback
+// =============================================================================
+// 10th Social Science - Interactive Blank Map Marking Practice & Evaluation Engine
+// Mobile-Optimized • Tap-to-Zoom • Official Blank Maps • Euclidean Distance AI Scoring
 // =============================================================================
 
 (function() {
@@ -15,6 +15,7 @@
       id: "board_model",
       titleTamil: "அரசு பொதுத்தேர்வு மாதிரி வரைபடம் (வினா எண் 43 - 8 மதிப்பெண்கள்)",
       titleEnglish: "Board Exam Model Map (Question 43 - 8 Marks)",
+      officialImage: "images/soc_soils_map.jpg",
       mapType: "india",
       maxMarks: 8,
       places: [
@@ -58,53 +59,53 @@
           nameTamil: "பாலை மண் பகுதி (தார் பாலைவனம்)",
           nameEnglish: "Desert Soil Region (Thar Desert)",
           coords: { x: 255, y: 420 },
-          tolerance: 55,
-          tipTamil: "ராஜஸ்தானின் மேற்கு பகுதியில் ஆரவல்லி மலைக்கு மேற்கே உள்ள வறண்ட பாலைமண் பிரதேசம்.",
-          tipEnglish: "Arid desert soil region in western Rajasthan, west of the Aravalli range."
+          tolerance: 50,
+          tipTamil: "ராஜஸ்தானின் மேற்குப் பகுதியில் உள்ள வறண்ட மணற்பாங்கான பாலைமண் பகுதி.",
+          tipEnglish: "Arid desert soil region spanning western Rajasthan and Thar."
         },
         {
-          id: "ind_mumbai",
+          id: "ind_cauvery",
           num: 5,
           numLabel: "(v)",
-          nameTamil: "மும்பை துறைமுகம்",
-          nameEnglish: "Mumbai Port",
-          coords: { x: 270, y: 638 },
-          tolerance: 40,
-          tipTamil: "மகாராஷ்டிராவின் மேற்கு கடற்கரை முகப்பில் உள்ள வளைவுப் புள்ளியில் துல்லியமாக புள்ளியிடவும்.",
-          tipEnglish: "Mark the indicator dot directly on the western coastline indentation of Maharashtra."
+          nameTamil: "காவிரி ஆறு",
+          nameEnglish: "River Cauvery / Kaveri",
+          coords: { x: 430, y: 880 },
+          tolerance: 45,
+          tipTamil: "கர்நாடகாவின் தலைக்காவேரியில் தொடங்கி தமிழ்நாடு வழியாக வங்காள விரிகுடாவில் கலக்கும் ஆறு.",
+          tipEnglish: "Originates at Talakaveri in Coorg, flows through Tamil Nadu into Bay of Bengal at Poompuhar."
         },
         {
-          id: "ind_air_chennai_kolkata",
+          id: "ind_mumbai_port",
           num: 6,
           numLabel: "(vi)",
-          nameTamil: "சென்னை - கொல்கத்தா வான்வழிப் பாதை",
-          nameEnglish: "Chennai to Kolkata Air Route",
-          coords: { x: 585, y: 670 },
-          tolerance: 55,
-          tipTamil: "சென்னையையும் கொல்கத்தாவையும் இணைக்கும் கடற்கரை வளைந்த வான்வழிப் பாதை.",
-          tipEnglish: "Eastern coastal flight corridor connecting Chennai (Tamil Nadu) and Kolkata (West Bengal)."
+          nameTamil: "மும்பை துறைமுகம்",
+          nameEnglish: "Mumbai Port",
+          coords: { x: 285, y: 630 },
+          tolerance: 40,
+          tipTamil: "மகாராஷ்டிரா கடற்கரையில் அமைந்துள்ள இந்தியாவின் மிகப்பெரிய இயற்கை துறைமுகம்.",
+          tipEnglish: "India's premier natural deepwater harbor located on the Konkan Coast of Maharashtra."
         },
         {
-          id: "ind_goa",
+          id: "ind_mawsynram",
           num: 7,
           numLabel: "(vii)",
-          nameTamil: "கோவா",
-          nameEnglish: "Goa",
-          coords: { x: 285, y: 780 },
-          tolerance: 40,
-          tipTamil: "மகாராஷ்டிரா மற்றும் கர்நாடகாவின் எல்லைப் பகுதியில் உள்ள இந்தியாவின் மிகச்சிறிய கடற்கரை மாநிலம்.",
-          tipEnglish: "Smallest state of India located on the Konkan coast between Maharashtra and Karnataka."
+          nameTamil: "அதிக மழைபெறும் பகுதி (மௌசின்ராம்)",
+          nameEnglish: "Heavy Rainfall Region (Mawsynram)",
+          coords: { x: 745, y: 430 },
+          tolerance: 45,
+          tipTamil: "மேகாலயாவின் காசி குன்றுகளில் உள்ள உலகிலேயே அதிக மழைபெறும் இடம்.",
+          tipEnglish: "Wettest place on Earth situated on the southern slopes of Khasi Hills in Meghalaya."
         },
         {
-          id: "ind_river_ganga",
+          id: "ind_cotton_soil",
           num: 8,
           numLabel: "(viii)",
-          nameTamil: "கங்கை ஆறு",
-          nameEnglish: "River Ganga",
-          coords: { x: 515, y: 345 },
-          tolerance: 48,
-          tipTamil: "இமயமலையில் தொடங்கி உ.பி, பீகார், வங்கம் வழியாக வங்காள விரிகுடாவில் கலக்கும் புனித நதி.",
-          tipEnglish: "Longest perennial river of India flowing from Himalayas through UP, Bihar into Bay of Bengal."
+          nameTamil: "பருத்தி விளையும் பகுதி (கரிசல் மண்)",
+          nameEnglish: "Cotton Growing Belt (Black Soil)",
+          coords: { x: 380, y: 610 },
+          tolerance: 50,
+          tipTamil: "மகாராஷ்டிரா மற்றும் தக்காண பீடபூமியின் பசால்ட் பாறை கரிசல் மண் பகுதி.",
+          tipEnglish: "Regur / Black soil Deccan lava plateau of Maharashtra and Gujarat ideal for cotton cultivation."
         }
       ]
     },
@@ -114,35 +115,38 @@
       id: "soc_rivers",
       titleTamil: "இந்தியாவின் முக்கிய நதிகள் (புவியியல் அலகு 1 - 8 மதிப்பெண்கள்)",
       titleEnglish: "Major Rivers of India (Geography Unit 1 - 8 Marks)",
+      officialImage: "images/soc_rivers_map.jpg",
       mapType: "india",
       maxMarks: 8,
       places: [
-        { id: "riv_ganga", num: 1, numLabel: "(1)", nameTamil: "கங்கை ஆறு", nameEnglish: "River Ganga", coords: { x: 515, y: 345 }, tolerance: 45, tipTamil: "இமயமலையில் தொடங்கி உ.பி, பீகார் வழியாக வங்காள விரிகுடாவில் கலக்கும் நதி.", tipEnglish: "Flows east from Uttarakhand through UP and Bihar to Bay of Bengal." },
-        { id: "riv_brahmaputra", num: 2, numLabel: "(2)", nameTamil: "பிரம்மபுத்திரா ஆறு", nameEnglish: "River Brahmaputra", coords: { x: 780, y: 360 }, tolerance: 45, tipTamil: "திபெத்தில் சாங்போ எனத் தொடங்கி அசாம் பள்ளத்தாக்கு வழியாகப் பாய்கிறது.", tipEnglish: "Enters India in Arunachal and flows through Assam valley." },
-        { id: "riv_godavari", num: 3, numLabel: "(3)", nameTamil: "கோதாவரி ஆறு (தென் கங்கை)", nameEnglish: "River Godavari", coords: { x: 490, y: 630 }, tolerance: 45, tipTamil: "நாசிக்கில் தொடங்கி ஆந்திரா வழியே வங்காள விரிகுடாவில் கலக்கிறது.", tipEnglish: "Longest peninsular river rising in Nasik, Maharashtra." },
-        { id: "riv_krishna", num: 4, numLabel: "(4)", nameTamil: "கிருஷ்ணா ஆறு", nameEnglish: "River Krishna", coords: { x: 460, y: 715 }, tolerance: 45, tipTamil: "மகாபலேஸ்வரில் தொடங்கி கர்நாடகா, ஆந்திரா வழி பாய்கிறது.", tipEnglish: "Rises at Mahabaleshwar and flows eastward to Bay of Bengal." },
-        { id: "riv_kaveri", num: 5, numLabel: "(5)", nameTamil: "காவிரி ஆறு", nameEnglish: "River Kaveri", coords: { x: 430, y: 885 }, tolerance: 45, tipTamil: "குடகின் தலக்காவிரியில் தொடங்கி தமிழ்நாடு வழி வங்கக்கடலில் கலக்கிறது.", tipEnglish: "Rises in Talakaveri (Karnataka) and flows through Tamil Nadu." },
-        { id: "riv_narmada", num: 6, numLabel: "(6)", nameTamil: "நர்மதை ஆறு", nameEnglish: "River Narmada", coords: { x: 330, y: 520 }, tolerance: 45, tipTamil: "அமர்கண்டக்கில் தொடங்கி விந்திய-சாத்பூரா இடையே மேற்கே பாய்ந்து அரபிக்கடலில் கலக்கிறது.", tipEnglish: "West flowing river in rift valley between Vindhya and Satpura." },
-        { id: "riv_tapti", num: 7, numLabel: "(7)", nameTamil: "தபதி ஆறு", nameEnglish: "River Tapti", coords: { x: 340, y: 555 }, tolerance: 45, tipTamil: "மத்தியப் பிரதேசத்தில் தொடங்கி நர்மதைக்கு தெற்கே மேற்கே அரபிக்கடலில் கலக்கிறது.", tipEnglish: "Rises in Betul (MP) and flows parallel south of Narmada." },
-        { id: "riv_mahanadi", num: 8, numLabel: "(8)", nameTamil: "மகாநதி", nameEnglish: "River Mahanadi", coords: { x: 620, y: 550 }, tolerance: 45, tipTamil: "சத்தீஸ்கரில் தொடங்கி ஒடிசா வழியாக வங்கக்கடலில் கலக்கிறது (ஹிராகுட் அணை).", tipEnglish: "Flows through Chhattisgarh and Odisha to Bay of Bengal." }
+        { id: "riv_ganga", num: 1, numLabel: "(1)", nameTamil: "கங்கை ஆறு", nameEnglish: "River Ganga", coords: { x: 520, y: 390 }, tolerance: 45, tipTamil: "இமயமலையில் தொடங்கி உ.பி, பீகார் வழியாக வங்காள விரிகுடாவில் கலக்கும் நதி.", tipEnglish: "Flows east from Uttarakhand through UP and Bihar to Bay of Bengal." },
+        { id: "riv_brahmaputra", num: 2, numLabel: "(2)", nameTamil: "பிரம்மபுத்திரா ஆறு", nameEnglish: "River Brahmaputra", coords: { x: 780, y: 380 }, tolerance: 45, tipTamil: "திபெத்தில் சாங்போ எனத் தொடங்கி அசாம் பள்ளத்தாக்கு வழியாகப் பாய்கிறது.", tipEnglish: "Enters India in Arunachal and flows through Assam valley." },
+        { id: "riv_godavari", num: 3, numLabel: "(3)", nameTamil: "கோதாவரி ஆறு (தென் கங்கை)", nameEnglish: "River Godavari", coords: { x: 490, y: 640 }, tolerance: 45, tipTamil: "நாசிக்கில் தொடங்கி ஆந்திரா வழியே வங்காள விரிகுடாவில் கலக்கிறது.", tipEnglish: "Longest peninsular river rising in Nasik, Maharashtra." },
+        { id: "riv_krishna", num: 4, numLabel: "(4)", nameTamil: "கிருஷ்ணா ஆறு", nameEnglish: "River Krishna", coords: { x: 450, y: 720 }, tolerance: 45, tipTamil: "மகாபலேஸ்வரில் தொடங்கி கர்நாடகா, ஆந்திரா வழி பாய்கிறது.", tipEnglish: "Rises at Mahabaleshwar and flows eastward to Bay of Bengal." },
+        { id: "riv_kaveri", num: 5, numLabel: "(5)", nameTamil: "காவிரி ஆறு", nameEnglish: "River Kaveri", coords: { x: 420, y: 880 }, tolerance: 45, tipTamil: "குடகின் தலைக்காவிரியில் தொடங்கி தமிழ்நாடு வழி வங்கக்கடலில் கலக்கிறது.", tipEnglish: "Rises in Talakaveri (Karnataka) and flows through Tamil Nadu." },
+        { id: "riv_narmada", num: 6, numLabel: "(6)", nameTamil: "நர்மதை ஆறு", nameEnglish: "River Narmada", coords: { x: 370, y: 555 }, tolerance: 45, tipTamil: "அமர்கண்டக்கில் தொடங்கி விந்திய-சாத்பூரா இடையே மேற்கே பாய்ந்து அரபிக்கடலில் கலக்கிறது.", tipEnglish: "Flows west in a rift valley between Vindhya and Satpura ranges." },
+        { id: "riv_tapti", num: 7, numLabel: "(7)", nameTamil: "தபதி ஆறு", nameEnglish: "River Tapti", coords: { x: 360, y: 585 }, tolerance: 45, tipTamil: "மத்தியப் பிரதேசத்தில் தொடங்கி நர்மதைக்கு தெற்கே மேற்கே அரபிக்கடலில் கலக்கிறது.", tipEnglish: "Twin sister of Narmada flowing west into Gulf of Khambhat." },
+        { id: "riv_mahanadi", num: 8, numLabel: "(8)", nameTamil: "மகாநதி ஆறு", nameEnglish: "River Mahanadi", coords: { x: 600, y: 580 }, tolerance: 45, tipTamil: "சத்தீஸ்கரில் தொடங்கி ஒடிசா வழியாக வங்காள விரிகுடாவில் கலக்கிறது.", tipEnglish: "Rises in Chhattisgarh and flows through Odisha into Bay of Bengal." }
       ]
     },
 
-    // Unit 8 Economics: Major Sea Ports of India
+    // Unit 3 Geography: Major Sea Ports of India
     "soc_ports": {
       id: "soc_ports",
-      titleTamil: "இந்தியாவின் முக்கிய துறைமுகங்கள் (பொருளாதாரம் அலகு 2 - 8 மதிப்பெண்கள்)",
-      titleEnglish: "Major Sea Ports of India (Economics Unit 2 - 8 Marks)",
+      titleTamil: "இந்தியாவின் முக்கிய துறைமுகங்கள் (புவியியல் அலகு 2 - 8 மதிப்பெண்கள்)",
+      titleEnglish: "Major Sea Ports of India (Geography Unit 2 - 8 Marks)",
+      officialImage: "images/soc_ports_map.jpg",
       mapType: "india",
-      maxMarks: 7,
+      maxMarks: 8,
       places: [
-        { id: "port_mumbai", num: 1, numLabel: "(1)", nameTamil: "மும்பை துறைமுகம்", nameEnglish: "Mumbai Port", coords: { x: 270, y: 638 }, tolerance: 40, tipTamil: "மகாராஷ்டிராவின் மேற்கு கடற்கரை வளைவில் உள்ள மிகப்பெரிய இயற்கை துறைமுகம்.", tipEnglish: "Largest natural deepwater harbor on Maharashtra coast." },
-        { id: "port_kandla", num: 2, numLabel: "(2)", nameTamil: "கண்ட்லா / தீனதயாள் துறைமுகம்", nameEnglish: "Kandla Port (Deendayal)", coords: { x: 185, y: 480 }, tolerance: 40, tipTamil: "குஜராத்தின் கட்ச் வளைகுடாவில் உள்ள ஓதத் துறைமுகம் மற்றும் சிறப்பு பொருளாதார மண்டலம்.", tipEnglish: "Tidal port and Special Economic Zone in Gujarat (Gulf of Kutch)." },
-        { id: "port_chennai", num: 3, numLabel: "(3)", nameTamil: "சென்னை துறைமுகம்", nameEnglish: "Chennai Port", coords: { x: 495, y: 845 }, tolerance: 40, tipTamil: "கிழக்கு கடற்கரையில் அமைந்துள்ள மிகப்பெரிய செயற்கைத் துறைமுகம்.", tipEnglish: "Second largest port and major artificial harbor on the east coast." },
-        { id: "port_kolkata", num: 4, numLabel: "(4)", nameTamil: "கொல்கத்தா / ஹால்டியா துறைமுகம்", nameEnglish: "Kolkata Port (Haldia)", coords: { x: 700, y: 490 }, tolerance: 40, tipTamil: "ஹூக்ளி நதிக்கரையில் அமைந்துள்ள இந்தியாவின் ஒரே பெரிய நதிக்கரைத் துறைமுகம்.", tipEnglish: "Only major riverine port of India situated on River Hooghly." },
-        { id: "port_vizag", num: 5, numLabel: "(5)", nameTamil: "விசாகப்பட்டினம் துறைமுகம்", nameEnglish: "Visakhapatnam Port", coords: { x: 585, y: 680 }, tolerance: 40, tipTamil: "ஆந்திர கடற்கரையில் டால்பின் மூக்கு குன்றுகளால் சூழப்பட்ட ஆழமான துறைமுகம்.", tipEnglish: "Deepest landlocked protected natural harbor in Andhra Pradesh." },
-        { id: "port_tuticorin", num: 6, numLabel: "(6)", nameTamil: "தூத்துக்குடி / வ.உ.சி துறைமுகம்", nameEnglish: "Tuticorin (V.O.C) Port", coords: { x: 430, y: 975 }, tolerance: 40, tipTamil: "மன்னார் வளைகுடாவில் உள்ள தமிழ்நாட்டின் தென் பகுதி ஆழ்கடல் துறைமுகம்.", tipEnglish: "All-weather artificial deepsea harbor in southern Tamil Nadu." },
-        { id: "port_cochin", num: 7, numLabel: "(7)", nameTamil: "கொச்சி துறைமுகம்", nameEnglish: "Cochin Port", coords: { x: 340, y: 925 }, tolerance: 40, tipTamil: "வேம்பநாட்டு காயலில் அமைந்துள்ள அரபிக்கடலின் ராணி.", tipEnglish: "Natural harbor on Willingdon Island, Queen of the Arabian Sea." }
+        { id: "port_kolkata", num: 1, numLabel: "(1)", nameTamil: "கொல்கத்தா துறைமுகம் (ஹால்டியா)", nameEnglish: "Kolkata Port (Haldia)", coords: { x: 700, y: 530 }, tolerance: 40, tipTamil: "ஹூக்ளி நதிக்கரையில் அமைந்துள்ள இந்தியாவின் பழமையான நதிமுக துறைமுகம்.", tipEnglish: "Riverine port situated on the Hooghly river in West Bengal." },
+        { id: "port_paradeep", num: 2, numLabel: "(2)", nameTamil: "பாராதீப் துறைமுகம்", nameEnglish: "Paradeep Port", coords: { x: 640, y: 615 }, tolerance: 40, tipTamil: "ஒடிசா கடற்கரையில் இரும்புத்தாது ஏற்றுமதி செய்யும் ஆழ்கடல் துறைமுகம்.", tipEnglish: "Deepwater port on the Odisha coast primarily exporting iron ore." },
+        { id: "port_visakhapatnam", num: 3, numLabel: "(3)", nameTamil: "விசாகப்பட்டினம் துறைமுகம்", nameEnglish: "Visakhapatnam Port", coords: { x: 580, y: 690 }, tolerance: 40, tipTamil: "ஆந்திர கடற்கரையில் டால்பின் நோஸ் குன்றுகளால் சூழப்பட்ட இயற்கை துறைமுகம்.", tipEnglish: "Landlocked natural harbor protected by the Dolphin's Nose hill." },
+        { id: "port_chennai", num: 4, numLabel: "(4)", nameTamil: "சென்னை துறைமுகம்", nameEnglish: "Chennai Port", coords: { x: 500, y: 830 }, tolerance: 40, tipTamil: "தமிழ்நாட்டின் தலைநகரில் அமைந்துள்ள செயற்கை துறைமுகம்.", tipEnglish: "Major artificial harbor and historical gateway of South India." },
+        { id: "port_tuticorin", num: 5, numLabel: "(5)", nameTamil: "தூத்துக்குடி துறைமுகம் (வ.உ.சி)", nameEnglish: "Tuticorin Port (V.O.C)", coords: { x: 430, y: 960 }, tolerance: 40, tipTamil: "மன்னார் வளைகுடா பகுதியில் அமைந்துள்ள தென் தமிழ்நாட்டின் ஆழ்கடல் துறைமுகம்.", tipEnglish: "Artificial all-weather deepsea port located in Gulf of Mannar." },
+        { id: "port_mumbai", num: 6, numLabel: "(6)", nameTamil: "மும்பை துறைமுகம்", nameEnglish: "Mumbai Port", coords: { x: 285, y: 630 }, tolerance: 40, tipTamil: "மகாராஷ்டிராவின் மிகப்பெரிய இயற்கை துறைமுகம்.", tipEnglish: "Premier natural deepwater harbor of India on Arabian Sea." },
+        { id: "port_cochin", num: 7, numLabel: "(7)", nameTamil: "கொச்சி துறைமுகம்", nameEnglish: "Cochin Port", coords: { x: 340, y: 925 }, tolerance: 40, tipTamil: "வேம்பநாட்டு காயலில் அமைந்துள்ள அரபிக்கடலின் ராணி.", tipEnglish: "Natural harbor on Willingdon Island, Queen of the Arabian Sea." },
+        { id: "port_kandla", num: 8, numLabel: "(8)", nameTamil: "கண்ட்லா துறைமுகம் (தீனதயாள்)", nameEnglish: "Kandla Port (Deendayal)", coords: { x: 200, y: 490 }, tolerance: 40, tipTamil: "குஜராத்தின் கட்ச் வளைகுடாவில் அமைந்துள்ள ஓதத் துறைமுகம்.", tipEnglish: "Tidal port situated at the head of Gulf of Kutch in Gujarat." }
       ]
     },
 
@@ -151,6 +155,7 @@
       id: "soc_soils",
       titleTamil: "மண் வகைகள், பயிர்கள் & அணைகள் (புவியியல் அலகு 3 - 8 மதிப்பெண்கள்)",
       titleEnglish: "Soils, Crops & Multipurpose Dams of India (Geography Unit 3 - 8 Marks)",
+      officialImage: "images/soc_soils_map.jpg",
       mapType: "india",
       maxMarks: 8,
       places: [
@@ -170,70 +175,78 @@
       id: "soc_climate",
       titleTamil: "காலநிலை & இயற்கை தாவரங்கள் (புவியியல் அலகு 2 - 8 மதிப்பெண்கள்)",
       titleEnglish: "Climate & Natural Vegetation (Geography Unit 2 - 8 Marks)",
+      officialImage: "images/soc_climate_map.jpg",
       mapType: "india",
-      maxMarks: 6,
+      maxMarks: 8,
       places: [
-        { id: "cli_sw_monsoon", num: 1, numLabel: "(1)", nameTamil: "தென்மேற்கு பருவக்காற்று திசை", nameEnglish: "Southwest Monsoon Wind Path", coords: { x: 220, y: 750 }, tolerance: 55, tipTamil: "அரபிக்கடலில் இருந்து கேரளா நோக்கி வீசும் தென்மேற்கு பருவக்காற்று.", tipEnglish: "Arabian Sea branch blowing towards the Malabar coast." },
-        { id: "cli_ne_monsoon", num: 2, numLabel: "(2)", nameTamil: "வடகிழக்கு பருவக்காற்று திசை", nameEnglish: "Northeast Monsoon Wind Path", coords: { x: 550, y: 700 }, tolerance: 55, tipTamil: "வங்காள விரிகுடாவில் இருந்து தமிழ்நாடு நோக்கி வீசும் வடகிழக்கு பருவக்காற்று.", tipEnglish: "Retreating monsoon winds bringing rainfall to Coromandel coast." },
-        { id: "cli_evergreen", num: 3, numLabel: "(3)", nameTamil: "அயனமண்டல பசுமைமாறாக் காடுகள்", nameEnglish: "Tropical Evergreen Forest", coords: { x: 310, y: 780 }, tolerance: 50, tipTamil: "மேற்கு தொடர்ச்சி மலையின் மேற்கு சரிவுப் பகுதி.", tipEnglish: "Western slopes of the Western Ghats receiving heavy rainfall." },
-        { id: "cli_mangrove", num: 4, numLabel: "(4)", nameTamil: "சதுப்புநில மாங்குரோவ் காடுகள்", nameEnglish: "Mangrove Tidal Forests", coords: { x: 700, y: 535 }, tolerance: 45, tipTamil: "சுந்தரவனம் மற்றும் டெல்டா முகத்துவாரப் பகுதிகள்.", tipEnglish: "Sundarbans delta and coastal estuaries." },
-        { id: "cli_mawsynram", num: 5, numLabel: "(5)", nameTamil: "மௌசின்ராம் (அதிக மழை பெறும் இடம்)", nameEnglish: "Mawsynram (Heaviest Rainfall)", coords: { x: 780, y: 410 }, tolerance: 42, tipTamil: "மேகாலயாவின் காசி குன்றுகளில் அமைந்துள்ள உலகின் அதிக மழை பெறும் இடம்.", tipEnglish: "Wettest place on Earth situated in the Khasi Hills of Meghalaya." },
-        { id: "cli_thar_dry", num: 6, numLabel: "(6)", nameTamil: "குறைந்த மழை பெறும் பகுதி (தார்)", nameEnglish: "Low Rainfall Region (Thar Desert)", coords: { x: 240, y: 410 }, tolerance: 50, tipTamil: "மேற்கு ராஜஸ்தானில் 25 செ.மீ-க்கும் குறைவான மழை பெறும் வறண்ட பகுதி.", tipEnglish: "Arid desert region in western Rajasthan." }
+        { id: "clim_sw_monsoon", num: 1, numLabel: "(1)", nameTamil: "தென்மேற்கு பருவக்காற்று திசை", nameEnglish: "South-West Monsoon Direction", coords: { x: 230, y: 770 }, tolerance: 50, tipTamil: "அரபிக்கடலில் இருந்து கேரளா நோக்கி வீசும் தென்மேற்கு காற்று அம்பு.", tipEnglish: "Arabian Sea branch blowing northeast towards Kerala coast." },
+        { id: "clim_ne_monsoon", num: 2, numLabel: "(2)", nameTamil: "வடகிழக்கு பருவக்காற்று திசை", nameEnglish: "North-East Monsoon Direction", coords: { x: 620, y: 740 }, tolerance: 50, tipTamil: "வங்காள விரிகுடாவில் இருந்து தமிழ்நாடு நோக்கி வீசும் வடகிழக்கு காற்று.", tipEnglish: "Retreating monsoon winds bringing rainfall to Tamil Nadu coast." },
+        { id: "clim_heavy_rain", num: 3, numLabel: "(3)", nameTamil: "மௌசின்ராம் (அதிக மழைபெறும் பகுதி)", nameEnglish: "Mawsynram (Wettest Place)", coords: { x: 745, y: 430 }, tolerance: 40, tipTamil: "மேகாலயாவின் காசி குன்றுகளில் உள்ள உலகிலேயே அதிக மழைபெறும் இடம்.", tipEnglish: "Cherrapunji/Mawsynram in southern Meghalaya." },
+        { id: "clim_low_rain", num: 4, numLabel: "(4)", nameTamil: "குறைந்த மழைபெறும் பகுதி (தார்/ஜைசால்மர்)", nameEnglish: "Low Rainfall Region (Thar Desert)", coords: { x: 230, y: 410 }, tolerance: 45, tipTamil: "மேற்கு ராஜஸ்தானில் உள்ள ஆண்டுக்கு 12 செ.மீ-க்கும் குறைவான மழைப்பகுதி.", tipEnglish: "Western Rajasthan receiving under 12 cm rainfall annually." },
+        { id: "clim_evergreen", num: 5, numLabel: "(5)", nameTamil: "அயனமண்டல பசுமைமாறா காடுகள்", nameEnglish: "Tropical Evergreen Forests", coords: { x: 330, y: 840 }, tolerance: 45, tipTamil: "மேற்கு தொடர்ச்சி மலையின் மேற்கு சரிவு பகுதி.", tipEnglish: "Western Ghats windward slopes in Kerala & Karnataka." },
+        { id: "clim_mangrove", num: 6, numLabel: "(6)", nameTamil: "மாங்குரோவ் காடுகள் (சுந்தரவனம்)", nameEnglish: "Mangrove Forests (Sundarbans)", coords: { x: 700, y: 535 }, tolerance: 42, tipTamil: "கங்கை டெல்டா மற்றும் கடலோர சதுப்புநில காடுகள்.", tipEnglish: "Tidal mangrove vegetation in the Ganga-Brahmaputra delta." },
+        { id: "clim_agasthya", num: 7, numLabel: "(7)", nameTamil: "அகத்தியமலை உயிர்க்கோள பெட்டகம்", nameEnglish: "Agasthyamalai Biosphere Reserve", coords: { x: 375, y: 960 }, tolerance: 40, tipTamil: "தெற்கு மேற்கு தொடர்ச்சி மலையில் தமிழ்நாடு-கேரளா எல்லையில் உள்ளது.", tipEnglish: "Southernmost Western Ghats biosphere in Tamil Nadu & Kerala." },
+        { id: "clim_nilgiri", num: 8, numLabel: "(8)", nameTamil: "நீலகிரி உயிர்க்கோள பெட்டகம்", nameEnglish: "Nilgiris Biosphere Reserve", coords: { x: 380, y: 880 }, tolerance: 40, tipTamil: "மேற்கு மற்றும் கிழக்கு தொடர்ச்சி மலைகள் இணையும் நீலகிரி சந்திப்பு.", tipEnglish: "First UNESCO biosphere reserve where Eastern & Western Ghats meet." }
       ]
     },
 
-    // Unit 4 Geography / Economics: Industrial Powerhouses
+    // Unit 4 Geography: Major Industrial Belts & Minerals
     "soc_industry": {
       id: "soc_industry",
-      titleTamil: "தொழிலகங்கள் & வளங்கள் (புவியியல் அலகு 4 - 8 மதிப்பெண்கள்)",
-      titleEnglish: "Industries & Mineral Resources of India (Geography Unit 4 - 8 Marks)",
+      titleTamil: "முக்கிய தொழிலகங்கள் & தாதுக்கள் (புவியியல் அலகு 4 - 8 மதிப்பெண்கள்)",
+      titleEnglish: "Major Industrial Belts & Minerals (Geography Unit 4 - 8 Marks)",
+      officialImage: "images/soc_industry_map.jpg",
       mapType: "india",
-      maxMarks: 6,
+      maxMarks: 8,
       places: [
-        { id: "ind_mumbai_high", num: 1, numLabel: "(1)", nameTamil: "மும்பை ஹை (கடல்சார் எண்ணெய் வயல்)", nameEnglish: "Mumbai High (Offshore Oil)", coords: { x: 240, y: 640 }, tolerance: 42, tipTamil: "மும்பைக்கு மேற்கே அரபிக்கடலில் அமைந்துள்ள எண்ணெய் வயல்.", tipEnglish: "Offshore oil field in the Arabian Sea off Mumbai coast." },
-        { id: "ind_jamshedpur", num: 2, numLabel: "(2)", nameTamil: "ஜெம்ஷெட்பூர் (டாடா இரும்பு எஃகு)", nameEnglish: "Jamshedpur (TISCO Steel)", coords: { x: 640, y: 510 }, tolerance: 42, tipTamil: "ஜார்கண்டில் அமைந்துள்ள இந்தியாவின் முதல் இரும்பு எஃகு ஆலை நகரம்.", tipEnglish: "Steel city in Jharkhand founded by Jamsetji Tata." },
-        { id: "ind_salem", num: 3, numLabel: "(3)", nameTamil: "சேலம் இரும்பு எஃகு ஆலை", nameEnglish: "Salem Steel Plant", coords: { x: 410, y: 870 }, tolerance: 42, tipTamil: "தமிழ்நாட்டின் கஞ்சமலை இரும்புத்தாது அருகே அமைந்த எஃகு ஆலை.", tipEnglish: "Special stainless steel plant in Salem, Tamil Nadu." },
-        { id: "ind_ahmedabad", num: 4, numLabel: "(4)", nameTamil: "அகமதாபாத் (இந்தியாவின் மான்செஸ்டர்)", nameEnglish: "Ahmedabad (Manchester of India)", coords: { x: 250, y: 510 }, tolerance: 42, tipTamil: "குஜராத்தின் பருத்தி ஆடை உற்பத்தி தலைநகரம்.", tipEnglish: "Premier cotton textile hub in Gujarat." },
-        { id: "ind_bengaluru", num: 5, numLabel: "(5)", nameTamil: "பெங்களூரு (மின்னியல் தலைநகரம்)", nameEnglish: "Bengaluru (Electronic Capital / Silicon Valley)", coords: { x: 400, y: 825 }, tolerance: 42, tipTamil: "கர்நாடகா - இந்தியாவின் மின்னியல் மற்றும் தகவல் தொழில்நுட்ப தலைநகரம்.", tipEnglish: "Electronic capital and IT hub of India in Karnataka." },
-        { id: "ind_digboi", num: 6, numLabel: "(6)", nameTamil: "டிக்பாய் (மிகப்பழமையான எண்ணெய் வயல்)", nameEnglish: "Digboi (Oldest Oil Field)", coords: { x: 840, y: 350 }, tolerance: 42, tipTamil: "அசாம் மாநிலத்தில் உள்ள இந்தியாவின் மிகப்பழமையான எண்ணெய் வயல்.", tipEnglish: "Oldest operating oil well and refinery in Assam." }
+        { id: "ind_tisco", num: 1, numLabel: "(1)", nameTamil: "ஜாம்ஷெட்பூர் இரும்பு எஃகு ஆலை (டிஸ்கோ)", nameEnglish: "Jamshedpur (TISCO) Steel Plant", coords: { x: 640, y: 520 }, tolerance: 40, tipTamil: "ஜார்க்கண்ட் மாநிலத்தில் உள்ள இந்தியாவின் முதல் ஒருங்கிணைந்த எஃகு ஆலை.", tipEnglish: "First modern iron & steel plant in Jharkhand by J.N. Tata." },
+        { id: "ind_salem", num: 2, numLabel: "(2)", nameTamil: "சேலம் இரும்பு எஃகு ஆலை", nameEnglish: "Salem Steel Plant", coords: { x: 420, y: 880 }, tolerance: 40, tipTamil: "தமிழ்நாட்டின் கஞ்சமலையில் உள்ள துருப்பிடிக்காத எஃகு உற்பத்தி ஆலை.", tipEnglish: "Special stainless steel manufacturing unit in Tamil Nadu." },
+        { id: "ind_bhilai", num: 3, numLabel: "(3)", nameTamil: "பிலாய் எஃகு ஆலை", nameEnglish: "Bhilai Steel Plant", coords: { x: 530, y: 560 }, tolerance: 40, tipTamil: "சத்தீஸ்கர் மாநிலத்தில் ரஷ்ய உதவியுடன் அமைக்கப்பட்ட எஃகு ஆலை.", tipEnglish: "Major public sector steel plant in Durg district, Chhattisgarh." },
+        { id: "ind_mumbai_cotton", num: 4, numLabel: "(4)", nameTamil: "மும்பை பருத்தி நெசவாலை (மான்செஸ்டர்)", nameEnglish: "Mumbai Cotton Textile Hub", coords: { x: 285, y: 630 }, tolerance: 40, tipTamil: "இந்தியாவின் மான்செஸ்டர் எனப்படும் பருத்தி ஆடை தலைநகரம்.", tipEnglish: "Manchester of India with largest concentration of cotton mills." },
+        { id: "ind_coimbatore", num: 5, numLabel: "(5)", nameTamil: "கோயம்புத்தூர் (தென்னிந்தியாவின் மான்செஸ்டர்)", nameEnglish: "Coimbatore (Manchester of South India)", coords: { x: 390, y: 890 }, tolerance: 40, tipTamil: "நூற்பாலைகள் நிறைந்த தென்னிந்தியாவின் மான்செஸ்டர்.", tipEnglish: "Leading textile and spinning center of Tamil Nadu." },
+        { id: "ind_neyveli", num: 6, numLabel: "(6)", nameTamil: "நெய்வேலி நிலக்கரிச் சுரங்கம் (NLC)", nameEnglish: "Neyveli Lignite Corporation (NLC)", coords: { x: 460, y: 890 }, tolerance: 40, tipTamil: "கடலூர் மாவட்டத்தில் உள்ள பழுப்பு நிலக்கரிச் சுரங்கம்.", tipEnglish: "Largest open-cast brown coal / lignite deposit in Tamil Nadu." },
+        { id: "ind_digboi", num: 7, numLabel: "(7)", nameTamil: "டிக்பாய் எண்ணெய் வயல் (அசாம்)", nameEnglish: "Digboi Oil Field (Assam)", coords: { x: 860, y: 320 }, tolerance: 40, tipTamil: "ஆசியாவின் மிகப் பழமையான எண்ணெய் கிணறு உள்ள இடம்.", tipEnglish: "Oldest operating oil refinery in Asia situated in Assam." },
+        { id: "ind_bengaluru", num: 8, numLabel: "(8)", nameTamil: "பெங்களூரு (இந்தியாவின் சிலிக்கான் பள்ளத்தாக்கு)", nameEnglish: "Bengaluru (Silicon Valley of India)", coords: { x: 420, y: 830 }, tolerance: 40, tipTamil: "கர்நாடகாவின் மின்னணு மற்றும் தகவல் தொழில்நுட்ப தலைநகரம்.", tipEnglish: "Electronic and information technology capital of India." }
       ]
     },
 
-    // Unit 1 History: World War I (World Map)
+    // Unit 1 History: World War I (Official European & World War Theatre Map)
     "soc_ww1": {
       id: "soc_ww1",
       titleTamil: "முதல் உலகப் போர் நாடுகள் (வரலாறு அலகு 1 - 8 மதிப்பெண்கள்)",
       titleEnglish: "World War I Nations & Theaters (History Unit 1 - 8 Marks)",
+      officialImage: "images/soc_ww1_map.jpg",
       mapType: "world",
       maxMarks: 8,
       places: [
-        { id: "ww1_britain", num: 1, numLabel: "(1)", nameTamil: "கிரேட் பிரிட்டன் (நேச நாடு)", nameEnglish: "Great Britain (Allied Power)", coords: { x: 480, y: 175 }, tolerance: 35, tipTamil: "ஐரோப்பாவின் வடமேற்கே உள்ள தீவு நாடு; நேச நாடுகளின் தலைமை.", tipEnglish: "Island nation in northwest Europe; leader of Allied blockade." },
-        { id: "ww1_france", num: 2, numLabel: "(2)", nameTamil: "பிரான்ஸ் (நேச நாடு)", nameEnglish: "France (Allied Power)", coords: { x: 490, y: 215 }, tolerance: 35, tipTamil: "பிரிட்டனுக்கு தெற்கே அமைந்துள்ள மேற்கு ஐரோப்பிய நேச நாடு.", tipEnglish: "Western Front allied republic situated south of Britain." },
-        { id: "ww1_germany", num: 3, numLabel: "(3)", nameTamil: "ஜெர்மனி (மைய நாடு)", nameEnglish: "Germany (Central Power)", coords: { x: 520, y: 195 }, tolerance: 35, tipTamil: "மத்திய ஐரோப்பிய வல்லரசு; மைய நாடுகளின் முன்னணி நாடு.", tipEnglish: "Central European power between France and Russia." },
-        { id: "ww1_italy", num: 4, numLabel: "(4)", nameTamil: "இத்தாலி (நேச நாடு)", nameEnglish: "Italy (Allied Power)", coords: { x: 525, y: 245 }, tolerance: 35, tipTamil: "மத்திய தரைக்கடலில் பூட் வடிவ தீபகற்ப நாடு.", tipEnglish: "Boot-shaped peninsula in the Mediterranean Sea." },
-        { id: "ww1_austria", num: 5, numLabel: "(5)", nameTamil: "ஆஸ்திரிய-ஹங்கேரி (மைய நாடு)", nameEnglish: "Austria-Hungary (Central Power)", coords: { x: 545, y: 215 }, tolerance: 35, tipTamil: "ஜெர்மனிக்கு தெற்கே உள்ள இரட்டை முடியாட்சி கூட்டணி நாடு.", tipEnglish: "Dual monarchy ally south of Germany." },
-        { id: "ww1_russia", num: 6, numLabel: "(6)", nameTamil: "ரஷ்யா (நேச நாடு)", nameEnglish: "Russia (Allied Power)", coords: { x: 670, y: 160 }, tolerance: 45, tipTamil: "கிழக்கு ஐரோப்பாவில் பரவியுள்ள பரப்பளவில் மிகப்பெரிய நேச நாடு.", tipEnglish: "Expansive empire on the Eastern Front." },
-        { id: "ww1_turkey", num: 7, numLabel: "(7)", nameTamil: "துருக்கி / ஒட்டோமான் பேரரசு", nameEnglish: "Turkey (Ottoman Empire)", coords: { x: 585, y: 250 }, tolerance: 35, tipTamil: "கருங்கடல் மற்றும் மத்திய தரைக்கடல் இணைப்பில் உள்ள மைய நாடு.", tipEnglish: "Controlled Black Sea straits (Gallipoli campaign)." },
-        { id: "ww1_sarajevo", num: 8, numLabel: "(8)", nameTamil: "சரஜீவோ (போஸ்னியா)", nameEnglish: "Sarajevo (Bosnia)", coords: { x: 540, y: 235 }, tolerance: 30, tipTamil: "ஆஸ்திரிய இளவரசர் பெர்டினண்ட் சுடப்பட்ட இடம் - போரின் உடனடிக் காரணம்.", tipEnglish: "Assassination site of Archduke Franz Ferdinand on 28 June 1914." }
+        { id: "ww1_britain", num: 1, numLabel: "(1)", nameTamil: "கிரேட் பிரிட்டன் (நேச நாடு)", nameEnglish: "Great Britain (Allied Power)", coords: { x: 240, y: 270 }, tolerance: 40, tipTamil: "ஐரோப்பாவின் வடமேற்கே உள்ள தீவு நாடு; நேச நாடுகளின் தலைமை.", tipEnglish: "Island nation in northwest Europe across the English Channel; leader of Allied blockade." },
+        { id: "ww1_france", num: 2, numLabel: "(2)", nameTamil: "பிரான்ஸ் (நேச நாடு)", nameEnglish: "France (Allied Power)", coords: { x: 290, y: 420 }, tolerance: 40, tipTamil: "பிரிட்டனுக்கு தெற்கே அமைந்துள்ள மேற்கு ஐரோப்பிய நேச நாடு.", tipEnglish: "Western Front allied republic situated south of Britain across English Channel." },
+        { id: "ww1_germany", num: 3, numLabel: "(3)", nameTamil: "ஜெர்மனி (மைய நாடு)", nameEnglish: "Germany (Central Power)", coords: { x: 430, y: 330 }, tolerance: 40, tipTamil: "மத்திய ஐரோப்பிய வல்லரசு; மைய நாடுகளின் முன்னணி நாடு.", tipEnglish: "Central European power between France and Russia with Baltic & North Sea coasts." },
+        { id: "ww1_italy", num: 4, numLabel: "(4)", nameTamil: "இத்தாலி (நேச நாடு)", nameEnglish: "Italy (Allied Power)", coords: { x: 450, y: 540 }, tolerance: 40, tipTamil: "மத்திய தரைக்கடலில் உள்ள பூட் வடிவ தீபகற்ப நாடு.", tipEnglish: "Boot-shaped peninsula in the Mediterranean Sea with Sicily island." },
+        { id: "ww1_austria", num: 5, numLabel: "(5)", nameTamil: "ஆஸ்திரிய-ஹங்கேரி (மைய நாடு)", nameEnglish: "Austria-Hungary (Central Power)", coords: { x: 530, y: 420 }, tolerance: 40, tipTamil: "ஜெர்மனிக்கு தெற்கே உள்ள இரட்டை முடியாட்சி கூட்டணி நாடு.", tipEnglish: "Dual monarchy ally situated south of Germany and north of Balkans." },
+        { id: "ww1_russia", num: 6, numLabel: "(6)", nameTamil: "ரஷ்யா (நேச நாடு)", nameEnglish: "Russia (Allied Power)", coords: { x: 740, y: 270 }, tolerance: 50, tipTamil: "கிழக்கு ஐரோப்பாவில் பரவியுள்ள பரப்பளவில் மிகப்பெரிய நேச நாடு.", tipEnglish: "Expansive empire spanning Eastern Europe on the Eastern Front." },
+        { id: "ww1_turkey", num: 7, numLabel: "(7)", nameTamil: "துருக்கி / ஒட்டோமான் பேரரசு", nameEnglish: "Turkey (Ottoman Empire)", coords: { x: 750, y: 590 }, tolerance: 40, tipTamil: "கருங்கடல் மற்றும் மத்திய தரைக்கடல் இணைப்பில் உள்ள மைய நாடு.", tipEnglish: "Controlled Black Sea and Dardanelles straits (Gallipoli campaign)." },
+        { id: "ww1_sarajevo", num: 8, numLabel: "(8)", nameTamil: "சரஜீவோ (போஸ்னியா)", nameEnglish: "Sarajevo (Bosnia)", coords: { x: 520, y: 500 }, tolerance: 35, tipTamil: "ஆஸ்திரிய இளவரசர் பெர்டினண்ட் சுடப்பட்ட இடம் - போரின் உடனடிக் காரணம்.", tipEnglish: "Assassination site of Archduke Franz Ferdinand on 28 June 1914, sparking WWI." }
       ]
     },
 
-    // Unit 9 History: World War II (World Map)
+    // Unit 9 History: World War II (World & European Theater Map)
     "soc_ww2": {
       id: "soc_ww2",
       titleTamil: "இரண்டாம் உலகப் போர் நாடுகள் (வரலாறு அலகு 3 - 8 மதிப்பெண்கள்)",
       titleEnglish: "World War II Powers & Theaters (History Unit 3 - 8 Marks)",
+      officialImage: "images/soc_ww2_map.jpg",
       mapType: "world",
       maxMarks: 8,
       places: [
-        { id: "ww2_britain", num: 1, numLabel: "(1)", nameTamil: "கிரேட் பிரிட்டன் (நேச நாடு)", nameEnglish: "Great Britain (Allied Power)", coords: { x: 480, y: 175 }, tolerance: 35, tipTamil: "வின்ஸ்டன் சர்ச்சில் தலைமை தாங்கிய நேச நாடு.", tipEnglish: "Winston Churchill's island nation resisting Axis air raids." },
-        { id: "ww2_france", num: 2, numLabel: "(2)", nameTamil: "பிரான்ஸ் (நேச நாடு)", nameEnglish: "France (Allied Power)", coords: { x: 490, y: 215 }, tolerance: 35, tipTamil: "சார்லஸ் டி கால் தலைமையிலான சுதந்திர பிரான்ஸ் இயக்கம்.", tipEnglish: "Allied republic liberated after Normandy D-Day landings." },
-        { id: "ww2_ussr", num: 3, numLabel: "(3)", nameTamil: "சோவியத் யூனியன் (USSR)", nameEnglish: "Soviet Union (USSR)", coords: { x: 670, y: 160 }, tolerance: 45, tipTamil: "ஸ்டாலின்கிராட் போரில் நாஜிக்களை வென்ற சோவியத் யூனியன்.", tipEnglish: "Turned the tide of war at Battle of Stalingrad." },
-        { id: "ww2_usa", num: 4, numLabel: "(4)", nameTamil: "அமெரிக்கா (USA)", nameEnglish: "United States of America", coords: { x: 230, y: 220 }, tolerance: 45, tipTamil: "முத்து துறைமுகத் தாக்குதலுக்குப் பின் போரில் இணைந்த வல்லரசு.", tipEnglish: "Arsenal of democracy entering war after Pearl Harbor." },
-        { id: "ww2_germany", num: 5, numLabel: "(5)", nameTamil: "ஜெர்மனி (அச்சு நாடு)", nameEnglish: "Germany (Axis Power)", coords: { x: 520, y: 195 }, tolerance: 35, tipTamil: "ஹிட்லரின் நாஜி ஜெர்மனி - இரண்டாம் உலகப்போரைத் தொடங்கியது.", tipEnglish: "Hitler's Axis power invading Poland in Sept 1939." },
-        { id: "ww2_italy", num: 6, numLabel: "(6)", nameTamil: "இத்தாலி (அச்சு நாடு)", nameEnglish: "Italy (Axis Power)", coords: { x: 525, y: 245 }, tolerance: 35, tipTamil: "முசோலினியின் பாசிச நாடு.", tipEnglish: "Mussolini's Mediterranean Axis partner." },
-        { id: "ww2_japan", num: 7, numLabel: "(7)", nameTamil: "ஜப்பான் (அச்சு நாடு)", nameEnglish: "Japan (Axis Power)", coords: { x: 860, y: 235 }, tolerance: 35, tipTamil: "ஆசிய-பசிபிக் பிராந்தியத்தில் ஆதிக்கம் செலுத்திய அச்சு நாடு.", tipEnglish: "Imperial power in East Asia (Hiroshima/Nagasaki atomic end)." },
-        { id: "ww2_pearl", num: 8, numLabel: "(8)", nameTamil: "முத்து துறைமுகம் (ஹவாய்)", nameEnglish: "Pearl Harbor (Hawaii)", coords: { x: 105, y: 280 }, tolerance: 30, tipTamil: "1941 டிசம்பர் 7 அன்று ஜப்பான் தாக்கிய அமெரிக்க கடற்படை தளம்.", tipEnglish: "US naval base attacked by Japan on 7 December 1941." }
+        { id: "ww2_britain", num: 1, numLabel: "(1)", nameTamil: "கிரேட் பிரிட்டன் (நேச நாடு)", nameEnglish: "Great Britain (Allied Power)", coords: { x: 240, y: 270 }, tolerance: 40, tipTamil: "வின்ஸ்டன் சர்ச்சில் தலைமை தாங்கிய நேச நாடு.", tipEnglish: "Winston Churchill's island nation resisting Axis air blitz." },
+        { id: "ww2_france", num: 2, numLabel: "(2)", nameTamil: "பிரான்ஸ் (நேச நாடு)", nameEnglish: "France (Allied Power)", coords: { x: 290, y: 420 }, tolerance: 40, tipTamil: "சார்லஸ் டி கால் தலைமையிலான சுதந்திர பிரான்ஸ் இயக்கம்.", tipEnglish: "Allied republic liberated after Normandy D-Day landings." },
+        { id: "ww2_ussr", num: 3, numLabel: "(3)", nameTamil: "சோவியத் யூனியன் (USSR)", nameEnglish: "Soviet Union (USSR)", coords: { x: 740, y: 270 }, tolerance: 50, tipTamil: "ஸ்டாலின்கிராட் போரில் நாஜிக்களை வென்ற சோவியத் யூனியன்.", tipEnglish: "Turned the tide of war at Battle of Stalingrad." },
+        { id: "ww2_germany", num: 4, numLabel: "(4)", nameTamil: "ஜெர்மனி (அச்சு நாடு)", nameEnglish: "Germany (Axis Power)", coords: { x: 430, y: 330 }, tolerance: 40, tipTamil: "ஹிட்லரின் நாஜி ஜெர்மனி - இரண்டாம் உலகப்போரைத் தொடங்கியது.", tipEnglish: "Hitler's Axis power invading Poland in Sept 1939." },
+        { id: "ww2_italy", num: 5, numLabel: "(5)", nameTamil: "இத்தாலி (அச்சு நாடு)", nameEnglish: "Italy (Axis Power)", coords: { x: 450, y: 540 }, tolerance: 40, tipTamil: "முசோலினியின் பாசிச நாடு.", tipEnglish: "Mussolini's Mediterranean Axis partner." },
+        { id: "ww2_poland", num: 6, numLabel: "(6)", nameTamil: "போலந்து (தாக்குதலுக்குள்ளான நாடு)", nameEnglish: "Poland", coords: { x: 530, y: 280 }, tolerance: 40, tipTamil: "செப்டம்பர் 1, 1939 அன்று ஜெர்மனியால் ஆக்கிரமிக்கப்பட்ட நாடு.", tipEnglish: "Invaded by Nazi Blitzkrieg on Sept 1, 1939 triggering WWII." },
+        { id: "ww2_usa", num: 7, numLabel: "(7)", nameTamil: "அமெரிக்கா (USA - நேச நாடு)", nameEnglish: "United States of America", coords: { x: 70, y: 280 }, tolerance: 50, tipTamil: "முத்து துறைமுகத் தாக்குதலுக்குப் பின் போரில் இணைந்த வல்லரசு.", tipEnglish: "Arsenal of democracy entering the war after Pearl Harbor." },
+        { id: "ww2_japan", num: 8, numLabel: "(8)", nameTamil: "ஜப்பான் (அச்சு நாடு)", nameEnglish: "Japan (Axis Power)", coords: { x: 930, y: 310 }, tolerance: 45, tipTamil: "ஆசிய-பசிபிக் பிராந்தியத்தில் ஆதிக்கம் செலுத்திய அச்சு நாடு.", tipEnglish: "Imperial power in East Asia surrendered after atomic bombings." }
       ]
     }
   };
@@ -243,9 +256,7 @@
     if (!qItem) return CURRICULUM_MAP_DATABASE["board_model"];
     const id = (qItem.id || '').toLowerCase();
     const qText = (qItem.q || '').toLowerCase();
-    const title = (qItem.title || '').toLowerCase();
 
-    // Check specific unit signatures
     if (id.includes('soc_em_8_map') || id.includes('soc_8_map') || qText.includes('port') || qText.includes('துறைமுகம்')) {
       return CURRICULUM_MAP_DATABASE["soc_ports"];
     }
@@ -268,99 +279,65 @@
       return CURRICULUM_MAP_DATABASE["soc_ww2"];
     }
 
-    // Default to Board Exam Model Question 43 (8 places)
     return CURRICULUM_MAP_DATABASE["board_model"];
   }
 
   // ---------------------------------------------------------------------------
-  // 2. VECTOR BLANK MAP SVGs (India & World)
+  // 2. VECTOR BLANK OUTLINE MAPS (Official India & Official European Theatre)
   // ---------------------------------------------------------------------------
-  function getBlankIndiaSvgHtml(containerId, isEm) {
+  function getBlankIndiaSvgHtml(cId, isEm) {
     const seaLabels = isEm ? `
-      <text x="140" y="780" fill="#38bdf8" opacity="0.45" font-size="22" font-weight="800" letter-spacing="4">ARABIAN SEA</text>
-      <text x="640" y="780" fill="#38bdf8" opacity="0.45" font-size="22" font-weight="800" letter-spacing="4">BAY OF BENGAL</text>
-      <text x="330" y="1120" fill="#38bdf8" opacity="0.45" font-size="20" font-weight="800" letter-spacing="4">INDIAN OCEAN</text>
+      <text x="140" y="780" fill="#38bdf8" opacity="0.5" font-size="22" font-weight="800" letter-spacing="4">ARABIAN SEA</text>
+      <text x="640" y="780" fill="#38bdf8" opacity="0.5" font-size="22" font-weight="800" letter-spacing="4">BAY OF BENGAL</text>
+      <text x="330" y="1120" fill="#38bdf8" opacity="0.5" font-size="20" font-weight="800" letter-spacing="4">INDIAN OCEAN</text>
     ` : `
-      <text x="140" y="780" fill="#38bdf8" opacity="0.45" font-size="22" font-weight="800" letter-spacing="4">அரபிக்கடல்</text>
-      <text x="640" y="780" fill="#38bdf8" opacity="0.45" font-size="22" font-weight="800" letter-spacing="4">வங்காள விரிகுடா</text>
-      <text x="330" y="1120" fill="#38bdf8" opacity="0.45" font-size="20" font-weight="800" letter-spacing="4">இந்தியப் பெருங்கடல்</text>
+      <text x="140" y="780" fill="#38bdf8" opacity="0.5" font-size="22" font-weight="800" letter-spacing="4">அரபிக்கடல்</text>
+      <text x="640" y="780" fill="#38bdf8" opacity="0.5" font-size="22" font-weight="800" letter-spacing="4">வங்காள விரிகுடா</text>
+      <text x="330" y="1120" fill="#38bdf8" opacity="0.5" font-size="20" font-weight="800" letter-spacing="4">இந்தியப் பெருங்கடல்</text>
     `;
 
     return `
-      <svg id="${containerId}_svgMap" viewBox="0 0 1000 1150" class="eval-blank-map-svg" xmlns="http://www.w3.org/2000/svg">
+      <svg id="${cId}_svgMap" viewBox="0 0 1000 1150" class="eval-blank-map-svg" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <filter id="${containerId}_glow" x="-20%" y="-20%" width="140%" height="140%">
+          <filter id="${cId}_glow" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="3" result="blur" />
             <feComposite in="SourceGraphic" in2="blur" operator="over" />
           </filter>
-          <linearGradient id="${containerId}_oceanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="${cId}_oceanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#0a192f" />
             <stop offset="100%" stop-color="#030c1b" />
           </linearGradient>
-          <linearGradient id="${containerId}_landGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="${cId}_landGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#1e293b" />
             <stop offset="100%" stop-color="#0f172a" />
           </linearGradient>
         </defs>
 
         <!-- Ocean Water Background -->
-        <rect width="1000" height="1150" fill="url(#${containerId}_oceanGrad)" />
+        <rect width="1000" height="1150" fill="url(#${cId}_oceanGrad)" />
 
-        <!-- Compass Rose (N ↑) -->
-        <g transform="translate(880, 110)" opacity="0.85">
-          <circle cx="0" cy="0" r="30" fill="none" stroke="#38bdf8" stroke-dasharray="3,3" stroke-width="1.5" />
-          <polygon points="0,-26 5,-6 0,0 -5,-6" fill="#ef4444" />
-          <polygon points="0,26 5,6 0,0 -5,6" fill="#94a3b8" />
-          <polygon points="26,0 6,5 0,0 6,-5" fill="#94a3b8" />
-          <polygon points="-26,0 -6,5 0,0 -6,-5" fill="#94a3b8" />
-          <text x="0" y="-32" fill="#ef4444" font-size="14" font-weight="900" text-anchor="middle">N</text>
-          <text x="0" y="42" fill="#94a3b8" font-size="12" font-weight="800" text-anchor="middle">S</text>
-          <text x="38" y="4" fill="#94a3b8" font-size="12" font-weight="800" text-anchor="middle">E</text>
-          <text x="-38" y="4" fill="#94a3b8" font-size="12" font-weight="800" text-anchor="middle">W</text>
-        </g>
+        <!-- ALL ELEMENTS INSIDE PAN & ZOOM GROUP FOR SEAMLESS 2-FINGER PINCH / PAN -->
+        <g id="${cId}_panZoomGroup" class="pan-zoom-container">
 
-        <!-- Tropic of Cancer (23.5° N) Reference Line -->
-        <line x1="160" y1="535" x2="880" y2="535" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="6,4" opacity="0.4" />
-        <text x="890" y="539" fill="#f59e0b" opacity="0.6" font-size="11" font-weight="700">23.5° N</text>
+          <!-- Compass Rose (N ↑) -->
+          <g transform="translate(880, 110)" opacity="0.85">
+            <circle cx="0" cy="0" r="30" fill="none" stroke="#38bdf8" stroke-dasharray="3,3" stroke-width="1.5" />
+            <polygon points="0,-26 5,-6 0,0 -5,-6" fill="#ef4444" />
+            <polygon points="0,26 5,6 0,0 -5,6" fill="#94a3b8" />
+            <polygon points="26,0 6,5 0,0 6,-5" fill="#94a3b8" />
+            <polygon points="-26,0 -6,5 0,0 -6,-5" fill="#94a3b8" />
+            <text x="0" y="-32" fill="#ef4444" font-size="14" font-weight="900" text-anchor="middle">N</text>
+          </g>
 
-        <!-- Water Body Labels -->
-        ${seaLabels}
+          <!-- Water Body Labels -->
+          ${seaLabels}
 
-        <!-- Neighboring Landmarks (Classroom Board Exam Atlas Cues) -->
-        <text x="120" y="280" fill="#64748b" opacity="0.4" font-size="16" font-weight="700">PAKISTAN</text>
-        <text x="520" y="160" fill="#64748b" opacity="0.4" font-size="16" font-weight="700">CHINA / TIBET</text>
-        <text x="500" y="285" fill="#64748b" opacity="0.4" font-size="15" font-weight="700">NEPAL</text>
-        <text x="690" y="275" fill="#64748b" opacity="0.4" font-size="14" font-weight="700">BHUTAN</text>
-        <text x="680" y="450" fill="#64748b" opacity="0.4" font-size="15" font-weight="700">BANGLADESH</text>
-        <text x="830" y="430" fill="#64748b" opacity="0.4" font-size="14" font-weight="700">MYANMAR</text>
+          <!-- Tropic of Cancer (23.5° N) Reference Line -->
+          <line x1="160" y1="535" x2="880" y2="535" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="6,4" opacity="0.4" />
+          <text x="890" y="539" fill="#f59e0b" opacity="0.6" font-size="11" font-weight="700">23.5° N</text>
 
-        <!-- Sri Lanka -->
-        <g id="${containerId}_sriLanka" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5">
-          <path d="M 470 1020 C 485 1010, 500 1025, 495 1050 C 490 1075, 475 1085, 465 1075 C 455 1060, 455 1030, 470 1020 Z" />
-          <text x="510" y="1055" fill="#64748b" opacity="0.6" font-size="12" font-weight="700">SRI LANKA</text>
-        </g>
-
-        <!-- Andaman & Nicobar Islands -->
-        <g id="${containerId}_andaman" fill="#38bdf8" opacity="0.7">
-          <ellipse cx="800" cy="810" rx="4" ry="12" />
-          <ellipse cx="802" cy="835" rx="4" ry="10" />
-          <ellipse cx="805" cy="860" rx="3" ry="8" />
-          <ellipse cx="820" cy="910" rx="5" ry="12" />
-          <text x="835" y="850" fill="#38bdf8" opacity="0.5" font-size="11" font-weight="700">ANDAMAN &amp; NICOBAR</text>
-        </g>
-
-        <!-- Lakshadweep Islands -->
-        <g id="${containerId}_lakshadweep" fill="#38bdf8" opacity="0.7">
-          <circle cx="230" cy="880" r="3.5" />
-          <circle cx="235" cy="905" r="4" />
-          <circle cx="240" cy="930" r="3.5" />
-          <text x="140" y="905" fill="#38bdf8" opacity="0.5" font-size="11" font-weight="700">LAKSHADWEEP</text>
-        </g>
-
-        <!-- PAN AND ZOOM GROUP -->
-        <g id="${containerId}_panZoomGroup" class="pan-zoom-container">
-          <!-- MAINLAND BLANK OUTLINE MAP (Without names, ready for student pencil practice) -->
-          <path id="${containerId}_mainland" class="eval-map-land-path" fill="url(#${containerId}_landGrad)" stroke="#38bdf8" stroke-width="2.3" stroke-linejoin="round"
+          <!-- MAINLAND OFFICIAL BLANK OUTLINE MAP -->
+          <path id="${cId}_mainland" class="eval-map-land-path" fill="url(#${cId}_landGrad)" stroke="#38bdf8" stroke-width="2.2" stroke-linejoin="round"
             d="M 370 40 
                C 385 30, 415 30, 430 45 
                C 450 65, 460 95, 450 120 
@@ -378,49 +355,30 @@
                C 225 635, 260 620, 280 600 
                C 295 580, 275 605, 270 635 
                C 265 670, 285 710, 305 750 
-               C 325 790, 345 830, 365 870 
-               C 385 910, 405 950, 420 990 
-               C 425 1000, 435 995, 440 980 
-               C 455 940, 465 900, 475 860 
-               C 485 820, 495 780, 520 750 
-               C 545 720, 575 690, 605 660 
-               C 635 630, 660 600, 640 570 
-               C 625 550, 645 530, 665 515 
-               C 685 500, 695 480, 675 465 
-               C 655 450, 630 460, 615 440 
-               C 600 420, 580 405, 560 395 
-               C 540 380, 560 360, 585 345 
-               C 610 330, 635 315, 660 305 
-               C 685 295, 715 295, 730 315 
-               C 745 330, 775 320, 805 325 
-               C 835 330, 860 345, 855 365 
-               C 850 385, 825 395, 800 405 
-               C 780 415, 755 435, 775 455 
-               C 795 470, 770 490, 745 490 
-               C 720 490, 705 470, 680 475 
-               C 660 480, 645 495, 630 515 
-               C 615 535, 585 550, 560 565 
-               C 530 585, 510 610, 490 635 
-               C 470 660, 455 690, 440 720 
-               C 425 750, 410 780, 395 810 
-               C 380 840, 365 870, 350 900 
-               C 340 920, 360 940, 380 960 
-               C 400 980, 410 1000, 415 1010
-               L 420 1010 
-               C 425 995, 435 970, 445 940 
-               C 455 910, 465 875, 475 840 
-               C 485 805, 500 770, 520 735 
-               C 540 700, 570 670, 595 640 
-               C 615 615, 630 585, 640 555 
-               C 645 530, 625 510, 605 490 
-               C 585 470, 565 440, 545 410 
-               C 525 380, 505 350, 485 320 
-               C 465 290, 445 260, 425 230 
-               C 405 200, 385 170, 375 140 
-               C 365 110, 360 70, 370 40 Z" />
+               C 325 790, 330 830, 335 880 
+               C 340 920, 360 960, 385 985 
+               C 405 1005, 420 1015, 435 995 
+               C 450 975, 445 930, 470 890 
+               C 495 850, 505 810, 520 780 
+               C 545 740, 570 710, 580 670 
+               C 590 630, 620 600, 650 580 
+               C 680 560, 710 540, 730 520 
+               C 740 505, 725 490, 705 480 
+               C 685 470, 665 475, 645 460 
+               C 625 440, 635 410, 665 390 
+               C 695 370, 735 385, 770 380 
+               C 805 375, 845 350, 875 320 
+               C 885 305, 865 295, 840 310 
+               C 810 330, 770 340, 735 345 
+               C 700 350, 670 335, 650 315 
+               C 630 295, 610 300, 590 310 
+               C 560 325, 530 310, 500 285 
+               C 470 260, 440 230, 415 195 
+               C 390 160, 380 120, 360 80 
+               Z" />
 
-          <!-- STATE BOUNDARIES (Subtle classroom reference lines for orientation) -->
-          <g id="${containerId}_stateBoundaries" fill="none" stroke="#64748b" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.65">
+          <!-- State Boundaries / Subtle Geographical Guidance Lines -->
+          <g stroke="#38bdf8" stroke-width="0.8" opacity="0.32" fill="none">
             <path d="M 420 1000 Q 395 940 380 880" />
             <path d="M 380 880 Q 405 860 435 850" />
             <path d="M 435 850 Q 460 835 485 815" />
@@ -431,141 +389,194 @@
             <path d="M 520 700 Q 580 650 635 600" />
             <path d="M 520 700 Q 560 620 575 560 Q 610 520 640 480" />
             <path d="M 640 480 Q 660 475 680 475" />
-            <path d="M 420 720 Q 380 680 340 680" />
-            <path d="M 340 680 Q 280 650 250 610" />
-            <path d="M 340 680 Q 380 620 420 590" />
-            <path d="M 420 590 Q 500 590 560 620" />
-            <path d="M 420 590 Q 350 560 260 540" />
-            <path d="M 420 590 Q 430 480 440 380" />
-            <path d="M 440 380 Q 380 350 340 380" />
-            <path d="M 340 380 Q 290 350 240 370" />
-            <path d="M 340 380 Q 340 320 330 270" />
-            <path d="M 440 380 Q 530 380 570 410" />
-            <path d="M 570 410 Q 600 450 640 480" />
-            <path d="M 400 240 Q 420 180 420 120" />
+            <path d="M 680 475 Q 640 430 635 360 Q 655 330 660 305" />
+            <path d="M 265 620 Q 350 600 480 600 Q 520 650 520 700" />
+            <path d="M 220 500 Q 260 490 280 500" />
+            <path d="M 280 500 Q 350 460 380 410" />
+            <path d="M 290 320 Q 330 330 360 350" />
+            <path d="M 540 380 Q 535 440 550 480" />
+            <path d="M 380 410 Q 450 440 535 440" />
+            <path d="M 360 260 Q 430 250 500 285" />
           </g>
 
-          <!-- CONNECTING OFFSET GUIDES LAYER (Revealed during Evaluation) -->
-          <g id="${containerId}_offsetLinesLayer" class="eval-guide-layer"></g>
+          <!-- Sri Lanka -->
+          <g id="${cId}_sriLanka" fill="#1e293b" stroke="#38bdf8" stroke-width="1.6">
+            <path d="M 470 1020 C 485 1010, 500 1025, 495 1050 C 490 1075, 475 1085, 465 1075 C 455 1060, 455 1030, 470 1020 Z" />
+            <text x="510" y="1055" fill="#64748b" opacity="0.65" font-size="12" font-weight="700">SRI LANKA</text>
+          </g>
 
-          <!-- OFFICIAL TARGET ANSWER KEY LAYER (Revealed during Evaluation) -->
-          <g id="${containerId}_targetAnswerLayer" class="eval-target-layer"></g>
+          <!-- Andaman & Nicobar Islands -->
+          <g id="${cId}_andaman" fill="#38bdf8" opacity="0.8">
+            <ellipse cx="800" cy="810" rx="5" ry="14" />
+            <ellipse cx="802" cy="835" rx="5" ry="12" />
+            <ellipse cx="805" cy="860" rx="4" ry="10" />
+            <ellipse cx="820" cy="910" rx="6" ry="14" />
+            <text x="835" y="850" fill="#38bdf8" opacity="0.6" font-size="12" font-weight="700">ANDAMAN &amp; NICOBAR</text>
+          </g>
 
-          <!-- STUDENT MARKS LAYER (Interactive Student Pins Placed Here) -->
-          <g id="${containerId}_studentPinsLayer" class="eval-student-pins-layer"></g>
+          <!-- Lakshadweep Islands -->
+          <g id="${cId}_lakshadweep" fill="#38bdf8" opacity="0.8">
+            <circle cx="230" cy="880" r="4.5" />
+            <circle cx="235" cy="905" r="5" />
+            <circle cx="240" cy="930" r="4.5" />
+            <text x="130" y="905" fill="#38bdf8" opacity="0.6" font-size="12" font-weight="700">LAKSHADWEEP</text>
+          </g>
+
+          <!-- DYNAMIC ANSWER LAYERS -->
+          <g id="${cId}_offsetLinesLayer" class="eval-guide-layer"></g>
+          <g id="${cId}_targetAnswerLayer" class="eval-target-layer"></g>
+          <g id="${cId}_studentPinsLayer" class="eval-student-pins-layer"></g>
         </g>
       </svg>
     `;
   }
 
-  function getBlankWorldSvgHtml(containerId, isEm) {
+  function getBlankWorldSvgHtml(cId, isEm, qSet) {
+    const isWw2 = qSet && qSet.id === 'soc_ww2';
+
     return `
-      <svg id="${containerId}_svgMap" viewBox="0 0 1000 600" class="eval-blank-map-svg" xmlns="http://www.w3.org/2000/svg">
+      <svg id="${cId}_svgMap" viewBox="0 0 1000 700" class="eval-blank-map-svg" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="${containerId}_wOcean" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="${cId}_wOcean" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#081426" />
             <stop offset="100%" stop-color="#020813" />
           </linearGradient>
-          <linearGradient id="${containerId}_wLand" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="${cId}_wLand" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#1e293b" />
             <stop offset="100%" stop-color="#0f172a" />
           </linearGradient>
         </defs>
 
-        <rect width="1000" height="600" fill="url(#${containerId}_wOcean)" />
+        <!-- Ocean Background -->
+        <rect width="1000" height="700" fill="url(#${cId}_wOcean)" />
 
-        <!-- Compass Rose -->
-        <g transform="translate(930, 80)" opacity="0.8">
-          <circle cx="0" cy="0" r="24" fill="none" stroke="#38bdf8" stroke-dasharray="2,2" stroke-width="1.2" />
-          <polygon points="0,-22 4,-5 0,0 -4,-5" fill="#ef4444" />
-          <polygon points="0,22 4,5 0,0 -4,5" fill="#94a3b8" />
-          <text x="0" y="-26" fill="#ef4444" font-size="12" font-weight="900" text-anchor="middle">N</text>
-        </g>
+        <!-- PAN AND ZOOM GROUP -->
+        <g id="${cId}_panZoomGroup" class="pan-zoom-container">
 
-        <!-- Oceans -->
-        <text x="120" y="320" fill="#38bdf8" opacity="0.35" font-size="18" font-weight="800" letter-spacing="4">PACIFIC OCEAN</text>
-        <text x="360" y="330" fill="#38bdf8" opacity="0.35" font-size="18" font-weight="800" letter-spacing="4">ATLANTIC OCEAN</text>
-        <text x="660" y="440" fill="#38bdf8" opacity="0.35" font-size="17" font-weight="800" letter-spacing="4">INDIAN OCEAN</text>
-        <text x="890" y="320" fill="#38bdf8" opacity="0.35" font-size="16" font-weight="800" letter-spacing="4">PACIFIC OCEAN</text>
-
-        <g id="${containerId}_panZoomGroup" class="pan-zoom-container">
-          <!-- Continents -->
-          <g fill="url(#${containerId}_wLand)" stroke="#38bdf8" stroke-width="1.6" stroke-linejoin="round">
-            <!-- North America -->
-            <path d="M 120 70 C 180 60, 260 70, 270 110 C 260 140, 220 160, 230 200 C 240 240, 290 270, 270 300 C 250 320, 230 310, 210 270 C 190 240, 150 250, 130 220 C 110 180, 80 130, 120 70 Z" />
-            <!-- South America -->
-            <path d="M 270 320 C 310 320, 360 350, 360 400 C 350 450, 320 520, 290 550 C 270 550, 260 500, 270 450 C 270 400, 250 360, 270 320 Z" />
-            <!-- Eurasia (Europe + Asia) -->
-            <path d="M 440 140 C 490 120, 560 110, 640 100 C 720 90, 820 110, 880 140 C 900 180, 870 230, 860 270 C 830 310, 780 340, 750 310 C 720 280, 700 240, 680 270 C 650 320, 610 300, 580 270 C 550 270, 520 280, 500 250 C 460 250, 440 210, 430 180 C 430 160, 430 150, 440 140 Z" />
-            <!-- British Isles -->
-            <path d="M 465 160 C 480 155, 485 175, 478 190 C 470 195, 460 180, 465 160 Z" />
-            <!-- Japan -->
-            <path d="M 850 210 C 865 215, 870 245, 855 260 C 845 250, 848 230, 850 210 Z" />
-            <!-- Africa -->
-            <path d="M 470 270 C 530 260, 570 280, 580 330 C 590 380, 580 430, 550 480 C 530 510, 500 500, 490 450 C 480 400, 430 340, 450 300 C 460 280, 465 275, 470 270 Z" />
-            <!-- Australia -->
-            <path d="M 780 400 C 840 390, 880 420, 870 470 C 840 500, 790 510, 770 470 C 760 440, 760 410, 780 400 Z" />
+          <!-- Compass Rose -->
+          <g transform="translate(920, 80)" opacity="0.85">
+            <circle cx="0" cy="0" r="24" fill="none" stroke="#38bdf8" stroke-dasharray="2,2" stroke-width="1.2" />
+            <polygon points="0,-22 4,-5 0,0 -4,-5" fill="#ef4444" />
+            <polygon points="0,22 4,5 0,0 -4,5" fill="#94a3b8" />
+            <text x="0" y="-26" fill="#ef4444" font-size="12" font-weight="900" text-anchor="middle">N</text>
           </g>
 
-          <g id="${containerId}_offsetLinesLayer" class="eval-guide-layer"></g>
-          <g id="${containerId}_targetAnswerLayer" class="eval-target-layer"></g>
-          <g id="${containerId}_studentPinsLayer" class="eval-student-pins-layer"></g>
+          <!-- Water Body Reference Labels -->
+          <text x="120" y="380" fill="#38bdf8" opacity="0.35" font-size="18" font-weight="800" letter-spacing="4">ATLANTIC OCEAN</text>
+          <text x="360" y="210" fill="#38bdf8" opacity="0.3" font-size="14" font-weight="800">NORTH SEA</text>
+          <text x="560" y="210" fill="#38bdf8" opacity="0.3" font-size="14" font-weight="800">BALTIC SEA</text>
+          <text x="380" y="650" fill="#38bdf8" opacity="0.35" font-size="16" font-weight="800" letter-spacing="3">MEDITERRANEAN SEA</text>
+          <text x="730" y="470" fill="#38bdf8" opacity="0.3" font-size="15" font-weight="800">BLACK SEA</text>
+
+          <!-- Continents & European Theatre Countries (Official Board Exam Vector Outlines) -->
+          <g fill="url(#${cId}_wLand)" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round">
+
+            <!-- British Isles (Great Britain + Ireland) -->
+            <!-- Great Britain -->
+            <path id="${cId}_path_britain" d="M 230 200 C 255 180, 275 220, 260 250 C 280 270, 280 320, 245 350 C 220 340, 210 290, 225 260 C 215 230, 220 210, 230 200 Z" />
+            <!-- Ireland -->
+            <path d="M 180 250 C 195 240, 205 270, 195 300 C 180 310, 170 280, 180 250 Z" />
+
+            <!-- Scandinavian Peninsula (Norway & Sweden) -->
+            <path d="M 440 60 C 480 50, 540 80, 560 130 C 530 180, 480 210, 450 170 C 440 140, 420 100, 440 60 Z" />
+            <!-- Denmark -->
+            <path d="M 425 200 C 440 190, 450 220, 435 240 C 420 230, 420 210, 425 200 Z" />
+
+            <!-- Iberian Peninsula (Spain & Portugal) -->
+            <path d="M 160 480 C 230 460, 260 480, 250 560 C 240 620, 170 630, 140 580 C 130 530, 140 490, 160 480 Z" />
+
+            <!-- France -->
+            <path id="${cId}_path_france" d="M 260 360 C 330 350, 360 380, 350 440 C 330 480, 290 510, 260 480 C 240 450, 240 390, 260 360 Z" />
+
+            <!-- Germany & Central Europe -->
+            <path id="${cId}_path_germany" d="M 360 260 C 460 240, 480 280, 490 350 C 470 380, 400 390, 370 360 C 350 330, 350 280, 360 260 Z" />
+
+            <!-- Italy (The Boot Peninsula & Sicily) -->
+            <path id="${cId}_path_italy" d="M 400 450 C 440 440, 460 470, 480 510 C 510 560, 490 610, 460 630 C 440 610, 445 570, 430 540 C 410 520, 390 480, 400 450 Z" />
+            <!-- Sicily -->
+            <path d="M 440 645 C 460 640, 470 660, 450 670 C 430 665, 430 650, 440 645 Z" />
+
+            <!-- Austria-Hungary & Central/Eastern Europe -->
+            <path id="${cId}_path_austria" d="M 480 360 C 570 340, 610 390, 590 450 C 550 480, 490 470, 470 440 C 470 400, 475 380, 480 360 Z" />
+
+            <!-- Balkan Peninsula (Bosnia / Sarajevo, Serbia, Greece) -->
+            <path id="${cId}_path_balkans" d="M 490 480 C 550 460, 580 500, 560 560 C 550 610, 510 630, 490 590 C 480 550, 480 510, 490 480 Z" />
+
+            <!-- Russian Empire (Vast Eastern Landmass) -->
+            <path id="${cId}_path_russia" d="M 570 120 C 690 90, 870 100, 940 160 C 970 240, 940 370, 890 420 C 820 440, 750 430, 710 390 C 660 360, 600 320, 580 250 C 560 190, 550 140, 570 120 Z" />
+
+            <!-- Ottoman Empire / Turkey (Asia Minor & Straits) -->
+            <path id="${cId}_path_turkey" d="M 640 540 C 740 510, 850 520, 870 590 C 840 640, 740 650, 680 620 C 650 600, 630 560, 640 540 Z" />
+
+            <!-- North Africa Coastline -->
+            <path d="M 120 660 C 260 650, 460 670, 600 680 L 600 700 L 120 700 Z" opacity="0.6" />
+
+            ${isWw2 ? `
+              <!-- USA Inset (West) -->
+              <g id="${cId}_usa_inset" transform="translate(15, 230)">
+                <rect width="110" height="90" fill="#0f172a" stroke="#0284c7" stroke-width="1.2" rx="8" />
+                <path d="M 20 20 C 50 15, 90 20, 95 50 C 90 70, 50 75, 25 65 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="1.4" />
+                <text x="55" y="82" fill="#38bdf8" font-size="10" font-weight="800" text-anchor="middle">USA (Allied)</text>
+              </g>
+              <!-- Japan Inset (East) -->
+              <g id="${cId}_japan_inset" transform="translate(875, 250)">
+                <rect width="110" height="95" fill="#0f172a" stroke="#0284c7" stroke-width="1.2" rx="8" />
+                <path d="M 50 20 C 60 25, 65 55, 55 70 C 45 60, 48 40, 50 20 Z" fill="#1e293b" stroke="#38bdf8" stroke-width="1.4" />
+                <text x="55" y="87" fill="#38bdf8" font-size="10" font-weight="800" text-anchor="middle">JAPAN (Axis)</text>
+              </g>
+            ` : ''}
+
+          </g>
+
+          <!-- DYNAMIC ANSWER LAYERS -->
+          <g id="${cId}_offsetLinesLayer" class="eval-guide-layer"></g>
+          <g id="${cId}_targetAnswerLayer" class="eval-target-layer"></g>
+          <g id="${cId}_studentPinsLayer" class="eval-student-pins-layer"></g>
         </g>
       </svg>
     `;
   }
 
   // ---------------------------------------------------------------------------
-  // 3. MAP PRACTICE EVALUATOR CONTROLLER
+  // 3. MAP PRACTICE EVALUATOR CONTROLLER (GESTURES, TAP-TO-ZOOM, SCORING)
   // ---------------------------------------------------------------------------
   const MapPracticeEvaluator = {
-    instances: {}, // map containerId -> state
+    instances: {},
 
     initCSS() {
-      if (document.getElementById('mapPracticeEvaluatorStyles')) return;
+      if (document.getElementById('map_practice_eval_styles')) return;
       const style = document.createElement('style');
-      style.id = 'mapPracticeEvaluatorStyles';
+      style.id = 'map_practice_eval_styles';
       style.textContent = `
-        /* Modal expansions for Map Evaluation */
-        .ai-modal-box.map-eval-mode {
-          max-width: 980px !important;
-          width: 96vw !important;
-          max-height: 94vh !important;
-        }
-
+        /* Map Practice Container */
         .eval-map-container {
           display: flex;
           flex-direction: column;
-          gap: 12px;
-          background: #090e17;
+          gap: 6px;
           color: #f8fafc;
-          border-radius: 14px;
-          padding: 6px 0;
-          font-family: inherit;
+          width: 100%;
+          position: relative;
         }
 
-        /* Top Instructions & Mode bar */
+        /* Top Instructions Box (Desktop only, hidden on mobile for zero text clutter) */
         .eval-inst-box {
-          background: linear-gradient(135deg, rgba(2, 132, 199, 0.15), rgba(15, 23, 42, 0.6));
-          border: 1px solid rgba(56, 189, 248, 0.35);
-          border-radius: 12px;
-          padding: 10px 14px;
+          background: #111e38;
+          border: 1px solid #1e3a5f;
+          border-radius: 10px;
+          padding: 8px 14px;
           display: flex;
           align-items: center;
           justify-content: space-between;
           flex-wrap: wrap;
-          gap: 10px;
+          gap: 8px;
         }
         .eval-inst-text {
-          font-size: 13px;
+          font-size: 12.5px;
           color: #e2e8f0;
-          line-height: 1.5;
-        }
-        .eval-inst-text strong {
-          color: #38bdf8;
+          line-height: 1.4;
         }
 
-        /* Place Selector Tray */
+        /* Places Selector Tray (Sleek Horizontal Scroll Bar) */
         .eval-tray-label {
           font-size: 11.5px;
           font-weight: 800;
@@ -575,91 +586,82 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 0 4px;
+          margin-bottom: 4px;
         }
         .eval-places-tray {
           display: flex;
-          gap: 8px;
+          align-items: center;
+          gap: 6px;
           overflow-x: auto;
-          padding: 4px 2px 8px 2px;
-          scroll-behavior: smooth;
-        }
-        .eval-places-tray::-webkit-scrollbar {
-          height: 6px;
-        }
-        .eval-places-tray::-webkit-scrollbar-thumb {
-          background: #334155;
-          border-radius: 4px;
+          padding: 4px 2px 6px 2px;
+          scrollbar-width: thin;
+          -webkit-overflow-scrolling: touch;
         }
         .eval-place-pill {
-          flex-shrink: 0;
+          flex: 0 0 auto;
           background: #1e293b;
           border: 1.5px solid #334155;
-          border-radius: 12px;
-          padding: 8px 12px;
-          cursor: pointer;
-          display: flex;
+          border-radius: 20px;
+          padding: 6px 12px;
+          display: inline-flex;
           align-items: center;
-          gap: 8px;
-          font-size: 12.5px;
-          font-weight: 700;
-          color: #cbd5e1;
+          gap: 6px;
+          cursor: pointer;
           transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
           user-select: none;
         }
         .eval-place-pill:hover {
           border-color: #38bdf8;
-          color: #ffffff;
-          transform: translateY(-1px);
+          background: #24344d;
         }
         .eval-place-pill.active {
-          background: linear-gradient(135deg, rgba(2, 132, 199, 0.35), rgba(14, 165, 233, 0.2));
           border-color: #38bdf8;
+          background: #0284c7;
           color: #ffffff;
-          box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+          box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+          transform: translateY(-2px);
         }
         .eval-place-pill.marked {
-          background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(5, 150, 105, 0.15));
           border-color: #10b981;
-          color: #a7f3d0;
-        }
-        .eval-place-pill.marked.active {
-          border-color: #34d399;
-          box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
-        }
-        .pill-badge {
-          font-size: 10px;
-          padding: 2px 6px;
-          border-radius: 6px;
-          background: #334155;
-          color: #94a3b8;
-          font-weight: 800;
-        }
-        .eval-place-pill.marked .pill-badge {
-          background: #065f46;
+          background: rgba(16, 185, 129, 0.15);
           color: #6ee7b7;
         }
-        .pill-clear-btn {
-          border: none;
-          background: none;
-          color: #ef4444;
-          font-size: 14px;
+        .eval-place-pill.marked.active {
+          background: #059669;
+          color: #ffffff;
+          border-color: #34d399;
+        }
+        .pill-badge {
+          background: rgba(0, 0, 0, 0.35);
+          border-radius: 10px;
+          padding: 2px 6px;
+          font-size: 10.5px;
           font-weight: 900;
+        }
+        .pill-title {
+          font-size: 12px;
+          font-weight: 800;
+        }
+        .pill-status {
+          font-size: 11px;
+        }
+        .pill-clear-btn {
+          background: transparent;
+          border: none;
+          color: #f87171;
+          font-size: 14px;
           cursor: pointer;
           padding: 0 2px;
-          opacity: 0.7;
-        }
-        .pill-clear-btn:hover {
-          opacity: 1;
+          line-height: 1;
         }
 
         /* SVG Blank Map Wrapper */
         .eval-map-stage-wrapper {
           position: relative;
           width: 100%;
-          min-height: 480px;
           height: 60vh;
-          max-height: 640px;
+          min-height: 460px;
+          max-height: 680px;
           background: #030816;
           border: 1.5px solid #1e293b;
           border-radius: 14px;
@@ -667,50 +669,62 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          touch-action: none;
+          user-select: none;
         }
         .eval-blank-map-svg {
           width: 100%;
           height: 100%;
           cursor: crosshair;
+          touch-action: none;
         }
-        .eval-map-land-path {
-          transition: fill 0.3s ease;
+        .pan-zoom-container {
+          transition: transform 0.08s linear;
+          transform-origin: 0 0;
         }
 
-        /* Toolbar floating over map */
+        /* VERTICAL Toolbar floating on right side */
         .eval-map-toolbar {
           position: absolute;
           top: 12px;
-          right: 12px;
+          right: 10px;
           display: flex;
-          gap: 6px;
-          background: rgba(15, 23, 42, 0.85);
-          backdrop-filter: blur(6px);
+          flex-direction: column;
+          gap: 5px;
+          background: rgba(15, 23, 42, 0.92);
+          backdrop-filter: blur(8px);
           padding: 5px;
           border-radius: 10px;
-          border: 1px solid rgba(255, 255, 255, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.15);
           z-index: 10;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
         }
         .eval-tool-btn {
           background: #1e293b;
           border: 1px solid #334155;
           color: #f8fafc;
           border-radius: 6px;
-          padding: 6px 10px;
+          padding: 6px 9px;
           font-size: 12px;
           font-weight: 800;
           cursor: pointer;
           display: flex;
           align-items: center;
-          gap: 4px;
+          justify-content: center;
+          min-width: 32px;
+          min-height: 30px;
           transition: all 0.15s ease;
         }
         .eval-tool-btn:hover {
           background: #334155;
           border-color: #38bdf8;
         }
+        .eval-tool-btn.active {
+          background: #0284c7;
+          border-color: #38bdf8;
+          color: #ffffff;
+        }
 
+        /* Floating Hint and Marked Count */
         .eval-marked-count-chip {
           position: absolute;
           top: 12px;
@@ -718,87 +732,69 @@
           background: rgba(15, 23, 42, 0.9);
           border: 1px solid #0284c7;
           border-radius: 20px;
-          padding: 6px 14px;
-          font-size: 12px;
+          padding: 5px 12px;
+          font-size: 11.5px;
           font-weight: 800;
           color: #38bdf8;
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 5px;
           z-index: 10;
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
+        .eval-tap-zoom-hint {
+          position: absolute;
+          bottom: 12px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(15, 23, 42, 0.88);
+          border: 1px solid rgba(56, 189, 248, 0.4);
+          border-radius: 20px;
+          padding: 4px 14px;
+          font-size: 11px;
+          font-weight: 700;
+          color: #e2e8f0;
+          pointer-events: none;
+          z-index: 9;
+          white-space: nowrap;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+          animation: fadeInOut 4s forwards;
+        }
+        @keyframes fadeInOut {
+          0% { opacity: 0; transform: translate(-50%, 8px); }
+          15% { opacity: 1; transform: translate(-50%, 0); }
+          80% { opacity: 1; }
+          100% { opacity: 0.75; }
+        }
 
-        /* The Finish Button Bar */
+        /* Finish Button Bar */
         .eval-action-bar {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          flex-wrap: wrap;
-          gap: 12px;
-          padding: 4px 0;
+          gap: 8px;
+          padding: 2px 0;
         }
         .eval-finish-btn {
           flex: 1;
-          min-width: 260px;
-          padding: 14px 24px;
+          padding: 12px 18px;
           background: linear-gradient(135deg, #10b981 0%, #059669 100%);
           color: #ffffff;
           border: none;
-          border-radius: 12px;
-          font-size: 15px;
+          border-radius: 10px;
+          font-size: 14px;
           font-weight: 900;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 10px;
-          box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
-          transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-          letter-spacing: 0.3px;
+          gap: 8px;
+          box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+          transition: all 0.2s ease;
         }
         .eval-finish-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5);
-          background: linear-gradient(135deg, #059669 0%, #047857 100%);
-        }
-        .eval-finish-btn:active {
-          transform: translateY(0);
-        }
-        .eval-retry-btn {
-          padding: 12px 18px;
-          background: #1e293b;
-          border: 1.5px solid #334155;
-          color: #e2e8f0;
-          border-radius: 12px;
-          font-size: 13.5px;
-          font-weight: 800;
-          cursor: pointer;
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-        }
-        .eval-retry-btn:hover {
-          border-color: #94a3b8;
-          color: #ffffff;
-        }
-
-        /* SVG Student Pins and Markers */
-        .pin-drop-anim {
-          animation: pinBounce 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-        @keyframes pinBounce {
-          0% { transform: translateY(-30px); opacity: 0; }
-          60% { transform: translateY(4px); opacity: 1; }
-          100% { transform: translateY(0); opacity: 1; }
-        }
-        .pin-pulse-ring {
-          animation: pinPulseRing 1.8s infinite cubic-bezier(0.2, 0.8, 0.2, 1);
-          transform-origin: center;
-        }
-        @keyframes pinPulseRing {
-          0% { r: 9; opacity: 0.8; stroke-width: 2.5; }
-          100% { r: 24; opacity: 0; stroke-width: 0.5; }
+          box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
         }
 
         /* Result Scorecard Section */
@@ -806,12 +802,11 @@
           margin-top: 10px;
           background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
           border: 1.5px solid #0284c7;
-          border-radius: 16px;
-          padding: 18px;
+          border-radius: 14px;
+          padding: 14px;
           display: flex;
           flex-direction: column;
-          gap: 16px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          gap: 12px;
           animation: slideUpFade 0.3s ease;
         }
         @keyframes slideUpFade {
@@ -823,117 +818,101 @@
           align-items: center;
           justify-content: space-between;
           flex-wrap: wrap;
-          gap: 14px;
-          padding-bottom: 14px;
+          gap: 10px;
+          padding-bottom: 12px;
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .eval-score-num-box {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-        }
         .eval-score-badge {
-          font-size: 32px;
+          font-size: 28px;
           font-weight: 900;
           color: #38bdf8;
-          text-shadow: 0 0 16px rgba(56, 189, 248, 0.5);
         }
         .eval-grade-pill {
-          padding: 6px 14px;
+          padding: 5px 12px;
           border-radius: 20px;
-          font-size: 13px;
+          font-size: 12px;
           font-weight: 800;
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
         }
-        .eval-grade-pill.grade-centum {
-          background: linear-gradient(135deg, #10b981, #059669);
-          color: #ffffff;
-          box-shadow: 0 0 14px rgba(16, 185, 129, 0.4);
-        }
-        .eval-grade-pill.grade-good {
-          background: linear-gradient(135deg, #0284c7, #2563eb);
-          color: #ffffff;
-        }
-        .eval-grade-pill.grade-practice {
-          background: linear-gradient(135deg, #f59e0b, #d97706);
-          color: #000;
-        }
+        .eval-grade-pill.grade-centum { background: #10b981; color: #fff; }
+        .eval-grade-pill.grade-good { background: #0284c7; color: #fff; }
+        .eval-grade-pill.grade-practice { background: #f59e0b; color: #000; }
 
         /* Diagnostic Table */
-        .eval-diag-table-container {
-          overflow-x: auto;
-        }
         .eval-diag-table {
           width: 100%;
           border-collapse: collapse;
-          font-size: 12.5px;
+          font-size: 12px;
         }
         .eval-diag-table th {
           background: #090e17;
           color: #94a3b8;
-          font-weight: 800;
+          padding: 8px 10px;
           text-align: left;
-          padding: 8px 12px;
-          border-bottom: 1px solid #334155;
-          text-transform: uppercase;
-          font-size: 11px;
-          letter-spacing: 0.5px;
+          font-weight: 800;
         }
         .eval-diag-table td {
-          padding: 10px 12px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-          color: #e2e8f0;
-          vertical-align: middle;
+          padding: 8px 10px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          color: #f1f5f9;
         }
-        .eval-status-chip {
+        .status-pill {
           padding: 3px 8px;
           border-radius: 6px;
           font-size: 11px;
           font-weight: 800;
-          display: inline-flex;
+          display: inline-block;
+        }
+        .status-exact { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+        .status-near { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+        .status-wrong { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #ef4444; }
+
+        /* Official Image Modal Overlay */
+        .eval-image-popup-overlay {
+          position: fixed;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0, 0, 0, 0.85);
+          backdrop-filter: blur(6px);
+          z-index: 10000;
+          display: flex;
           align-items: center;
-          gap: 4px;
+          justify-content: center;
+          padding: 14px;
         }
-        .eval-status-chip.exact {
-          background: rgba(16, 185, 129, 0.2);
-          color: #34d399;
-          border: 1px solid rgba(16, 185, 129, 0.4);
-        }
-        .eval-status-chip.near {
-          background: rgba(245, 158, 11, 0.2);
-          color: #fbbf24;
-          border: 1px solid rgba(245, 158, 11, 0.4);
-        }
-        .eval-status-chip.inaccurate {
-          background: rgba(239, 68, 68, 0.2);
-          color: #f87171;
-          border: 1px solid rgba(239, 68, 68, 0.4);
-        }
-        .eval-status-chip.missed {
-          background: rgba(100, 116, 139, 0.2);
-          color: #cbd5e1;
-          border: 1px solid rgba(100, 116, 139, 0.4);
+        .eval-image-popup-box {
+          background: #0f172a;
+          border: 1.5px solid #38bdf8;
+          border-radius: 14px;
+          max-width: 900px;
+          max-height: 90vh;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
         }
 
-        /* Voice Speech button in scorecard */
-        .eval-speech-btn {
-          background: #1e293b;
-          border: 1px solid #38bdf8;
-          color: #38bdf8;
-          border-radius: 10px;
-          padding: 6px 14px;
-          font-size: 12px;
-          font-weight: 800;
-          cursor: pointer;
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-        }
-        .eval-speech-btn:hover {
-          background: #0284c7;
-          color: #ffffff;
+        /* MOBILE SPECIFIC ZERO TEXT CLUTTER STYLING */
+        @media (max-width: 768px) {
+          .eval-inst-box { display: none !important; }
+          .eval-tray-label { display: none !important; }
+          .eval-map-stage-wrapper {
+            height: calc(100vh - 180px) !important;
+            height: calc(100dvh - 180px) !important;
+            min-height: 340px !important;
+            max-height: calc(100vh - 170px) !important;
+            border-radius: 8px !important;
+          }
+          .eval-places-tray {
+            padding: 2px 0 4px 0 !important;
+          }
+          .eval-place-pill {
+            padding: 4px 8px !important;
+          }
+          .pill-title {
+            font-size: 11px !important;
+          }
+          .eval-finish-btn {
+            padding: 10px 14px !important;
+            font-size: 13px !important;
+          }
         }
       `;
       document.head.appendChild(style);
@@ -971,15 +950,24 @@
         studentMarks: {}, // placeId -> { x, y, timestamp }
         isEvaluated: false,
         results: null,
-        zoom: 1.0,
+        // Pan and Zoom & Tap-to-Zoom State
+        scale: 1.0,
         panX: 0,
         panY: 0,
+        tapToZoomEnabled: true,
+        isDragging: false,
+        touchStartX: 0,
+        touchStartY: 0,
+        touchStartTime: 0,
+        hasMoved: false,
+        initialPinchDistance: 0,
+        initialPinchScale: 1.0,
         speechUtterance: null
       };
 
       this.instances[cId] = state;
       this.renderHTML(state);
-      this.bindEvents(state);
+      this.bindGestureEvents(state);
     },
 
     // -------------------------------------------------------------------------
@@ -992,28 +980,28 @@
       const totalPlaces = state.places.length;
 
       const svgMapHtml = state.mapType === 'world'
-        ? getBlankWorldSvgHtml(cId, isEm)
+        ? getBlankWorldSvgHtml(cId, isEm, qSet)
         : getBlankIndiaSvgHtml(cId, isEm);
 
       const html = `
         <div class="eval-map-container" id="${cId}_wrapper">
-          <!-- Top Instructions Banner -->
+          <!-- Top Instructions Banner (Desktop only) -->
           <div class="eval-inst-box">
             <div class="eval-inst-text">
-              <strong>${isEm ? '🎯 Practice Map Marking for Board Exam:' : '🎯 பொதுத்தேர்வு மாதிரி வரைபடப் பயிற்சி:'}</strong>
+              <strong>${isEm ? '&#127919; Practice Map Marking for Board Exam:' : '&#127919; பொதுத்தேர்வு மாதிரி வரைபடப் பயிற்சி:'}</strong>
               ${isEm 
-                ? '1. Select a place below &bull; 2. Tap on the blank map to mark &bull; 3. Click "Finish & Evaluate" to check marks!'
-                : '1. கீழேயுள்ள பட்டியில் இடத்தை தேர்வு செய்யவும் &bull; 2. வெற்று வரைபடத்தில் சரியான இடத்தில் தொடவும் &bull; 3. "Finish" அழுத்தி திருத்தவும்!'}
+                ? '1. Select place &bull; 2. Tap to zoom & mark &bull; 3. Click "Finish & Evaluate"!'
+                : '1. இடத்தை தேர்வு செய்யவும் &bull; 2. தட்டி பெரிதாக்கி குறிக்கவும் &bull; 3. Finish அழுத்தி திருத்தவும்!'}
             </div>
-            <div style="font-size:12px; font-weight:800; color:#38bdf8; background:rgba(56,189,248,0.15); padding:4px 10px; border-radius:8px;">
-              ${isEm ? `${state.maxMarks} Marks Map Question` : `${state.maxMarks} மதிப்பெண் வரைபடம்`}
+            <div style="font-size:11.5px; font-weight:800; color:#38bdf8; background:rgba(56,189,248,0.15); padding:3px 8px; border-radius:6px;">
+              ${isEm ? `${state.maxMarks} Marks Map` : `${state.maxMarks} மதிப்பெண் வரைபடம்`}
             </div>
           </div>
 
-          <!-- Places Selector Tray -->
+          <!-- Places Selector Tray (Sleek Horizontal Scroll Bar) -->
           <div>
             <div class="eval-tray-label">
-              <span>${isEm ? 'PLACES TO MARK (Tap a place, then tap on the map):' : 'குறிக்க வேண்டிய இடங்கள் (இடத்தை தேர்வு செய்து வரைபடத்தில் தொடவும்):'}</span>
+              <span>${isEm ? 'PLACES TO MARK:' : 'குறிக்க வேண்டிய இடங்கள்:'}</span>
               <span id="${cId}_activePlaceName" style="color:#38bdf8; font-weight:800;">
                 ${isEm ? state.places[0].nameEnglish : state.places[0].nameTamil}
               </span>
@@ -1029,7 +1017,7 @@
                        onclick="MapPracticeEvaluator.selectPlace('${cId}', ${idx})">
                     <span class="pill-badge">${p.numLabel || (idx + 1)}</span>
                     <span class="pill-title">${pName}</span>
-                    <span class="pill-status">${isMarked ? '✓' : '📍'}</span>
+                    <span class="pill-status">${isMarked ? '&#10003;' : '&#128205;'}</span>
                     ${isMarked ? `<button type="button" class="pill-clear-btn" title="${isEm ? 'Clear pin' : 'நீக்கு'}" onclick="event.stopPropagation(); MapPracticeEvaluator.clearPin('${cId}', '${p.id}')">&times;</button>` : ''}
                   </div>
                 `;
@@ -1041,18 +1029,27 @@
           <div class="eval-map-stage-wrapper" id="${cId}_stageWrapper">
             <!-- Floating Counter -->
             <div class="eval-marked-count-chip" id="${cId}_counterChip">
-              <span>📍</span>
+              <span>&#128205;</span>
               <span id="${cId}_markedCountText">
                 ${isEm ? `0 / ${totalPlaces} Places Marked` : `0 / ${totalPlaces} இடங்கள் குறிக்கப்பட்டுள்ளன`}
               </span>
             </div>
 
-            <!-- Floating Map Toolbar -->
+            <!-- Floating Map Toolbar (Vertical on Right Edge) -->
             <div class="eval-map-toolbar">
-              <button type="button" class="eval-tool-btn" onclick="MapPracticeEvaluator.zoom('${cId}', 1.25)" title="${isEm ? 'Zoom In' : 'பெரிதாக்கு'}">➕</button>
-              <button type="button" class="eval-tool-btn" onclick="MapPracticeEvaluator.zoom('${cId}', 0.8)" title="${isEm ? 'Zoom Out' : 'சிறிதாக்கு'}">➖</button>
-              <button type="button" class="eval-tool-btn" onclick="MapPracticeEvaluator.resetZoom('${cId}')" title="${isEm ? 'Reset View' : 'இயல்பு நிலை'}">⟲</button>
-              <button type="button" class="eval-tool-btn" onclick="MapPracticeEvaluator.clearAllPins('${cId}')" title="${isEm ? 'Clear All Pins' : 'அனைத்தையும் அழி'}">🗑️</button>
+              <button type="button" class="eval-tool-btn" onclick="MapPracticeEvaluator.zoomStep('${cId}', 1)" title="${isEm ? 'Zoom In' : 'பெரிதாக்கு'}">+</button>
+              <button type="button" class="eval-tool-btn" onclick="MapPracticeEvaluator.zoomStep('${cId}', -1)" title="${isEm ? 'Zoom Out' : 'சிறிதாக்கு'}">&minus;</button>
+              <button type="button" class="eval-tool-btn ${state.tapToZoomEnabled ? 'active' : ''}" id="${cId}_btnTapZoom" onclick="MapPracticeEvaluator.toggleTapToZoom('${cId}')" title="${isEm ? 'Tap to Zoom Mode' : 'தட்டி பெரிதாக்கும் வசதி'}">&#127919;</button>
+              <button type="button" class="eval-tool-btn" onclick="MapPracticeEvaluator.resetView('${cId}')" title="${isEm ? 'Reset View' : 'இயல்பு நிலை'}">&#8635;</button>
+              <button type="button" class="eval-tool-btn" onclick="MapPracticeEvaluator.clearActivePin('${cId}')" title="${isEm ? 'Clear Pin' : 'குறி அழி'}">&#128465;</button>
+              ${qSet.officialImage ? `
+                <button type="button" class="eval-tool-btn" style="background:rgba(2,132,199,0.3); border-color:#0284c7; color:#38bdf8;" onclick="MapPracticeEvaluator.showOfficialImagePopup('${cId}')" title="${isEm ? 'View Official Board Map' : 'அதிகாரப்பூர்வ மாதிரி வரைபடம்'}">&#128065;</button>
+              ` : ''}
+            </div>
+
+            <!-- Mobile Gesture Hint (Auto fade) -->
+            <div class="eval-tap-zoom-hint" id="${cId}_gestureHint">
+              ${isEm ? '&#128070; Tap to zoom & mark &bull; Drag to pan map' : '&#128070; தட்டினால் பெரிதாகும் &bull; நகர்த்த விரலால் இழுக்கவும்'}
             </div>
 
             <!-- Vector Blank Map SVG -->
@@ -1062,9 +1059,9 @@
           <!-- Finish Button Bar -->
           <div class="eval-action-bar" id="${cId}_actionBar">
             <button type="button" class="eval-finish-btn" id="${cId}_btnFinish" onclick="MapPracticeEvaluator.finishAndEvaluate('${cId}')">
-              <span>🏁</span>
+              <span>&#127937;</span>
               <span>${isEm ? 'Finish & Evaluate Map (Check Marks)' : 'விடை வரைபடத்தை சமர்ப்பித்து திருத்து (Evaluate)'}</span>
-              <span>➔</span>
+              <span>&#10148;</span>
             </button>
           </div>
 
@@ -1077,35 +1074,233 @@
     },
 
     // -------------------------------------------------------------------------
-    // BIND EVENT LISTENERS (Clicks & Touches on SVG Blank Map)
+    // GESTURES: TOUCH PAN, PINCH ZOOM, TAP-TO-ZOOM, CLICK-TO-MARK
     // -------------------------------------------------------------------------
-    bindEvents(state) {
+    bindGestureEvents(state) {
       const cId = state.containerId;
+      const wrapper = document.getElementById(`${cId}_stageWrapper`);
       const svg = document.getElementById(`${cId}_svgMap`);
-      if (!svg) return;
+      if (!wrapper || !svg) return;
 
-      const handleMapTap = (evt) => {
-        if (state.isEvaluated) return; // locked after evaluation until retry
+      const group = document.getElementById(`${cId}_panZoomGroup`);
 
-        evt.preventDefault();
-        const pt = svg.createSVGPoint();
-        if (evt.touches && evt.touches.length > 0) {
-          pt.x = evt.touches[0].clientX;
-          pt.y = evt.touches[0].clientY;
-        } else {
-          pt.x = evt.clientX;
-          pt.y = evt.clientY;
-        }
-
-        const svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
-        const svgX = Math.round(svgP.x);
-        const svgY = Math.round(svgP.y);
-
-        this.markCurrentPlace(cId, svgX, svgY);
+      // Apply transform updates
+      const updateTransform = () => {
+        if (!group) return;
+        group.setAttribute('transform', `translate(${state.panX}, ${state.panY}) scale(${state.scale})`);
       };
 
-      svg.addEventListener('click', handleMapTap);
-      svg.addEventListener('touchstart', handleMapTap, { passive: false });
+      // Convert Screen Point to SVG Point inside the transformed group
+      const getSvgGroupPoint = (clientX, clientY) => {
+        const pt = svg.createSVGPoint();
+        pt.x = clientX;
+        pt.y = clientY;
+        const screenCTM = group ? group.getScreenCTM() : svg.getScreenCTM();
+        if (!screenCTM) return { x: clientX, y: clientY };
+        const svgP = pt.matrixTransform(screenCTM.inverse());
+        return { x: Math.round(svgP.x), y: Math.round(svgP.y) };
+      };
+
+      // --- MOUSE EVENTS ---
+      let isMouseDown = false;
+      let startMouseX = 0, startMouseY = 0;
+      let mouseMoved = false;
+
+      wrapper.addEventListener('mousedown', (e) => {
+        if (state.isEvaluated) return;
+        isMouseDown = true;
+        startMouseX = e.clientX;
+        startMouseY = e.clientY;
+        mouseMoved = false;
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) return;
+        const dx = e.clientX - startMouseX;
+        const dy = e.clientY - startMouseY;
+        if (Math.hypot(dx, dy) > 6) {
+          mouseMoved = true;
+          state.panX += dx;
+          state.panY += dy;
+          startMouseX = e.clientX;
+          startMouseY = e.clientY;
+          updateTransform();
+        }
+      });
+
+      window.addEventListener('mouseup', (e) => {
+        if (!isMouseDown) return;
+        isMouseDown = false;
+        if (!mouseMoved && e.target && (e.target.closest(`#${cId}_stageWrapper`))) {
+          // It was a clean click!
+          handleTapOrClick(e.clientX, e.clientY);
+        }
+      });
+
+      // Mouse Wheel Zoom
+      wrapper.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const zoomDelta = e.deltaY < 0 ? 1.15 : 0.85;
+        this.zoomAtPoint(cId, zoomDelta, e.clientX, e.clientY);
+      }, { passive: false });
+
+      // --- TOUCH EVENTS ---
+      const getTouchDistance = (t1, t2) => Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+
+      wrapper.addEventListener('touchstart', (e) => {
+        if (state.isEvaluated) return;
+
+        if (e.touches.length === 1) {
+          state.touchStartX = e.touches[0].clientX;
+          state.touchStartY = e.touches[0].clientY;
+          state.touchStartTime = Date.now();
+          state.hasMoved = false;
+          state.isDragging = true;
+        } else if (e.touches.length === 2) {
+          state.isDragging = false;
+          state.initialPinchDistance = getTouchDistance(e.touches[0], e.touches[1]);
+          state.initialPinchScale = state.scale;
+        }
+      }, { passive: true });
+
+      wrapper.addEventListener('touchmove', (e) => {
+        if (state.isEvaluated) return;
+
+        if (e.touches.length === 1 && state.isDragging) {
+          const dx = e.touches[0].clientX - state.touchStartX;
+          const dy = e.touches[0].clientY - state.touchStartY;
+
+          if (Math.hypot(dx, dy) > 8) {
+            state.hasMoved = true;
+            // Prevent page scrolling while dragging map
+            if (e.cancelable) e.preventDefault();
+            state.panX += dx;
+            state.panY += dy;
+            state.touchStartX = e.touches[0].clientX;
+            state.touchStartY = e.touches[0].clientY;
+            updateTransform();
+          }
+        } else if (e.touches.length === 2 && state.initialPinchDistance > 0) {
+          if (e.cancelable) e.preventDefault();
+          const currentDistance = getTouchDistance(e.touches[0], e.touches[1]);
+          const ratio = currentDistance / state.initialPinchDistance;
+          let newScale = state.initialPinchScale * ratio;
+          newScale = Math.max(1.0, Math.min(newScale, 4.0));
+          state.scale = newScale;
+          updateTransform();
+        }
+      }, { passive: false });
+
+      wrapper.addEventListener('touchend', (e) => {
+        if (state.isEvaluated) return;
+
+        if (!state.hasMoved && (Date.now() - state.touchStartTime) < 350) {
+          // Clean tap on touch device!
+          handleTapOrClick(state.touchStartX, state.touchStartY);
+        }
+        state.isDragging = false;
+        state.initialPinchDistance = 0;
+      }, { passive: true });
+
+      // Core Tap/Click Logic
+      const handleTapOrClick = (clientX, clientY) => {
+        // If Tap-to-Zoom is enabled and map is currently at 1.0x normal view:
+        if (state.tapToZoomEnabled && state.scale <= 1.05) {
+          // Zoom in 2.2x centered at the tapped spot
+          const rect = wrapper.getBoundingClientRect();
+          const tapX = clientX - rect.left;
+          const tapY = clientY - rect.top;
+
+          state.scale = 2.2;
+          state.panX = (rect.width / 2) - (tapX * state.scale);
+          state.panY = (rect.height / 2) - (tapY * state.scale);
+          updateTransform();
+
+          const hint = document.getElementById(`${cId}_gestureHint`);
+          if (hint) {
+            hint.innerHTML = state.isEm 
+              ? '&#128269; Zoomed in! Now tap to place your pin accurately.'
+              : '&#128269; பெரிதாக்கப்பட்டது! இப்போது இடத்தை தொட்டு துல்லியமாகக் குறிக்கவும்.';
+            hint.style.animation = 'none';
+            hint.style.opacity = '1';
+          }
+          return;
+        }
+
+        // Already zoomed in or tap-to-zoom is off: Mark the place pin!
+        const p = getSvgGroupPoint(clientX, clientY);
+        this.markCurrentPlace(cId, p.x, p.y);
+      };
+    },
+
+    // -------------------------------------------------------------------------
+    // ZOOM CONTROLS
+    // -------------------------------------------------------------------------
+    zoomStep(cId, dir) {
+      const state = this.instances[cId];
+      if (!state) return;
+      const factor = dir > 0 ? 1.35 : 0.75;
+      const newScale = Math.max(1.0, Math.min(state.scale * factor, 4.0));
+      state.scale = newScale;
+      if (state.scale === 1.0) {
+        state.panX = 0;
+        state.panY = 0;
+      }
+      this.applyTransform(cId);
+    },
+
+    zoomAtPoint(cId, factor, clientX, clientY) {
+      const state = this.instances[cId];
+      if (!state) return;
+      const wrapper = document.getElementById(`${cId}_stageWrapper`);
+      if (!wrapper) return;
+      const rect = wrapper.getBoundingClientRect();
+
+      const mouseX = clientX - rect.left;
+      const mouseY = clientY - rect.top;
+
+      const newScale = Math.max(1.0, Math.min(state.scale * factor, 4.0));
+      const scaleRatio = newScale / state.scale;
+
+      state.panX = mouseX - (mouseX - state.panX) * scaleRatio;
+      state.panY = mouseY - (mouseY - state.panY) * scaleRatio;
+      state.scale = newScale;
+
+      this.applyTransform(cId);
+    },
+
+    resetView(cId) {
+      const state = this.instances[cId];
+      if (!state) return;
+      state.scale = 1.0;
+      state.panX = 0;
+      state.panY = 0;
+      this.applyTransform(cId);
+    },
+
+    toggleTapToZoom(cId) {
+      const state = this.instances[cId];
+      if (!state) return;
+      state.tapToZoomEnabled = !state.tapToZoomEnabled;
+      const btn = document.getElementById(`${cId}_btnTapZoom`);
+      if (btn) btn.classList.toggle('active', state.tapToZoomEnabled);
+      const hint = document.getElementById(`${cId}_gestureHint`);
+      if (hint) {
+        hint.innerHTML = state.tapToZoomEnabled
+          ? (state.isEm ? '&#127919; Tap-to-Zoom Mode: ON' : '&#127919; தட்டி பெரிதாக்கும் வசதி: ஆன்')
+          : (state.isEm ? '&#128205; Direct Pin Mode: ON' : '&#128205; நேரடிக் குறி வசதி: ஆன்');
+        hint.style.animation = 'none';
+        hint.style.opacity = '1';
+      }
+    },
+
+    applyTransform(cId) {
+      const state = this.instances[cId];
+      if (!state) return;
+      const group = document.getElementById(`${cId}_panZoomGroup`);
+      if (group) {
+        group.setAttribute('transform', `translate(${state.panX}, ${state.panY}) scale(${state.scale})`);
+      }
     },
 
     // -------------------------------------------------------------------------
@@ -1120,15 +1315,12 @@
       const isEm = state.isEm;
 
       // Update pills UI
-      const tray = document.getElementById(`${cId}_placesTray`);
-      if (tray) {
-        state.places.forEach((p, idx) => {
-          const pill = document.getElementById(`${cId}_pill_${p.id}`);
-          if (pill) {
-            pill.classList.toggle('active', idx === placeIdx);
-          }
-        });
-      }
+      state.places.forEach((p, idx) => {
+        const pill = document.getElementById(`${cId}_pill_${p.id}`);
+        if (pill) {
+          pill.classList.toggle('active', idx === placeIdx);
+        }
+      });
 
       // Update active title
       const titleEl = document.getElementById(`${cId}_activePlaceName`);
@@ -1154,7 +1346,7 @@
         timestamp: Date.now()
       };
 
-      // Render pin on SVG
+      // Render pins on SVG
       this.renderStudentPins(cId);
 
       // Update pill status
@@ -1164,7 +1356,7 @@
         pill.innerHTML = `
           <span class="pill-badge">${curPlace.numLabel || (state.selectedPlaceIndex + 1)}</span>
           <span class="pill-title">${state.isEm ? curPlace.nameEnglish : curPlace.nameTamil}</span>
-          <span class="pill-status">✓</span>
+          <span class="pill-status">&#10003;</span>
           <button type="button" class="pill-clear-btn" title="${state.isEm ? 'Clear pin' : 'நீக்கு'}" onclick="event.stopPropagation(); MapPracticeEvaluator.clearPin('${cId}', '${curPlace.id}')">&times;</button>
         `;
       }
@@ -1185,7 +1377,7 @@
     },
 
     // -------------------------------------------------------------------------
-    // RENDER ALL STUDENT PINS ON MAP
+    // RENDER STUDENT PINS ON MAP
     // -------------------------------------------------------------------------
     renderStudentPins(cId) {
       const state = this.instances[cId];
@@ -1194,55 +1386,31 @@
       const layer = document.getElementById(`${cId}_studentPinsLayer`);
       if (!layer) return;
 
-      const isEm = state.isEm;
       let pinsSvg = '';
 
       state.places.forEach((p, idx) => {
         const mark = state.studentMarks[p.id];
         if (!mark) return;
 
-        const pName = isEm ? p.nameEnglish : p.nameTamil;
-        const numLabel = p.numLabel || `(${idx + 1})`;
+        const pName = state.isEm ? p.nameEnglish : p.nameTamil;
+        const numLabel = p.numLabel || (idx + 1);
 
-        // Determine pin colors based on evaluation state
-        let pinFill = "#0284c7";
-        let pinStroke = "#38bdf8";
-        let statusBadge = "";
-
-        if (state.isEvaluated && state.results && state.results.details[p.id]) {
-          const res = state.results.details[p.id];
-          if (res.status === 'exact') {
-            pinFill = "#059669";
-            pinStroke = "#10b981";
-            statusBadge = "✓";
-          } else if (res.status === 'near') {
-            pinFill = "#d97706";
-            pinStroke = "#f59e0b";
-            statusBadge = "~";
-          } else {
-            pinFill = "#dc2626";
-            pinStroke = "#ef4444";
-            statusBadge = "✗";
+        // Before evaluation: blue pins. After evaluation: colored pins (green/yellow/red).
+        let pinColor = '#38bdf8';
+        if (state.isEvaluated && state.results) {
+          const res = state.results.itemScores[p.id];
+          if (res) {
+            pinColor = res.grade === 'exact' ? '#10b981' : (res.grade === 'near' ? '#f59e0b' : '#ef4444');
           }
         }
 
-        const labelWidth = Math.min(220, Math.max(90, pName.length * 8.5 + 40));
-
         pinsSvg += `
-          <g id="${cId}_pinG_${p.id}" class="student-pin-group pin-drop-anim" transform="translate(${mark.x}, ${mark.y})" 
-             style="cursor:pointer;" onclick="event.stopPropagation(); MapPracticeEvaluator.selectPlace('${cId}', ${idx})">
-            <!-- Pulsing ripple ring -->
-            <circle cx="0" cy="0" r="16" fill="none" stroke="${pinStroke}" stroke-width="1.8" class="pin-pulse-ring" />
-            <!-- Pin Body -->
-            <circle cx="0" cy="0" r="9" fill="${pinFill}" stroke="#ffffff" stroke-width="2" filter="drop-shadow(0 2px 5px rgba(0,0,0,0.8))" />
-            <!-- Number inside pin -->
-            <text x="0" y="3.5" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="900">${numLabel}</text>
-            
-            <!-- Label Capsule -->
-            <g transform="translate(14, -14)">
-              <rect x="0" y="0" width="${labelWidth}" height="26" rx="6" fill="#0f172a" stroke="${pinStroke}" stroke-width="1.2" opacity="0.94" filter="drop-shadow(0 2px 6px rgba(0,0,0,0.8))"/>
-              <text x="8" y="17" fill="#f8fafc" font-size="11.5" font-weight="800">${pName} ${statusBadge}</text>
-            </g>
+          <g id="${cId}_pin_${p.id}" transform="translate(${mark.x}, ${mark.y})" class="pin-drop-anim">
+            <circle cx="0" cy="0" r="14" fill="${pinColor}" opacity="0.25" class="pin-pulse-ring" />
+            <circle cx="0" cy="0" r="7" fill="${pinColor}" stroke="#ffffff" stroke-width="2" />
+            <rect x="10" y="-12" width="${pName.length * 7.5 + 24}" height="20" rx="4" fill="rgba(15,23,42,0.92)" stroke="${pinColor}" stroke-width="1.2" />
+            <text x="14" y="2" fill="${pinColor}" font-size="10.5" font-weight="900">${numLabel}</text>
+            <text x="32" y="2" fill="#ffffff" font-size="10" font-weight="700">${pName}</text>
           </g>
         `;
       });
@@ -1251,66 +1419,36 @@
     },
 
     // -------------------------------------------------------------------------
-    // CLEAR SINGLE PIN OR ALL PINS
+    // CLEAR PIN FOR SPECIFIC PLACE
     // -------------------------------------------------------------------------
     clearPin(cId, placeId) {
       const state = this.instances[cId];
-      if (!state) return;
+      if (!state || state.isEvaluated) return;
 
       delete state.studentMarks[placeId];
       this.renderStudentPins(cId);
 
-      const placeIdx = state.places.findIndex(p => p.id === placeId);
-      if (placeIdx !== -1) {
-        const p = state.places[placeIdx];
-        const pill = document.getElementById(`${cId}_pill_${p.id}`);
+      const pIdx = state.places.findIndex(p => p.id === placeId);
+      if (pIdx !== -1) {
+        const p = state.places[pIdx];
+        const pill = document.getElementById(`${cId}_pill_${placeId}`);
         if (pill) {
           pill.classList.remove('marked');
           pill.innerHTML = `
-            <span class="pill-badge">${p.numLabel || (placeIdx + 1)}</span>
+            <span class="pill-badge">${p.numLabel || (pIdx + 1)}</span>
             <span class="pill-title">${state.isEm ? p.nameEnglish : p.nameTamil}</span>
-            <span class="pill-status">📍</span>
+            <span class="pill-status">&#128205;</span>
           `;
         }
       }
-
       this.updateCounter(cId);
     },
 
-    clearAllPins(cId) {
+    clearActivePin(cId) {
       const state = this.instances[cId];
       if (!state) return;
-
-      state.studentMarks = {};
-      state.isEvaluated = false;
-      state.results = null;
-
-      // Hide results
-      const resArea = document.getElementById(`${cId}_resultArea`);
-      if (resArea) resArea.style.display = 'none';
-
-      // Hide target & offset layers
-      const targetLayer = document.getElementById(`${cId}_targetAnswerLayer`);
-      if (targetLayer) targetLayer.innerHTML = '';
-      const offsetLayer = document.getElementById(`${cId}_offsetLinesLayer`);
-      if (offsetLayer) offsetLayer.innerHTML = '';
-
-      this.renderStudentPins(cId);
-
-      state.places.forEach((p, idx) => {
-        const pill = document.getElementById(`${cId}_pill_${p.id}`);
-        if (pill) {
-          pill.classList.remove('marked');
-          pill.innerHTML = `
-            <span class="pill-badge">${p.numLabel || (idx + 1)}</span>
-            <span class="pill-title">${state.isEm ? p.nameEnglish : p.nameTamil}</span>
-            <span class="pill-status">📍</span>
-          `;
-        }
-      });
-
-      this.selectPlace(cId, 0);
-      this.updateCounter(cId);
+      const curPlace = state.places[state.selectedPlaceIndex];
+      if (curPlace) this.clearPin(cId, curPlace.id);
     },
 
     updateCounter(cId) {
@@ -1321,306 +1459,224 @@
       const total = state.places.length;
       const textEl = document.getElementById(`${cId}_markedCountText`);
       if (textEl) {
-        textEl.textContent = state.isEm
+        textEl.textContent = state.isEm 
           ? `${markedCount} / ${total} Places Marked`
           : `${markedCount} / ${total} இடங்கள் குறிக்கப்பட்டுள்ளன`;
       }
     },
 
     // -------------------------------------------------------------------------
-    // ZOOM & PAN CONTROLS
-    // -------------------------------------------------------------------------
-    zoom(cId, factor) {
-      const state = this.instances[cId];
-      if (!state) return;
-      state.zoom = Math.max(0.7, Math.min(3.5, state.zoom * factor));
-      this.applyTransform(state);
-    },
-
-    resetZoom(cId) {
-      const state = this.instances[cId];
-      if (!state) return;
-      state.zoom = 1.0;
-      state.panX = 0;
-      state.panY = 0;
-      this.applyTransform(state);
-    },
-
-    applyTransform(state) {
-      const grp = document.getElementById(`${state.containerId}_panZoomGroup`);
-      if (grp) {
-        grp.setAttribute('transform', `translate(${state.panX}, ${state.panY}) scale(${state.zoom})`);
-      }
-    },
-
-    // -------------------------------------------------------------------------
-    // 4. FINISH BUTTON CLICK -> INSTANT EVALUATION & ACCURACY SCORING
+    // FINISH AND EVALUATE (INSTANT ACCURACY SCORING & EXAMINER TIPS)
     // -------------------------------------------------------------------------
     finishAndEvaluate(cId) {
       const state = this.instances[cId];
       if (!state) return;
 
       const markedCount = Object.keys(state.studentMarks).length;
-      const totalPlaces = state.places.length;
-      const isEm = state.isEm;
-
       if (markedCount === 0) {
-        const btn = document.getElementById(`${cId}_btnFinish`);
-        if (btn) {
-          const orig = btn.innerHTML;
-          btn.innerHTML = `<span>⚠️</span> <span>${isEm ? 'Tap map to mark a place first!' : 'வரைபடத்தில் ஒரு இடத்தையாவது குறிக்கவும்!'}</span>`;
-          setTimeout(() => { if (btn) btn.innerHTML = orig; }, 2200);
+        const hint = document.getElementById(`${cId}_gestureHint`);
+        if (hint) {
+          hint.innerHTML = state.isEm
+            ? '⚠️ Please mark at least 1 place on the map before evaluating.'
+            : '⚠️ மதிப்பீடு செய்ய குறைந்தபட்சம் 1 இடத்தையாவது வரைபடத்தில் குறிக்கவும்.';
+          hint.style.animation = 'none';
+          hint.style.opacity = '1';
         }
         return;
       }
+
       state.isEvaluated = true;
 
-      // Grade every place
-      let totalEarned = 0;
-      const details = {};
-
-      state.places.forEach((place) => {
-        const mark = state.studentMarks[place.id];
-        const target = place.coords;
-        const tolerance = place.tolerance || 45;
-
-        if (!mark) {
-          details[place.id] = {
-            place: place,
-            status: 'missed',
-            score: 0,
-            dist: null,
-            label: isEm ? 'Not Marked (0 Marks)' : 'குறிக்கப்படவில்லை (0 மதிப்பெண்)'
-          };
-          return;
-        }
-
-        // Euclidean distance in SVG viewBox units
-        const dx = mark.x - target.x;
-        const dy = mark.y - target.y;
-        const dist = Math.round(Math.sqrt(dx * dx + dy * dy));
-
-        let status = 'inaccurate';
-        let score = 0;
-        let label = isEm ? 'Inaccurate (0 Marks)' : 'இடம் தவறியது (0 மதிப்பெண்)';
-
-        if (dist <= tolerance) {
-          status = 'exact';
-          score = 1.0;
-          label = isEm ? 'Exact! Full Mark (1.0 Mark)' : 'துல்லியமானது! முழு மதிப்பெண் (1.0)';
-        } else if (dist <= tolerance * 1.85) {
-          status = 'near';
-          score = 0.5;
-          label = isEm ? 'Good Attempt / Near (0.5 Mark)' : 'அருகில் / நல்ல முயற்சி (0.5)';
-        } else {
-          status = 'inaccurate';
-          score = 0;
-          label = isEm ? 'Needs Practice (0 Marks)' : 'தவறான இடம் (0 மதிப்பெண்)';
-        }
-
-        totalEarned += score;
-        details[place.id] = {
-          place: place,
-          status: status,
-          score: score,
-          dist: dist,
-          label: label
-        };
-      });
-
-      // Normalize total marks
-      const maxMarks = state.maxMarks || totalPlaces;
-      const finalScore = Math.min(maxMarks, (totalEarned / totalPlaces) * maxMarks);
-      const percentage = Math.round((finalScore / maxMarks) * 100);
-
-      state.results = {
-        totalEarned: finalScore,
-        maxMarks: maxMarks,
-        percentage: percentage,
-        details: details
-      };
-
-      // 1. Re-render student pins with colored status badges (Green/Amber/Red)
-      this.renderStudentPins(cId);
-
-      // 2. Render Official Target Answer Key & Offset Indicators on SVG
-      this.renderAnswerKeyOverlay(cId);
-
-      // 3. Render Diagnostic Scorecard Table below map
-      this.renderScorecard(cId);
-
-      // 4. Voice Evaluation Speech
-      this.speakEvaluation(cId);
-    },
-
-    // -------------------------------------------------------------------------
-    // RENDER OFFICIAL TARGET ANSWER KEY ON SVG MAP
-    // -------------------------------------------------------------------------
-    renderAnswerKeyOverlay(cId) {
-      const state = this.instances[cId];
-      if (!state || !state.results) return;
-
+      // Calculate euclidean distance metrics
+      let totalScore = 0;
+      const itemScores = {};
       const targetLayer = document.getElementById(`${cId}_targetAnswerLayer`);
       const offsetLayer = document.getElementById(`${cId}_offsetLinesLayer`);
-      if (!targetLayer || !offsetLayer) return;
 
-      const isEm = state.isEm;
-      let targetSvg = '';
-      let offsetSvg = '';
+      let targetKeySvg = '';
+      let offsetLinesSvg = '';
 
       state.places.forEach((p, idx) => {
         const mark = state.studentMarks[p.id];
         const target = p.coords;
-        const res = state.results.details[p.id];
-        const pName = isEm ? p.nameEnglish : p.nameTamil;
+        const tolerance = p.tolerance || 45;
 
-        // Target Golden Star Pin
-        targetSvg += `
-          <g id="${cId}_targetPin_${p.id}" class="target-pin-group" transform="translate(${target.x}, ${target.y})">
-            <!-- Glowing target halo -->
-            <circle cx="0" cy="0" r="18" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.6" stroke-dasharray="3,3" />
-            <!-- Star background -->
-            <circle cx="0" cy="0" r="11" fill="#f59e0b" stroke="#ffffff" stroke-width="2" filter="drop-shadow(0 2px 8px rgba(245,158,11,0.6))" />
-            <!-- Star icon -->
-            <text x="0" y="4.5" text-anchor="middle" fill="#000000" font-size="12" font-weight="900">★</text>
-            <!-- Official Answer Key Label -->
-            <g transform="translate(16, 16)">
-              <rect x="0" y="0" width="${Math.min(220, Math.max(90, pName.length * 8.5 + 40))}" height="24" rx="6" fill="#071322" stroke="#f59e0b" stroke-width="1.3" opacity="0.95" />
-              <text x="8" y="16" fill="#fbbf24" font-size="11" font-weight="900">★ ${pName}</text>
-            </g>
-          </g>
-        `;
+        let distance = null;
+        let grade = 'unmarked';
+        let earnedMark = 0;
 
-        // If marked, draw dashed connecting offset line
         if (mark) {
-          const lineColor = res.status === 'exact' ? '#10b981' : (res.status === 'near' ? '#f59e0b' : '#ef4444');
-          offsetSvg += `
-            <g id="${cId}_guide_${p.id}">
-              <line x1="${mark.x}" y1="${mark.y}" x2="${target.x}" y2="${target.y}" 
-                    stroke="${lineColor}" stroke-width="2" stroke-dasharray="4,4" opacity="0.8" />
-              <!-- Midpoint distance pill -->
-              <circle cx="${(mark.x + target.x) / 2}" cy="${(mark.y + target.y) / 2}" r="3" fill="${lineColor}" />
-            </g>
-          `;
-        } else {
-          // Missed indicator pulse
-          targetSvg += `
-            <circle cx="${target.x}" cy="${target.y}" r="26" fill="rgba(239, 68, 68, 0.25)" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4" />
+          distance = Math.round(Math.hypot(mark.x - target.x, mark.y - target.y));
+
+          if (distance <= tolerance) {
+            grade = 'exact';
+            earnedMark = 1.0;
+          } else if (distance <= tolerance * 1.8) {
+            grade = 'near';
+            earnedMark = 0.5;
+          } else {
+            grade = 'inaccurate';
+            earnedMark = 0.0;
+          }
+
+          // Offset dashed line
+          offsetLinesSvg += `
+            <line x1="${mark.x}" y1="${mark.y}" x2="${target.x}" y2="${target.y}" 
+                  stroke="${grade === 'exact' ? '#10b981' : (grade === 'near' ? '#f59e0b' : '#ef4444')}" 
+                  stroke-width="2" stroke-dasharray="4,4" opacity="0.85" />
           `;
         }
+
+        totalScore += earnedMark;
+
+        itemScores[p.id] = {
+          place: p,
+          mark: mark,
+          target: target,
+          distance: distance,
+          grade: grade,
+          earnedMark: earnedMark
+        };
+
+        // Answer Key Golden Star
+        const pName = state.isEm ? p.nameEnglish : p.nameTamil;
+        targetKeySvg += `
+          <g transform="translate(${target.x}, ${target.y})">
+            <circle cx="0" cy="0" r="14" fill="#f59e0b" opacity="0.3" class="pin-pulse-ring" />
+            <polygon points="0,-10 3,-3 10,-3 5,2 7,9 0,5 -7,9 -5,2 -10,-3 -3,-3" fill="#fbbf24" stroke="#ffffff" stroke-width="1.2" />
+            <rect x="12" y="-10" width="${pName.length * 7.5 + 20}" height="18" rx="4" fill="rgba(15,23,42,0.92)" stroke="#fbbf24" stroke-width="1" />
+            <text x="16" y="3" fill="#fbbf24" font-size="10" font-weight="900">&#9733; ${pName}</text>
+          </g>
+        `;
       });
 
-      targetLayer.innerHTML = targetSvg;
-      offsetLayer.innerHTML = offsetSvg;
+      if (targetLayer) targetLayer.innerHTML = targetKeySvg;
+      if (offsetLayer) offsetLayer.innerHTML = offsetLinesSvg;
+
+      // Update student pins with color rings
+      this.renderStudentPins(cId);
+
+      state.results = {
+        totalScore: totalScore,
+        maxMarks: state.maxMarks,
+        percentage: Math.round((totalScore / state.maxMarks) * 100),
+        itemScores: itemScores
+      };
+
+      // Render Scorecard and Diagnostics
+      this.renderScorecard(state);
+
+      // Hide finish button, show Practice Again
+      const finishBtn = document.getElementById(`${cId}_btnFinish`);
+      if (finishBtn) {
+        finishBtn.innerHTML = `<span>&#10003;</span> <span>${state.isEm ? 'Evaluated! See Scorecard Below' : 'மதிப்பிடப்பட்டது! கீழே முடிவுகளைப் பார்க்கவும்'}</span>`;
+        finishBtn.style.background = '#334155';
+        finishBtn.disabled = true;
+      }
     },
 
     // -------------------------------------------------------------------------
-    // RENDER DIAGNOSTIC SCORECARD & EXAMINER FEEDBACK
+    // RENDER SCORECARD & EXAMINER LANDMARK TIPS
     // -------------------------------------------------------------------------
-    renderScorecard(cId) {
-      const state = this.instances[cId];
-      if (!state || !state.results) return;
-
+    renderScorecard(state) {
+      const cId = state.containerId;
+      const isEm = state.isEm;
+      const res = state.results;
       const resArea = document.getElementById(`${cId}_resultArea`);
       if (!resArea) return;
 
-      const res = state.results;
-      const isEm = state.isEm;
+      const isCentum = res.totalScore === state.maxMarks;
+      const isGood = res.percentage >= 60;
 
-      let gradeTitle = "";
-      let gradeClass = "";
-      if (res.percentage >= 90) {
-        gradeTitle = isEm ? "🏆 Centum Master! Outstanding Accuracy" : "🏆 முழு மதிப்பெண் சாதனை! அற்புதம்";
-        gradeClass = "grade-centum";
-      } else if (res.percentage >= 70) {
-        gradeTitle = isEm ? "🌟 Excellent! High Scoring Map Precision" : "🌟 மிக நன்று! அதிக மதிப்பெண் பெறும் துல்லியம்";
-        gradeClass = "grade-good";
-      } else {
-        gradeTitle = isEm ? "📚 Good Effort! Revise tips below for 8/8" : "📚 நல்ல முயற்சி! 8/8 பெற குறிப்புகளைப் படித்து மீண்டும் முயலவும்";
-        gradeClass = "grade-practice";
-      }
+      const gradeClass = isCentum ? 'grade-centum' : (isGood ? 'grade-good' : 'grade-practice');
+      const gradeText = isCentum
+        ? (isEm ? '&#127942; Outstanding! 100% Centum Accuracy' : '&#127942; அற்புதம்! 100% முழு மதிப்பெண்')
+        : (isGood
+          ? (isEm ? '&#128218; Good Effort! Revise tips below for 8/8' : '&#128218; நல்ல முயற்சி! 8/8 பெற குறிப்புகளைப் படித்து மீண்டும் முயலவும்')
+          : (isEm ? '&#127919; Needs Practice! Follow examiner tips below' : '&#127919; கூடுதல் பயிற்சி தேவை! அரசுத் தேர்வு குறிப்புகளைப் பின்பற்றவும்'));
 
       const html = `
         <div class="eval-scorecard-wrap">
-          <!-- Hero Score Banner -->
           <div class="eval-score-hero">
             <div>
-              <div style="font-size:12px; font-weight:800; color:#94a3b8; text-transform:uppercase;">
+              <div style="font-size:11px; font-weight:800; color:#94a3b8; text-transform:uppercase; margin-bottom:4px;">
                 ${isEm ? 'BOARD EXAM EVALUATION RESULT' : 'அரசுப் பொதுத்தேர்வு விடை மதிப்பீட்டு முடிவு'}
               </div>
               <div class="eval-score-num-box">
-                <span class="eval-score-badge">${res.totalEarned.toFixed(1)} / ${res.maxMarks}</span>
-                <span style="font-size:16px; color:#cbd5e1; font-weight:800;">(${res.percentage}%)</span>
-                <span class="eval-grade-pill ${gradeClass}">${gradeTitle}</span>
+                <span class="eval-score-badge">${res.totalScore.toFixed(1)} / ${state.maxMarks}</span>
+                <span style="font-size:16px; color:#94a3b8; font-weight:700;">(${res.percentage}%)</span>
+                <span class="eval-grade-pill ${gradeClass}">${gradeText}</span>
               </div>
             </div>
 
-            <div style="display:flex; align-items:center; gap:8px;">
-              <button type="button" class="eval-speech-btn" onclick="MapPracticeEvaluator.replayVoice('${cId}')">
-                <span>🔊</span> <span>${isEm ? 'Hear Feedback' : 'மதிப்பீட்டைக் கேள்'}</span>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <button type="button" class="eval-tool-btn" style="background:#0284c7; color:#fff;" onclick="MapPracticeEvaluator.speakFeedback('${cId}')">
+                <span>&#128266;</span> <span>${isEm ? 'Hear Feedback' : 'மதிப்பீட்டைக் கேள்'}</span>
               </button>
-              <button type="button" class="eval-retry-btn" onclick="MapPracticeEvaluator.resetForRetry('${cId}')">
-                <span>🔄</span> <span>${isEm ? 'Practice Again' : 'மீண்டும் பயிற்சி செய்'}</span>
+              <button type="button" class="eval-tool-btn" style="background:#334155; color:#fff;" onclick="MapPracticeEvaluator.retryPractice('${cId}')">
+                <span>&#8635;</span> <span>${isEm ? 'Practice Again' : 'மீண்டும் பயிற்சி செய்'}</span>
               </button>
             </div>
           </div>
 
-          <!-- Color Guide Legend -->
-          <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-size:12px; color:#cbd5e1; background:rgba(0,0,0,0.25); padding:8px 12px; border-radius:8px;">
-            <span><b>${isEm ? 'Map Legend:' : 'குறியீடு விளக்கம்:'}</b></span>
-            <span style="color:#34d399;">🟢 ${isEm ? 'Your Pin (Exact)' : 'உங்கள் குறி (துல்லியம்)'}</span>
-            <span style="color:#fbbf24;">🟡 ${isEm ? 'Your Pin (Near)' : 'உங்கள் குறி (அருகில்)'}</span>
-            <span style="color:#f87171;">🔴 ${isEm ? 'Your Pin (Inaccurate)' : 'உங்கள் குறி (தவறியது)'}</span>
-            <span style="color:#f59e0b;">⭐ ${isEm ? 'Official Key Point' : 'அரசு மாதிரி விடை புள்ளி'}</span>
+          <!-- Color Legend -->
+          <div style="display:flex; align-items:center; gap:14px; font-size:11.5px; font-weight:700; color:#94a3b8; flex-wrap:wrap;">
+            <span>${isEm ? 'Map Legend:' : 'குறியீடு விளக்கம்:'}</span>
+            <span style="color:#10b981;">● ${isEm ? 'Your Pin (Exact)' : 'உங்கள் குறி (துல்லியம்)'}</span>
+            <span style="color:#f59e0b;">● ${isEm ? 'Your Pin (Near)' : 'உங்கள் குறி (அருகில்)'}</span>
+            <span style="color:#ef4444;">● ${isEm ? 'Your Pin (Inaccurate)' : 'உங்கள் குறி (தவறியது)'}</span>
+            <span style="color:#fbbf24;">★ ${isEm ? 'Official Key Point' : 'அரசு மாதிரி விடை புள்ளி'}</span>
           </div>
 
           <!-- Detailed Diagnostic Table -->
-          <div class="eval-diag-table-container">
+          <div style="overflow-x:auto;">
             <table class="eval-diag-table">
               <thead>
                 <tr>
-                  <th style="width:30px;">#</th>
-                  <th>${isEm ? 'Place to Mark' : 'குறிக்க வேண்டிய இடம்'}</th>
-                  <th>${isEm ? 'Evaluation Status' : 'மதிப்பீட்டு நிலை'}</th>
-                  <th>${isEm ? 'Error Offset' : 'தூர விலகல்'}</th>
-                  <th>${isEm ? 'Examiner Landmark Tip for Board Exam' : 'அரசுத் தேர்வுக்கான நினைவூட்டல் குறிப்பு'}</th>
+                  <th>#</th>
+                  <th>${isEm ? 'PLACE TO MARK' : 'குறிக்க வேண்டிய இடம்'}</th>
+                  <th>${isEm ? 'EVALUATION STATUS' : 'மதிப்பீட்டு நிலை'}</th>
+                  <th>${isEm ? 'ERROR OFFSET' : 'தூர விலகல்'}</th>
+                  <th>${isEm ? 'EXAMINER LANDMARK TIP FOR BOARD EXAM' : 'அரசுத் தேர்வுக்கான நினைவூட்டல் குறிப்பு'}</th>
                 </tr>
               </thead>
               <tbody>
                 ${state.places.map((p, idx) => {
-                  const item = res.details[p.id];
+                  const s = res.itemScores[p.id];
                   const pName = isEm ? p.nameEnglish : p.nameTamil;
-                  const tip = isEm ? (p.tipEnglish || '') : (p.tipTamil || '');
-                  const distText = item.dist !== null ? `${item.dist} px` : (isEm ? 'Not marked' : 'குறிக்கவில்லை');
+                  const numLabel = p.numLabel || (idx + 1);
+
+                  let statusHtml = '';
+                  let offsetText = '-';
+
+                  if (s.grade === 'exact') {
+                    statusHtml = `<span class="status-pill status-exact">${isEm ? 'Exact! Full Mark (1.0)' : 'துல்லியமானது! முழு மதிப்பெண் (1.0)'}</span>`;
+                    offsetText = `${s.distance} px`;
+                  } else if (s.grade === 'near') {
+                    statusHtml = `<span class="status-pill status-near">${isEm ? 'Near Target (0.5 Mark)' : 'அருகில் உள்ளது (0.5)'}</span>`;
+                    offsetText = `${s.distance} px`;
+                  } else if (s.grade === 'inaccurate') {
+                    statusHtml = `<span class="status-pill status-wrong">${isEm ? 'Needs Practice (0 Marks)' : 'தவறான இடம் (0 மதிப்பெண்)'}</span>`;
+                    offsetText = `${s.distance} px`;
+                  } else {
+                    statusHtml = `<span class="status-pill" style="background:#334155; color:#94a3b8;">${isEm ? 'Not Marked (0 Marks)' : 'குறிக்கப்படவில்லை (0)'}</span>`;
+                    offsetText = isEm ? 'Not marked' : 'குறிக்கவில்லை';
+                  }
+
+                  const tip = isEm ? p.tipEnglish : p.tipTamil;
 
                   return `
                     <tr>
-                      <td style="font-weight:800; color:#38bdf8;">${p.numLabel || (idx + 1)}</td>
-                      <td style="font-weight:800;">${pName}</td>
-                      <td>
-                        <span class="eval-status-chip ${item.status}">
-                          ${item.label}
-                        </span>
-                      </td>
-                      <td style="font-size:12px; color:#94a3b8;">${distText}</td>
-                      <td style="font-size:12px; color:#cbd5e1; line-height:1.4;">
-                        <span style="color:#38bdf8;">💡</span> ${tip}
-                      </td>
+                      <td style="font-weight:800; color:#38bdf8;">${numLabel}</td>
+                      <td style="font-weight:700;">${pName}</td>
+                      <td>${statusHtml}</td>
+                      <td style="font-family:monospace; color:#94a3b8;">${offsetText}</td>
+                      <td style="color:#cbd5e1; font-size:11.5px; line-height:1.4;">&#128161; ${tip}</td>
                     </tr>
                   `;
                 }).join('')}
               </tbody>
             </table>
-          </div>
-
-          <!-- Footer Actions -->
-          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-top:4px;">
-            <button type="button" class="eval-tool-btn" onclick="MapPracticeEvaluator.downloadEvaluatedMap('${cId}')">
-              <span>📥</span> <span>${isEm ? 'Download Evaluated Map' : 'மதிப்பீட்டு வரைபடத்தைப் பதிவிறக்கு'}</span>
-            </button>
-            <button type="button" class="eval-tool-btn" onclick="MapPracticeEvaluator.resetForRetry('${cId}')" style="background:#10b981; color:#000; font-weight:900;">
-              <span>🎯</span> <span>${isEm ? 'Try Again for 100% (Centum)' : '100% மதிப்பெண் பெற மீண்டும் முயலவும்'}</span>
-            </button>
           </div>
         </div>
       `;
@@ -1628,105 +1684,140 @@
       resArea.innerHTML = html;
       resArea.style.display = 'block';
 
-      // Smooth scroll down to scorecard
-      setTimeout(() => {
-        resArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 200);
+      // Auto speak evaluation
+      this.speakFeedback(cId);
     },
 
     // -------------------------------------------------------------------------
-    // VOICE SPEECH EVALUATION FEEDBACK
+    // POPUP MODAL TO VIEW OFFICIAL SOLVED BOARD MAP IMAGE
     // -------------------------------------------------------------------------
-    speakEvaluation(cId) {
+    showOfficialImagePopup(cId) {
       const state = this.instances[cId];
-      if (!state || !state.results || !window.speechSynthesis) return;
+      if (!state || !state.qSet.officialImage) return;
 
-      this.stopVoice(cId);
+      const existing = document.getElementById('evalOfficialImageModal');
+      if (existing) existing.remove();
 
-      const res = state.results;
+      const modal = document.createElement('div');
+      modal.id = 'evalOfficialImageModal';
+      modal.className = 'eval-image-popup-overlay';
+      modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+
       const isEm = state.isEm;
-      let text = "";
+      const title = isEm ? state.qSet.titleEnglish : state.qSet.titleTamil;
+
+      modal.innerHTML = `
+        <div class="eval-image-popup-box">
+          <div style="padding:10px 14px; background:#1e293b; border-bottom:1px solid #334155; display:flex; align-items:center; justify-content:space-between;">
+            <div style="font-size:13px; font-weight:800; color:#38bdf8;">
+              &#128065; ${isEm ? 'Official Textbook Reference Map:' : 'அதிகாரப்பூர்வ பாடப்புத்தக வரைபடம்:'} ${title}
+            </div>
+            <button type="button" onclick="document.getElementById('evalOfficialImageModal').remove()" style="background:none; border:none; color:#94a3b8; font-size:22px; cursor:pointer;">&times;</button>
+          </div>
+          <div style="padding:8px; background:#090e17; overflow:auto; text-align:center;">
+            <img src="${state.qSet.officialImage}" alt="${title}" style="max-width:100%; max-height:75vh; border-radius:8px; display:inline-block;" />
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+    },
+
+    // -------------------------------------------------------------------------
+    // SPEECH SYNTHESIS EVALUATION FEEDBACK
+    // -------------------------------------------------------------------------
+    speakFeedback(cId) {
+      const state = this.instances[cId];
+      if (!state || !state.results || !('speechSynthesis' in window)) return;
+
+      window.speechSynthesis.cancel();
+
+      const isEm = state.isEm;
+      const res = state.results;
+      let text = '';
 
       if (isEm) {
-        text = `Exam evaluation completed! You scored ${res.totalEarned.toFixed(1)} out of ${res.maxMarks} marks. `;
-        if (res.percentage >= 90) {
-          text += "Outstanding map marking accuracy! You are fully prepared to score full marks in the Board Exam.";
-        } else if (res.percentage >= 70) {
-          text += "Great effort! Review the golden key stars and examiner tips to achieve a complete centum.";
+        text = `You scored ${res.totalScore} marks out of ${state.maxMarks} in this map practice. `;
+        if (res.totalScore === state.maxMarks) {
+          text += 'Outstanding performance! You have achieved 100 percent centum accuracy for Class 10 Board Exam.';
         } else {
-          text += "Good attempt! Check the landmark guide tips below, tap Try Again, and practice marking again.";
+          text += 'Review the official landmark tips below to achieve full 8 out of 8 in the board examination.';
         }
       } else {
-        text = `வரைபடத் தேர்வு மதிப்பீடு நிறைவடைந்தது! நீங்கள் ${res.maxMarks}-க்கு ${res.totalEarned.toFixed(1)} மதிப்பெண்கள் பெற்றுள்ளீர்கள். `;
-        if (res.percentage >= 90) {
-          text += "அற்புதம்! அரசுப் பொதுத்தேர்வில் வரைபடத்தில் முழு 8 மதிப்பெண்கள் பெற நீங்கள் முழுமையாகத் தயாராக உள்ளீர்கள்.";
-        } else if (res.percentage >= 70) {
-          text += "மிக அருமையான முயற்சி! தங்க நிற மாதிரி புள்ளிகளை கவனித்து, முழு மதிப்பெண் பெற மீண்டும் ஒருமுறை பயிற்சி செய்யவும்.";
+        text = `இந்த வரைபடப் பயிற்சியில் நீங்கள் ${state.maxMarks} க்கு ${res.totalScore} மதிப்பெண்கள் பெற்றுள்ளீர்கள். `;
+        if (res.totalScore === state.maxMarks) {
+          text += 'அற்புதம்! அரசு பொதுத்தேர்வில் முழு மதிப்பெண் பெறும் வகையில் நீங்கள் இடங்களை சரியாக குறித்துள்ளீர்கள்.';
         } else {
-          text += "நல்ல முயற்சி! கீழே உள்ள நினைவூட்டல் குறிப்புகளைப் படித்துவிட்டு, 'மீண்டும் பயிற்சி செய்' அழுத்தி பயிற்சி பெறவும்.";
+          text += '8-க்கு 8 மதிப்பெண் பெற, கீழே கொடுக்கப்பட்டுள்ள நினைவூட்டல் குறிப்புகளைப் படித்து மீண்டும் பயிற்சி செய்யவும்.';
         }
       }
 
-      try {
-        const u = new SpeechSynthesisUtterance(text);
-        u.lang = isEm ? 'en-IN' : 'ta-IN';
-        u.rate = 0.95;
-        state.speechUtterance = u;
-        window.speechSynthesis.speak(u);
-      } catch (e) {
-        console.warn("Speech synthesis error:", e);
-      }
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = isEm ? 'en-IN' : 'ta-IN';
+      utter.rate = 0.95;
+      state.speechUtterance = utter;
+      window.speechSynthesis.speak(utter);
     },
 
-    replayVoice(cId) {
-      this.speakEvaluation(cId);
-    },
-
-    stopVoice(cId) {
-      if (window.speechSynthesis) {
-        try { window.speechSynthesis.cancel(); } catch (e) {}
+    stopVoice() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
       }
     },
 
     // -------------------------------------------------------------------------
-    // RETRY / RE-PRACTICE
+    // RETRY PRACTICE (CLEAR ALL PINS & RESET SCORECARD)
     // -------------------------------------------------------------------------
-    resetForRetry(cId) {
-      this.stopVoice(cId);
-      this.clearAllPins(cId);
-    },
-
-    // -------------------------------------------------------------------------
-    // DOWNLOAD EVALUATED MAP AS SVG / PRINT
-    // -------------------------------------------------------------------------
-    downloadEvaluatedMap(cId) {
+    retryPractice(cId) {
       const state = this.instances[cId];
       if (!state) return;
 
-      const svg = document.getElementById(`${cId}_svgMap`);
-      if (!svg) return;
+      this.stopVoice();
+      state.studentMarks = {};
+      state.isEvaluated = false;
+      state.results = null;
 
-      const svgData = new XMLSerializer().serializeToString(svg);
-      const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
-      const svgUrl = URL.createObjectURL(svgBlob);
+      // Reset DOM
+      const targetLayer = document.getElementById(`${cId}_targetAnswerLayer`);
+      const offsetLayer = document.getElementById(`${cId}_offsetLinesLayer`);
+      const resArea = document.getElementById(`${cId}_resultArea`);
 
-      const downloadLink = document.createElement('a');
-      downloadLink.href = svgUrl;
-      downloadLink.download = `Evaluated_Map_10th_Social_${Date.now()}.svg`;
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
-      URL.revokeObjectURL(svgUrl);
+      if (targetLayer) targetLayer.innerHTML = '';
+      if (offsetLayer) offsetLayer.innerHTML = '';
+      if (resArea) resArea.style.display = 'none';
 
-      const isEm = state.isEm;
-      alert(isEm
-        ? '✅ Evaluated Map downloaded successfully! You can print or review your pencil practice.'
-        : '✅ மதிப்பீடு செய்யப்பட்ட வரைபடம் பதிவிறக்கம் செய்யப்பட்டது! இதை சேமித்து அல்லது பிரிண்ட் எடுத்து பயிற்சி செய்யலாம்.');
+      this.resetView(cId);
+      this.renderStudentPins(cId);
+
+      // Reset place pills
+      state.places.forEach((p, idx) => {
+        const pill = document.getElementById(`${cId}_pill_${p.id}`);
+        if (pill) {
+          pill.classList.remove('marked');
+          pill.innerHTML = `
+            <span class="pill-badge">${p.numLabel || (idx + 1)}</span>
+            <span class="pill-title">${state.isEm ? p.nameEnglish : p.nameTamil}</span>
+            <span class="pill-status">&#128205;</span>
+          `;
+        }
+      });
+
+      this.updateCounter(cId);
+      this.selectPlace(cId, 0);
+
+      // Re-enable finish button
+      const finishBtn = document.getElementById(`${cId}_btnFinish`);
+      if (finishBtn) {
+        finishBtn.innerHTML = `
+          <span>&#127937;</span>
+          <span>${state.isEm ? 'Finish & Evaluate Map (Check Marks)' : 'விடை வரைபடத்தை சமர்ப்பித்து திருத்து (Evaluate)'}</span>
+          <span>&#10148;</span>
+        `;
+        finishBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+        finishBtn.disabled = false;
+      }
     }
   };
 
-  // Expose globally
   window.MapPracticeEvaluator = MapPracticeEvaluator;
-  window.CURRICULUM_MAP_DATABASE = CURRICULUM_MAP_DATABASE;
-
 })();

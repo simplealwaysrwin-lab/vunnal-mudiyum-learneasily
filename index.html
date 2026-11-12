@@ -3635,6 +3635,45 @@
     color: #f8fafc;
     animation: modalPopIn 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
+  /* Map Evaluation Mode - Responsive & Mobile Fullscreen */
+  .ai-modal-box.map-eval-mode {
+    max-width: 1040px;
+    width: 95vw;
+    height: 94vh;
+    max-height: 94vh;
+  }
+  #aiEvaluatorModal.map-eval-active .eval-question-banner {
+    display: none !important;
+  }
+  @media (max-width: 768px) {
+    #aiEvaluatorModal {
+      padding: 0 !important;
+    }
+    #aiEvaluatorModal .ai-modal-box.map-eval-mode {
+      width: 100vw !important;
+      height: 100vh !important;
+      max-height: 100vh !important;
+      border-radius: 0 !important;
+      border: none !important;
+    }
+    #aiEvaluatorModal.map-eval-active .ai-modal-header {
+      padding: 8px 10px !important;
+    }
+    #aiEvaluatorModal.map-eval-active #evalModalTitle {
+      font-size: 13px !important;
+      max-width: 140px !important;
+    }
+    #aiEvaluatorModal.map-eval-active #evalModalSubtitle {
+      display: none !important;
+    }
+    #aiEvaluatorModal.map-eval-active .eval-body-scroll {
+      padding: 4px 6px !important;
+    }
+    #aiEvaluatorModal.map-eval-active #evalModeSwitcherWrap button {
+      padding: 4px 8px !important;
+      font-size: 11px !important;
+    }
+  }
   @keyframes modalPopIn {
     0% { transform: scale(0.92); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
@@ -15595,16 +15634,20 @@ Important:
   window.isMapQuestion = isMapQuestion;
 
   function switchEvalMode(mode) {
+    const modal = document.getElementById('aiEvaluatorModal');
     const modalBox = document.querySelector('#aiEvaluatorModal .ai-modal-box');
     const tabMap = document.getElementById('evalTabMap');
     const tabText = document.getElementById('evalTabText');
     const mapSec = document.getElementById('evalMapPracticeSection');
     const textSec = document.getElementById('evalTextAnswerSection');
+    const qBanner = document.getElementById('evalQuestionCardBanner');
     const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english')) ||
                  (currentEvalQuestion && currentEvalQuestion.id && currentEvalQuestion.id.includes('_em_'));
 
     if (mode === 'map') {
+      if (modal) modal.classList.add('map-eval-active');
       if (modalBox) modalBox.classList.add('map-eval-mode');
+      if (qBanner) qBanner.style.display = 'none'; // Zero text clutter in map practice!
       if (mapSec) mapSec.style.display = 'block';
       if (textSec) textSec.style.display = 'none';
       if (tabMap) {
@@ -15621,7 +15664,9 @@ Important:
         window.MapPracticeEvaluator.mount('evalMapPracticeMount', currentEvalQuestion, { isEm: isEm });
       }
     } else {
+      if (modal) modal.classList.remove('map-eval-active');
       if (modalBox) modalBox.classList.remove('map-eval-mode');
+      if (qBanner) qBanner.style.display = 'block';
       if (mapSec) mapSec.style.display = 'none';
       if (textSec) textSec.style.display = 'block';
       if (tabText) {
@@ -15665,7 +15710,7 @@ Important:
     const qBox = document.getElementById('evalQuestionText') || document.getElementById('evalQuestionBox');
     if (qBox) {
       const cleanQ = cleanHtmlEntities((qItem.q || '').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
-      qBox.innerHTML = `<b>${isEm ? 'Question' : '\u0BB5\u0BBF\u0BA9\u0BBE'} (${qItem.mark || (isEm ? 'Marks' : '\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC6\u0BA3\u0BCD')}):</b> ${cleanQ}`;
+      qBox.innerHTML = `<b>${isEm ? 'Question' : 'வினா'} (${qItem.mark || (isEm ? 'Marks' : 'மதிப்பெண்')}):</b> ${cleanQ}`;
     }
 
     const ansBox = document.getElementById('evalStudentAnswer');
@@ -15681,19 +15726,19 @@ Important:
 
     if (modalTitle) {
       modalTitle.innerHTML = isMap
-        ? `<span>&#128506;&#65039;</span> <span>${isEm ? "Class 10 Map Marking Practice & AI Evaluation" : "10-\u0B86\u0BAE\u0BCD \u0BB5\u0B95\u0BC1\u0BAA\u0BCD\u0BAA\u0BC1 \u0BB5\u0BB0\u0BC8\u0BAA\u0B9F\u0BAA\u0BCD \u0BAA\u0BAF\u0BBF\u0BB1\u0BCD\u0B9A\u0BBF & AI \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC0\u0B9F\u0BC1"}</span>`
-        : `<span>&#128221;</span> <span>${isEm ? "AI Answer Evaluation" : "AI \u0BB5\u0BBF\u0B9F\u0BC8\u0BA4\u0BCD\u0BA4\u0BBE\u0BB3\u0BCD \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC0\u0B9F\u0BC1"}</span>`;
+        ? `<span>🗺️</span> <span>${isEm ? "Class 10 Map Practice & AI Evaluation" : "10-ஆம் வகுப்பு வரைபடப் பயிற்சி & AI மதிப்பீடு"}</span>`
+        : `<span>📝</span> <span>${isEm ? "AI Answer Evaluation" : "AI விடைத்தாள் மதிப்பீடு"}</span>`;
     }
     if (modalSub) {
       modalSub.textContent = isMap
-        ? (isEm ? "Mark locations on blank map \u2022 Click Finish to Evaluate" : "\u0BB5\u0BC6\u0BB1\u0BCD\u0BB1\u0BC1 \u0BB5\u0BB0\u0BC8\u0BAA\u0B9F\u0BA4\u0BCD\u0BA4\u0BBF\u0BB2\u0BCD \u0B87\u0B9F\u0B99\u0BCD\u0B95\u0BB3\u0BC8\u0B95\u0BCD \u0B95\u0BC1\u0BB1\u0BBF\u0B95\u0BCD\u0B95\u0BB5\u0BC1\u0BAE\u0BCD \u2022 Finish \u0B85\u0BB4\u0BC1\u0BA4\u0BCD\u0BA4\u0BBF \u0BA4\u0BBF\u0BB0\u0BC1\u0BA4\u0BCD\u0BA4\u0BB5\u0BC1\u0BAE\u0BCD")
-        : (isEm ? "Board Exam Scoring & Diagnostic Corrections" : "\u0B85\u0BB0\u0B9A\u0BC1\u0BA4\u0BCD \u0BA4\u0BC7\u0BB0\u0BCD\u0BB5\u0BC1 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC6\u0BA3\u0BCD & \u0BA4\u0BBF\u0BB0\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1\u0BA4\u0BB2\u0BCD");
+        ? (isEm ? "Mark on blank map • Click Finish to Evaluate" : "வெற்று வரைபடத்தில் குறிக்கவும் • Finish அழுத்தி திருத்தவும்")
+        : (isEm ? "Board Exam Scoring & Diagnostic Corrections" : "அரசுத் தேர்வு மதிப்பீடு & திருத்துதல்");
     }
 
     const tabMap = document.getElementById('evalTabMap');
     const tabText = document.getElementById('evalTabText');
-    if (tabMap) tabMap.innerHTML = isEm ? "&#128506;&#65039; Blank Map Practice" : "&#128506;&#65039; \u0BB5\u0BB0\u0BC8\u0BAA\u0B9F\u0BAA\u0BCD \u0BAA\u0BAF\u0BBF\u0BB1\u0BCD\u0B9A\u0BBF";
-    if (tabText) tabText.innerHTML = isEm ? "&#128221; Written Answer" : "&#128221; \u0B8E\u0BB4\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1 \u0BB5\u0BBF\u0B9F\u0BC8";
+    if (tabMap) tabMap.innerHTML = isEm ? "🗺️ Blank Map Practice" : "🗺️ வரைபடப் பயிற்சி";
+    if (tabText) tabText.innerHTML = isEm ? "📝 Written Answer" : "📝 எழுத்து விடை";
 
     const modal = document.getElementById('aiEvaluatorModal');
     if (modal) modal.style.display = 'flex';
@@ -15714,7 +15759,10 @@ Important:
     const modalBox = document.querySelector('#aiEvaluatorModal .ai-modal-box');
     if (modalBox) modalBox.classList.remove('map-eval-mode');
     const modal = document.getElementById('aiEvaluatorModal');
-    if (modal) modal.style.display = 'none';
+    if (modal) {
+      modal.classList.remove('map-eval-active');
+      modal.style.display = 'none';
+    }
   }
   window.closeAIEvaluatorModal = closeAIEvaluatorModal;
 
@@ -15997,44 +16045,42 @@ Important:
 <!-- 2. AI ANSWER EVALUATION MODAL WITH BLANK MAP PRACTICE -->
 <div id="aiEvaluatorModal" class="ai-modal-overlay" onclick="if(event.target===this)closeAIEvaluatorModal()">
   <div class="ai-modal-box">
-    <div class="ai-modal-header">
-      <div style="display:flex; align-items:center; gap:10px;">
-        <div>
-          <h3 class="ai-modal-title" id="evalModalTitle">
-            <span>&#128221;</span> <span>AI \u0BB5\u0BBF\u0B9F\u0BC8\u0BA4\u0BCD\u0BA4\u0BBE\u0BB3\u0BCD \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC0\u0B9F\u0BC1</span>
-          </h3>
-          <span style="font-size:11px; color:#10b981; font-weight:700;" id="evalModalSubtitle">\u0B85\u0BB0\u0B9å»¶\u0BA4\u0BCD \u0BA4\u0BC7\u0BB0\u0BCD\u0BB5\u0BC1 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC6\u0BA3\u0BCD & \u0BA4\u0BBF\u0BB0\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1\u0BA4\u0BB2\u0BCD</span>
-        </div>
+    <div class="ai-modal-header eval-modal-header">
+      <div style="display:flex; align-items:center; gap:8px; min-width:0; flex:1;">
+        <h3 class="ai-modal-title" id="evalModalTitle" style="font-size:15px; font-weight:800; color:#ffffff; margin:0; display:flex; align-items:center; gap:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+          <span>📝</span> <span>AI விடைத்தாள் மதிப்பீடு</span>
+        </h3>
+        <span style="font-size:11px; color:#10b981; font-weight:700; white-space:nowrap;" id="evalModalSubtitle">அரசுத் தேர்வு மதிப்பீடு &amp; திருத்துதல்</span>
       </div>
 
       <!-- Mode Switcher Tabs (Blank Map Practice vs Written Theory Answer) -->
-      <div style="display:inline-flex; background:#0b1329; border:1px solid #334155; border-radius:10px; padding:3px; gap:4px; margin-left:auto; margin-right:8px;">
-        <button type="button" id="evalTabMap" onclick="switchEvalMode('map')" style="background:transparent; border:none; color:#94a3b8; font-size:12px; font-weight:800; padding:6px 14px; border-radius:8px; cursor:pointer; display:flex; align-items:center; gap:5px;">
-          &#128506;&#65039; <span>\u0BB5\u0BB0\u0BC8\u0BAA\u0B9F\u0BAA\u0BCD \u0BAA\u0BAF\u0BBF\u0BB1\u0BCD\u0B9A\u0BBF</span>
+      <div id="evalModeSwitcherWrap" style="display:inline-flex; background:#0b1329; border:1px solid #334155; border-radius:10px; padding:2px; gap:3px; margin-left:auto; margin-right:6px; flex-shrink:0;">
+        <button type="button" id="evalTabMap" onclick="switchEvalMode('map')" style="background:transparent; border:none; color:#94a3b8; font-size:11.5px; font-weight:800; padding:5px 10px; border-radius:7px; cursor:pointer; display:flex; align-items:center; gap:4px;">
+          🗺️ <span>வரைபடப் பயிற்சி</span>
         </button>
-        <button type="button" id="evalTabText" onclick="switchEvalMode('text')" style="background:#0284c7; border:none; color:#ffffff; font-size:12px; font-weight:800; padding:6px 14px; border-radius:8px; cursor:pointer; display:flex; align-items:center; gap:5px;">
-          &#128221; <span>\u0B8E\u0BB4\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1 \u0BB5\u0BBF\u0B9F\u0BC8</span>
+        <button type="button" id="evalTabText" onclick="switchEvalMode('text')" style="background:#0284c7; border:none; color:#ffffff; font-size:11.5px; font-weight:800; padding:5px 10px; border-radius:7px; cursor:pointer; display:flex; align-items:center; gap:4px;">
+          📝 <span>எழுத்து விடை</span>
         </button>
       </div>
 
-      <button type="button" id="evalGlobalStopSpeechBtn" onclick="stopAISpeech()" style="display:none; background:#ef4444; color:#fff; border:none; padding:4px 10px; border-radius:8px; font-size:12px; font-weight:800; cursor:pointer; margin-right:8px;" title="\u0BAA\u0BC7\u0B9A\u0BCD\u0B9A\u0BC8 \u0B89\u0B9F\u0BA9\u0B9F\u0BBF\u0BAF\u0BBE\u0B95 \u0BA8\u0BBF\u0BB1\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1">&#9209; \u0BA8\u0BBF\u0BB1\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1</button>
-      <button type="button" onclick="closeAIEvaluatorModal()" style="background:none; border:none; color:#94a3b8; font-size:22px; cursor:pointer;" title="\u0BAE\u0BC2\u0B9F\u0BC1 (Close)">&times;</button>
+      <button type="button" id="evalGlobalStopSpeechBtn" onclick="stopAISpeech()" style="display:none; background:#ef4444; color:#fff; border:none; padding:4px 8px; border-radius:8px; font-size:11px; font-weight:800; cursor:pointer; margin-right:6px;" title="பேச்சை உடனடியாக நிறுத்து">⏹️ நிறுத்து</button>
+      <button type="button" onclick="closeAIEvaluatorModal()" style="background:none; border:none; color:#94a3b8; font-size:24px; line-height:1; cursor:pointer; padding:0 4px;" title="மூடு (Close)">&times;</button>
     </div>
 
-    <div style="padding:16px 18px; overflow-y:auto; flex:1; background:#090e17;">
-      <!-- Question Card Banner -->
-      <div style="background:#1e293b; border-left:4px solid #10b981; padding:10px 14px; border-radius:8px; margin-bottom:12px;">
+    <div class="eval-body-scroll" style="padding:14px 16px; overflow-y:auto; flex:1; background:#090e17; display:flex; flex-direction:column;">
+      <!-- Question Card Banner (Hidden in Map Practice Mode to eliminate text clutter!) -->
+      <div id="evalQuestionCardBanner" class="eval-question-banner" style="background:#1e293b; border-left:4px solid #10b981; padding:10px 14px; border-radius:8px; margin-bottom:12px;">
         <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:6px;">
-          <div style="font-size:11px; font-weight:800; color:#10b981; text-transform:uppercase;">à®µà®¿à®©à®¾ à®µà®¿à®µà®°à®®à¯ (Question Details):</div>
+          <div style="font-size:11px; font-weight:800; color:#10b981; text-transform:uppercase;">வினா விவரம் (Question Details):</div>
           <button type="button" onclick="switchEvalMode('map')" style="background:rgba(2,132,199,0.2); border:1px solid #0284c7; color:#38bdf8; font-size:11.5px; font-weight:800; padding:3px 10px; border-radius:6px; cursor:pointer;">
-            &#128506;&#65039; \u0BAE\u0BBE\u0BA4\u0BBF\u0BB0\u0BBF \u0BB5\u0BB0\u0BC8\u0BAA\u0B9F\u0BAE\u0BCD \u0BAA\u0BAF\u0BBF\u0BB1\u0BCD\u0B9A\u0BBF \u0B9A\u0BC6\u0BAF\u0BCD (Practice Map) &#10148;
+            🗺️ மாதிரி வரைபடம் பயிற்சி செய் (Practice Map) ➔
           </button>
         </div>
         <div id="evalQuestionText" style="font-size:13.5px; font-weight:700; color:#ffffff; margin-top:4px;"></div>
       </div>
 
-      <!-- 1. MAP PRACTICE SECTION: BLANK MAP + STUDENT PINS + FINISH BUTTON -->
-      <div id="evalMapPracticeSection" style="display:none;">
+      <!-- 1. MAP PRACTICE SECTION: OFFICIAL BLANK MAP + STUDENT PINS + FINISH BUTTON -->
+      <div id="evalMapPracticeSection" style="display:none; flex:1;">
         <div id="evalMapPracticeMount"></div>
       </div>
 
@@ -16042,16 +16088,16 @@ Important:
       <div id="evalTextAnswerSection">
         <div style="margin-bottom:12px;">
           <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;">
-            <label style="font-size:12.5px; font-weight:800; color:#94a3b8;">à®‰à®™à¯à®•à®³à¯ à®µà®¿à®Ÿà¯ˆ (à®¤à®Ÿà¯à®Ÿà®šà¯à®šà¯ à®šà¯†à®¯à¯à®¯à®µà¯à®®à¯ à®…à®²à¯à®²à®¤à¯ à®ªà¯‡à®šà®µà¯à®®à¯):</label>
+            <label style="font-size:12.5px; font-weight:800; color:#94a3b8;">உங்கள் விடை (தட்டச்சு செய்யவும் அல்லது பேசவும்):</label>
             <button type="button" id="evalMicBtn" onclick="toggleEvalMicInput()" style="background:#1e293b; border:1px solid #374151; color:#38bdf8; font-size:12px; padding:3px 10px; border-radius:12px; cursor:pointer; display:inline-flex; align-items:center; gap:4px;">
-              <span>&#127908;</span> <span>\u0B95\u0BC1\u0BB0\u0BB2\u0BCD \u0BB5\u0BB4\u0BBF \u0BAA\u0BA4\u0BBF\u0BB5\u0BC1</span>
+              <span>🎙️</span> <span>குரல் வழி பதிவு</span>
             </button>
           </div>
-          <textarea id="evalStudentAnswer" rows="5" style="width:100%; box-sizing:border-box; background:#111827; border:1px solid #374151; border-radius:12px; padding:12px; color:#f8fafc; font-size:13.5px; line-height:1.6; outline:none; resize:vertical;" placeholder="à®¨à¯€à®™à¯à®•à®³à¯ à®ªà®Ÿà®¿à®¤à¯à®¤ à®µà®¿à®Ÿà¯ˆà®¯à¯ˆ à®‡à®™à¯à®•à¯ à®Žà®´à¯à®¤à®µà¯à®®à¯..."></textarea>
+          <textarea id="evalStudentAnswer" rows="5" style="width:100%; box-sizing:border-box; background:#111827; border:1px solid #374151; border-radius:12px; padding:12px; color:#f8fafc; font-size:13.5px; line-height:1.6; outline:none; resize:vertical;" placeholder="நீங்கள் படித்த விடையை இங்கு எழுதவும்..."></textarea>
         </div>
 
         <button type="button" id="evalSubmitBtn" onclick="submitAnswerForAIEvaluation()" style="width:100%; padding:12px; background:linear-gradient(135deg, #10b981, #059669); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:800; cursor:pointer; box-shadow:0 4px 14px rgba(16,185,129,0.3); display:flex; align-items:center; justify-content:center; gap:8px;">
-          <span>&#128269; \u0BB5\u0BBF\u0B9F\u0BC8\u0BA4\u0BCD\u0BA4\u0BBE\u0BB3\u0BC8\u0BA4\u0BCD \u0BA4\u0BBF\u0BB0\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1 (Evaluate Answer)</span>
+          <span>🔍</span> <span>விடைத்தாளைத் திருத்து (Evaluate Answer)</span>
         </button>
 
         <!-- Result Card -->

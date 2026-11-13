@@ -186,8 +186,8 @@
 <script src="data_social_u12.js?v=20261111_v67"></script>
 <script src="data_social_em_u11.js?v=20261111_v67"></script>
 <script src="data_social_em_u12.js?v=20261111_v67"></script>
-<script src="map_data_and_engine.js?v=20261112_v69"></script>
-<script src="map_practice_evaluator.js?v=20261112_v69"></script>
+<script src="map_data_and_engine.js?v=20261113_v70"></script>
+<script src="map_practice_evaluator.js?v=20261113_v70"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -12509,7 +12509,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261112_v69')
+        navigator.serviceWorker.register('./sw.js?v=20261113_v70')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 
@@ -15754,7 +15754,7 @@ Important:
     }
     if (modalSub) {
       modalSub.textContent = isMap
-        ? (isEm ? "Mark on blank map • Click Finish to Evaluate" : "வெற்று வரைபடத்தில் குறிக்கவும் • Finish அழுத்தி திருத்தவும்")
+        ? (isEm ? "1-2-3 Location Quiz • Instant Evaluation" : "1, 2, 3 வரைபட வினாடி-வினா • உடனடி மதிப்பீடு")
         : (isEm ? "Board Exam Scoring & Diagnostic Corrections" : "அரசுத் தேர்வு மதிப்பீடு & திருத்துதல்");
     }
 

@@ -1108,13 +1108,12 @@
       const isEm = this.currentLang === 'en';
       const stageWrapper = document.getElementById('mapSvgStageWrapper');
       if (stageWrapper && window.MapPracticeEvaluator) {
-        stageWrapper.innerHTML = <div id="tutorMapPracticeMount" style="width:100%; height:100%; overflow-y:auto; padding:8px 12px; box-sizing:border-box;"></div>;
+        stageWrapper.innerHTML = `<div id="tutorMapPracticeMount" style="width:100%; height:100%; overflow-y:auto; padding:8px 12px; box-sizing:border-box;"></div>`;
         window.MapPracticeEvaluator.mount('tutorMapPracticeMount', {
-          id: 'exam_model_q43',
-          q: 'Mark the 8 standard locations on the blank map of India',
-          mark: isEm ? '8 Marks' : '8 à®®à®¤à®¿à®ªà¯à®ªà¯†à®£à¯à®•à®³à¯'
-        }, { isEm: isEm });
-      }
+          id: this.currentUnitId || 'soc_rivers',
+          q: isEm ? '10th Standard Map Revision' : '10-ஆம் வகுப்பு வரைபடப் பயிற்சி',
+          mark: isEm ? '8 Marks' : '8 மதிப்பெண்கள்',
+        }, { isEm: isEm });      }
     },
 
     startMarkingOneByOne() {

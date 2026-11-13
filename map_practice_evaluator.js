@@ -1139,7 +1139,7 @@
   // 3. MAP PRACTICE EVALUATOR CONTROLLER (1-2-3 Revision Quiz)
   
   // ---------------------------------------------------------------------------
-  // 3. MAP PRACTICE EVALUATOR CONTROLLER (Lesson-Specific • Zero Distraction)
+  // 3. MAP PRACTICE EVALUATOR CONTROLLER (Lesson-Specific • Compact • Zero Scroll)
   // ---------------------------------------------------------------------------
 
   const MapPracticeEvaluator = {
@@ -1165,6 +1165,34 @@
       };
 
       this.render(containerId);
+
+      // First question voice narration
+      setTimeout(() => {
+        this.speakCurrentQuestion(containerId);
+      }, 400);
+    },
+
+    speakCurrentQuestion(containerId) {
+      const state = this.instances[containerId];
+      if (!state || state.completed) return;
+
+      const curQ = state.lesson.questions[state.currentQuestionIndex];
+      if (!curQ) return;
+
+      const isEm = state.isEm;
+      const speechText = isEm
+        ? `${curQ.nameEnglish} is marked in 3 places. Choose the correct number.`
+        : `${curQ.nameTamil} வரைபடத்தில் 3 இடங்களில் குறிக்கப்பட்டுள்ளது. சரியான எண்ணைத் தேர்வு செய்யவும்.`;
+
+      try {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          const utt = new SpeechSynthesisUtterance(speechText);
+          utt.lang = isEm ? 'en-IN' : 'ta-IN';
+          utt.rate = 0.98;
+          window.speechSynthesis.speak(utt);
+        }
+      } catch (e) {}
     },
 
     setLesson(containerId, lessonKey) {
@@ -1180,6 +1208,9 @@
       state.completed = false;
 
       this.render(containerId);
+      setTimeout(() => {
+        this.speakCurrentQuestion(containerId);
+      }, 300);
     },
 
     handleOptionSelect(containerId, optionNum) {
@@ -1227,13 +1258,18 @@
         state.currentQuestionIndex++;
         state.evaluated = false;
         state.selectedOption = null;
+        this.render(containerId);
+        setTimeout(() => {
+          this.speakCurrentQuestion(containerId);
+        }, 300);
       } else {
         // Complete!
         state.completed = true;
-        this.speakCompletionVoice(containerId);
+        this.render(containerId);
+        setTimeout(() => {
+          this.speakCompletionVoice(containerId);
+        }, 300);
       }
-
-      this.render(containerId);
     },
 
     speakCompletionVoice(containerId) {
@@ -1272,6 +1308,9 @@
       state.completed = false;
 
       this.render(containerId);
+      setTimeout(() => {
+        this.speakCurrentQuestion(containerId);
+      }, 300);
     },
 
     stopVoice() {
@@ -1283,7 +1322,7 @@
     },
 
     // -------------------------------------------------------------------------
-    // RENDER MAIN SCREEN
+    // RENDER MAIN SCREEN (Compact • Zero Long Scrolling)
     // -------------------------------------------------------------------------
     render(containerId) {
       const state = this.instances[containerId];
@@ -1319,12 +1358,12 @@
           const hist = state.answeredHistory[i];
           const isRight = hist && hist.isCorrect;
           return `
-            <div style="display:flex; align-items:center; justify-content:space-between; padding:10px 14px; background:#1e293b; border-radius:10px; margin-bottom:8px; border-left:4px solid ${isRight ? '#10b981' : '#ef4444'};">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:8px 12px; background:#1e293b; border-radius:8px; margin-bottom:6px; border-left:4px solid ${isRight ? '#10b981' : '#ef4444'};">
               <div>
-                <span style="font-weight:800; color:#f8fafc;">(${i + 1}) ${isEm ? q.nameEnglish : q.nameTamil}</span>
-                <div style="font-size:12px; color:#94a3b8; margin-top:2px;">${isEm ? q.tipEnglish : q.tipTamil}</div>
+                <span style="font-weight:800; color:#f8fafc; font-size:13px;">(${i + 1}) ${isEm ? q.nameEnglish : q.nameTamil}</span>
+                <div style="font-size:11.5px; color:#94a3b8; margin-top:2px;">${isEm ? q.tipEnglish : q.tipTamil}</div>
               </div>
-              <div style="font-size:17px; font-weight:900; color:${isRight ? '#10b981' : '#ef4444'}; margin-left:12px; white-space:nowrap;">
+              <div style="font-size:15px; font-weight:900; color:${isRight ? '#10b981' : '#ef4444'}; margin-left:12px; white-space:nowrap;">
                 ${isRight ? '✔ 1/1' : '❌ 0/1'}
               </div>
             </div>
@@ -1335,53 +1374,60 @@
           ? `10th standard students, to learn all lessons easily, download Vunnal Mudiyum Learn Easily App, get good marks. Share to your classmates also. All the best!`
           : `10-ஆம் வகுப்பு மாணவச் செல்வங்களே, அனைத்துப் பாடங்களையும் மிக எளிதாகக் கற்று அதிக மதிப்பெண்கள் பெற "உன்னால் முடியும் Learn Easily" செயலியைப் பதிவிறக்கம் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!`;
 
+        const appDownloadUrl = (window.location && window.location.origin && window.location.origin.startsWith('http')) 
+          ? window.location.origin + (window.location.pathname === '/' ? '' : window.location.pathname) 
+          : 'https://vunnalmudiyum.dharsanganesh90.workers.dev/';
+
         const shareText = isEm
-          ? `🌟 I scored ${state.score}/${totalQuestions} in 10th Social Science Map Practice (${lesson.titleEnglish}) on Vunnal Mudiyum! 10th standard students, to learn all lessons easily, download Vunnal Mudiyum Learn Easily App, get good marks. Share to your classmates also. All the best!`
-          : `🌟 உன்னால் முடியும் செயலியில் 10-ஆம் வகுப்பு வரைபடப் பயிற்சியில் (${lesson.titleTamil}) நான் ${state.score}/${totalQuestions} மதிப்பெண்கள் பெற்றுள்ளேன்! 10-ஆம் வகுப்பு மாணவச் செல்வங்களே, அனைத்துப் பாடங்களையும் மிக எளிதாகக் கற்று அதிக மதிப்பெண்கள் பெற "உன்னால் முடியும் Learn Easily" செயலியைப் பதிவிறக்கம் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!`;
+          ? `🌟 I scored ${state.score}/${totalQuestions} in 10th Social Science Map Practice (${lesson.titleEnglish}) on Vunnal Mudiyum!\n\n📢 10th standard students, to learn all lessons easily, download Vunnal Mudiyum Learn Easily App, get good marks. Share to your classmates also. All the best!\n\n📲 Download App Link:\n👉 ${appDownloadUrl}`
+          : `🌟 உன்னால் முடியும் செயலியில் 10-ஆம் வகுப்பு சமூக அறிவியல் வரைபடப் பயிற்சியில் (${lesson.titleTamil}) நான் ${state.score}/${totalQuestions} மதிப்பெண்கள் பெற்றுள்ளேன்!\n\n📢 10-ஆம் வகுப்பு மாணவச் செல்வங்களே, அனைத்துப் பாடங்களையும் மிக எளிதாகக் கற்று அதிக மதிப்பெண்கள் பெற "உன்னால் முடியும் Learn Easily" செயலியைப் பதிவிறக்கம் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!\n\n📲 செயலி பதிவிறக்க இணைப்பு (App Link):\n👉 ${appDownloadUrl}`;
 
         const shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
 
         container.innerHTML = `
-          <div class="map-quiz-card" style="background:#0b1329; border-radius:16px; padding:16px; color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, sans-serif; max-width:650px; margin:0 auto;">
+          <div class="map-quiz-card" style="background:#0b1329; border-radius:14px; padding:12px 14px; color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, sans-serif; max-width:620px; margin:0 auto;">
             
             <!-- Scorecard Banner -->
-            <div style="text-align:center; padding:22px 16px; background:linear-gradient(135deg, rgba(15,23,42,0.9), rgba(30,41,59,0.9)); border:2px solid ${badgeColor}; border-radius:16px; margin-bottom:14px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
-              <div style="font-size:38px; margin-bottom:4px;">🏆</div>
-              <h2 style="margin:0 0 6px 0; font-size:20px; color:${badgeColor};">${praiseTitle}</h2>
-              <div style="font-size:32px; font-weight:900; color:#ffffff; margin-bottom:4px;">
+            <div style="text-align:center; padding:16px 12px; background:linear-gradient(135deg, rgba(15,23,42,0.9), rgba(30,41,59,0.9)); border:2px solid ${badgeColor}; border-radius:12px; margin-bottom:12px; box-shadow:0 8px 24px rgba(0,0,0,0.5);">
+              <div style="font-size:32px; margin-bottom:2px;">🏆</div>
+              <h2 style="margin:0 0 4px 0; font-size:18px; color:${badgeColor};">${praiseTitle}</h2>
+              <div style="font-size:28px; font-weight:900; color:#ffffff; margin-bottom:2px;">
                 ${state.score} / ${totalQuestions}
-                <span style="font-size:15px; color:#94a3b8; font-weight:700;">(${pct}%)</span>
+                <span style="font-size:14px; color:#94a3b8; font-weight:700;">(${pct}%)</span>
               </div>
-              <p style="margin:0; font-size:13.5px; color:#cbd5e1; line-height:1.5;">${praiseDesc}</p>
+              <p style="margin:0; font-size:12.5px; color:#cbd5e1; line-height:1.4;">${praiseDesc}</p>
             </div>
 
-            <!-- Voice Narration Outro Message Card -->
-            <div style="background:linear-gradient(135deg, rgba(2,132,199,0.15), rgba(16,185,129,0.15)); border:2px solid #0284c7; border-radius:14px; padding:16px; margin-bottom:16px; text-align:center;">
-              <div style="font-size:24px; margin-bottom:6px;">📢</div>
-              <div style="font-size:13.5px; font-weight:800; color:#38bdf8; line-height:1.6; margin-bottom:12px;">
+            <!-- Voice Narration Outro Message Card with App Link -->
+            <div style="background:linear-gradient(135deg, rgba(2,132,199,0.15), rgba(16,185,129,0.15)); border:2px solid #0284c7; border-radius:12px; padding:12px 14px; margin-bottom:12px; text-align:center;">
+              <div style="font-size:20px; margin-bottom:4px;">📢</div>
+              <div style="font-size:13px; font-weight:800; color:#38bdf8; line-height:1.5; margin-bottom:10px;">
                 ${outroText}
               </div>
-              <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
-                <button type="button" onclick="MapPracticeEvaluator.speakCompletionVoice('${containerId}')" style="background:#0284c7; color:#fff; border:none; padding:9px 15px; border-radius:10px; font-size:12.5px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+              <div style="font-size:11.5px; color:#94a3b8; margin-bottom:10px; word-break:break-all;">
+                🔗 <b>App Link:</b> <span style="color:#67e8f9;">${appDownloadUrl}</span>
+              </div>
+              <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+                <button type="button" onclick="MapPracticeEvaluator.speakCompletionVoice('${containerId}')" style="background:#0284c7; color:#fff; border:none; padding:8px 14px; border-radius:8px; font-size:12px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:5px;">
                   🔊 <span>${isEm ? 'Hear Voice Again' : 'குரல் வழியே மீண்டும் கேள்'}</span>
                 </button>
-                <a href="${shareUrl}" target="_blank" rel="noopener noreferrer" style="background:#25d366; color:#ffffff; text-decoration:none; padding:9px 15px; border-radius:10px; font-size:12.5px; font-weight:800; display:inline-flex; align-items:center; gap:6px;">
-                  📲 <span>${isEm ? 'Share to Classmates' : 'தோழர்களுடன் பகிர்'}</span>
+                <a href="${shareUrl}" target="_blank" rel="noopener noreferrer" style="background:#25d366; color:#ffffff; text-decoration:none; padding:8px 14px; border-radius:8px; font-size:12px; font-weight:800; display:inline-flex; align-items:center; gap:5px; box-shadow:0 3px 8px rgba(37,211,102,0.35);">
+                  📲 <span>${isEm ? 'Share with App Link' : 'செயலி இணைப்புடன் பகிருங்கள்'}</span>
                 </a>
               </div>
             </div>
 
             <!-- Review List of Places -->
-            <h4 style="margin:0 0 10px 0; font-size:13px; color:#94a3b8; text-transform:uppercase; letter-spacing:1px;">
+            <h4 style="margin:0 0 8px 0; font-size:12px; color:#94a3b8; text-transform:uppercase; letter-spacing:1px;">
               ${isEm ? `Review ${lesson.titleEnglish} (${totalQuestions} Places):` : `${lesson.titleTamil} (${totalQuestions} இடங்களின் சுருக்கம்):`}
             </h4>
-            <div style="max-height:240px; overflow-y:auto; margin-bottom:16px;">
+            <div style="max-height:180px; overflow-y:auto; margin-bottom:12px;">
               ${summaryItemsHtml}
             </div>
 
             <!-- Action Buttons -->
-            <div style="display:flex; gap:10px;">
-              <button type="button" onclick="MapPracticeEvaluator.restartLesson('${containerId}')" style="flex:1; padding:12px; background:linear-gradient(135deg, #0284c7, #0369a1); color:#fff; border:none; border-radius:12px; font-size:14px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
+            <div style="display:flex; gap:8px;">
+              <button type="button" onclick="MapPracticeEvaluator.restartLesson('${containerId}')" style="flex:1; padding:10px; background:linear-gradient(135deg, #0284c7, #0369a1); color:#fff; border:none; border-radius:10px; font-size:13.5px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
                 <span>🔄</span> <span>${isEm ? 'Practice Again' : 'மீண்டும் பயிற்சி செய்'}</span>
               </button>
             </div>
@@ -1433,12 +1479,12 @@
         }
 
         return `
-          <button type="button" class="quiz-option-btn" ${state.evaluated ? 'disabled' : ''} onclick="MapPracticeEvaluator.handleOptionSelect('${containerId}', ${d.num})" style="width:100%; padding:14px 16px; margin-bottom:10px; background:${btnBg}; border:2px solid ${btnBorder}; border-radius:12px; color:${btnColor}; font-size:15px; font-weight:800; cursor:${state.evaluated ? 'default' : 'pointer'}; display:flex; align-items:center; justify-content:space-between; transition:all 0.15s ease; box-shadow:0 3px 10px rgba(0,0,0,0.2);">
-            <div style="display:flex; align-items:center; gap:10px;">
-              <span style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:${d.num === 1 ? '#0284c7' : d.num === 2 ? '#f59e0b' : '#8b5cf6'}; color:#ffffff; font-size:14px; font-weight:900;">${d.num}</span>
+          <button type="button" class="quiz-option-btn" ${state.evaluated ? 'disabled' : ''} onclick="MapPracticeEvaluator.handleOptionSelect('${containerId}', ${d.num})" style="width:100%; padding:10px 14px; margin-bottom:7px; background:${btnBg}; border:2px solid ${btnBorder}; border-radius:10px; color:${btnColor}; font-size:14px; font-weight:800; cursor:${state.evaluated ? 'default' : 'pointer'}; display:flex; align-items:center; justify-content:space-between; transition:all 0.15s ease; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:${d.num === 1 ? '#0284c7' : d.num === 2 ? '#f59e0b' : '#8b5cf6'}; color:#ffffff; font-size:12px; font-weight:900;">${d.num}</span>
               <span>${pointLabel}</span>
             </div>
-            ${statusBadge ? `<span style="font-size:13px; font-weight:900; background:rgba(0,0,0,0.2); padding:3px 8px; border-radius:6px;">${statusBadge}</span>` : ''}
+            ${statusBadge ? `<span style="font-size:12px; font-weight:900; background:rgba(0,0,0,0.2); padding:2px 6px; border-radius:5px;">${statusBadge}</span>` : ''}
           </button>
         `;
       }).join('');
@@ -1451,16 +1497,16 @@
         const isRight = chosen && chosen.isCorrect;
 
         feedbackHtml = `
-          <div style="margin-top:12px; padding:14px; background:${isRight ? 'rgba(16,185,129,0.15)' : 'rgba(239,68,68,0.15)'}; border:1.5px solid ${isRight ? '#10b981' : '#ef4444'}; border-radius:12px; color:#f8fafc;">
-            <div style="display:flex; align-items:center; gap:8px; font-size:15px; font-weight:900; color:${isRight ? '#34d399' : '#f87171'}; margin-bottom:6px;">
+          <div style="margin-top:8px; padding:10px 12px; background:${isRight ? 'rgba(16,185,129,0.15)' : 'rgba(239,68,68,0.15)'}; border:1.5px solid ${isRight ? '#10b981' : '#ef4444'}; border-radius:10px; color:#f8fafc;">
+            <div style="display:flex; align-items:center; gap:6px; font-size:13.5px; font-weight:900; color:${isRight ? '#34d399' : '#f87171'}; margin-bottom:4px;">
               <span>${isRight ? '🎉' : '⚠️'}</span>
               <span>${isRight ? (isEm ? 'Correct Answer!' : 'சரியான விடை!') : (isEm ? `Incorrect! Correct option is [Location ${correctOne.num}]` : `தவறானது! சரியான விடை: [இடம் ${correctOne.num}]`)}</span>
             </div>
-            <div style="font-size:13px; line-height:1.6; color:#e2e8f0;">
+            <div style="font-size:12px; line-height:1.5; color:#e2e8f0;">
               <b>💡 ${isEm ? 'Exam Tip:' : 'தேர்வுக் குறிப்பு:'}</b> ${isEm ? curQ.tipEnglish : curQ.tipTamil}
             </div>
-            <div style="margin-top:12px;">
-              <button type="button" onclick="MapPracticeEvaluator.nextQuestion('${containerId}')" style="width:100%; padding:12px; background:linear-gradient(135deg, #10b981, #059669); color:#fff; border:none; border-radius:10px; font-size:14.5px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 4px 16px rgba(16,185,129,0.4);">
+            <div style="margin-top:8px;">
+              <button type="button" onclick="MapPracticeEvaluator.nextQuestion('${containerId}')" style="width:100%; padding:10px; background:linear-gradient(135deg, #10b981, #059669); color:#fff; border:none; border-radius:8px; font-size:13.5px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; box-shadow:0 3px 12px rgba(16,185,129,0.35);">
                 <span>${curIdx < totalQuestions - 1 ? (isEm ? 'Next Question ➔' : 'அடுத்த கேள்வி ➔') : (isEm ? 'View Scorecard 🏆' : 'மதிப்பெண்களைப் பார் 🏆')}</span>
               </button>
             </div>
@@ -1469,27 +1515,32 @@
       }
 
       container.innerHTML = `
-        <div class="map-quiz-card" style="background:#0b1329; border-radius:16px; padding:14px; color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, sans-serif; max-width:650px; margin:0 auto;">
+        <div class="map-quiz-card" style="background:#0b1329; border-radius:14px; padding:10px 12px; color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, sans-serif; max-width:620px; margin:0 auto;">
 
-          <!-- Question Header Banner -->
-          <div style="background:#1e293b; border-radius:12px; padding:12px 14px; margin-bottom:12px; border:1px solid #334155;">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
-              <span style="font-size:12px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:1px;">
-                ${isEm ? lesson.titleEnglish : lesson.titleTamil} • ${isEm ? `Question ${curIdx + 1} of ${totalQuestions}` : `கேள்வி ${curIdx + 1} / ${totalQuestions}`}
-              </span>
-              <span style="font-size:12px; font-weight:800; background:#0f172a; color:#10b981; padding:2px 8px; border-radius:12px; border:1px solid #10b981;">
-                ${isEm ? `Score: ${state.score}` : `மதிப்பெண்: ${state.score}`}
-              </span>
+          <!-- Question Header Banner with Voice Narrator Button -->
+          <div style="background:#1e293b; border-radius:10px; padding:8px 12px; margin-bottom:8px; border:1px solid #334155; display:flex; align-items:center; justify-content:space-between; gap:8px;">
+            <div style="flex:1; min-width:0;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:2px;">
+                <span style="font-size:11px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:0.5px;">
+                  ${isEm ? lesson.titleEnglish : lesson.titleTamil} • ${isEm ? `Q ${curIdx + 1} of ${totalQuestions}` : `கேள்வி ${curIdx + 1} / ${totalQuestions}`}
+                </span>
+                <span style="font-size:11px; font-weight:800; background:#0f172a; color:#10b981; padding:2px 7px; border-radius:10px; border:1px solid #10b981;">
+                  ${isEm ? `Score: ${state.score}` : `மதிப்பெண்: ${state.score}`}
+                </span>
+              </div>
+              <div style="font-size:14px; font-weight:900; color:#f8fafc; line-height:1.3;">
+                ${isEm 
+                  ? `<span style="color:#38bdf8;">"${curQ.nameEnglish}"</span> is marked in 3 places. Choose the correct number:` 
+                  : `<span style="color:#38bdf8;">"${curQ.nameTamil}"</span> 3 இடங்களில் குறிக்கப்பட்டுள்ளது. சரியான எண்ணைத் தேர்வு செய்க:`}
+              </div>
             </div>
-            <div style="font-size:16px; font-weight:900; color:#f8fafc; line-height:1.4;">
-              ${isEm 
-                ? `Which marked location (1, 2, or 3) is <span style="color:#38bdf8; text-decoration:underline;">"${curQ.nameEnglish}"</span>?` 
-                : `வரைபடத்தில் 1, 2, 3 எண்களில் எது <span style="color:#38bdf8; text-decoration:underline;">"${curQ.nameTamil}"</span> அமைவிடம்?`}
-            </div>
+            <button type="button" onclick="MapPracticeEvaluator.speakCurrentQuestion('${containerId}')" style="background:#0284c7; color:#fff; border:none; width:34px; height:34px; border-radius:50%; font-size:15px; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:0 2px 8px rgba(2,132,199,0.4);" title="${isEm ? 'Hear Question Voice' : 'வினாவை குரல் வழியே மீண்டும் கேள்'}">
+              🔊
+            </button>
           </div>
 
-          <!-- SVG MAP STAGE (Responsive) -->
-          <div class="quiz-map-stage" style="width:100%; max-height:420px; overflow:hidden; border-radius:12px; border:2px solid #1e293b; margin-bottom:12px; display:flex; justify-content:center; background:#ffffff;">
+          <!-- SVG MAP STAGE (Compact & Responsive - Zero Long Scrolling) -->
+          <div class="quiz-map-stage" style="width:100%; height:270px; max-height:270px; overflow:hidden; border-radius:10px; border:2px solid #1e293b; margin-bottom:8px; display:flex; justify-content:center; align-items:center; background:#ffffff;">
             ${mapHtml}
           </div>
 

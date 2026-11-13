@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -186,8 +186,8 @@
 <script src="data_social_u12.js?v=20261111_v67"></script>
 <script src="data_social_em_u11.js?v=20261111_v67"></script>
 <script src="data_social_em_u12.js?v=20261111_v67"></script>
-<script src="map_data_and_engine.js?v=20261113_v71"></script>
-<script src="map_practice_evaluator.js?v=20261113_v71"></script>
+<script src="map_data_and_engine.js?v=20261113_v72"></script>
+<script src="map_practice_evaluator.js?v=20261113_v72"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -4145,87 +4145,6 @@
     </div>
   </div>
 
-  <!-- Doubt Modal (Ask Doubt via Email + Mobile Number for Direct Link) -->
-  <div id="doubtModal" class="modal-overlay" onclick="closeDoubtModal()">
-    <div class="modal-content" onclick="event.stopPropagation()" style="max-width: 520px; border-radius: 16px;">
-      <div class="modal-header">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <span style="font-size:20px;">💬</span>
-          <h3 id="doubtModalTitle" style="font-size:15px; font-weight:800; margin:0; color:var(--text-main);">சந்தேகம் கேட்க (Ask Doubt)</h3>
-        </div>
-        <button class="modal-close-btn" onclick="closeDoubtModal()" title="Close">✕</button>
-      </div>
-      <div class="modal-body" style="padding: 18px 20px; overflow-y: auto;">
-        <div id="doubtQuestionPreview" style="background:var(--bg-page); border:1px solid var(--border); border-radius:10px; padding:12px; font-size:13.5px; line-height:1.5; margin-bottom:14px;">
-          <!-- Injected dynamically -->
-        </div>
-
-        <div style="margin-bottom:14px;">
-          <label id="doubtPhoneLabel" style="display:block; font-size:12.5px; font-weight:700; color:var(--text-muted); margin-bottom:6px;">
-            📱 உங்கள் கைபேசி எண் (வாட்ஸ்அப்):
-          </label>
-          <input type="tel" id="doubtStudentPhone" placeholder="எ.கா: 9876543210" style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-main); font-size:14px; font-weight:600; box-sizing:border-box;">
-          <div id="doubtPhoneHint" style="font-size:11.5px; color:var(--text-muted); margin-top:4px;">
-            ஆசிரியர் உங்கள் சந்தேகத்தை விளக்கி இந்த வினாவிற்கான நேரடி இணைப்பை உங்கள் கைபேசிக்கு அனுப்புவார்.
-          </div>
-        </div>
-
-        <div style="margin-bottom:14px;">
-          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
-            <label id="doubtDescLabel" style="font-size:12.5px; font-weight:700; color:var(--text-muted); margin:0;">
-              ✍️ உங்கள் சந்தேகம் / விளக்கம் தேவைப்படும் படிநிலை:
-            </label>
-            <div style="display:flex; align-items:center; gap:6px;">
-              <button type="button" class="doubt-mode-btn active" id="doubtModeNormal" onclick="setDoubtTypingMode('normal')">
-                ✍️ நேரடி தட்டச்சு
-              </button>
-              <button type="button" class="doubt-mode-btn" id="doubtModeTanglish" onclick="setDoubtTypingMode('tanglish')">
-                🔤 தங்க்லீஷ் (Tanglish)
-              </button>
-            </div>
-          </div>
-
-          <!-- Quick Doubt Chips -->
-          <div id="doubtQuickChipsContainer" style="margin-bottom:8px;">
-            <!-- Rendered dynamically -->
-          </div>
-
-          <!-- Tanglish Helper Info & Live Convert Toggle -->
-          <div id="tanglishHelperBar" style="display:none; background:#eff6ff; border:1px solid #bfdbfe; border-radius:8px; padding:10px 12px; margin-bottom:10px; font-size:12px; color:#1e40af;">
-            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
-              <div style="display:flex; align-items:center; gap:6px;">
-                <span style="font-size:16px;">💡</span>
-                <span id="tanglishHelperText"><strong>தங்க்லீஷ் முறை:</strong> ஆங்கில எழுத்துக்களில் எளிதாக தட்டச்சு செய்யலாம். (எ.கா: <em>indha step puriyala sir</em>)</span>
-              </div>
-              <div style="display:flex; align-items:center; gap:8px;">
-                <label style="display:inline-flex; align-items:center; gap:4px; cursor:pointer; font-weight:700; color:#1d4ed8; user-select:none; font-size:11.5px;">
-                  <input type="checkbox" id="tanglishLiveConvert" checked style="cursor:pointer;">
-                  <span id="tanglishLiveLabel">நேரடி தமிழ் மாற்றம் (Live Convert)</span>
-                </label>
-                <button type="button" id="tanglishConvertBtn" onclick="convertDoubtTextToTamil()" style="font-size:11.5px; padding:3px 10px; background:#2563eb; color:#fff; border:none; border-radius:6px; font-weight:700; cursor:pointer;">
-                  ✨ தமிழுக்கு மாற்று
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <textarea id="doubtStudentText" rows="3" placeholder="இங்கு உங்கள் சந்தேகத்தை எழுதவும்..." style="width:100%; padding:10px 14px; border-radius:8px; border:1px solid var(--border); background:var(--bg-card); color:var(--text-main); font-size:13.5px; resize:vertical; box-sizing:border-box; font-family:inherit;" oninput="handleDoubtInput(this, event)"></textarea>
-        </div>
-
-        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:10px 12px; font-size:12px; color:#166534; display:flex; gap:8px; align-items:flex-start;">
-          <span style="font-size:16px;">📧</span>
-          <span id="doubtSendNote">உங்கள் சந்தேகம் <strong>simplealwaysrwin@gmail.com</strong> என்ற ஆசிரியர் மின்னஞ்சலுக்கு அனுப்பப்படும்.</span>
-        </div>
-      </div>
-      <div class="modal-footer" style="padding:12px 20px; justify-content:flex-end; gap:10px;">
-        <button type="button" class="tab-btn" onclick="closeDoubtModal()" id="doubtCancelBtn" style="padding:8px 16px; font-weight:700;">ரத்து</button>
-        <button type="button" class="tab-btn" onclick="sendDoubtMail()" id="doubtSubmitBtn" style="background:var(--primary); color:#fff; font-weight:800; padding:8px 20px; border-radius:8px; display:inline-flex; align-items:center; gap:6px;">
-          <span>✉️ மின்னஞ்சல் அனுப்புக</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
   <!-- In-App Distraction-Free Video Modal (WhatsApp-style In-App Playback, No YouTube Next Content) -->
   <div id="inAppVideoModal" class="modal-overlay" onclick="closeInAppVideoModal()">
     <div class="modal-content" onclick="event.stopPropagation()" style="max-width: 720px; width: 95%; border-radius: 16px; overflow: hidden; background: #0f172a; border: 1.5px solid #334155; box-shadow: 0 20px 40px rgba(0,0,0,0.7);">
@@ -7697,7 +7616,26 @@
                 <div style="display:flex; align-items:flex-start; flex-direction:column; flex:1;">
                   <div style="display:flex; align-items:flex-start; width:100%;">
                     <span class="q-num" style="font-size:${contentFontSize}px;">Q${displayQNum}.${isFiltered ? `<span style="font-size:11px; font-weight:600; color:var(--text-muted); margin-left:3px;" title="பாடத்தில் மொத்த வினா எண்">(#${masterQNum})</span>` : ''}</span>
-                    <div class="q-text" style="font-size:${contentFontSize + 1}px;">${cleanMathEncoding(item.q)}</div>
+                    <div class="q-text" style="font-size:${contentFontSize + 1}px;">
+                      ${(() => {
+                        const isMapQ = (item.id && item.id.includes('map')) || (item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்')));
+                        if (isMapQ) {
+                          const qShort = item.q.split('<br>')[0] || item.q;
+                          return `
+                            <div style="font-weight:800; color:var(--text-main); margin-bottom:6px;">
+                              🗺️ ${cleanMathEncoding(qShort)}
+                            </div>
+                            <div style="margin:8px 0;">
+                              <button type="button" class="tab-btn" onclick="openAnswerEvaluationModal('${item.id}')" style="background:linear-gradient(135deg, #0284c7, #0369a1); color:#fff; font-weight:800; font-size:13px; padding:8px 16px; border-radius:20px; border:none; cursor:pointer; box-shadow:0 3px 10px rgba(2,132,199,0.3); display:inline-flex; align-items:center; gap:6px;">
+                                <span>🎯</span>
+                                <span>${isEm || isEnglish ? 'Start 1, 2, 3 Map Quiz (8 Places) ➔' : '1, 2, 3 வரைபட வினாடி வினா தொடங்கு (8 இடங்கள்) ➔'}</span>
+                              </button>
+                            </div>
+                          `;
+                        }
+                        return cleanMathEncoding(item.q);
+                      })()}
+                    </div>
                   </div>
                   ${(item.qTamil && !isEm && !isEnglish) ? `
                     <div style="font-size:${contentFontSize - 2}px; color:#1d4ed8; background:#eff6ff; padding:3px 8px; border-radius:6px; margin:6px 0 0 32px; font-weight:600; display:inline-block; border:1px solid #dbeafe;">
@@ -7880,8 +7818,36 @@
                       </div>
                     </div>
                   ` : `
-                    <span class="ans-label">${isEm || isEnglish ? 'Answer:' : (isTm ? '\u0BB5\u0BBF\u0B9F\u0BC8:' : '\u0BB5\u0BBF\u0B9F\u0BC8 (Answer):')}</span><br>
-                    <div>${cleanMathEncoding(item.ans)}</div>
+                    ${(() => {
+                      const isMapQ = (item.id && item.id.includes('map')) || (item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்')));
+                      if (isMapQ) {
+                        return `
+                          <div style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:10px 14px; margin-bottom:8px;">
+                            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+                              <div style="font-size:13px; font-weight:700; color:#0369a1; display:flex; align-items:center; gap:6px;">
+                                <span>📍</span>
+                                <span>${isEm || isEnglish ? 'Objective Map Practice: Identify places marked 1, 2, 3' : 'குறிக்கோள் வரைபடப் பயிற்சி: 1, 2, 3 என குறிக்கப்பட்ட இடங்களை தேர்வு செய்க'}</span>
+                              </div>
+                              <button type="button" onclick="openAnswerEvaluationModal('${item.id}')" style="background:#0284c7; color:#fff; border:none; border-radius:8px; padding:6px 14px; font-size:12px; font-weight:800; cursor:pointer;">
+                                ${isEm || isEnglish ? 'Open Interactive Map ➔' : 'ஊடாடும் வரைபடம் திற ➔'}
+                              </button>
+                            </div>
+                            <details style="margin-top:10px; font-size:12.5px; border-top:1px dashed #cbd5e1; padding-top:8px;">
+                              <summary style="font-weight:700; color:#475569; cursor:pointer; user-select:none;">
+                                📖 ${isEm || isEnglish ? 'View Full Written Notes & Marking Guide ▾' : 'முழு பாடக் குறிப்புகள் மற்றும் வழிகாட்டலைக் காண (சுருக்கப்பட்டது) ▾'}
+                              </summary>
+                              <div style="margin-top:8px; line-height:1.7; color:#334155;">
+                                ${cleanMathEncoding(item.ans)}
+                              </div>
+                            </details>
+                          </div>
+                        `;
+                      }
+                      return `
+                        <span class="ans-label">${isEm || isEnglish ? 'Answer:' : (isTm ? 'விடை:' : 'விடை (Answer):')}</span><br>
+                        <div>${cleanMathEncoding(item.ans)}</div>
+                      `;
+                    })()}
                   `}
 
 
@@ -7925,23 +7891,46 @@
                     </div>
                   ` : ''}
 
-                  ${item.diagramImg ? `
-                    <div class="diagram-box">
-                      <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
-                        <span style="display:inline-flex; align-items:center; gap:6px;">🎨 ${isEm || isEnglish ? 'Textbook Illustration' : (isTm ? 'பாட வரைபடம்' : 'பாட வரைபடம் (Textbook Illustration)')}</span>
-                        <button type="button" class="zoom-btn" onclick="openImageModalFromWrap(this.closest('.diagram-box').querySelector('.diagram-img-wrap'))" style="padding:4px 12px; font-size:11.5px; font-weight:800; background:rgba(2,132,199,0.12); color:#0284c7; border:1px solid #0284c7; border-radius:12px; cursor:pointer;" title="${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'முழுத்திரையில் பெரிதாக்குக'}">
-                          🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாக்குக (Zoom)'}
-                        </button>
-                      </div>
-                      <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
-                        <img src="${((isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png') ? 'images/math_bb_ex1_4_en.png' : (item.diagramImg && item.diagramImg.startsWith('images/soc_') ? item.diagramImg.replace('images/', '') : item.diagramImg)}" alt="${(item.diagramCaption || item.q || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" class="diagram-img" onerror="handleDiagramImgError(this)" onclick="openImageModalFromWrap(this)">
-                        <div class="diagram-zoom-hint" onclick="openImageModalFromWrap(this)">
-                          <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
+                                    ${item.diagramImg ? `
+                    ${(() => {
+                      const isMapQ = (item.id && item.id.includes('map')) || (item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்')));
+                      const imgSrc = ((isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png') ? 'images/math_bb_ex1_4_en.png' : (item.diagramImg && item.diagramImg.startsWith('images/soc_') ? item.diagramImg.replace('images/', '') : item.diagramImg);
+                      const caption = item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்');
+                      if (isMapQ) {
+                        return `
+                          <details style="margin:10px 0; background:var(--bg-page); border:1px solid var(--border); border-radius:8px; padding:8px 12px;">
+                            <summary style="font-weight:700; color:var(--primary); font-size:13px; cursor:pointer; user-select:none;">
+                              🖼️ ${isEm || isEnglish ? 'View Textbook Map Image (Optional) ▾' : 'பாடப்புத்தக மாதிரி வரைபடத்தைக் காண (சுருக்கப்பட்டது) ▾'}
+                            </summary>
+                            <div class="diagram-box" style="margin-top:10px;">
+                              <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
+                                <img src="${imgSrc}" alt="${caption.replace(/"/g, '&quot;')}" class="diagram-img" onerror="handleDiagramImgError(this)" onclick="openImageModalFromWrap(this)">
+                              </div>
+                              <div class="diagram-caption">${caption}</div>
+                            </div>
+                          </details>
+                        `;
+                      }
+                      return `
+                        <div class="diagram-box">
+                          <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
+                            <span style="display:inline-flex; align-items:center; gap:6px;">🎨 ${isEm || isEnglish ? 'Textbook Illustration' : (isTm ? 'பாட வரைபடம்' : 'பாட வரைபடம் (Textbook Illustration)')}</span>
+                            <button type="button" class="zoom-btn" onclick="openImageModalFromWrap(this.closest('.diagram-box').querySelector('.diagram-img-wrap'))" style="padding:4px 12px; font-size:11.5px; font-weight:800; background:rgba(2,132,199,0.12); color:#0284c7; border:1px solid #0284c7; border-radius:12px; cursor:pointer;" title="${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'முழுத்திரையில் பெரிதாக்குக'}">
+                              🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாக்குக (Zoom)'}
+                            </button>
+                          </div>
+                          <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
+                            <img src="${imgSrc}" alt="${caption.replace(/"/g, '&quot;')}" class="diagram-img" onerror="handleDiagramImgError(this)" onclick="openImageModalFromWrap(this)">
+                            <div class="diagram-zoom-hint" onclick="openImageModalFromWrap(this)">
+                              <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
+                            </div>
+                          </div>
+                          <div class="diagram-caption">${caption}</div>
                         </div>
-                      </div>
-                      <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
-                    </div>
+                      `;
+                    })()}
                   ` : item.diagramSvg ? `
+
                     <div class="diagram-box">
                       ${item.diagramSvg}
                       <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
@@ -8102,27 +8091,7 @@
 
       ${buildBookPaginationBar('bottom')}
 
-      <!-- Dedicated Lesson Doubt Card (at the end of every lesson) -->
-      <div class="lesson-doubt-card" style="margin-top:24px; margin-bottom:16px; background:linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%); border:2px dashed #3b82f6; border-radius:14px; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; box-shadow:0 4px 14px rgba(59, 130, 246, 0.08);">
-        <div style="flex:1; min-width:260px;">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <span style="font-size:24px;">💬</span>
-            <h3 style="margin:0; font-size:16px; font-weight:800; color:#1e40af;">
-              ${isEm || isEnglish ? 'Have any doubts in this lesson?' : 'இந்தப் பாடம் பற்றிய சந்தேகங்கள் உள்ளதா?'}
-            </h3>
-          </div>
-          <p style="margin:6px 0 0 0; font-size:13px; color:#334155; line-height:1.5;">
-            ${isEm || isEnglish
-              ? `Need extra explanation for any question, formula, or concept in ${currentLesson.title}? You can ask the teacher directly!`
-              : `${currentLesson.title} பாடத்தில் உள்ள ஏதேனும் வினா, சூத்திரம் அல்லது படிநிலைகள் பற்றிய உங்கள் சந்தேகங்களை ஆசிரியரிடம் நேரடியாகக் கேட்டுத் தெளிவுபெறலாம்.`}
-          </p>
-        </div>
-        <button type="button" class="tab-btn" onclick="openLessonDoubtModal()" style="background:linear-gradient(135deg, #2563eb, #1d4ed8); color:#ffffff; font-weight:800; font-size:14px; padding:10px 22px; border-radius:24px; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:8px; box-shadow:0 4px 12px rgba(37,99,235,0.3); transition:all 0.2s ease;">
-          <span>💬</span>
-          <span>${isEm || isEnglish ? 'Ask Doubt (This Lesson)' : 'இந்தப் பாடம் பற்றிய சந்தேகம் கேட்க'}</span>
-        </button>
-      </div>
-    `;
+      `;
   }
 
   function setFilter(filterType) {
@@ -8764,352 +8733,23 @@
     textarea.focus();
   }
 
-  function openLessonDoubtModal() {
-    if (!currentLesson || !currentSubject) return;
-    openDoubtModal(null);
-  }
-
-  function openDoubtModal(qId) {
-    if (!currentLesson || !currentSubject) return;
-    let item = null;
-    if (qId && currentLesson.questions) {
-      item = currentLesson.questions.find(q => q.id === qId);
-    }
-    if (!item) {
-      item = {
-        id: currentLesson.id,
-        isLessonDoubt: true,
-        q: `${currentSubject.name} • ${currentLesson.unit}: ${currentLesson.title}`,
-        sectionTitle: `${currentSubject.name} - ${currentLesson.unit}`,
-        mark: `${(currentLesson.questions || []).length} வினாக்கள்`
-      };
-    }
-    currentDoubtItem = item;
-
-    const isEm = currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english');
-
-    // Set Header
-    const titleEl = document.getElementById('doubtModalTitle');
-    if (titleEl) {
-      titleEl.textContent = isEm ? 'Ask Doubt to Teacher' : 'ஆசிரியரிடம் சந்தேகம் கேட்க';
-    }
-
-    // Set Question Preview
-    const previewEl = document.getElementById('doubtQuestionPreview');
-    if (previewEl) {
-      if (item.isLessonDoubt) {
-        previewEl.innerHTML = `
-          <div style="font-size:12px; font-weight:800; color:var(--primary); margin-bottom:4px;">
-            📘 ${currentSubject.name} • ${currentLesson.unit}
-          </div>
-          <div style="font-weight:800; color:var(--text-main); font-size:15px; margin-bottom:6px;">
-            ${currentLesson.title}
-          </div>
-          <div style="font-size:12px; color:var(--text-muted); line-height:1.4;">
-            ${isEm 
-              ? 'Ask any questions, step doubts, or exam tips regarding this entire lesson.' 
-              : 'இப்பாடம் தொடர்பான உங்கள் பொதுவான சந்தேகங்கள், கடினமான வினாக்கள் அல்லது சூத்திரங்களை விரிவாக எழுதி ஆசிரியரிடம் கேட்கலாம்.'}
-          </div>
-        `;
-      } else {
-        previewEl.innerHTML = `
-          <div style="font-size:12px; font-weight:700; color:var(--primary); margin-bottom:4px;">
-            ${item.sectionTitle || currentLesson.title}
-          </div>
-          <div style="font-weight:700; color:var(--text-main); font-size:14px; margin-bottom:4px;">
-            ${item.q}
-          </div>
-          <div style="font-size:11.5px; color:var(--text-muted);">
-            ${isEm ? 'Question ID:' : 'வினா எண்:'} <strong>${item.id}</strong> | ${item.mark}
-          </div>
-        `;
-      }
-    }
-
-    // Set Labels and Placeholders according to language
-    const phoneLabel = document.getElementById('doubtPhoneLabel');
-    const phoneInput = document.getElementById('doubtStudentPhone');
-    const phoneHint = document.getElementById('doubtPhoneHint');
-    const descLabel = document.getElementById('doubtDescLabel');
-    const descText = document.getElementById('doubtStudentText');
-    const sendNote = document.getElementById('doubtSendNote');
-    const cancelBtn = document.getElementById('doubtCancelBtn');
-    const submitBtn = document.getElementById('doubtSubmitBtn');
-    const modeNormal = document.getElementById('doubtModeNormal');
-    const modeTanglish = document.getElementById('doubtModeTanglish');
-    const helperText = document.getElementById('tanglishHelperText');
-    const liveLabel = document.getElementById('tanglishLiveLabel');
-    const convertBtn = document.getElementById('tanglishConvertBtn');
-
-    if (phoneLabel) phoneLabel.textContent = isEm ? '📱 Your Mobile / WhatsApp Number:' : '📱 உங்கள் கைபேசி எண் (வாட்ஸ்அப்):';
-    if (phoneInput) {
-      phoneInput.placeholder = isEm ? 'e.g. 9876543210' : 'எ.கா: 9876543210';
-      const savedPhone = localStorage.getItem('vm_student_phone');
-      if (savedPhone) phoneInput.value = savedPhone;
-    }
-    if (phoneHint) {
-      phoneHint.textContent = isEm 
-        ? 'The teacher will review your doubt and send a personal explanation with direct link to your mobile.'
-        : 'ஆசிரியர் உங்கள் சந்தேகத்தை விளக்கி இந்த வினாவிற்கான நேரடி இணைப்பை உங்கள் கைபேசிக்கு அனுப்புவார்.';
-    }
-    if (descLabel) descLabel.textContent = isEm ? '✍️ Your Doubt / Specific Step needing explanation:' : '✍️ உங்கள் சந்தேகம் / விளக்கம் தேவைப்படும் படிநிலை:';
-    if (descText) {
-      descText.placeholder = isEm ? 'Type your doubt or question here...' : 'உங்களுக்குப் புரியாத படிநிலை அல்லது சந்தேகத்தை இங்கே எழுதவும்...';
-      descText.value = '';
-    }
-    if (sendNote) {
-      sendNote.innerHTML = isEm 
-        ? 'Your doubt will be sent directly to teacher email at <strong>simplealwaysrwin@gmail.com</strong>.'
-        : 'உங்கள் சந்தேகம் நேரடியாக <strong>simplealwaysrwin@gmail.com</strong> என்ற ஆசிரியர் மின்னஞ்சலுக்கு அனுப்பப்படும்.';
-    }
-    if (cancelBtn) cancelBtn.textContent = isEm ? 'Cancel' : 'ரத்து';
-    if (submitBtn) submitBtn.innerHTML = isEm ? '<span>✉️ Send via Email</span>' : '<span>✉️ மின்னஞ்சல் அனுப்புக</span>';
-
-    if (modeNormal) modeNormal.textContent = isEm ? '✍️ Direct Typing' : '✍️ நேரடி தட்டச்சு';
-    if (modeTanglish) modeTanglish.textContent = isEm ? '🔤 Tanglish Mode' : '🔤 தங்க்லீஷ் (Tanglish)';
-    if (helperText) {
-      helperText.innerHTML = isEm
-        ? '<strong>Tanglish Mode:</strong> You can type in English phonetics freely. (e.g. <em>indha step puriyala sir</em>)'
-        : '<strong>தங்க்லீஷ் முறை:</strong> ஆங்கில எழுத்துக்களில் எளிதாக தட்டச்சு செய்யலாம். (எ.கா: <em>indha step puriyala sir</em>)';
-    }
-    if (liveLabel) liveLabel.textContent = isEm ? 'Live Convert to Tamil' : 'நேரடி தமிழ் மாற்றம் (Live Convert)';
-    if (convertBtn) convertBtn.textContent = isEm ? '✨ Convert to Tamil' : '✨ தமிழுக்கு மாற்று';
-
-    // Render Quick Doubt Chips
-    const chipsContainer = document.getElementById('doubtQuickChipsContainer');
-    if (chipsContainer) {
-      if (item.isLessonDoubt) {
-        if (isEm) {
-          chipsContainer.innerHTML = `
-            <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:5px;">⚡ Quick Options (Tap to add):</div>
-            <div style="display:flex; flex-wrap:wrap; gap:5px;">
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('Which are the most important 2-mark and 5-mark questions in this lesson?')">📌 Key Exam Questions</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('Please explain the key formulas and core concepts of this lesson.')">📌 Formulas & Rules</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('I need guidance on a difficult exercise problem in this lesson.')">📌 Exercise Guidance</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('How can I score full marks in this lesson in Public Exam?')">📌 Public Exam Tips</button>
-            </div>
-          `;
-        } else {
-          chipsContainer.innerHTML = `
-            <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:5px;">⚡ விரைவுத் தேர்வுகள் (தொட்டு எளிதாகச் சேர்க்கலாம்):</div>
-            <div style="display:flex; flex-wrap:wrap; gap:5px;">
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('இப்பாடத்தின் மிக முக்கியமான 2 மற்றும் 5 மதிப்பெண் வினாக்கள் எவை?')">📌 முக்கிய வினாக்கள்</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('இப்பாடத்தின் அடிப்படைக் கருத்துகள் மற்றும் சூத்திரங்கள் விளக்கம் தேவை.')">📌 சூத்திரங்கள் விளக்கம்</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('இப்பாடத்தின் கடினமான கணக்குகளுக்கு கூடுதல் வழிகாட்டல் தேவை.')">📌 கடின வினாக்கள் உதவி</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('பொதுத்தேர்வில் முழு மதிப்பெண் பெற ஆலோசனைகள் தேவை.')">📌 பொதுத்தேர்வு வழிகாட்டல்</button>
-            </div>
-          `;
-        }
-      } else {
-        if (isEm) {
-          chipsContainer.innerHTML = `
-            <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:5px;">⚡ Quick Options (Tap to add):</div>
-            <div style="display:flex; flex-wrap:wrap; gap:5px;">
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('How was this step calculated?')">📌 Step Calculation</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('Which formula / identity is applied here?')">📌 Formula Explanation</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('Please explain the diagram in detail.')">📌 Diagram Detail</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('Is this question very important for Public Exam?')">📌 Exam Importance</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('Please guide me through the full solution step by step.')">📌 Full Solution</button>
-            </div>
-          `;
-        } else {
-          chipsContainer.innerHTML = `
-            <div style="font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:5px;">⚡ விரைவுத் தேர்வுகள் (தொட்டு எளிதாகச் சேர்க்கலாம்):</div>
-            <div style="display:flex; flex-wrap:wrap; gap:5px;">
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('இந்த படிநிலை எவ்வாறு வந்தது என்று புரியவில்லை.')">📌 படிநிலை புரியவில்லை</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('இங்கு பயன்படுத்தப்பட்டுள்ள சூத்திரம் மற்றும் முறை பற்றி விளக்கம் தேவை.')">📌 சூத்திரம் விளக்கம்</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('இக்கணக்கின் வரைபடத்தை இன்னும் விரிவாக விளக்குங்கள்.')">📌 வரைபடம் புரியவில்லை</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('இவ்வினா அரசுப் பொதுத்தேர்வுக்கு முக்கியமானதா?')">📌 பொதுத்தேர்வுக்கு முக்கியமானதா?</button>
-              <button type="button" class="quick-chip-btn" onclick="addQuickDoubtChip('முழுத் தீர்வையும் கூடுதல் குறிப்புகளுடன் மீண்டும் விளக்குங்கள்.')">📌 முழுத் தீர்வு விளக்கம்</button>
-            </div>
-          `;
-        }
-      }
-    }
-
-    setDoubtTypingMode('normal');
-
-    const modal = document.getElementById('doubtModal');
-    if (modal) modal.classList.add('open');
-  }
-
-  function closeDoubtModal() {
-    const modal = document.getElementById('doubtModal');
-    if (modal) modal.classList.remove('open');
-    currentDoubtItem = null;
-  }
-
-  // -------------------------------------------------------------
-  // In-App Distraction-Free Video Player Controller
-  // Plays YouTube (WhatsApp-style PiP, rel=0, no recommendations) OR Self-Hosted MP4/WebM
-  // -------------------------------------------------------------
-  window.openInAppVideoModal = function(videoSource, title) {
-    if (!videoSource) return;
-    const modal = document.getElementById('inAppVideoModal');
-    const container = document.getElementById('videoModalContainer');
-    const titleEl = document.getElementById('videoModalTitle');
-    if (!modal || !container) return;
-
-    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
-    if (titleEl) {
-      if (title && typeof title === 'string' && title.trim().length > 0) {
-        const cleanHeading = title.replace(/^[^\w\u0B80-\u0BFF]+/, '').trim();
-        titleEl.textContent = cleanHeading || (isEm ? 'Video Solution' : '\u0BB5\u0BC0\u0B9F\u0BBF\u0BAF\u0BCB \u0BA8\u0BC7\u0BB0\u0B9F\u0BBF \u0BB5\u0BBF\u0BB3\u0B95\u0BCD\u0B95\u0BAE\u0BCD');
-      } else {
-        titleEl.textContent = isEm ? 'Video Solution' : '\u0BB5\u0BC0\u0B9F\u0BBF\u0BAF\u0BCB \u0BA8\u0BC7\u0BB0\u0B9F\u0BBF \u0BB5\u0BBF\u0BB3\u0B95\u0BCD\u0B95\u0BAE\u0BCD';
-      }
-    }
-    const subEl = document.getElementById('videoModalSub');
-    if (subEl) {
-      subEl.textContent = isEm ? '\uD83D\uDD12 Ad-Free & Distraction-Free Direct Video' : '\uD83D\uDD12 \u0BB5\u0BBF\u0BB3\u0BAE\u0BCD\u0BAA\u0BB0\u0B99\u0BCD\u0B95\u0BB3\u0BCD / \u0B85\u0B9F\u0BC1\u0BA4\u0BCD\u0BA4 \u0BB5\u0BC0\u0B9F\u0BBF\u0BAF\u0BCB\u0B95\u0BCD\u0B95\u0BB3\u0BCD \u0B85\u0BB1\u0BCD\u0BB1 \u0BA8\u0BC7\u0BB0\u0B9F\u0BBF \u0B87\u0BAF\u0B95\u0BCD\u0B95\u0BAE\u0BCD';
-    }
-
-    // Stop audio players to prevent overlapping sound
-    if (window.teacherAudioPlayer) teacherAudioPlayer.stop();
-    if (window.blackboardPlayer) blackboardPlayer.stop();
-    if (window.continuousAudioPlayer) continuousAudioPlayer.stop();
-
-    // Check if YouTube link (handles youtu.be, youtube.com/watch, embed, shorts)
-    const ytMatch = videoSource.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/);
-    if (ytMatch && ytMatch[1]) {
-      const videoId = ytMatch[1];
-      // WhatsApp-style embedded player with rel=0 (prevents other channels' recommendations) & modestbranding
-      container.innerHTML = `
-        <iframe 
-          src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&controls=1&playsinline=1" 
-          title="Video Player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen 
-          style="position: absolute; top:0; left:0; width:100%; height:100%; border:none;">
-        </iframe>
-      `;
-    } else {
-      // Direct MP4 / WebM video (self-hosted on separate website, Cloudflare R2, or local storage)
-      container.innerHTML = `
-        <video 
-          controls 
-          autoplay 
-          playsinline 
-          controlslist="nodownload" 
-          style="position: absolute; top:0; left:0; width:100%; height:100%; background:#000;">
-          <source src="${videoSource}" type="video/mp4">
-          உங்கள் பிரவுசரில் இந்த வீடியோவை இயக்க இயலவில்லை.
-        </video>
-      `;
-    }
-
-    modal.classList.add('open');
-    modal.classList.add('show');
-  };
-
-  window.closeInAppVideoModal = function() {
-    const modal = document.getElementById('inAppVideoModal');
-    const container = document.getElementById('videoModalContainer');
-    if (container) {
-      // Clear innerHTML immediately terminates YouTube iframe and HTML5 video playback
-      container.innerHTML = '';
-    }
-    if (modal) {
-      modal.classList.remove('open');
-      modal.classList.remove('show');
-    }
-  };
-
-  function sendDoubtMail() {
-    if (!currentDoubtItem || !currentLesson || !currentSubject) return;
-    const isEm = currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english');
-    const phoneInput = document.getElementById('doubtStudentPhone');
-    const descText = document.getElementById('doubtStudentText');
-
-    const phone = phoneInput ? phoneInput.value.trim() : '';
-    const doubt = descText ? descText.value.trim() : '';
-
-    if (!phone) {
-      alert(isEm ? 'Please enter your Mobile / WhatsApp Number so the teacher can reply.' : 'ஆசிரியர் உங்களுக்கு விளக்கம் அனுப்ப உங்கள் கைபேசி எண்ணை உள்ளிடவும்.');
-      if (phoneInput) phoneInput.focus();
-      return;
-    }
-
-    if (!doubt) {
-      alert(isEm ? 'Please describe your doubt or the specific question you need help with.' : 'விளக்கம் தேவைப்படும் உங்கள் சந்தேகத்தை உள்ளிடவும்.');
-      if (descText) descText.focus();
-      return;
-    }
-
-    // Save phone for convenience
-    localStorage.setItem('vm_student_phone', phone);
-
-    // Build Mobile Deep-Link
-    const directLink = currentDoubtItem.isLessonDoubt
-      ? `${window.location.origin}${window.location.pathname}#${currentSubject.id}/${currentLesson.id}`
-      : `${window.location.origin}${window.location.pathname}#${currentSubject.id}/${currentLesson.id}/card_${currentDoubtItem.id}`;
-
-    const adminEmail = 'simplealwaysrwin@gmail.com';
-    const typingModeLabel = currentDoubtTypingMode === 'tanglish' 
-      ? (isEm ? 'Tanglish (Phonetic Typing)' : 'தங்க்லீஷ் (Tanglish முறை)') 
-      : (isEm ? 'English (Direct Typing)' : 'தமிழ் (நேரடி தட்டச்சு)');
-
-    let subject = '';
-    let body = '';
-
-    if (isEm) {
-      subject = currentDoubtItem.isLessonDoubt
-        ? `Student Doubt: ${currentSubject.name} - ${currentLesson.unit} (${currentLesson.title})`
-        : `Student Doubt: ${currentSubject.name} - ${currentLesson.unit} (${currentDoubtItem.id})`;
-
-      body = `STUDENT DOUBT SUBMISSION
-========================================
-Student Mobile / WhatsApp: ${phone}
-Subject: ${currentSubject.name}
-Lesson: ${currentLesson.unit} - ${currentLesson.title}
-Target: ${currentDoubtItem.isLessonDoubt ? 'Full Lesson Query' : 'Question ' + currentDoubtItem.id}
-Typing Mode: ${typingModeLabel}
-
-Doubt / Question Details:
-${doubt}
-
-----------------------------------------
-DIRECT MOBILE LINK FOR TEACHER:
-${directLink}
-========================================`;
-    } else {
-      subject = currentDoubtItem.isLessonDoubt
-        ? `மாணவர் சந்தேகம்: ${currentSubject.name} - ${currentLesson.unit} (${currentLesson.title})`
-        : `மாணவர் சந்தேகம்: ${currentSubject.name} - ${currentLesson.unit} (${currentDoubtItem.id})`;
-
-      body = `மாணவர் சந்தேகம் மற்றும் கூடுதல் வழிகாட்டல்
-========================================
-மாணவர் கைபேசி எண் (வாட்ஸ்அப்): ${phone}
-பாடம்: ${currentSubject.name}
-அலகு: ${currentLesson.unit} - ${currentLesson.title}
-பகுதி: ${currentDoubtItem.isLessonDoubt ? 'முழுப் பாடச் சந்தேகம்' : 'வினா எண் ' + currentDoubtItem.id}
-தட்டச்சு முறை: ${typingModeLabel}
-
-மாணவரின் சந்தேகம் / விளக்கம் தேவைப்படும் பகுதி:
-${doubt}
-
-----------------------------------------
-மாணவரின் கைபேசிக்கான நேரடி இணையதள இணைப்பு:
-${directLink}
-========================================`;
-    }
-
-    const mailtoUrl = `mailto:${adminEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    closeDoubtModal();
-    window.location.href = mailtoUrl;
-  }
+    // Doubt functions disabled - replaced by AI Evaluator
+  function openLessonDoubtModal() {}
+  function openDoubtModal(qId) {}
+  function closeDoubtModal() {}
+  function setDoubtTypingMode() {}
+  function handleDoubtInput() {}
+  function convertDoubtTextToTamil() {}
+  function insertDoubtChip() {}
+  function sendDoubtMail() {}
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeImageModal();
-      closeDoubtModal();
       closeBlackboardModal();
     }
   });
 
-  // -------------------------------------------------------------
   // Screen Wake Lock & Keep-Awake Engine
   // Prevents mobile device display from going to sleep while
   // watching the Blackboard Demonstration or listening to Audio.

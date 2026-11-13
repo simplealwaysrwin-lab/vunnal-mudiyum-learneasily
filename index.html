@@ -186,8 +186,8 @@
 <script src="data_social_u12.js?v=20261111_v67"></script>
 <script src="data_social_em_u11.js?v=20261111_v67"></script>
 <script src="data_social_em_u12.js?v=20261111_v67"></script>
-<script src="map_data_and_engine.js?v=20261113_v70"></script>
-<script src="map_practice_evaluator.js?v=20261113_v70"></script>
+<script src="map_data_and_engine.js?v=20261113_v71"></script>
+<script src="map_practice_evaluator.js?v=20261113_v71"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -3643,6 +3643,9 @@
     max-height: 94vh;
   }
   #aiEvaluatorModal.map-eval-active .eval-question-banner {
+    display: none !important;
+  }
+  #aiEvaluatorModal.map-eval-active #evalModeSwitcherWrap {
     display: none !important;
   }
   @media (max-width: 768px) {
@@ -12509,7 +12512,7 @@ ${directLink}
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261113_v70')
+        navigator.serviceWorker.register('./sw.js?v=20261113_v71')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 
@@ -15644,6 +15647,9 @@ Important:
     const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english')) ||
                  (currentEvalQuestion && currentEvalQuestion.id && currentEvalQuestion.id.includes('_em_'));
 
+    const modeWrap = document.getElementById('evalModeSwitcherWrap');
+    if (modeWrap) modeWrap.style.display = 'none';
+
     if (mode === 'map') {
       if (modal) modal.classList.add('map-eval-active');
       if (modalBox) modalBox.classList.add('map-eval-mode');
@@ -15746,10 +15752,12 @@ Important:
     const modalTitle = document.getElementById('evalModalTitle');
     const modalSub = document.getElementById('evalModalSubtitle');
     const isMap = isMapQuestion(qItem);
+    const modeWrap = document.getElementById('evalModeSwitcherWrap');
+    if (modeWrap) modeWrap.style.display = 'none';
 
     if (modalTitle) {
       modalTitle.innerHTML = isMap
-        ? `<span>🗺️</span> <span>${isEm ? "Class 10 Map Practice & AI Evaluation" : "10-ஆம் வகுப்பு வரைபடப் பயிற்சி & AI மதிப்பீடு"}</span>`
+        ? `<span>🗺️</span> <span>${isEm ? "Class 10 Map Practice (1, 2, 3 Quiz)" : "10-ஆம் வகுப்பு வரைபடப் பயிற்சி (1, 2, 3 வினாடி-வினா)"}</span>`
         : `<span>📝</span> <span>${isEm ? "AI Answer Evaluation" : "AI விடைத்தாள் மதிப்பீடு"}</span>`;
     }
     if (modalSub) {
@@ -15779,6 +15787,16 @@ Important:
       openAnswerEvaluationModal('soc_1_map_1');
     } else if (targetUnit === 'soc_ww2' || targetUnit === 'soc_9') {
       openAnswerEvaluationModal('soc_9_map_1');
+    } else if (targetUnit === 'soc_rivers' || targetUnit === 'soc_2') {
+      openAnswerEvaluationModal('soc_2_map_1');
+    } else if (targetUnit === 'soc_ports' || targetUnit === 'soc_8') {
+      openAnswerEvaluationModal('soc_8_map_1');
+    } else if (targetUnit === 'soc_soils' || targetUnit === 'soc_10') {
+      openAnswerEvaluationModal('soc_10_map_1');
+    } else if (targetUnit === 'soc_climate' || targetUnit === 'soc_6') {
+      openAnswerEvaluationModal('soc_6_map_1');
+    } else if (targetUnit === 'soc_industry' || targetUnit === 'soc_11') {
+      openAnswerEvaluationModal('soc_11_map_1');
     } else {
       openAnswerEvaluationModal('board_model');
     }

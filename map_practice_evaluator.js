@@ -1,4 +1,4 @@
-// =============================================================================
+﻿// =============================================================================
 // 10th Social Science - Interactive 1-2-3 Map Location Quiz & Revision Engine
 // Tamil Nadu State Board Class 10 Social Science Syllabus (Pure UTF-8)
 // Replaces difficult freehand drag/drop with instant 1-2-3 revision quiz
@@ -1137,6 +1137,9 @@
 
   // ---------------------------------------------------------------------------
   // 3. MAP PRACTICE EVALUATOR CONTROLLER (1-2-3 Revision Quiz)
+  
+  // ---------------------------------------------------------------------------
+  // 3. MAP PRACTICE EVALUATOR CONTROLLER (Lesson-Specific • Zero Distraction)
   // ---------------------------------------------------------------------------
 
   const MapPracticeEvaluator = {
@@ -1158,7 +1161,7 @@
         answeredHistory: {},
         evaluated: false,
         selectedOption: null,
-        showTextbookMap: false
+        completed: false
       };
 
       this.render(containerId);
@@ -1175,15 +1178,7 @@
       state.evaluated = false;
       state.selectedOption = null;
       state.completed = false;
-      state.showTextbookMap = false;
 
-      this.render(containerId);
-    },
-
-    toggleTextbookMap(containerId) {
-      const state = this.instances[containerId];
-      if (!state) return;
-      state.showTextbookMap = !state.showTextbookMap;
       this.render(containerId);
     },
 
@@ -1206,13 +1201,14 @@
         isCorrect: isCorrect
       };
 
-      // Voice praise if browser speech available
+      // Voice feedback for current answer
       try {
         if ('speechSynthesis' in window) {
           window.speechSynthesis.cancel();
+          const correctOpt = curQ.distractors.find(d => d.isCorrect);
           const speechText = isCorrect
             ? (state.isEm ? `Correct! Option ${optionNum} is ${curQ.nameEnglish}.` : `சரியான விடை! இடம் ${optionNum} ${curQ.nameTamil} ஆகும்.`)
-            : (state.isEm ? `Wrong! Option ${optionNum} is incorrect. The right place is marked by option ${curQ.distractors.find(d => d.isCorrect).num}.` : `தவறானது! சரியான விடை இடம் ${curQ.distractors.find(d => d.isCorrect).num} ஆகும்.`);
+            : (state.isEm ? `Wrong! Option ${optionNum} is incorrect. The right place is option ${correctOpt.num}, ${curQ.nameEnglish}.` : `தவறானது! சரியான விடை இடம் ${correctOpt.num}, ${curQ.nameTamil} ஆகும்.`);
           const utt = new SpeechSynthesisUtterance(speechText);
           utt.lang = state.isEm ? 'en-IN' : 'ta-IN';
           utt.rate = 1.05;
@@ -1234,22 +1230,46 @@
       } else {
         // Complete!
         state.completed = true;
+        this.speakCompletionVoice(containerId);
       }
 
       this.render(containerId);
+    },
+
+    speakCompletionVoice(containerId) {
+      const state = this.instances[containerId];
+      if (!state) return;
+
+      const total = state.lesson.questions.length;
+      const score = state.score;
+      const isEm = state.isEm;
+
+      const speechText = isEm
+        ? `You scored ${score} out of ${total} marks! 10th standard students, to learn all lessons easily, download Vunnal Mudiyum Learn Easily App, get good marks. Share to your classmates also. All the best!`
+        : `நீங்கள் ${total}-க்கு ${score} மதிப்பெண்கள் பெற்றுள்ளீர்கள்! 10-ஆம் வகுப்பு மாணவச் செல்வங்களே, அனைத்துப் பாடங்களையும் மிக எளிதாகக் கற்று அதிக மதிப்பெண்கள் பெற உன்னால் முடியும் Learn Easily செயலியைப் பதிவிறக்கம் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!`;
+
+      try {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          const utt = new SpeechSynthesisUtterance(speechText);
+          utt.lang = isEm ? 'en-IN' : 'ta-IN';
+          utt.rate = 0.98;
+          window.speechSynthesis.speak(utt);
+        }
+      } catch (e) {}
     },
 
     restartLesson(containerId) {
       const state = this.instances[containerId];
       if (!state) return;
 
+      this.stopVoice();
       state.currentQuestionIndex = 0;
       state.score = 0;
       state.answeredHistory = {};
       state.evaluated = false;
       state.selectedOption = null;
       state.completed = false;
-      state.showTextbookMap = false;
 
       this.render(containerId);
     },
@@ -1276,27 +1296,14 @@
       const curIdx = state.currentQuestionIndex;
       const curQ = lesson.questions[curIdx];
 
-      // Lesson switcher buttons
-      const lessonKeys = Object.keys(LESSON_DATABASE);
-      const lessonPillsHtml = lessonKeys.map(k => {
-        const l = LESSON_DATABASE[k];
-        const isActive = l.id === lesson.id;
-        const label = isEm ? l.titleEnglish : l.titleTamil;
-        return `
-          <button type="button" class="quiz-lesson-pill ${isActive ? 'active' : ''}" onclick="MapPracticeEvaluator.setLesson('${containerId}', '${k}')">
-            ${label} (8)
-          </button>
-        `;
-      }).join('');
-
       // If Completed Screen
       if (state.completed) {
         const pct = Math.round((state.score / totalQuestions) * 100);
         let badgeColor = '#10b981';
         let praiseTitle = isEm ? 'Excellent Performance! 🏆' : 'அருமையான முயற்சி! 🏆';
         let praiseDesc = isEm 
-          ? `You revised all ${totalQuestions} locations of this map lesson accurately!` 
-          : `இந்த அலகின் அனைத்து ${totalQuestions} வரைபட இடங்களையும் நீங்கள் மிகச் சரியாக நினைவுகூர்ந்து கற்றுக்கொண்டீர்கள்!`;
+          ? `You revised all ${totalQuestions} locations of ${lesson.titleEnglish} accurately!` 
+          : `${lesson.titleTamil} அலகின் அனைத்து ${totalQuestions} வரைபட இடங்களையும் நீங்கள் மிகச் சரியாக நினைவுகூர்ந்து கற்றுக்கொண்டீர்கள்!`;
 
         if (pct < 75 && pct >= 50) {
           badgeColor = '#f59e0b';
@@ -1305,7 +1312,7 @@
         } else if (pct < 50) {
           badgeColor = '#ef4444';
           praiseTitle = isEm ? 'Needs More Practice 💡' : 'மேலும் பயிற்சி தேவை 💡';
-          praiseDesc = isEm ? 'Revise the official textbook map and try again.' : 'பாடநூல் வரைபடத்தைக் கவனித்து மீண்டும் முயற்சி செய்யுங்கள்.';
+          praiseDesc = isEm ? 'Revise again and try to score full marks.' : 'மீண்டும் ஒருமுறை பயிற்சி செய்து முழு மதிப்பெண்களைப் பெற முயலுங்கள்.';
         }
 
         const summaryItemsHtml = lesson.questions.map((q, i) => {
@@ -1317,47 +1324,65 @@
                 <span style="font-weight:800; color:#f8fafc;">(${i + 1}) ${isEm ? q.nameEnglish : q.nameTamil}</span>
                 <div style="font-size:12px; color:#94a3b8; margin-top:2px;">${isEm ? q.tipEnglish : q.tipTamil}</div>
               </div>
-              <div style="font-size:17px; font-weight:900; color:${isRight ? '#10b981' : '#ef4444'}; margin-left:12px;">
+              <div style="font-size:17px; font-weight:900; color:${isRight ? '#10b981' : '#ef4444'}; margin-left:12px; white-space:nowrap;">
                 ${isRight ? '✔ 1/1' : '❌ 0/1'}
               </div>
             </div>
           `;
         }).join('');
 
+        const outroText = isEm
+          ? `10th standard students, to learn all lessons easily, download Vunnal Mudiyum Learn Easily App, get good marks. Share to your classmates also. All the best!`
+          : `10-ஆம் வகுப்பு மாணவச் செல்வங்களே, அனைத்துப் பாடங்களையும் மிக எளிதாகக் கற்று அதிக மதிப்பெண்கள் பெற "உன்னால் முடியும் Learn Easily" செயலியைப் பதிவிறக்கம் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!`;
+
+        const shareText = isEm
+          ? `🌟 I scored ${state.score}/${totalQuestions} in 10th Social Science Map Practice (${lesson.titleEnglish}) on Vunnal Mudiyum! 10th standard students, to learn all lessons easily, download Vunnal Mudiyum Learn Easily App, get good marks. Share to your classmates also. All the best!`
+          : `🌟 உன்னால் முடியும் செயலியில் 10-ஆம் வகுப்பு வரைபடப் பயிற்சியில் (${lesson.titleTamil}) நான் ${state.score}/${totalQuestions} மதிப்பெண்கள் பெற்றுள்ளேன்! 10-ஆம் வகுப்பு மாணவச் செல்வங்களே, அனைத்துப் பாடங்களையும் மிக எளிதாகக் கற்று அதிக மதிப்பெண்கள் பெற "உன்னால் முடியும் Learn Easily" செயலியைப் பதிவிறக்கம் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!`;
+
+        const shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
+
         container.innerHTML = `
-          <div class="map-quiz-card" style="background:#0b1329; border-radius:16px; padding:16px; color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, sans-serif;">
+          <div class="map-quiz-card" style="background:#0b1329; border-radius:16px; padding:16px; color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, sans-serif; max-width:650px; margin:0 auto;">
             
-            <!-- Lesson Switcher Tray -->
-            <div class="quiz-lesson-tray" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:10px; margin-bottom:14px; scrollbar-width:none;">
-              ${lessonPillsHtml}
+            <!-- Scorecard Banner -->
+            <div style="text-align:center; padding:22px 16px; background:linear-gradient(135deg, rgba(15,23,42,0.9), rgba(30,41,59,0.9)); border:2px solid ${badgeColor}; border-radius:16px; margin-bottom:14px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+              <div style="font-size:38px; margin-bottom:4px;">🏆</div>
+              <h2 style="margin:0 0 6px 0; font-size:20px; color:${badgeColor};">${praiseTitle}</h2>
+              <div style="font-size:32px; font-weight:900; color:#ffffff; margin-bottom:4px;">
+                ${state.score} / ${totalQuestions}
+                <span style="font-size:15px; color:#94a3b8; font-weight:700;">(${pct}%)</span>
+              </div>
+              <p style="margin:0; font-size:13.5px; color:#cbd5e1; line-height:1.5;">${praiseDesc}</p>
             </div>
 
-            <!-- Scorecard Banner -->
-            <div style="text-align:center; padding:24px 16px; background:linear-gradient(135deg, rgba(15,23,42,0.9), rgba(30,41,59,0.9)); border:2px solid ${badgeColor}; border-radius:16px; margin-bottom:16px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
-              <div style="font-size:42px; margin-bottom:6px;">🏆</div>
-              <h2 style="margin:0 0 8px 0; font-size:22px; color:${badgeColor};">${praiseTitle}</h2>
-              <div style="font-size:36px; font-weight:900; color:#ffffff; margin-bottom:6px;">
-                ${state.score} / ${totalQuestions}
-                <span style="font-size:16px; color:#94a3b8; font-weight:700;">(${pct}%)</span>
+            <!-- Voice Narration Outro Message Card -->
+            <div style="background:linear-gradient(135deg, rgba(2,132,199,0.15), rgba(16,185,129,0.15)); border:2px solid #0284c7; border-radius:14px; padding:16px; margin-bottom:16px; text-align:center;">
+              <div style="font-size:24px; margin-bottom:6px;">📢</div>
+              <div style="font-size:13.5px; font-weight:800; color:#38bdf8; line-height:1.6; margin-bottom:12px;">
+                ${outroText}
               </div>
-              <p style="margin:0; font-size:14px; color:#cbd5e1; line-height:1.5;">${praiseDesc}</p>
+              <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+                <button type="button" onclick="MapPracticeEvaluator.speakCompletionVoice('${containerId}')" style="background:#0284c7; color:#fff; border:none; padding:9px 15px; border-radius:10px; font-size:12.5px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+                  🔊 <span>${isEm ? 'Hear Voice Again' : 'குரல் வழியே மீண்டும் கேள்'}</span>
+                </button>
+                <a href="${shareUrl}" target="_blank" rel="noopener noreferrer" style="background:#25d366; color:#ffffff; text-decoration:none; padding:9px 15px; border-radius:10px; font-size:12.5px; font-weight:800; display:inline-flex; align-items:center; gap:6px;">
+                  📲 <span>${isEm ? 'Share to Classmates' : 'தோழர்களுடன் பகிர்'}</span>
+                </a>
+              </div>
             </div>
 
             <!-- Review List of Places -->
-            <h4 style="margin:0 0 10px 0; font-size:13.5px; color:#94a3b8; text-transform:uppercase; letter-spacing:1px;">
-              ${isEm ? 'Review All 8 Locations:' : 'அனைத்து 8 இடங்களின் சுருக்கம்:'}
+            <h4 style="margin:0 0 10px 0; font-size:13px; color:#94a3b8; text-transform:uppercase; letter-spacing:1px;">
+              ${isEm ? `Review ${lesson.titleEnglish} (${totalQuestions} Places):` : `${lesson.titleTamil} (${totalQuestions} இடங்களின் சுருக்கம்):`}
             </h4>
-            <div style="max-height:260px; overflow-y:auto; margin-bottom:16px;">
+            <div style="max-height:240px; overflow-y:auto; margin-bottom:16px;">
               ${summaryItemsHtml}
             </div>
 
             <!-- Action Buttons -->
             <div style="display:flex; gap:10px;">
-              <button type="button" onclick="MapPracticeEvaluator.restartLesson('${containerId}')" style="flex:1; padding:12px; background:linear-gradient(135deg, #0284c7, #0369a1); color:#fff; border:none; border-radius:12px; font-size:13.5px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
+              <button type="button" onclick="MapPracticeEvaluator.restartLesson('${containerId}')" style="flex:1; padding:12px; background:linear-gradient(135deg, #0284c7, #0369a1); color:#fff; border:none; border-radius:12px; font-size:14px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
                 <span>🔄</span> <span>${isEm ? 'Practice Again' : 'மீண்டும் பயிற்சி செய்'}</span>
-              </button>
-              <button type="button" onclick="MapPracticeEvaluator.toggleTextbookMap('${containerId}')" style="flex:1; padding:12px; background:#1e293b; color:#38bdf8; border:1.5px solid #0284c7; border-radius:12px; font-size:13.5px; font-weight:800; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
-                <span>📖</span> <span>${isEm ? 'Textbook Map' : 'பாடநூல் வரைபடம்'}</span>
               </button>
             </div>
           </div>
@@ -1398,18 +1423,22 @@
             btnBorder = '#1e293b';
           }
         } else {
-          if (d.num === 1) btnBorder = '#0284c7';
-          if (d.num === 2) btnBorder = '#f59e0b';
-          if (d.num === 3) btnBorder = '#8b5cf6';
+          if (d.num === 1) {
+            btnBorder = '#0284c7';
+          } else if (d.num === 2) {
+            btnBorder = '#f59e0b';
+          } else if (d.num === 3) {
+            btnBorder = '#8b5cf6';
+          }
         }
 
         return `
-          <button type="button" class="quiz-option-btn" onclick="MapPracticeEvaluator.handleOptionSelect('${containerId}', ${d.num})" ${state.evaluated ? 'disabled' : ''} style="display:flex; align-items:center; justify-content:space-between; padding:12px 16px; background:${btnBg}; border:2px solid ${btnBorder}; border-radius:12px; color:${btnColor}; font-size:14.5px; font-weight:800; cursor:${state.evaluated ? 'default' : 'pointer'}; margin-bottom:8px; width:100%; box-sizing:border-box; transition:all 0.2s ease;">
+          <button type="button" class="quiz-option-btn" ${state.evaluated ? 'disabled' : ''} onclick="MapPracticeEvaluator.handleOptionSelect('${containerId}', ${d.num})" style="width:100%; padding:14px 16px; margin-bottom:10px; background:${btnBg}; border:2px solid ${btnBorder}; border-radius:12px; color:${btnColor}; font-size:15px; font-weight:800; cursor:${state.evaluated ? 'default' : 'pointer'}; display:flex; align-items:center; justify-content:space-between; transition:all 0.15s ease; box-shadow:0 3px 10px rgba(0,0,0,0.2);">
             <div style="display:flex; align-items:center; gap:10px;">
-              <span style="width:28px; height:28px; border-radius:50%; background:#0f172a; border:2px solid ${btnBorder}; display:inline-flex; align-items:center; justify-content:center; font-size:14px; font-weight:900;">${d.num}</span>
+              <span style="display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:${d.num === 1 ? '#0284c7' : d.num === 2 ? '#f59e0b' : '#8b5cf6'}; color:#ffffff; font-size:14px; font-weight:900;">${d.num}</span>
               <span>${pointLabel}</span>
             </div>
-            ${statusBadge ? `<span style="font-size:12.5px; font-weight:900; background:rgba(0,0,0,0.25); padding:3px 8px; border-radius:6px;">${statusBadge}</span>` : ''}
+            ${statusBadge ? `<span style="font-size:13px; font-weight:900; background:rgba(0,0,0,0.2); padding:3px 8px; border-radius:6px;">${statusBadge}</span>` : ''}
           </button>
         `;
       }).join('');
@@ -1439,30 +1468,14 @@
         `;
       }
 
-      // Textbook Reference Map Overlay (if toggled)
-      const textbookOverlayHtml = state.showTextbookMap ? `
-        <div style="margin-bottom:12px; padding:12px; background:#0f172a; border:2px solid #0284c7; border-radius:12px;">
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
-            <span style="font-size:13px; font-weight:800; color:#38bdf8;">📖 ${isEm ? 'Official Textbook Map Key' : 'அதிகாரப்பூர்வ பாடநூல் வரைபடம்'}</span>
-            <button type="button" onclick="MapPracticeEvaluator.toggleTextbookMap('${containerId}')" style="background:#1e293b; border:none; color:#f87171; font-weight:800; cursor:pointer; padding:3px 8px; border-radius:6px;">✕</button>
-          </div>
-          <img src="${lesson.officialImage}" alt="Official Map" style="width:100%; height:auto; border-radius:8px; display:block;" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='../'+this.getAttribute('src');}else{this.style.display='none';}" />
-        </div>
-      ` : '';
-
       container.innerHTML = `
         <div class="map-quiz-card" style="background:#0b1329; border-radius:16px; padding:14px; color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, sans-serif; max-width:650px; margin:0 auto;">
-          
-          <!-- Lesson Switcher Tray -->
-          <div class="quiz-lesson-tray" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:8px; margin-bottom:12px; scrollbar-width:none;">
-            ${lessonPillsHtml}
-          </div>
 
           <!-- Question Header Banner -->
           <div style="background:#1e293b; border-radius:12px; padding:12px 14px; margin-bottom:12px; border:1px solid #334155;">
             <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
               <span style="font-size:12px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:1px;">
-                ${isEm ? lesson.lessonCategory : lesson.titleTamil} • ${isEm ? `Question ${curIdx + 1} of ${totalQuestions}` : `கேள்வி ${curIdx + 1} / ${totalQuestions}`}
+                ${isEm ? lesson.titleEnglish : lesson.titleTamil} • ${isEm ? `Question ${curIdx + 1} of ${totalQuestions}` : `கேள்வி ${curIdx + 1} / ${totalQuestions}`}
               </span>
               <span style="font-size:12px; font-weight:800; background:#0f172a; color:#10b981; padding:2px 8px; border-radius:12px; border:1px solid #10b981;">
                 ${isEm ? `Score: ${state.score}` : `மதிப்பெண்: ${state.score}`}
@@ -1474,16 +1487,6 @@
                 : `வரைபடத்தில் 1, 2, 3 எண்களில் எது <span style="color:#38bdf8; text-decoration:underline;">"${curQ.nameTamil}"</span> அமைவிடம்?`}
             </div>
           </div>
-
-          <!-- Textbook Reference Toggle -->
-          <div style="display:flex; justify-content:flex-end; margin-bottom:8px;">
-            <button type="button" onclick="MapPracticeEvaluator.toggleTextbookMap('${containerId}')" style="background:#1e293b; border:1px solid #0284c7; color:#38bdf8; padding:4px 10px; border-radius:16px; font-size:12px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:5px;">
-              <span>📖</span> <span>${state.showTextbookMap ? (isEm ? 'Hide Textbook Map' : 'பாடநூல் வரைபடத்தை மறை') : (isEm ? 'View Official Textbook Map' : 'அதிகாரப்பூர்வ பாடநூல் வரைபடம்')}</span>
-            </button>
-          </div>
-
-          <!-- Textbook Overlay if active -->
-          ${textbookOverlayHtml}
 
           <!-- SVG MAP STAGE (Responsive) -->
           <div class="quiz-map-stage" style="width:100%; max-height:420px; overflow:hidden; border-radius:12px; border:2px solid #1e293b; margin-bottom:12px; display:flex; justify-content:center; background:#ffffff;">
@@ -1508,24 +1511,6 @@
   // Add styles
   const styleEl = document.createElement('style');
   styleEl.innerHTML = `
-    .quiz-lesson-pill {
-      background: #1e293b;
-      border: 1px solid #334155;
-      color: #94a3b8;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 800;
-      white-space: nowrap;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .quiz-lesson-pill.active {
-      background: #0284c7;
-      border-color: #38bdf8;
-      color: #ffffff;
-      box-shadow: 0 2px 10px rgba(2,132,199,0.4);
-    }
     .pulse-ring {
       animation: pinPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
       transform-origin: center;

@@ -1,4 +1,4 @@
-﻿// Class 10 Science - Unit 9: Solutions
+// Class 10 Science - Unit 9: Solutions
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SCIENCE_EM_UNIT_9_DATA = {
@@ -130,23 +130,90 @@ const SCIENCE_EM_UNIT_9_DATA = {
           id: "sci_em_9_8",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Important 5M",
-          q: "What is water of crystallization? Explain with two examples of hydrated salts.",
+          examTag: "Public Exam 7M",
+          q: "What is water of crystallization? Explain with two examples of hydrated salts including the effect of heat and balanced chemical equations.",
           ans: `<div style="line-height:1.8;">
-            <b>Water of Crystallization:</b><br>
-            When salts crystallize from their aqueous solutions, they incorporate a fixed number of water molecules into their crystal lattice. This fixed number of water molecules is called <b>water of crystallization</b>.<br><br>
-            <b>Hydrated Salts:</b><br>
-            Salts that contain water of crystallization in their crystal structure are called hydrated salts.<br><br>
-            <b>Examples:</b><br>
-            1. <b>Blue Vitriol:</b><br>
-            • Chemical name: Copper(II) sulphate pentahydrate<br>
-            • Formula: <b>CuSO₄ · 5H₂O</b><br>
-            • Contains 5 molecules of water of crystallization, giving it a vibrant blue color. On heating, it loses water molecules and turns into white anhydrous CuSO₄.<br><br>
-            2. <b>Epsom Salt:</b><br>
-            • Chemical name: Magnesium sulphate heptahydrate<br>
-            • Formula: <b>MgSO₄ · 7H₂O</b><br>
-            • Contains 7 molecules of water of crystallization.
-          </div>`
+            <b>1. Water of Crystallization (Definition):</b><br>
+            • The fixed number of water molecules chemically bound in definite stoichiometric proportions inside one formula unit of a crystalline salt is termed <b>water of crystallization</b>.<br>
+            • These water molecules are vital in establishing the salt's <b>geometric crystalline geometry</b> and imparting its <b>characteristic coloration</b>.<br><br>
+
+            <b>2. Hydrated Salts:</b><br>
+            • Salts that contain water of crystallization chemically embedded within their crystal lattices are called <b>hydrated salts</b>.<br>
+            • General formula: <b>Salt · n H₂O</b> (where n represents the integer count of crystallization water molecules).<br><br>
+
+            <b>3. Example 1: Blue Vitriol:</b><br>
+            • <b>Common Name:</b> Blue Vitriol<br>
+            • <b>Chemical Name:</b> Copper(II) sulphate pentahydrate<br>
+            • <b>Formula:</b> <b style="color:#0284c7;">CuSO₄ · 5H₂O</b><br>
+            • <b>Water of Crystallization:</b> 5 molecules (responsible for its vivid azure blue crystalline appearance).<br>
+            • <b>Action of Heat:</b> When blue copper sulfate crystals are gently heated in a dry test tube, they lose all 5 water molecules of crystallization, turning into white amorphous anhydrous copper sulphate:<br>
+            <div style="background:#eff6ff; border-left:4px solid #0284c7; padding:8px 12px; margin:6px 0; border-radius:4px; font-weight:700;">
+              CuSO₄ · 5H₂O (Blue crystal) &nbsp;➔(Heat)&nbsp; CuSO₄ (White powder) + 5H₂O↑
+            </div>
+            • <i>Reversibility:</i> Upon re-introducing a few drops of water to the white powder, hydration immediately restores the bright blue color.<br><br>
+
+            <b>4. Example 2: Epsom Salt:</b><br>
+            • <b>Common Name:</b> Epsom Salt<br>
+            • <b>Chemical Name:</b> Magnesium sulphate heptahydrate<br>
+            • <b>Formula:</b> <b style="color:#059669;">MgSO₄ · 7H₂O</b><br>
+            • <b>Water of Crystallization:</b> 7 molecules (forms colourless needle-like orthorhombic crystals).<br>
+            • <b>Action of Heat:</b> Strong heating expels all 7 water molecules, converting it into anhydrous magnesium sulphate:<br>
+            <div style="background:#ecfdf5; border-left:4px solid #059669; padding:8px 12px; margin:6px 0; border-radius:4px; font-weight:700;">
+              MgSO₄ · 7H₂O (Hydrated salt) &nbsp;➔(Heat)&nbsp; MgSO₄ (Anhydrous salt) + 7H₂O↑
+            </div><br>
+
+            <b>Comparative Table of Important Hydrated Salts:</b>
+            <div class="chalk-table-responsive" style="margin-top:6px;">
+              <table style="width:100%; border-collapse:collapse; font-size:13px; text-align:left;">
+                <thead>
+                  <tr style="background:#0284c7; color:#fff;">
+                    <th style="padding:6px; border:1px solid #cbd5e1;">Common Name</th>
+                    <th style="padding:6px; border:1px solid #cbd5e1;">Chemical Name</th>
+                    <th style="padding:6px; border:1px solid #cbd5e1;">Molecular Formula</th>
+                    <th style="padding:6px; border:1px solid #cbd5e1;">Water Molecules</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">Blue Vitriol</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">Copper(II) sulphate pentahydrate</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">CuSO₄ · 5H₂O</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;"><b>5</b></td>
+                  </tr>
+                  <tr style="background:#f8fafc;">
+                    <td style="padding:6px; border:1px solid #cbd5e1;">Epsom Salt</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">Magnesium sulphate heptahydrate</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">MgSO₄ · 7H₂O</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;"><b>7</b></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">Green Vitriol</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">Iron(II) sulphate heptahydrate</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">FeSO₄ · 7H₂O</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;"><b>7</b></td>
+                  </tr>
+                  <tr style="background:#f8fafc;">
+                    <td style="padding:6px; border:1px solid #cbd5e1;">White Vitriol</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">Zinc sulphate heptahydrate</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">ZnSO₄ · 7H₂O</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;"><b>7</b></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">Gypsum</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">Calcium sulphate dihydrate</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">CaSO₄ · 2H₂O</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;"><b>2</b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>`,
+          detailedSolution: {
+            step1: "Definition of Water of Crystallization and Hydrated Salts",
+            step2: "Blue Vitriol (CuSO₄ · 5H₂O) structure, colour and thermal dehydration reaction",
+            step3: "Epsom Salt (MgSO₄ · 7H₂O) structure, colour and thermal dehydration reaction",
+            step4: "Reference table of key hydrated salts (Green Vitriol, White Vitriol, Gypsum)"
+          }
         }
       ]
     }

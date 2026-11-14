@@ -1,4 +1,4 @@
-﻿// 10-ஆம் வகுப்பு அறிவியல் - அலகு 9: கரைசல்கள் (Solutions)
+// 10-ஆம் வகுப்பு அறிவியல் - அலகு 9: கரைசல்கள் (Solutions)
 // தமிழ்நாடு அரசு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const SCIENCE_UNIT_9_DATA = {
@@ -129,24 +129,91 @@ const SCIENCE_UNIT_9_DATA = {
         {
           id: "sci_9_8",
           type: "7m",
-          mark: "5 மதிப்பெண்",
-          examTag: "முக்கிய 5M",
-          q: "நீரேறிய உப்புகள் மற்றும் படிகமாக்கல் நீர் என்றால் என்ன? இரண்டு எடுத்துக்காட்டுகளுடன் விளக்குக.",
+          mark: "7 மதிப்பெண்",
+          examTag: "அரசு பொதுத்தேர்வு 7M",
+          q: "படிகமாக்கல் நீர் என்றால் என்ன? நீரேறிய உப்புகள் ஏதேனும் இரண்டினை வெப்பத்தின் விளைவு மற்றும் வேதிச் சமன்பாட்டுடன் விரிவாக விளக்குக.",
           ans: `<div style="line-height:1.8;">
-            <b>படிகமாக்கல் நீர் (Water of Crystallization):</b><br>
-            உப்புகள் தங்களின் நீர்மக் கரைசலில் இருந்து படிகமாக மாறும் போது, நிலையான எண்ணிக்கையிலான நீர் மூலக்கூறுகளைத் தங்களின் படிக அமைப்பில் பிணைத்துக் கொள்கின்றன. இந்த நீர் மூலக்கூறுகளே <b>படிகமாக்கல் நீர்</b> எனப்படும்.<br><br>
-            <b>நீரேறிய உப்புகள் (Hydrated Salts):</b><br>
-            படிகமாக்கல் நீரைக் கொண்டுள்ள உப்புகள் நீரேறிய உப்புகள் என அழைக்கப்படுகின்றன.<br><br>
-            <b>முக்கிய எடுத்துக்காட்டுகள்:</b><br>
-            1. <b>நீல விட்ரியால் (மயில் துத்தம்):</b><br>
-            • வேதிப்பெயர்: காப்பர்(II) சல்பேட் பெண்டாஹைட்ரேட்<br>
-            • வாய்பாடு: <b>CuSO₄ · 5H₂O</b><br>
-            • படிகமாக்கல் நீர் மூலக்கூறுகளின் எண்ணிக்கை = 5. வெப்பப்படுத்தும் போது வெண்மை நிற நீரற்ற CuSO₄ ஆக மாறுகிறது.<br><br>
-            2. <b>எப்சம் உப்பு (Epsom Salt):</b><br>
-            • வேதிப்பெயர்: மெக்னீசியம் சல்பேட் ஹெப்டாஹைட்ரேட்<br>
-            • வாய்பாடு: <b>MgSO₄ · 7H₂O</b><br>
-            • படிகமாக்கல் நீர் மூலக்கூறுகளின் எண்ணிக்கை = 7.
-          </div>`
+            <b>1. படிகமாக்கல் நீர் (Water of Crystallization) - வரையறை:</b><br>
+            • ஒரு குறிப்பிட்ட உப்பானது அதன் நீரிய கரைசலில் இருந்து படிகமாகும் போது, அதன் படிக அணிக்கோவை அமைப்பில் ஒரு குறிப்பிட்ட விகிதத்தில் வேதியியல் ரீதியாக பிணைக்கப்பட்டுள்ள நிலையான நீர் மூலக்கூறுகளின் எண்ணிக்கை <b>படிகமாக்கல் நீர்</b> எனப்படும்.<br>
+            • இந்த நீர் மூலக்கூறுகள் உப்பின் <b>குறிப்பிட்ட வடிவியல் படிக வடிவத்திற்கும்</b> மற்றும் அதன் <b>தனித்துவமான நிறத்திற்கும்</b> காரணமாக அமைகின்றன.<br><br>
+
+            <b>2. நீரேறிய உப்புகள் (Hydrated Salts):</b><br>
+            • தங்களின் படிக அமைப்பில் படிகமாக்கல் நீரைக் கொண்டுள்ள உப்புகள் <b>நீரேறிய உப்புகள்</b> எனப்படும்.<br>
+            • பொது வாய்பாடு: <b>உப்பு · n H₂O</b> (இங்கு n = படிகமாக்கல் நீர் மூலக்கூறுகளின் எண்ணிக்கை).<br><br>
+
+            <b>3. எடுத்துக்காட்டு 1: மயில் துத்தம் (Blue Vitriol):</b><br>
+            • <b>பொதுப் பெயர்:</b> மயில் துத்தம் (நீல விட்ரியால் / Blue Vitriol)<br>
+            • <b>வேதிப் பெயர்:</b> காப்பர்(II) சல்பேட் பென்டாஹைட்ரேட்<br>
+            • <b>மூலக்கூறு வாய்பாடு:</b> <b style="color:#0284c7;">CuSO₄ · 5H₂O</b><br>
+            • <b>படிகமாக்கல் நீர்:</b> 5 மூலக்கூறுகள் (இது இதன் வசீகரமான அடர் நீல நிறத்திற்குப் பொறுப்பாகும்).<br>
+            • <b>வெப்பத்தின் விளைவு (Action of Heat):</b> நீல நிற காப்பர் சல்பேட் படிகங்களை மெதுவாக வெப்பப்படுத்தும் போது, அது தன் 5 நீர் மூலக்கூறுகளையும் இழந்து வெண்ணிற நிறமற்ற நீரற்ற காப்பர் சல்பேட்டாக (Anhydrous CuSO₄) மாறுகிறது:<br>
+            <div style="background:#eff6ff; border-left:4px solid #0284c7; padding:8px 12px; margin:6px 0; border-radius:4px; font-weight:700;">
+              CuSO₄ · 5H₂O (நீல நிற படிகம்) &nbsp;➔(வெப்பம்)&nbsp; CuSO₄ (வெண்ணிறத் தூள்) + 5H₂O↑
+            </div>
+            • <i>மீள்வினை:</i> இந்த வெண்ணிறத் தூளுடன் சில துளி நீரை மீண்டும் சேர்க்கும் போது, அது உடனே நீல நிறத்தை மீண்டும் பெறுகிறது.<br><br>
+
+            <b>4. எடுத்துக்காட்டு 2: எப்சம் உப்பு (Epsom Salt):</b><br>
+            • <b>பொதுப் பெயர்:</b> எப்சம் உப்பு (Epsom Salt)<br>
+            • <b>வேதிப் பெயர்:</b> மெக்னீசியம் சல்பேட் ஹெப்டாஹைட்ரேட்<br>
+            • <b>மூலக்கூறு வாய்பாடு:</b> <b style="color:#059669;">MgSO₄ · 7H₂O</b><br>
+            • <b>படிகமாக்கல் நீர்:</b> 7 மூலக்கூறுகள் (நிறமற்ற ஊசி வடிவப் படிகங்கள்).<br>
+            • <b>வெப்பத்தின் விளைவு (Action of Heat):</b> எப்சம் உப்பைச் சூடாக்கும் போது தன் 7 நீர் மூலக்கூறுகளையும் இழந்து நீரற்ற மெக்னீசியம் சல்பேட்டாக மாறுகிறது:<br>
+            <div style="background:#ecfdf5; border-left:4px solid #059669; padding:8px 12px; margin:6px 0; border-radius:4px; font-weight:700;">
+              MgSO₄ · 7H₂O (நீரேறிய படிகம்) &nbsp;➔(வெப்பம்)&nbsp; MgSO₄ (நீரற்ற உப்பு) + 7H₂O↑
+            </div><br>
+
+            <b>முக்கிய நீரேறிய உப்புகளின் ஒப்பீட்டு அட்டவணை:</b>
+            <div class="chalk-table-responsive" style="margin-top:6px;">
+              <table style="width:100%; border-collapse:collapse; font-size:13px; text-align:left;">
+                <thead>
+                  <tr style="background:#0284c7; color:#fff;">
+                    <th style="padding:6px; border:1px solid #cbd5e1;">பொதுப் பெயர்</th>
+                    <th style="padding:6px; border:1px solid #cbd5e1;">வேதிப் பெயர்</th>
+                    <th style="padding:6px; border:1px solid #cbd5e1;">மூலக்கூறு வாய்பாடு</th>
+                    <th style="padding:6px; border:1px solid #cbd5e1;">படிக நீர்</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">மயில் துத்தம்</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">காப்பர் சல்பேட் பென்டாஹைட்ரேட்</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">CuSO₄ · 5H₂O</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;"><b>5</b></td>
+                  </tr>
+                  <tr style="background:#f8fafc;">
+                    <td style="padding:6px; border:1px solid #cbd5e1;">எப்சம் உப்பு</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">மெக்னீசியம் சல்பேட் ஹெப்டாஹைட்ரேட்</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">MgSO₄ · 7H₂O</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;"><b>7</b></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">பச்சைத் துத்தம்</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">ஃபெரஸ் சல்பேட் ஹெப்டாஹைட்ரேட்</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">FeSO₄ · 7H₂O</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;"><b>7</b></td>
+                  </tr>
+                  <tr style="background:#f8fafc;">
+                    <td style="padding:6px; border:1px solid #cbd5e1;">வெள்ளை துத்தம்</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">ஜிங்க் சல்பேட் ஹெப்டாஹைட்ரேட்</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">ZnSO₄ · 7H₂O</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;"><b>7</b></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">ஜிப்சம்</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">கால்சியம் சல்பேட் டைஹைட்ரேட்</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;">CaSO₄ · 2H₂O</td>
+                    <td style="padding:6px; border:1px solid #cbd5e1;"><b>2</b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>`,
+          detailedSolution: {
+            step1: "படிகமாக்கல் நீர் மற்றும் நீரேறிய உப்புகள் வரையறை",
+            step2: "மயில் துத்தம் (CuSO₄ · 5H₂O) அமைப்பு மற்றும் வெப்பத்தின் விளைவுச் சமன்பாடு",
+            step3: "எப்சம் உப்பு (MgSO₄ · 7H₂O) அமைப்பு மற்றும் வெப்பத்தின் விளைவுச் சமன்பாடு",
+            step4: "முக்கிய நீரேறிய உப்புகள் அட்டவணை (பச்சைத் துத்தம், வெள்ளை துத்தம், ஜிப்சம்)"
+          }
         }
       ]
     }

@@ -186,6 +186,14 @@
 <script src="data_social_u12.js?v=20261111_v67"></script>
 <script src="data_social_em_u11.js?v=20261111_v67"></script>
 <script src="data_social_em_u12.js?v=20261111_v67"></script>
+  <script src="data_science_u13.js?v=20261114_v73"></script>
+  <script src="data_science_u14.js?v=20261114_v73"></script>
+  <script src="data_science_em_u13.js?v=20261114_v73"></script>
+  <script src="data_science_em_u14.js?v=20261114_v73"></script>
+  <script src="data_social_u13.js?v=20261114_v73"></script>
+  <script src="data_social_u14.js?v=20261114_v73"></script>
+  <script src="data_social_em_u13.js?v=20261114_v73"></script>
+  <script src="data_social_em_u14.js?v=20261114_v73"></script>
 <script src="map_data_and_engine.js?v=20261113_v72"></script>
 <script src="map_practice_evaluator.js?v=20261113_v72"></script>
 <style>
@@ -5055,6 +5063,24 @@
             subSections: (typeof SCIENCE_UNIT_12_DATA !== 'undefined') ? SCIENCE_UNIT_12_DATA.subSections : [],
             questions: (typeof SCIENCE_UNIT_12_DATA !== 'undefined' && SCIENCE_UNIT_12_DATA.subSections) ? SCIENCE_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof SCIENCE_UNIT_12_DATA !== 'undefined') ? SCIENCE_UNIT_12_DATA.formulas : []
+          },
+          {
+            id: 'sci_u13',
+            unit: '\u0B85\u0BB2\u0B95\u0BC1 13',
+            title: '\u0B89\u0BAF\u0BBF\u0BB0\u0BBF\u0BA9\u0B99\u0BCD\u0B95\u0BB3\u0BBF\u0BA9\u0BCD \u0B85\u0BAE\u0BC8\u0BAA\u0BCD\u0BAA\u0BC1 \u0BA8\u0BBF\u0BB2\u0BC8\u0B95\u0BB3\u0BCD (Structural Organisation of Animals)',
+            qCount: (typeof SCIENCE_UNIT_13_DATA !== 'undefined' && SCIENCE_UNIT_13_DATA.subSections) ? SCIENCE_UNIT_13_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_13_DATA !== 'undefined') ? SCIENCE_UNIT_13_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_13_DATA !== 'undefined' && SCIENCE_UNIT_13_DATA.subSections) ? SCIENCE_UNIT_13_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_13_DATA !== 'undefined') ? SCIENCE_UNIT_13_DATA.formulas : []
+          },
+          {
+            id: 'sci_u14',
+            unit: '\u0B85\u0BB2\u0B95\u0BC1 14',
+            title: '\u0BA4\u0BBE\u0BB5\u0BB0\u0B99\u0BCD\u0B95\u0BB3\u0BBF\u0BA9\u0BCD \u0B95\u0B9F\u0BA4\u0BCD\u0BA4\u0BC1\u0BA4\u0BB2\u0BCD \u0BAE\u0BB1\u0BCD\u0BB1\u0BC1\u0BAE\u0BCD \u0BB5\u0BBF\u0BB2\u0B99\u0BCD\u0B95\u0BC1\u0B95\u0BB3\u0BBF\u0BA9\u0BCD \u0B9A\u0BC1\u0BB1\u0BCD\u0BB1\u0BCB\u0B9F\u0BCD\u0B9F\u0BAE\u0BCD (Transportation in Plants and Circulation in Animals)',
+            qCount: (typeof SCIENCE_UNIT_14_DATA !== 'undefined' && SCIENCE_UNIT_14_DATA.subSections) ? SCIENCE_UNIT_14_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_14_DATA !== 'undefined') ? SCIENCE_UNIT_14_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_14_DATA !== 'undefined' && SCIENCE_UNIT_14_DATA.subSections) ? SCIENCE_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_14_DATA !== 'undefined') ? SCIENCE_UNIT_14_DATA.formulas : []
           }
         ]
       },
@@ -5174,6 +5200,24 @@
             subSections: (typeof SCIENCE_EM_UNIT_12_DATA !== 'undefined') ? SCIENCE_EM_UNIT_12_DATA.subSections : [],
             questions: (typeof SCIENCE_EM_UNIT_12_DATA !== 'undefined' && SCIENCE_EM_UNIT_12_DATA.subSections) ? SCIENCE_EM_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof SCIENCE_EM_UNIT_12_DATA !== 'undefined') ? SCIENCE_EM_UNIT_12_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u13',
+            unit: 'Unit 13',
+            title: 'Structural Organisation of Animals',
+            qCount: (typeof SCIENCE_EM_UNIT_13_DATA !== 'undefined' && SCIENCE_EM_UNIT_13_DATA.subSections) ? SCIENCE_EM_UNIT_13_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_13_DATA !== 'undefined') ? SCIENCE_EM_UNIT_13_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_13_DATA !== 'undefined' && SCIENCE_EM_UNIT_13_DATA.subSections) ? SCIENCE_EM_UNIT_13_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_13_DATA !== 'undefined') ? SCIENCE_EM_UNIT_13_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u14',
+            unit: 'Unit 14',
+            title: 'Transportation in Plants and Circulation in Animals',
+            qCount: (typeof SCIENCE_EM_UNIT_14_DATA !== 'undefined' && SCIENCE_EM_UNIT_14_DATA.subSections) ? SCIENCE_EM_UNIT_14_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_14_DATA !== 'undefined') ? SCIENCE_EM_UNIT_14_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_14_DATA !== 'undefined' && SCIENCE_EM_UNIT_14_DATA.subSections) ? SCIENCE_EM_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_14_DATA !== 'undefined') ? SCIENCE_EM_UNIT_14_DATA.formulas : []
           }
         ]
       },
@@ -5294,6 +5338,26 @@
             questions: (typeof SOCIAL_UNIT_12_DATA !== 'undefined' && SOCIAL_UNIT_12_DATA.subSections) ? SOCIAL_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             econHighlights: (typeof SOCIAL_UNIT_12_DATA !== 'undefined') ? SOCIAL_UNIT_12_DATA.econHighlights : [],
             timeline: (typeof SOCIAL_UNIT_12_DATA !== 'undefined') ? SOCIAL_UNIT_12_DATA.timeline : []
+          },
+          {
+            id: 'soc_h4',
+            unit: '\u0BB5\u0BB0\u0BB2\u0BBE\u0BB1\u0BC1 4',
+            title: '\u0B87\u0BB0\u0BA3\u0BCD\u0B9F\u0BBE\u0BAE\u0BCD \u0B89\u0BB2\u0B95\u0BAA\u0BCD\u0BAA\u0BCB\u0BB0\u0BC1\u0B95\u0BCD\u0B95\u0BC1\u0BAA\u0BCD \u0BAA\u0BBF\u0BA8\u0BCD\u0BA4\u0BC8\u0BAF \u0B89\u0BB2\u0B95\u0BAE\u0BCD (The World after World War II)',
+            qCount: (typeof SOCIAL_UNIT_13_DATA !== 'undefined' && SOCIAL_UNIT_13_DATA.subSections) ? SOCIAL_UNIT_13_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_13_DATA !== 'undefined') ? SOCIAL_UNIT_13_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_13_DATA !== 'undefined' && SOCIAL_UNIT_13_DATA.subSections) ? SOCIAL_UNIT_13_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_UNIT_13_DATA !== 'undefined') ? SOCIAL_UNIT_13_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_13_DATA !== 'undefined') ? SOCIAL_UNIT_13_DATA.timeline : []
+          },
+          {
+            id: 'soc_g4',
+            unit: '\u0BAA\u0BC1\u0BB5\u0BBF\u0BAF\u0BBF\u0BAF\u0BCD 4',
+            title: '\u0B87\u0BA8\u0BCD\u0BA4\u0BBF\u0BAF\u0BBE - \u0BB5\u0BB3\u0B99\u0BCD\u0B95\u0BB3\u0BCD \u0BAE\u0BB1\u0BCD\u0BB1\u0BC1\u0BAE\u0BCD \u0BA4\u0BCA\u0BB4\u0BBF\u0BB2\u0B99\u0BCD\u0B95\u0BB3\u0BCD (India - Resources and Industries)',
+            qCount: (typeof SOCIAL_UNIT_14_DATA !== 'undefined' && SOCIAL_UNIT_14_DATA.subSections) ? SOCIAL_UNIT_14_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_14_DATA !== 'undefined') ? SOCIAL_UNIT_14_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_14_DATA !== 'undefined' && SOCIAL_UNIT_14_DATA.subSections) ? SOCIAL_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            geoHighlights: (typeof SOCIAL_UNIT_14_DATA !== 'undefined') ? SOCIAL_UNIT_14_DATA.geoHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_14_DATA !== 'undefined') ? SOCIAL_UNIT_14_DATA.timeline : []
           }
         ]
       },
@@ -5413,6 +5477,26 @@
             questions: (typeof SOCIAL_EM_UNIT_12_DATA !== 'undefined' && SOCIAL_EM_UNIT_12_DATA.subSections) ? SOCIAL_EM_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             econHighlights: (typeof SOCIAL_EM_UNIT_12_DATA !== 'undefined') ? SOCIAL_EM_UNIT_12_DATA.econHighlights : [],
             timeline: (typeof SOCIAL_EM_UNIT_12_DATA !== 'undefined') ? SOCIAL_EM_UNIT_12_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_h4',
+            unit: 'History 4',
+            title: 'The World after World War II',
+            qCount: (typeof SOCIAL_EM_UNIT_13_DATA !== 'undefined' && SOCIAL_EM_UNIT_13_DATA.subSections) ? SOCIAL_EM_UNIT_13_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_13_DATA !== 'undefined') ? SOCIAL_EM_UNIT_13_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_13_DATA !== 'undefined' && SOCIAL_EM_UNIT_13_DATA.subSections) ? SOCIAL_EM_UNIT_13_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_EM_UNIT_13_DATA !== 'undefined') ? SOCIAL_EM_UNIT_13_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_13_DATA !== 'undefined') ? SOCIAL_EM_UNIT_13_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_g4',
+            unit: 'Geography 4',
+            title: 'India - Resources and Industries',
+            qCount: (typeof SOCIAL_EM_UNIT_14_DATA !== 'undefined' && SOCIAL_EM_UNIT_14_DATA.subSections) ? SOCIAL_EM_UNIT_14_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_14_DATA !== 'undefined') ? SOCIAL_EM_UNIT_14_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_14_DATA !== 'undefined' && SOCIAL_EM_UNIT_14_DATA.subSections) ? SOCIAL_EM_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            geoHighlights: (typeof SOCIAL_EM_UNIT_14_DATA !== 'undefined') ? SOCIAL_EM_UNIT_14_DATA.geoHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_14_DATA !== 'undefined') ? SOCIAL_EM_UNIT_14_DATA.timeline : []
           }
         ]
       }
@@ -6709,6 +6793,50 @@
       lesson.questions = SOCIAL_EM_UNIT_12_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
       lesson.econHighlights = SOCIAL_EM_UNIT_12_DATA.econHighlights || [];
       lesson.timeline = SOCIAL_EM_UNIT_12_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u13' && typeof SCIENCE_UNIT_13_DATA !== 'undefined' && SCIENCE_UNIT_13_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_13_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_13_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_13_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u13' && typeof SCIENCE_EM_UNIT_13_DATA !== 'undefined' && SCIENCE_EM_UNIT_13_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_13_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_13_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_13_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u14' && typeof SCIENCE_UNIT_14_DATA !== 'undefined' && SCIENCE_UNIT_14_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_14_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_14_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u14' && typeof SCIENCE_EM_UNIT_14_DATA !== 'undefined' && SCIENCE_EM_UNIT_14_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_14_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_14_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_h4' && typeof SOCIAL_UNIT_13_DATA !== 'undefined' && SOCIAL_UNIT_13_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_13_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_13_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_UNIT_13_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_13_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_h4' && typeof SOCIAL_EM_UNIT_13_DATA !== 'undefined' && SOCIAL_EM_UNIT_13_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_13_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_13_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_EM_UNIT_13_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_13_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_g4' && typeof SOCIAL_UNIT_14_DATA !== 'undefined' && SOCIAL_UNIT_14_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_14_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.geoHighlights = SOCIAL_UNIT_14_DATA.geoHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_14_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_g4' && typeof SOCIAL_EM_UNIT_14_DATA !== 'undefined' && SOCIAL_EM_UNIT_14_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_14_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.geoHighlights = SOCIAL_EM_UNIT_14_DATA.geoHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_14_DATA.timeline || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'soc_em_g3' && typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined' && SOCIAL_EM_UNIT_10_DATA.subSections) {
       lesson.subSections = SOCIAL_EM_UNIT_10_DATA.subSections;

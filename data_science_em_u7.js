@@ -1,4 +1,4 @@
-﻿// 10th Standard Science - Unit 7: Atoms and Molecules
+// 10th Standard Science - Unit 7: Atoms and Molecules
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions (English Medium)
 
 const SCIENCE_EM_UNIT_7_DATA = {
@@ -101,17 +101,55 @@ const SCIENCE_EM_UNIT_7_DATA = {
           id: "sci_em_7_6",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Public Exam 5M",
+          examTag: "Public Exam 7M",
           q: "What are the applications of Avogadro's Law?",
           ans: `<div style="line-height:1.8;">
+            <b>Avogadro's Law (Statement):</b><br>
+            <i>\"Equal volumes of all gases under identical conditions of temperature and pressure contain the same number of molecules.\"</i><br>
+            Mathematically: <b>V ∝ n</b> (where V is volume and n is the number of molecules of the gas).<br><br>
+
             <b>Applications of Avogadro's Law:</b><br><br>
-            1. It explains Gay-Lussac's law of combining volumes of gases.<br>
-            2. It helps in the determination of atomicity of gases (e.g., proves O₂ and H₂ are diatomic).<br>
-            3. It helps to derive the molecular formula of gases.<br>
-            4. It establishes the relationship between molecular mass and vapour density:<br>
-               &nbsp;&nbsp;<b>Relative Molecular Mass = 2 × Vapour Density</b>.<br>
-            5. It helps to determine the molar volume of gases (1 mole occupies 22.4 litres at STP).
-          </div>`
+
+            <b>1. Explains Gay-Lussac's Law of Combining Volumes:</b><br>
+            • Gay-Lussac observed that gases react in simple whole-number ratios by volume.<br>
+            • <i>Example:</i> 1 volume of Hydrogen + 1 volume of Chlorine ➔ 2 volumes of Hydrogen Chloride gas.<br>
+            • By Avogadro's hypothesis (equal volumes contain n molecules):<br>
+            &nbsp;&nbsp;n molecules of H₂ + n molecules of Cl₂ ➔ 2n molecules of HCl<br>
+            &nbsp;&nbsp;½ molecule of H₂ + ½ molecule of Cl₂ ➔ 1 molecule of HCl.<br>
+            • Since hydrogen and chlorine molecules are diatomic, ½ molecule equals 1 atom. Hence, 1 atom of H combines with 1 atom of Cl to produce 1 molecule of HCl, in complete agreement with Dalton's atomic theory.<br><br>
+
+            <b>2. Determination of Atomicity of Elementary Gases:</b><br>
+            • Atomicity refers to the number of atoms present in one molecule of an element.<br>
+            • Avogadro's law definitively proves that elementary gases such as Hydrogen, Chlorine, Oxygen, and Nitrogen are <b>diatomic molecules (Atomicity = 2: H₂, Cl₂, O₂, N₂)</b>.<br><br>
+
+            <b>3. Derivation of the Molecular Formula of Gases:</b><br>
+            • By measuring reacting gas volumes at constant temperature and pressure, Avogadro's law allows chemists to establish the empirical and molecular formulas of volatile compounds (e.g., HCl, NH₃, H₂O).<br><br>
+
+            <b>4. Deduction of Relationship between Molecular Mass and Vapour Density (Molecular Mass = 2 × V.D.):</b><br>
+            • <b>Vapour Density (V.D.):</b> The ratio between the mass of a certain volume of a gas/vapour to the mass of the same volume of hydrogen gas measured under identical temperature and pressure conditions.<br>
+            <div style="background:#f1f5f9; border-left:4px solid #0284c7; padding:8px 12px; margin:6px 0; border-radius:4px; font-size:13px;">
+              V.D. = (Mass of V volume of gas/vapour at STP) / (Mass of V volume of hydrogen at STP)<br><br>
+              Applying Avogadro's Law (V volume contains n molecules):<br>
+              V.D. = (Mass of n molecules of gas) / (Mass of n molecules of H₂)<br>
+              V.D. = (Mass of 1 molecule of gas) / (Mass of 1 molecule of H₂)<br><br>
+              Since Hydrogen is a diatomic molecule (1 molecule of H₂ = 2 atoms of H):<br>
+              V.D. = (Mass of 1 molecule of gas) / (2 × Mass of 1 atom of H)<br>
+              V.D. = ½ × [(Mass of 1 molecule of gas) / (Mass of 1 atom of H)]<br><br>
+              Since Relative Molecular Mass = (Mass of 1 molecule of gas) / (Mass of 1 atom of H):<br>
+              V.D. = (Relative Molecular Mass) / 2<br>
+              <b>∴ Relative Molecular Mass = 2 × Vapour Density (Molecular Mass = 2 × V.D.)</b>
+            </div><br>
+
+            <b>5. Determination of Gram Molar Volume of Gases at STP:</b><br>
+            • At Standard Temperature and Pressure (STP: 273.15 K and 1 atm), 1 mole of any gas occupies a uniform volume of <b>22.4 litres (or 22,400 cm³)</b>.<br>
+            • This constant molar volume is indispensable for stoichiometric calculations in chemical reactions.
+          </div>`,
+          detailedSolution: {
+            step1: "Statement of Avogadro's Law (V ∝ n) and explanation of Gay-Lussac's Law",
+            step2: "Determination of atomicity (diatomic nature of elementary gases) and molecular formula",
+            step3: "Definition of Vapour Density and complete step-by-step derivation of Molecular Mass = 2 × V.D.",
+            step4: "Gram molar volume of gases at STP = 22.4 litres per mole"
+          }
         },
         {
           id: "sci_em_7_7",

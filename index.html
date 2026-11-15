@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -194,8 +194,8 @@
   <script src="data_social_u14.js?v=20261114_v73"></script>
   <script src="data_social_em_u13.js?v=20261114_v73"></script>
   <script src="data_social_em_u14.js?v=20261114_v73"></script>
-<script src="map_data_and_engine.js?v=20261115_v78"></script>
-<script src="map_practice_evaluator.js?v=20261115_v78"></script>
+<script src="map_data_and_engine.js?v=20261115_v79"></script>
+<script src="map_practice_evaluator.js?v=20261115_v79"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -12291,7 +12291,7 @@
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261115_v78')
+        navigator.serviceWorker.register('./sw.js?v=20261115_v79')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 
@@ -15478,17 +15478,30 @@ Important:
       if (qLower === 'board_model' || qLower.includes('map') || qLower.startsWith('soc_')) {
         const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
         let qTitle = isEm ? 'Board Exam Model Map Practice (8 Marks)' : 'அரசுப் பொதுத்தேர்வு மாதிரி வரைபடம் (8 மதிப்பெண்கள்)';
-        if (qLower.includes('ww1') || qLower.includes('soc_1')) {
-          qTitle = isEm ? 'World War I Nations & Theatres (History Unit 1)' : 'முதல் உலகப் போர் நாடுகள் வரைபடம் (வரலாறு அலகு 1)';
-        } else if (qLower.includes('ww2') || qLower.includes('soc_9')) {
-          qTitle = isEm ? 'World War II Powers & Theatres (History Unit 3)' : 'இரண்டாம் உலகப் போர் நாடுகள் வரைபடம் (வரலாறு அலகு 3)';
-        } else if (qLower.includes('river') || qLower.includes('soc_2')) {
-          qTitle = isEm ? 'Major Rivers of India (Geography Unit 1)' : 'இந்தியாவின் முக்கிய நதிகள் (புவியியல் அலகு 1)';
-        } else if (qLower.includes('port') || qLower.includes('soc_8') || qLower.includes('soc_3')) {
-          qTitle = isEm ? 'Major Sea Ports of India (Geography Unit 2)' : 'இந்தியாவின் முக்கிய துறைமுகங்கள் (புவியியல் அலகு 2)';
-        } else if (qLower.includes('soil') || qLower.includes('dam') || qLower.includes('soc_10')) {
-          qTitle = isEm ? 'Soils, Crops & Multipurpose Dams of India' : 'மண் வகைகள், பயிர்கள் & அணைகள் (புவியியல்)';
+        const unitNumMatch = qLower.match(/(?:^|[_\-])soc(?:_em)?[_\-](?:sec[_\-])?([0-9]{1,2})(?:[_\-]|$)/i);
+        let uNum = unitNumMatch ? parseInt(unitNumMatch[1], 10) : null;
+        if (!uNum) {
+          const cMatch = qLower.match(/(?:^|[_\-])soc(?:_em)?[_\-]([hgce][1-4])(?:[_\-]|$)/i);
+          if (cMatch) {
+            const cMap = { 'h1': 1, 'g1': 2, 'c1': 3, 'e1': 4, 'h2': 5, 'g2': 6, 'c2': 7, 'e2': 8, 'h3': 9, 'g3': 10, 'c3': 11, 'e3': 12, 'h4': 13, 'g4': 14 };
+            uNum = cMap[cMatch[1].toLowerCase()] || null;
+          }
         }
+        if (uNum === 1) qTitle = isEm ? 'World War I Nations & Theatres (History Unit 1)' : 'முதல் உலகப் போர் நாடுகள் வரைபடம் (வரலாறு அலகு 1)';
+        else if (uNum === 2) qTitle = isEm ? 'Major Rivers of India (Geography Unit 1)' : 'இந்தியாவின் முக்கிய நதிகள் (புவியியல் அலகு 1)';
+        else if (uNum === 3) qTitle = isEm ? 'Indian Constitution & Judicial Landmarks (Civics Unit 1)' : 'இந்திய அரசியலமைப்பு & நீதித்துறை முக்கிய இடங்கள் (குடிமையியல் 1)';
+        else if (uNum === 4) qTitle = isEm ? 'GDP & Economic Growth Hubs of India (Economics Unit 1)' : 'மொத்த உள்நாட்டு உற்பத்தி & பொருளாதார மையங்கள் (பொருளியல் 1)';
+        else if (uNum === 5) qTitle = isEm ? 'The World between Two World Wars 1919-1939 (History Unit 2)' : 'இரு உலகப்போர்களுக்கு இடையே உலகம் (வரலாறு அலகு 2)';
+        else if (uNum === 6) qTitle = isEm ? 'Climate & Natural Vegetation of India (Geography Unit 2)' : 'காலநிலை & இயற்கை தாவரங்கள் (புவியியல் அலகு 2)';
+        else if (uNum === 7) qTitle = isEm ? 'Central Government & National Institutions (Civics Unit 2)' : 'நடுவண் அரசு & தேசிய நிர்வாக மையங்கள் (குடிமையியல் 2)';
+        else if (uNum === 8) qTitle = isEm ? 'Major Sea Ports of India (Economics Unit 2)' : 'இந்தியாவின் முக்கிய துறைமுகங்கள் (பொருளியல் அலகு 2)';
+        else if (uNum === 9) qTitle = isEm ? 'World War II Powers & Theatres (History Unit 3)' : 'இரண்டாம் உலகப் போர் நாடுகள் வரைபடம் (வரலாறு அலகு 3)';
+        else if (uNum === 10) qTitle = isEm ? 'India - Agriculture, Soils, Crops & Dams (Geography Unit 3)' : 'இந்தியா வேளாண்மை, மண் வகைகள் & அணைகள் (புவியியல் 3)';
+        else if (uNum === 11) qTitle = isEm ? 'State Government & Peninsular High Courts (Civics Unit 3)' : 'மாநில அரசு & தென்னிந்திய உயர் நீதிமன்றங்கள் (குடிமையியல் 3)';
+        else if (uNum === 12) qTitle = isEm ? 'Food Security, Granaries & PDS Management (Economics Unit 3)' : 'உணவு பாதுகாப்பு, களஞ்சியங்கள் & ரேஷன் அமைப்புகள் (பொருளியல் 3)';
+        else if (uNum === 13) qTitle = isEm ? 'The World after World War II (History Unit 4)' : 'இரண்டாம் உலகப்போருக்குப் பிந்தைய உலகம் (வரலாறு அலகு 4)';
+        else if (uNum === 14) qTitle = isEm ? 'Major Minerals & Heavy Industries (Geography Unit 4)' : 'முக்கிய தொழிலகங்கள் & தாதுக்கள் (புவியியல் அலகு 4)';
+        
         qItem = {
           id: qId,
           q: qTitle,
@@ -15564,25 +15577,40 @@ Important:
   }
   window.openAnswerEvaluationModal = openAnswerEvaluationModal;
 
-  function openSocialMapTutor(targetUnit = 'all') {
+    function openSocialMapTutor(targetUnit = 'all') {
     if (targetUnit === 'soc_ww1' || targetUnit === 'soc_1') {
       openAnswerEvaluationModal('soc_1_map_1');
-    } else if (targetUnit === 'soc_ww2' || targetUnit === 'soc_9') {
-      openAnswerEvaluationModal('soc_9_map_1');
     } else if (targetUnit === 'soc_rivers' || targetUnit === 'soc_2') {
       openAnswerEvaluationModal('soc_2_map_1');
-    } else if (targetUnit === 'soc_ports' || targetUnit === 'soc_8') {
-      openAnswerEvaluationModal('soc_8_map_1');
-    } else if (targetUnit === 'soc_soils' || targetUnit === 'soc_10') {
-      openAnswerEvaluationModal('soc_10_map_1');
+    } else if (targetUnit === 'soc_constitution' || targetUnit === 'soc_3') {
+      openAnswerEvaluationModal('soc_3_map_1');
+    } else if (targetUnit === 'soc_gdp' || targetUnit === 'soc_4') {
+      openAnswerEvaluationModal('soc_4_map_1');
+    } else if (targetUnit === 'soc_interwar' || targetUnit === 'soc_5') {
+      openAnswerEvaluationModal('soc_5_map_1');
     } else if (targetUnit === 'soc_climate' || targetUnit === 'soc_6') {
       openAnswerEvaluationModal('soc_6_map_1');
-    } else if (targetUnit === 'soc_industry' || targetUnit === 'soc_11') {
+    } else if (targetUnit === 'soc_central_govt' || targetUnit === 'soc_7') {
+      openAnswerEvaluationModal('soc_7_map_1');
+    } else if (targetUnit === 'soc_ports' || targetUnit === 'soc_8') {
+      openAnswerEvaluationModal('soc_8_map_1');
+    } else if (targetUnit === 'soc_ww2' || targetUnit === 'soc_9') {
+      openAnswerEvaluationModal('soc_9_map_1');
+    } else if (targetUnit === 'soc_soils' || targetUnit === 'soc_10') {
+      openAnswerEvaluationModal('soc_10_map_1');
+    } else if (targetUnit === 'soc_state_govt' || targetUnit === 'soc_11') {
       openAnswerEvaluationModal('soc_11_map_1');
+    } else if (targetUnit === 'soc_food_security' || targetUnit === 'soc_12') {
+      openAnswerEvaluationModal('soc_12_map_1');
+    } else if (targetUnit === 'soc_post_ww2' || targetUnit === 'soc_13') {
+      openAnswerEvaluationModal('soc_13_map_1');
+    } else if (targetUnit === 'soc_industry' || targetUnit === 'soc_14') {
+      openAnswerEvaluationModal('soc_14_map_1');
     } else {
       openAnswerEvaluationModal('board_model');
     }
   }
+
   window.openSocialMapTutor = openSocialMapTutor;
 
   function closeAIEvaluatorModal() {

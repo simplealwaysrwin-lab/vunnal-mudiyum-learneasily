@@ -879,40 +879,692 @@ const OFFICIAL_WORLD_MAP_BASE64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA
           tipEnglish: "Goa: Smallest Indian state by area, famous for Marmagao natural iron ore port on the Konkan coast."
         }
       ]
+    },
+    // 9. Civics Unit 1: Indian Constitution & Judicial Landmarks
+    "soc_constitution": {
+      id: "soc_constitution",
+      titleTamil: "இந்திய அரசியலமைப்பு & நீதித்துறை முக்கிய இடங்கள்",
+      titleEnglish: "Indian Constitution & Judicial Landmarks",
+      lessonCategory: "Civics Unit 1",
+      mapType: "india",
+      questions: [
+        {
+          id: "const_delhi",
+          nameTamil: "புது தில்லி (உச்ச நீதிமன்றம் & பாராளுமன்றம்)",
+          nameEnglish: "New Delhi (Supreme Court & Parliament)",
+          distractors: [
+            { num: 1, labelTamil: "புது தில்லி", labelEnglish: "New Delhi", coords: { x: 370, y: 360 }, isCorrect: true },
+            { num: 2, labelTamil: "மும்பை", labelEnglish: "Mumbai", coords: { x: 220, y: 640 }, isCorrect: false },
+            { num: 3, labelTamil: "கொல்கத்தா", labelEnglish: "Kolkata", coords: { x: 740, y: 520 }, isCorrect: false }
+          ],
+          tipTamil: "புது தில்லி: இந்திய அரசியலமைப்பு ஏற்றுக்கொள்ளப்பட்ட பாராளுமன்ற மையம் மற்றும் நாட்டின் மிக உயர்ந்த நீதி அமைப்பான உச்ச நீதிமன்றம் (ஜனவரி 28, 1950) அமைந்துள்ள தலைநகரம்.",
+          tipEnglish: "New Delhi: National capital of India; home to the Parliament of India and the Supreme Court of India inaugurated on January 28, 1950."
+        },
+        {
+          id: "const_kolkata",
+          nameTamil: "கொல்கத்தா (கல்கத்தா உயர் நீதிமன்றம் 1862)",
+          nameEnglish: "Kolkata (Calcutta High Court 1862)",
+          distractors: [
+            { num: 1, labelTamil: "பாட்னா", labelEnglish: "Patna", coords: { x: 630, y: 440 }, isCorrect: false },
+            { num: 2, labelTamil: "கொல்கத்தா", labelEnglish: "Kolkata", coords: { x: 740, y: 520 }, isCorrect: true },
+            { num: 3, labelTamil: "சென்னை", labelEnglish: "Chennai", coords: { x: 490, y: 840 }, isCorrect: false }
+          ],
+          tipTamil: "கொல்கத்தா: 1862-ஆம் ஆண்டின் உயர் நீதிமன்றங்கள் சட்டத்தின் கீழ் இந்தியாவில் நிறுவப்பட்ட முதல் மற்றும் மிக பழமையான உயர் நீதிமன்றம் கல்கத்தா உயர் நீதிமன்றம் ஆகும்.",
+          tipEnglish: "Kolkata: Home to the Calcutta High Court, the oldest High Court in India chartered in July 1862 under the Indian High Courts Act 1861."
+        },
+        {
+          id: "const_mumbai",
+          nameTamil: "மும்பை (பம்பாய் உயர் நீதிமன்றம் 1862)",
+          nameEnglish: "Mumbai (Bombay High Court 1862)",
+          distractors: [
+            { num: 1, labelTamil: "அகமதாபாத்", labelEnglish: "Ahmedabad", coords: { x: 220, y: 510 }, isCorrect: false },
+            { num: 2, labelTamil: "பனாஜி (கோவா)", labelEnglish: "Panaji / Goa", coords: { x: 220, y: 770 }, isCorrect: false },
+            { num: 3, labelTamil: "மும்பை", labelEnglish: "Mumbai", coords: { x: 220, y: 640 }, isCorrect: true }
+          ],
+          tipTamil: "மும்பை: மகாராஷ்டிரா மற்றும் கோவா மாநிலங்களின் அதிகார வரம்பைக் கொண்ட வரலாற்று சிறப்புமிக்க பம்பாய் உயர் நீதிமன்றம் (1862) அமைந்துள்ள இடம்.",
+          tipEnglish: "Mumbai: Seat of the Bombay High Court chartered in August 1862, with jurisdiction extending over Maharashtra, Goa, and UTs."
+        },
+        {
+          id: "const_chennai",
+          nameTamil: "சென்னை (மெட்ராஸ் உயர் நீதிமன்றம் 1862)",
+          nameEnglish: "Chennai (Madras High Court 1862)",
+          distractors: [
+            { num: 1, labelTamil: "சென்னை", labelEnglish: "Chennai", coords: { x: 490, y: 840 }, isCorrect: true },
+            { num: 2, labelTamil: "பெங்களூரு", labelEnglish: "Bengaluru", coords: { x: 390, y: 840 }, isCorrect: false },
+            { num: 3, labelTamil: "மதுரை", labelEnglish: "Madurai", coords: { x: 440, y: 970 }, isCorrect: false }
+          ],
+          tipTamil: "சென்னை: லண்டனுக்கு அடுத்தபடியாக உலகிலேயே இரண்டாவது பெரிய நீதிமன்ற வளாகத்தைக் கொண்ட மெட்ராஸ் உயர் நீதிமன்றம் (1862) அமைந்துள்ள தமிழ்நாட்டின் தலைநகரம்.",
+          tipEnglish: "Chennai: Home to Madras High Court (1862), boasting the second largest judicial court complex in the world after London."
+        },
+        {
+          id: "const_prayagraj",
+          nameTamil: "அலகாபாத் / பிரயாக்ராஜ் (உயர் நீதிமன்றம்)",
+          nameEnglish: "Prayagraj / Allahabad (Allahabad High Court)",
+          distractors: [
+            { num: 1, labelTamil: "லக்னோ", labelEnglish: "Lucknow", coords: { x: 500, y: 400 }, isCorrect: false },
+            { num: 2, labelTamil: "அலகாபாத்", labelEnglish: "Prayagraj (Allahabad)", coords: { x: 530, y: 450 }, isCorrect: true },
+            { num: 3, labelTamil: "வாரணாசி", labelEnglish: "Varanasi", coords: { x: 570, y: 460 }, isCorrect: false }
+          ],
+          tipTamil: "பிரயாக்ராஜ் (அலகாபாத்): கங்கை, யமுனை சங்கமத்தில் அமைந்துள்ள ஆசியாவின் மிகப்பெரிய நீதிமன்றங்களில் ஒன்றான அலகாபாத் உயர் நீதிமன்றம் (1866) அமைந்துள்ள இடம்.",
+          tipEnglish: "Prayagraj (Allahabad): Historic city at Triveni Sangam; seat of the Allahabad High Court (1866) having the largest judicial bench strength in India."
+        },
+        {
+          id: "const_shimla",
+          nameTamil: "சிம்லா (வரலாற்று மாநாடு 1945)",
+          nameEnglish: "Shimla (Constitutional Conference 1945)",
+          distractors: [
+            { num: 1, labelTamil: "ஸ்ரீநகர்", labelEnglish: "Srinagar", coords: { x: 310, y: 170 }, isCorrect: false },
+            { num: 2, labelTamil: "சண்டிகர்", labelEnglish: "Chandigarh", coords: { x: 340, y: 290 }, isCorrect: false },
+            { num: 3, labelTamil: "சிம்லா", labelEnglish: "Shimla", coords: { x: 370, y: 260 }, isCorrect: true }
+          ],
+          tipTamil: "சிம்லா: இமாச்சலப் பிரதேசத்தின் தலைநகரம்; இந்திய சுதந்திரம் மற்றும் அரசியலமைப்பு உருவாக்கத்திற்கு முன்னோடியான 1945 சிம்லா மாநாடு நடைபெற்ற இடம்.",
+          tipEnglish: "Shimla: Capital of Himachal Pradesh; historic venue of the 1945 Wavell Plan and Shimla Conference leading up to Constituent Assembly elections."
+        }
+      ]
+    },
+
+    // 10. Economics Unit 1: Gross Domestic Product & Economic Hubs
+    "soc_gdp": {
+      id: "soc_gdp",
+      titleTamil: "மொத்த உள்நாட்டு உற்பத்தி & பொருளாதார மையங்கள்",
+      titleEnglish: "GDP & Economic Growth Hubs of India",
+      lessonCategory: "Economics Unit 1",
+      mapType: "india",
+      questions: [
+        {
+          id: "gdp_mumbai",
+          nameTamil: "மும்பை (இந்தியாவின் நிதித் தலைநகரம் & RBI)",
+          nameEnglish: "Mumbai (Financial Capital & RBI HQ)",
+          distractors: [
+            { num: 1, labelTamil: "மும்பை", labelEnglish: "Mumbai", coords: { x: 220, y: 640 }, isCorrect: true },
+            { num: 2, labelTamil: "புனே", labelEnglish: "Pune", coords: { x: 260, y: 670 }, isCorrect: false },
+            { num: 3, labelTamil: "நாக்பூர்", labelEnglish: "Nagpur", coords: { x: 440, y: 550 }, isCorrect: false }
+          ],
+          tipTamil: "மும்பை: மகாராஷ்டிராவின் தலைநகரம்; இந்தியாவின் நிதித் தலைநகரம் (Financial Capital), ரிசர்வ் வங்கி (RBI) தலைமையகம் மற்றும் மும்பை பங்குச்சந்தை (BSE) அமைந்துள்ள முதன்மை GDP உற்பத்தி நகரம்.",
+          tipEnglish: "Mumbai: Financial Capital of India; headquarters of the Reserve Bank of India (RBI), Bombay Stock Exchange (BSE), and premier commercial contributor to national GDP."
+        },
+        {
+          id: "gdp_bengaluru",
+          nameTamil: "பெங்களூரு (சிலிகான் பள்ளத்தாக்கு & IT தலைநகரம்)",
+          nameEnglish: "Bengaluru (Silicon Valley of India - IT Hub)",
+          distractors: [
+            { num: 1, labelTamil: "ஹைதராபாத்", labelEnglish: "Hyderabad", coords: { x: 440, y: 690 }, isCorrect: false },
+            { num: 2, labelTamil: "பெங்களூரு", labelEnglish: "Bengaluru", coords: { x: 390, y: 840 }, isCorrect: true },
+            { num: 3, labelTamil: "சென்னை", labelEnglish: "Chennai", coords: { x: 490, y: 840 }, isCorrect: false }
+          ],
+          tipTamil: "பெங்களூரு: கர்நாடகாவின் தலைநகரம்; 'இந்தியாவின் சிலிகான் பள்ளத்தாக்கு' என அழைக்கப்படும் மென்பொருள் ஏற்றுமதி மற்றும் சேவைத் துறை GDP-யின் முன்னணி மையம்.",
+          tipEnglish: "Bengaluru: 'Silicon Valley of India' and IT Capital; epicenter of India's technology boom, software exports, and tertiary GDP service growth."
+        },
+        {
+          id: "gdp_chennai",
+          nameTamil: "சென்னை (ஆசியாவின் டெட்ராய்ட் & வாகன தொழிலகம்)",
+          nameEnglish: "Chennai (Detroit of Asia - Automobile Hub)",
+          distractors: [
+            { num: 1, labelTamil: "விசாகப்பட்டினம்", labelEnglish: "Visakhapatnam", coords: { x: 580, y: 680 }, isCorrect: false },
+            { num: 2, labelTamil: "கொச்சி", labelEnglish: "Kochi", coords: { x: 360, y: 980 }, isCorrect: false },
+            { num: 3, labelTamil: "சென்னை", labelEnglish: "Chennai", coords: { x: 490, y: 840 }, isCorrect: true }
+          ],
+          tipTamil: "சென்னை: தமிழ்நாட்டின் தலைநகரம்; இந்தியாவின் 60% வாகன உற்பத்தியைக் கையாண்டு 'ஆசியாவின் டெட்ராய்ட்' (Detroit of Asia) என அழைக்கப்படும் முக்கிய உற்பத்தி மற்றும் ஏற்றுமதி மையம்.",
+          tipEnglish: "Chennai: 'Detroit of Asia'; premier automobile manufacturing corridor, accounting for over 30% of national auto industrial output and high secondary GDP revenue."
+        },
+        {
+          id: "gdp_kolkata",
+          nameTamil: "கொல்கத்தா (கிழக்கு இந்தியாவின் வர்த்தக மையம்)",
+          nameEnglish: "Kolkata (East India Commercial & Jute Hub)",
+          distractors: [
+            { num: 1, labelTamil: "கொல்கத்தா", labelEnglish: "Kolkata", coords: { x: 740, y: 520 }, isCorrect: true },
+            { num: 2, labelTamil: "பாட்னா", labelEnglish: "Patna", coords: { x: 630, y: 440 }, isCorrect: false },
+            { num: 3, labelTamil: "புவனேஸ்வர்", labelEnglish: "Bhubaneswar", coords: { x: 630, y: 580 }, isCorrect: false }
+          ],
+          tipTamil: "கொல்கத்தா: மேற்கு வங்கத்தின் தலைநகரம்; சணல் தொழிலகம், துறைமுகம் மற்றும் கிழக்கு இந்தியாவின் முதன்மை நிதி வர்த்தக தலைமையகம்.",
+          tipEnglish: "Kolkata: Commercial hub of Eastern India; center of jute industry, tea trading, and major eastern maritime commerce."
+        },
+        {
+          id: "gdp_hyderabad",
+          nameTamil: "ஹைதராபாத் (ஹைடெக் சிட்டி & பார்மா மையம்)",
+          nameEnglish: "Hyderabad (HITEC City & Genome Valley)",
+          distractors: [
+            { num: 1, labelTamil: "நாக்பூர்", labelEnglish: "Nagpur", coords: { x: 440, y: 550 }, isCorrect: false },
+            { num: 2, labelTamil: "ஹைதராபாத்", labelEnglish: "Hyderabad", coords: { x: 440, y: 690 }, isCorrect: true },
+            { num: 3, labelTamil: "அமராவதி", labelEnglish: "Amaravati", coords: { x: 490, y: 720 }, isCorrect: false }
+          ],
+          tipTamil: "ஹைதராபாத்: தெலங்கானாவின் தலைநகரம்; ஹைடெக் சிட்டி (HITEC City) மற்றும் தடுப்பூசி / மருந்து உற்பத்தியில் முதலிடம் வகிக்கும் மரபணு பள்ளத்தாக்கு (Genome Valley) மையம்.",
+          tipEnglish: "Hyderabad: Capital of Telangana; home to HITEC City, Cyberabad IT corridor, and Genome Valley leading India in biotech and vaccine manufacture."
+        },
+        {
+          id: "gdp_ahmedabad",
+          nameTamil: "அகமதாபாத் (இந்தியாவின் மான்செஸ்டர்)",
+          nameEnglish: "Ahmedabad (Manchester of India - Textile Hub)",
+          distractors: [
+            { num: 1, labelTamil: "ஜெய்ப்பூர்", labelEnglish: "Jaipur", coords: { x: 300, y: 410 }, isCorrect: false },
+            { num: 2, labelTamil: "சூரத்", labelEnglish: "Surat", coords: { x: 215, y: 570 }, isCorrect: false },
+            { num: 3, labelTamil: "அகமதாபாத்", labelEnglish: "Ahmedabad", coords: { x: 220, y: 510 }, isCorrect: true }
+          ],
+          tipTamil: "அகமதாபாத்: குஜராத்தின் முன்னணி நகரம்; பருத்தி ஆடை உற்பத்தியில் சிறந்து விளங்கி 'இந்தியாவின் மான்செஸ்டர்' (Manchester of India) என அழைக்கப்படுகிறது.",
+          tipEnglish: "Ahmedabad: Industrial powerhouse of Gujarat on River Sabarmati; renowned as the 'Manchester of India' for cotton textile mills and trade."
+        }
+      ]
+    },
+
+    // 11. History Unit 2: World between Two World Wars
+    "soc_interwar": {
+      id: "soc_interwar",
+      titleTamil: "இரு உலகப்போர்களுக்கு இடையே உலகம் (1919-1939)",
+      titleEnglish: "The World between Two World Wars (1919-1939)",
+      lessonCategory: "History Unit 2",
+      mapType: "world",
+      questions: [
+        {
+          id: "int_italy",
+          nameTamil: "இத்தாலி (பாசிசம் - முசோலினி)",
+          nameEnglish: "Italy (Fascist Regime - Mussolini)",
+          distractors: [
+            { num: 1, labelTamil: "இத்தாலி", labelEnglish: "Italy", coords: { x: 388, y: 190 }, isCorrect: true },
+            { num: 2, labelTamil: "ஸ்பெயின்", labelEnglish: "Spain", coords: { x: 340, y: 195 }, isCorrect: false },
+            { num: 3, labelTamil: "கிரீஸ்", labelEnglish: "Greece", coords: { x: 415, y: 200 }, isCorrect: false }
+          ],
+          tipTamil: "இத்தாலி: தெற்கு ஐரோப்பாவில் பூட் (Boot) வடிவ தீபகற்ப நாடு; 1922-இல் பெனிட்டோ முசோலினி ரோம் நோக்கிய அணிவகுப்பு மூலம் பாசிச சர்வாதிகார ஆட்சியை நிறுவினார்.",
+          tipEnglish: "Italy: Peninsular nation in Southern Europe; birthplace of Fascism where Benito Mussolini seized power following the 1922 March on Rome."
+        },
+        {
+          id: "int_germany",
+          nameTamil: "ஜெர்மனி (நாசிசம் - அடால்ப் ஹிட்லர்)",
+          nameEnglish: "Germany (Nazi Regime - Adolf Hitler)",
+          distractors: [
+            { num: 1, labelTamil: "பிரான்ஸ்", labelEnglish: "France", coords: { x: 358, y: 172 }, isCorrect: false },
+            { num: 2, labelTamil: "ஜெர்மனி", labelEnglish: "Germany", coords: { x: 382, y: 155 }, isCorrect: true },
+            { num: 3, labelTamil: "போலந்து", labelEnglish: "Poland", coords: { x: 405, y: 150 }, isCorrect: false }
+          ],
+          tipTamil: "ஜெர்மனி: மத்திய ஐரோப்பாவின் வல்லரசு; வெர்சாய் உடன்படிக்கையின் அவமானங்களை எதிர்த்து 1933-இல் அடால்ப் ஹிட்லர் நாசிச சர்வாதிகாரத்தை நிறுவிய நாடு.",
+          tipEnglish: "Germany: Central European nation; Adolf Hitler established the Nazi totalitarian dictatorship in 1933, defying the Treaty of Versailles."
+        },
+        {
+          id: "int_geneva",
+          nameTamil: "ஜெனீவா - சுவிட்சர்லாந்து (சர்வதேச சங்கம்)",
+          nameEnglish: "Geneva, Switzerland (League of Nations HQ)",
+          distractors: [
+            { num: 1, labelTamil: "லண்டன்", labelEnglish: "London", coords: { x: 350, y: 145 }, isCorrect: false },
+            { num: 2, labelTamil: "வியன்னா", labelEnglish: "Vienna", coords: { x: 395, y: 168 }, isCorrect: false },
+            { num: 3, labelTamil: "ஜெனீவா", labelEnglish: "Geneva (Switzerland)", coords: { x: 372, y: 175 }, isCorrect: true }
+          ],
+          tipTamil: "ஜெனீவா: சுவிட்சர்லாந்தின் நடுநிலை நகரம்; முதல் உலகப் போருக்குப் பின் உலக அமைதிக்காக 1920-இல் உருவாக்கப்பட்ட 'சர்வதேச சங்கம்' (League of Nations) தலைமையகம் அமைந்த இடம்.",
+          tipEnglish: "Geneva: Neutral Swiss city; chosen as headquarters of the League of Nations in 1920 to maintain collective security and prevent future wars."
+        },
+        {
+          id: "int_south_africa",
+          nameTamil: "தென் ஆப்பிரிக்கா (நிறவெறி எதிர்ப்பு & காந்தியடிகள்)",
+          nameEnglish: "South Africa (Anti-Apartheid & Mahatma Gandhi)",
+          distractors: [
+            { num: 1, labelTamil: "தென் ஆப்பிரிக்கா", labelEnglish: "South Africa", coords: { x: 410, y: 415 }, isCorrect: true },
+            { num: 2, labelTamil: "எகிப்து", labelEnglish: "Egypt", coords: { x: 425, y: 230 }, isCorrect: false },
+            { num: 3, labelTamil: "கென்யா", labelEnglish: "Kenya", coords: { x: 445, y: 300 }, isCorrect: false }
+          ],
+          tipTamil: "தென் ஆப்பிரிக்கா: ஆப்பிரிக்கக் கண்டத்தின் தென்கோடி நாடு; வெள்ளையர் நிறவெறிக்கு (Apartheid) எதிராகக் காந்தியடிகள் அறப்போராட்டம் (சத்தியாகிரகம்) தொடங்கிய வரலாற்று பூமி.",
+          tipEnglish: "South Africa: Southernmost African nation; historic land where Mahatma Gandhi developed Satyagraha against racial discrimination and apartheid laws."
+        },
+        {
+          id: "int_vietnam",
+          nameTamil: "வியட்நாம் (ஹோ சி மின் காலனி எதிர்ப்பு போராட்டம்)",
+          nameEnglish: "Vietnam (Ho Chi Minh Anti-Colonial Struggle)",
+          distractors: [
+            { num: 1, labelTamil: "ஜப்பான்", labelEnglish: "Japan", coords: { x: 635, y: 200 }, isCorrect: false },
+            { num: 2, labelTamil: "வியட்நாம்", labelEnglish: "Vietnam", coords: { x: 560, y: 265 }, isCorrect: true },
+            { num: 3, labelTamil: "பிலிப்பைன்ஸ்", labelEnglish: "Philippines", coords: { x: 605, y: 275 }, isCorrect: false }
+          ],
+          tipTamil: "வியட்நாம்: தென்கிழக்கு ஆசியாவின் இந்தோ-சீன நாடு; பிரெஞ்சு ஏகாதிபத்திய ஆதிக்கத்திற்கு எதிராக ஹோ சி மின் தலைமையில் தீவிர விடுதலைப் போராட்டம் வெடித்த இடம்.",
+          tipEnglish: "Vietnam: Southeast Asian Indochina territory; where Ho Chi Minh founded the Viet Minh to liberate the nation from French colonial rule."
+        },
+        {
+          id: "int_japan",
+          nameTamil: "ஜப்பான் (மஞ்சூரியா மீதான ஆக்கிரமிப்பு 1931)",
+          nameEnglish: "Japan (Invasion of Manchuria 1931)",
+          distractors: [
+            { num: 1, labelTamil: "சீனா", labelEnglish: "China", coords: { x: 550, y: 210 }, isCorrect: false },
+            { num: 2, labelTamil: "கொரியா", labelEnglish: "Korea", coords: { x: 600, y: 190 }, isCorrect: false },
+            { num: 3, labelTamil: "ஜப்பான்", labelEnglish: "Japan", coords: { x: 635, y: 200 }, isCorrect: true }
+          ],
+          tipTamil: "ஜப்பான்: கிழக்கு ஆசியாவின் தீவு நாடு; 1931-இல் சீனாவின் மஞ்சூரியா மீது படையெடுத்து சர்வதேச சங்கத்திலிருந்து வெளியேறி ஆசியாவில் ராணுவ ஆதிக்கத்தை விரிவுபடுத்தியது.",
+          tipEnglish: "Japan: East Asian island power; invaded Manchuria in 1931 and withdrew from the League of Nations, triggering militarist expansion in the Pacific."
+        }
+      ]
+    },
+
+    // 12. Civics Unit 2: Central Government & National Institutions
+    "soc_central_govt": {
+      id: "soc_central_govt",
+      titleTamil: "நடுவண் அரசு & தேசிய நிர்வாக மையங்கள்",
+      titleEnglish: "Central Government & National Institutions",
+      lessonCategory: "Civics Unit 2",
+      mapType: "india",
+      questions: [
+        {
+          id: "cen_delhi",
+          nameTamil: "புது தில்லி (நாட்டின் தலைநகரம் & சன்சாத் பவன்)",
+          nameEnglish: "New Delhi (National Capital & Sansad Bhavan)",
+          distractors: [
+            { num: 1, labelTamil: "புது தில்லி", labelEnglish: "New Delhi", coords: { x: 370, y: 360 }, isCorrect: true },
+            { num: 2, labelTamil: "சண்டிகர்", labelEnglish: "Chandigarh", coords: { x: 340, y: 290 }, isCorrect: false },
+            { num: 3, labelTamil: "ஜெய்ப்பூர்", labelEnglish: "Jaipur", coords: { x: 300, y: 410 }, isCorrect: false }
+          ],
+          tipTamil: "புது தில்லி: இந்திய யூனியனின் தலைநகரம்; குடியரசுத் தலைவர், பிரதமர் மற்றும் மத்திய அமைச்சரவை செயல்படும் தேசிய நிர்வாக மையம்.",
+          tipEnglish: "New Delhi: National Capital of India; executive seat of the Union Government, President of India, and Prime Minister's Secretariat."
+        },
+        {
+          id: "cen_supreme_court",
+          nameTamil: "இந்திய உச்ச நீதிமன்றம் (Supreme Court - புது தில்லி)",
+          nameEnglish: "Supreme Court of India (Apex Court - New Delhi)",
+          distractors: [
+            { num: 1, labelTamil: "மும்பை", labelEnglish: "Mumbai", coords: { x: 220, y: 640 }, isCorrect: false },
+            { num: 2, labelTamil: "உச்ச நீதிமன்றம் (புது தில்லி)", labelEnglish: "Supreme Court (New Delhi)", coords: { x: 370, y: 360 }, isCorrect: true },
+            { num: 3, labelTamil: "அலகாபாத்", labelEnglish: "Prayagraj", coords: { x: 530, y: 450 }, isCorrect: false }
+          ],
+          tipTamil: "இந்திய உச்ச நீதிமன்றம்: புது திலக மார்க்கில் அமைந்துள்ள நாட்டின் மிக உயர்ந்த மேல்முறையீட்டு நீதி அமைப்பு மற்றும் அரசியலமைப்பின் பாதுகாவலன்.",
+          tipEnglish: "Supreme Court of India: Apex judicial court and guardian of the Constitution under Article 124, situated on Tilak Marg, New Delhi."
+        },
+        {
+          id: "cen_parliament",
+          nameTamil: "இந்திய நாடாளுமன்றம் (மக்களவை & மாநிலங்களவை)",
+          nameEnglish: "Parliament House (Lok Sabha & Rajya Sabha)",
+          distractors: [
+            { num: 1, labelTamil: "கொல்கத்தா", labelEnglish: "Kolkata", coords: { x: 740, y: 520 }, isCorrect: false },
+            { num: 2, labelTamil: "சென்னை", labelEnglish: "Chennai", coords: { x: 490, y: 840 }, isCorrect: false },
+            { num: 3, labelTamil: "நாடாளுமன்றம் (புது தில்லி)", labelEnglish: "Parliament (New Delhi)", coords: { x: 370, y: 360 }, isCorrect: true }
+          ],
+          tipTamil: "நாடாளுமன்றம்: புது தில்லியில் உள்ள ஈரவை சட்டமன்றம்; குடியரசுத் தலைவர், மக்களவை (Lok Sabha) மற்றும் மாநிலங்களவை (Rajya Sabha) ஆகியவற்றை உள்ளடக்கியது.",
+          tipEnglish: "Parliament of India: Supreme legislative body comprising the President, Council of States (Rajya Sabha), and House of the People (Lok Sabha)."
+        },
+        {
+          id: "cen_rbi_mumbai",
+          nameTamil: "மும்பை (ரிசர்வ் வங்கி மத்திய அலுவலகம்)",
+          nameEnglish: "Mumbai (Reserve Bank of India Central Office)",
+          distractors: [
+            { num: 1, labelTamil: "அகமதாபாத்", labelEnglish: "Ahmedabad", coords: { x: 220, y: 510 }, isCorrect: false },
+            { num: 2, labelTamil: "மும்பை", labelEnglish: "Mumbai", coords: { x: 220, y: 640 }, isCorrect: true },
+            { num: 3, labelTamil: "பெங்களூரு", labelEnglish: "Bengaluru", coords: { x: 390, y: 840 }, isCorrect: false }
+          ],
+          tipTamil: "மும்பை: நாட்டின் நாணயக் கொள்கை மற்றும் பணவீக்கத்தைக் கட்டுப்படுத்தும் இந்திய ரிசர்வ் வங்கியின் (RBI) முதன்மை தலைமை அலுவலகம் அமைந்துள்ள நகரம்.",
+          tipEnglish: "Mumbai: Central headquarters of the Reserve Bank of India, steering national monetary policy, currency issue, and banking regulation."
+        },
+        {
+          id: "cen_kolkata_hist",
+          nameTamil: "கொல்கத்தா (பிரிட்டிஷ் இந்தியாவின் பழைய தலைநகரம் 1911 வரை)",
+          nameEnglish: "Kolkata (Capital of British India until 1911)",
+          distractors: [
+            { num: 1, labelTamil: "பாட்னா", labelEnglish: "Patna", coords: { x: 630, y: 440 }, isCorrect: false },
+            { num: 2, labelTamil: "டாக்கா", labelEnglish: "Dhaka", coords: { x: 790, y: 490 }, isCorrect: false },
+            { num: 3, labelTamil: "கொல்கத்தா", labelEnglish: "Kolkata", coords: { x: 740, y: 520 }, isCorrect: true }
+          ],
+          tipTamil: "கொல்கத்தா: 1911-ஆம் ஆண்டு வரை பிரிட்டிஷ் இந்தியாவின் தலைநகரமாக விளங்கிய வரலாற்றுச் சிறப்புமிக்க கிழக்கு இந்திய நகரம்.",
+          tipEnglish: "Kolkata: Imperial capital of British India until the capital was shifted to New Delhi in December 1911 during the Delhi Durbar."
+        }
+      ]
+    },
+
+    // 13. Civics Unit 3: State Government & Peninsular High Courts
+    "soc_state_govt": {
+      id: "soc_state_govt",
+      titleTamil: "மாநில அரசு & தென்னிந்திய உயர் நீதிமன்றங்கள்",
+      titleEnglish: "State Government & Peninsular High Courts",
+      lessonCategory: "Civics Unit 3",
+      mapType: "india",
+      questions: [
+        {
+          id: "st_chennai",
+          nameTamil: "சென்னை (புனித ஜார்ஜ் கோட்டை & மெட்ராஸ் உயர் நீதிமன்றம்)",
+          nameEnglish: "Chennai (Fort St. George & Madras High Court)",
+          distractors: [
+            { num: 1, labelTamil: "சென்னை", labelEnglish: "Chennai", coords: { x: 490, y: 840 }, isCorrect: true },
+            { num: 2, labelTamil: "பெங்களூரு", labelEnglish: "Bengaluru", coords: { x: 390, y: 840 }, isCorrect: false },
+            { num: 3, labelTamil: "ஹைதராபாத்", labelEnglish: "Hyderabad", coords: { x: 440, y: 690 }, isCorrect: false }
+          ],
+          tipTamil: "சென்னை: தமிழ்நாட்டின் தலைநகரம்; புனித ஜார்ஜ் கோட்டை தலைமைச் செயலகம், சட்டப்பேரவை மற்றும் 1862-இல் நிறுவப்பட்ட மெட்ராஸ் உயர் நீதிமன்றம் அமைந்துள்ள இடம்.",
+          tipEnglish: "Chennai: Capital of Tamil Nadu; seat of Fort St. George (State Secretariat and Assembly) and Madras High Court chartered in 1862."
+        },
+        {
+          id: "st_madurai",
+          nameTamil: "மதுரை (மெட்ராஸ் உயர் நீதிமன்ற மதுரை கிளை)",
+          nameEnglish: "Madurai (Madurai Bench of Madras High Court)",
+          distractors: [
+            { num: 1, labelTamil: "திருச்சிராப்பள்ளி", labelEnglish: "Tiruchirappalli", coords: { x: 440, y: 920 }, isCorrect: false },
+            { num: 2, labelTamil: "மதுரை", labelEnglish: "Madurai", coords: { x: 440, y: 970 }, isCorrect: true },
+            { num: 3, labelTamil: "திருநெல்வேலி", labelEnglish: "Tirunelveli", coords: { x: 410, y: 1010 }, isCorrect: false }
+          ],
+          tipTamil: "மதுரை: தென் தமிழகத்தின் பண்பாட்டு மையம்; 14 தென் மாவட்டங்களுக்காக ஜூலை 24, 2004 அன்று அமைக்கப்பட்ட மெட்ராஸ் உயர் நீதிமன்ற நிரந்தர மதுரை கிளை அமைந்துள்ள இடம்.",
+          tipEnglish: "Madurai: Cultural capital of South TN; home to the permanent Madurai Bench of the Madras High Court inaugurated on July 24, 2004, serving 14 southern districts."
+        },
+        {
+          id: "st_bengaluru",
+          nameTamil: "பெங்களூரு (விதான் சௌதா & கர்நாடக உயர் நீதிமன்றம்)",
+          nameEnglish: "Bengaluru (Vidhana Soudha & Karnataka High Court)",
+          distractors: [
+            { num: 1, labelTamil: "மைசூர்", labelEnglish: "Mysuru", coords: { x: 360, y: 890 }, isCorrect: false },
+            { num: 2, labelTamil: "பெலகாவி", labelEnglish: "Belagavi", coords: { x: 280, y: 760 }, isCorrect: false },
+            { num: 3, labelTamil: "பெங்களூரு", labelEnglish: "Bengaluru", coords: { x: 390, y: 840 }, isCorrect: true }
+          ],
+          tipTamil: "பெங்களூரு: கர்நாடகாவின் தலைநகரம்; கம்பீரமான விதான் சௌதா சட்டப்பேரவை மற்றும் அட்டார கச்சேரி (கர்நாடக உயர் நீதிமன்றம்) அமைந்துள்ள இடம்.",
+          tipEnglish: "Bengaluru: Capital of Karnataka; seat of the magnificent Vidhana Soudha Legislature and High Court of Karnataka (Attara Kacheri)."
+        },
+        {
+          id: "st_thiruvananthapuram",
+          nameTamil: "திருவனந்தபுரம் (கேரள தலைமைச் செயலகம்)",
+          nameEnglish: "Thiruvananthapuram (Kerala State Secretariat)",
+          distractors: [
+            { num: 1, labelTamil: "திருவனந்தபுரம்", labelEnglish: "Thiruvananthapuram", coords: { x: 370, y: 1040 }, isCorrect: true },
+            { num: 2, labelTamil: "கொச்சி", labelEnglish: "Kochi", coords: { x: 360, y: 980 }, isCorrect: false },
+            { num: 3, labelTamil: "கோழிக்கோடு", labelEnglish: "Kozhikode", coords: { x: 330, y: 910 }, isCorrect: false }
+          ],
+          tipTamil: "திருவனந்தபுரம்: கேரளாவின் நிர்வாக தலைநகரம் மற்றும் தலைமைச் செயலக மையம் (முக்கியக் குறிப்பு: கேரள உயர் நீதிமன்றம் கொச்சியில் உள்ளது).",
+          tipEnglish: "Thiruvananthapuram: Administrative capital and Secretariat of Kerala. Note: Kerala High Court is located in Kochi/Ernakulam."
+        },
+        {
+          id: "st_kochi",
+          nameTamil: "கொச்சி / எர்ணாகுளம் (கேரள & லட்சத்தீவு உயர் நீதிமன்றம்)",
+          nameEnglish: "Kochi / Ernakulam (Kerala & Lakshadweep High Court)",
+          distractors: [
+            { num: 1, labelTamil: "திருவனந்தபுரம்", labelEnglish: "Thiruvananthapuram", coords: { x: 370, y: 1040 }, isCorrect: false },
+            { num: 2, labelTamil: "கொச்சி / எர்ணாகுளம்", labelEnglish: "Kochi / Ernakulam", coords: { x: 360, y: 980 }, isCorrect: true },
+            { num: 3, labelTamil: "மங்களூரு", labelEnglish: "Mangaluru", coords: { x: 300, y: 840 }, isCorrect: false }
+          ],
+          tipTamil: "கொச்சி: கேரளாவின் எர்ணாகுளத்தில் அமைந்துள்ள கேரள மாநிலம் மற்றும் லட்சத்தீவு யூனியன் பிரதேசத்தின் அதிகார வரம்பு கொண்ட உயர் நீதிமன்றம்.",
+          tipEnglish: "Kochi (Ernakulam): Seat of the High Court of Kerala with appellate jurisdiction over both Kerala state and Lakshadweep Union Territory."
+        },
+        {
+          id: "st_hyderabad",
+          nameTamil: "ஹைதராபாத் (தெலங்கானா தலைமைச் செயலகம் & உயர் நீதிமன்றம்)",
+          nameEnglish: "Hyderabad (Telangana Secretariat & High Court)",
+          distractors: [
+            { num: 1, labelTamil: "வாரங்கல்", labelEnglish: "Warangal", coords: { x: 470, y: 670 }, isCorrect: false },
+            { num: 2, labelTamil: "அமராவதி", labelEnglish: "Amaravati", coords: { x: 490, y: 720 }, isCorrect: false },
+            { num: 3, labelTamil: "ஹைதராபாத்", labelEnglish: "Hyderabad", coords: { x: 440, y: 690 }, isCorrect: true }
+          ],
+          tipTamil: "ஹைதராபாத்: தெலங்கானாவின் தலைநகரம்; மூசி நதிக்கரையில் அமைந்துள்ள மாநில தலைமைச் செயலகம் மற்றும் தெலங்கானா உயர் நீதிமன்றம்.",
+          tipEnglish: "Hyderabad: Capital of Telangana on River Musi; seat of the Telangana Secretariat and historic Telangana High Court."
+        },
+        {
+          id: "st_amaravati",
+          nameTamil: "அமராவதி (ஆந்திரப் பிரதேச தலைநகரம் & உயர் நீதிமன்றம்)",
+          nameEnglish: "Amaravati (Andhra Pradesh Capital & High Court)",
+          distractors: [
+            { num: 1, labelTamil: "அமராவதி", labelEnglish: "Amaravati", coords: { x: 490, y: 720 }, isCorrect: true },
+            { num: 2, labelTamil: "விசாகப்பட்டினம்", labelEnglish: "Visakhapatnam", coords: { x: 580, y: 680 }, isCorrect: false },
+            { num: 3, labelTamil: "கர்நூல்", labelEnglish: "Kurnool", coords: { x: 410, y: 740 }, isCorrect: false }
+          ],
+          tipTamil: "அமராவதி: ஆந்திரப் பிரதேசத்தின் தலைநகரம்; கிருஷ்ணா நதிக்கரையில் நெலப்பாடு பகுதியில் அமைந்துள்ள ஆந்திர உயர் நீதிமன்றம்.",
+          tipEnglish: "Amaravati: De jure capital of Andhra Pradesh on the southern banks of River Krishna; seat of the AP High Court at Nelapadu."
+        }
+      ]
+    },
+
+    // 14. Economics Unit 3: Food Security, Granaries & PDS Hubs
+    "soc_food_security": {
+      id: "soc_food_security",
+      titleTamil: "உணவு பாதுகாப்பு, களஞ்சியங்கள் & ரேஷன் அமைப்புகள்",
+      titleEnglish: "Food Security, Granaries & PDS Management",
+      lessonCategory: "Economics Unit 3",
+      mapType: "india",
+      questions: [
+        {
+          id: "food_punjab",
+          nameTamil: "பஞ்சாப் (இந்தியாவின் களஞ்சியம் & பசுமைப் புரட்சி)",
+          nameEnglish: "Punjab (Granary of India & Green Revolution)",
+          distractors: [
+            { num: 1, labelTamil: "பஞ்சாப்", labelEnglish: "Punjab", coords: { x: 290, y: 280 }, isCorrect: true },
+            { num: 2, labelTamil: "ராஜஸ்தான்", labelEnglish: "Rajasthan", coords: { x: 250, y: 400 }, isCorrect: false },
+            { num: 3, labelTamil: "உத்தரப் பிரதேசம்", labelEnglish: "Uttar Pradesh", coords: { x: 500, y: 400 }, isCorrect: false }
+          ],
+          tipTamil: "பஞ்சாப்: 'இந்தியாவின் களஞ்சியம்' (Granary of India); 1960-களில் எம்.எஸ்.சுவாமிநாதன் தலைமையில் வீரிய ரக கோதுமை விதைகள் மூலம் பசுமைப் புரட்சி மலர்ந்த மாநிலம்.",
+          tipEnglish: "Punjab: 'Granary of India'; cradle of the Green Revolution under Dr. M.S. Swaminathan utilizing HYV wheat seeds and extensive canal irrigation."
+        },
+        {
+          id: "food_haryana",
+          nameTamil: "ஹரியானா (உபரி கோதுமை உற்பத்தி மையம்)",
+          nameEnglish: "Haryana (Surplus Wheat Producing State)",
+          distractors: [
+            { num: 1, labelTamil: "குஜராத்", labelEnglish: "Gujarat", coords: { x: 220, y: 510 }, isCorrect: false },
+            { num: 2, labelTamil: "ஹரியானா", labelEnglish: "Haryana", coords: { x: 330, y: 320 }, isCorrect: true },
+            { num: 3, labelTamil: "மத்தியப் பிரதேசம்", labelEnglish: "Madhya Pradesh", coords: { x: 400, y: 520 }, isCorrect: false }
+          ],
+          tipTamil: "ஹரியானா: வடமேற்கு கோதுமை மண்டலத்தில் பஞ்சாபுடன் இணைந்து மத்திய உணவுக் கிடங்குகளுக்கு அதிக கோதுமை வழங்கும் முன்னணி விவசாய மாநிலம்.",
+          tipEnglish: "Haryana: Agrarian powerhouse in the Indo-Gangetic wheat belt, contributing heavily to the central buffer stocks of Food Corporation of India."
+        },
+        {
+          id: "food_up",
+          nameTamil: "உத்தரப் பிரதேசம் (கோதுமை & கரும்பு உற்பத்தியில் முதலிடம்)",
+          nameEnglish: "Uttar Pradesh (Largest Food Grain Producer)",
+          distractors: [
+            { num: 1, labelTamil: "பீகார்", labelEnglish: "Bihar", coords: { x: 630, y: 440 }, isCorrect: false },
+            { num: 2, labelTamil: "ஒடிசா", labelEnglish: "Odisha", coords: { x: 600, y: 570 }, isCorrect: false },
+            { num: 3, labelTamil: "உத்தரப் பிரதேசம்", labelEnglish: "Uttar Pradesh", coords: { x: 500, y: 400 }, isCorrect: true }
+          ],
+          tipTamil: "உத்தரப் பிரதேசம்: இந்தியாவின் அதிக மக்கள் தொகை கொண்ட மாநிலம்; மொத்த கோதுமை, கரும்பு மற்றும் உணவு தானிய உற்பத்தியில் முதலிடம் வகிக்கிறது.",
+          tipEnglish: "Uttar Pradesh: Ranks first in India in total wheat, sugarcane, and overall food grain production, vital for national food security."
+        },
+        {
+          id: "food_thanjavur",
+          nameTamil: "தஞ்சாவூர் (தென்னிந்தியாவின் நெற்களஞ்சியம்)",
+          nameEnglish: "Thanjavur (Granary of South India / Rice Bowl of TN)",
+          distractors: [
+            { num: 1, labelTamil: "தஞ்சாவூர் (காவிரி கழிமுகம்)", labelEnglish: "Thanjavur (Cauvery Delta)", coords: { x: 470, y: 910 }, isCorrect: true },
+            { num: 2, labelTamil: "மதுரை", labelEnglish: "Madurai", coords: { x: 440, y: 970 }, isCorrect: false },
+            { num: 3, labelTamil: "திருநெல்வேலி", labelEnglish: "Tirunelveli", coords: { x: 410, y: 1010 }, isCorrect: false }
+          ],
+          tipTamil: "தஞ்சாவூர்: காவிரி ஆற்றின் வளமான கழிமுகப் பகுதி; 'தென்னிந்தியாவின் நெற்களஞ்சியம்' மற்றும் 'தமிழகத்தின் நெற்கிண்ணம்' என போற்றப்படுகிறது.",
+          tipEnglish: "Thanjavur: Fertile Cauvery Delta; celebrated as the 'Granary of South India' and 'Rice Bowl of Tamil Nadu' with intensive paddy cropping."
+        },
+        {
+          id: "food_chennai_pds",
+          nameTamil: "சென்னை (TNCSC - உலகளாவிய ரேஷன் திட்டம்)",
+          nameEnglish: "Chennai (TNCSC - Universal PDS Headquarters)",
+          distractors: [
+            { num: 1, labelTamil: "சேலம்", labelEnglish: "Salem", coords: { x: 430, y: 880 }, isCorrect: false },
+            { num: 2, labelTamil: "சென்னை", labelEnglish: "Chennai", coords: { x: 490, y: 840 }, isCorrect: true },
+            { num: 3, labelTamil: "வேலூர்", labelEnglish: "Vellore", coords: { x: 440, y: 850 }, isCorrect: false }
+          ],
+          tipTamil: "சென்னை: தமிழ்நாட்டின் தலைநகரம்; அனைத்து மக்களுக்கும் இலவச அரிசி வழங்கும் முன்னோடி உலகளாவிய பொது விநியோகத் திட்டத்தை (Universal PDS) நிர்வகிக்கும் TNCSC தலைமையகம்.",
+          tipEnglish: "Chennai: Headquarters of Tamil Nadu Civil Supplies Corporation (TNCSC), operating the pioneering Universal PDS providing food security to all families."
+        },
+        {
+          id: "food_fci_delhi",
+          nameTamil: "புது தில்லி (FCI - இந்திய உணவுக் கழக தலைமையகம்)",
+          nameEnglish: "New Delhi (FCI - Food Corporation of India HQ)",
+          distractors: [
+            { num: 1, labelTamil: "சண்டிகர்", labelEnglish: "Chandigarh", coords: { x: 340, y: 290 }, isCorrect: false },
+            { num: 2, labelTamil: "லக்னோ", labelEnglish: "Lucknow", coords: { x: 500, y: 400 }, isCorrect: false },
+            { num: 3, labelTamil: "புது தில்லி (FCI)", labelEnglish: "New Delhi (FCI)", coords: { x: 370, y: 360 }, isCorrect: true }
+          ],
+          tipTamil: "புது தில்லி: 1964-ஆம் ஆண்டின் உணவு கழக சட்டத்தின் கீழ் குறைந்தபட்ச ஆதரவு விலையில் (MSP) தானியங்களை கொள்முதல் செய்து தாங்கு இருப்பை (Buffer Stock) பராமரிக்கும் FCI தலைமையகம்.",
+          tipEnglish: "New Delhi: Headquarters of the Food Corporation of India (FCI), established in 1964 to procure grains at MSP and maintain national buffer stocks."
+        },
+        {
+          id: "food_wb",
+          nameTamil: "மேற்கு வங்கம் (இந்தியாவின் முதன்மை நெல் உற்பத்தி மாநிலம்)",
+          nameEnglish: "West Bengal (Leading Rice Producing State)",
+          distractors: [
+            { num: 1, labelTamil: "மேற்கு வங்கம்", labelEnglish: "West Bengal", coords: { x: 720, y: 500 }, isCorrect: true },
+            { num: 2, labelTamil: "அசாம்", labelEnglish: "Assam", coords: { x: 850, y: 370 }, isCorrect: false },
+            { num: 3, labelTamil: "ஆந்திரா", labelEnglish: "Andhra Pradesh", coords: { x: 490, y: 720 }, isCorrect: false }
+          ],
+          tipTamil: "மேற்கு வங்கம்: கங்கை-பிரம்மபுத்திரா வண்டல் மண் நிலப்பரப்பில் அமைந்துள்ள இந்தியாவின் முதன்மையான நெல் (Paddy) உற்பத்தி செய்யும் மாநிலம்.",
+          tipEnglish: "West Bengal: Leading rice producing state in India, sustained by the fertile Lower Gangetic alluvial flood plains."
+        }
+      ]
+    },
+
+    // 15. History Unit 4: The World after World War II
+    "soc_post_ww2": {
+      id: "soc_post_ww2",
+      titleTamil: "இரண்டாம் உலகப்போருக்குப் பிந்தைய உலகம் (பனிப்போர் & UNO)",
+      titleEnglish: "The World after World War II (Cold War & UN)",
+      lessonCategory: "History Unit 4",
+      mapType: "world",
+      questions: [
+        {
+          id: "post_un_ny",
+          nameTamil: "நியூயார்க் (ஐக்கிய நாடுகள் சபை UNO தலைமையகம்)",
+          nameEnglish: "New York (United Nations HQ - East River)",
+          distractors: [
+            { num: 1, labelTamil: "நியூயார்க்", labelEnglish: "New York (UN HQ)", coords: { x: 215, y: 180 }, isCorrect: true },
+            { num: 2, labelTamil: "வாஷிங்டன்", labelEnglish: "Washington D.C.", coords: { x: 210, y: 195 }, isCorrect: false },
+            { num: 3, labelTamil: "லண்டன்", labelEnglish: "London", coords: { x: 350, y: 145 }, isCorrect: false }
+          ],
+          tipTamil: "நியூயார்க்: அமெரிக்காவின் கிழக்கு கடற்கரை நகரம்; 1945-இல் தொடங்கப்பட்ட ஐக்கிய நாடுகள் சபையின் (UN) உலகத் தலைமையகம் அமைந்த இடம்.",
+          tipEnglish: "New York: Atlantic coastal metropolis of USA; world headquarters of the United Nations (UN) situated on Manhattan's East River."
+        },
+        {
+          id: "post_san_francisco",
+          nameTamil: "சான் பிரான்சிஸ்கோ (ஐ.நா சாசனம் ஏற்றுக்கொள்ளப்பட்ட இடம் 1945)",
+          nameEnglish: "San Francisco (Drafting of UN Charter 1945)",
+          distractors: [
+            { num: 1, labelTamil: "சிகாகோ", labelEnglish: "Chicago", coords: { x: 180, y: 175 }, isCorrect: false },
+            { num: 2, labelTamil: "சான் பிரான்சிஸ்கோ", labelEnglish: "San Francisco", coords: { x: 125, y: 185 }, isCorrect: true },
+            { num: 3, labelTamil: "லாஸ் ஏஞ்சல்ஸ்", labelEnglish: "Los Angeles", coords: { x: 135, y: 205 }, isCorrect: false }
+          ],
+          tipTamil: "சான் பிரான்சிஸ்கோ: அமெரிக்காவின் பசிபிக் கடற்கரை நகரம்; 1945 ஜூன் 26 அன்று 50 நாடுகளின் பிரதிநிதிகளால் ஐ.நா சாசனம் கையெழுத்திடப்பட்ட வரலாற்று இடம்.",
+          tipEnglish: "San Francisco: Pacific coast of USA; historic venue where the United Nations Charter was drafted and signed by 50 nations on June 26, 1945."
+        },
+        {
+          id: "post_berlin",
+          nameTamil: "பெர்லின் (பனிப்போரின் மையம் & பெர்லின் சுவர்)",
+          nameEnglish: "Berlin, Germany (Cold War Epicenter & Berlin Wall)",
+          distractors: [
+            { num: 1, labelTamil: "பாரிஸ்", labelEnglish: "Paris", coords: { x: 358, y: 172 }, isCorrect: false },
+            { num: 2, labelTamil: "ரோம்", labelEnglish: "Rome", coords: { x: 388, y: 190 }, isCorrect: false },
+            { num: 3, labelTamil: "பெர்லின்", labelEnglish: "Berlin (Germany)", coords: { x: 385, y: 150 }, isCorrect: true }
+          ],
+          tipTamil: "பெர்லின்: ஜெர்மனியின் தலைநகரம்; அமெரிக்க-சோவியத் பனிப்போரினால் கிழக்கு மற்றும் மேற்கு என பிரிக்கப்பட்டு 1961-இல் பெர்லின் சுவர் எழுப்பப்பட்ட வரலாற்று நகரம்.",
+          tipEnglish: "Berlin: Capital of Germany; ideological epicenter of the Cold War, divided into East and West Berlin by the Berlin Wall (1961-1989)."
+        },
+        {
+          id: "post_belgrade",
+          nameTamil: "பெல்கிரேட் (முதல் அணிசேரா நாடுகளின் மாநாடு 1961)",
+          nameEnglish: "Belgrade, Serbia (1st Non-Aligned Summit 1961)",
+          distractors: [
+            { num: 1, labelTamil: "பெல்கிரேட்", labelEnglish: "Belgrade (Serbia)", coords: { x: 405, y: 180 }, isCorrect: true },
+            { num: 2, labelTamil: "ஏதென்ஸ்", labelEnglish: "Athens", coords: { x: 415, y: 200 }, isCorrect: false },
+            { num: 3, labelTamil: "கெய்ரோ", labelEnglish: "Cairo", coords: { x: 425, y: 225 }, isCorrect: false }
+          ],
+          tipTamil: "பெல்கிரேட்: முன்னாள் யூகோஸ்லாவியாவின் தலைநகரம்; நேரு, டிட்டோ, நாசர் தலைமையில் 1961-இல் முதல் அணிசேரா நாடுகளின் (NAM) உச்சி மாநாடு நடைபெற்ற இடம்.",
+          tipEnglish: "Belgrade: Capital of former Yugoslavia; host city of the inaugural Non-Aligned Movement (NAM) Summit in September 1961 led by Nehru, Tito, and Nasser."
+        },
+        {
+          id: "post_suez",
+          nameTamil: "சூயஸ் கால்வாய் - எகிப்து (1956 சர்வதேச நெருக்கடி)",
+          nameEnglish: "Suez Canal, Egypt (1956 International Crisis)",
+          distractors: [
+            { num: 1, labelTamil: "பனாமா கால்வாய்", labelEnglish: "Panama Canal", coords: { x: 195, y: 275 }, isCorrect: false },
+            { num: 2, labelTamil: "சூயஸ் கால்வாய்", labelEnglish: "Suez Canal (Egypt)", coords: { x: 430, y: 225 }, isCorrect: true },
+            { num: 3, labelTamil: "ஜிப்ரால்டர்", labelEnglish: "Gibraltar", coords: { x: 335, y: 205 }, isCorrect: false }
+          ],
+          tipTamil: "சூயஸ் கால்வாய்: மத்திய தரைக்கடலையும் செங்கடலையும் இணைக்கும் எகிப்தின் சர்வதேச நீர்வழி; 1956-இல் அதிபர் நாசர் தேசியமயமாக்கியதால் பனிப்போர் நெருக்கடி உருவான இடம்.",
+          tipEnglish: "Suez Canal: Vital Egyptian waterway linking the Mediterranean to Red Sea; nationalized by President Nasser in 1956 triggering the Suez Crisis."
+        },
+        {
+          id: "post_the_hague",
+          nameTamil: "தி ஹேக் - நெதர்லாந்து (சர்வதேச நீதிமன்றம் ICJ)",
+          nameEnglish: "The Hague, Netherlands (International Court of Justice)",
+          distractors: [
+            { num: 1, labelTamil: "ஜெனீவா", labelEnglish: "Geneva", coords: { x: 372, y: 175 }, isCorrect: false },
+            { num: 2, labelTamil: "பிரஸ்ஸல்ஸ்", labelEnglish: "Brussels", coords: { x: 360, y: 155 }, isCorrect: false },
+            { num: 3, labelTamil: "தி ஹேக்", labelEnglish: "The Hague (Peace Palace)", coords: { x: 365, y: 148 }, isCorrect: true }
+          ],
+          tipTamil: "தி ஹேக்: நெதர்லாந்து நாட்டின் அமைதி அரண்மனையில் (Peace Palace) அமைந்துள்ள ஐக்கிய நாடுகள் சபையின் முதன்மை நீதி அமைப்பான சர்வதேச நீதிமன்றத்தின் (ICJ) தலைமையகம்.",
+          tipEnglish: "The Hague: Seat of the Peace Palace in the Netherlands; world headquarters of the International Court of Justice (ICJ), the principal judicial organ of the UN."
+        }
+      ]
     }
+
   };
 
   // Helper to resolve question set
+    // Helper to resolve question set
   function resolveCurriculumLesson(qItem) {
     if (!qItem) return LESSON_DATABASE["board_model"];
-    const id = (qItem.id || '').toLowerCase();
-    const qText = (qItem.q || '').toLowerCase();
+    const id = (typeof qItem === 'string' ? qItem : (qItem.id || '')).toLowerCase();
+    const qText = ((typeof qItem === 'object' && qItem.q) ? qItem.q : '').toLowerCase();
 
+    // 1. Direct key match in database
     if (LESSON_DATABASE[id]) return LESSON_DATABASE[id];
-    if (id.includes('soc_rivers') || id.includes('soc_2') || qText.includes('river') || qText.includes('நதிகள்') || qText.includes('ஆறு')) {
-      return LESSON_DATABASE["soc_rivers"];
+
+    // 2. Exact Unit Number matching (supports soc_1, soc_em_1, sec_soc_1, soc_h1, etc.)
+    const numMatch = id.match(/(?:^|[_\-])soc(?:_em)?[_\-](?:sec[_\-])?([0-9]{1,2})(?:[_\-]|$)/i);
+    let unitNum = null;
+    if (numMatch) {
+      unitNum = parseInt(numMatch[1], 10);
+    } else {
+      const codeMatch = id.match(/(?:^|[_\-])soc(?:_em)?[_\-]([hgce][1-4])(?:[_\-]|$)/i);
+      if (codeMatch) {
+        const codeMap = {
+          'h1': 1,  'g1': 2,  'c1': 3,  'e1': 4,
+          'h2': 5,  'g2': 6,  'c2': 7,  'e2': 8,
+          'h3': 9,  'g3': 10, 'c3': 11, 'e3': 12,
+          'h4': 13, 'g4': 14
+        };
+        unitNum = codeMap[codeMatch[1].toLowerCase()] || null;
+      }
     }
-    if (id.includes('soc_ports') || id.includes('soc_8') || id.includes('soc_3') || qText.includes('port') || qText.includes('துறைமுகம்')) {
-      return LESSON_DATABASE["soc_ports"];
+
+    if (unitNum === 1) return LESSON_DATABASE["soc_ww1"];
+    if (unitNum === 2) return LESSON_DATABASE["soc_rivers"];
+    if (unitNum === 3) return LESSON_DATABASE["soc_constitution"];
+    if (unitNum === 4) return LESSON_DATABASE["soc_gdp"];
+    if (unitNum === 5) return LESSON_DATABASE["soc_interwar"];
+    if (unitNum === 6) return LESSON_DATABASE["soc_climate"];
+    if (unitNum === 7) return LESSON_DATABASE["soc_central_govt"];
+    if (unitNum === 8) return LESSON_DATABASE["soc_ports"];
+    if (unitNum === 9) return LESSON_DATABASE["soc_ww2"];
+    if (unitNum === 10) return LESSON_DATABASE["soc_soils"];
+    if (unitNum === 11) return LESSON_DATABASE["soc_state_govt"];
+    if (unitNum === 12) return LESSON_DATABASE["soc_food_security"];
+    if (unitNum === 13) return LESSON_DATABASE["soc_post_ww2"];
+    if (unitNum === 14) return LESSON_DATABASE["soc_industry"];
+
+    // 3. Fallback to comprehensive keyword matching
+    if (id.includes('constitution') || id.includes('அரசியலமைப்பு') || qText.includes('constitution') || qText.includes('அரசியலமைப்பு') || qText.includes('உயர் நீதிமன்றம்') || qText.includes('உச்ச நீதிமன்றம்')) {
+      return LESSON_DATABASE["soc_constitution"];
     }
-    if (id.includes('soc_soils') || id.includes('soc_10') || qText.includes('soil') || qText.includes('மண்') || qText.includes('dam') || qText.includes('அணை')) {
-      return LESSON_DATABASE["soc_soils"];
+    if (id.includes('food') || id.includes('granary') || id.includes('உணவு பாதுகாப்பு') || qText.includes('food security') || qText.includes('களஞ்சியம்') || qText.includes('fci') || qText.includes('pds')) {
+      return LESSON_DATABASE["soc_food_security"];
     }
-    if (id.includes('soc_climate') || id.includes('soc_6') || qText.includes('monsoon') || qText.includes('பருவக்காற்று') || qText.includes('forest') || qText.includes('காடுகள்')) {
-      return LESSON_DATABASE["soc_climate"];
+    if (id.includes('interwar') || id.includes('இடைப்பட்ட') || qText.includes('பாசிசம்') || qText.includes('fascism') || qText.includes('league of nations') || qText.includes('சர்வதேச சங்கம்')) {
+      return LESSON_DATABASE["soc_interwar"];
     }
-    if (id.includes('soc_industry') || id.includes('soc_4') || qText.includes('industry') || qText.includes('தொழிலகம்') || qText.includes('steel') || qText.includes('எஃகு')) {
-      return LESSON_DATABASE["soc_industry"];
+    if (id.includes('post_ww2') || id.includes('பிந்தைய') || qText.includes('united nations') || qText.includes('ஐக்கிய நாடுகள்') || qText.includes('cold war') || qText.includes('பனிப்போர்')) {
+      return LESSON_DATABASE["soc_post_ww2"];
     }
-    if (id.includes('soc_ww1') || id.includes('soc_1') || qText.includes('world war i') || qText.includes('முதல் உலக')) {
+    if (id.includes('state_govt') || id.includes('மாநில அரசு') || qText.includes('state government') || qText.includes('madurai bench') || qText.includes('விதான் சௌதா')) {
+      return LESSON_DATABASE["soc_state_govt"];
+    }
+    if (id.includes('central_govt') || id.includes('நடுவண் அரசு') || qText.includes('central government') || qText.includes('நாடாளுமன்றம்') || qText.includes('parliament')) {
+      return LESSON_DATABASE["soc_central_govt"];
+    }
+    if (id.includes('gdp') || id.includes('உள்நாட்டு உற்பத்தி') || qText.includes('gdp') || qText.includes('financial capital') || qText.includes('சிலிகான்')) {
+      return LESSON_DATABASE["soc_gdp"];
+    }
+    if (id.includes('ww1') || qText.includes('world war i') || qText.includes('முதல் உலக')) {
       return LESSON_DATABASE["soc_ww1"];
     }
-    if (id.includes('soc_ww2') || id.includes('soc_9') || qText.includes('world war ii') || qText.includes('இரண்டாம் உலக')) {
+    if (id.includes('ww2') || qText.includes('world war ii') || qText.includes('இரண்டாம் உலக')) {
       return LESSON_DATABASE["soc_ww2"];
+    }
+    if (id.includes('river') || qText.includes('river') || qText.includes('நதிகள்') || qText.includes('ஆறு')) {
+      return LESSON_DATABASE["soc_rivers"];
+    }
+    if (id.includes('port') || qText.includes('port') || qText.includes('துறைமுகம்')) {
+      return LESSON_DATABASE["soc_ports"];
+    }
+    if (id.includes('soil') || id.includes('dam') || qText.includes('soil') || qText.includes('மண்') || qText.includes('அணை')) {
+      return LESSON_DATABASE["soc_soils"];
+    }
+    if (id.includes('climate') || qText.includes('monsoon') || qText.includes('பருவக்காற்று') || qText.includes('forest') || qText.includes('காடுகள்')) {
+      return LESSON_DATABASE["soc_climate"];
+    }
+    if (id.includes('industry') || qText.includes('industry') || qText.includes('தொழிலகம்') || qText.includes('steel') || qText.includes('எஃகு')) {
+      return LESSON_DATABASE["soc_industry"];
     }
 
     return LESSON_DATABASE["board_model"];
   }
+
 
   // ---------------------------------------------------------------------------
   // 2. OFFICIAL ACCURATE INDIA & WORLD MAP SVG GENERATORS

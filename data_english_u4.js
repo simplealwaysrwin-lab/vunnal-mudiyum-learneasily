@@ -6,7 +6,8 @@
  * 1. Prose: The Attic (Satyajit Ray)
  * 2. Poem: The Ant and the Cricket (Adapted from Aesop's Fables)
  * 3. Supplementary: The Aged Mother (Matsuo Basho)
- * 4. Grammar & Vocabulary: Conjunctions (Connectors), Nominalisation & Prepositions
+ * 4. Grammar & Vocabulary: Conjunctions, Phrases, Clauses, Nominalisation & Compound Words
+ * 5. Public Exam Revision Test: 10 High-Yield Board Exam MCQs
  */
 
 const ENGLISH_UNIT_4_DATA = {
@@ -112,17 +113,21 @@ const ENGLISH_UNIT_4_DATA = {
 
   // 📝 வினா - விடைகள் வங்கி (Q&A Bank - Samacheer Kalvi 10th Std)
   subSections: [
+    // =========================================================================
+    // PART 1: PROSE — THE ATTIC (SATYAJIT RAY)
+    // =========================================================================
     {
       id: "eng4_sec1",
       title: "Part 1: Prose — The Attic",
       author: "Satyajit Ray",
       questions: [
+        // One-mark questions
         {
           id: "eng4_1_1",
           type: "1m",
           mark: "1 Mark",
           examTag: "அரசுத் தேர்வு",
-          q: "After how many years did Aditya return to his ancestral ancestral village Bramhapur?",
+          q: "After how many years did Aditya return to his ancestral village Bramhapur?",
           qTamil: "எத்தனை ஆண்டுகளுக்குப் பிறகு ஆதித்யா தனது சொந்தக் கிராமத்திற்குத் திரும்பினார்?",
           options: ["a) 15 years", "b) 20 years", "c) 25 years", "d) 29 years"],
           ans: "<b>d) 29 years</b>",
@@ -158,25 +163,148 @@ const ENGLISH_UNIT_4_DATA = {
           ans: "<b>b) Sriman Sasanka Sanyal - Special Prize for Recitation - 1948</b>",
           ansTamil: "ஸ்ரீமான் சசாங்க சன்யால் - சிறப்பு ஒப்புவித்தல் பரிசு - 1948 என்று பொறிக்கப்பட்டிருந்தது."
         },
+
+        // Two-mark questions (Complete Textbook Set)
         {
-          id: "eng4_1_5",
+          id: "eng4_1_2m_1",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          q: "When did Aditya leave the local school?",
+          qTamil: "ஆதித்யா உள்ளூர்ப் பள்ளியை விட்டு எப்போது வெளியேறினார்?",
+          ans: "<b>Aditya left the local school after he had passed the matriculation examination.</b>",
+          ansTamil: "மெட்ரிகுலேஷன் தேர்வில் தேர்ச்சி பெற்ற பிறகு ஆதித்யா உள்ளூர் பள்ளியை விட்டு வெளியேறினார்."
+        },
+        {
+          id: "eng4_1_2m_2",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "Why did Aditya think that the school would not be recognisable?",
+          qTamil: "பள்ளி அடையாளம் தெரியாத அளவுக்கு மாறியிருக்கும் என்று ஆதித்யா ஏன் நினைத்தார்?",
+          ans: "<b>The school had undergone many changes over the twenty-nine years. So Aditya thought that it would not be recognisable.</b>",
+          ansTamil: "கடந்த 29 ஆண்டுகளில் பள்ளியில் பல மாற்றங்கள் ஏற்பட்டிருந்ததால், அது அடையாளம் தெரியாதவாறு மாறியிருக்கும் என்று ஆதித்யா நினைத்தார்."
+        },
+        {
+          id: "eng4_1_2m_3",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "Who were Aditya's ancestors?",
+          qTamil: "ஆதித்யாவின் முன்னோர்கள் யார்?",
+          ans: "<b>Aditya's ancestors were once the wealthy Zamindars of the village Bramhapur.</b>",
+          ansTamil: "ஆதித்யாவின் முன்னோர்கள் ஒரு காலத்தில் பிரம்மபூர் கிராமத்தின் பெரும் ஜமீன்தார்களாக இருந்தனர்."
+        },
+        {
+          id: "eng4_1_2m_4",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "How was the landscape through which they travelled?",
+          qTamil: "அவர்கள் பயணித்த பாதையின் நிலப்பரப்பு எவ்வாறு காட்சியளித்தது?",
+          ans: "<b>The landscape was picturesque and dotted with lush green paddy fields on either side of the road.</b>",
+          ansTamil: "சாலையின் இருபுறமும் பசுமையான நெல் வயல்கள் நிறைந்த எழில் கொஞ்சும் நிலப்பரப்பாக அது காட்சியளித்தது."
+        },
+        {
+          id: "eng4_1_2m_5",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          q: "Why did Aditya visit his ancestral house?",
+          qTamil: "ஆதித்யா தனது பூர்வீக வீட்டிற்கு ஏன் சென்றார்?",
+          ans: "<b>Aditya visited his ancestral house to retrieve the antique silver medal which he had hidden in the attic twenty-nine years earlier.</b>",
+          ansTamil: "29 ஆண்டுகளுக்கு முன்பு தான் பரணில் மறைத்து வைத்த வெள்ளிப் பதக்கத்தை எடுப்பதற்காக ஆதித்யா தனது பூர்வீக வீட்டிற்குச் சென்றார்."
+        },
+        {
+          id: "eng4_1_2m_6",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "What was the condition of the attic in Aditya's ancestral house?",
+          qTamil: "ஆதித்யாவின் பூர்வீக வீட்டுப் பரணின் நிலை எவ்வாறு இருந்தது?",
+          ans: "<b>A portion of the attic wall had crumbled down. Its floor was scattered with twigs, dry straw, and pigeon droppings.</b>",
+          ansTamil: "பரண் சுவரின் ஒரு பகுதி இடிந்து விழுந்திருந்தது; தரை முழுவதும் குச்சிகள், வைக்கோல் மற்றும் புறா எச்சங்கள் சிதறிக் கிடந்தன."
+        },
+        {
+          id: "eng4_1_2m_7",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "Why did Aditya go to the jeweller?",
+          qTamil: "ஆதித்யா நகைக்கடைக்கு ஏன் சென்றார்?",
+          ans: "<b>Aditya and his friend went to the jeweller to determine the current weight and market value of the silver medal.</b>",
+          ansTamil: "அந்த வெள்ளிப் பதக்கத்தின் தற்போதைய எடை மற்றும் சந்தை மதிப்பைத் தெரிந்து கொள்வதற்காக ஆதித்யா நகைக்கடைக்குச் சென்றார்."
+        },
+        {
+          id: "eng4_1_2m_8",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          q: "Why did Aditya want to meet Sasanka Sanyal?",
+          qTamil: "ஆதித்யா சசாங்க சன்யாலை ஏன் சந்திக்க விரும்பினார்?",
+          ans: "<b>Aditya wanted to return the silver medal which he had taken from Sasanka Sanyal twenty-nine years ago and relieve himself of his long-standing guilt.</b>",
+          ansTamil: "29 ஆண்டுகளுக்கு முன்பு பொறாமையால் சன்யாலிடம் இருந்து திருடிய பதக்கத்தைத் திருப்பிக் கொடுத்து, தன் குற்ற உணர்ச்சியிலிருந்து விடுபடுவதற்காக அவரைச் சந்திக்க விரும்பினார்."
+        },
+        {
+          id: "eng4_1_2m_9",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "What was Sanyal doing when Aditya met him in Nagen's tea shop?",
+          qTamil: "நாகேனின் தேநீர்க் கடையில் ஆதித்யா சந்தித்த போது சன்யால் என்ன செய்து கொண்டிருந்தார்?",
+          ans: "<b>Sanyal stood erect and was reciting verses from Rabindranath Tagore's famous poem 'Panraksha' in a powerful, clear voice.</b>",
+          ansTamil: "சன்யால் கம்பீரமாக நிமிர்ந்து நின்று ரவீந்திரநாத் தாகூரின் 'பண்ரக்ஷா' கவிதையை உரத்த, தெளிவான குரலில் ஒப்பித்துக் கொண்டிருந்தார்."
+        },
+        {
+          id: "eng4_1_2m_10",
           type: "2m",
           mark: "2 Marks",
           examYear: "2023",
           examTag: "2023*",
-          q: "Why did Sanyal refuse to accept the 150 rupees offered by Aditya?",
+          q: "Why did Sanyal refuse to accept the money offered by Aditya?",
           qTamil: "ஆதித்யா வழங்கிய 150 ரூபாய் பணத்தை ஏற்க சன்யால் ஏன் மறுத்தார்?",
-          ans: "Sanyal refused the money because he was not a beggar looking for charity. He only wanted his lost medal back, which was a symbol of his youthful talent, pride, and glory.",
-          ansTamil: "தான் யாசகம் கேட்கும் பிச்சைக்காரன் அல்ல என்றும், தன் திறமையின் அடையாளமான தன் பதக்கமே தனக்கு வேண்டும் என்றும் கூறி பணத்தை ஏற்க மறுத்தார்."
+          ans: "<b>Sanyal considered accepting the money as charity. He refused the cash because he wanted his self-respect and the actual medal he had won, not charity.</b>",
+          ansTamil: "பணத்தை யாசகமாகக் கருதிய சன்யால், தான் பிச்சைக்காரன் அல்ல என்றும், உழைப்பால் கிடைத்த தன் பதக்கமும் சுயமரியாதையுமே தனக்கு வேண்டும் என்றும் கூறி பணத்தை ஏற்க மறுத்தார்."
+        },
+
+        // Five-mark and Eight-mark questions
+        {
+          id: "eng4_1_5m_1",
+          type: "5m",
+          mark: "5 Marks (Paragraph)",
+          isImportant: true,
+          q: "Describe Aditya's visit to his ancestral house in 'The Attic'.",
+          qTamil: "'தி அட்டிக்' கதையில் ஆதித்யா தனது பூர்வீக வீட்டிற்குச் சென்ற நிகழ்வை விவரிக்க:",
+          ans: `<div style="line-height:1.6;">
+            <b>Synopsis:</b>
+            <ul style="margin:4px 0 10px 20px; font-weight:600; color:#0369a1;">
+              <li>Return after 29 Years</li>
+              <li>The Ancient Crumbling Mansion</li>
+              <li>Retrieving the Medal from the Attic</li>
+              <li>Sincere Repentance</li>
+            </ul>
+            <p>Aditya returned to his native village Bramhapur after twenty-nine years. He visited his ancestral house accompanied by his narrator friend. The two-hundred-year-old house had mostly crumbled into ruins. Aditya carefully climbed the wooden stairs leading to the attic. Inside, he reached into a hole in the brick wall above the ventilator and retrieved a small silver medal that he had hidden there twenty-nine years ago. The medal reminded him of his childhood jealousy when he took it from Sasanka Sanyal and lied that he lost it. He took it to a jeweller to ascertain its value and then visited Sanyal to make amends, proving the timeless value of honesty and repentance.</p>
+          </div>`,
+          ansTamil: "ஆதித்யா 29 ஆண்டுகளுக்குப் பிறகு பூர்வீக வீட்டிற்குச் சென்று, பரணின் பொந்தில் மறைத்து வைத்திருந்த சன்யாலின் பதக்கத்தை எடுத்து, தன் பால்ய காலத் தவற்றுக்குப் பரிகாரம் தேடினார்."
         },
         {
-          id: "eng4_1_6",
-          type: "2m",
-          mark: "2 Marks",
-          q: "Describe Aditya's ancestral house as seen by the narrator.",
-          qTamil: "கதாசிரியர் பார்த்த ஆதித்யாவின் பூர்வீக வீட்டின் நிலை எவ்வாறு இருந்தது?",
-          ans: "Aditya's ancestral home was over two hundred years old. Most of it had crumbled into ruins, but one portion with the attic still stood, covered in cobwebs, wild grass, and pigeon nests.",
-          ansTamil: "இருநூறு ஆண்டுகள் பழமையான அந்த வீடு பாழடைந்து இடிந்து கிடந்தது; பரண் பகுதி மட்டும் ஒட்டடை மற்றும் புறாக் கூடுகளுடன் எஞ்சியிருந்தது."
+          id: "eng4_1_5m_2",
+          type: "5m",
+          mark: "5 Marks (Paragraph)",
+          isImportant: true,
+          q: "Narrate the touching story of Aditya and Sasanka Sanyal.",
+          qTamil: "ஆதித்யா மற்றும் சசாங்க சன்யாலின் நெகிழ்ச்சியான நட்புக் கதையை விவரிக்க:",
+          ans: `<div style="line-height:1.6;">
+            <b>Synopsis:</b>
+            <ul style="margin:4px 0 10px 20px; font-weight:600; color:#0369a1;">
+              <li>Schoolmate Rivalry and Envy</li>
+              <li>The Lost Medal and Hidden Truth</li>
+              <li>Encounter at Nagen's Tea Shop</li>
+              <li>Confession and Restitution</li>
+            </ul>
+            <p>Aditya and Sasanka Sanyal were schoolmates in Bramhapur. Sanyal won a silver medal for recitation in 1948. Out of jealousy, Aditya borrowed the medal to show his father, falsely claimed he had lost it, and hid it in his attic. Twenty-nine years later, Aditya met an impoverished Sanyal reciting the same poem in a tea shop. Struck by guilt, Aditya retrieved the medal from his attic. He visited Sanyal and offered him 150 rupees as compensation. Sanyal boldly rejected the money, saying he wanted his pride and medal, not charity. When Aditya returned the actual medal, Sanyal forgave him with tears of joy.</p>
+          </div>`,
+          ansTamil: "சிறுவயதில் பொறாமையால் நண்பனின் பதக்கத்தைத் திருடிய ஆதித்யா, 29 ஆண்டுகளுக்குப் பின் குற்ற உணர்ச்சியுடன் அதைத் திருப்பிக் கொடுத்து நண்பனின் மன்னிப்பைப் பெற்றார்."
         },
         {
           id: "eng4_1_7",
@@ -194,7 +322,7 @@ const ENGLISH_UNIT_4_DATA = {
               <li>Meeting Sanyal and Confession</li>
               <li>Conclusion: Power of True Repentance</li>
             </ul>
-            <p><b>Encounter at Tea Shop:</b> Twenty-nine years after leaving his school at Bramhapur, Aditya unexpectedly heard an impoverished man reciting Tagore's poem 'Panraksha' with deep passion in Nagen's tea shop. Aditya recognized him as his former classmate, Sasanka Sanyal.</p>
+            <p><b>Encounter at Tea Shop:</b> Twenty-nine years after leaving school at Bramhapur, Aditya unexpectedly heard an impoverished man reciting Tagore's poem 'Panraksha' with deep passion in Nagen's tea shop. Aditya recognized him as his former classmate, Sasanka Sanyal.</p>
             <p><b>Childhood Envy:</b> Sanyal had won a medal for reciting that very poem in school. Out of youthful jealousy, Aditya had borrowed the medal to show his father, lied that he had lost it, and kept it hidden in his attic ever since.</p>
             <p><b>Retrieval:</b> Overwhelmed with guilt, Aditya climbed the dangerous stairs to the crumbling attic of his ancestral house, reached into a hole in the wall, and recovered the tarnished silver medal. He took it to a jeweller who valued it at 150 rupees.</p>
             <p><b>Redemption:</b> Aditya visited Sanyal's home and offered him 150 rupees. Sanyal boldly rejected the cash, declaring he was no beggar. When Aditya returned the actual medal, Sanyal's eyes filled with tears of profound joy and forgiveness.</p>
@@ -205,41 +333,196 @@ const ENGLISH_UNIT_4_DATA = {
       ]
     },
 
+    // =========================================================================
+    // PART 2: POEM — THE ANT AND THE CRICKET (ADAPTED FROM AESOP)
+    // =========================================================================
     {
       id: "eng4_sec2",
       title: "Part 2: Poem — The Ant and the Cricket",
       author: "Adapted from Aesop's Fables",
       questions: [
+        // One-mark questions & Core Facts
         {
           id: "eng4_2_1",
           type: "1m",
-          mark: "1 Mark (Poetic Meaning)",
-          q: "In the poem 'The Ant and the Cricket', what did the cricket do during the warm, sunny summer and spring?",
+          mark: "1 Mark",
+          q: "What did the silly young cricket do during the warm, sunny summer and spring?",
           qTamil: "வெட்டுக்கிளி கோடை மற்றும் வசந்த காலத்தில் என்ன செய்து கொண்டிருந்தது?",
           options: ["a) Gathered wheat and corn", "b) Sang and danced away the days", "c) Built an underground burrow", "d) Learned music lessons"],
           ans: "<b>b) Sang and danced away the days</b>",
           ansTamil: "அது எந்தவித சேமிப்பும் செய்யாமல் ஆடிப் பாடி பொழுதைக் கழித்தது."
         },
         {
-          id: "eng4_2_2",
+          id: "eng4_2_1m_char",
           type: "1m",
-          mark: "1 Mark (Figure of Speech)",
-          q: "What is the figure of speech used when animals talk and behave like humans in this fable poem?",
-          qTamil: "விலங்குகளும் பூச்சிகளும் மனிதனைப் போல் பேசும் இலக்கிய உத்தி எது?",
-          options: ["a) Personification", "b) Alliteration", "c) Onomatopoeia", "d) Simile"],
-          ans: "<b>a) Personification</b> (Giving human traits and speech to insects)",
-          ansTamil: "பூச்சிகளுக்கு மனிதப் பண்புகளை ஏற்றி உரைப்பதால் இது தற்குறிப்பேற்ற உருவகம் (Personification) ஆகும்."
+          mark: "1 Mark",
+          examTag: "Quick Fact",
+          q: "Who is the main character who suffered in the poem 'The Ant and the Cricket'?",
+          qTamil: "இக்கவிதையில் துன்பப்படும் முதன்மைக் கதாபாத்திரம் யார்?",
+          options: ["a) The ant", "b) The cricket", "c) The butterfly", "d) The grasshopper"],
+          ans: "<b>b) The cricket</b>",
+          ansTamil: "சோம்பேறி வெட்டுக்கிளியே துன்பப்படும் முதன்மைக் கதாபாத்திரம் ஆகும்."
         },
         {
-          id: "eng4_2_3",
+          id: "eng4_2_1m_seas",
+          type: "1m",
+          mark: "1 Mark",
+          examTag: "Quick Fact",
+          q: "Which season made the cricket starve and suffer in the poem?",
+          qTamil: "வெட்டுக்கிளியைப் பசியாலும் குளிராலும் வாட்டிய பருவகாலம் எது?",
+          options: ["a) Summer", "b) Spring", "c) Winter", "d) Autumn"],
+          ans: "<b>c) Winter</b>",
+          ansTamil: "கொடும் பனிபொழியும் குளிர்காலமே (Winter) வெட்டுக்கிளியை வாட்டியது."
+        },
+        {
+          id: "eng4_2_1m_ref",
+          type: "1m",
+          mark: "1 Mark",
+          examTag: "Quick Fact",
+          q: "Who refused to lend food and shelter to the starving cricket?",
+          qTamil: "பசியால் வாடிய வெட்டுக்கிளிக்கு உதவ மறுத்தது யார்?",
+          options: ["a) The ant", "b) The bird", "c) The bee", "d) The snail"],
+          ans: "<b>a) The ant</b>",
+          ansTamil: "சேமிப்பின் அவசியத்தை உணர்த்திய எறும்பு (The ant) உதவ மறுத்தது."
+        },
+        {
+          id: "eng4_2_1m_type",
+          type: "1m",
+          mark: "1 Mark",
+          examTag: "Quick Fact",
+          q: "What type of poem is 'The Ant and the Cricket'?",
+          qTamil: "'எறும்பும் வெட்டுக்கிளியும்' எவ்வகை இலக்கியப் பாடல்?",
+          options: ["a) An epic", "b) A ballad", "c) A fable (a moral story featuring animal characters)", "d) A sonnet"],
+          ans: "<b>c) A fable</b>",
+          ansTamil: "விலங்குகள் அல்லது பூச்சிகள் மூலம் வாழ்வியல் நீதியை உணர்த்தும் 'நீதிக்கதை' (Fable) ஆகும்."
+        },
+
+        // Two-mark questions (Complete Textbook Set)
+        {
+          id: "eng4_2_2m_1",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "What was the routine of the cricket during summer and spring?",
+          qTamil: "கோடை மற்றும் வசந்த காலத்தில் வெட்டுக்கிளியின் தினசரி வழக்கம் என்னவாக இருந்தது?",
+          ans: "<b>The cricket used to sing and make merry throughout the warm, sunny months of summer and spring without saving any food.</b>",
+          ansTamil: "எவ்வித சேமிப்பும் செய்யாமல், இதமான கோடை மற்றும் வசந்த காலம் முழுவதும் பாடி ஆடி மகிழ்வதே வெட்டுக்கிளியின் வழக்கமாக இருந்தது."
+        },
+        {
+          id: "eng4_2_2m_2",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "Why did the cricket complain when winter arrived?",
+          qTamil: "குளிர்காலம் வந்ததும் வெட்டுக்கிளி ஏன் புலம்பியது?",
+          ans: "<b>The cricket complained because bitter winter had arrived and his cupboard was empty; he could not find even a single crumb of food on the snow-covered ground.</b>",
+          ansTamil: "கொடும் குளிர்காலம் வந்துவிட்டதாலும், சேமிப்புப் பெட்டி காலியாகிப் பனி படர்ந்த நிலத்தில் ஒரு துளி உணவும் கிடைக்காததாலும் வெட்டுக்கிளி புலம்பியது."
+        },
+        {
+          id: "eng4_2_2m_3",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          q: "Why did the cricket approach the ant?",
+          qTamil: "வெட்டுக்கிளி எறும்பை ஏன் அணுகியது?",
+          ans: "<b>The cricket approached the hardworking ant to borrow a mouthful of grain and seek shelter from the biting cold because he was starving.</b>",
+          ansTamil: "பசியால் வாடிய வெட்டுக்கிளி, பனியிலிருந்து புகலிடமும் உண்ண ஒரு வாய் தானியமும் கடனாகக் கேட்பதற்காக எறும்பை அணுகியது."
+        },
+        {
+          id: "eng4_2_2m_4",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "What did the cricket promise the ant?",
+          qTamil: "எறும்பிடம் வெட்டுக்கிளி என்ன வாக்குறுதி அளித்தது?",
+          ans: "<b>The cricket promised that he only wished to borrow today and would repay the debt tomorrow.</b>",
+          ansTamil: "தான் இன்று கடனாக மட்டுமே வாங்குவதாகவும், விரைவில் அதைத் திருப்பிச் செலுத்திவிடுவதாகவும் எறும்பிடம் வாக்குறுதி அளித்தது."
+        },
+        {
+          id: "eng4_2_2m_5",
           type: "2m",
           mark: "2 Marks",
           examYear: "2024",
           examTag: "2024*",
-          q: "What was the firm principle declared by the ant?",
-          qTamil: "எறும்பு கூறிய உறுதியான கொள்கை என்ன?",
-          ans: "The ant stated: <i>'We ants never borrow, we ants never lend.'</i> The ant emphasized that everyone must work hard and save for their own rainy days.",
-          ansTamil: "நாங்கள் எறும்புகள் கடன் வாங்குவதும் இல்லை; யாருக்கும் கடன் கொடுப்பதும் இல்லை என்ற கொள்கையை எறும்பு தெளிவுபடுத்தியது."
+          q: "What was the ant's firm reply to the cricket?",
+          qTamil: "எறும்பு வெட்டுக்கிளிக்குக் கூறிய உறுதியான பதில் என்ன?",
+          ans: "<b>The ant declared: <i>'We ants never borrow, we ants never lend.'</i> He refused to help and advised the cricket to go and dance the winter away.</b>",
+          ansTamil: "நாங்கள் எறும்புகள் கடன் வாங்குவதும் இல்லை, கொடுப்பதும் இல்லை; கோடையில் பாடியது போல் குளிர்காலத்தில் ஆடியே பொழுதைக் கழி என்று எறும்பு உறுதியாகக் கூறியது."
+        },
+        {
+          id: "eng4_2_2m_6",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "What did the cricket do during summer and spring?",
+          qTamil: "கோடையிலும் வசந்தத்திலும் வெட்டுக்கிளி என்ன செய்தது?",
+          ans: "<b>The cricket spent all his time singing and dancing carelessly instead of working and storing food for the difficult winter ahead.</b>",
+          ansTamil: "கடினமாக உழைத்து உணவு சேகரிப்பதற்குப் பதிலாக, ஆடிப் பாடி நேரத்தை வீணடித்தது."
+        },
+        {
+          id: "eng4_2_2m_7",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          q: "What is the moral of the poem 'The Ant and the Cricket'?",
+          qTamil: "'தி ஆன்ட் அண்ட் தி கிரிக்கெட்' கவிதையின் நீதி என்ன?",
+          ans: "<b>The moral is that we must work hard and save prudently for our future during good times instead of wasting our time in idle pleasure.</b>",
+          ansTamil: "நல்ல காலத்தில் சோம்பேறியாக நேரத்தை வீணடிக்காமல், கடினமாக உழைத்து எதிர்காலத்திற்காகச் சேமிக்க வேண்டும் என்பதே இக்கவிதையின் நீதி."
+        },
+
+        // Poetic Devices Table
+        {
+          id: "eng4_2_poetic_devices",
+          type: "2m",
+          mark: "Poetic Devices & Figures of Speech",
+          isImportant: true,
+          q: "Explain the important Poetic Devices used in 'The Ant and the Cricket' with examples.",
+          qTamil: "இக்கவிதையில் இடம்பெற்றுள்ள கவிதை உத்திகளை (Poetic Devices) எடுத்துக்காட்டுடன் விளக்குக:",
+          ans: `<table style="width:100%; border-collapse:collapse; font-size:13px; margin-top:6px;">
+            <tr style="background:#eff6ff; color:#1e40af;">
+              <th style="padding:6px; border:1px solid #94a3b8; width:30%;">Poetic Device</th>
+              <th style="padding:6px; border:1px solid #94a3b8; width:70%;">Example & Explanation</th>
+            </tr>
+            <tr>
+              <td style="padding:6px; border:1px solid #cbd5e1;"><b>Alliteration</b></td>
+              <td style="padding:6px; border:1px solid #cbd5e1;"><i>"<u>S</u>illy young cricket..."</i> (Repetition of the 's' consonant sound)</td>
+            </tr>
+            <tr>
+              <td style="padding:6px; border:1px solid #cbd5e1;"><b>Personification</b></td>
+              <td style="padding:6px; border:1px solid #cbd5e1;">The ant and cricket speak, think, and act like human beings.</td>
+            </tr>
+            <tr>
+              <td style="padding:6px; border:1px solid #cbd5e1;"><b>Rhyme Scheme</b></td>
+              <td style="padding:6px; border:1px solid #cbd5e1;">Rhyming couplets (<b>aabbccdd</b>) e.g., <i>sing / spring, home / come</i></td>
+            </tr>
+            <tr>
+              <td style="padding:6px; border:1px solid #cbd5e1;"><b>Metaphor / Fable</b></td>
+              <td style="padding:6px; border:1px solid #cbd5e1;"><i>"Some crickets have four legs, and some have two"</i> (Compares lazy humans to crickets).</td>
+            </tr>
+          </table>`,
+          ansTamil: "Alliteration (மோனை), Personification (தற்குறிப்பேற்ற உருவகம்), Rhyme Scheme (இயைபுத் திட்டம் - aabb) ஆகியவை இக்கவிதையில் சிறப்பாகப் பயன்படுத்தப்பட்டுள்ளன."
+        },
+
+        // Paragraph Questions
+        {
+          id: "eng4_2_5m_1",
+          type: "5m",
+          mark: "5 Marks (Paragraph)",
+          isImportant: true,
+          q: "Write the story of 'The Ant and the Cricket' in your own words.",
+          qTamil: "எறும்பும் வெட்டுக்கிளியும் கவிதையின் கதையை உங்கள் சொந்த நடையில் சுருக்கமாக எழுதுக:",
+          ans: `<div style="line-height:1.6;">
+            <b>Synopsis:</b>
+            <ul style="margin:4px 0 10px 20px; font-weight:600; color:#0369a1;">
+              <li>A Silly Carefree Cricket</li>
+              <li>Arrival of Harsh Winter</li>
+              <li>Plea for Food and Shelter</li>
+              <li>The Ant's Firm Principle</li>
+              <li>Moral Lesson</li>
+            </ul>
+            <p>A silly young cricket spent the warm months of summer and spring singing happily. He did not collect or store food for winter. When winter arrived, he found his cupboard empty and could not find even a single crumb on the snow-covered ground. Starving and freezing, he approached a hardworking ant and begged for food and shelter, promising to repay it later. The prudent ant asked him what he had done during the warm summer. The cricket confessed he had spent the time singing. The ant firmly refused to help and advised him to go and dance the winter away. The poem teaches us that we must work hard, save resources, and prepare today for tomorrow's needs.</p>
+          </div>`,
+          ansTamil: "கோடையில் உழைக்காமல் ஆடிப் பாடிய வெட்டுக்கிளி குளிர்காலத்தில் உணவின்றித் தவித்த கதையின் மூலம் உழைப்பும் சேமிப்பும் வாழ்வின் பாதுகாப்பு என்பதை இக்கவிதை உணர்த்துகிறது."
         },
         {
           id: "eng4_2_4",
@@ -267,75 +550,173 @@ const ENGLISH_UNIT_4_DATA = {
       ]
     },
 
+    // =========================================================================
+    // PART 3: SUPPLEMENTARY — THE AGED MOTHER (MATSUO BASHO)
+    // =========================================================================
     {
       id: "eng4_sec3",
       title: "Part 3: Supplementary — The Aged Mother",
       author: "Matsuo Basho (Japanese Folktale)",
       questions: [
+        // One-mark Quick Facts Card
         {
-          id: "eng4_3_1",
+          id: "eng4_3_facts",
           type: "1m",
-          mark: "1 Mark",
-          q: "What was the barbaric decree issued by the despotic leader of Shinano?",
-          qTamil: "ஷினானோ நாட்டின் கொடுங்கோல் ஆளுநர் பிறப்பித்த கொடூர ஆணை என்ன?",
-          options: ["a) Pay double taxes", "b) Immediately put all elderly people to death", "c) Surrender all weapons", "d) Banish all farmers"],
-          ans: "<b>b) Immediately put all elderly people to death</b>",
-          ansTamil: "நாட்டிலுள்ள முதியவர்கள் அனைவரையும் உடனடியாகக் கொன்றுவிட வேண்டும் என்ற கொடூர ஆணை."
+          mark: "Quick Reference Facts Table",
+          isImportant: true,
+          q: "Important One-Mark Quick Facts for 'The Aged Mother':",
+          qTamil: "'தி ஏஜ்ட் மதர்' பாடத்தின் முக்கிய ஒரு மதிப்பெண் குறிப்புகள் அட்டவணை:",
+          ans: `<table style="width:100%; border-collapse:collapse; font-size:13px; margin-top:6px;">
+            <tr style="background:#fef3c7; color:#92400e;">
+              <th style="padding:6px; border:1px solid #f59e0b; width:40%;">Key Detail</th>
+              <th style="padding:6px; border:1px solid #f59e0b; width:60%;">Answer</th>
+            </tr>
+            <tr><td style="padding:6px; border:1px solid #fde68a;"><b>Name of the country</b></td><td style="padding:6px; border:1px solid #fde68a;"><b>Shining</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #fde68a;"><b>The cruel ruler</b></td><td style="padding:6px; border:1px solid #fde68a;"><b>Governor (Despotic leader)</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #fde68a;"><b>The sacred mountain</b></td><td style="padding:6px; border:1px solid #fde68a;"><b>Obatsuyama (Mountain of Abandoning Aged)</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #fde68a;"><b>Principal food carried</b></td><td style="padding:6px; border:1px solid #fde68a;"><b>Unwhitened rice</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #fde68a;"><b>Soft cushion for mother</b></td><td style="padding:6px; border:1px solid #fde68a;"><b>Fallen pine needles</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #fde68a;"><b>Guide along the path</b></td><td style="padding:6px; border:1px solid #fde68a;"><b>Snapped twigs dropped by mother</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #fde68a;"><b>Governor's impossible demand</b></td><td style="padding:6px; border:1px solid #fde68a;"><b>A rope of ashes</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #fde68a;"><b>Main theme / Moral</b></td><td style="padding:6px; border:1px solid #fde68a;"><b>Wisdom of old age ('Crown of snow')</b></td></tr>
+          </table>`,
+          ansTamil: "நாடு: Shining, மலை: Obatsuyama, உணவு: Unwhitened rice, அடையாளம்: Twigs, புதிர்: Rope of ashes, மையக்கருத்து: முதியோரின் ஞானம்."
         },
+
+        // Two-mark questions (Complete Textbook Set 1 to 8)
         {
-          id: "eng4_3_2",
-          type: "1m",
-          mark: "1 Mark",
-          q: "How did the loving mother help her son find his way back down the mountain safely?",
-          qTamil: "தாய் தன் மகன் மலையிலிருந்து பாதுகாப்பாகக் கீழே இறங்குவதற்கு என்ன செய்தாள்?",
-          options: ["a) Gave him a magnetic compass", "b) Snapped twigs along the climb and dropped them on the trail", "c) Lit torchlights", "d) Tied a long rope"],
-          ans: "<b>b) Snapped twigs along the climb and dropped them on the trail</b>",
-          ansTamil: "மகன் மலையிறங்கும்போது வழிதவறிவிடக் கூடாது என்பதற்காக மரக்கிளைகளை ஒடித்து வழியெங்கும் அடையாளமாகப் போட்டு வந்தாள்."
-        },
-        {
-          id: "eng4_3_3",
+          id: "eng4_3_2m_1",
           type: "2m",
           mark: "2 Marks",
-          q: "How did the mother solve the governor's impossible riddle of making 'a rope of ashes'?",
-          qTamil: "'சாம்பலால் ஆன கயிறு' செய்து காட்டுமாறு ஆளுநர் கூறிய புதிருக்குத் தாய் எவ்வாறு தீர்வு கூறினாள்?",
-          ans: "The wise mother advised her son to twist a heavy rope of dry straw, stretch it on a row of flat stones on a windless night, and burn it to ashes. The rope retained its woven form even as ash!",
-          ansTamil: "வைக்கோலால் முறுக்கப்பட்ட கயிற்றைத் தட்டையான கற்கள் மீது வைத்து, காற்றில்லாத இரவில் எரித்தால் கயிறு சாம்பலான பின்னரும் அதன் முறுக்கு வடிவம் மாறாமல் இருக்கும் என்றாள்."
+          examTag: "Public Exam",
+          q: "What was the cruel announcement made by the despotic leader of Shining?",
+          qTamil: "ஷினானோ நாட்டின் கொடுங்கோல் ஆளுநர் பிறப்பித்த கொடூர ஆணை என்ன?",
+          ans: "<b>The despotic leader decreed that all aged people in the country should be put to death immediately, as he considered old age to be frail and useless.</b>",
+          ansTamil: "நாட்டிலுள்ள முதியவர்கள் அனைவரும் பலவீனமானவர்கள் மற்றும் பயனற்றவர்கள் எனக் கூறி, அவர்களை உடனடியாகக் கொன்றுவிட வேண்டும் என்று ஆளுநர் உத்தரவிட்டார்."
         },
         {
-          id: "eng4_3_4",
-          type: "8m",
-          mark: "8 Marks",
+          id: "eng4_3_2m_2",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "Why was the farmer filled with deep sorrow?",
+          qTamil: "விவசாயி ஏன் மிகுந்த துயரத்தில் ஆழ்ந்தான்?",
+          ans: "<b>The poor farmer loved his aged widowed mother devotedly. He was filled with sorrow because he was forced to abandon her to die on Mount Obatsuyama to obey the cruel law.</b>",
+          ansTamil: "தன் தாயின் மீது மிகுந்த அன்பு கொண்டிருந்த விவசாயி, கொடுங்கோல் ஆணைக்குக் கட்டுப்பட்டுத் தன் அன்புத் தாயை மலையில் விட்டுவிட்டு வர நேர்ந்ததால் மிகுந்த துயருற்றான்."
+        },
+        {
+          id: "eng4_3_2m_3",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "What did the farmer carry to the mountain for his mother?",
+          qTamil: "தாய்க்காக விவசாயி மலைக்கு என்னென்ன உணவுப் பொருட்களை எடுத்துச் சென்றான்?",
+          ans: "<b>The farmer cooked a quantity of unwhitened rice, wrapped it in a square cloth, and carried a gourd filled with cool water on his shoulders.</b>",
+          ansTamil: "தீட்டப்படாத பழுப்பு அரிசி உணவையும், குளிர்ந்த நீர் நிரப்பப்பட்ட சுரைக்காய்க் குடுவையையும் எடுத்துச் சென்றான்."
+        },
+        {
+          id: "eng4_3_2m_4",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "Why did the mother become anxious during the journey up the mountain?",
+          qTamil: "மலைப்பயணத்தின் போது தாய் ஏன் கவலையடைந்தாள்?",
+          ans: "<b>The mother noticed twilight falling and grew anxious that her son might not know the confusing mountain paths and would lose his way returning home alone.</b>",
+          ansTamil: "இருள் சூழ்ந்து வருவதைக் கண்ட தாய், தன் மகன் மலையிலிருந்து தனியாகத் திரும்பும்போது வழிதெரியாமல் திண்டாடுவானோ என்று கவலையுற்றாள்."
+        },
+        {
+          id: "eng4_3_2m_5",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          q: "What did the mother drop along the mountain way?",
+          qTamil: "தாய் மலையெங்கும் வழியில் எதைப் போட்டு வந்தாள்?",
+          ans: "<b>She quietly snapped small twigs from bushes along the climb and dropped them at short intervals to serve as path markers for her son.</b>",
+          ansTamil: "மகன் பத்திரமாகத் திரும்புவதற்காக மரக்கிளைகளை ஒடித்து வழியெங்கும் அடையாளமாகப் போட்டு வந்தாள்."
+        },
+        {
+          id: "eng4_3_2m_6",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Textbook",
+          q: "Where did the farmer hide his mother after returning home?",
+          qTamil: "வீடு திரும்பியதும் விவசாயி தன் தாயை எங்கே மறைத்து வைத்தான்?",
+          ans: "<b>He hid his mother in a secret, walled closet beneath the kitchen floor and secretly provided her with food.</b>",
+          ansTamil: "சமையலறைத் தரைக்குக் கீழே இருந்த ரகசிய பாதாள அறையில் தாயை மறைத்து வைத்து உணவளித்தான்."
+        },
+        {
+          id: "eng4_3_2m_7",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          q: "How did the farmer make the rope of ashes demanded by the governor?",
+          qTamil: "ஆளுநர் கேட்ட சாம்பல் கயிற்றை விவசாயி எவ்வாறு உருவாக்கினான்?",
+          ans: "<b>Following his wise mother's advice, he twisted a rope of dry straw, laid it on a row of flat stones on a windless night, and burnt it to ashes.</b>",
+          ansTamil: "வைக்கோல் கயிற்றைக் கற்கள் மீது வைத்து, காற்றில்லாத இரவில் எரித்து, வடிவம் மாறாத சாம்பல் கயிற்றை உருவாக்கினான்."
+        },
+        {
+          id: "eng4_3_2m_8",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          q: "How did the governor realise his mistake and abolish the cruel order?",
+          qTamil: "ஆளுநர் எவ்வாறு தன் தவறை உணர்ந்து கொடுங்கோல் ஆணையை ரத்து செய்தார்?",
+          ans: "<b>When the farmer confessed the truth, the governor was amazed by the aged mother's wisdom. He realized that the state needed the wisdom of the elders alongside the strength of youth, proclaiming: <i>'With the crown of snow, there cometh wisdom!'</i></b>",
+          ansTamil: "விவசாயி உண்மையை ஒப்புக்கொண்டதும், முதியவர்களின் அனுபவ அறிவே நாட்டின் பலம் என்பதை உணர்ந்த ஆளுநர், 'வெள்ளை முடியுடன் பேரறிவும் பிறக்கிறது' என்று கூறி ஆணையை ரத்து செய்தார்."
+        },
+
+        // Five-mark Paragraphs
+        {
+          id: "eng4_3_5m_1",
+          type: "5m",
+          mark: "5 Marks (Paragraph)",
           isImportant: true,
-          q: "Narrate the touching story of 'The Aged Mother' highlighting maternal devotion and the triumph of wisdom over tyranny.",
-          qTamil: "'தி ஏஜ்ட் மதர்' கதையில் தாயின் தன்னலமற்ற பாசத்தையும், கொடுங்கோல் ஆளுநரின் ஆணையை முறியடித்த முதியோரின் ஞானத்தையும் விளக்குக.",
+          q: "Describe how the farmer saved his aged mother in 'The Aged Mother'.",
+          qTamil: "விவசாயி தன் அன்புத் தாயை எவ்வாறு காப்பாற்றினான் என்பதை விவரிக்க:",
           ans: `<div style="line-height:1.6;">
             <b>Synopsis:</b>
             <ul style="margin:4px 0 10px 20px; font-weight:600; color:#0369a1;">
-              <li>The Barbaric Decree of the Despot</li>
-              <li>Journey to Obatsuyama (The Mountain of Abandoning Aged)</li>
-              <li>The Mother's Unconditional Love (Twigs on the Trail)</li>
-              <li>The Hidden Secret and the Governor's Riddles</li>
-              <li>Abolition of the Law: 'With the crown of snow, there cometh wisdom!'</li>
+              <li>The Cruel Decree in Shining</li>
+              <li>Journey to Obatsuyama</li>
+              <li>Mother's Selfless Love (Twigs)</li>
+              <li>Hiding in the Secret Closet</li>
+              <li>Abolishing the Law</li>
             </ul>
-            <p><b>The Cruel Decree:</b> In the province of Shinano, a cowardly despot feared the infirmities of old age and decreed that all elderly citizens should be immediately put to death. A poor farmer deeply loved his aged, widowed mother. With a heavy heart, he carried her up Mount Obatsuyama to leave her to die.</p>
-            <p><b>Maternal Devotion:</b> Even facing abandonment, the mother thought only of her son's safety. As they ascended, she snapped twigs from overhanging bushes and dropped them along the path so her son would not lose his way returning home.</p>
-            <p><b>The Return & Shelter:</b> Moved by her boundless love, the son declared he would not abandon her. He brought her back under cover of darkness and hid her in a secret closet under the kitchen floor.</p>
-            <p><b>Solving the Impossible Riddles:</b> Later, the governor demanded an impossible feat: to present a 'rope of ashes'. Guided by his mother's wisdom, the son burned a twisted straw rope on flat stones on a windless night, producing a perfect rope of ash. When challenged again to make a silk drum that played without being beaten, the mother placed a bumblebee inside the drum.</p>
-            <p><b>Abolition of Tyranny:</b> Astonished, the governor demanded to know the source of such intellect. The son bravely confessed the truth. Realizing that the kingdom needed the wisdom of the elders alongside the strength of youth, the governor abolished the barbaric law, proclaiming: <i>'With the crown of snow, there cometh wisdom!'</i></p>
+            <p>The country of Shining was ruled by a despotic governor who decreed that all elderly citizens should be put to death. A poor farmer loved his aged mother deeply, but was forced to carry her up Mount Obatsuyama. Even facing death, the mother dropped twigs along the trail to ensure her son returned safely. Touched by her profound love, the son brought her back and hid her in a closet beneath the kitchen floor. Later, the governor demanded an impossible rope of ashes. The mother devised a clever method: twisting straw and burning it on flat stones on a windless night. Amazed by her wisdom, the governor abolished the cruel decree and respected the elders.</p>
           </div>`,
-          ansTamil: "இக்கதை தாயின் தியாகத்தையும், முதியவர்களின் அனுபவ அறிவே சமுதாயத்தின் மெய்யான வழிகாட்டி என்பதையும் உணர்த்துகிறது."
+          ansTamil: "தாயின் தன்னலமற்ற அன்பாலும், சாம்பல் கயிறு செய்யும் புத்திக்கூர்மையாலும் விவசாயி தன் தாயைக் காப்பாற்றியதோடு நாட்டிலுள்ள முதியவர்கள் அனைவரின் உயிரையும் காப்பாற்றினான்."
+        },
+        {
+          id: "eng4_3_5m_2",
+          type: "5m",
+          mark: "5 Marks (Paragraph)",
+          isImportant: true,
+          q: "What is the importance of the mother's wisdom in the story 'The Aged Mother'?",
+          qTamil: "இக்கதையில் தாயின் ஞானமும் அனுபவ அறிவும் எவ்வாறு முக்கியத்துவம் பெறுகிறது?",
+          ans: `<div style="line-height:1.6;">
+            <b>Synopsis:</b>
+            <ul style="margin:4px 0 10px 20px; font-weight:600; color:#0369a1;">
+              <li>Foresight on the Mountain</li>
+              <li>Solving the Governor's Impossible Riddles</li>
+              <li>The Lesson of the Crown of Snow</li>
+              <li>Triumph of Experience over Tyranny</li>
+            </ul>
+            <p>The aged mother displayed immense wisdom and foresight throughout the tale. On the mountain path, she snapped twigs so her son would not lose his way in the dark. When the tyrant demanded a rope of ashes, she suggested twisting straw and burning it on stones on a windless night. Her solution astounded the ruler, proving that youth without age's guidance is reckless. The governor acknowledged: <i>'With the crown of snow, there cometh wisdom!'</i> Thus, the mother's wisdom saved not only her own life but also brought permanent dignity and survival to all the elderly in the land.</p>
+          </div>`,
+          ansTamil: "முதியவர்களின் தலைநரை வெறும் முதுமையின் அடையாளம் அல்ல; அது வாழ்வின் அனுபவமும் விவேகமும் ஆகும் என்பதைத் தாயின் ஞானம் மெய்ப்பித்தது."
         }
       ]
     },
 
+    // =========================================================================
+    // PART 4: GRAMMAR & STRUCTURAL USAGE
+    // =========================================================================
     {
       id: "eng4_sec4",
-      title: "Part 4: Grammar & Structural Usage — Conjunctions (Connectors) & Nominalisation",
+      title: "Part 4: Grammar & Structural Usage — Conjunctions, Phrases, Clauses & Nominalisation",
       author: "Class 10 Samacheer Kalvi Board Grammar",
       questions: [
-        // -------------------------------------------------------------
-        // GRAMMAR RULES & MASTER TABLES
-        // -------------------------------------------------------------
+        // Master Tables
         {
           id: "eng4_4_rule1",
           type: "1m",
@@ -370,7 +751,6 @@ const ENGLISH_UNIT_4_DATA = {
           </div>`,
           ansTamil: "இணைப்புச்சொற்கள் இரு வாக்கியங்களை இணைக்க உதவுகின்றன. Coordinating (சமமானவை), Subordinating (சார்புடையவை), Correlative (இணைந்து வருபவை) என 3 வகைப்படும்."
         },
-
         {
           id: "eng4_4_rule2",
           type: "1m",
@@ -416,9 +796,7 @@ const ENGLISH_UNIT_4_DATA = {
           ansTamil: "வினைச்சொல் (Verb) அல்லது பெயரடைக்கு (Adjective) பின்னொட்டு (Suffix) சேர்த்து பெயர்ச்சொல்லாக (Noun) மாற்றுவதே Nominalisation ஆகும்."
         },
 
-        // -------------------------------------------------------------
-        // PUBLIC EXAM CENTUM GUIDE & DIFFICULT PROBLEMS GUIDANCE
-        // -------------------------------------------------------------
+        // Public Exam Centum Guide
         {
           id: "eng4_4_centum_guide",
           type: "1m",
@@ -440,53 +818,144 @@ const ENGLISH_UNIT_4_DATA = {
           ansTamil: "இணைப்புச்சொற்கள், பெயர்ச்சொல்லாக்கம், இரு வாக்கியங்களை இணைத்தல் மற்றும் பத்தி வினாக்களில் தலைப்பு, எழுத்தாளர் பெயர், நீதி ஆகியவற்றை முறையாக எழுதினால் முழு மதிப்பெண் பெறலாம்!"
         },
 
+        // Phrases and Clauses Practice (User's Grammar Section B)
         {
-          id: "eng4_4_diff_1",
-          type: "2m",
-          mark: "Difficult Problem Guide",
-          isImportant: true,
-          q: "Guidance on Difficult Exercise: How to combine sentences using 'No sooner...than' vs 'As soon as'?",
-          qTamil: "'No sooner...than' மற்றும் 'As soon as' பயன்படுத்தி வாக்கியங்களை இணைப்பது எப்படி? (இலக்கண விதி & வழிமுறை):",
-          ans: `<div style="line-height:1.6; font-size:13px;">
-            <b>Golden Inversion Rule:</b>
-            <div style="background:#f1f5f9; padding:8px 12px; border-radius:6px; margin:6px 0; font-family:monospace;">
-              Formula 1: <b>As soon as</b> + Subject + Past Verb, Subject + Past Verb.<br>
-              Formula 2: <b>No sooner did</b> + Subject + <b>V1 (Base Verb)</b> + <b>than</b> + Subject + Past Verb.
-            </div>
-            <p><b>Example Problem:</b> <i>"Sita saw a snake. At once she ran away."</i></p>
-            <ul>
-              <li>Using 'As soon as': <b>As soon as Sita saw a snake, she ran away.</b></li>
-              <li>Using 'No sooner...than': <b>No sooner did Sita see a snake than she ran away.</b> <i>(Note: 'did + see', NOT 'did saw'; and use 'than', NEVER 'when')</i></li>
-            </ul>
-          </div>`,
-          ansTamil: "No sooner did வரும் போது வினைச்சொல் V1 (see) ஆக மாற வேண்டும்; நடுவில் 'than' மட்டுமே வரவேண்டும்; 'when' வரக்கூடாது!"
+          id: "eng4_4_phrase_1",
+          type: "1m",
+          mark: "1 Mark (Phrase Identification)",
+          examTag: "Grammar Practice",
+          q: "Identify the phrase in the sentence:<br><b>The boy <u>in the blue shirt</u> is my brother.</b>",
+          qTamil: "வாக்கியத்தில் உள்ள தொடரை (Phrase) வகைப்படுத்துக: 'in the blue shirt'",
+          options: ["a) Noun phrase", "b) Adjective phrase", "c) Adverb phrase", "d) Prepositional clause"],
+          ans: "<b>b) Adjective phrase</b><br><small style='color:#64748b;'>Explanation: 'In the blue shirt' describes the noun 'The boy', functioning as an Adjective Phrase.</small>",
+          ansTamil: "'In the blue shirt' என்பது சிறுவனை விவரிப்பதால் இது பெயரடைத் தொடர் (Adjective Phrase) ஆகும்."
+        },
+        {
+          id: "eng4_4_phrase_2",
+          type: "1m",
+          mark: "1 Mark (Phrase Identification)",
+          examTag: "Grammar Practice",
+          q: "Identify the phrase in the sentence:<br><b>He works <u>with great care</u>.</b>",
+          qTamil: "வாக்கியத்தில் உள்ள தொடரை (Phrase) வகைப்படுத்துக: 'with great care'",
+          options: ["a) Adjective phrase", "b) Adverb phrase", "c) Noun phrase", "d) Verb phrase"],
+          ans: "<b>b) Adverb phrase</b><br><small style='color:#64748b;'>Explanation: 'With great care' modifies the verb 'works', showing how the action is performed.</small>",
+          ansTamil: "'With great care' என்பது வினையின் தன்மையை விளக்குவதால் இது வினையடைத் தொடர் (Adverb Phrase) ஆகும்."
+        },
+        {
+          id: "eng4_4_clause_1",
+          type: "1m",
+          mark: "1 Mark (Clause Identification)",
+          examTag: "Grammar Practice",
+          q: "Identify the clause in the sentence:<br><b>I know <u>that he is honest</u>.</b>",
+          qTamil: "வாக்கியத்தில் உள்ள வாக்கியக் கூறை (Clause) வகைப்படுத்துக: 'that he is honest'",
+          options: ["a) Adjective clause", "b) Adverb clause", "c) Noun clause", "d) Relative clause"],
+          ans: "<b>c) Noun clause</b><br><small style='color:#64748b;'>Explanation: 'That he is honest' acts as the object of the verb 'know', functioning as a Noun Clause.</small>",
+          ansTamil: "'That he is honest' என்பது வினைச்சொல்லின் செயப்படுபொருளாக வருவதால் இது பெயர்ச்சொல் கூற்று (Noun Clause) ஆகும்."
+        },
+        {
+          id: "eng4_4_clause_2",
+          type: "1m",
+          mark: "1 Mark (Clause Identification)",
+          examTag: "Grammar Practice",
+          q: "Identify the clause in the sentence:<br><b>The boy <u>who won the prize</u> is my friend.</b>",
+          qTamil: "வாக்கியத்தில் உள்ள வாக்கியக் கூறை (Clause) வகைப்படுத்துக: 'who won the prize'",
+          options: ["a) Noun clause", "b) Adjective clause", "c) Adverb clause", "d) Conditional clause"],
+          ans: "<b>b) Adjective clause</b><br><small style='color:#64748b;'>Explanation: 'Who won the prize' qualifies the noun 'The boy', functioning as an Adjective Clause.</small>",
+          ansTamil: "'Who won the prize' என்பது சிறுவனை விவரிப்பதால் இது பெயரடைக் கூற்று (Adjective Clause) ஆகும்."
+        },
+        {
+          id: "eng4_4_clause_3",
+          type: "1m",
+          mark: "1 Mark (Clause Identification)",
+          examTag: "Grammar Practice",
+          q: "Identify the clause in the sentence:<br><b>I will come <u>when you call me</u>.</b>",
+          qTamil: "வாக்கியத்தில் உள்ள வாக்கியக் கூறை (Clause) வகைப்படுத்துக: 'when you call me'",
+          options: ["a) Noun clause", "b) Adjective clause", "c) Adverb clause", "d) Conjunction phrase"],
+          ans: "<b>c) Adverb clause</b><br><small style='color:#64748b;'>Explanation: 'When you call me' indicates the time of the action, functioning as an Adverb Clause of Time.</small>",
+          ansTamil: "'When you call me' என்பது நிகழ்வின் காலத்தைக் குறிப்பதால் இது வினையடைக் கூற்று (Adverb Clause of Time) ஆகும்."
         },
 
+        // Compound Words (User's Grammar Section C)
         {
-          id: "eng4_4_diff_2",
-          type: "2m",
-          mark: "Difficult Problem Guide",
+          id: "eng4_4_comp_table",
+          type: "1m",
+          mark: "Master Vocabulary Card",
           isImportant: true,
-          q: "Guidance on Difficult Exercise: How to rewrite sentences by Nominalising the Verb without changing meaning?",
-          qTamil: "வினைச்சொல்லைப் பெயர்ச்சொல்லாக (Nominalisation) மாற்றி வாக்கியத்தை மாற்றியமைக்கும் முறை என்ன?",
-          ans: `<div style="line-height:1.6; font-size:13px;">
-            <b>3-Step Transformation Method:</b>
-            <ol style="margin-left:18px; padding-left:0;">
-              <li>Identify the main finite verb in the sentence.</li>
-              <li>Convert that verb into its corresponding noun form (e.g. <i>decided ➔ decision, concluded ➔ conclusion, failed ➔ failure</i>).</li>
-              <li>Add a possessive pronoun or linking preposition (<i>Their decision was... / Her failure was due to...</i>).</li>
-            </ol>
-            <p><b>Example:</b> <i>"The committee <u>decided</u> to build a new bridge."</i><br>
-            ➔ <b>The committee's <u>decision</u> was to build a new bridge.</b></p>
-            <p><b>Example:</b> <i>"She <u>failed</u> because she was careless."</i><br>
-            ➔ <b>Her <u>failure</u> was due to carelessness.</b></p>
-          </div>`,
-          ansTamil: "வினைச்சொல்லின் பெயர்ச்சொல் வடிவத்தைக் கண்டறிந்து (decided -> decision), உரிமையாளர் பெயர் அல்லது வினையுடன் இணைத்து வாக்கியத்தை மாற்றியமைக்க வேண்டும்."
+          q: "Compound Words Formation Table (Unit 4 Vocabulary):",
+          qTamil: "பொருத்தமான இரு சொற்களை இணைத்து கூட்டுச்சொல் (Compound Words) உருவாக்கும் அட்டவணை:",
+          ans: `<table style="width:100%; border-collapse:collapse; font-size:13px; margin-top:6px;">
+            <tr style="background:#f1f5f9; color:#1e293b;">
+              <th style="padding:6px; border:1px solid #cbd5e1; width:30%;">Word 1</th>
+              <th style="padding:6px; border:1px solid #cbd5e1; width:30%;">Word 2</th>
+              <th style="padding:6px; border:1px solid #cbd5e1; width:40%;">Compound Word</th>
+            </tr>
+            <tr><td style="padding:6px; border:1px solid #e2e8f0;">Tooth</td><td style="padding:6px; border:1px solid #e2e8f0;">Brush</td><td style="padding:6px; border:1px solid #e2e8f0;"><b>Toothbrush</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #e2e8f0;">School</td><td style="padding:6px; border:1px solid #e2e8f0;">Boy</td><td style="padding:6px; border:1px solid #e2e8f0;"><b>Schoolboy</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #e2e8f0;">Sun</td><td style="padding:6px; border:1px solid #e2e8f0;">Flower</td><td style="padding:6px; border:1px solid #e2e8f0;"><b>Sunflower</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #e2e8f0;">Rain</td><td style="padding:6px; border:1px solid #e2e8f0;">Bow</td><td style="padding:6px; border:1px solid #e2e8f0;"><b>Rainbow</b></td></tr>
+            <tr><td style="padding:6px; border:1px solid #e2e8f0;">Class</td><td style="padding:6px; border:1px solid #e2e8f0;">Room</td><td style="padding:6px; border:1px solid #e2e8f0;"><b>Classroom</b></td></tr>
+          </table>`,
+          ansTamil: "இரு தனித்தனி சொற்கள் இணைந்து புதிய பொருள் தரும் கூட்டுச்சொல்லை உருவாக்குகின்றன (Compound Words)."
         },
 
-        // -------------------------------------------------------------
-        // BOOK-BACK EXERCISE A: COMPLETE WITH RIGHT CONNECTOR IN BRACKETS
-        // -------------------------------------------------------------
+        // Conjunctions Fill in the Blanks (User's Grammar Section A)
+        {
+          id: "eng4_4_conj_1",
+          type: "1m",
+          mark: "1 Mark",
+          examTag: "Grammar Practice",
+          q: "Fill in the blank with a suitable conjunction:<br>He is poor ________ honest.",
+          qTamil: "சரியான இணைப்புச்சொல் கொண்டு நிரப்புக (அவன் ஏழை, ஆனால் நேர்மையானவன்):",
+          options: ["a) and", "b) but", "c) or", "d) so"],
+          ans: "<b>b) but</b> (shows contrast)",
+          ansTamil: "முரண்பட்ட பண்புகளை இணைக்க 'but' (ஆனால்) பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_conj_2",
+          type: "1m",
+          mark: "1 Mark",
+          examTag: "Grammar Practice",
+          q: "Fill in the blank with a suitable conjunction:<br>Study well ________ you will pass.",
+          qTamil: "சரியான இணைப்புச்சொல் கொண்டு நிரப்புக (நன்றாகப் படி, அப்போது தேர்ச்சி பெறுவாய்):",
+          options: ["a) and", "b) but", "c) or", "d) although"],
+          ans: "<b>a) and</b>",
+          ansTamil: "தொடர் விளைவைக் குறிக்க 'and' (மற்றும் / அப்போது) பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_conj_3",
+          type: "1m",
+          mark: "1 Mark",
+          examTag: "Grammar Practice",
+          q: "Fill in the blank with a suitable conjunction:<br>I stayed at home ________ it was raining.",
+          qTamil: "சரியான இணைப்புச்சொல் கொண்டு நிரப்புக (மழை பெய்து கொண்டிருந்ததால் நான் வீட்டிலேயே தங்கினேன்):",
+          options: ["a) because", "b) but", "c) unless", "d) though"],
+          ans: "<b>a) because</b> (expresses reason)",
+          ansTamil: "காரணத்தை வெளிப்படுத்த 'because' (ஏனெனில்) பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_conj_4",
+          type: "1m",
+          mark: "1 Mark",
+          examTag: "Grammar Practice",
+          q: "Fill in the blank with a suitable conjunction:<br>Hurry up ________ you will miss the bus.",
+          qTamil: "சரியான இணைப்புச்சொல் கொண்டு நிரப்புக (சீக்கிரம் கிளம்பு, இல்லையெனில் பேருந்தைத் தவறவிடுவாய்):",
+          options: ["a) and", "b) or", "c) so", "d) while"],
+          ans: "<b>b) or</b> (indicates alternative / warning)",
+          ansTamil: "எச்சரிக்கை மற்றும் மாற்றுத் தெரிவைக் குறிக்க 'or' (இல்லாவிட்டால்) பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_conj_5",
+          type: "1m",
+          mark: "1 Mark",
+          examTag: "Grammar Practice",
+          q: "Fill in the blank with a suitable conjunction:<br>She is intelligent ________ hardworking.",
+          qTamil: "சரியான இணைப்புச்சொல் கொண்டு நிரப்புக (அவள் புத்திசாலியாகவும் கடின உழைப்பாளியாகவும் இருக்கிறாள்):",
+          options: ["a) and", "b) but", "c) or", "d) yet"],
+          ans: "<b>a) and</b> (joins two positive qualities)",
+          ansTamil: "இரு நல்ல குணங்களை இணைக்க 'and' பயன்படுகிறது."
+        },
+
+        // Book-back Exercise A: Connectors in brackets
         {
           id: "eng4_4_ex_a1",
           type: "1m",
@@ -543,9 +1012,7 @@ const ENGLISH_UNIT_4_DATA = {
           ansTamil: "இருப்பினும் / ஆயினும் என்ற பொருளைத் தரும் 'nevertheless' என்ற Connector பயன்படுகிறது."
         },
 
-        // -------------------------------------------------------------
-        // BOOK-BACK EXERCISE B: CORRELATIVE CONJUNCTIONS
-        // -------------------------------------------------------------
+        // Book-back Exercise B: Correlative pairs
         {
           id: "eng4_4_ex_b1",
           type: "1m",
@@ -591,9 +1058,7 @@ const ENGLISH_UNIT_4_DATA = {
           ansTamil: "'No sooner' வரும்போது 'than' மட்டுமே வரவேண்டும்; 'when' வரக்கூடாது!"
         },
 
-        // -------------------------------------------------------------
-        // BOOK-BACK EXERCISE C: COMBINE SENTENCES USING CONNECTORS
-        // -------------------------------------------------------------
+        // Book-back Exercise C: Sentence combining
         {
           id: "eng4_4_ex_c1",
           type: "2m",
@@ -647,9 +1112,7 @@ const ENGLISH_UNIT_4_DATA = {
           ansTamil: "யூசுப்புக்கு அதிக காய்ச்சல் இருந்ததால் அவனால் போட்டியில் பங்கேற்க முடியவில்லை."
         },
 
-        // -------------------------------------------------------------
-        // BOOK-BACK EXERCISE D: TICK THE CORRECT LINKER
-        // -------------------------------------------------------------
+        // Book-back Exercise D: Tick correct linker
         {
           id: "eng4_4_ex_d1",
           type: "1m",
@@ -706,9 +1169,7 @@ const ENGLISH_UNIT_4_DATA = {
           ansTamil: "உடனடி நிகழ்வைக் குறிக்க 'as soon as' (வந்த உடனே) பயன்படுகிறது."
         },
 
-        // -------------------------------------------------------------
-        // NOMINALISATION TEXTBOOK EXERCISES
-        // -------------------------------------------------------------
+        // Nominalisation exercises
         {
           id: "eng4_4_nom_1",
           type: "1m",
@@ -783,9 +1244,7 @@ const ENGLISH_UNIT_4_DATA = {
           ansTamil: "நேரத்தை முறையாக நிர்வகிக்காததே அவளது தோல்விக்குக் காரணம்."
         },
 
-        // -------------------------------------------------------------
-        // PREPOSITIONS & PHRASAL PREPOSITIONS
-        // -------------------------------------------------------------
+        // Prepositions and Phrasal Prepositions
         {
           id: "eng4_4_1",
           type: "1m",
@@ -829,9 +1288,7 @@ const ENGLISH_UNIT_4_DATA = {
           ansTamil: "அறிக்கையின்படி என்ற பொருளில் 'According to' பயன்படுகிறது."
         },
 
-        // -------------------------------------------------------------
-        // PUBLIC EXAM HIGH-FREQUENCY 2-MARK COMBINATIONS
-        // -------------------------------------------------------------
+        // Sentence Combinations (Unless, Not only...but also, So...that)
         {
           id: "eng4_4_3",
           type: "2m",
@@ -871,6 +1328,127 @@ const ENGLISH_UNIT_4_DATA = {
           qTamil: "'So...that' பயன்படுத்தி வாக்கியங்களை இணைக்க:",
           ans: "<b>The attic stairs were so creaky that we could not climb quietly.</b><br><small style='color:#64748b;'>Rule: Replace 'very' with 'so', add 'that' and join the result clause.</small>",
           ansTamil: "பரணின் படிக்கட்டுகள் மிகவும் நெளிந்து சத்தமிட்டதால் எங்களால் சத்தமில்லாமல் ஏற முடியவில்லை."
+        }
+      ]
+    },
+
+    // =========================================================================
+    // PART 5: UNIT 4 PUBLIC EXAM REVISION TEST (10 HIGH-YIELD MCQS)
+    // =========================================================================
+    {
+      id: "eng4_sec5",
+      title: "Part 5: Unit 4 Public Exam Revision Test",
+      author: "10 MCQs — 10 Marks Revision Quiz",
+      questions: [
+        {
+          id: "eng4_5_rev_1",
+          type: "1m",
+          mark: "1 Mark (Prose)",
+          examTag: "Public Exam Quiz",
+          q: "1. Who is the author of 'The Attic'?",
+          qTamil: "'தி அட்டிக்' கதையின் ஆசிரியர் யார்?",
+          options: ["A. Satyajit Ray", "B. R.K. Narayan", "C. Matsuo Basho", "D. Aesop"],
+          ans: "<b>A. Satyajit Ray</b>",
+          ansTamil: "சத்யஜித் ரே (Satyajit Ray) புகழ்பெற்ற எழுத்தாளர் மற்றும் திரைப்பட மேதை."
+        },
+        {
+          id: "eng4_5_rev_2",
+          type: "1m",
+          mark: "1 Mark (Prose)",
+          examTag: "Public Exam Quiz",
+          q: "2. How long ago had Aditya hidden the medal in the attic?",
+          qTamil: "எத்தனை ஆண்டுகளுக்கு முன்பு ஆதித்யா பதக்கத்தை பரணில் மறைத்து வைத்தார்?",
+          options: ["A. 10 years", "B. 15 years", "C. 29 years", "D. 20 years"],
+          ans: "<b>C. 29 years</b>",
+          ansTamil: "29 ஆண்டுகளுக்கு முன்பு ஆதித்யா பதக்கத்தை மறைத்து வைத்தார்."
+        },
+        {
+          id: "eng4_5_rev_3",
+          type: "1m",
+          mark: "1 Mark (Prose)",
+          examTag: "Public Exam Quiz",
+          q: "3. Who refused to accept the 150 rupees offered by Aditya?",
+          qTamil: "ஆதித்யா வழங்கிய பணத்தை ஏற்க மறுத்தது யார்?",
+          options: ["A. Aditya", "B. Sanyal", "C. Jogesh", "D. Nagen"],
+          ans: "<b>B. Sanyal</b>",
+          ansTamil: "சுயமரியாதை மிக்க சசாங்க சன்யால் பணத்தை ஏற்க மறுத்தார்."
+        },
+        {
+          id: "eng4_5_rev_4",
+          type: "1m",
+          mark: "1 Mark (Poem)",
+          examTag: "Public Exam Quiz",
+          q: "4. Who is the main character who suffered in 'The Ant and the Cricket'?",
+          qTamil: "'எறும்பும் வெட்டுக்கிளியும்' கவிதையில் துன்புறும் முதன்மைக் கதாபாத்திரம் எது?",
+          options: ["A. The farmer", "B. The governor", "C. The cricket", "D. The mother"],
+          ans: "<b>C. The cricket</b>",
+          ansTamil: "சோம்பேறி வெட்டுக்கிளியே துன்புறும் கதாபாத்திரம் ஆகும்."
+        },
+        {
+          id: "eng4_5_rev_5",
+          type: "1m",
+          mark: "1 Mark (Poem)",
+          examTag: "Public Exam Quiz",
+          q: "5. Which season troubled the cricket with snow and starvation?",
+          qTamil: "வெட்டுக்கிளியைப் பனியாலும் பசியாலும் வாட்டிய பருவம் எது?",
+          options: ["A. Summer", "B. Spring", "C. Winter", "D. Autumn"],
+          ans: "<b>C. Winter</b>",
+          ansTamil: "கொடும் குளிர்காலமே (Winter) வெட்டுக்கிளியை வாட்டியது."
+        },
+        {
+          id: "eng4_5_rev_6",
+          type: "1m",
+          mark: "1 Mark (Poem)",
+          examTag: "Public Exam Quiz",
+          q: "6. What did the ant sarcastically advise the cricket to do during winter?",
+          qTamil: "குளிர்காலத்தில் என்ன செய்யுமாறு எறும்பு வெட்டுக்கிளிக்குக் கூறியது?",
+          options: ["A. Sing", "B. Dance", "C. Sleep", "D. Run"],
+          ans: "<b>B. Dance</b> (Dance the winter away!)",
+          ansTamil: "கோடையில் பாடியது போல் குளிர்காலத்தில் ஆடியே கழித்துவிடு என்று எறும்பு கூறியது."
+        },
+        {
+          id: "eng4_5_rev_7",
+          type: "1m",
+          mark: "1 Mark (Supplementary)",
+          examTag: "Public Exam Quiz",
+          q: "7. What was the name of the province/country in 'The Aged Mother'?",
+          qTamil: "'தி ஏஜ்ட் மதர்' கதையில் வரும் நாட்டின் பெயர் என்ன?",
+          options: ["A. Japan", "B. Shining", "C. China", "D. India"],
+          ans: "<b>B. Shining</b>",
+          ansTamil: "ஷைனிங் (Shining) என்ற சிற்றரசு."
+        },
+        {
+          id: "eng4_5_rev_8",
+          type: "1m",
+          mark: "1 Mark (Supplementary)",
+          examTag: "Public Exam Quiz",
+          q: "8. What did the loving mother drop along the mountain path to guide her son?",
+          qTamil: "மகன் பத்திரமாகத் திரும்புவதற்காகத் தாய் வழியெங்கும் எதைப் போட்டாள்?",
+          options: ["A. Flowers", "B. Stones", "C. Twigs", "D. Leaves"],
+          ans: "<b>C. Twigs</b>",
+          ansTamil: "மரக்கிளைகளை (Twigs) ஒடித்து அடையாளமாகப் போட்டாள்."
+        },
+        {
+          id: "eng4_5_rev_9",
+          type: "1m",
+          mark: "1 Mark (Supplementary)",
+          examTag: "Public Exam Quiz",
+          q: "9. What impossible object did the governor demand the citizens to produce?",
+          qTamil: "செய்து காட்டுமாறு ஆளுநர் பிறப்பித்த சாத்தியமற்ற புதிர் எது?",
+          options: ["A. A silver medal", "B. A rope of ashes", "C. A golden chain", "D. A wooden stick"],
+          ans: "<b>B. A rope of ashes</b>",
+          ansTamil: "சாம்பலால் ஆன கயிறு (A rope of ashes)."
+        },
+        {
+          id: "eng4_5_rev_10",
+          type: "1m",
+          mark: "1 Mark (Grammar)",
+          examTag: "Public Exam Quiz",
+          q: "10. Which of the following words is a Conjunction?",
+          qTamil: "பின்வருவனவற்றுள் எது இணைப்புச்சொல் (Conjunction)?",
+          options: ["A. Beautiful", "B. Because", "C. Quickly", "D. House"],
+          ans: "<b>B. Because</b> (Subordinating conjunction of reason)",
+          ansTamil: "'Because' (ஏனெனில்) என்பது இணைப்புச்சொல் ஆகும்."
         }
       ]
     }

@@ -1,4 +1,4 @@
-﻿// =============================================================================
+// =============================================================================
 // 10th Social Science - Interactive 1-2-3 Map Location Quiz & Revision Engine
 // Tamil Nadu State Board Class 10 Social Science Syllabus (Pure UTF-8)
 // Replaces difficult freehand drag/drop with instant 1-2-3 revision quiz
@@ -959,7 +959,7 @@ const OFFICIAL_WORLD_MAP_BASE64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA
     }).join('\n');
 
     return `
-      <svg id="${cId}_svgMap" viewBox="0 0 972 1140" class="quiz-map-svg" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.12);">
+      <svg id="${cId}_svgMap" viewBox="0 0 972 1140" class="quiz-map-svg" xmlns="http://www.w3.org/2000/svg" style="height:100%; width:auto; max-height:100%; max-width:100%; display:block; margin:0 auto; background:#ffffff; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.12); object-fit:contain;">
         <!-- Official Blank India Map (Survey of India / Official Exam Paper) -->
         <image href="${OFFICIAL_INDIA_MAP_BASE64}" width="972" height="1140" preserveAspectRatio="none" />
         <rect x="2" y="2" width="968" height="1136" fill="none" stroke="#0f172a" stroke-width="2.5" rx="6" />
@@ -1005,7 +1005,7 @@ const OFFICIAL_WORLD_MAP_BASE64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA
     }).join('\n');
 
     return `
-      <svg id="${cId}_svgMap" viewBox="0 0 736 522" class="quiz-map-svg" xmlns="http://www.w3.org/2000/svg" style="background:#ffffff; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.12);">
+      <svg id="${cId}_svgMap" viewBox="0 0 736 522" class="quiz-map-svg" xmlns="http://www.w3.org/2000/svg" style="height:100%; width:auto; max-height:100%; max-width:100%; display:block; margin:0 auto; background:#ffffff; border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.12); object-fit:contain;">
         <!-- Official Blank World Map Image -->
         <image href="${OFFICIAL_WORLD_MAP_BASE64}" width="736" height="522" preserveAspectRatio="none" />
         <rect x="4" y="4" width="728" height="514" fill="none" stroke="#0f172a" stroke-width="2.5" rx="6" />
@@ -1398,7 +1398,7 @@ const OFFICIAL_WORLD_MAP_BASE64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA
       }
 
       container.innerHTML = `
-        <div class="map-quiz-card" style="background:#0b1329; border-radius:14px; padding:10px 12px; color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, sans-serif; max-width:620px; margin:0 auto;">
+        <div class="map-quiz-card" style="background:#0b1329; border-radius:14px; padding:8px 10px; color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, sans-serif; max-width:620px; width:100%; margin:0 auto; box-sizing:border-box;">
 
           <!-- Question Header Banner with Voice Narrator Button -->
           <div style="background:#1e293b; border-radius:10px; padding:8px 12px; margin-bottom:8px; border:1px solid #334155; display:flex; align-items:center; justify-content:space-between; gap:8px;">
@@ -1423,7 +1423,7 @@ const OFFICIAL_WORLD_MAP_BASE64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA
           </div>
 
           <!-- SVG MAP STAGE (Compact & Responsive - Zero Long Scrolling) -->
-          <div class="quiz-map-stage" style="width:100%; height:320px; max-height:320px; overflow:hidden; border-radius:10px; border:2px solid #1e293b; margin-bottom:8px; display:flex; justify-content:center; align-items:center; background:#ffffff;">
+          <div class="quiz-map-stage" style="width:100%; height:400px; max-height:420px; overflow:hidden; border-radius:10px; border:2px solid #1e293b; margin-bottom:8px; display:flex; justify-content:center; align-items:center; background:#ffffff;">
             ${mapHtml}
           </div>
 
@@ -1445,12 +1445,37 @@ const OFFICIAL_WORLD_MAP_BASE64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA
   // Add styles
   const styleEl = document.createElement('style');
   styleEl.innerHTML = `
+    .map-quiz-card, .map-quiz-card * {
+      box-sizing: border-box !important;
+    }
+    .quiz-map-stage {
+      width: 100%;
+      height: 400px;
+      max-height: 420px;
+      overflow: hidden;
+      border-radius: 10px;
+      border: 2px solid #1e293b;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      box-sizing: border-box;
+    }
     .quiz-map-svg {
       height: 100% !important;
       max-height: 100% !important;
       width: auto !important;
       max-width: 100% !important;
       display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    @media (max-width: 600px) {
+      .quiz-map-stage {
+        height: 330px !important;
+        max-height: 340px !important;
+      }
     }
     .pulse-ring {
       animation: pinPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;

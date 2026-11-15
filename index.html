@@ -194,8 +194,8 @@
   <script src="data_social_u14.js?v=20261114_v73"></script>
   <script src="data_social_em_u13.js?v=20261114_v73"></script>
   <script src="data_social_em_u14.js?v=20261114_v73"></script>
-<script src="map_data_and_engine.js?v=20261113_v72"></script>
-<script src="map_practice_evaluator.js?v=20261113_v72"></script>
+<script src="map_data_and_engine.js?v=20261115_v78"></script>
+<script src="map_practice_evaluator.js?v=20261115_v78"></script>
 <style>
   :root {
     --primary: #2563eb;
@@ -12291,16 +12291,19 @@
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261114_v75')
+        navigator.serviceWorker.register('./sw.js?v=20261115_v78')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 
-            // Check for updates in the background after 6 seconds, never blocking boot
+            // Check immediately and after 4 seconds for fresh service worker and caches
+            if (navigator.onLine && reg.update) {
+              reg.update().catch(() => {});
+            }
             setTimeout(() => {
               if (navigator.onLine && reg.update) {
                 reg.update().catch(() => {});
               }
-            }, 6000);
+            }, 4000);
           })
           .catch((err) => {
             console.warn('[PWA] Service Worker registration note:', err);

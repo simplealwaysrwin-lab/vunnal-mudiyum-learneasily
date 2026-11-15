@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 10th Standard English - Unit 4 Study Guide & Question Bank
  * Tamil Nadu Samacheer Kalvi Syllabus
  * 
@@ -6,7 +6,7 @@
  * 1. Prose: The Attic (Satyajit Ray)
  * 2. Poem: The Ant and the Cricket (Adapted from Aesop's Fables)
  * 3. Supplementary: The Aged Mother (Matsuo Basho)
- * 4. Grammar & Vocabulary: Prepositions & Connectors
+ * 4. Grammar & Vocabulary: Conjunctions (Connectors), Nominalisation & Prepositions
  */
 
 const ENGLISH_UNIT_4_DATA = {
@@ -79,7 +79,7 @@ const ENGLISH_UNIT_4_DATA = {
 
     {
       id: "story_poem_u4",
-      title: "🐜 The Ant and the Cricket (எறுமமும் வெட்டுக்கிளியும்)",
+      title: "🐜 The Ant and the Cricket (எறும்பும் வெட்டுக்கிளியும்)",
       titleEn: "The Ant and the Cricket",
       author: "ஈசாப் நீதிக்கதைகள் தழுவல் (Adapted from Aesop's Fables)",
       type: "செய்யுள் (Poem)",
@@ -300,15 +300,492 @@ const ENGLISH_UNIT_4_DATA = {
           qTamil: "'சாம்பலால் ஆன கயிறு' செய்து காட்டுமாறு ஆளுநர் கூறிய புதிருக்குத் தாய் எவ்வாறு தீர்வு கூறினாள்?",
           ans: "The wise mother advised her son to twist a heavy rope of dry straw, stretch it on a row of flat stones on a windless night, and burn it to ashes. The rope retained its woven form even as ash!",
           ansTamil: "வைக்கோலால் முறுக்கப்பட்ட கயிற்றைத் தட்டையான கற்கள் மீது வைத்து, காற்றில்லாத இரவில் எரித்தால் கயிறு சாம்பலான பின்னரும் அதன் முறுக்கு வடிவம் மாறாமல் இருக்கும் என்றாள்."
+        },
+        {
+          id: "eng4_3_4",
+          type: "8m",
+          mark: "8 Marks",
+          isImportant: true,
+          q: "Narrate the touching story of 'The Aged Mother' highlighting maternal devotion and the triumph of wisdom over tyranny.",
+          qTamil: "'தி ஏஜ்ட் மதர்' கதையில் தாயின் தன்னலமற்ற பாசத்தையும், கொடுங்கோல் ஆளுநரின் ஆணையை முறியடித்த முதியோரின் ஞானத்தையும் விளக்குக.",
+          ans: `<div style="line-height:1.6;">
+            <b>Synopsis:</b>
+            <ul style="margin:4px 0 10px 20px; font-weight:600; color:#0369a1;">
+              <li>The Barbaric Decree of the Despot</li>
+              <li>Journey to Obatsuyama (The Mountain of Abandoning Aged)</li>
+              <li>The Mother's Unconditional Love (Twigs on the Trail)</li>
+              <li>The Hidden Secret and the Governor's Riddles</li>
+              <li>Abolition of the Law: 'With the crown of snow, there cometh wisdom!'</li>
+            </ul>
+            <p><b>The Cruel Decree:</b> In the province of Shinano, a cowardly despot feared the infirmities of old age and decreed that all elderly citizens should be immediately put to death. A poor farmer deeply loved his aged, widowed mother. With a heavy heart, he carried her up Mount Obatsuyama to leave her to die.</p>
+            <p><b>Maternal Devotion:</b> Even facing abandonment, the mother thought only of her son's safety. As they ascended, she snapped twigs from overhanging bushes and dropped them along the path so her son would not lose his way returning home.</p>
+            <p><b>The Return & Shelter:</b> Moved by her boundless love, the son declared he would not abandon her. He brought her back under cover of darkness and hid her in a secret closet under the kitchen floor.</p>
+            <p><b>Solving the Impossible Riddles:</b> Later, the governor demanded an impossible feat: to present a 'rope of ashes'. Guided by his mother's wisdom, the son burned a twisted straw rope on flat stones on a windless night, producing a perfect rope of ash. When challenged again to make a silk drum that played without being beaten, the mother placed a bumblebee inside the drum.</p>
+            <p><b>Abolition of Tyranny:</b> Astonished, the governor demanded to know the source of such intellect. The son bravely confessed the truth. Realizing that the kingdom needed the wisdom of the elders alongside the strength of youth, the governor abolished the barbaric law, proclaiming: <i>'With the crown of snow, there cometh wisdom!'</i></p>
+          </div>`,
+          ansTamil: "இக்கதை தாயின் தியாகத்தையும், முதியவர்களின் அனுபவ அறிவே சமுதாயத்தின் மெய்யான வழிகாட்டி என்பதையும் உணர்த்துகிறது."
         }
       ]
     },
 
     {
       id: "eng4_sec4",
-      title: "Part 4: Grammar & Structural Usage — Prepositions & Connectors",
-      author: "Class 10 Board Grammar",
+      title: "Part 4: Grammar & Structural Usage — Conjunctions (Connectors) & Nominalisation",
+      author: "Class 10 Samacheer Kalvi Board Grammar",
       questions: [
+        // -------------------------------------------------------------
+        // GRAMMAR RULES & MASTER TABLES
+        // -------------------------------------------------------------
+        {
+          id: "eng4_4_rule1",
+          type: "1m",
+          mark: "Master Grammar Rule & Table",
+          isImportant: true,
+          q: "What are Conjunctions (Connectors / Linkers)? Explain their types and usage with examples.",
+          qTamil: "இணைப்புச்சொற்கள் (Conjunctions / Connectors) என்றால் என்ன? அவற்றின் வகைகள் மற்றும் விதிகளை அட்டவணையுடன் விளக்குக:",
+          ans: `<div style="line-height:1.6; font-size:13px;">
+            <p><b>Conjunctions (Connectors):</b> Words used to connect words, phrases, clauses, or sentences. They establish relationships like cause, contrast, condition, purpose, and sequence.</p>
+            <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:12.5px;">
+              <tr style="background:#eff6ff; color:#1e40af;">
+                <th style="padding:6px; border:1px solid #94a3b8; width:22%;">Type</th>
+                <th style="padding:6px; border:1px solid #94a3b8; width:28%;">Connectors</th>
+                <th style="padding:6px; border:1px solid #94a3b8; width:50%;">Function & Example</th>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1;"><b>1. Coordinating<br>(FANBOYS)</b></td>
+                <td style="padding:6px; border:1px solid #cbd5e1;"><b>F</b>or, <b>A</b>nd, <b>N</b>or, <b>B</b>ut, <b>O</b>r, <b>Y</b>et, <b>S</b>o</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Connects words or independent clauses of equal grammatical rank.<br><i>Ex:</i> He was poor, <b>yet</b> he was contented.</td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1;"><b>2. Subordinating</b></td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Because, Since, As, Though, Although, If, Unless, While, Until, As soon as, In case</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Connects a dependent clause to an independent clause.<br><i>Ex:</i> <b>Though</b> he is ninety years old, he is active.<br><i>Ex:</i> Call me <b>in case</b> you need help.</td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1;"><b>3. Correlative<br>(Paired Connectors)</b></td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Both...and<br>Not only...but also<br>Either...or<br>Neither...nor<br>No sooner...than</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Always used in pairs with parallel grammatical structures.<br><i>Ex:</i> Jaya teaches <b>not only</b> English <b>but also</b> Science.<br><i>Ex:</i> <b>No sooner</b> did I arrive <b>than</b> it rained.</td>
+              </tr>
+            </table>
+          </div>`,
+          ansTamil: "இணைப்புச்சொற்கள் இரு வாக்கியங்களை இணைக்க உதவுகின்றன. Coordinating (சமமானவை), Subordinating (சார்புடையவை), Correlative (இணைந்து வருபவை) என 3 வகைப்படும்."
+        },
+
+        {
+          id: "eng4_4_rule2",
+          type: "1m",
+          mark: "Master Vocabulary Rule & Table",
+          isImportant: true,
+          q: "What is Nominalisation? Explain how Verbs and Adjectives are converted into Nouns with suffixes.",
+          qTamil: "பெயர்ச்சொல்லாக்குதல் (Nominalisation) என்றால் என்ன? வினைச்சொல் மற்றும் பெயரடையைப் பெயர்ச்சொல்லாக மாற்றும் விதிகளை விளக்குக:",
+          ans: `<div style="line-height:1.6; font-size:13px;">
+            <p><b>Nominalisation:</b> The grammatical process of converting <b>verbs</b> or <b>adjectives</b> into <b>nouns</b> (or noun phrases). It gives formal precision and conciseness to English sentences.</p>
+            <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:12.5px;">
+              <tr style="background:#fef3c7; color:#92400e;">
+                <th style="padding:6px; border:1px solid #f59e0b; width:25%;">Suffix</th>
+                <th style="padding:6px; border:1px solid #f59e0b; width:35%;">Verb / Adjective (Root)</th>
+                <th style="padding:6px; border:1px solid #f59e0b; width:40%;">Nominalised Noun Form</th>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #fde68a;"><b>-ment</b></td>
+                <td style="padding:6px; border:1px solid #fde68a;">appoint, punish, develop</td>
+                <td style="padding:6px; border:1px solid #fde68a;"><b>appointment, punishment, development</b></td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #fde68a;"><b>-tion / -sion</b></td>
+                <td style="padding:6px; border:1px solid #fde68a;">inform, conclude, decide, predict</td>
+                <td style="padding:6px; border:1px solid #fde68a;"><b>information, conclusion, decision, prediction</b></td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #fde68a;"><b>-al / -ure</b></td>
+                <td style="padding:6px; border:1px solid #fde68a;">arrive, depart, fail, refuse</td>
+                <td style="padding:6px; border:1px solid #fde68a;"><b>arrival, departure, failure, refusal</b></td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #fde68a;"><b>-ness / -ity</b></td>
+                <td style="padding:6px; border:1px solid #fde68a;">happy, kind, cruel, able</td>
+                <td style="padding:6px; border:1px solid #fde68a;"><b>happiness, kindness, cruelty, ability</b></td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #fde68a;"><b>-th / -dom / -ence</b></td>
+                <td style="padding:6px; border:1px solid #fde68a;">deep, wise, free, prefer</td>
+                <td style="padding:6px; border:1px solid #fde68a;"><b>depth, wisdom, freedom, preference</b></td>
+              </tr>
+            </table>
+          </div>`,
+          ansTamil: "வினைச்சொல் (Verb) அல்லது பெயரடைக்கு (Adjective) பின்னொட்டு (Suffix) சேர்த்து பெயர்ச்சொல்லாக (Noun) மாற்றுவதே Nominalisation ஆகும்."
+        },
+
+        // -------------------------------------------------------------
+        // PUBLIC EXAM CENTUM GUIDE & DIFFICULT PROBLEMS GUIDANCE
+        // -------------------------------------------------------------
+        {
+          id: "eng4_4_centum_guide",
+          type: "1m",
+          mark: "Public Exam Strategy",
+          isImportant: true,
+          q: "How to score full marks (Centum 100/100) in English Unit 4 in the 10th Public Exam?",
+          qTamil: "10-ஆம் வகுப்பு ஆங்கிலப் பொதுத்தேர்வில் அலகு 4-இல் முழு மதிப்பெண் பெறுவது எப்படி?",
+          ans: `<div style="line-height:1.6; font-size:13px;">
+            <p style="font-weight:800; color:#15803d; margin-bottom:6px;">🎯 Golden Blueprint to Score 100/100 in Unit 4:</p>
+            <ol style="margin-left:18px; padding-left:0;">
+              <li><b>1-Mark Grammar (Q1-14):</b> Master connectors (<i>though, unless, in case, nevertheless, as soon as</i>) and nominalised noun suffixes. Practice all 5 book-back exercises.</li>
+              <li><b>2-Mark Sentence Combining (Q15-28):</b> Remember the comma rule! When a sentence starts with a subordinating connector like <i>Though / Although / As soon as</i>, put a comma between the clauses: <i>"Though he came late, he did not miss the bus."</i></li>
+              <li><b>Never use double conjunctions:</b> Never write <i>"Though he was poor, BUT he was honest."</i> (Wrong!). Write: <i>"Though he was poor, he was honest."</i> OR <i>"He was poor, but he was honest."</i></li>
+              <li><b>5-Mark Prose Paragraph ('The Attic'):</b> Structure with: Title, Author (Satyajit Ray), Synopsis (Encounter at tea shop, Search in attic, Confession to Sanyal), and Moral quote.</li>
+              <li><b>5-Mark Poem Appreciation ('The Ant and the Cricket'):</b> Mention Rhyme Scheme (aabbccdd), Figures of Speech (Personification, Metaphor), and Moral.</li>
+              <li><b>8-Mark Supplementary ('The Aged Mother'):</b> Write coherent story points in chronological order with side headings.</li>
+            </ol>
+          </div>`,
+          ansTamil: "இணைப்புச்சொற்கள், பெயர்ச்சொல்லாக்கம், இரு வாக்கியங்களை இணைத்தல் மற்றும் பத்தி வினாக்களில் தலைப்பு, எழுத்தாளர் பெயர், நீதி ஆகியவற்றை முறையாக எழுதினால் முழு மதிப்பெண் பெறலாம்!"
+        },
+
+        {
+          id: "eng4_4_diff_1",
+          type: "2m",
+          mark: "Difficult Problem Guide",
+          isImportant: true,
+          q: "Guidance on Difficult Exercise: How to combine sentences using 'No sooner...than' vs 'As soon as'?",
+          qTamil: "'No sooner...than' மற்றும் 'As soon as' பயன்படுத்தி வாக்கியங்களை இணைப்பது எப்படி? (இலக்கண விதி & வழிமுறை):",
+          ans: `<div style="line-height:1.6; font-size:13px;">
+            <b>Golden Inversion Rule:</b>
+            <div style="background:#f1f5f9; padding:8px 12px; border-radius:6px; margin:6px 0; font-family:monospace;">
+              Formula 1: <b>As soon as</b> + Subject + Past Verb, Subject + Past Verb.<br>
+              Formula 2: <b>No sooner did</b> + Subject + <b>V1 (Base Verb)</b> + <b>than</b> + Subject + Past Verb.
+            </div>
+            <p><b>Example Problem:</b> <i>"Sita saw a snake. At once she ran away."</i></p>
+            <ul>
+              <li>Using 'As soon as': <b>As soon as Sita saw a snake, she ran away.</b></li>
+              <li>Using 'No sooner...than': <b>No sooner did Sita see a snake than she ran away.</b> <i>(Note: 'did + see', NOT 'did saw'; and use 'than', NEVER 'when')</i></li>
+            </ul>
+          </div>`,
+          ansTamil: "No sooner did வரும் போது வினைச்சொல் V1 (see) ஆக மாற வேண்டும்; நடுவில் 'than' மட்டுமே வரவேண்டும்; 'when' வரக்கூடாது!"
+        },
+
+        {
+          id: "eng4_4_diff_2",
+          type: "2m",
+          mark: "Difficult Problem Guide",
+          isImportant: true,
+          q: "Guidance on Difficult Exercise: How to rewrite sentences by Nominalising the Verb without changing meaning?",
+          qTamil: "வினைச்சொல்லைப் பெயர்ச்சொல்லாக (Nominalisation) மாற்றி வாக்கியத்தை மாற்றியமைக்கும் முறை என்ன?",
+          ans: `<div style="line-height:1.6; font-size:13px;">
+            <b>3-Step Transformation Method:</b>
+            <ol style="margin-left:18px; padding-left:0;">
+              <li>Identify the main finite verb in the sentence.</li>
+              <li>Convert that verb into its corresponding noun form (e.g. <i>decided ➔ decision, concluded ➔ conclusion, failed ➔ failure</i>).</li>
+              <li>Add a possessive pronoun or linking preposition (<i>Their decision was... / Her failure was due to...</i>).</li>
+            </ol>
+            <p><b>Example:</b> <i>"The committee <u>decided</u> to build a new bridge."</i><br>
+            ➔ <b>The committee's <u>decision</u> was to build a new bridge.</b></p>
+            <p><b>Example:</b> <i>"She <u>failed</u> because she was careless."</i><br>
+            ➔ <b>Her <u>failure</u> was due to carelessness.</b></p>
+          </div>`,
+          ansTamil: "வினைச்சொல்லின் பெயர்ச்சொல் வடிவத்தைக் கண்டறிந்து (decided -> decision), உரிமையாளர் பெயர் அல்லது வினையுடன் இணைத்து வாக்கியத்தை மாற்றியமைக்க வேண்டும்."
+        },
+
+        // -------------------------------------------------------------
+        // BOOK-BACK EXERCISE A: COMPLETE WITH RIGHT CONNECTOR IN BRACKETS
+        // -------------------------------------------------------------
+        {
+          id: "eng4_4_ex_a1",
+          type: "1m",
+          mark: "1 Mark (Textbook Exercise A)",
+          examTag: "Book Back",
+          q: "Choose the right connector given in brackets:<br>Call me ________ you need money.",
+          qTamil: "சரியான இணைப்புச்சொல்லைத் தேர்வு செய்க (பணம் தேவைப்படும் பட்சத்தில் என்னை அழை):",
+          options: ["a) so that", "b) in order that", "c) in case", "d) although"],
+          ans: "<b>c) in case</b>",
+          ansTamil: "தேவைப்படும் சூழ்நிலையைக் குறிக்க 'in case' (ஒருவேளை / தேவைப்படின்) பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_ex_a2",
+          type: "1m",
+          mark: "1 Mark (Textbook Exercise A)",
+          examTag: "Book Back",
+          q: "Choose the right connector given in brackets:<br>I forgot ________ I had to meet the Principal.",
+          qTamil: "சரியான இணைப்புச்சொல்லைத் தேர்வு செய்க (முதல்வரை சந்திக்க வேண்டும் என்பதை நான் மறந்தேன்):",
+          options: ["a) whether", "b) that", "c) if", "d) unless"],
+          ans: "<b>b) that</b>",
+          ansTamil: "முன் நிகழ்ந்த உண்மையை நினைவுகூர 'that' (என்ற விஷயம்) பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_ex_a3",
+          type: "1m",
+          mark: "1 Mark (Textbook Exercise A)",
+          examTag: "Book Back",
+          q: "Choose the right connector given in brackets:<br>________ he is ninety years old, he is in the pink of health.",
+          qTamil: "சரியான இணைப்புச்சொல்லைத் தேர்வு செய்க (அவருக்கு 90 வயதாக இருந்தாலும், அவர் ஆரோக்கியமாக இருக்கிறார்):",
+          options: ["a) When", "b) Since", "c) Though", "d) Because"],
+          ans: "<b>c) Though</b>",
+          ansTamil: "முரண்பட்ட நிலையை வெளிப்படுத்த 'Though' (இருந்தபோதிலும்) பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_ex_a4",
+          type: "1m",
+          mark: "1 Mark (Textbook Exercise A)",
+          examTag: "Book Back",
+          q: "Choose the right connector given in brackets:<br>It is raining. Take an umbrella ________ you will get drenched.",
+          qTamil: "சரியான இணைப்புச்சொல்லைத் தேர்வு செய்க (குடை எடுத்துச் செல் இல்லையெனில் நனைந்துவிடுவாய்):",
+          options: ["a) or else", "b) and", "c) but", "d) since"],
+          ans: "<b>a) or else</b>",
+          ansTamil: "மாற்று விளைவு அல்லது எச்சரிக்கையைக் குறிக்க 'or else' (இல்லையெனில்) பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_ex_a5",
+          type: "1m",
+          mark: "1 Mark (Textbook Exercise A)",
+          examTag: "Book Back",
+          q: "Choose the right connector given in brackets:<br>They faced many hardships ________ they are always cheerful.",
+          qTamil: "சரியான இணைப்புச்சொல்லைத் தேர்வு செய்க (பல இன்னல்களை எதிர்கொண்ட போதிலும் அவர்கள் எப்போதும் மகிழ்ச்சியாக உள்ளனர்):",
+          options: ["a) although", "b) nevertheless", "c) otherwise", "d) because"],
+          ans: "<b>b) nevertheless</b>",
+          ansTamil: "இருப்பினும் / ஆயினும் என்ற பொருளைத் தரும் 'nevertheless' என்ற Connector பயன்படுகிறது."
+        },
+
+        // -------------------------------------------------------------
+        // BOOK-BACK EXERCISE B: CORRELATIVE CONJUNCTIONS
+        // -------------------------------------------------------------
+        {
+          id: "eng4_4_ex_b1",
+          type: "1m",
+          mark: "1 Mark (Correlative Pair)",
+          examTag: "Book Back",
+          q: "Fill in the blank with the connector that goes with the underlined word:<br><u>Both</u> the minister ________ the officers visited the affected areas.",
+          qTamil: "'Both' உடன் இணையாக வரும் சரியான Correlative Conjunction எது?",
+          options: ["a) as well as", "b) and", "c) or", "d) but"],
+          ans: "<b>b) and</b> (Correlative pair: Both ... and)",
+          ansTamil: "'Both' என்ற சொல்லுடன் எப்போதுமே 'and' மட்டுமே இணையாக வரும்."
+        },
+        {
+          id: "eng4_4_ex_b2",
+          type: "1m",
+          mark: "1 Mark (Correlative Pair)",
+          examTag: "Book Back",
+          q: "Fill in the blank with the connector that goes with the underlined word:<br>Jaya teaches <u>not only</u> English ________ Science.",
+          qTamil: "'not only' உடன் இணையாக வரும் சரியான Correlative Conjunction எது?",
+          options: ["a) but also", "b) and also", "c) along with", "d) nor"],
+          ans: "<b>a) but also</b> (Correlative pair: Not only ... but also)",
+          ansTamil: "'Not only' என்ற சொல்லுடன் எப்போதுமே 'but also' மட்டுமே இணையாக வரும்."
+        },
+        {
+          id: "eng4_4_ex_b3",
+          type: "1m",
+          mark: "1 Mark (Correlative Pair)",
+          examTag: "Book Back",
+          q: "Fill in the blank with the connector that goes with the underlined word:<br><u>Either</u> Raghu ________ Bala will have to buy vegetables from the market.",
+          qTamil: "'Either' உடன் இணையாக வரும் சரியான Correlative Conjunction எது?",
+          options: ["a) nor", "b) or", "c) and", "d) but"],
+          ans: "<b>b) or</b> (Correlative pair: Either ... or)",
+          ansTamil: "'Either' என்ற சொல்லுடன் தெரிவைக் குறிக்க 'or' மட்டுமே இணையாக வரும்."
+        },
+        {
+          id: "eng4_4_ex_b4",
+          type: "1m",
+          mark: "1 Mark (Correlative Pair)",
+          examTag: "Book Back",
+          q: "Fill in the blank with the connector that goes with the underlined word:<br><u>No sooner</u> did I enter the house ________ it started drizzling.",
+          qTamil: "'No sooner' உடன் இணையாக வரும் சரியான Correlative Conjunction எது?",
+          options: ["a) when", "b) then", "c) than", "d) before"],
+          ans: "<b>c) than</b> (Correlative pair: No sooner ... than)",
+          ansTamil: "'No sooner' வரும்போது 'than' மட்டுமே வரவேண்டும்; 'when' வரக்கூடாது!"
+        },
+
+        // -------------------------------------------------------------
+        // BOOK-BACK EXERCISE C: COMBINE SENTENCES USING CONNECTORS
+        // -------------------------------------------------------------
+        {
+          id: "eng4_4_ex_c1",
+          type: "2m",
+          mark: "2 Marks (Textbook Exercise C)",
+          examYear: "2022",
+          examTag: "Public Exam",
+          q: "Combine the pair of sentences using an appropriate connector:<br><b>We came late. We did not miss the train.</b>",
+          qTamil: "பொருத்தமான இணைப்புச்சொல் கொண்டு வாக்கியங்களை இணைக்க (நாங்கள் தாமதமாக வந்தோம். நாங்கள் ரயிலைத் தவறவிடவில்லை):",
+          ans: "<b>Though we came late, we did not miss the train.</b><br>(Or: We came late, yet we did not miss the train.)",
+          ansTamil: "Though (இருந்தபோதிலும்) அல்லது yet கொண்டு இணைக்கலாம்."
+        },
+        {
+          id: "eng4_4_ex_c2",
+          type: "2m",
+          mark: "2 Marks (Textbook Exercise C)",
+          examTag: "Book Back",
+          q: "Combine the pair of sentences using an appropriate connector:<br><b>They checked the packet twice. Then they sealed it.</b>",
+          qTamil: "பொருத்தமான இணைப்புச்சொல் கொண்டு வாக்கியங்களை இணைக்க:",
+          ans: "<b>After checking the packet twice, they sealed it.</b><br>(Or: They checked the packet twice before they sealed it.)",
+          ansTamil: "இருமுறை சரிபார்த்த பிறகு அவர்கள் பார்சலை மூடி முத்திரையிட்டனர்."
+        },
+        {
+          id: "eng4_4_ex_c3",
+          type: "2m",
+          mark: "2 Marks (Textbook Exercise C)",
+          examYear: "2024",
+          examTag: "Public Exam",
+          q: "Combine the pair of sentences using an appropriate connector:<br><b>Sita saw a snake. At once she ran away.</b>",
+          qTamil: "பொருத்தமான இணைப்புச்சொல் கொண்டு வாக்கியங்களை இணைக்க:",
+          ans: "<b>As soon as Sita saw a snake, she ran away.</b><br>(Or: No sooner did Sita see a snake than she ran away.)",
+          ansTamil: "பாம்பைப் பார்த்தவுடன் சீதா அங்கிருந்து ஓடினாள்."
+        },
+        {
+          id: "eng4_4_ex_c4",
+          type: "2m",
+          mark: "2 Marks (Textbook Exercise C)",
+          examTag: "Book Back",
+          q: "Combine the pair of sentences using an appropriate connector:<br><b>Robert completed the project. He submitted it to the teacher.</b>",
+          qTamil: "பொருத்தமான இணைப்புச்சொல் கொண்டு வாக்கியங்களை இணைக்க:",
+          ans: "<b>Having completed the project, Robert submitted it to the teacher.</b><br>(Or: Robert completed the project and submitted it to the teacher.)",
+          ansTamil: "ப்ராஜெக்டை முடித்ததும் ராபர்ட் அதை ஆசிரியரிடம் ஒப்படைத்தான்."
+        },
+        {
+          id: "eng4_4_ex_c5",
+          type: "2m",
+          mark: "2 Marks (Textbook Exercise C)",
+          examTag: "Book Back",
+          q: "Combine the pair of sentences using an appropriate connector:<br><b>Yusuf was running high temperature. He could not take part in the competition.</b>",
+          qTamil: "பொருத்தமான இணைப்புச்சொல் கொண்டு வாக்கியங்களை இணைக்க:",
+          ans: "<b>Because Yusuf was running a high temperature, he could not take part in the competition.</b><br>(Or: Yusuf was running a high temperature, so he could not take part in the competition.)",
+          ansTamil: "யூசுப்புக்கு அதிக காய்ச்சல் இருந்ததால் அவனால் போட்டியில் பங்கேற்க முடியவில்லை."
+        },
+
+        // -------------------------------------------------------------
+        // BOOK-BACK EXERCISE D: TICK THE CORRECT LINKER
+        // -------------------------------------------------------------
+        {
+          id: "eng4_4_ex_d1",
+          type: "1m",
+          mark: "1 Mark (Textbook Exercise D)",
+          examTag: "Book Back",
+          q: "Tick the correct linker:<br>________ he was honest, he was punished. (Though / But)",
+          qTamil: "சரியான Linker-ஐத் தேர்வு செய்க:",
+          options: ["a) Though", "b) But"],
+          ans: "<b>a) Though</b>",
+          ansTamil: "வாக்கியத்தின் தொடக்கத்தில் முரண்பாட்டைக் குறிக்க 'Though' பொருந்தும்."
+        },
+        {
+          id: "eng4_4_ex_d2",
+          type: "1m",
+          mark: "1 Mark (Textbook Exercise D)",
+          examTag: "Book Back",
+          q: "Tick the correct linker:<br>Walk carefully ________ you will fall down. (unless / otherwise)",
+          qTamil: "சரியான Linker-ஐத் தேர்வு செய்க (கவனமாக நட, இல்லையெனில் கீழே விழுந்துவிடுவாய்):",
+          options: ["a) unless", "b) otherwise"],
+          ans: "<b>b) otherwise</b>",
+          ansTamil: "எச்சரிக்கை மற்றும் மாற்று விளைவைக் குறிக்க 'otherwise' (இல்லாவிட்டால்) பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_ex_d3",
+          type: "1m",
+          mark: "1 Mark (Textbook Exercise D)",
+          examTag: "Book Back",
+          q: "Tick the correct linker:<br>My mother called me ________ I was playing football. (or / while)",
+          qTamil: "சரியான Linker-ஐத் தேர்வு செய்க (நான் கால்பந்து விளையாடிக் கொண்டிருந்தபோது அம்மா அழைத்தார்):",
+          options: ["a) or", "b) while"],
+          ans: "<b>b) while</b>",
+          ansTamil: "தொடர் நிகழ்வின் போது என்ற கால உணர்வைக் குறிக்க 'while' பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_ex_d4",
+          type: "1m",
+          mark: "1 Mark (Textbook Exercise D)",
+          examTag: "Book Back",
+          q: "Tick the correct linker:<br>My salary is low ________ I find the work interesting. (nevertheless / similarly)",
+          qTamil: "சரியான Linker-ஐத் தேர்வு செய்க (என் சம்பளம் குறைவு என்றாலும் நான் வேலையை விரும்புகிறேன்):",
+          options: ["a) nevertheless", "b) similarly"],
+          ans: "<b>a) nevertheless</b>",
+          ansTamil: "இருப்பினும் / ஆயினும் என்ற எதிர்நிலையைக் காட்ட 'nevertheless' பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_ex_d5",
+          type: "1m",
+          mark: "1 Mark (Textbook Exercise D)",
+          examTag: "Book Back",
+          q: "Tick the correct linker:<br>The passengers rushed to board the bus ________ it arrived. (as soon as / as long as)",
+          qTamil: "சரியான Linker-ஐத் தேர்வு செய்க (பேருந்து வந்த உடனே பயணிகள் ஏற முண்டியடித்தனர்):",
+          options: ["a) as soon as", "b) as long as"],
+          ans: "<b>a) as soon as</b>",
+          ansTamil: "உடனடி நிகழ்வைக் குறிக்க 'as soon as' (வந்த உடனே) பயன்படுகிறது."
+        },
+
+        // -------------------------------------------------------------
+        // NOMINALISATION TEXTBOOK EXERCISES
+        // -------------------------------------------------------------
+        {
+          id: "eng4_4_nom_1",
+          type: "1m",
+          mark: "Nominalisation Exercise",
+          examTag: "Book Back",
+          q: "Fill in the blanks with the nominalised noun form of the words in brackets:<br>She gave ________ (prefer) to book a ticket that way. First, she collected ________ (inform) about the ________ (arrive) and ________ (depart) of trains.",
+          qTamil: "அடைப்புக்குறிக்குள் உள்ள சொற்களை பெயர்ச்சொல்லாக்கம் (Nominalisation) செய்து நிரப்புக:",
+          options: [
+            "a) preference, information, arrival, departure",
+            "b) preferential, inform, arriving, departing",
+            "c) preferring, informant, arrived, departed",
+            "d) preferred, information, arriving, departure"
+          ],
+          ans: "<b>a) preference, information, arrival, departure</b>",
+          ansTamil: "prefer ➔ preference, inform ➔ information, arrive ➔ arrival, depart ➔ departure."
+        },
+        {
+          id: "eng4_4_nom_2",
+          type: "1m",
+          mark: "Nominalisation Exercise",
+          examTag: "Book Back",
+          q: "Fill in the blank with the nominalised noun form of the word in brackets:<br>Androcles was captured by his master. He had to suffer all kinds of ________ (punish).",
+          qTamil: "அடைப்புக்குறிக்குள் உள்ள சொல்லின் பெயர்ச்சொல் வடிவத்தைக் கொண்டு நிரப்புக:",
+          options: ["a) punishing", "b) punishment", "c) punishable", "d) punished"],
+          ans: "<b>b) punishment</b>",
+          ansTamil: "punish (தண்டித்தல்) என்ற வினையின் பெயர்ச்சொல் வடிவம் 'punishment' (தண்டனை) ஆகும்."
+        },
+        {
+          id: "eng4_4_nom_3",
+          type: "1m",
+          mark: "Nominalisation Exercise",
+          examTag: "Book Back",
+          q: "Fill in the blanks with the nominalised noun forms:<br>At last, he was thrown to a lion which was in great ________ (hungry). It had been kept in an ________ (enclose).",
+          qTamil: "அடைப்புக்குறிக்குள் உள்ள சொற்களை பெயர்ச்சொல்லாக்கம் செய்து நிரப்புக:",
+          options: [
+            "a) hungriness, enclosing",
+            "b) hunger, enclosure",
+            "c) hungered, enclosed",
+            "d) hungrily, closure"
+          ],
+          ans: "<b>b) hunger, enclosure</b>",
+          ansTamil: "hungry (பசியுள்ள) ➔ hunger (பசி); enclose (சுற்றி அடைத்தல்) ➔ enclosure (அடைக்கப்பட்ட கூண்டு)."
+        },
+        {
+          id: "eng4_4_nom_4",
+          type: "2m",
+          mark: "2 Marks (Sentence Rewrite)",
+          examTag: "Book Back",
+          q: "Rewrite the following sentence by nominalising the underlined verb:<br><b>We <u>concluded</u> that the meeting should be postponed.</b>",
+          qTamil: "அடிக்கோடிட்ட வினைச்சொல்லைப் பெயர்ச்சொல்லாக (Nominalisation) மாற்றி வாக்கியத்தை மாற்றியமைக்க:",
+          ans: "<b>Our <u>conclusion</u> was that the meeting should be postponed.</b><br><small style='color:#64748b;'>Rule: Verb 'concluded' is transformed into the noun 'conclusion'.</small>",
+          ansTamil: "கூட்டத்தை ஒத்திவைக்க வேண்டும் என்பதே எங்கள் முடிவாக இருந்தது."
+        },
+        {
+          id: "eng4_4_nom_5",
+          type: "2m",
+          mark: "2 Marks (Sentence Rewrite)",
+          examTag: "Book Back",
+          q: "Rewrite the following sentence by nominalising the underlined verb:<br><b>The committee <u>decided</u> to build a new library in the village.</b>",
+          qTamil: "அடிக்கோடிட்ட வினைச்சொல்லைப் பெயர்ச்சொல்லாக (Nominalisation) மாற்றி வாக்கியத்தை மாற்றியமைக்க:",
+          ans: "<b>The committee's <u>decision</u> was to build a new library in the village.</b><br><small style='color:#64748b;'>Rule: Verb 'decided' is transformed into the noun 'decision'.</small>",
+          ansTamil: "கிராமத்தில் புதிய நூலகம் கட்ட வேண்டும் என்பதே குழுவின் முடிவாக இருந்தது."
+        },
+        {
+          id: "eng4_4_nom_6",
+          type: "2m",
+          mark: "2 Marks (Sentence Rewrite)",
+          examTag: "Book Back",
+          q: "Rewrite the following sentence by nominalising the underlined verb:<br><b>She <u>failed</u> because she did not manage her time properly.</b>",
+          qTamil: "அடிக்கோடிட்ட வினைச்சொல்லைப் பெயர்ச்சொல்லாக (Nominalisation) மாற்றி வாக்கியத்தை மாற்றியமைக்க:",
+          ans: "<b>Her <u>failure</u> was due to poor time management.</b><br><small style='color:#64748b;'>Rule: Verb 'failed' is converted into noun 'failure'.</small>",
+          ansTamil: "நேரத்தை முறையாக நிர்வகிக்காததே அவளது தோல்விக்குக் காரணம்."
+        },
+
+        // -------------------------------------------------------------
+        // PREPOSITIONS & PHRASAL PREPOSITIONS
+        // -------------------------------------------------------------
         {
           id: "eng4_4_1",
           type: "1m",
@@ -320,15 +797,41 @@ const ENGLISH_UNIT_4_DATA = {
           ansTamil: "சுவர்ப்பொந்தின் உள்ளே மறைத்து வைக்கப்பட்டிருந்ததால் 'inside' பயன்படுகிறது."
         },
         {
-          id: "eng4_4_2",
+          id: "eng4_4_prep_1",
           type: "1m",
-          mark: "1 Mark (Connector / Linker)",
-          q: "Fill in the blank with an appropriate connector:<br>The cricket was starving ________ he had saved no food in summer.",
-          qTamil: "பொருத்தமான இணைப்புச்சொல் (Connector) கொண்டு நிரப்புக:",
-          options: ["a) although", "b) because", "c) unless", "d) while"],
-          ans: "<b>b) because</b> (expresses the reason/cause)",
-          ansTamil: "காரணத்தை விளக்கும் 'because' (ஏனெனில்) என்ற இணைப்புச்சொல் பொருத்தமானது."
+          mark: "1 Mark (Phrasal Preposition)",
+          examTag: "Public Exam",
+          q: "Fill in the blank with a suitable prepositional phrase:<br>________ his extreme poverty, Sasanka Sanyal maintained his dignity and pride.",
+          qTamil: "பொருத்தமான Prepositional Phrase கொண்டு நிரப்புக (கடுமையான வறுமை இருந்தபோதிலும் சன்யால் தன் சுயமரியாதையைக் காத்துக்கொண்டார்):",
+          options: ["a) In spite of", "b) On account of", "c) In addition to", "d) With reference to"],
+          ans: "<b>a) In spite of</b> (shows contrast)",
+          ansTamil: "இருந்தபோதிலும் என்ற பொருளில் 'In spite of' பயன்படுகிறது."
         },
+        {
+          id: "eng4_4_prep_2",
+          type: "1m",
+          mark: "1 Mark (Phrasal Preposition)",
+          q: "Fill in the blank with a suitable prepositional phrase:<br>The cricket starved in winter ________ his laziness during summer.",
+          qTamil: "பொருத்தமான Prepositional Phrase கொண்டு நிரப்புக (சோம்பேறித்தனத்தின் காரணமாக வெட்டுக்கிளி குளிரில் பசியால் வாடியது):",
+          options: ["a) instead of", "b) because of", "c) in case of", "d) in spite of"],
+          ans: "<b>b) because of</b> (shows cause / reason)",
+          ansTamil: "காரணத்தைக் குறிக்க 'because of' (காரணமாக) பயன்படுகிறது."
+        },
+        {
+          id: "eng4_4_prep_3",
+          type: "1m",
+          mark: "1 Mark (Phrasal Preposition)",
+          examTag: "Public Exam",
+          q: "Fill in the blank with a suitable prepositional phrase:<br>________ the forecast, heavy rains are expected along the coastal districts tomorrow.",
+          qTamil: "வானிலை முன்னறிவிப்பின்படி கடலோர மாவட்டங்களில் கனமழை எதிர்பார்க்கப்படுகிறது:",
+          options: ["a) According to", "b) In spite of", "c) In place of", "d) On behalf of"],
+          ans: "<b>a) According to</b>",
+          ansTamil: "அறிக்கையின்படி என்ற பொருளில் 'According to' பயன்படுகிறது."
+        },
+
+        // -------------------------------------------------------------
+        // PUBLIC EXAM HIGH-FREQUENCY 2-MARK COMBINATIONS
+        // -------------------------------------------------------------
         {
           id: "eng4_4_3",
           type: "2m",
@@ -337,6 +840,37 @@ const ENGLISH_UNIT_4_DATA = {
           qTamil: "'Though / Although' பயன்படுத்தி வாக்கியங்களை இணைக்க:",
           ans: "<b>Though he was poor and frail, he possessed great wisdom.</b><br>(Or: Although he was poor and frail, he possessed great wisdom.)",
           ansTamil: "எதிர்மறைப் பண்புகளை இணைக்கும்போது முன்னால் 'Though' சேர்க்கப்பட்டு கமா கொண்டு இணைக்கப்படும்."
+        },
+        {
+          id: "eng4_4_exam_1",
+          type: "2m",
+          mark: "2 Marks",
+          examYear: "2023",
+          examTag: "Public Exam",
+          q: "Combine the following sentences using 'Unless':<br><i>You work hard. You cannot score high marks in the examination.</i>",
+          qTamil: "'Unless' (இல்லாவிட்டால்) பயன்படுத்தி வாக்கியங்களை இணைக்க:",
+          ans: "<b>Unless you work hard, you cannot score high marks in the examination.</b><br><small style='color:#64748b;'>Rule: 'Unless' expresses a negative condition (meaning 'if not'). Do not use 'not' in the unless clause!</small>",
+          ansTamil: "நீங்கள் கடினமாக உழைக்காவிட்டால், தேர்வில் அதிக மதிப்பெண்கள் பெற முடியாது."
+        },
+        {
+          id: "eng4_4_exam_2",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          q: "Combine the following sentences using 'Not only...but also':<br><i>Aditya confessed his childhood mistake. He also returned the silver medal.</i>",
+          qTamil: "'Not only...but also' பயன்படுத்தி வாக்கியங்களை இணைக்க:",
+          ans: "<b>Aditya not only confessed his childhood mistake but also returned the silver medal.</b><br><small style='color:#64748b;'>Rule: Balance parallel verbs ('confessed' and 'returned').</small>",
+          ansTamil: "ஆதித்யா தன் தவறை ஒப்புக்கொண்டது மட்டுமல்லாமல், வெள்ளிப் பதக்கத்தையும் திருப்பிக் கொடுத்தார்."
+        },
+        {
+          id: "eng4_4_exam_3",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          q: "Combine the following sentences using 'So...that':<br><i>The attic stairs were very creaky. We could not climb quietly.</i>",
+          qTamil: "'So...that' பயன்படுத்தி வாக்கியங்களை இணைக்க:",
+          ans: "<b>The attic stairs were so creaky that we could not climb quietly.</b><br><small style='color:#64748b;'>Rule: Replace 'very' with 'so', add 'that' and join the result clause.</small>",
+          ansTamil: "பரணின் படிக்கட்டுகள் மிகவும் நெளிந்து சத்தமிட்டதால் எங்களால் சத்தமில்லாமல் ஏற முடியவில்லை."
         }
       ]
     }

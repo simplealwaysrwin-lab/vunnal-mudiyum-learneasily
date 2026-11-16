@@ -89,7 +89,7 @@
 <script>
   // Build tracker & Auto-Cache Invalidator for Instant Updates
   (function() {
-    const CURRENT_BUILD = '20261116_v82';
+    const CURRENT_BUILD = '20261116_v83';
     try {
       const prevBuild = localStorage.getItem('vm_build_ver');
       if (prevBuild && prevBuild !== CURRENT_BUILD) {
@@ -130,6 +130,7 @@
 <script src="data_english_u5.js?v=20261104_v51"></script>
 <script src="data_english_u6.js?v=20261104_v51"></script>
 <script src="data_english_u7.js?v=20261116_v82"></script>
+<script src="data_english_writing.js?v=20261116_v83"></script>
   <script src="data_maths_tm_u1.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u2.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
@@ -4856,6 +4857,15 @@
             subSections: (typeof ENGLISH_UNIT_7_DATA !== 'undefined') ? ENGLISH_UNIT_7_DATA.subSections : [],
             questions: (typeof ENGLISH_UNIT_7_DATA !== 'undefined' && ENGLISH_UNIT_7_DATA.subSections) ? ENGLISH_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             stories: (typeof ENGLISH_UNIT_7_DATA !== 'undefined' && ENGLISH_UNIT_7_DATA.stories) ? ENGLISH_UNIT_7_DATA.stories : []
+          },
+          {
+            id: 'eng_writing',
+            unit: 'Writing Skills',
+            title: 'English Writing Skills: Essay Writing & Letter Writing (Formal & Informal)',
+            qCount: (typeof ENGLISH_WRITING_DATA !== 'undefined' && ENGLISH_WRITING_DATA.subSections) ? ENGLISH_WRITING_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 28,
+            subSections: (typeof ENGLISH_WRITING_DATA !== 'undefined') ? ENGLISH_WRITING_DATA.subSections : [],
+            questions: (typeof ENGLISH_WRITING_DATA !== 'undefined' && ENGLISH_WRITING_DATA.subSections) ? ENGLISH_WRITING_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            stories: []
           }
         ]
       },
@@ -6978,6 +6988,11 @@
       lesson.subSections = ENGLISH_UNIT_7_DATA.subSections;
       lesson.questions = ENGLISH_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
       lesson.stories = ENGLISH_UNIT_7_DATA.stories || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'eng_writing' && typeof ENGLISH_WRITING_DATA !== 'undefined' && ENGLISH_WRITING_DATA.subSections) {
+      lesson.subSections = ENGLISH_WRITING_DATA.subSections;
+      lesson.questions = ENGLISH_WRITING_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.stories = ENGLISH_WRITING_DATA.stories || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_tm_u7' && typeof MATHS_TM_UNIT_7_DATA !== 'undefined' && MATHS_TM_UNIT_7_DATA.subSections) {
       lesson.subSections = MATHS_TM_UNIT_7_DATA.subSections;
@@ -12409,7 +12424,7 @@
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261115_v81')
+        navigator.serviceWorker.register('./sw.js?v=20261116_v83')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

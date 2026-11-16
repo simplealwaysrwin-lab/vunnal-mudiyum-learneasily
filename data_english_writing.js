@@ -2,356 +2,374 @@
  * 10th Standard English - Writing Skills Question Bank & Study Guide
  * Tamil Nadu Samacheer Kalvi Syllabus - Public Exam Preparation 2026
  * 
- * Features:
- * 1. General Essay Writing (10 Complete 150-200 Word Model Essays with Headings & Quotes + 10 Practice Topics)
- * 2. Formal Letter Writing (Official 5-Mark Format + 6 Full Model Letters + 10 Practice Questions)
- * 3. Informal Letter Writing (Personal 5-Mark Format + 4 Full Model Letters + 10 Practice Questions)
- * 4. Public Exam Scoring Scheme, 5-Mark Breakdown & Common Error Checklist
+ * Simple, Exam-Oriented English for 10th Standard Students:
+ * 1. ENGLISH_ESSAYS_DATA: 10 Simple Model Essays (150-180 Words with Headings & Quotes) + 10 Practice Topics
+ * 2. ENGLISH_LETTERS_DATA: Formal & Informal Letters (Official 5-Mark Format + 10 Models + 20 Practice)
+ * 3. ENGLISH_WRITING_GUIDE_DATA: Public Exam 5-Mark Blueprint, 8-Mark Story Rules & Common Mistakes
  */
 
-const ENGLISH_WRITING_DATA = {
-  unit: "Writing Skills",
-  title: "English Writing Skills: Essay Writing & Letter Writing (Formal & Informal)",
-
+// =======================================================================
+// 1. ESSAY WRITING DATA (Simple 10th Standard English)
+// =======================================================================
+const ENGLISH_ESSAYS_DATA = {
+  unit: "Essays",
+  title: "English Essay Writing (10 Simple Model Essays & Practice Topics)",
   stories: [],
-
   subSections: [
     {
-      id: "sec_eng_w_1",
-      title: "Part 1: General Essay Writing (10 Model Essays 150-200 Words + 10 Practice Topics)",
-      author: "Samacheer Kalvi English Writing Guide",
+      id: "sec_eng_essay_models",
+      title: "10 Model Essays (Simple Words, Headings & Quotations for 10th Std)",
+      author: "Samacheer Kalvi 10th English Guide",
       questions: [
         {
-          id: "eng_w_e1",
+          id: "eng_essay_1",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Model Essay (150-200 Words)",
+          examTag: "Model Essay (150-180 Words)",
           isImportant: true,
           q: "Write an essay on 'The Importance of Education'.",
           ans: `<div style="line-height:1.8; font-size:15px;">
             <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; margin-bottom:12px; border-radius:4px;">
-              <b>Outline:</b> Introduction – Value of Education – Role in Society – Pathway to Success – Conclusion.
+              <b>Outline:</b> Introduction – Why Education is Important – Education and Society – Key to Success – Conclusion.
             </div>
             <p><b>Introduction:</b><br>
-            Education is the most powerful instrument for human empowerment and social transformation. It is the foundation upon which nations build their future. As <b>Nelson Mandela</b> famously remarked, <i>"Education is the most powerful weapon which you can use to change the world."</i></p>
+            Education is very important in every person's life. It is the real wealth of a human being. It shapes our character and gives us knowledge. As <b>Nelson Mandela</b> said, <i>"Education is the most powerful weapon which you can use to change the world."</i></p>
 
-            <p><b>Value of Education:</b><br>
-            Education goes beyond reading textbooks and earning grades; it enlightens the mind, develops reasoning skills, and moulds moral character. An educated individual learns to differentiate between right and wrong, overcomes superstitions, and approaches challenges with wisdom and confidence.</p>
+            <p><b>Why Education is Important:</b><br>
+            Education teaches us how to read, write, and speak properly. It helps us to think wisely and know the difference between right and wrong. It gives us confidence and self-respect. A good education opens the door to good jobs and a bright future.</p>
 
-            <p><b>Role in Society:</b><br>
-            A nation's prosperity directly mirrors the literacy of its citizens. Education eradicates ignorance, poverty, and social discrimination. It equips young minds with vocational competencies and ethical leadership, enabling them to actively contribute to economic growth, health, and scientific innovation.</p>
+            <p><b>Education and Society:</b><br>
+            Educated people help to develop their family and our country. Education removes poverty, bad habits, and ignorance from society. It teaches equality and respect for all human beings.</p>
 
-            <p><b>Pathway to Success:</b><br>
-            In today's competitive global village, higher education opens boundless doors for dignified employment. It teaches teamwork, problem-solving, and adaptability. Every child, regardless of economic background, deserves quality schooling.</p>
+            <p><b>Key to Success:</b><br>
+            In today's modern world, skills and knowledge are very important. An educated person can face any difficulty in life with courage. Education helps students to achieve their dreams.</p>
 
             <p><b>Conclusion:</b><br>
-            To conclude, education is not mere preparation for life; education is life itself. Governments and communities must ensure that no child is left behind in the light of knowledge.</p>
+            Education is not just for getting marks or degrees; it is for living a good and useful life. Every child must go to school and get a quality education.</p>
           </div>`
         },
         {
-          id: "eng_w_e2",
+          id: "eng_essay_2",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Model Essay (150-200 Words)",
+          examTag: "Model Essay (150-180 Words)",
           isImportant: true,
           q: "Write an essay on 'The Importance of Trees' (Save Trees, Save Earth).",
           ans: `<div style="line-height:1.8; font-size:15px;">
             <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; margin-bottom:12px; border-radius:4px;">
-              <b>Outline:</b> Introduction – Natural Lifeline – Environmental Protection – Dangers of Deforestation – Our Duty – Conclusion.
+              <b>Outline:</b> Introduction – Uses of Trees – Protecting Nature – Cutting Trees is Dangerous – Conclusion.
             </div>
             <p><b>Introduction:</b><br>
-            Trees are the green lungs of Mother Earth and the greatest boon bestowed upon living beings. Without trees, terrestrial life would cease to exist. As <b>Nelson Henderson</b> wisely observed, <i>"The true meaning of life is to plant trees, under whose shade you do not expect to sit."</i></p>
+            Trees are the most valuable gift of nature. They are the best friends of all living beings on earth. Without trees, human life is not possible. A famous saying goes, <i>"Plant trees today for a better tomorrow."</i></p>
 
-            <p><b>Natural Lifeline:</b><br>
-            Trees provide the vital oxygen we breathe while absorbing toxic carbon dioxide through photosynthesis. They yield delicious fruits, fragrant flowers, timber, paper, and valuable medicinal herbs. Furthermore, they provide a peaceful natural sanctuary for countless birds, mammals, and insects.</p>
+            <p><b>Uses of Trees:</b><br>
+            Trees give us oxygen to breathe and take in carbon dioxide. They provide sweet fruits, beautiful flowers, green vegetables, and wood. Trees also give shade to tired travellers and shelter to birds and animals. Many trees give us herbal medicines.</p>
 
-            <p><b>Environmental Protection:</b><br>
-            The extensive roots of trees bind topsoil firmly, preventing dangerous soil erosion and landslides during heavy downpours. By releasing water vapour through transpiration, trees induce condensation and invite cooling monsoon rains, replenishing ground aquifers.</p>
+            <p><b>Protecting Nature:</b><br>
+            The roots of trees hold the soil tightly and stop soil erosion. Trees bring cool air and help to cause regular rain. They keep our environment fresh, green, and clean.</p>
 
-            <p><b>Dangers of Deforestation:</b><br>
-            Indiscriminate clearing of forest tracts for urbanisation and industries has accelerated global warming, erratic weather patterns, and severe droughts. Melting glaciers and expanding deserts are warning signals of ecological collapse.</p>
+            <p><b>Cutting Trees is Dangerous:</b><br>
+            Nowadays, many trees are cut down for roads, houses, and factories. This causes global warming, less rainfall, and severe heat. If we cut down forests, our planet will become a dry desert.</p>
 
             <p><b>Conclusion:</b><br>
-            Conserving trees is an urgent planetary imperative. We must embrace nationwide afforestation drives and plant at least one sapling on our birthdays. Remember: <b>Plant a tree today for a greener tomorrow!</b></p>
+            We must stop cutting green trees. Everyone should plant at least one tree on their birthday and take care of it. Let us save trees to save our Mother Earth.</p>
           </div>`
         },
         {
-          id: "eng_w_e3",
+          id: "eng_essay_3",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Model Essay (150-200 Words)",
+          examTag: "Model Essay (150-180 Words)",
           isImportant: true,
           q: "Write an essay on 'Environmental Pollution and Its Prevention'.",
           ans: `<div style="line-height:1.8; font-size:15px;">
             <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; margin-bottom:12px; border-radius:4px;">
-              <b>Outline:</b> Introduction – Major Forms of Pollution – Devastating Consequences – Remedial Measures – Conclusion.
+              <b>Outline:</b> Introduction – Types of Pollution – Causes and Effects – How to Prevent – Conclusion.
             </div>
             <p><b>Introduction:</b><br>
-            Environmental pollution has emerged as the gravest crisis threatening modern civilisation. The relentless exploitation of natural resources has contaminated air, water, and soil. <b>Marlee Matlin</b> appropriately stated, <i>"The Earth does not belong to us: we belong to the Earth."</i></p>
+            Environmental pollution is a big problem facing our world today. When our surroundings become dirty and unhealthy, it is called pollution. It harms plants, animals, and human beings. A clean earth is a healthy earth.</p>
 
-            <p><b>Major Forms of Pollution:</b><br>
-            Industrial chimneys and automobile emissions discharge poisonous gases such as sulphur dioxide and carbon monoxide, causing widespread air pollution. Untreated chemical effluents, municipal sewage, and non-biodegradable plastics dumped into rivers trigger water contamination. Excessive chemical pesticides ruin soil fertility, while blaring horns cause distressing noise pollution.</p>
+            <p><b>Types of Pollution:</b><br>
+            There are four main types of pollution: air pollution, water pollution, land pollution, and noise pollution.</p>
 
-            <p><b>Devastating Consequences:</b><br>
-            Pollution causes respiratory disorders, asthma, cancer, and skin ailments in humans. Acid rains and oceanic plastic waste destroy marine habitats. The greenhouse effect traps planetary heat, triggering catastrophic climatic disruptions.</p>
+            <p><b>Causes and Effects:</b><br>
+            Smoke from buses, cars, and factories pollutes the air we breathe. It causes breathing troubles and asthma. Factory waste and plastic bags thrown into rivers pollute our drinking water. Loud horns and loudspeakers cause noise pollution and disturb students and elderly people.</p>
 
-            <p><b>Remedial Measures:</b><br>
-            We must transition towards clean renewable energy like solar and wind power. Strict industrial regulations on effluent treatment must be enforced. Citizens should reduce, reuse, and recycle plastics, utilize public transport, and participate in local tree-planting movements.</p>
+            <p><b>How to Prevent Pollution:</b><br>
+            We must plant more trees around our houses and schools. We should stop using one-time plastic bags and use cloth bags instead. We must keep our streets and drains clean. Vehicles should be tested for smoke regularly.</p>
 
             <p><b>Conclusion:</b><br>
-            Nature provides enough for everyone's need, but not for everyone's greed. Let us unite to heal our fragile planet before it is too late.</p>
+            A clean environment leads to a healthy life. It is the duty of every student and citizen to protect nature. Keep our surroundings clean and stay healthy!</p>
           </div>`
         },
         {
-          id: "eng_w_e4",
+          id: "eng_essay_4",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Model Essay (150-200 Words)",
+          examTag: "Model Essay (150-180 Words)",
           isImportant: true,
           q: "Write an essay on 'The Importance of Water and Rainwater Harvesting'.",
           ans: `<div style="line-height:1.8; font-size:15px;">
             <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; margin-bottom:12px; border-radius:4px;">
-              <b>Outline:</b> Introduction – Water as Elixir of Life – Emerging Scarcity – Rainwater Harvesting – Conservation Tips – Conclusion.
+              <b>Outline:</b> Introduction – Water is Life – Reasons for Water Scarcity – Rainwater Harvesting – Conclusion.
             </div>
             <p><b>Introduction:</b><br>
-            Water is the elixir of all earthly life. As Tamil sage <b>Thiruvalluvar</b> proclaimed in the Kural, <i>"Neerindri Amaiyadhu Ulagu"</i> (Without water, the world cannot function). Renowned poet <b>W. H. Auden</b> wrote, <i>"Thousands have lived without love, not one without water."</i></p>
+            Water is the most precious liquid on earth. All living things—humans, animals, and plants—need water to survive. Thiruvalluvar said in Thirukkural, <i>"Without water, there is no world."</i></p>
 
-            <p><b>Water as the Elixir of Life:</b><br>
-            Water sustains human metabolic functions, irrigates vast agrarian fields, operates hydroelectric turbines, and supports manufacturing industries. Although water covers over seventy percent of the earth's surface, less than one percent is accessible freshwater fit for human consumption.</p>
+            <p><b>Water is Life:</b><br>
+            We need water every day for drinking, cooking, bathing, washing, and cleaning. Farmers need water to grow crops and food grains. Factories also need water to run machines. Without water, agriculture will fail and there will be no food.</p>
 
-            <p><b>Emerging Scarcity:</b><br>
-            Rapid population growth, industrial pollution of rivers, and reckless groundwater depletion have plunged many towns into acute water crises. Droughts threaten crop failure and food security.</p>
+            <p><b>Reasons for Water Scarcity:</b><br>
+            Though the earth is covered with water, only a very small amount is fresh drinking water. In summers, many wells and lakes dry up. People waste water by keeping taps running. River water is also polluted by dirty waste.</p>
 
-            <p><b>Rainwater Harvesting (RWH):</b><br>
-            Tamil Nadu leads the country in mandatory rooftop rainwater harvesting. Collecting rooftop precipitation and channelling it into percolation pits recharges the subterranean water table, prevents urban flash floods, and guarantees water security during scorching summers.</p>
+            <p><b>Rainwater Harvesting:</b><br>
+            Rainwater harvesting is the best method to save water. In Tamil Nadu, rooftop rainwater harvesting is very successful. When we collect rainwater from roofs and send it underground, the water level rises.</p>
 
             <p><b>Conclusion:</b><br>
-            Every drop of water is a priceless jewel. We must turn off dripping taps, practice drip irrigation, and harvest rain diligently. <b>Save water today to secure humanity's tomorrow!</b></p>
+            Every single drop of water is precious. We must close taps properly and never waste water. Remember: <b>Save water today, secure our tomorrow!</b></p>
           </div>`
         },
         {
-          id: "eng_w_e5",
+          id: "eng_essay_5",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Model Essay (150-200 Words)",
+          examTag: "Model Essay (150-180 Words)",
           isImportant: true,
           q: "Write an essay on 'Science and Technology in Everyday Life'.",
           ans: `<div style="line-height:1.8; font-size:15px;">
             <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; margin-bottom:12px; border-radius:4px;">
-              <b>Outline:</b> Introduction – Transformative Innovations – Educational and Medical Milestones – Potential Pitfalls – Conclusion.
+              <b>Outline:</b> Introduction – Science in Daily Life – In Education and Health – Disadvantages – Conclusion.
             </div>
             <p><b>Introduction:</b><br>
-            We live in an exhilarating era driven by science and technology. From morning alarms to evening electric lights, scientific inventions govern every facet of modern routine. <b>Dr. A. P. J. Abdul Kalam</b> rightly asserted, <i>"Science is a beautiful gift to humanity; we should not distort it."</i></p>
+            We live in the age of science and technology. Modern life without science is impossible. <b>Dr. A. P. J. Abdul Kalam</b> said, <i>"Science is a beautiful gift to humanity; we should not distort it."</i></p>
 
-            <p><b>Transformative Innovations:</b><br>
-            Modern transport vehicles—bullet trains, aeroplanes, and electric cars—have shrunk planetary distances, enabling seamless travel. Telecommunication devices like smartphones and computers connect individuals across oceans in seconds via high-speed internet.</p>
+            <p><b>Science in Daily Life:</b><br>
+            Science has made our life easy, comfortable, and fast. In the morning, we use electric lights, fans, and gas stoves. Buses, trains, and aeroplanes help us travel long distances quickly. Mobile phones and the internet help us talk to friends anywhere in the world.</p>
 
-            <p><b>Educational and Medical Milestones:</b><br>
-            In education, digital smartboards, online libraries, and virtual classrooms have democratised learning. In healthcare, advanced surgical robotics, MRI diagnostics, life-saving vaccines, and chemotherapy have drastically reduced mortality and extended human life expectancy.</p>
+            <p><b>In Education and Health:</b><br>
+            In schools, students learn through computers, tablets, and smart classrooms. In hospitals, modern machines and medicines cure dangerous diseases and save many human lives.</p>
 
-            <p><b>Potential Pitfalls:</b><br>
-            However, excessive dependence on gadgets fosters sedentary habits, social isolation, and cyber addictions among teenagers. Weapons of mass destruction and environmental degradation remain grave hazards when science is misused without ethical guardrails.</p>
+            <p><b>Disadvantages of Technology:</b><br>
+            Too much use of mobile phones and video games spoils students' eyes and study time. People sit in one place and become lazy. Pollution and harmful weapons are also bad effects of misusing science.</p>
 
             <p><b>Conclusion:</b><br>
-            Science is an exceptionally devoted servant but a terrible master. If guided by moral wisdom, science and technology will continue to usher in peace, prosperity, and human welfare.</p>
+            Science is a good servant, but a bad master. We must use science and technology only for good purposes and for the growth of our nation.</p>
           </div>`
         },
         {
-          id: "eng_w_e6",
+          id: "eng_essay_6",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Model Essay (150-200 Words)",
+          examTag: "Model Essay (150-180 Words)",
           isImportant: true,
           q: "Write an essay on 'The Importance of Discipline in Student Life'.",
           ans: `<div style="line-height:1.8; font-size:15px;">
             <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; margin-bottom:12px; border-radius:4px;">
-              <b>Outline:</b> Introduction – True Meaning of Discipline – Discipline in School – Benefits in Daily Life – Conclusion.
+              <b>Outline:</b> Introduction – What is Discipline – Discipline in School – Benefits of Discipline – Conclusion.
             </div>
             <p><b>Introduction:</b><br>
-            Discipline is the cornerstone of a triumphant and meaningful life. It represents the conscious ability to regulate one's actions, emotions, and desires in alignment with moral principles. <b>Jim Rohn</b> brilliantly proclaimed, <i>"Discipline is the bridge between goals and accomplishment."</i></p>
+            Discipline is the secret of success in life. It means following good rules and behaving in a proper manner. As <b>Jim Rohn</b> said, <i>"Discipline is the bridge between goals and accomplishment."</i></p>
 
-            <p><b>True Meaning of Discipline:</b><br>
-            Discipline is not harsh punishment or suppression of freedom; rather, it is self-control and purposeful order. Just as nature adheres to steady laws—the sun rising punctually and seasons changing systematically—human lives require structured guidance to avoid chaos.</p>
+            <p><b>What is Discipline:</b><br>
+            Discipline is self-control. In nature, everything follows discipline. The sun rises in the east every day, and seasons change at the right time. In the same way, human beings must live a disciplined life.</p>
 
             <p><b>Discipline in School:</b><br>
-            For a student, discipline involves arriving at school punctually, dressing neatly in uniform, paying rapt attention in class, respecting teachers, and completing homework on time. A disciplined pupil balances study hours with recreational play effortlessly.</p>
+            For students, discipline is very important. A disciplined student comes to school on time, wears a clean uniform, listens to teachers, and completes homework daily. Good manners like saying "Thank you" and "Please" show good discipline.</p>
 
-            <p><b>Benefits in Daily Life:</b><br>
-            Discipline fosters time management, perseverance, and emotional resilience. It shields young minds from harmful distractions such as substance abuse and procrastination. In sports, science, or politics, every illustrious champion attained greatness through relentless discipline.</p>
+            <p><b>Benefits of Discipline:</b><br>
+            Discipline helps students to manage their time well. It builds good character, self-confidence, and leadership qualities. Great leaders, scientists, and sports stars became famous only through strong discipline.</p>
 
             <p><b>Conclusion:</b><br>
-            Without discipline, human talent is like an unguided ship wandering aimlessly in stormy seas. Cultivating self-discipline during student days guarantees a bright, honourable, and victorious career.</p>
+            A student without discipline is like a kite without a thread. Discipline guides us to achieve high marks and reach our life goals.</p>
           </div>`
         },
         {
-          id: "eng_w_e7",
+          id: "eng_essay_7",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Model Essay (150-200 Words)",
+          examTag: "Model Essay (150-180 Words)",
           isImportant: true,
           q: "Write an essay on 'The Importance of Sports and Games'.",
           ans: `<div style="line-height:1.8; font-size:15px;">
             <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; margin-bottom:12px; border-radius:4px;">
-              <b>Outline:</b> Introduction – Physical Health – Mental Alertness – Moral and Social Virtues – Balanced Routine – Conclusion.
+              <b>Outline:</b> Introduction – Good for Physical Health – Mental Fitness – Teamwork and Sportsmanship – Conclusion.
             </div>
             <p><b>Introduction:</b><br>
-            Sports and games are an indispensable part of comprehensive education. They ensure bodily stamina, mental agility, and character development. The timeless Latin proverb reminds us: <i>"Mens sana in corpore sano"</i>—<b>A sound mind resides in a sound body.</b></p>
+            Sports and games are an important part of school life. Education is incomplete without sports. An old proverb says, <i>"A sound mind in a sound body."</i></p>
 
-            <p><b>Physical Health:</b><br>
-            Regular participation in outdoor sports like football, cricket, running, and swimming strengthens cardiac muscles, enhances lung capacity, burns excess calories, and prevents childhood obesity. It keeps the body energetic and agile.</p>
+            <p><b>Good for Physical Health:</b><br>
+            Playing games like football, cricket, volleyball, and running keeps our body active and strong. It improves blood circulation and keeps our heart healthy. It helps children grow tall and stops unnecessary weight gain.</p>
 
-            <p><b>Mental Alertness:</b><br>
-            Physical exercise stimulates the secretion of endorphins, relieving academic stress and anxiety. Active sportspersons possess sharpened reflexes, superior memory concentration, and quick decision-making under high pressure.</p>
+            <p><b>Mental Fitness:</b><br>
+            After studying for many hours, students feel tired. Playing games for one hour in the evening refreshes the mind and removes exam stress. It helps students sleep well and concentrate better on their studies.</p>
 
-            <p><b>Moral and Social Virtues:</b><br>
-            Playgrounds impart invaluable life lessons that textbooks cannot convey. Games teach teamwork, mutual cooperation, and leadership. Crucially, a player learns sportsmanship—how to celebrate victory with humility and embrace defeat with graceful determination to improve.</p>
+            <p><b>Teamwork and Sportsmanship:</b><br>
+            Games teach us unity, obedience, and teamwork. A player learns to accept both victory and defeat with a smile. Defeat in a game teaches us how to try again and win next time.</p>
 
             <p><b>Conclusion:</b><br>
-            As the adage goes, <i>"All work and no play makes Jack a dull boy."</i> Schools and parents must inspire every child to step onto the playground daily. Sports nurture healthy citizens who build a vibrant nation.</p>
+            <i>"All work and no play makes Jack a dull boy."</i> Every student should play at least one outdoor game daily. Sports make us healthy, happy, and active citizens.</p>
           </div>`
         },
         {
-          id: "eng_w_e8",
+          id: "eng_essay_8",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Model Essay (150-200 Words)",
+          examTag: "Model Essay (150-180 Words)",
           isImportant: true,
-          q: "Write an essay on 'My Aim in Life' (To Become a Dedicated Teacher / Doctor).",
+          q: "Write an essay on 'My Aim in Life' (To Become a Dedicated Teacher).",
           ans: `<div style="line-height:1.8; font-size:15px;">
             <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; margin-bottom:12px; border-radius:4px;">
-              <b>Outline:</b> Introduction – Why an Aim is Essential – My Chosen Goal – Reason for Choice – Preparation Strategy – Conclusion.
+              <b>Outline:</b> Introduction – My Goal – Why I Chose This Aim – How I Prepare – Conclusion.
             </div>
             <p><b>Introduction:</b><br>
-            A life without a definite purpose is like a ship without a rudder, tossed helplessly by every passing wave. Setting a noble goal inspires youth to channel their energies productively. <b>J. Howes</b> observed, <i>"Aim at the sun, and you may not reach it; but your arrow will fly far higher than if aimed at an object on a level with yourself."</i></p>
+            Everyone must have a good aim in life. A life without an aim is like a ship without a direction. A clear aim helps us to work hard and succeed.</p>
 
-            <p><b>My Chosen Goal:</b><br>
-            My cherished ambition is to become a dedicated secondary school teacher. Teaching is the noblest profession because it nurtures and shapes all other professions—from doctors and scientists to honest administrators.</p>
+            <p><b>My Goal:</b><br>
+            My aim in life is to become a dedicated teacher. Teaching is a noble profession. Teachers build the future of our country by educating young children.</p>
 
-            <p><b>Reason for Choice:</b><br>
-            In many rural hamlets of Tamil Nadu, underprivileged children lack access to inspiring educators and modern educational methodologies. I yearn to light the lamp of literacy in those remote pockets, spark curiosity in young hearts, and mentor students to achieve their dreams with unwavering self-belief.</p>
+            <p><b>Why I Chose This Aim:</b><br>
+            In many villages, poor children do not get good teaching. I want to teach in a government school in a rural area. I want to help slow learners, remove their fear of exams, and teach them good values and English skills.</p>
 
-            <p><b>Preparation Strategy:</b><br>
-            To realise this ambition, I study my school lessons diligently, read widely beyond the syllabus, and hone my public communication skills. I treat my current teachers with immense veneration and observe their empathetic pedagogical styles.</p>
+            <p><b>How I Prepare:</b><br>
+            To achieve my dream, I study my lessons with great interest. I read good English books and practice speaking in front of my classmates. I respect my teachers and observe how they explain difficult topics with love and patience.</p>
 
             <p><b>Conclusion:</b><br>
-            Teaching is not merely a career for livelihood; it is a sacred mission to sculpt the architects of tomorrow's world. I shall labour wholeheartedly to become an exemplary educator.</p>
+            A good teacher is like a candle; it burns itself to give light to others. I will work hard to become a great teacher and serve my nation with pride.</p>
           </div>`
         },
         {
-          id: "eng_w_e9",
+          id: "eng_essay_9",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Model Essay (150-200 Words)",
+          examTag: "Model Essay (150-180 Words)",
           isImportant: true,
           q: "Write an essay on 'The Importance of Reading Books'.",
           ans: `<div style="line-height:1.8; font-size:15px;">
             <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; margin-bottom:12px; border-radius:4px;">
-              <b>Outline:</b> Introduction – Books as Lifelong Companions – Treasure of Wisdom – Language and Imagination – Antidote to Screen Addiction – Conclusion.
+              <b>Outline:</b> Introduction – Books are Best Friends – Increases Knowledge – Improves English Skills – Conclusion.
             </div>
             <p><b>Introduction:</b><br>
-            Reading is to the mind what physical exercise is to the human body. Books are timeless vessels of intellect, carrying humanity's deepest thoughts and discoveries across generations. Roman orator <b>Marcus Tullius Cicero</b> declared, <i>"A room without books is like a body without a soul."</i></p>
+            Reading is a wonderful habit. Books are our truest friends and best guides. Francis Bacon said, <i>"Reading makes a full man."</i> Another famous quote says, <i>"A room without books is like a body without a soul."</i></p>
 
-            <p><b>Books as Lifelong Companions:</b><br>
-            Unlike fickle acquaintances, good books are loyal companions that never desert us in times of sorrow or loneliness. They comfort troubled spirits, offer sound counsel, and broaden mental horizons without demanding anything in return.</p>
+            <p><b>Books are Best Friends:</b><br>
+            Friends may leave us in difficult times, but good books always stay with us. Whenever we feel lonely or sad, reading an inspiring story cheers up our heart and gives us peace.</p>
 
-            <p><b>Language and Imagination:</b><br>
-            Regular reading enriches vocabulary, improves grammatical precision, and cultivates eloquent writing prowess. Reading historical epics, scientific explorations, and classic fiction transports readers across foreign lands and eras, igniting creative imagination.</p>
+            <p><b>Increases Knowledge:</b><br>
+            Books give us knowledge about history, science, geography, and great leaders. By reading books sitting at home, we can learn about people and cultures all over the world.</p>
 
-            <p><b>Antidote to Screen Addiction:</b><br>
-            In modern society, teenagers squander precious hours mindlessly scrolling social media feeds, resulting in shallow attention spans. Cultivating an immersive reading habit restores calm mental focus, reduces anxiety, and deepens empathy.</p>
+            <p><b>Improves English Skills:</b><br>
+            Reading English storybooks, newspapers, and biographies helps students to learn new words. It improves our grammar, spelling, and essay writing skills. It also keeps us away from too much mobile screen time.</p>
 
             <p><b>Conclusion:</b><br>
-            Sir Francis Bacon memorably stated: <i>"Reading maketh a full man."</i> Let us build personal home libraries and dedicate at least thirty minutes each day to good books.</p>
+            We must spend at least 30 minutes every day reading good books. Let us build a small library in our homes and develop the habit of reading from childhood.</p>
           </div>`
         },
         {
-          id: "eng_w_e10",
+          id: "eng_essay_10",
           type: "8m",
           mark: "8 Marks",
-          examTag: "Model Essay (150-200 Words)",
+          examTag: "Model Essay (150-180 Words)",
           isImportant: true,
           q: "Write an essay on 'The Uses and Abuses of Mobile Phones'.",
           ans: `<div style="line-height:1.8; font-size:15px;">
             <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; margin-bottom:12px; border-radius:4px;">
-              <b>Outline:</b> Introduction – Invaluable Benefits – Alarming Abuses – Health and Social Impacts – Wise Usage – Conclusion.
+              <b>Outline:</b> Introduction – Useful Sides – Harmful Sides – Impact on Health – Conclusion.
             </div>
             <p><b>Introduction:</b><br>
-            The mobile phone is undoubtedly the most revolutionary technological breakthrough of our century. It has converted our vast globe into an interconnected digital palmtop. <b>Christian Lous Lange</b> wisely cautioned, <i>"Technology is a useful servant but a dangerous master."</i></p>
+            The mobile phone is a great invention of modern science. Today, almost every person has a smartphone. It has made communication very quick and easy. But it has both good and bad sides.</p>
 
-            <p><b>Invaluable Benefits:</b><br>
-            Smartphones enable instantaneous voice calls, video meetings, and text correspondence worldwide. For students, mobile phones provide access to digital dictionaries, instructional YouTube lectures, e-textbooks, and educational apps. In emergencies, mobile navigation and instant SOS calls save precious human lives.</p>
+            <p><b>Useful Sides:</b><br>
+            Mobile phones help us to connect with our family and friends in seconds. For students, it is useful for online classes, educational videos, dictionary apps, and learning new lessons. In times of emergency, we can call police or ambulance immediately.</p>
 
-            <p><b>Alarming Abuses:</b><br>
-            Unfortunately, the reckless misuse of smartphones has sparked grave societal concerns. Adolescents fall prey to addictive online video gaming, cyberbullying, and fake news circulation. Excessive screen exposure late at night induces insomnia, severe eye strain, and poor academic concentration.</p>
+            <p><b>Harmful Sides:</b><br>
+            Many students spend hours playing online games and scrolling videos. They waste their precious study time and do not talk with their parents. Some people use mobile phones while driving, which leads to road accidents.</p>
 
-            <p><b>Health and Social Impacts:</b><br>
-            Smartphones have eroded face-to-face family conversations. Even when seated at the dinner table, people remain engrossed in their screens, leading to emotional detachment. Furthermore, texting while driving causes catastrophic traffic collisions.</p>
+            <p><b>Impact on Health:</b><br>
+            Looking at bright screens for a long time causes eye pain, headache, and sleeplessness. Lack of physical play makes children weak and unhealthy.</p>
 
             <p><b>Conclusion:</b><br>
-            A mobile phone is simply an instrument. Whether it proves a blessing or a curse depends squarely upon how responsibly we wield it. We must prioritize real human relationships over virtual likes.</p>
-          </div>`
-        },
-        {
-          id: "eng_w_e11",
-          type: "tips",
-          mark: "Practice Topics",
-          examTag: "10 Practice Essay Topics with Outlines",
-          isImportant: false,
-          q: "10 Important Essay Practice Topics for Self-Study (With Hints & Quotes)",
-          ans: `<div style="line-height:1.8; font-size:15px;">
-            <p>Practice writing 150–200 words on these high-probability topics following the <b>Introduction – 3 Subheadings – Quote – Conclusion</b> model:</p>
-            <ol style="padding-left:20px;">
-              <li style="margin-bottom:10px;"><b>Cleanliness is Next to Godliness (Swachh Bharat):</b><br>
-              <i>Hints:</i> Meaning of sanitation – Personal vs public hygiene – Gandhi's vision – Eradication of diseases – Youth's duty.<br>
-              <i>Quote:</i> "Cleanliness is next to godliness." - Mahatma Gandhi.</li>
-
-              <li style="margin-bottom:10px;"><b>The Value of Time (Time and Tide Wait for None):</b><br>
-              <i>Hints:</i> Punctuality – Lost wealth can be regained, lost time never – Student timetable – Procrastination as thief of time.<br>
-              <i>Quote:</i> "Time and tide wait for no man."</li>
-
-              <li style="margin-bottom:10px;"><b>Impact of Social Media on School Students:</b><br>
-              <i>Hints:</i> Connectivity vs distraction – Information sharing vs cyber threats – Mental health and peer pressure – Balanced approach.<br>
-              <i>Quote:</i> "Don't use social media to impress people; use it to impact people."</li>
-
-              <li style="margin-bottom:10px;"><b>Road Safety and Traffic Awareness:</b><br>
-              <i>Hints:</i> Rising road accidents – Importance of helmets and seatbelts – Following signals – Dangers of rash driving and mobile usage while driving.<br>
-              <i>Quote:</i> "Alert today, alive tomorrow."</li>
-
-              <li style="margin-bottom:10px;"><b>Yoga for Healthy Living:</b><br>
-              <i>Hints:</i> Ancient Indian heritage – Physical postures (Asanas) and breath control (Pranayama) – Stress reduction – Global recognition (International Yoga Day).<br>
-              <i>Quote:</i> "Yoga is the journey of the self, through the self, to the self." - The Bhagavad Gita.</li>
-
-              <li style="margin-bottom:10px;"><b>Protection of Wildlife and Endangered Species:</b><br>
-              <i>Hints:</i> Ecological food chain – Poaching and habitat loss – Project Tiger – Biodiversity preservation – Human survival.<br>
-              <i>Quote:</i> "The greatness of a nation can be judged by how its animals are treated." - Mahatma Gandhi.</li>
-
-              <li style="margin-bottom:10px;"><b>My Grandparents / Respect for Senior Citizens:</b><br>
-              <i>Hints:</i> Love and bedtime stories – Moral values instilled – Plight of old-age homes – Gratitude and care.<br>
-              <i>Quote:</i> "Grandparents are a delightful blend of laughter, caring deeds, and wonderful stories."</li>
-
-              <li style="margin-bottom:10px;"><b>My Favourite Book:</b><br>
-              <i>Hints:</i> Title and author – Core plot and memorable characters – Moral message – Personal inspiration derived.<br>
-              <i>Quote:</i> "There is no friend as loyal as a book." - Ernest Hemingway.</li>
-
-              <li style="margin-bottom:10px;"><b>If I Were the Prime Minister of India:</b><br>
-              <i>Hints:</i> Patriotism – Priority for free education and health – Farmers' welfare – Eradication of corruption and poverty – Scientific leadership.<br>
-              <i>Quote:</i> "Service to humanity is service to God."</li>
-
-              <li style="margin-bottom:10px;"><b>A Memorable Journey / School Excursion:</b><br>
-              <i>Hints:</i> Destination and companions – Scenic beauty – Historical learning – Fun and camaraderie – Cherished lifelong memories.<br>
-              <i>Quote:</i> "Travel makes one modest; you see what a tiny place you occupy in the world." - Gustave Flaubert.</li>
-            </ol>
+            A mobile phone is a useful tool. It is like fire; if we use it carefully, it helps us; if we misuse it, it burns our hand. Students must use mobile phones only for learning with parents' guidance.</p>
           </div>`
         }
       ]
     },
     {
-      id: "sec_eng_w_2",
-      title: "Part 2: Formal Letter Writing (Official 5-Mark Format + 6 Model Letters + 10 Practice Questions)",
-      author: "Samacheer Kalvi English Writing Guide",
+      id: "sec_eng_essay_practice",
+      title: "10 Practice Essay Topics with Outlines & Simple Quotes",
+      author: "Samacheer Kalvi 10th English Guide",
       questions: [
         {
-          id: "eng_w_fl_format",
+          id: "eng_essay_practice_list",
+          type: "tips",
+          mark: "Practice Topics",
+          examTag: "10 Practice Topics with Hints",
+          isImportant: false,
+          q: "10 Important Essay Practice Topics for Self-Study (With Simple Outlines & Quotes)",
+          ans: `<div style="line-height:1.8; font-size:15px;">
+            <p>Practice writing 150–180 words on these important topics using simple words and clear headings:</p>
+            <ol style="padding-left:20px;">
+              <li style="margin-bottom:10px;"><b>Cleanliness is Next to Godliness (Swachh Bharat):</b><br>
+              <i>Outline:</i> Meaning of cleanliness – Keeping home and school clean – Washing hands – Swachh Bharat mission – Conclusion.<br>
+              <i>Quote:</i> "Cleanliness is next to godliness." - Mahatma Gandhi.</li>
+
+              <li style="margin-bottom:10px;"><b>The Value of Time (Time and Tide Wait for None):</b><br>
+              <i>Outline:</i> Importance of time – Lost money can be earned back, lost time never – Student timetable – Punctuality – Conclusion.<br>
+              <i>Quote:</i> "Time and tide wait for no man."</li>
+
+              <li style="margin-bottom:10px;"><b>Impact of Social Media on Students:</b><br>
+              <i>Outline:</i> What is social media – Good uses for learning – Bad effects of video addiction – Advice for students – Conclusion.<br>
+              <i>Quote:</i> "Use technology to learn, not to waste time."</li>
+
+              <li style="margin-bottom:10px;"><b>Road Safety and Traffic Rules:</b><br>
+              <i>Outline:</i> Need for road safety – Wearing helmets and seatbelts – Following traffic lights – Avoiding mobile phones while driving – Conclusion.<br>
+              <i>Quote:</i> "Alert today, alive tomorrow."</li>
+
+              <li style="margin-bottom:10px;"><b>Yoga for Healthy Living:</b><br>
+              <i>Outline:</i> Ancient Indian practice – Simple asanas and breathing exercise – Removes exam fear – Keeps body active – Conclusion.<br>
+              <i>Quote:</i> "Health is wealth, peace of mind is happiness."</li>
+
+              <li style="margin-bottom:10px;"><b>Save Wild Animals:</b><br>
+              <i>Outline:</i> Animals in nature – Forest animals like tigers and elephants – Stopping illegal hunting – Protecting forests – Conclusion.<br>
+              <i>Quote:</i> "Animals have the right to live safely on earth."</li>
+
+              <li style="margin-bottom:10px;"><b>My Grandparents:</b><br>
+              <i>Outline:</i> Love of grandparents – Bedtime stories – Teaching good manners – Respecting elderly people – Conclusion.<br>
+              <i>Quote:</i> "Old people are the blessing of every home."</li>
+
+              <li style="margin-bottom:10px;"><b>My Favourite Book:</b><br>
+              <i>Outline:</i> Name of book and author – Simple story – What I learned from it – Why I like it – Conclusion.<br>
+              <i>Quote:</i> "Books are our best friends."</li>
+
+              <li style="margin-bottom:10px;"><b>If I Were the Prime Minister:</b><br>
+              <i>Outline:</i> Service to country – Free and quality education for all children – Helping poor farmers – Clean India – Conclusion.<br>
+              <i>Quote:</i> "Service to people is service to God."</li>
+
+              <li style="margin-bottom:10px;"><b>A Memorable School Tour:</b><br>
+              <i>Outline:</i> Place visited – Journey by bus – Seeing historical places – Fun with friends and teachers – Conclusion.<br>
+              <i>Quote:</i> "Travel gives us joy and new knowledge."</li>
+            </ol>
+          </div>`
+        }
+      ]
+    }
+  ]
+};
+
+// =======================================================================
+// 2. LETTER WRITING DATA (Formal & Informal - 5 Mark Format)
+// =======================================================================
+const ENGLISH_LETTERS_DATA = {
+  unit: "Letters",
+  title: "English Letter Writing: Formal & Informal Letters (10 Models & 20 Practice)",
+  stories: [],
+  subSections: [
+    {
+      id: "sec_eng_fl",
+      title: "Part 1: Formal Letters (Official 5-Mark Format + 6 Model Letters)",
+      author: "Samacheer Kalvi 10th English Guide",
+      questions: [
+        {
+          id: "eng_letter_fmt",
           type: "tips",
           mark: "Format Guide",
           examTag: "5-Mark Official Format",
@@ -363,72 +381,72 @@ const ENGLISH_WRITING_DATA = {
               <ul style="margin:0; padding-left:20px;">
                 <li><b>From address & Date:</b> 1 Mark</li>
                 <li><b>To address & Salutation / Subject:</b> 1 Mark</li>
-                <li><b>Body of the Letter (3 clear paragraphs):</b> 2 Marks</li>
+                <li><b>Body of the Letter (3 simple paragraphs):</b> 2 Marks</li>
                 <li><b>Subscription (Yours faithfully) & Address on Envelope:</b> 1 Mark</li>
               </ul>
             </div>
 
             <div style="border:1px dashed #64748b; padding:16px; border-radius:6px; background:#f8fafc; font-family:monospace;">
               <b>From</b><br>
-              &nbsp;&nbsp;[Sender's Name / XXXX],<br>
+              &nbsp;&nbsp;[Sender's Name],<br>
               &nbsp;&nbsp;[Door No., Street Name],<br>
               &nbsp;&nbsp;[City / Town - Pincode].<br><br>
               
-              [Date: e.g., 16 March 2026]<br><br>
+              [Date: 16 March 2026]<br><br>
 
               <b>To</b><br>
-              &nbsp;&nbsp;[Designation of Official: The Editor / The Municipal Commissioner / The Headmaster],<br>
-              &nbsp;&nbsp;[Organization / Office / School Name],<br>
+              &nbsp;&nbsp;[The Editor / The Municipal Commissioner / The Headmaster],<br>
+              &nbsp;&nbsp;[Office / School Name],<br>
               &nbsp;&nbsp;[City / Town - Pincode].<br><br>
 
               <b>Respected Sir / Madam,</b><br><br>
 
-              &nbsp;&nbsp;<b>Sub:</b> [Precise summary of the grievance / request in one single line] - Reg.<br><br>
+              &nbsp;&nbsp;<b>Sub:</b> [One simple line about the problem or request] - Reg.<br><br>
 
-              &nbsp;&nbsp;<b>Paragraph 1 (Opening):</b> State who you are and clearly identify the purpose of this letter.<br><br>
-              &nbsp;&nbsp;<b>Paragraph 2 (Main Body):</b> Provide detailed factual information, consequences suffered, and reasons for your concern.<br><br>
-              &nbsp;&nbsp;<b>Paragraph 3 (Closing):</b> Make a courteous, specific appeal for swift intervention or necessary official action.<br><br>
+              &nbsp;&nbsp;<b>Paragraph 1:</b> State who you are and why you are writing.<br><br>
+              &nbsp;&nbsp;<b>Paragraph 2:</b> Explain the problem clearly in simple sentences.<br><br>
+              &nbsp;&nbsp;<b>Paragraph 3:</b> Request the officer to take action quickly.<br><br>
 
               Thanking you,<br><br>
 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Yours faithfully,</b><br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Signature / Name]<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Your Name]<br><br>
 
               <b>Address on the Envelope:</b><br>
               &nbsp;&nbsp;To<br>
-              &nbsp;&nbsp;[Official's Designation and Complete Office Address with Pincode]
+              &nbsp;&nbsp;[Official's Name / Title and Full Office Address with Pincode]
             </div>
           </div>`
         },
         {
-          id: "eng_w_fl1",
+          id: "eng_fl_1",
           type: "5m",
           mark: "5 Marks",
           examTag: "Model Letter (Editor)",
           isImportant: true,
-          q: "Write a letter to the Editor of a newspaper about the bad condition of roads and defunct street lights in your locality.",
+          q: "Write a letter to the Editor of a newspaper about the bad condition of roads and broken street lights in your locality.",
           ans: `<div style="line-height:1.7; font-size:15px; border:1px solid #e2e8f0; padding:16px; border-radius:6px; background:#fff;">
             <b>From</b><br>
             S. Arun,<br>
-            12, Bharathiar Street, Gandhi Nagar,<br>
+            12, Gandhi Street,<br>
             Salem – 636 007.<br><br>
 
             16 March 2026<br><br>
 
             <b>To</b><br>
             The Editor,<br>
-            The Hindu / Daily News,<br>
+            The Hindu Daily,<br>
             Salem – 636 001.<br><br>
 
             <b>Respected Sir,</b><br><br>
 
-            <b>Sub:</b> Deplorable condition of roads and broken street lights in Gandhi Nagar – Reg.<br><br>
+            <b>Sub:</b> Bad condition of roads and street lights in Gandhi Street – Reg.<br><br>
 
-            Through the esteemed columns of your widely circulated daily, I wish to draw the urgent attention of the civic authorities towards the pathetic condition of roads in Gandhi Nagar.<br><br>
+            Through the columns of your esteemed newspaper, I wish to bring the bad condition of roads in our area to the notice of the authorities.<br><br>
 
-            For the past four months, the arterial roads of our residential area have been riddled with large, treacherous potholes following recent pipeline digging. During rains, these craters fill with stagnant muddy water, making them invisible and causing frequent two-wheeler skids. School children and elderly residents face severe difficulties walking safely. Compounding this agony, most street lights have remained defunct for weeks, plunging the entire stretch into pitch darkness at night.<br><br>
+            The roads in our locality are full of big pits and holes. During rainy days, water stagnates in these holes. Two-wheeler riders slip and fall down. School children find it very hard to walk safely. To make matters worse, street lights are not working for the past one month. The whole street is completely dark at night.<br><br>
 
-            Despite multiple representations submitted to local ward officials, no corrective measures have been undertaken. I earnestly request the concerned authorities to take prompt action to resurface the roads and restore street lighting before a fatal accident takes place.<br><br>
+            Though we complained to the local ward office, no action has been taken so far. I request the concerned authorities to repair the roads and fix the street lights immediately.<br><br>
 
             Thanking you,<br><br>
 
@@ -447,7 +465,7 @@ const ENGLISH_WRITING_DATA = {
           </div>`
         },
         {
-          id: "eng_w_fl2",
+          id: "eng_fl_2",
           type: "5m",
           mark: "5 Marks",
           examTag: "Model Letter (Municipal Official)",
@@ -456,25 +474,25 @@ const ENGLISH_WRITING_DATA = {
           ans: `<div style="line-height:1.7; font-size:15px; border:1px solid #e2e8f0; padding:16px; border-radius:6px; background:#fff;">
             <b>From</b><br>
             K. Meena,<br>
-            25, Kamarajar Avenue, Anna Nagar,<br>
+            25, Kamarajar Street, Anna Nagar,<br>
             Madurai – 625 020.<br><br>
 
             16 March 2026<br><br>
 
             <b>To</b><br>
             The Commissioner,<br>
-            Madurai City Municipal Corporation,<br>
+            Madurai Municipal Corporation,<br>
             Madurai – 625 002.<br><br>
 
             <b>Respected Sir,</b><br><br>
 
-            <b>Sub:</b> Complaint regarding irregular garbage clearance and unhygienic conditions in Anna Nagar – Reg.<br><br>
+            <b>Sub:</b> Irregular clearance of garbage in Anna Nagar – Reg.<br><br>
 
-            I am writing as a concerned resident of Anna Nagar to highlight the acute sanitary crisis caused by the non-clearance of municipal garbage in our neighbourhood.<br><br>
+            I am a resident of Anna Nagar. I am writing this letter to bring to your kind notice the poor garbage clearance in our area.<br><br>
 
-            For over ten days, municipal sanitary conservancy workers have failed to visit our street. Consequently, the public dustbins at the main intersection are overflowing with rotting domestic and market waste. Stagnant garbage has spilled onto the road, emanating a nauseating stench. Stray cattle, dogs, and swarms of mosquitoes breed uncontrollably in these dumps, creating an alarming hazard for dengue, malaria, and typhoid among local children.<br><br>
+            For the past ten days, sanitary workers have not come to clear the garbage. The public dustbins are overflowing with waste. The rotten waste gives out a very bad smell. Stray dogs and cows scatter the waste all over the road. Mosquitoes and flies are breeding fast, which may cause dengue and malaria among children.<br><br>
 
-            I kindly urge the municipal administration to arrange immediate daily clearance of garbage and dispatch the sanitary squad to spray disinfectants throughout our locality without delay.<br><br>
+            I kindly request you to order the daily clearance of garbage and arrange for spraying medicine in our street immediately.<br><br>
 
             Thanking you,<br><br>
 
@@ -488,12 +506,12 @@ const ENGLISH_WRITING_DATA = {
               To<br>
               The Commissioner,<br>
               Corporation of Madurai,<br>
-              Aringar Anna Maligai, Madurai – 625 002.
+              Anna Maligai, Madurai – 625 002.
             </div>
           </div>`
         },
         {
-          id: "eng_w_fl3",
+          id: "eng_fl_3",
           type: "5m",
           mark: "5 Marks",
           examTag: "Model Letter (Headmaster)",
@@ -515,13 +533,13 @@ const ENGLISH_WRITING_DATA = {
 
             <b>Respected Sir,</b><br><br>
 
-            <b>Sub:</b> Requisition for additional reference books and storybooks for the school library – Reg.<br><br>
+            <b>Sub:</b> Request for more books for the school library – Reg.<br><br>
 
-            On behalf of all the students of Standard X, I submit this humble requisition regarding the enrichment of our school library resources.<br><br>
+            On behalf of all Standard X students, I submit this letter regarding our school library.<br><br>
 
-            As our Board Public Examinations and NTSE scholarship examinations are approaching, we are in great need of updated subject reference guides, question banks, and competitive exam books in Mathematics, Science, and Social Science. Additionally, students are keen to improve their English language fluency and vocabulary, but the library currently possesses very few illustrated English storybooks, biographies, and abridged classics.<br><br>
+            Our Board Public Examinations are coming soon. We need more question banks and reference books for Maths and Science. Also, many students want to improve their English reading and speaking skills. But we have only a few English storybooks and grammar guides in our library.<br><br>
 
-            We kindly request you to sanction funds to purchase these essential reference materials and engaging storybooks for our library, which will greatly benefit all students.<br><br>
+            We kindly request you to buy more study guides and interesting English storybooks for our school library. It will help us score high marks in the public exams.<br><br>
 
             Thanking you,<br><br>
 
@@ -541,7 +559,7 @@ const ENGLISH_WRITING_DATA = {
           </div>`
         },
         {
-          id: "eng_w_fl4",
+          id: "eng_fl_4",
           type: "5m",
           mark: "5 Marks",
           examTag: "Model Letter (Ordering Goods)",
@@ -557,18 +575,18 @@ const ENGLISH_WRITING_DATA = {
 
             <b>To</b><br>
             The Sales Manager,<br>
-            Oxford Book Publishing House,<br>
+            Oxford Book House,<br>
             Mount Road, Chennai – 600 002.<br><br>
 
             <b>Sir,</b><br><br>
 
-            <b>Sub:</b> Order for 50 copies of English-English-Tamil School Dictionaries – Reg.<br><br>
+            <b>Sub:</b> Order for 50 copies of English-English-Tamil Dictionaries – Reg.<br><br>
 
-            We wish to place a bulk order for 50 copies of the latest edition of your celebrated <b>'Oxford English-English-Tamil Comprehensive School Dictionary'</b> for our school reading library.<br><br>
+            We wish to place an order for 50 copies of your latest edition of <b>'Oxford English-English-Tamil Dictionary'</b> for our school library.<br><br>
 
-            Please ensure that all copies are in immaculate condition, neatly hardbound, and free of printing or binding defects. As an educational institution, we expect the customary 20% institutional discount on the catalogue price.<br><br>
+            Please ensure that all copies are in good condition without any torn or missing pages. Since we are a government school, kindly give us the usual 20% school discount.<br><br>
 
-            Kindly pack the books securely and dispatch them via reliable parcel service to our school address within ten working days. Payment will be released promptly through demand draft upon receipt and verification of the consignment.<br><br>
+            Please pack the books carefully and send them by parcel service within one week. We will send the payment through Demand Draft immediately after receiving the books.<br><br>
 
             Thanking you,<br><br>
 
@@ -582,13 +600,13 @@ const ENGLISH_WRITING_DATA = {
               <b>Address on the Envelope:</b><br>
               To<br>
               The Sales Manager,<br>
-              Oxford Book Publishing House,<br>
+              Oxford Book House,<br>
               Mount Road, Chennai – 600 002.
             </div>
           </div>`
         },
         {
-          id: "eng_w_fl5",
+          id: "eng_fl_5",
           type: "5m",
           mark: "5 Marks",
           examTag: "Model Letter (Product Complaint)",
@@ -597,25 +615,25 @@ const ENGLISH_WRITING_DATA = {
           ans: `<div style="line-height:1.7; font-size:15px; border:1px solid #e2e8f0; padding:16px; border-radius:6px; background:#fff;">
             <b>From</b><br>
             M. Karthik,<br>
-            18, Cross Cut Road, Gandhipuram,<br>
+            18, Cross Cut Road,<br>
             Coimbatore – 641 012.<br><br>
 
             16 March 2026<br><br>
 
             <b>To</b><br>
             The Store Manager,<br>
-            Supreme Electronics & Mobiles,<br>
-            DB Road, R.S. Puram, Coimbatore – 641 002.<br><br>
+            Supreme Mobiles & Electronics,<br>
+            DB Road, Coimbatore – 641 002.<br><br>
 
             <b>Sir,</b><br><br>
 
-            <b>Sub:</b> Complaint regarding defective Samsung Galaxy Tab (Invoice No. SE-4582) – Replacement requested – Reg.<br><br>
+            <b>Sub:</b> Defective Samsung Tablet (Bill No. 4582) – Replacement requested – Reg.<br><br>
 
-            I purchased a Samsung Galaxy Tab (Model A9+, 64GB) from your showroom on 5th March 2026 vide Cash Memo / Bill No. SE-4582. A photocopy of the invoice and warranty card is enclosed herewith.<br><br>
+            I bought a Samsung Galaxy Tablet from your shop on 5th March 2026 vide Bill No. 4582. A copy of the bill is enclosed with this letter.<br><br>
 
-            To my utter dismay, the device started malfunctioning within a week of purchase. The display screen flickers continuously and freezes within ten minutes of use. Moreover, the battery discharges within two hours despite being charged fully overnight. When I attempted to use the charger supplied in the box, the device became dangerously overheated.<br><br>
+            The tablet worked well for only three days. Now the display screen flickers continuously and gets switched off suddenly. Also, the battery drains within one hour of use. When I put the charger, the tablet gets very hot.<br><br>
 
-            Since the product is covered under the standard one-year replacement warranty, I request you to either replace the defective tablet with a fresh piece or refund the full purchase amount at your earliest convenience.<br><br>
+            The product has a one-year warranty. Therefore, I request you to replace the defective tablet with a new one or refund my money soon.<br><br>
 
             Thanking you,<br><br>
 
@@ -628,22 +646,22 @@ const ENGLISH_WRITING_DATA = {
               <b>Address on the Envelope:</b><br>
               To<br>
               The Store Manager,<br>
-              Supreme Electronics & Mobiles,<br>
-              DB Road, R.S. Puram, Coimbatore – 641 002.
+              Supreme Mobiles & Electronics,<br>
+              DB Road, Coimbatore – 641 002.
             </div>
           </div>`
         },
         {
-          id: "eng_w_fl6",
+          id: "eng_fl_6",
           type: "5m",
           mark: "5 Marks",
           examTag: "Model Letter (River Pollution)",
           isImportant: true,
-          q: "Write a letter to the Editor about the heavy pollution of rivers caused by industrial effluents and idol immersions.",
+          q: "Write a letter to the Editor about the heavy pollution of rivers caused by factory waste and plastic garbage.",
           ans: `<div style="line-height:1.7; font-size:15px; border:1px solid #e2e8f0; padding:16px; border-radius:6px; background:#fff;">
             <b>From</b><br>
             G. Anitha,<br>
-            7, Riverside Street, Thillai Nagar,<br>
+            7, Riverside Street,<br>
             Tiruchirappalli – 620 018.<br><br>
 
             16 March 2026<br><br>
@@ -655,13 +673,13 @@ const ENGLISH_WRITING_DATA = {
 
             <b>Respected Sir,</b><br><br>
 
-            <b>Sub:</b> Alarming pollution of River Cauvery due to industrial effluents and waste dumping – Reg.<br><br>
+            <b>Sub:</b> Heavy pollution of River Cauvery – Urgent action requested – Reg.<br><br>
 
-            Kindly permit me to use the esteemed columns of your widely read newspaper to voice deep anxiety regarding the progressive degradation of our sacred River Cauvery.<br><br>
+            I wish to use the columns of your respected newspaper to highlight the serious pollution of River Cauvery in our city.<br><br>
 
-            The river, which serves as the lifeline for millions of farmers and supplies potable water to urban towns, is being turned into a toxic sewer. Chemical dyeing units and tanneries upstream brazenly discharge untreated poisonous effluents directly into the river channel. Furthermore, religious idol immersions painted with non-biodegradable synthetic varnishes and heavy dumping of plastic trash have suffocated aquatic life.<br><br>
+            Cauvery is the lifeline of farmers and people in Tamil Nadu. But chemical factories are dumping dirty, untreated waste water into the river. Also, people throw plastic covers, bottles, and worship wastes into the water. The river water has turned black and smells bad. Fishes are dying, and the water is no longer safe for drinking or bathing.<br><br>
 
-            The Tamil Nadu Pollution Control Board must inspect all industrial discharge outlets stringently, enforce mandatory zero-liquid-discharge systems, and penalise violators. Public awareness campaigns along riverbanks must be initiated immediately to preserve our lifeline.<br><br>
+            The Pollution Control Board must take strict action against polluting factories and ban throwing plastics into rivers. We must protect our rivers for the future.<br><br>
 
             Thanking you,<br><br>
 
@@ -674,43 +692,20 @@ const ENGLISH_WRITING_DATA = {
               <b>Address on the Envelope:</b><br>
               To<br>
               The Editor,<br>
-              The Indian Express,<br>
+              Indian Express,<br>
               Cantonment, Trichy – 620 001.
             </div>
-          </div>`
-        },
-        {
-          id: "eng_w_fl7",
-          type: "tips",
-          mark: "Practice Topics",
-          examTag: "10 Formal Letter Practice Questions",
-          isImportant: false,
-          q: "10 Important Formal Letter Practice Questions for Public Exam Drill",
-          ans: `<div style="line-height:1.8; font-size:15px;">
-            <p>Practice writing these 10 important formal letters using the official 5-mark structure:</p>
-            <ol style="padding-left:20px;">
-              <li style="margin-bottom:10px;"><b>Letter to Health Officer:</b> Requesting to organise a free medical / eye screening and dengue awareness camp in your village.</li>
-              <li style="margin-bottom:10px;"><b>Letter to Postmaster:</b> Complaining about delayed delivery of letters, money orders, and misplacement of parcels in your area.</li>
-              <li style="margin-bottom:10px;"><b>Letter to Assistant Engineer (TNEB):</b> Complaining about frequent unscheduled load-shedding and power cuts during night study hours.</li>
-              <li style="margin-bottom:10px;"><b>Letter to Editor on Plastic Menace:</b> Highlighting the rampant use of banned single-use plastic carry bags and urging municipal checks.</li>
-              <li style="margin-bottom:10px;"><b>Letter to Headmaster for Leave:</b> Requesting three days leave of absence due to an unexpected family bereavement or illness.</li>
-              <li style="margin-bottom:10px;"><b>Letter to Sports Dealer:</b> Placing an order for cricket bats, footballs, volleyball nets, and shuttle rackets for your school sports club.</li>
-              <li style="margin-bottom:10px;"><b>Letter to Police Inspector:</b> Reporting the theft of your bicycle parked outside the public library.</li>
-              <li style="margin-bottom:10px;"><b>Letter to Editor on Road Safety:</b> Emphasising the compulsory wearing of helmets, seatbelts, and banning mobile use while driving.</li>
-              <li style="margin-bottom:10px;"><b>Letter to Bank Manager:</b> Requesting information on educational loan schemes and documentation required for higher professional studies.</li>
-              <li style="margin-bottom:10px;"><b>Letter to District Forest Officer:</b> Requesting 200 free tree saplings for a school campus afforestation drive on World Environment Day.</li>
-            </ol>
           </div>`
         }
       ]
     },
     {
-      id: "sec_eng_w_3",
-      title: "Part 3: Informal Letter Writing (Personal 5-Mark Format + 4 Model Letters + 10 Practice Questions)",
-      author: "Samacheer Kalvi English Writing Guide",
+      id: "sec_eng_il",
+      title: "Part 2: Informal Letters (Personal 5-Mark Format + 4 Model Letters)",
+      author: "Samacheer Kalvi 10th English Guide",
       questions: [
         {
-          id: "eng_w_il_format",
+          id: "eng_il_fmt",
           type: "tips",
           mark: "Format Guide",
           examTag: "Personal Letter Format",
@@ -721,53 +716,53 @@ const ENGLISH_WRITING_DATA = {
               <h4 style="margin:0 0 6px 0; color:#a21caf;">Key Differences from Formal Letters:</h4>
               <ul style="margin:0; padding-left:20px;">
                 <li><b>No "To" address inside the letter:</b> Only the sender's address and date are written at the top.</li>
-                <li><b>No formal Subject line:</b> Informal letters go straight from friendly salutation to affectionate text.</li>
-                <li><b>Affectionate Salutation:</b> e.g., <i>Dear Ravi,</i> or <i>Dear Father / Mother,</i></li>
-                <li><b>Warm Closing:</b> <i>Yours lovingly,</i> / <i>Your affectionate friend,</i></li>
-                <li><b>Address on Envelope:</b> Mandatory at the bottom for full marks!</li>
+                <li><b>No formal Subject line:</b> Go straight from friendly salutation to warm content.</li>
+                <li><b>Salutation:</b> <i>Dear friend,</i> or <i>Dear Father / Mother,</i></li>
+                <li><b>Subscription:</b> <i>Yours lovingly,</i> / <i>Your affectionate friend,</i></li>
+                <li><b>Address on the Envelope:</b> Always draw the box at the end for 1 full mark!</li>
               </ul>
             </div>
 
             <div style="border:1px dashed #64748b; padding:16px; border-radius:6px; background:#f8fafc; font-family:monospace;">
-              [Sender's Address: House No., Street, City]<br>
-              [Date: e.g., 16 March 2026]<br><br>
+              [Sender's Address: Street, City]<br>
+              [Date: 16 March 2026]<br><br>
 
               <b>Dear [Friend's Name / Father / Mother],</b><br><br>
 
-              &nbsp;&nbsp;<b>Paragraph 1 (Warm Opening):</b> Inquire about their health and express warmth (e.g., <i>"I am hale and hearty here and hope you are in the best of spirits..."</i>).<br><br>
-              &nbsp;&nbsp;<b>Paragraph 2 (Main Message):</b> Vividly narrate the event, sharing details, impressions, emotions, or invitations.<br><br>
-              &nbsp;&nbsp;<b>Paragraph 3 (Affectionate Close):</b> Send warm regards to elders, love to younger ones, and state anticipation of a speedy reply.<br><br>
+              &nbsp;&nbsp;<b>Paragraph 1:</b> Ask how they are and say you are doing fine.<br><br>
+              &nbsp;&nbsp;<b>Paragraph 2:</b> Tell the main story, news, or invitation in simple sentences.<br><br>
+              &nbsp;&nbsp;<b>Paragraph 3:</b> Send warm regards to parents and ask them to write back.<br><br>
 
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Yours lovingly / Your affectionate friend,</b><br>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Your Name]<br><br>
 
               <b>Address on the Envelope:</b><br>
               To<br>
-              [Recipient's Name and Complete Postal Address with Pincode]
+              [Recipient's Name and Complete Address with Pincode]
             </div>
           </div>`
         },
         {
-          id: "eng_w_il1",
+          id: "eng_il_1",
           type: "5m",
           mark: "5 Marks",
           examTag: "Model Letter (Annual Day)",
           isImportant: true,
-          q: "Write a letter to your friend describing your school Annual Day celebration and your prize in the speech competition.",
+          q: "Write a letter to your friend describing your school Annual Day celebration and your prize in speech competition.",
           ans: `<div style="line-height:1.7; font-size:15px; border:1px solid #e2e8f0; padding:16px; border-radius:6px; background:#fff;">
             15, Gandhi Road,<br>
-            Periyar Nagar, Erode – 638 001.<br>
+            Erode – 638 001.<br>
             16 March 2026.<br><br>
 
             <b>Dear Ravi,</b><br><br>
 
-            I hope this letter finds you in fine health and cheerful spirits. I am doing very well here with my studies. I am writing this letter to share the unforgettable joy of our School Annual Day celebration held last Friday.<br><br>
+            How are you? I am fine here and studying well. I am writing this letter to tell you about our school Annual Day function held last week.<br><br>
 
-            Our school campus was brightly illuminated with colourful serial lamps and festive shamianas. The District Collector presided over the gala function as Chief Guest. The evening commenced with a melodious prayer song, followed by our Headmaster reading out the annual achievements report. The students staged vibrant folk dances, skits, and a musical choir that drew thunderous applause from the parents.<br><br>
+            Our school was decorated with colourful lights and flowers. The District Collector was the Chief Guest. Our Headmaster welcomed all parents. The students performed folk dance, drama, and songs. The programmes were very entertaining.<br><br>
 
-            You will be thrilled to learn that I bagged the First Prize in the Inter-School English Elocution Competition on 'Youth's Role in Nation Building'! When the Chief Guest handed me the shining rolling trophy, the auditorium echoed with cheers. I sorely missed your presence on this proud day.<br><br>
+            I participated in the English Speech Competition and won the First Prize! The Chief Guest gave me a beautiful trophy and a certificate. I felt very happy and proud. I missed you very much on that day.<br><br>
 
-            Please convey my affectionate pranams to your respected parents and loving greetings to your younger sister Anu. Do write to me about your school news.<br><br>
+            Please convey my regards to your parents and love to your little sister Anu. Write to me soon.<br><br>
 
             <div style="text-align:right;">
               Yours lovingly,<br>
@@ -778,13 +773,13 @@ const ENGLISH_WRITING_DATA = {
               <b>Address on the Envelope:</b><br>
               To<br>
               P. Ravi,<br>
-              24, V.O.C. Street, Fort Area,<br>
+              24, V.O.C. Street,<br>
               Coimbatore – 641 001.
             </div>
           </div>`
         },
         {
-          id: "eng_w_il2",
+          id: "eng_il_2",
           type: "5m",
           mark: "5 Marks",
           examTag: "Model Letter (Birthday Invitation)",
@@ -792,18 +787,18 @@ const ENGLISH_WRITING_DATA = {
           q: "Write a letter to your friend inviting him / her to your 15th Birthday celebration.",
           ans: `<div style="line-height:1.7; font-size:15px; border:1px solid #e2e8f0; padding:16px; border-radius:6px; background:#fff;">
             10, Nehru Street,<br>
-            Fairlands, Salem – 636 016.<br>
+            Salem – 636 016.<br>
             16 March 2026.<br><br>
 
             <b>Dear Mohan,</b><br><br>
 
-            Hearty greetings! I hope you are enjoying your weekend. It has been quite a while since we met and spent time chatting together.<br><br>
+            I hope you are doing well. It has been a long time since we met and played together.<br><br>
 
-            I am thrilled to let you know that my fifteenth birthday falls on Tuesday, 25th March 2026. My parents have planned a grand celebration at our home from 6:00 p.m. onwards. We have arranged fun musical games, a special cake-cutting ceremony, and a scrumptious buffet dinner.<br><br>
+            I am very happy to invite you to my 15th birthday celebration on Tuesday, 25th March 2026. We have arranged a small party at my home at 6:00 p.m. We will have a cake cutting, fun games, and delicious dinner.<br><br>
 
-            All our school buddies are coming, and the celebration will be incomplete without you! Please plan to arrive by 5:00 p.m. so we can play together before the party starts. You are welcome to bring your brother along too.<br><br>
+            All our school friends are coming. The celebration will be more joyful if you are with us. Please come by 5:00 p.m. so that we can spend more time together. Bring your brother too.<br><br>
 
-            Kindly convey my heartfelt regards to your uncle and aunt. Eagerly waiting for your arrival!<br><br>
+            Convey my respects to your parents. Eagerly waiting to see you on my birthday!<br><br>
 
             <div style="text-align:right;">
               Your affectionate friend,<br>
@@ -814,13 +809,13 @@ const ENGLISH_WRITING_DATA = {
               <b>Address on the Envelope:</b><br>
               To<br>
               R. Mohan,<br>
-              45, Anna Salai, Suramangalam,<br>
+              45, Anna Salai,<br>
               Salem – 636 005.
             </div>
           </div>`
         },
         {
-          id: "eng_w_il3",
+          id: "eng_il_3",
           type: "5m",
           mark: "5 Marks",
           examTag: "Model Letter (Father / Exam Prep)",
@@ -834,15 +829,13 @@ const ENGLISH_WRITING_DATA = {
 
             <b>My dear Father,</b><br><br>
 
-            I received your affectionate letter and money order yesterday. I was immensely relieved to learn that everyone at home is keeping good health.<br><br>
+            I received your kind letter. I was very happy to know that everyone at home is doing well.<br><br>
 
-            You will be happy to know that my preparations for the upcoming 10th Standard Board Public Examinations are progressing very smoothly. I wake up every morning at 5:00 a.m. to study challenging topics in Mathematics and Science when my mind is freshest. I have formulated a disciplined timetable giving equal weightage to all five subjects.<br><br>
+            My preparations for the 10th Board Public Exams are going on very smoothly. I wake up early at 5:00 a.m. every day and study Maths and Science. I have completed all textbook portions. Our teachers are conducting daily revision tests and helping us clear our doubts patiently.<br><br>
 
-            Our school teachers are conducting daily revision tests and clearing all our individual doubts patiently. In the recent second revision examination, I scored 482 out of 500 marks. I am currently solving previous five years' public exam question papers to master time management.<br><br>
+            In the recent revision test, I scored 482 out of 500 marks. Now I am practicing previous years' public question papers to write faster. Please do not worry about my health; I eat well and sleep on time. I will work hard and get high marks to make you proud.<br><br>
 
-            Please do not worry about my health; I eat nutritious hostel meals and sleep on time. I am confident of achieving a centum in Maths and securing high school-first marks to make you proud.<br><br>
-
-            Convey my loving pranams to dearest Mother and affectionate kisses to little brother Kavin.<br><br>
+            Convey my loving regards to Mother and love to little brother Kavin.<br><br>
 
             <div style="text-align:right;">
               Your loving son,<br>
@@ -859,7 +852,7 @@ const ENGLISH_WRITING_DATA = {
           </div>`
         },
         {
-          id: "eng_w_il4",
+          id: "eng_il_4",
           type: "5m",
           mark: "5 Marks",
           examTag: "Model Letter (Educational Tour)",
@@ -872,13 +865,13 @@ const ENGLISH_WRITING_DATA = {
 
             <b>Dear Dinesh,</b><br><br>
 
-            How are you? I hope you are doing great. I am bursting with excitement to share the wonderful memories of our three-day school educational tour to Chennai and Mahabalipuram last week.<br><br>
+            How are you? I hope you are fine. I am writing this letter to share my wonderful experience during our school educational tour to Chennai and Mahabalipuram last week.<br><br>
 
-            We travelled by tourist bus with our Science and History teachers. In Chennai, we visited the Government Museum in Egmore, gazing in awe at bronze Chola idols and ancient geological fossils. Later, we explored the Birla Planetarium, where a 3D sky-show brought the mysteries of the solar system alive. In the evening, we enjoyed the refreshing breeze at Marina Beach.<br><br>
+            We travelled by bus with our teachers. In Chennai, we visited the Government Museum, Birla Planetarium, and Marina Beach. Seeing the stars and planets in the planetarium was amazing. In the evening, we enjoyed the cool breeze at Marina Beach.<br><br>
 
-            The crowning highlight was our visit to Mahabalipuram. Looking at the Shore Temple standing tall against roaring sea waves, Arjuna's Penance rock relief, and the monolithic Pancha Rathas carved out of single granite boulders was mesmerizing! Our History teacher explained how Pallava artisans chiseled those architectural wonders over thirteen centuries ago.<br><br>
+            The best part was visiting Mahabalipuram. We saw the Shore Temple, Pancha Rathas, and Arjuna's Penance. Our teacher explained that these stone temples were carved by Pallava kings more than 1300 years ago. I learned so many new things during the trip.<br><br>
 
-            The tour was a delightful blend of fun, friendship, and profound learning. I bought a small carved stone pen-stand as a souvenir for you. Convey my warm regards to your parents.<br><br>
+            The tour was very useful and memorable. I bought a small souvenir for you. Convey my respects to your parents.<br><br>
 
             <div style="text-align:right;">
               Yours affectionately,<br>
@@ -889,50 +882,82 @@ const ENGLISH_WRITING_DATA = {
               <b>Address on the Envelope:</b><br>
               To<br>
               S. Dinesh,<br>
-              18, East Coast Road, Thiruvanmiyur,<br>
+              18, East Coast Road,<br>
               Chennai – 600 041.
             </div>
-          </div>`
-        },
-        {
-          id: "eng_w_il5",
-          type: "tips",
-          mark: "Practice Topics",
-          examTag: "10 Informal Letter Practice Questions",
-          isImportant: false,
-          q: "10 Important Informal Letter Practice Questions for Homework & Drill",
-          ans: `<div style="line-height:1.8; font-size:15px;">
-            <p>Master your personal letter writing with these 10 common exam topics:</p>
-            <ol style="padding-left:20px;">
-              <li style="margin-bottom:10px;"><b>Letter to friend:</b> Advising him/her to develop the habit of daily English newspaper reading to improve vocabulary.</li>
-              <li style="margin-bottom:10px;"><b>Letter to father:</b> Requesting him to send ₹1,500 towards purchase of public examination guide books and special coaching class fees.</li>
-              <li style="margin-bottom:10px;"><b>Letter to cousin:</b> Congratulating him/her on securing the State First rank in the National Talent Search Examination (NTSE).</li>
-              <li style="margin-bottom:10px;"><b>Letter to friend:</b> Describing how you celebrated Pongal / Diwali festival with your joint family in your native village.</li>
-              <li style="margin-bottom:10px;"><b>Letter to younger brother:</b> Emphasising the dangers of junk food, mobile addiction, and urging him to play outdoor sports daily.</li>
-              <li style="margin-bottom:10px;"><b>Letter to friend:</b> Inviting him/her to spend the upcoming summer vacation with you in your hometown / hill station.</li>
-              <li style="margin-bottom:10px;"><b>Letter to uncle:</b> Thanking him warmly for the inspiring wristwatch he gifted on your birthday.</li>
-              <li style="margin-bottom:10px;"><b>Letter to friend:</b> Describing your visit to the Tanjore Big Temple and expressing wonder at Chola architecture.</li>
-              <li style="margin-bottom:10px;"><b>Letter to mother:</b> Describing your first week experience in the school hostel and your new roommates.</li>
-              <li style="margin-bottom:10px;"><b>Letter to sick classmate:</b> Wishing him a speedy recovery from fever and promising to share class notes and homework.</li>
-            </ol>
           </div>`
         }
       ]
     },
     {
-      id: "sec_eng_w_4",
-      title: "Part 4: Public Exam Writing Rules, 5-Mark Marking Scheme & Centum Tips",
-      author: "Samacheer Kalvi English Writing Guide",
+      id: "sec_eng_letter_practice",
+      title: "Part 3: 20 Practice Questions (10 Formal + 10 Informal)",
+      author: "Samacheer Kalvi 10th English Guide",
       questions: [
         {
-          id: "eng_w_guide1",
+          id: "eng_letter_practice_all",
           type: "tips",
-          mark: "Scoring Blueprint",
+          mark: "Practice Topics",
+          examTag: "20 Practice Letter Questions",
+          isImportant: false,
+          q: "20 Important Practice Letter Topics for Public Exam Preparation",
+          ans: `<div style="line-height:1.8; font-size:15px;">
+            <h4 style="color:#2563eb; margin:0 0 8px 0;">10 Formal Letter Practice Topics:</h4>
+            <ol style="padding-left:20px; margin-bottom:16px;">
+              <li>Letter to Health Officer requesting a free eye camp in your village.</li>
+              <li>Letter to Postmaster complaining about delay in delivering letters.</li>
+              <li>Letter to Electricity Board (TNEB) complaining about frequent power cuts during exam time.</li>
+              <li>Letter to Editor about the dangers of using plastic bags.</li>
+              <li>Letter to Headmaster requesting 3 days leave due to fever.</li>
+              <li>Letter to Sports Dealer ordering cricket and football items for school.</li>
+              <li>Letter to Police Station reporting the loss of your bicycle.</li>
+              <li>Letter to Editor highlighting the need for wearing helmets on roads.</li>
+              <li>Letter to Bank Manager asking for information about education loans.</li>
+              <li>Letter to Forest Officer requesting free saplings for tree plantation in school.</li>
+            </ol>
+
+            <h4 style="color:#c026d3; margin:0 0 8px 0;">10 Informal Letter Practice Topics:</h4>
+            <ol style="padding-left:20px;">
+              <li>Letter to friend advising him to read English newspapers daily.</li>
+              <li>Letter to father asking for ₹1,500 for exam fee and guide books.</li>
+              <li>Letter to cousin congratulating him for getting school first mark.</li>
+              <li>Letter to friend describing how you celebrated Pongal in your village.</li>
+              <li>Letter to younger brother advising him not to eat junk food.</li>
+              <li>Letter to friend inviting him to spend summer holidays in your village.</li>
+              <li>Letter to uncle thanking him for the wrist watch he gave on your birthday.</li>
+              <li>Letter to friend describing your visit to the Tanjore Big Temple.</li>
+              <li>Letter to mother telling her about your new friends in the hostel.</li>
+              <li>Letter to a sick friend wishing him a speedy recovery.</li>
+            </ol>
+          </div>`
+        }
+      ]
+    }
+  ]
+};
+
+// =======================================================================
+// 3. WRITING GUIDELINES & SCORING RULES DATA
+// =======================================================================
+const ENGLISH_WRITING_GUIDE_DATA = {
+  unit: "Exam Rules",
+  title: "English Writing Skills: 5-Mark Letter Blueprint, 8-Mark Rules & Common Mistakes",
+  stories: [],
+  subSections: [
+    {
+      id: "sec_eng_guide_blueprint",
+      title: "Part 1: Official 5-Mark Letter Writing Blueprint & Step Marks",
+      author: "Samacheer Kalvi 10th English Guide",
+      questions: [
+        {
+          id: "eng_rule_blueprint",
+          type: "tips",
+          mark: "Blueprint",
           examTag: "Official 5-Mark Scheme",
           isImportant: true,
           q: "How are 5 marks awarded for Letter Writing in the Tamil Nadu SSLC Board Exam?",
           ans: `<div style="line-height:1.8; font-size:15px;">
-            <p>According to the official <b>Directorate of Government Examinations (DGE)</b> answer key blueprint, marks for Letter Writing (Question No. 43) are allotted step-by-step:</p>
+            <p>According to the official <b>Directorate of Government Examinations (DGE)</b> blueprint, marks for Letter Writing (Question No. 43) are allotted step-by-step:</p>
 
             <table style="width:100%; border-collapse:collapse; margin:12px 0; background:#fff; font-size:14px;">
               <thead>
@@ -976,89 +1001,103 @@ const ENGLISH_WRITING_DATA = {
             </table>
 
             <div style="background:#fffbeb; border-left:4px solid #f59e0b; padding:10px 14px; border-radius:4px;">
-              <b>Golden Rule:</b> Never omit the <b>"Address on the Envelope"</b> box at the end! It carries 0.5 to 1 full mark in the evaluation scheme.
+              <b>Golden Rule:</b> Never forget the <b>"Address on the Envelope"</b> box! It carries 1 full mark in the public exam answer key.
             </div>
           </div>`
-        },
+        }
+      ]
+    },
+    {
+      id: "sec_eng_guide_diff",
+      title: "Part 2: General Essay vs 8-Mark Hints Development Story",
+      author: "Samacheer Kalvi 10th English Guide",
+      questions: [
         {
-          id: "eng_w_guide2",
+          id: "eng_rule_diff",
           type: "tips",
-          mark: "Exam Guidelines",
-          examTag: "General Essay vs Hints Development",
+          mark: "Comparison",
+          examTag: "General Essay vs Hints Story",
           isImportant: true,
           q: "What is the key difference between General Essay Writing and 8-Mark Hints Development?",
           ans: `<div style="line-height:1.8; font-size:15px;">
-            <p>Students often confuse <b>General Essay Practice</b> with the <b>8-Mark Supplementary Hints Development</b> question. Understand the critical differences:</p>
+            <p>Students must know the difference between General Essay and Hints Development:</p>
 
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:14px 0;">
               <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:6px; padding:12px;">
                 <h4 style="margin:0 0 8px 0; color:#1e40af;">General Essay Writing</h4>
                 <ul style="margin:0; padding-left:18px; font-size:13.5px;">
-                  <li><b>Topic type:</b> General / Social theme (Education, Trees, Pollution, Science).</li>
-                  <li><b>Structure:</b> Introduction, 3-4 thematic subheadings, conclusion, and quotation.</li>
-                  <li><b>Length:</b> Approx. 150–200 words.</li>
-                  <li><b>Purpose:</b> Builds advanced English articulation, paragraph composition, and essay skills.</li>
+                  <li><b>Topic type:</b> General themes (Education, Trees, Pollution, Science, Water).</li>
+                  <li><b>Structure:</b> Outline, Introduction, 3-4 subheadings, conclusion, and quotation.</li>
+                  <li><b>Length:</b> Approx. 150–180 words.</li>
+                  <li><b>Purpose:</b> Improves paragraph writing and general English skills.</li>
                 </ul>
               </div>
 
               <div style="background:#fdf2f8; border:1px solid #fbcfe8; border-radius:6px; padding:12px;">
-                <h4 style="margin:0 0 8px 0; color:#9d174d;">8-Mark Hints Development (Q.44/47)</h4>
+                <h4 style="margin:0 0 8px 0; color:#9d174d;">8-Mark Hints Development (Q.44 / 47)</h4>
                 <ul style="margin:0; padding-left:18px; font-size:13.5px;">
-                  <li><b>Topic type:</b> Based on prescribed 10th Supplementary stories (The Tempest, Zigzag, Mulan, etc.) or moral tales.</li>
-                  <li><b>Input:</b> Hyphenated hints given in question paper (e.g. <i>Prospero - Duke of Milan - brother Antonio - island...</i>).</li>
-                  <li><b>Mandatory elements:</b> Suitable Title, coherent story paragraphs connecting ALL hints, and a clear Moral.</li>
+                  <li><b>Topic type:</b> Based on 10th Supplementary stories (The Tempest, Zigzag, Mulan, etc.) or moral tales.</li>
+                  <li><b>Question form:</b> Hints separated by hyphens (e.g., <i>Prospero - Duke of Milan - island...</i>).</li>
+                  <li><b>Must write:</b> Suitable Title, story paragraphs connecting ALL hints, and Moral.</li>
                   <li><b>Length:</b> Approx. 150 words.</li>
                 </ul>
               </div>
             </div>
           </div>`
-        },
+        }
+      ]
+    },
+    {
+      id: "sec_eng_guide_mistakes",
+      title: "Part 3: Top 7 Common Mistakes to Avoid in Public Exam Writing",
+      author: "Samacheer Kalvi 10th English Guide",
+      questions: [
         {
-          id: "eng_w_guide3",
+          id: "eng_rule_mistakes",
           type: "tips",
-          mark: "Centum Checklist",
-          examTag: "Top 7 Common Mistakes to Avoid",
+          mark: "Centum Tips",
+          examTag: "Top 7 Mistakes to Avoid",
           isImportant: true,
           q: "Top 7 Common Mistakes that cost marks in English Writing Tasks (And How to Avoid Them)",
           ans: `<div style="line-height:1.8; font-size:15px;">
-            <p>Board exam evaluators deduct marks for these frequent careless slips:</p>
+            <p>Students lose valuable marks because of these simple careless errors:</p>
             <ol style="padding-left:20px;">
               <li style="margin-bottom:12px;">
-                <b>The Apostrophe Error in 'Yours':</b><br>
+                <b>The Apostrophe Mistake in 'Yours':</b><br>
                 <span style="color:#dc2626; font-weight:bold;">WRONG:</span> <i>Your's faithfully / Your's lovingly</i><br>
                 <span style="color:#16a34a; font-weight:bold;">CORRECT:</span> <b>Yours faithfully / Yours lovingly</b> (Never use an apostrophe in 'Yours'!).
               </li>
 
               <li style="margin-bottom:12px;">
-                <b>Capitalization in Subscription:</b><br>
+                <b>Capital Letter in Subscription:</b><br>
                 <span style="color:#dc2626; font-weight:bold;">WRONG:</span> <i>Yours Faithfully / Yours Lovingly</i><br>
-                <span style="color:#16a34a; font-weight:bold;">CORRECT:</span> <b>Yours faithfully / Yours lovingly</b> (The second word must start with a small letter).
+                <span style="color:#16a34a; font-weight:bold;">CORRECT:</span> <b>Yours faithfully / Yours lovingly</b> (The second word must start with a small letter 'f' or 'l').
               </li>
 
               <li style="margin-bottom:12px;">
                 <b>Punctuation in Address:</b><br>
-                Always put commas at the end of each address line, and a period/full stop at the end of the city with pincode:
-                <br><i>12, Anna Salai,</i><br><i>Gandhi Nagar,</i><br><i>Salem – 636 001.</i>
+                Always put commas at the end of each address line, and a full stop at the end:<br>
+                <i>12, Gandhi Road,</i><br><i>Salem – 636 001.</i>
               </li>
 
               <li style="margin-bottom:12px;">
-                <b>Subject Line Placement in Formal Letters:</b><br>
-                Write the <b>Subject line AFTER the Salutation (Respected Sir,)</b>, not before it. Keep the subject line concise and end it with '- Reg.'
+                <b>Subject Line Position:</b><br>
+                In formal letters, write <b>Respected Sir,</b> first, and write the <b>Subject line below it</b>. End it with '- Reg.'
               </li>
 
               <li style="margin-bottom:12px;">
-                <b>Paragraph Division:</b><br>
-                Never write the entire letter or essay as one huge undivided block of text! Divide the body into 3 clear, distinct paragraphs.
+                <b>Divide into Paragraphs:</b><br>
+                Never write the entire letter or essay as one huge block of text! Divide into 3 clear, neat paragraphs.
               </li>
 
               <li style="margin-bottom:12px;">
-                <b>Omitting the Address on Envelope:</b><br>
-                Many students forget to draw the envelope box at the very end. Always draw a neat pencil box titled <b>'Address on the Envelope'</b> and write the recipient's address with pincode.
+                <b>Forgetting the Envelope Box:</b><br>
+                Always draw a neat pencil box at the end with the title <b>'Address on the Envelope'</b>.
               </li>
 
               <li style="margin-bottom:12px;">
-                <b>Handwriting & Margins:</b><br>
-                Leave a 1-inch neat left margin. Underline key headings and memorable quotes neatly using a pencil. Clean handwriting creates an immediate centum-grade impression!
+                <b>Simple and Clear Sentences:</b><br>
+                Do not use difficult words with wrong spellings. Write simple, correct English sentences to get full 100% marks!
               </li>
             </ol>
           </div>`
@@ -1068,6 +1107,23 @@ const ENGLISH_WRITING_DATA = {
   ]
 };
 
+// Aggregated object for backward compatibility
+const ENGLISH_WRITING_DATA = {
+  unit: "Writing Skills",
+  title: "English Writing Skills: Essay Writing & Letter Writing (Formal & Informal)",
+  stories: [],
+  subSections: [
+    ...ENGLISH_ESSAYS_DATA.subSections,
+    ...ENGLISH_LETTERS_DATA.subSections,
+    ...ENGLISH_WRITING_GUIDE_DATA.subSections
+  ]
+};
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = ENGLISH_WRITING_DATA;
+  module.exports = {
+    ENGLISH_ESSAYS_DATA,
+    ENGLISH_LETTERS_DATA,
+    ENGLISH_WRITING_GUIDE_DATA,
+    ENGLISH_WRITING_DATA
+  };
 }

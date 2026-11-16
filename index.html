@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -89,7 +89,7 @@
 <script>
   // Build tracker & Auto-Cache Invalidator for Instant Updates
   (function() {
-    const CURRENT_BUILD = '20261116_v83';
+    const CURRENT_BUILD = '20261116_v84';
     try {
       const prevBuild = localStorage.getItem('vm_build_ver');
       if (prevBuild && prevBuild !== CURRENT_BUILD) {
@@ -130,7 +130,7 @@
 <script src="data_english_u5.js?v=20261104_v51"></script>
 <script src="data_english_u6.js?v=20261104_v51"></script>
 <script src="data_english_u7.js?v=20261116_v82"></script>
-<script src="data_english_writing.js?v=20261116_v83"></script>
+<script src="data_english_writing.js?v=20261116_v84"></script>
   <script src="data_maths_tm_u1.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u2.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
@@ -4788,12 +4788,39 @@
       },
       {
         id: 'english',
-        name: 'ஆங்கிலம்',
+        name: 'English',
         engName: 'English',
         icon: '📘',
         bgColor: '#eff6ff',
         color: '#2563eb',
         lessons: [
+          {
+            id: 'eng_essays',
+            unit: 'Essays',
+            title: 'English Essay Writing (10 Model Essays & Practice Topics)',
+            qCount: (typeof ENGLISH_ESSAYS_DATA !== 'undefined' && ENGLISH_ESSAYS_DATA.subSections) ? ENGLISH_ESSAYS_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 11,
+            subSections: (typeof ENGLISH_ESSAYS_DATA !== 'undefined') ? ENGLISH_ESSAYS_DATA.subSections : [],
+            questions: (typeof ENGLISH_ESSAYS_DATA !== 'undefined' && ENGLISH_ESSAYS_DATA.subSections) ? ENGLISH_ESSAYS_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            stories: []
+          },
+          {
+            id: 'eng_letters',
+            unit: 'Letters',
+            title: 'English Letter Writing: Formal & Informal Letters (10 Models & 20 Practice)',
+            qCount: (typeof ENGLISH_LETTERS_DATA !== 'undefined' && ENGLISH_LETTERS_DATA.subSections) ? ENGLISH_LETTERS_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 13,
+            subSections: (typeof ENGLISH_LETTERS_DATA !== 'undefined') ? ENGLISH_LETTERS_DATA.subSections : [],
+            questions: (typeof ENGLISH_LETTERS_DATA !== 'undefined' && ENGLISH_LETTERS_DATA.subSections) ? ENGLISH_LETTERS_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            stories: []
+          },
+          {
+            id: 'eng_writing_guide',
+            unit: 'Exam Rules',
+            title: 'English Writing Skills: 5-Mark Letter Blueprint, 8-Mark Rules & Common Mistakes',
+            qCount: (typeof ENGLISH_WRITING_GUIDE_DATA !== 'undefined' && ENGLISH_WRITING_GUIDE_DATA.subSections) ? ENGLISH_WRITING_GUIDE_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 3,
+            subSections: (typeof ENGLISH_WRITING_GUIDE_DATA !== 'undefined') ? ENGLISH_WRITING_GUIDE_DATA.subSections : [],
+            questions: (typeof ENGLISH_WRITING_GUIDE_DATA !== 'undefined' && ENGLISH_WRITING_GUIDE_DATA.subSections) ? ENGLISH_WRITING_GUIDE_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            stories: []
+          },
           {
             id: 'eng_u1',
             unit: 'Unit 1',
@@ -4857,15 +4884,6 @@
             subSections: (typeof ENGLISH_UNIT_7_DATA !== 'undefined') ? ENGLISH_UNIT_7_DATA.subSections : [],
             questions: (typeof ENGLISH_UNIT_7_DATA !== 'undefined' && ENGLISH_UNIT_7_DATA.subSections) ? ENGLISH_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             stories: (typeof ENGLISH_UNIT_7_DATA !== 'undefined' && ENGLISH_UNIT_7_DATA.stories) ? ENGLISH_UNIT_7_DATA.stories : []
-          },
-          {
-            id: 'eng_writing',
-            unit: 'Writing Skills',
-            title: 'English Writing Skills: Essay Writing & Letter Writing (Formal & Informal)',
-            qCount: (typeof ENGLISH_WRITING_DATA !== 'undefined' && ENGLISH_WRITING_DATA.subSections) ? ENGLISH_WRITING_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 28,
-            subSections: (typeof ENGLISH_WRITING_DATA !== 'undefined') ? ENGLISH_WRITING_DATA.subSections : [],
-            questions: (typeof ENGLISH_WRITING_DATA !== 'undefined' && ENGLISH_WRITING_DATA.subSections) ? ENGLISH_WRITING_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
-            stories: []
           }
         ]
       },
@@ -6033,7 +6051,7 @@
       badgeBorder = '#3b82f650';
       badgeColor = '#60a5fa';
       badgeText = 'Language & Lit';
-      subTitle = 'His First Flight, The Tempest, Grammar & Stories';
+      subTitle = 'Essay Writing, Letter Writing, Units 1-7 & Grammar';
     }
 
     return `
@@ -6988,6 +7006,21 @@
       lesson.subSections = ENGLISH_UNIT_7_DATA.subSections;
       lesson.questions = ENGLISH_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
       lesson.stories = ENGLISH_UNIT_7_DATA.stories || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'eng_essays' && typeof ENGLISH_ESSAYS_DATA !== 'undefined' && ENGLISH_ESSAYS_DATA.subSections) {
+      lesson.subSections = ENGLISH_ESSAYS_DATA.subSections;
+      lesson.questions = ENGLISH_ESSAYS_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.stories = ENGLISH_ESSAYS_DATA.stories || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'eng_letters' && typeof ENGLISH_LETTERS_DATA !== 'undefined' && ENGLISH_LETTERS_DATA.subSections) {
+      lesson.subSections = ENGLISH_LETTERS_DATA.subSections;
+      lesson.questions = ENGLISH_LETTERS_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.stories = ENGLISH_LETTERS_DATA.stories || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'eng_writing_guide' && typeof ENGLISH_WRITING_GUIDE_DATA !== 'undefined' && ENGLISH_WRITING_GUIDE_DATA.subSections) {
+      lesson.subSections = ENGLISH_WRITING_GUIDE_DATA.subSections;
+      lesson.questions = ENGLISH_WRITING_GUIDE_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.stories = ENGLISH_WRITING_GUIDE_DATA.stories || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'eng_writing' && typeof ENGLISH_WRITING_DATA !== 'undefined' && ENGLISH_WRITING_DATA.subSections) {
       lesson.subSections = ENGLISH_WRITING_DATA.subSections;
@@ -12424,7 +12457,7 @@
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261116_v83')
+        navigator.serviceWorker.register('./sw.js?v=20261116_v84')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

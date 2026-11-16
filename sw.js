@@ -1,10 +1,10 @@
-// =======================================================================
+﻿// =======================================================================
 // உன்னால் முடியும் (Vunnal Mudiyum) - Progressive Web App Service Worker
 // Enables 100% Offline Study for 10th Standard Students
 // Zero-Downtime Architecture - Auto-Update on Deploy Engine
 // =======================================================================
 
-const CACHE_NAME = 'vm-offline-v20261115_v81';
+const CACHE_NAME = 'vm-offline-v20261116_v82';
 
 // Core essential assets for instant offline app shell and subject question banks
 const PRECACHE_ASSETS = [
@@ -111,6 +111,10 @@ const PRECACHE_ASSETS = [
   './data_tamil_u6.js',
   './data_english_u5.js',
   './data_english_u6.js',
+  './data_english_u7.js',
+  './data_tamil_u7.js',
+  './data_tamil_u8.js',
+  './data_tamil_u9.js',
   './data_maths_tm_u5.js',
   './data_maths_tm_u6.js',
   './data_maths_em_u5.js',
@@ -119,10 +123,14 @@ const PRECACHE_ASSETS = [
   './data_maths_tm_u2.js',
   './data_maths_tm_u3.js',
   './data_maths_tm_u4.js',
+  './data_maths_tm_u7.js',
+  './data_maths_tm_u8.js',
   './data_maths_em_u1.js',
   './data_maths_em_u2.js',
   './data_maths_em_u3.js',
   './data_maths_em_u4.js',
+  './data_maths_em_u7.js',
+  './data_maths_em_u8.js',
   './data_science_u1.js',
   './data_science_u2.js',
   './data_science_u3.js',

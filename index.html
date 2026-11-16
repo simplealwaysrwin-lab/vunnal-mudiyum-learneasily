@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -89,7 +89,7 @@
 <script>
   // Build tracker & Auto-Cache Invalidator for Instant Updates
   (function() {
-    const CURRENT_BUILD = '20261110_v66';
+    const CURRENT_BUILD = '20261116_v82';
     try {
       const prevBuild = localStorage.getItem('vm_build_ver');
       if (prevBuild && prevBuild !== CURRENT_BUILD) {
@@ -120,24 +120,32 @@
 <script src="data_tamil_u4.js?v=20261031_v31"></script>
 <script src="data_tamil_u5.js?v=20261104_v51"></script>
 <script src="data_tamil_u6.js?v=20261104_v51"></script>
+<script src="data_tamil_u7.js?v=20261116_v82"></script>
+<script src="data_tamil_u8.js?v=20261116_v82"></script>
+<script src="data_tamil_u9.js?v=20261116_v82"></script>
 <script src="data_english_u1.js?v=20261031_v31"></script>
 <script src="data_english_u2.js?v=20261031_v31"></script>
 <script src="data_english_u3.js?v=20261031_v31"></script>
 <script src="data_english_u4.js?v=20261115_v81"></script>
 <script src="data_english_u5.js?v=20261104_v51"></script>
 <script src="data_english_u6.js?v=20261104_v51"></script>
+<script src="data_english_u7.js?v=20261116_v82"></script>
   <script src="data_maths_tm_u1.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u2.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u4.js?v=20261105_v56"></script>
 <script src="data_maths_tm_u5.js?v=20261104_v51"></script>
 <script src="data_maths_tm_u6.js?v=20261105_v56"></script>
+<script src="data_maths_tm_u7.js?v=20261116_v82"></script>
+<script src="data_maths_tm_u8.js?v=20261116_v82"></script>
   <script src="data_maths_em_u1.js?v=20261103_v50"></script>
 <script src="data_maths_em_u2.js?v=20261103_v50"></script>
 <script src="data_maths_em_u3.js?v=20261031_v31"></script>
 <script src="data_maths_em_u4.js?v=20261105_v56"></script>
 <script src="data_maths_em_u5.js?v=20261104_v51"></script>
 <script src="data_maths_em_u6.js?v=20261105_v56"></script>
+<script src="data_maths_em_u7.js?v=20261116_v82"></script>
+<script src="data_maths_em_u8.js?v=20261116_v82"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
 <script src="data_science_u3.js?v=20261031_v31"></script>
@@ -4748,6 +4756,32 @@
             subSections: (typeof TAMIL_UNIT_6_DATA !== 'undefined') ? TAMIL_UNIT_6_DATA.subSections : [],
             questions: (typeof TAMIL_UNIT_6_DATA !== 'undefined' && TAMIL_UNIT_6_DATA.subSections) ? TAMIL_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             manapaadam: (typeof TAMIL_UNIT_6_DATA !== 'undefined' && TAMIL_UNIT_6_DATA.manapaadam) ? TAMIL_UNIT_6_DATA.manapaadam : []
+          },
+          {
+            id: 'tam_u7',
+            unit: 'இயல் 7',
+            title: 'விதைநெல் (சிற்றகல் ஒளி, ஏர் புதிதா?, மெய்க்கீர்த்தி, சிலப்பதிகாரம், மங்கையராய்ப் பிறப்பதற்கே, புறப்பொருள் இலக்கணம்)',
+            qCount: (typeof TAMIL_UNIT_7_DATA !== 'undefined' && TAMIL_UNIT_7_DATA.subSections) ? TAMIL_UNIT_7_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 15,
+            subSections: (typeof TAMIL_UNIT_7_DATA !== 'undefined') ? TAMIL_UNIT_7_DATA.subSections : [],
+            questions: (typeof TAMIL_UNIT_7_DATA !== 'undefined' && TAMIL_UNIT_7_DATA.subSections) ? TAMIL_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : []
+          },
+          {
+            id: 'tam_u8',
+            unit: 'இயல் 8',
+            title: 'பெருவழி (சங்க இலக்கியத்தில் அறம், ஞானம், காலக்கணிதம், இராமானுசர் நாடகம், பா-வகை வெண்பா ஆசிரியப்பா இலக்கணம்)',
+            qCount: (typeof TAMIL_UNIT_8_DATA !== 'undefined' && TAMIL_UNIT_8_DATA.subSections) ? TAMIL_UNIT_8_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 15,
+            subSections: (typeof TAMIL_UNIT_8_DATA !== 'undefined') ? TAMIL_UNIT_8_DATA.subSections : [],
+            questions: (typeof TAMIL_UNIT_8_DATA !== 'undefined' && TAMIL_UNIT_8_DATA.subSections) ? TAMIL_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            manapaadam: (typeof TAMIL_UNIT_8_DATA !== 'undefined' && TAMIL_UNIT_8_DATA.manapaadam) ? TAMIL_UNIT_8_DATA.manapaadam : []
+          },
+          {
+            id: 'tam_u9',
+            unit: 'இயல் 9',
+            title: 'அன்பின் மொழி (ஜெயகாந்தன் நினைவு இதழ், சித்தாளு, தேம்பாவணி, ஒருவன் இருக்கிறான், அணிகள் இலக்கணம் & திருக்குறள்)',
+            qCount: (typeof TAMIL_UNIT_9_DATA !== 'undefined' && TAMIL_UNIT_9_DATA.subSections) ? TAMIL_UNIT_9_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 15,
+            subSections: (typeof TAMIL_UNIT_9_DATA !== 'undefined') ? TAMIL_UNIT_9_DATA.subSections : [],
+            questions: (typeof TAMIL_UNIT_9_DATA !== 'undefined' && TAMIL_UNIT_9_DATA.subSections) ? TAMIL_UNIT_9_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            manapaadam: (typeof TAMIL_UNIT_9_DATA !== 'undefined' && TAMIL_UNIT_9_DATA.manapaadam) ? TAMIL_UNIT_9_DATA.manapaadam : []
           }
         ]
       },
@@ -4813,6 +4847,15 @@
             subSections: (typeof ENGLISH_UNIT_6_DATA !== 'undefined') ? ENGLISH_UNIT_6_DATA.subSections : [],
             questions: (typeof ENGLISH_UNIT_6_DATA !== 'undefined' && ENGLISH_UNIT_6_DATA.subSections) ? ENGLISH_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             stories: (typeof ENGLISH_UNIT_6_DATA !== 'undefined' && ENGLISH_UNIT_6_DATA.stories) ? ENGLISH_UNIT_6_DATA.stories : []
+          },
+          {
+            id: 'eng_u7',
+            unit: 'Unit 7',
+            title: 'Prose: The Dying Detective | Poem: The House on Elm Street | Supplementary: A Dilemma | Grammar: Reported Speech',
+            qCount: (typeof ENGLISH_UNIT_7_DATA !== 'undefined' && ENGLISH_UNIT_7_DATA.subSections) ? ENGLISH_UNIT_7_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 16,
+            subSections: (typeof ENGLISH_UNIT_7_DATA !== 'undefined') ? ENGLISH_UNIT_7_DATA.subSections : [],
+            questions: (typeof ENGLISH_UNIT_7_DATA !== 'undefined' && ENGLISH_UNIT_7_DATA.subSections) ? ENGLISH_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            stories: (typeof ENGLISH_UNIT_7_DATA !== 'undefined' && ENGLISH_UNIT_7_DATA.stories) ? ENGLISH_UNIT_7_DATA.stories : []
           }
         ]
       },
@@ -4878,6 +4921,24 @@
             subSections: (typeof MATHS_TM_UNIT_6_DATA !== 'undefined') ? MATHS_TM_UNIT_6_DATA.subSections : [],
             questions: (typeof MATHS_TM_UNIT_6_DATA !== 'undefined' && MATHS_TM_UNIT_6_DATA.subSections) ? MATHS_TM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof MATHS_TM_UNIT_6_DATA !== 'undefined') ? MATHS_TM_UNIT_6_DATA.formulas : []
+          },
+          {
+            id: 'math_tm_u7',
+            unit: 'அலகு 7',
+            title: 'அளவியல் (Mensuration)',
+            qCount: (typeof MATHS_TM_UNIT_7_DATA !== 'undefined' && MATHS_TM_UNIT_7_DATA.subSections) ? MATHS_TM_UNIT_7_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 10,
+            subSections: (typeof MATHS_TM_UNIT_7_DATA !== 'undefined') ? MATHS_TM_UNIT_7_DATA.subSections : [],
+            questions: (typeof MATHS_TM_UNIT_7_DATA !== 'undefined' && MATHS_TM_UNIT_7_DATA.subSections) ? MATHS_TM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof MATHS_TM_UNIT_7_DATA !== 'undefined') ? MATHS_TM_UNIT_7_DATA.formulas : []
+          },
+          {
+            id: 'math_tm_u8',
+            unit: 'அலகு 8',
+            title: 'புள்ளியியலும் நிகழ்தகவும் (Statistics and Probability)',
+            qCount: (typeof MATHS_TM_UNIT_8_DATA !== 'undefined' && MATHS_TM_UNIT_8_DATA.subSections) ? MATHS_TM_UNIT_8_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 9,
+            subSections: (typeof MATHS_TM_UNIT_8_DATA !== 'undefined') ? MATHS_TM_UNIT_8_DATA.subSections : [],
+            questions: (typeof MATHS_TM_UNIT_8_DATA !== 'undefined' && MATHS_TM_UNIT_8_DATA.subSections) ? MATHS_TM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof MATHS_TM_UNIT_8_DATA !== 'undefined') ? MATHS_TM_UNIT_8_DATA.formulas : []
           }
         ]
       },
@@ -4943,6 +5004,24 @@
             subSections: (typeof MATHS_EM_UNIT_6_DATA !== 'undefined') ? MATHS_EM_UNIT_6_DATA.subSections : [],
             questions: (typeof MATHS_EM_UNIT_6_DATA !== 'undefined' && MATHS_EM_UNIT_6_DATA.subSections) ? MATHS_EM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof MATHS_EM_UNIT_6_DATA !== 'undefined') ? MATHS_EM_UNIT_6_DATA.formulas : []
+          },
+          {
+            id: 'math_em_u7',
+            unit: 'Unit 7',
+            title: 'Mensuration',
+            qCount: (typeof MATHS_EM_UNIT_7_DATA !== 'undefined' && MATHS_EM_UNIT_7_DATA.subSections) ? MATHS_EM_UNIT_7_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 10,
+            subSections: (typeof MATHS_EM_UNIT_7_DATA !== 'undefined') ? MATHS_EM_UNIT_7_DATA.subSections : [],
+            questions: (typeof MATHS_EM_UNIT_7_DATA !== 'undefined' && MATHS_EM_UNIT_7_DATA.subSections) ? MATHS_EM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof MATHS_EM_UNIT_7_DATA !== 'undefined') ? MATHS_EM_UNIT_7_DATA.formulas : []
+          },
+          {
+            id: 'math_em_u8',
+            unit: 'Unit 8',
+            title: 'Statistics and Probability',
+            qCount: (typeof MATHS_EM_UNIT_8_DATA !== 'undefined' && MATHS_EM_UNIT_8_DATA.subSections) ? MATHS_EM_UNIT_8_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 9,
+            subSections: (typeof MATHS_EM_UNIT_8_DATA !== 'undefined') ? MATHS_EM_UNIT_8_DATA.subSections : [],
+            questions: (typeof MATHS_EM_UNIT_8_DATA !== 'undefined' && MATHS_EM_UNIT_8_DATA.subSections) ? MATHS_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof MATHS_EM_UNIT_8_DATA !== 'undefined') ? MATHS_EM_UNIT_8_DATA.formulas : []
           }
         ]
       },
@@ -6880,6 +6959,45 @@
       lesson.subSections = MATHS_EM_UNIT_6_DATA.subSections;
       lesson.questions = MATHS_EM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_EM_UNIT_6_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'tam_u7' && typeof TAMIL_UNIT_7_DATA !== 'undefined' && TAMIL_UNIT_7_DATA.subSections) {
+      lesson.subSections = TAMIL_UNIT_7_DATA.subSections;
+      lesson.questions = TAMIL_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'tam_u8' && typeof TAMIL_UNIT_8_DATA !== 'undefined' && TAMIL_UNIT_8_DATA.subSections) {
+      lesson.subSections = TAMIL_UNIT_8_DATA.subSections;
+      lesson.questions = TAMIL_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.manapaadam = TAMIL_UNIT_8_DATA.manapaadam || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'tam_u9' && typeof TAMIL_UNIT_9_DATA !== 'undefined' && TAMIL_UNIT_9_DATA.subSections) {
+      lesson.subSections = TAMIL_UNIT_9_DATA.subSections;
+      lesson.questions = TAMIL_UNIT_9_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.manapaadam = TAMIL_UNIT_9_DATA.manapaadam || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'eng_u7' && typeof ENGLISH_UNIT_7_DATA !== 'undefined' && ENGLISH_UNIT_7_DATA.subSections) {
+      lesson.subSections = ENGLISH_UNIT_7_DATA.subSections;
+      lesson.questions = ENGLISH_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.stories = ENGLISH_UNIT_7_DATA.stories || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'math_tm_u7' && typeof MATHS_TM_UNIT_7_DATA !== 'undefined' && MATHS_TM_UNIT_7_DATA.subSections) {
+      lesson.subSections = MATHS_TM_UNIT_7_DATA.subSections;
+      lesson.questions = MATHS_TM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = MATHS_TM_UNIT_7_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'math_tm_u8' && typeof MATHS_TM_UNIT_8_DATA !== 'undefined' && MATHS_TM_UNIT_8_DATA.subSections) {
+      lesson.subSections = MATHS_TM_UNIT_8_DATA.subSections;
+      lesson.questions = MATHS_TM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = MATHS_TM_UNIT_8_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'math_em_u7' && typeof MATHS_EM_UNIT_7_DATA !== 'undefined' && MATHS_EM_UNIT_7_DATA.subSections) {
+      lesson.subSections = MATHS_EM_UNIT_7_DATA.subSections;
+      lesson.questions = MATHS_EM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = MATHS_EM_UNIT_7_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'math_em_u8' && typeof MATHS_EM_UNIT_8_DATA !== 'undefined' && MATHS_EM_UNIT_8_DATA.subSections) {
+      lesson.subSections = MATHS_EM_UNIT_8_DATA.subSections;
+      lesson.questions = MATHS_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = MATHS_EM_UNIT_8_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     }
   }

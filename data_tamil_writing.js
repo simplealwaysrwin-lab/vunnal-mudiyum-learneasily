@@ -741,6 +741,8 @@ const TAMIL_LETTERS_DATA = {
 // =======================================================================
 // 3. TAMIL BLUEPRINT & EXAM GUIDE DATA (100 மதிப்பெண் வினாத்தாள் வழிகாட்டி)
 // =======================================================================
+// 3. TAMIL BLUEPRINT & EXAM GUIDE DATA (100 மதிப்பெண் வினாத்தாள் வழிகாட்டி)
+// =======================================================================
 const TAMIL_BLUEPRINT_GUIDE_DATA = {
   unit: "வழிகாட்டி",
   title: "தமிழ் பொதுத்தேர்வு வினாத்தாள் வடிவம் & முழு மதிப்பெண் வழிகாட்டி (100 மதிப்பெண்கள்)",
@@ -876,16 +878,226 @@ const TAMIL_BLUEPRINT_GUIDE_DATA = {
               <li><b>பொருத்தமான மேற்கோள்கள்:</b> கட்டுரைகளிலும் 5 மதிப்பெண் விடைகளிலும் திருக்குறள், பாரதியார், பாரதிதாசன் அல்லது சங்கப் பாடல் வரிகளை அடிக்கோடிட்டு எழுதினால் முழு மதிப்பெண் நிச்சயம்.</li>
               <li><b>எழுத்துப் பிழையின்றி எழுதுதல்:</b> தமிழில் ண, ன, ந வேறுபாடுகளையும், ர, ற மற்றும் ல, ழ, ள வேறுபாடுகளையும் சரியாகப் பயன்படுத்த வேண்டும். வல்லினம் மிகும் இடங்களை அறிந்து எழுத வேண்டும்.</li>
               <li><b>படிவம் & கடித அமைப்பு:</b> வினா எண் 39 படிவம் நிரப்புதல் வினாவில் முழு விவரங்களையும் சுத்தமாக அடித்துத் திருத்தலின்றி நிரப்ப வேண்டும். கடிதத்தில் உறைமேல் முகவரி தவறாமல் எழுத வேண்டும்.</li>
-              <li><b>நேர மேலாண்மை (Time Management):</b> 
-                முதல் 15 நிமிடம் வினாத்தாள் வாசிப்பு $\rightarrow$ 
-                பகுதி 1 (15M) 20 நிமிடம் $\rightarrow$ 
-                பகுதி 2 (18M) 35 நிமிடம் $\rightarrow$ 
-                பகுதி 3 (18M) 35 நிமிடம் $\rightarrow$ 
-                பகுதி 4 (25M) 40 நிமிடம் $\rightarrow$ 
-                பகுதி 5 (24M) 40 நிமிடம் $\rightarrow$ 
-                கடைசி 10 நிமிடம் விடைத்தாள் சரிபார்ப்பு.
+              <li><b>நேர மேலாண்மை (Time Management - 3 மணி 15 நிமிடங்கள்):</b> 
+                தேர்வை முழுமையாக எழுதி முடிக்கக் கீழ்க்கண்ட கால அட்டவணைப்படி நேரத்தைப் பங்கிட்டுக் கொள்ளவும்:
+                
+                <div style="margin-top:10px; background:#eff6ff; border:1px solid #bfdbfe; border-radius:8px; padding:12px 14px;">
+                  <div style="font-weight:800; color:#1e40af; margin-bottom:8px; font-size:13.5px;">⏱️ 3 மணி 15 நிமிட நேரப் பங்கீட்டுப் படிநிலைகள் (Step-by-Step Timeline):</div>
+                  <table style="width:100%; border-collapse:collapse; font-size:12.5px; background:#fff; border-radius:6px; overflow:hidden;">
+                    <thead>
+                      <tr style="background:#e0f2fe; color:#0369a1; text-align:left;">
+                        <th style="border:1px solid #cbd5e1; padding:6px 8px;">படிநிலை</th>
+                        <th style="border:1px solid #cbd5e1; padding:6px 8px;">நேரம்</th>
+                        <th style="border:1px solid #cbd5e1; padding:6px 8px;">கால அளவு</th>
+                        <th style="border:1px solid #cbd5e1; padding:6px 8px;">தேர்வுப் பகுதி & வினாக்கள்</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px; font-weight:700;">படிநிலை 1</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">10:00 – 10:15 AM</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">15 நிமிடம்</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">வினாத்தாள் வாசிப்பு & திட்டமிடல்</td>
+                      </tr>
+                      <tr style="background:#f8fafc;">
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px; font-weight:700;">படிநிலை 2</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">10:15 – 10:35 AM</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">20 நிமிடம்</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">பகுதி I (வினா 1–15 பலவுள் தெரிக = 15M)</td>
+                      </tr>
+                      <tr>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px; font-weight:700;">படிநிலை 3</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">10:35 – 11:10 AM</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">35 நிமிடம்</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">பகுதி II (வினா 16–28 குறுவினாக்கள் = 18M, Q28 கட்டாயம்)</td>
+                      </tr>
+                      <tr style="background:#f8fafc;">
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px; font-weight:700;">படிநிலை 4</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">11:10 – 11:45 AM</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">35 நிமிடம்</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">பகுதி III (வினா 29–37 சிறுவினாக்கள் = 18M, Q34 கட்டாயம்)</td>
+                      </tr>
+                      <tr>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px; font-weight:700;">படிநிலை 5</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">11:45 AM – 12:25 PM</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">40 நிமிடம்</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">பகுதி IV (வினா 38–42 படைப்பாற்றல் வினாக்கள் = 25M)</td>
+                      </tr>
+                      <tr style="background:#f8fafc;">
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px; font-weight:700;">படிநிலை 6</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">12:25 – 01:05 PM</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">40 நிமிடம்</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">பகுதி V (வினா 43–45 பெருவினாக்கள் & கட்டுரைகள் = 24M)</td>
+                      </tr>
+                      <tr>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px; font-weight:700;">படிநிலை 7</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">01:05 – 01:15 PM</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">10 நிமிடம்</td>
+                        <td style="border:1px solid #cbd5e1; padding:6px 8px;">விடைத்தாள் இறுதிச் சரிபார்ப்பு & நூல் கட்டுதல்</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div style="font-size:12px; color:#1e40af; margin-top:8px;">
+                    💡 விரிவான 7 படிநிலைகள் மற்றும் ஒவ்வொரு பகுதிக்குமான தேர்வு உத்திகளுக்கு அடுத்த வினாவைப் (வினா 4) பார்க்கவும்.
+                  </div>
+                </div>
               </li>
             </ol>
+          </div>`
+        },
+        {
+          id: "tam_guide_4",
+          type: "5m",
+          mark: "நேர மேலாண்மை",
+          examTag: "அரசுப் பொதுத்தேர்வு நேர மேலாண்மை (3h 15m)",
+          isImportant: true,
+          q: "10-ஆம் வகுப்பு தமிழ் பொதுத்தேர்வில் 3 மணி 15 நிமிட நேர மேலாண்மை (Time Management) படிநிலைகள் யாவை? ஒவ்வொரு பகுதிக்கும் மாணவர்கள் எவ்வாறு நேரம் ஒதுக்க வேண்டும்?",
+          ans: `<div style="line-height:1.8; font-size:15px;">
+            <div style="background:#eff6ff; border:1px solid #bfdbfe; border-left:4px solid #2563eb; padding:14px 18px; border-radius:8px; margin-bottom:16px;">
+              <h4 style="margin:0 0 6px 0; color:#1e40af; font-size:16px;">⏱️ தமிழ்நாடு அரசுப் பொதுத்தேர்வு நேர அட்டவணை (DGE Official Schedule):</h4>
+              <p style="margin:0; font-size:13.5px; color:#1e3a8a;">
+                <b>தேர்வு நேரம்:</b> முற்பகல் 10:00 மணி முதல் பிற்பகல் 01:15 மணி வரை (மொத்தம் 3 மணி 15 நிமிடங்கள் / 195 நிமிடங்கள்)<br>
+                <b>வினாத்தாள் வாசிப்பு நேரம்:</b> முற்பகல் 10:00 AM – 10:10 AM (10 நிமிடங்கள்)<br>
+                <b>விவரங்கள் சரிபார்ப்பு:</b> முற்பகல் 10:10 AM – 10:15 AM (5 நிமிடங்கள்)<br>
+                <b>தேர்வு எழுதும் நேரம்:</b> முற்பகல் 10:15 AM – பிற்பகல் 01:15 PM (3 மணி நேரம் / 180 நிமிடங்கள்)
+              </p>
+            </div>
+
+            <h4 style="color:#0f172a; margin:16px 0 10px 0; font-size:15.5px;">📋 7-படிநிலை நேர மேலாண்மை வழிகாட்டி (Step-by-Step Explanation):</h4>
+
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #0284c7; padding:12px 16px; border-radius:6px; margin-bottom:12px;">
+              <div style="font-weight:800; color:#0369a1; font-size:14.5px;">📌 படிநிலை 1: வினாத்தாள் வாசிப்பு & திட்டமிடல் (10:00 AM – 10:15 AM | 15 நிமிடங்கள்)</div>
+              <ul style="margin:6px 0 0 0; padding-left:20px; font-size:13.5px; color:#334155; line-height:1.7;">
+                <li>வினாத்தாளின் அனைத்துப் பக்கங்களும் (1 முதல் 45 வினாக்கள் வரை) தெளிவாக அச்சிடப்பட்டுள்ளதா எனச் சரிபார்க்கவும்.</li>
+                <li>பகுதி II, III, IV, V இல் கொடுக்கப்பட்டுள்ள 'அல்லது' (Either/Or) மற்றும் தெரிவு வினாக்களில் தங்களுக்கு மிக நன்றாகத் தெரிந்த வினாக்களை பென்சிலால் லேசாகக் குறியிட்டு முடிவு செய்து கொள்ளவும்.</li>
+                <li>கட்டாய வினாக்களான <b>வினா எண் 28 (திருக்குறள்)</b> மற்றும் <b>வினா எண் 34 (மனப்பாடச் செய்யுள்)</b> ஆகியவற்றை ஒருமுறை மனதில் நினைவுகூர்ந்து கொள்ளவும்.</li>
+              </ul>
+            </div>
+
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #16a34a; padding:12px 16px; border-radius:6px; margin-bottom:12px;">
+              <div style="font-weight:800; color:#15803d; font-size:14.5px;">📌 படிநிலை 2: பகுதி I – பலவுள் தெரிக (10:15 AM – 10:35 AM | 20 நிமிடங்கள்)</div>
+              <ul style="margin:6px 0 0 0; padding-left:20px; font-size:13.5px; color:#334155; line-height:1.7;">
+                <li><b>வினாக்கள்:</b> 1 முதல் 15 வரை (15 ஒரு மதிப்பெண் வினாக்கள் = 15 மதிப்பெண்கள்).</li>
+                <li>வினா எண்ணை இடதுபுறக் கட்டத்தில் தெளிவாக எழுதி, சரியான <b>விடைக்குரிய குறியீடு (அ, ஆ, இ, ஈ) மற்றும் அதற்கான விடை இரண்டையும்</b> தவறாமல் எழுத வேண்டும்.</li>
+                <li>பாடல் வினாக்களுக்கு (வினா 12–15) பாடலை இரண்டு முறை ஆழ்ந்து வாசித்து விடையளிக்கவும்.</li>
+              </ul>
+            </div>
+
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #ca8a04; padding:12px 16px; border-radius:6px; margin-bottom:12px;">
+              <div style="font-weight:800; color:#854d0e; font-size:14.5px;">📌 படிநிலை 3: பகுதி II – குறுவினாக்கள் (10:35 AM – 11:10 AM | 35 நிமிடங்கள்)</div>
+              <ul style="margin:6px 0 0 0; padding-left:20px; font-size:13.5px; color:#334155; line-height:1.7;">
+                <li><b>வினாக்கள்:</b> 16 முதல் 28 வரை (பிரிவு 1: உரைநடை/செய்யுள் 4 வினாக்கள்; பிரிவு 2: இலக்கணம்/மொழித்திறன் 5 வினாக்கள்; மொத்தம் 9 × 2 = 18 மதிப்பெண்கள்).</li>
+                <li>ஒவ்வொரு குறுவினாவிற்கும் 2 அல்லது 3 வரிகளில் துல்லியமாக விடை எழுதவும்.</li>
+                <li><b>⭐ கட்டாய வினா 28 (திருக்குறள்):</b> மேல் நான்கு சீர்கள், கீழ் மூன்று சீர்கள் எனப் பிரித்து, பிழையின்றி எழுதவும்.</li>
+              </ul>
+            </div>
+
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #9333ea; padding:12px 16px; border-radius:6px; margin-bottom:12px;">
+              <div style="font-weight:800; color:#7e22ce; font-size:14.5px;">📌 படிநிலை 4: பகுதி III – சிறுவினாக்கள் (11:10 AM – 11:45 AM | 35 நிமிடங்கள்)</div>
+              <ul style="margin:6px 0 0 0; padding-left:20px; font-size:13.5px; color:#334155; line-height:1.7;">
+                <li><b>வினாக்கள்:</b> 29 முதல் 37 வரை (உரைநடை 2 + செய்யுள் 2 + இலக்கணம் 2; மொத்தம் 6 × 3 = 18 மதிப்பெண்கள்).</li>
+                <li>ஒவ்வொரு வினாவிற்கும் 4 முதல் 6 வரிகளில் கருத்துச் செறிவோடு எழுதவும்.</li>
+                <li><b>⭐ கட்டாய வினா 34 (மனப்பாடச் செய்யுள்):</b> பாடல் தலைப்பு, கவிஞர் பெயரை மறக்காமல் எழுதி, பாடல் அடிகளை மாற்றாமல் எழுதவும்.</li>
+              </ul>
+            </div>
+
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #ea580c; padding:12px 16px; border-radius:6px; margin-bottom:12px;">
+              <div style="font-weight:800; color:#c2410c; font-size:14.5px;">📌 படிநிலை 5: பகுதி IV – படைப்பாற்றல் வினாக்கள் (11:45 AM – 12:25 PM | 40 நிமிடங்கள்)</div>
+              <ul style="margin:6px 0 0 0; padding-left:20px; font-size:13.5px; color:#334155; line-height:1.7;">
+                <li><b>வினாக்கள்:</b> 38 முதல் 42 வரை (5 வினாக்கள் × 5 = 25 மதிப்பெண்கள் - அனைத்திற்கும் விடையளிக்க வேண்டும்).</li>
+                <li><b>வினா 38 (கடிதம்):</b> அனுப்புநர், பெறுநர், செய்தி, உறைமேல் முகவரி முழுமையாக இருக்க வேண்டும் (8 நிமிடம்).</li>
+                <li><b>வினா 39 (படிவம்):</b> எவ்வித அடித்தல் திருத்தலும் இன்றி சுத்தமாக நிரப்ப வேண்டும் (7 நிமிடம்).</li>
+                <li><b>வினா 40 (படம்), வினா 41 (மொழிபெயர்ப்பு), வினா 42 (கட்டுரை):</b> ஒவ்வொன்றிற்கும் தலா 8 நிமிடங்கள் ஒதுக்கவும்.</li>
+              </ul>
+            </div>
+
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #dc2626; padding:12px 16px; border-radius:6px; margin-bottom:12px;">
+              <div style="font-weight:800; color:#b91c1c; font-size:14.5px;">📌 படிநிலை 6: பகுதி V – விரிவான பெருவினாக்கள் / கட்டுரைகள் (12:25 PM – 01:05 PM | 40 நிமிடங்கள்)</div>
+              <ul style="margin:6px 0 0 0; padding-left:20px; font-size:13.5px; color:#334155; line-height:1.7;">
+                <li><b>வினாக்கள்:</b> 43 முதல் 45 வரை (3 நெடுவினாக்கள் × 8 = 24 மதிப்பெண்கள் - அனைத்திலும் Either/Or தெரிவு).</li>
+                <li>ஒவ்வொரு கட்டுரைக்கும் 13 நிமிடங்கள் ஒதுக்கி எழுதவும்.</li>
+                <li>கண்டிப்பாகக் <b>குறிப்புச் சட்டகம்</b> அமைத்து, முன்னுரை, உட்தலைப்புகள், மேற்கோள்கள், முடிவுரையுடன் எழுதவும்.</li>
+              </ul>
+            </div>
+
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-left:4px solid #059669; padding:12px 16px; border-radius:6px; margin-bottom:16px;">
+              <div style="font-weight:800; color:#047857; font-size:14.5px;">📌 படிநிலை 7: விடைத்தாள் இறுதிச் சரிபார்ப்பு (01:05 PM – 01:15 PM | 10 நிமிடங்கள்)</div>
+              <ul style="margin:6px 0 0 0; padding-left:20px; font-size:13.5px; color:#334155; line-height:1.7;">
+                <li>அனைத்து விடைகளுக்கும் வினா எண் சரியாக எழுதப்பட்டுள்ளதா என ஒன்றுவிடாமல் சரிபார்க்கவும்.</li>
+                <li>கட்டாய வினாக்கள் 28, 34 விடுபடாமல் எழுதப்பட்டுவிட்டதா என உறுதி செய்யவும்.</li>
+                <li>கூடுதல் தாள்களை வரிசைப்படி வைத்து உறுதியாக நூலினால் கட்டவும். முக்கிய வரிகளை பென்சிலால் அடிக்கோடிடவும்.</li>
+              </ul>
+            </div>
+
+            <h4 style="color:#0f172a; margin:16px 0 8px 0; font-size:15px;">📊 நேரப் பங்கீட்டுச் சுருக்க அட்டவணை:</h4>
+            <table style="width:100%; border-collapse:collapse; margin-bottom:14px; font-size:13.5px;">
+              <thead>
+                <tr style="background:#f1f5f9; text-align:left;">
+                  <th style="border:1px solid #cbd5e1; padding:8px 10px;">படிநிலை</th>
+                  <th style="border:1px solid #cbd5e1; padding:8px 10px;">நேரம் (Time)</th>
+                  <th style="border:1px solid #cbd5e1; padding:8px 10px;">கால அளவு</th>
+                  <th style="border:1px solid #cbd5e1; padding:8px 10px;">வினா எண்கள்</th>
+                  <th style="border:1px solid #cbd5e1; padding:8px 10px;">மதிப்பெண்</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700;">படிநிலை 1</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">10:00 AM – 10:15 AM</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">15 நிமிடம்</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">வினாத்தாள் வாசிப்பு & திட்டமிடல்</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">—</td>
+                </tr>
+                <tr style="background:#f8fafc;">
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700;">படிநிலை 2</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">10:15 AM – 10:35 AM</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">20 நிமிடம்</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">பகுதி I (வினா 1 – 15)</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700; color:#16a34a;">15 M</td>
+                </tr>
+                <tr>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700;">படிநிலை 3</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">10:35 AM – 11:10 AM</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">35 நிமிடம்</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">பகுதி II (வினா 16 – 28, Q28 கட்டாயம்)</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700; color:#16a34a;">18 M</td>
+                </tr>
+                <tr style="background:#f8fafc;">
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700;">படிநிலை 4</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">11:10 AM – 11:45 AM</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">35 நிமிடம்</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">பகுதி III (வினா 29 – 37, Q34 கட்டாயம்)</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700; color:#16a34a;">18 M</td>
+                </tr>
+                <tr>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700;">படிநிலை 5</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">11:45 AM – 12:25 PM</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">40 நிமிடம்</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">பகுதி IV (வினா 38 – 42 படைப்பாற்றல்)</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700; color:#16a34a;">25 M</td>
+                </tr>
+                <tr style="background:#f8fafc;">
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700;">படிநிலை 6</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">12:25 PM – 01:05 PM</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">40 நிமிடம்</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">பகுதி V (வினா 43 – 45 கட்டுரைகள்)</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700; color:#16a34a;">24 M</td>
+                </tr>
+                <tr>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px; font-weight:700;">படிநிலை 7</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">01:05 PM – 01:15 PM</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">10 நிமிடம்</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">விடைத்தாள் இறுதிச் சரிபார்ப்பு & நூல் கட்டுதல்</td>
+                  <td style="border:1px solid #cbd5e1; padding:8px 10px;">—</td>
+                </tr>
+                <tr style="background:#eff6ff; font-weight:800;">
+                  <td colspan="2" style="border:1px solid #cbd5e1; padding:10px; text-align:right;">மொத்தம்:</td>
+                  <td style="border:1px solid #cbd5e1; padding:10px; color:#2563eb;">195 நிமிடம் (3 மணி 15 நிமிடம்)</td>
+                  <td style="border:1px solid #cbd5e1; padding:10px;">அனைத்து 45 வினாக்களும்</td>
+                  <td style="border:1px solid #cbd5e1; padding:10px; color:#16a34a; font-size:15px;">100 மதிப்பெண்கள்</td>
+                </tr>
+              </tbody>
+            </table>
           </div>`
         }
       ]
@@ -899,3 +1111,4 @@ if (typeof window !== 'undefined') {
   window.TAMIL_LETTERS_DATA = TAMIL_LETTERS_DATA;
   window.TAMIL_BLUEPRINT_GUIDE_DATA = TAMIL_BLUEPRINT_GUIDE_DATA;
 }
+

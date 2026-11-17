@@ -123,7 +123,7 @@
 <script src="data_tamil_u7.js?v=20261116_v82"></script>
 <script src="data_tamil_u8.js?v=20261116_v82"></script>
 <script src="data_tamil_u9.js?v=20261116_v82"></script>
-<script src="data_tamil_writing.js?v=20261117_v86"></script>
+<script src="data_tamil_writing.js?v=20261117_v87"></script>
 <script src="data_english_u1.js?v=20261031_v31"></script>
 <script src="data_english_u2.js?v=20261031_v31"></script>
 <script src="data_english_u3.js?v=20261031_v31"></script>
@@ -4764,7 +4764,7 @@
             id: 'tam_blueprint',
             unit: 'வழிகாட்டி',
             title: 'தமிழ் பொதுத்தேர்வு வினாத்தாள் வடிவம் & புளூபிரிண்ட் (100 மதிப்பெண்கள் & தேர்வு உத்திகள்)',
-            qCount: (typeof TAMIL_BLUEPRINT_GUIDE_DATA !== 'undefined' && TAMIL_BLUEPRINT_GUIDE_DATA.subSections) ? TAMIL_BLUEPRINT_GUIDE_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 3,
+            qCount: (typeof TAMIL_BLUEPRINT_GUIDE_DATA !== 'undefined' && TAMIL_BLUEPRINT_GUIDE_DATA.subSections) ? TAMIL_BLUEPRINT_GUIDE_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 4,
             subSections: (typeof TAMIL_BLUEPRINT_GUIDE_DATA !== 'undefined') ? TAMIL_BLUEPRINT_GUIDE_DATA.subSections : [],
             questions: (typeof TAMIL_BLUEPRINT_GUIDE_DATA !== 'undefined' && TAMIL_BLUEPRINT_GUIDE_DATA.subSections) ? TAMIL_BLUEPRINT_GUIDE_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             stories: []
@@ -12554,7 +12554,7 @@
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261116_v84')
+        navigator.serviceWorker.register('./sw.js?v=20261117_v88')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 
@@ -13300,6 +13300,19 @@ ${name || '10-ஆம் வகுப்பு மாணவர்'}`;
             <li><b>கட்டாய வினா 34 (மனப்பாடப் பாடல்):</b> பாடல் தலைப்பு, ஆசிரியர் பெயர் குறிப்பிட்டு அடிகளை மாற்றாமல் எழுதவும்.</li>
             <li><b>8 மதிப்பெண் கட்டுரைகள் (வினா 43, 44, 45):</b> கண்டிப்பாக 'குறிப்புச் சட்டகம்' அமைத்து, முன்னுரை, உட்தலைப்புகள், மேற்கோள்கள், முடிவுரையுடன் எழுதவும்.</li>
           </ul>
+        </div>
+
+        <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:14px; margin-bottom:12px;">
+          <h4 style="margin:0 0 8px 0; color:#1e40af; font-size:14px;">⏱️ அரசுப் பொதுத்தேர்வு 3 மணி 15 நிமிட நேர மேலாண்மை படிநிலைகள் (Time Management):</h4>
+          <div style="font-size:13px; line-height:1.8; color:#1e3a8a;">
+            • <b>படிநிலை 1 (10:00 – 10:15 AM | 15 நிமிடம்):</b> வினாத்தாள் வாசிப்பு & வினாக்கள் தேர்வு செய்தல்<br>
+            • <b>படிநிலை 2 (10:15 – 10:35 AM | 20 நிமிடம்):</b> பகுதி I (வினா 1–15 பலவுள் தெரிக = 15M)<br>
+            • <b>படிநிலை 3 (10:35 – 11:10 AM | 35 நிமிடம்):</b> பகுதி II (வினா 16–28 குறுவினாக்கள் = 18M, Q28 கட்டாயம்)<br>
+            • <b>படிநிலை 4 (11:10 – 11:45 AM | 35 நிமிடம்):</b> பகுதி III (வினா 29–37 சிறுவினாக்கள் = 18M, Q34 கட்டாயம்)<br>
+            • <b>படிநிலை 5 (11:45 AM – 12:25 PM | 40 நிமிடம்):</b> பகுதி IV (வினா 38–42 படைப்பாற்றல் வினாக்கள் = 25M)<br>
+            • <b>படிநிலை 6 (12:25 – 01:05 PM | 40 நிமிடம்):</b> பகுதி V (வினா 43–45 பெருவினாக்கள் & கட்டுரைகள் = 24M)<br>
+            • <b>படிநிலை 7 (01:05 – 01:15 PM | 10 நிமிடம்):</b> விடைத்தாள் இறுதிச் சரிபார்ப்பு & நூல் கட்டுதல்
+          </div>
         </div>
       `;
     } else if (tabKey === 'english') {
@@ -15425,6 +15438,40 @@ ${this.studentName || 'மாணவர்'}`;
     'gemini-3.1-flash-lite'
   ];
 
+  // GOOGLE SHEET AI DOUBTS LOGGER (Logs student queries live to teacher's Google Sheet)
+  const AI_SHEET_LOG_URL = 'https://script.google.com/macros/s/AKfycbwuKuhQ2Vxh0GuXceVrKlB57Fi4IFJmeqQWcGhKUOuHVrVvKJrCQa447UZTkFYe_67DDw/exec';
+
+  function logAIQuestionToSheet({ subject = '', mode = 'Doubt', question = '', context = '' } = {}) {
+    if (!AI_SHEET_LOG_URL) return;
+    try {
+      let subjName = subject;
+      if (!subjName && typeof currentSubject !== 'undefined' && currentSubject) {
+        subjName = currentSubject.name || currentSubject.id;
+      }
+      if (!subjName) subjName = '10th பொதுவானது';
+
+      const cleanText = (str) => {
+        if (!str) return '';
+        return String(str).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      };
+
+      const payload = {
+        subject: cleanText(subjName),
+        mode: mode || 'Doubt',
+        question: cleanText(question).slice(0, 1000),
+        context: cleanText(context).slice(0, 500)
+      };
+
+      fetch(AI_SHEET_LOG_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(payload)
+      }).catch(() => {});
+    } catch(e) {}
+  }
+
+
   const AI_TEACHER_SYSTEM = `You are "உன்னால் முடியும்" (Vunnal Mudiyum) Tamil Nadu State Board (Samacheer Kalvi) Class 10 school AI Teacher (அன்பான 10-ஆம் வகுப்பு ஆசிரியர்).
 CRITICAL RULES:
 1. STRICT LANGUAGE MATCHING:
@@ -16004,6 +16051,14 @@ Important:
 
     // 1. Append the Separate USER QUESTION CARD
     appendUserQuestionCard(displayText, mode, contextQ);
+
+    // Asynchronously log student query to teacher's Google Sheet
+    logAIQuestionToSheet({
+      subject: (typeof currentSubject !== 'undefined' && currentSubject ? (currentSubject.name || currentSubject.id) : ''),
+      mode: mode === 'custom' ? 'à®šà¯à®¯ à®šà®¨à¯à®¤à¯‡à®•à®®à¯ (Custom Doubt)' : (mode === 'mindmap' ? 'à®®à®© à®µà®°à¯ˆà®ªà®Ÿà®®à¯ (Mindmap)' : (mode === 'steps' ? 'à®ªà®Ÿà®¿à®¨à®¿à®²à¯ˆà®¤à¯ à®¤à¯€à®°à¯à®µà¯ (Steps)' : (mode === 'tips' ? 'à®¤à¯‡à®°à¯à®µà¯ à®•à¯à®±à®¿à®ªà¯à®ªà¯à®•à®³à¯ (Tips)' : 'à®Žà®³à®¿à®¯ à®µà®¿à®³à®•à¯à®•à®®à¯ (Simple)'))),
+      question: displayText,
+      context: contextQ ? (contextQ.q || contextQ.id || '') : ''
+    });
 
     // 2. Show the Teacher Thinking / Loading Indicator
     const loadingId = appendAILoadingIndicator();
@@ -16768,6 +16823,14 @@ Important:
       prompt = `வினா (${currentEvalQuestion.mark || 'மதிப்பெண்'}): ${cleanQ}\nஅதிகாரப்பூர்வ பாடப்புத்தக விடைக்குறிப்பு: ${cleanAns}\nமாணவர் எழுதிய விடை: ${studentAns}\n\nமாணவரின் விடையை அதிகாரப்பூர்வ விடையுடன் ஒப்பிட்டு 10-ஆம் வகுப்பு பொதுத்தேர்வு முறையில் எளிய தமிழில் மதிப்பீடு செய்க.`;
     }
 
+    // Asynchronously log student answer evaluation to teacher's Google Sheet
+    logAIQuestionToSheet({
+      subject: (typeof currentSubject !== 'undefined' && currentSubject ? (currentSubject.name || currentSubject.id) : (isEm ? 'English Medium' : 'à®ªà¯Šà®¤à¯à®µà®¾à®©à®¤à¯')),
+      mode: isEm ? 'Answer Evaluation (Paper Correction)' : 'à®µà®¿à®Ÿà¯ˆà®¤à¯à®¤à®¾à®³à¯ à®®à®¤à®¿à®ªà¯à®ªà¯€à®Ÿà¯ (Evaluation)',
+      question: cleanQ,
+      context: 'à®®à®¾à®£à®µà®°à¯ à®Žà®´à¯à®¤à®¿à®¯ à®µà®¿à®Ÿà¯ˆ: ' + cleanHtmlEntities(studentAns).slice(0, 300)
+    });
+
     try {
       const evaluation = await callGeminiAPI(prompt, AI_EVALUATOR_SYSTEM);
       if (resArea && resContent) {
@@ -17101,6 +17164,10 @@ Important:
         <button type="button" onclick="testAISettingsConnection()" style="background:#059669; color:#fff; border:none; border-radius:8px; padding:10px 14px; font-weight:800; font-size:13px; cursor:pointer;">🧪 சோதி</button>
       </div>
       <div id="settingsKeyStatus" style="font-size:12px; font-weight:700; text-align:center;"></div>
+      <div style="margin-top:12px; padding:10px 14px; background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.3); border-radius:8px; display:flex; align-items:center; gap:8px;">
+        <span style="font-size:16px;">ðŸ“Š</span>
+        <span style="font-size:12px; color:#6ee7b7; font-weight:700;">Google Sheet AI Doubts Logger: à®‡à®£à¯ˆà®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà¯à®³à¯à®³à®¤à¯ (Active)</span>
+      </div>
     </div>
   </div>
 </div>

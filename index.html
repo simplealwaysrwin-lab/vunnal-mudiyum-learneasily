@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -123,6 +123,7 @@
 <script src="data_tamil_u7.js?v=20261116_v82"></script>
 <script src="data_tamil_u8.js?v=20261116_v82"></script>
 <script src="data_tamil_u9.js?v=20261116_v82"></script>
+<script src="data_tamil_writing.js?v=20261117_v85"></script>
 <script src="data_english_u1.js?v=20261031_v31"></script>
 <script src="data_english_u2.js?v=20261031_v31"></script>
 <script src="data_english_u3.js?v=20261031_v31"></script>
@@ -4005,6 +4006,38 @@
       <div style="width:8px; height:8px; border-radius:50%; background:#38bdf8; animation:splashDotBounce 1.4s infinite ease-in-out both;"></div>
     </div>
   </div>
+  <!-- Question Paper Pattern Modal (All Subjects) -->
+  <div id="questionPaperPatternModal" class="modal-overlay" onclick="closeQuestionPaperPatternModal()">
+    <div class="modal-content" onclick="event.stopPropagation()" style="max-width:920px; max-height:90vh; border-radius:18px; border:2px solid #0284c7; overflow:hidden; display:flex; flex-direction:column; background:var(--bg-card); box-shadow:0 25px 50px -12px rgba(0,0,0,0.35);">
+      <div class="modal-header" style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; padding:16px 20px; display:flex; align-items:center; justify-content:space-between; flex-shrink:0;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:28px;">📋</span>
+          <div>
+            <h3 style="margin:0; font-size:16px; font-weight:800; color:#38bdf8;">
+              தமிழ்நாடு அரசுப் பொதுத்தேர்வு வினாத்தாள் வடிவம் & மதிப்பெண் பங்கீடு
+            </h3>
+            <div style="font-size:12px; color:#cbd5e1; margin-top:2px;">
+              Tamil Nadu SSLC Class 10 Board Exam Blueprint & Mark Distribution (All Subjects)
+            </div>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeQuestionPaperPatternModal()" title="மூடுக (Close)" style="color:#fff; background:rgba(255,255,255,0.15); border:none; border-radius:50%; width:32px; height:32px; font-size:16px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">✕</button>
+      </div>
+
+      <!-- Subject Tabs -->
+      <div class="pattern-tab-bar" style="display:flex; background:#f8fafc; border-bottom:1px solid #e2e8f0; overflow-x:auto; padding:10px 14px; gap:8px; flex-shrink:0;">
+        <button type="button" class="tab-btn" id="patTab_tamil" onclick="selectPatternTab('tamil')" style="font-weight:800; font-size:13px; padding:8px 14px; border-radius:8px;">📕 தமிழ் (100M)</button>
+        <button type="button" class="tab-btn" id="patTab_english" onclick="selectPatternTab('english')" style="font-weight:800; font-size:13px; padding:8px 14px; border-radius:8px;">📘 English (100M)</button>
+        <button type="button" class="tab-btn" id="patTab_maths" onclick="selectPatternTab('maths')" style="font-weight:800; font-size:13px; padding:8px 14px; border-radius:8px;">📐 கணிதம் / Maths (100M)</button>
+        <button type="button" class="tab-btn" id="patTab_science" onclick="selectPatternTab('science')" style="font-weight:800; font-size:13px; padding:8px 14px; border-radius:8px;">🔬 அறிவியல் / Science (75+25M)</button>
+        <button type="button" class="tab-btn" id="patTab_social" onclick="selectPatternTab('social')" style="font-weight:800; font-size:13px; padding:8px 14px; border-radius:8px;">🌍 சமூக அறிவியல் / Social (100M)</button>
+      </div>
+
+      <!-- Modal Body (Dynamic Pattern Content) -->
+      <div id="questionPaperPatternBody" style="padding:20px; overflow-y:auto; line-height:1.7; font-size:14.5px; flex:1;">
+      </div>
+    </div>
+  </div>
   <script>
     function dismissAppSplash() {
       var s = document.getElementById('appSplashScreen');
@@ -4706,6 +4739,33 @@
         bgColor: '#fef2f2',
         color: '#dc2626',
         lessons: [
+          {
+            id: 'tam_katturai',
+            unit: 'கட்டுரைகள்',
+            title: 'தமிழ்க் கட்டுரைகள்: பாடநூல் & பொதுக்கட்டுரைகள் (12 Model Essays with Outlines & Quotes)',
+            qCount: (typeof TAMIL_ESSAYS_DATA !== 'undefined' && TAMIL_ESSAYS_DATA.subSections) ? TAMIL_ESSAYS_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 12,
+            subSections: (typeof TAMIL_ESSAYS_DATA !== 'undefined') ? TAMIL_ESSAYS_DATA.subSections : [],
+            questions: (typeof TAMIL_ESSAYS_DATA !== 'undefined' && TAMIL_ESSAYS_DATA.subSections) ? TAMIL_ESSAYS_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            stories: []
+          },
+          {
+            id: 'tam_kaditham',
+            unit: 'கடிதங்கள்',
+            title: 'கடிதம் எழுதுதல்: அலுவலக & உறவுமுறைக் கடிதங்கள் (8 Model Letters & 5-Mark Rules)',
+            qCount: (typeof TAMIL_LETTERS_DATA !== 'undefined' && TAMIL_LETTERS_DATA.subSections) ? TAMIL_LETTERS_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof TAMIL_LETTERS_DATA !== 'undefined') ? TAMIL_LETTERS_DATA.subSections : [],
+            questions: (typeof TAMIL_LETTERS_DATA !== 'undefined' && TAMIL_LETTERS_DATA.subSections) ? TAMIL_LETTERS_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            stories: []
+          },
+          {
+            id: 'tam_blueprint',
+            unit: 'வழிகாட்டி',
+            title: 'தமிழ் பொதுத்தேர்வு வினாத்தாள் வடிவம் & புளூபிரிண்ட் (100 மதிப்பெண்கள் & தேர்வு உத்திகள்)',
+            qCount: (typeof TAMIL_BLUEPRINT_GUIDE_DATA !== 'undefined' && TAMIL_BLUEPRINT_GUIDE_DATA.subSections) ? TAMIL_BLUEPRINT_GUIDE_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 3,
+            subSections: (typeof TAMIL_BLUEPRINT_GUIDE_DATA !== 'undefined') ? TAMIL_BLUEPRINT_GUIDE_DATA.subSections : [],
+            questions: (typeof TAMIL_BLUEPRINT_GUIDE_DATA !== 'undefined' && TAMIL_BLUEPRINT_GUIDE_DATA.subSections) ? TAMIL_BLUEPRINT_GUIDE_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            stories: []
+          },
           {
             id: 'tam_u1',
             unit: 'இயல் 1',
@@ -6524,6 +6584,25 @@
         </button>
       </div>
 
+      <!-- Question Paper Pattern Banner for Current Subject -->
+      <div style="background:linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border:1.5px solid #86efac; border-radius:14px; padding:14px 18px; margin-bottom:18px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; box-shadow:0 4px 12px rgba(22,163,74,0.1);">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:32px;">📋</span>
+          <div>
+            <div style="font-size:15px; font-weight:800; color:#166534;">
+              ${isEm ? `${currentSubject.name} Public Exam Blueprint & Pattern` : `${currentSubject.name} அரசுப் பொதுத்தேர்வு வினாத்தாள் வடிவம் & மதிப்பெண் பங்கீடு`}
+            </div>
+            <div style="font-size:12px; color:#15803d; margin-top:2px;">
+              ${isEm ? 'Official Tamil Nadu SSLC Board Exam Structure • Marks per Part • Compulsory Questions' : 'அதிகாரப்பூர்வ தமிழ்நாடு 10-ஆம் வகுப்பு பொதுத்தேர்வு வினாத்தாள் அமைப்பு • கட்டாய வினாக்கள் வழிகாட்டி'}
+            </div>
+          </div>
+        </div>
+        <button type="button" class="tab-btn" onclick="openQuestionPaperPatternModal(currentSubject ? currentSubject.id : '')" style="background:linear-gradient(135deg, #16a34a, #15803d); color:#fff; font-weight:800; font-size:13px; padding:9px 18px; border-radius:10px; border:none; cursor:pointer; box-shadow:0 3px 8px rgba(22,163,74,0.3); display:inline-flex; align-items:center; gap:6px;">
+          <span>🔍</span>
+          <span>${isEm ? 'View Pattern (Blueprint) ➔' : 'வினாத்தாள் வடிவம் காண்க ➔'}</span>
+        </button>
+      </div>
+
       ${isSocial ? `
         <div style="background:linear-gradient(135deg, #0f172a, #1e293b); border:1.5px solid #0284c7; border-radius:14px; padding:16px 20px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; box-shadow:0 8px 24px rgba(2,132,199,0.25);">
           <div style="display:flex; align-items:center; gap:14px;">
@@ -6996,6 +7075,21 @@
       lesson.subSections = TAMIL_UNIT_8_DATA.subSections;
       lesson.questions = TAMIL_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
       lesson.manapaadam = TAMIL_UNIT_8_DATA.manapaadam || [];
+      lesson.qCount = lesson.questions.length;
+        } else if (lesId === 'tam_katturai' && typeof TAMIL_ESSAYS_DATA !== 'undefined' && TAMIL_ESSAYS_DATA.subSections) {
+      lesson.subSections = TAMIL_ESSAYS_DATA.subSections;
+      lesson.questions = TAMIL_ESSAYS_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.stories = TAMIL_ESSAYS_DATA.stories || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'tam_kaditham' && typeof TAMIL_LETTERS_DATA !== 'undefined' && TAMIL_LETTERS_DATA.subSections) {
+      lesson.subSections = TAMIL_LETTERS_DATA.subSections;
+      lesson.questions = TAMIL_LETTERS_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.stories = TAMIL_LETTERS_DATA.stories || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'tam_blueprint' && typeof TAMIL_BLUEPRINT_GUIDE_DATA !== 'undefined' && TAMIL_BLUEPRINT_GUIDE_DATA.subSections) {
+      lesson.subSections = TAMIL_BLUEPRINT_GUIDE_DATA.subSections;
+      lesson.questions = TAMIL_BLUEPRINT_GUIDE_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.stories = TAMIL_BLUEPRINT_GUIDE_DATA.stories || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'tam_u9' && typeof TAMIL_UNIT_9_DATA !== 'undefined' && TAMIL_UNIT_9_DATA.subSections) {
       lesson.subSections = TAMIL_UNIT_9_DATA.subSections;
@@ -13045,6 +13139,484 @@ ${name || '10-ஆம் வகுப்பு மாணவர்'}`;
 
   window.ShareRewardManager = ShareRewardManager;
 
+  // =======================================================================
+  // Question Paper Pattern Modal Engine (All Subjects - 10th Standard)
+  // =======================================================================
+  window.openQuestionPaperPatternModal = function(subKey) {
+    const modal = document.getElementById('questionPaperPatternModal');
+    if (!modal) return;
+    
+    // Pause background players
+    if (window.teacherAudioPlayer && typeof teacherAudioPlayer.stop === 'function') teacherAudioPlayer.stop();
+    if (window.blackboardPlayer && typeof blackboardPlayer.stop === 'function') blackboardPlayer.stop();
+    if (window.continuousAudioPlayer && typeof continuousAudioPlayer.stop === 'function') continuousAudioPlayer.stop();
+
+    // Map subject ID to pattern tab key
+    let targetTab = 'tamil';
+    if (subKey) {
+      const k = String(subKey).toLowerCase();
+      if (k.includes('eng')) targetTab = 'english';
+      else if (k.includes('math')) targetTab = 'maths';
+      else if (k.includes('sci')) targetTab = 'science';
+      else if (k.includes('soc')) targetTab = 'social';
+      else if (k.includes('tam')) targetTab = 'tamil';
+    } else if (typeof currentSubject !== 'undefined' && currentSubject && currentSubject.id) {
+      const k = String(currentSubject.id).toLowerCase();
+      if (k.includes('eng')) targetTab = 'english';
+      else if (k.includes('math')) targetTab = 'maths';
+      else if (k.includes('sci')) targetTab = 'science';
+      else if (k.includes('soc')) targetTab = 'social';
+      else if (k.includes('tam')) targetTab = 'tamil';
+    }
+
+    modal.classList.add('open');
+    selectPatternTab(targetTab);
+  };
+
+  window.closeQuestionPaperPatternModal = function() {
+    const modal = document.getElementById('questionPaperPatternModal');
+    if (modal) modal.classList.remove('open');
+  };
+
+  window.selectPatternTab = function(tabKey) {
+    // Update active tab button styles
+    ['tamil', 'english', 'maths', 'science', 'social'].forEach(k => {
+      const btn = document.getElementById('patTab_' + k);
+      if (btn) {
+        if (k === tabKey) {
+          btn.style.background = 'linear-gradient(135deg, #0284c7, #0369a1)';
+          btn.style.color = '#ffffff';
+          btn.style.borderColor = '#0284c7';
+        } else {
+          btn.style.background = '#ffffff';
+          btn.style.color = 'var(--text-main)';
+          btn.style.borderColor = 'var(--border)';
+        }
+      }
+    });
+
+    const body = document.getElementById('questionPaperPatternBody');
+    if (!body) return;
+
+    if (tabKey === 'tamil') {
+      body.innerHTML = `
+        <div style="background:#fef2f2; border:1.5px solid #fecaca; border-left:5px solid #dc2626; padding:14px 18px; border-radius:12px; margin-bottom:18px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+            <h3 style="margin:0; font-size:17px; font-weight:800; color:#991b1b;">📕 10-ஆம் வகுப்பு தமிழ் பொதுத்தேர்வு வினாத்தாள் வடிவம்</h3>
+            <span style="background:#dc2626; color:#fff; font-size:12px; font-weight:800; padding:4px 10px; border-radius:20px;">மொத்த மதிப்பெண்கள்: 100 | நேரம்: 3.00 மணி</span>
+          </div>
+          <div style="font-size:13px; color:#7f1d1d; margin-top:4px;">தேர்ச்சி மதிப்பெண்: 35 | வினாக்கள் எண்ணிக்கை: 45 | தமிழ்நாடு அரசுத் தேர்வுகள் இயக்ககம் (DGE) அதிகாரப்பூர்வ புளூபிரிண்ட்</div>
+        </div>
+
+        <table style="width:100%; border-collapse:collapse; margin-bottom:20px; font-size:13.5px; border-radius:8px; overflow:hidden;">
+          <thead>
+            <tr style="background:#f1f5f9; text-align:left;">
+              <th style="border:1px solid #cbd5e1; padding:10px;">பகுதி</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">வினா எண்கள்</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">வினா விவரம்</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">எழுத வேண்டியவை</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">மதிப்பெண்</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#dc2626;">பகுதி I</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">1 – 15</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">பலவுள் தெரிக (MCQ): செய்யுள், உரைநடை, இலக்கணம், பாடல் வினாக்கள்</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">15 (அனைத்தும்)</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">15 × 1 = 15</td>
+            </tr>
+            <tr style="background:#f8fafc;">
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#dc2626;">பகுதி II</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">16 – 28</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                <b>பிரிவு 1 (16–21):</b> செய்யுள் & உரைநடை குறுவினா (4 எழுத வேண்டும்)<br>
+                <b>பிரிவு 2 (22–28):</b> இலக்கணம் & மொழிப்பயிற்சி (5 எழுத வேண்டும்;<br>
+                <span style="color:#b91c1c; font-weight:800;">⭐ வினா எண் 28 திருக்குறள் கட்டாய வினா</span>)
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">4 + 5 = 9 வினாக்கள்</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">9 × 2 = 18</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#dc2626;">பகுதி III</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">29 – 37</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                <b>பிரிவு 1 (29–31):</b> உரைநடை சிறுவினா (2 எழுத வேண்டும்)<br>
+                <b>பிரிவு 2 (32–34):</b> செய்யுள் சிறுவினா (2 எழுத வேண்டும்;<br>
+                <span style="color:#b91c1c; font-weight:800;">⭐ வினா எண் 34 மனப்பாடச் செய்யுள் கட்டாய வினா</span>)<br>
+                <b>பிரிவு 3 (35–37):</b> இலக்கணம் & மொழிபெயர்ப்பு (2 எழுத வேண்டும்)
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">2 + 2 + 2 = 6 வினாக்கள்</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">6 × 3 = 18</td>
+            </tr>
+            <tr style="background:#f8fafc;">
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#dc2626;">பகுதி IV</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">38 – 42</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                படைப்பாற்றல் வினாக்கள் (அனைத்திற்கும் விடையளிக்க வேண்டும் - 'அல்லது' தெரிவு):<br>
+                • <b>வினா 38:</b> கடிதம் எழுதுதல் (5M)<br>
+                • <b>வினா 39:</b> படிவம் நிரப்புதல் (5M)<br>
+                • <b>வினா 40:</b> படம் பார்த்து கவினுற எழுதுதல் (5M)<br>
+                • <b>வினா 41:</b> மொழிபெயர்ப்பு (5M)<br>
+                • <b>வினா 42:</b> குறிப்புகளைக் கொண்டு கட்டுரை / செய்தியறிக்கை (5M)
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">5 வினாக்கள் (அனைத்தும்)</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">5 × 5 = 25</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#dc2626;">பகுதி V</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">43 – 45</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                பெருவினாக்கள் (அனைத்து வினாக்களிலும் 'அல்லது' Either/Or தெரிவு):<br>
+                • <b>வினா 43:</b> உரைநடை விரிவான விடை (8M)<br>
+                • <b>வினா 44:</b> துணைப்பாடம் / கதை கட்டுரை (8M)<br>
+                • <b>வினா 45:</b> பொதுக்கட்டுரை (குறிப்புச் சட்டகம், முடிவுரையுடன்) (8M)
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">3 வினாக்கள்</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">3 × 8 = 24</td>
+            </tr>
+            <tr style="background:#fef2f2; font-weight:800;">
+              <td colspan="4" style="border:1px solid #cbd5e1; padding:12px; text-align:right;">மொத்த மதிப்பெண்கள் (Total Marks):</td>
+              <td style="border:1px solid #cbd5e1; padding:12px; color:#dc2626; font-size:16px;">100 மதிப்பெண்கள்</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:14px; margin-bottom:12px;">
+          <h4 style="margin:0 0 6px 0; color:#92400e;">💡 பொதுத்தேர்வில் தமிழில் 100/100 மதிப்பெண்கள் பெற முக்கிய உத்திகள்:</h4>
+          <ul style="margin:0; padding-left:20px; font-size:13px; color:#78350f; line-height:1.7;">
+            <li><b>கட்டாய வினா 28 (திருக்குறள்):</b> மேல் நான்கு சீர், கீழ் மூன்று சீர் எனச் சரியாகப் பிரித்து எழுதவும்.</li>
+            <li><b>கட்டாய வினா 34 (மனப்பாடப் பாடல்):</b> பாடல் தலைப்பு, ஆசிரியர் பெயர் குறிப்பிட்டு அடிகளை மாற்றாமல் எழுதவும்.</li>
+            <li><b>8 மதிப்பெண் கட்டுரைகள் (வினா 43, 44, 45):</b> கண்டிப்பாக 'குறிப்புச் சட்டகம்' அமைத்து, முன்னுரை, உட்தலைப்புகள், மேற்கோள்கள், முடிவுரையுடன் எழுதவும்.</li>
+          </ul>
+        </div>
+      `;
+    } else if (tabKey === 'english') {
+      body.innerHTML = `
+        <div style="background:#eff6ff; border:1.5px solid #bfdbfe; border-left:5px solid #2563eb; padding:14px 18px; border-radius:12px; margin-bottom:18px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+            <h3 style="margin:0; font-size:17px; font-weight:800; color:#1e40af;">📘 Class 10 English Public Examination Blueprint</h3>
+            <span style="background:#2563eb; color:#fff; font-size:12px; font-weight:800; padding:4px 10px; border-radius:20px;">Max Marks: 100 | Time: 3.00 Hours</span>
+          </div>
+          <div style="font-size:13px; color:#1e3a8a; margin-top:4px;">Passing Minimum: 35 | Questions: 44 | Directorate of Government Examinations (DGE) Syllabus</div>
+        </div>
+
+        <table style="width:100%; border-collapse:collapse; margin-bottom:20px; font-size:13.5px; border-radius:8px; overflow:hidden;">
+          <thead>
+            <tr style="background:#f1f5f9; text-align:left;">
+              <th style="border:1px solid #cbd5e1; padding:10px;">Part</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">Questions</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">Question Topics & Sections</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">To Answer</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#2563eb;">Part I</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">1 – 14</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">Vocabulary & Grammar MCQs: Synonyms (1-3), Antonyms (4-6), Singular/Plural, Prefix/Suffix, Abbreviations, Phrasal Verbs, Prepositions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">14 (All)</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">14 × 1 = 14</td>
+            </tr>
+            <tr style="background:#f8fafc;">
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#2563eb;">Part II</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">15 – 28</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                2-Mark Questions (Answer 10 out of 14):<br>
+                • <b>Sec I (15-18):</b> Prose Short Answers (Answer 3/4 = 6M)<br>
+                • <b>Sec II (19-22):</b> Poetry Appreciation & Rhyming (Answer 3/4 = 6M)<br>
+                • <b>Sec III (23-27):</b> Grammar: Voice, Speech, Punctuation (Answer 3/5 = 6M)<br>
+                • <b>Sec IV (Q28):</b> <span style="color:#b91c1c; font-weight:800;">⭐ Road Map Directions (Compulsory Q28 = 2M)</span>
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">3 + 3 + 3 + 1 = 10</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">10 × 2 = 20</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#2563eb;">Part III</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">29 – 42</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                5-Mark Questions (Answer 10 out of 14):<br>
+                • <b>Sec I (29-32):</b> Prose Paragraphs (Answer 2/4 = 10M)<br>
+                • <b>Sec II (33-36):</b> Poetry Paragraphs & Poetic Devices (Answer 2/4 = 10M)<br>
+                • <b>Sec III (37-38):</b> Supplementary Paragraph / Coherent Order (Answer 1/2 = 5M)<br>
+                • <b>Sec IV (39-41):</b> Writing Skills: Advertisement, Letter Writing (Q39), Notice/Report, Picture Description (Answer 4/6 = 20M)<br>
+                • <b>Sec V (Q42):</b> <span style="color:#b91c1c; font-weight:800;">⭐ Memory Poem (Compulsory Q42 = 5M)</span>
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">2 + 2 + 1 + 4 + 1 = 10</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">10 × 5 = 50</td>
+            </tr>
+            <tr style="background:#f8fafc;">
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#2563eb;">Part IV</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">43 – 44</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                8-Mark Extended Questions (Either / Or Choice):<br>
+                • <b>Q43:</b> Developing Hints (Supplementary Story) (8M)<br>
+                • <b>Q44:</b> General Passage Comprehension OR General Poem Comprehension (8M)
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">2 Questions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">2 × 8 = 16</td>
+            </tr>
+            <tr style="background:#eff6ff; font-weight:800;">
+              <td colspan="4" style="border:1px solid #cbd5e1; padding:12px; text-align:right;">Total Marks:</td>
+              <td style="border:1px solid #cbd5e1; padding:12px; color:#2563eb; font-size:16px;">100 Marks</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:10px; padding:14px; margin-bottom:12px;">
+          <h4 style="margin:0 0 6px 0; color:#166534;">💡 Top Tips for English Public Exam:</h4>
+          <ul style="margin:0; padding-left:20px; font-size:13px; color:#14532d; line-height:1.7;">
+            <li><b>Compulsory Q28 (Road Map):</b> Write clear imperative verbs (Step out of school, Turn left, Walk past the temple, Destination is on your right).</li>
+            <li><b>Compulsory Q42 (Quote from Memory):</b> Punctuation marks (commas, semi-colons, full stops) and capitalization carry strict marks.</li>
+            <li><b>Q43 Developing Hints (8M):</b> Provide a suitable Title, 3 paragraphs, and a Moral at the end.</li>
+          </ul>
+        </div>
+      `;
+    } else if (tabKey === 'maths') {
+      body.innerHTML = `
+        <div style="background:#fefce8; border:1.5px solid #fef08a; border-left:5px solid #ca8a04; padding:14px 18px; border-radius:12px; margin-bottom:18px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+            <h3 style="margin:0; font-size:17px; font-weight:800; color:#854d0e;">📐 10-ஆம் வகுப்பு கணிதம் / Mathematics Blueprint</h3>
+            <span style="background:#ca8a04; color:#fff; font-size:12px; font-weight:800; padding:4px 10px; border-radius:20px;">Max Marks: 100 | Time: 3.00 Hours</span>
+          </div>
+          <div style="font-size:13px; color:#713f12; margin-top:4px;">Passing Minimum: 35 | Questions: 44 | Tamil Medium & English Medium Common Structure</div>
+        </div>
+
+        <table style="width:100%; border-collapse:collapse; margin-bottom:20px; font-size:13.5px; border-radius:8px; overflow:hidden;">
+          <thead>
+            <tr style="background:#f1f5f9; text-align:left;">
+              <th style="border:1px solid #cbd5e1; padding:10px;">Part</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">Questions</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">Section Details & Chapters</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">To Answer</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#ca8a04;">Part I</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">1 – 14</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">பலவுள் தெரிக (MCQs): அனைத்து 8 அலகுகளில் இருந்தும் வினாக்கள் கேட்கப்படும்</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">14 (All)</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">14 × 1 = 14</td>
+            </tr>
+            <tr style="background:#f8fafc;">
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#ca8a04;">Part II</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">15 – 28</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                2-மதிப்பெண் வினாக்கள் (Short Answers):<br>
+                மொத்தம் 14 வினாக்களில் எவையேனும் 10 வினாக்களுக்கு விடையளிக்க வேண்டும்.<br>
+                <span style="color:#b91c1c; font-weight:800;">⭐ வினா எண் 28 கட்டாய வினா (Compulsory Question 28)</span>
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">10 Questions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">10 × 2 = 20</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#ca8a04;">Part III</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">29 – 42</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                5-மதிப்பெண் விரிவான வினாக்கள் (Detailed Answers):<br>
+                மொத்தம் 14 வினாக்களில் எவையேனும் 10 வினாக்களுக்கு விடையளிக்க வேண்டும்.<br>
+                <span style="color:#b91c1c; font-weight:800;">⭐ வினா எண் 42 கட்டாய வினா (Compulsory Question 42)</span>
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">10 Questions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">10 × 5 = 50</td>
+            </tr>
+            <tr style="background:#f8fafc;">
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#ca8a04;">Part IV</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">43 – 44</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                8-மதிப்பெண் செய்முறைப் பகுதி (Practical Geometry & Graph - Either / Or):<br>
+                • <b>வினா 43:</b> செய்முறை வடிவியல் / Practical Geometry (அலகு 4: வடிவொத்த முக்கோணம் / தொடுகோடு வரைதல்) (8M)<br>
+                • <b>வினா 44:</b> வரைபடம் / Graph (அலகு 3: இருபடிச் சமன்பாட்டின் வரைபடம் & தீர்வுகளின் தன்மை) (8M)
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">2 Questions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">2 × 8 = 16</td>
+            </tr>
+            <tr style="background:#fefce8; font-weight:800;">
+              <td colspan="4" style="border:1px solid #cbd5e1; padding:12px; text-align:right;">Total Marks:</td>
+              <td style="border:1px solid #cbd5e1; padding:12px; color:#ca8a04; font-size:16px;">100 Marks</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="background:#fdf4ff; border:1px solid #f0abfc; border-radius:10px; padding:14px; margin-bottom:12px;">
+          <h4 style="margin:0 0 6px 0; color:#86198f;">💡 கணிதத்தில் 100/100 மதிப்பெண்கள் பெற முக்கிய உத்திகள்:</h4>
+          <ul style="margin:0; padding-left:20px; font-size:13px; color:#701a75; line-height:1.7;">
+            <li><b>சூத்திரங்கள் (Formulas):</b> ஒவ்வொரு கணக்கிலும் பொருத்தமான சூத்திரத்தை முதலில் எழுதி பெட்டி கட்டவும்.</li>
+            <li><b>படிநிலைகள் (Step-by-Step):</b> கணிதத்தில் இறுதி விடைக்கு மட்டுமின்றி ஒவ்வொரு படிநிலைக்கும் தனி மதிப்பெண்கள் உண்டு.</li>
+            <li><b>செய்முறை வடிவியல் & வரைபடம்:</b> உதவிப்படம் (Rough Diagram), வரைமுறை (Construction steps), மற்றும் அளவுத்திட்டம் (Scale: X axis, Y axis) கட்டாயம் எழுத வேண்டும்.</li>
+          </ul>
+        </div>
+      `;
+    } else if (tabKey === 'science') {
+      body.innerHTML = `
+        <div style="background:#f0fdf4; border:1.5px solid #bbf7d0; border-left:5px solid #16a34a; padding:14px 18px; border-radius:12px; margin-bottom:18px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+            <h3 style="margin:0; font-size:17px; font-weight:800; color:#166534;">🔬 10-ஆம் வகுப்பு அறிவியல் / Science Blueprint</h3>
+            <span style="background:#16a34a; color:#fff; font-size:12px; font-weight:800; padding:4px 10px; border-radius:20px;">கருத்தியல்: 75M + செய்முறை: 25M = 100M</span>
+          </div>
+          <div style="font-size:13px; color:#14532d; margin-top:4px;">தேர்ச்சி: கருத்தியல் 20 + செய்முறை 15 = 35 | நேரம்: 3.00 மணி | இயற்பியல், வேதியியல், உயிரியல் சமப்பங்கீடு</div>
+        </div>
+
+        <table style="width:100%; border-collapse:collapse; margin-bottom:20px; font-size:13.5px; border-radius:8px; overflow:hidden;">
+          <thead>
+            <tr style="background:#f1f5f9; text-align:left;">
+              <th style="border:1px solid #cbd5e1; padding:10px;">பகுதி</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">வினா எண்கள்</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">வினா விவரம்</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">எழுத வேண்டியவை</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">மதிப்பெண்</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">பகுதி I</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">1 – 12</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">பலவுள் தெரிக (MCQs): இயற்பியல் 4 வினாக்கள் + வேதியியல் 4 வினாக்கள் + உயிரியல் 4 வினாக்கள்</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">12 (அனைத்தும்)</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">12 × 1 = 12</td>
+            </tr>
+            <tr style="background:#f8fafc;">
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">பகுதி II</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">13 – 22</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                2-மதிப்பெண் வினாக்கள் (Very Short Answers):<br>
+                10 வினாக்களில் எவையேனும் 7 வினாக்களுக்கு விடையளிக்க வேண்டும்.<br>
+                <span style="color:#b91c1c; font-weight:800;">⭐ வினா எண் 22 கட்டாய கணக்கீடு வினா (Compulsory Problem Q22)</span>
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">7 Questions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">7 × 2 = 14</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">பகுதி III</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">23 – 32</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                4-மதிப்பெண் வினாக்கள் (Short Answers):<br>
+                10 வினாக்களில் எவையேனும் 7 வினாக்களுக்கு விடையளிக்க வேண்டும்.<br>
+                <span style="color:#b91c1c; font-weight:800;">⭐ வினா எண் 32 கட்டாய கணக்கீடு வினா (Compulsory Problem Q32)</span>
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">7 Questions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">7 × 4 = 28</td>
+            </tr>
+            <tr style="background:#f8fafc;">
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">பகுதி IV</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">33 – 35</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                7-மதிப்பெண் பெருவினாக்கள் (Either / Or Choice):<br>
+                • <b>வினா 33:</b> இயற்பியல் / Physics (அலகுகள் 1–6) (7M)<br>
+                • <b>வினா 34:</b> வேதியியல் / Chemistry (அலகுகள் 7–11) (7M)<br>
+                • <b>வினா 35:</b> உயிரியல் / Biology (அலகுகள் 12–23) (7M)
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">3 Questions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">3 × 7 = 21</td>
+            </tr>
+            <tr style="background:#f0fdf4; font-weight:800;">
+              <td colspan="4" style="border:1px solid #cbd5e1; padding:12px; text-align:right;">கருத்தியல் தேர்வு மொத்தம் (Theory Total):</td>
+              <td style="border:1px solid #cbd5e1; padding:12px; color:#16a34a; font-size:16px;">75 Marks</td>
+            </tr>
+            <tr style="background:#ecfdf5; font-weight:700; color:#047857;">
+              <td colspan="4" style="border:1px solid #cbd5e1; padding:8px 12px; text-align:right;">பள்ளி செய்முறைத் தேர்வு (Practicals):</td>
+              <td style="border:1px solid #cbd5e1; padding:8px 12px; font-size:14px;">25 Marks</td>
+            </tr>
+            <tr style="background:#dcfce7; font-weight:800; color:#14532d;">
+              <td colspan="4" style="border:1px solid #cbd5e1; padding:12px; text-align:right;">மொத்த மதிப்பெண்கள் (Grand Total):</td>
+              <td style="border:1px solid #cbd5e1; padding:12px; font-size:16px;">100 Marks</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:14px; margin-bottom:12px;">
+          <h4 style="margin:0 0 6px 0; color:#1e40af;">💡 அறிவியலில் முழு மதிப்பெண்கள் பெற முக்கிய உத்திகள்:</h4>
+          <ul style="margin:0; padding-left:20px; font-size:13px; color:#1e3a8a; line-height:1.7;">
+            <li><b>கட்டாயக் கணக்கீடுகள் (Q22, Q32):</b> இயக்க விதிகள், ஒளியியல், மின்சாரவியல், மற்றும் அணுக்கரு இயற்பியல் அலகுகளில் உள்ள எடுத்துக்காட்டுக் கணக்குகளை நன்கு பயிற்சி செய்யவும். SI அலகுகளைத் தவறாமல் எழுதவும்.</li>
+            <li><b>படங்கள் (Diagrams):</b> மனித இதயம், சிறுநீரகம், நியூரான்கள், தாவர உள்ளமைப்பு, மின்னோட்டச் சுற்று ஆகிய படங்களை பாகங்களுடன் பென்சிலால் வரையவும்.</li>
+          </ul>
+        </div>
+      `;
+    } else if (tabKey === 'social') {
+      body.innerHTML = `
+        <div style="background:#fdf4ff; border:1.5px solid #f0abfc; border-left:5px solid #a855f7; padding:14px 18px; border-radius:12px; margin-bottom:18px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+            <h3 style="margin:0; font-size:17px; font-weight:800; color:#7e22ce;">🌍 10-ஆம் வகுப்பு சமூக அறிவியல் / Social Science Blueprint</h3>
+            <span style="background:#a855f7; color:#fff; font-size:12px; font-weight:800; padding:4px 10px; border-radius:20px;">Max Marks: 100 | Time: 3.00 Hours</span>
+          </div>
+          <div style="font-size:13px; color:#581c87; margin-top:4px;">தேர்ச்சி மதிப்பெண்: 35 | வினாக்கள்: 44 | வரலாறு, புவியியல், குடிமையியல், பொருளியல் சமப்பங்கீடு</div>
+        </div>
+
+        <table style="width:100%; border-collapse:collapse; margin-bottom:20px; font-size:13.5px; border-radius:8px; overflow:hidden;">
+          <thead>
+            <tr style="background:#f1f5f9; text-align:left;">
+              <th style="border:1px solid #cbd5e1; padding:10px;">பகுதி</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">வினா எண்கள்</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">வினா விவரம்</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">எழுத வேண்டியவை</th>
+              <th style="border:1px solid #cbd5e1; padding:10px;">மதிப்பெண்</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#a855f7;">பகுதி I</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">1 – 14</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">பலவுள் தெரிக (MCQs): வரலாறு (5), புவியியல் (4), குடிமையியல் (3), பொருளியல் (2)</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">14 (அனைத்தும்)</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">14 × 1 = 14</td>
+            </tr>
+            <tr style="background:#f8fafc;">
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#a855f7;">பகுதி II</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">15 – 28</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                2-மதிப்பெண் வினாக்கள் (Short Answers):<br>
+                14 வினாக்களில் எவையேனும் 10 வினாக்களுக்கு விடையளிக்க வேண்டும்.<br>
+                <span style="color:#b91c1c; font-weight:800;">⭐ வினா எண் 28 கட்டாய வினா (Compulsory Question 28)</span>
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">10 Questions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">10 × 2 = 20</td>
+            </tr>
+            <tr>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#a855f7;">பகுதி III</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">29 – 42</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                5-மதிப்பெண் வினாக்கள் (Detailed Answers - 10 எழுத வேண்டும்):<br>
+                • வேறுபடுத்துக & காரணம் தருக (புவியியல்)<br>
+                • வரலாறு, குடிமையியல், பொருளியல் 5 மதிப்பெண் பத்திகள்<br>
+                • <b>வினா 41:</b> காலக்கோடு / Timeline (1900-1950 ஐந்து நிகழ்வுகள்) (5M)<br>
+                • <b>வினா 42:</b> <span style="color:#b91c1c; font-weight:800;">⭐ இந்திய வரைபடம் (5 இடங்கள் - கட்டாய வினா) (5M)</span>
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">10 Questions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">10 × 5 = 50</td>
+            </tr>
+            <tr style="background:#f8fafc;">
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#a855f7;">பகுதி IV</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">43 – 44</td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">
+                8-மதிப்பெண் பெருவினாக்கள் (Either / Or Choice):<br>
+                • <b>வினா 43:</b> வரலாறு / குடிமையியல் விரிவான கட்டுரை வினா (8M)<br>
+                • <b>வினா 44:</b> வரைபடம் (8 இடங்கள் குறிக்க வேண்டும்) (8M)<br>
+                (தமிழ்நாடு வரைபடம் / இந்தியா வரைபடம் / உலக வரைபடம்)
+              </td>
+              <td style="border:1px solid #cbd5e1; padding:10px;">2 Questions</td>
+              <td style="border:1px solid #cbd5e1; padding:10px; font-weight:800; color:#16a34a;">2 × 8 = 16</td>
+            </tr>
+            <tr style="background:#fdf4ff; font-weight:800;">
+              <td colspan="4" style="border:1px solid #cbd5e1; padding:12px; text-align:right;">Total Marks:</td>
+              <td style="border:1px solid #cbd5e1; padding:12px; color:#a855f7; font-size:16px;">100 Marks</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="background:#fff7ed; border:1px solid #fed7aa; border-radius:10px; padding:14px; margin-bottom:12px;">
+          <h4 style="margin:0 0 6px 0; color:#c2410c;">💡 சமூக அறிவியலில் முழு மதிப்பெண்கள் பெற முக்கிய உத்திகள்:</h4>
+          <ul style="margin:0; padding-left:20px; font-size:13px; color:#9a3412; line-height:1.7;">
+            <li><b>வரைபடம் (Map Practice):</b> வினா 42 (5 இடங்கள்) + வினா 44 (8 இடங்கள்) = மொத்தம் 13 மதிப்பெண்கள் வரைபடத்தில் மட்டுமே பெறலாம்! எங்களின் செயலியில் உள்ள 1,2,3 வரைபட வழிகாட்டியைப் பயன்படுத்தவும்.</li>
+            <li><b>காலக்கோடு (Timeline Q41):</b> 1 அலகு = 10 ஆண்டுகள் என அளவுத்திட்டம் எழுதி, 5 நிகழ்வுகளை ஆண்டோடு துல்லியமாகக் குறிக்கவும்.</li>
+            <li><b>வேறுபடுத்துக (Distinguish between):</b> அட்டவணை அமைத்து இரு பக்கமும் குறைந்தபட்சம் 3 முதல் 4 வேறுபாடுகளை எழுதவும்.</li>
+          </ul>
+        </div>
+      `;
+    }
+  };
   window.openMockTestModal = function(mode) {
     if (!currentLesson || !currentSubject) return;
     if (window.teacherAudioPlayer) teacherAudioPlayer.stop();

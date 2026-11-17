@@ -1,4 +1,4 @@
-**
+/***
  * 10th Standard Tamil - Writing Skills Question Bank & Study Guide
  * தமிழ்நாடு சமச்சீர் கல்வி - 10-ஆம் வகுப்பு அரசுப் பொதுத்தேர்வு வழிகாட்டி 2026
  * 
@@ -892,3 +892,10 @@ const TAMIL_BLUEPRINT_GUIDE_DATA = {
     }
   ]
 };
+
+// Bind to window for universal access across PWA modules
+if (typeof window !== 'undefined') {
+  window.TAMIL_ESSAYS_DATA = TAMIL_ESSAYS_DATA;
+  window.TAMIL_LETTERS_DATA = TAMIL_LETTERS_DATA;
+  window.TAMIL_BLUEPRINT_GUIDE_DATA = TAMIL_BLUEPRINT_GUIDE_DATA;
+}

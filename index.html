@@ -15448,7 +15448,7 @@ ${this.studentName || 'மாணவர்'}`;
       if (!subjName && typeof currentSubject !== 'undefined' && currentSubject) {
         subjName = currentSubject.name || currentSubject.id;
       }
-      if (!subjName) subjName = '10th பொதுவானது';
+      if (!subjName) subjName = '10-ஆம் வகுப்பு (10th Std)';
 
       const cleanText = (str) => {
         if (!str) return '';
@@ -15472,7 +15472,7 @@ ${this.studentName || 'மாணவர்'}`;
   }
 
 
-  const AI_TEACHER_SYSTEM = `You are "உன்னால் முடியும்" (Vunnal Mudiyum) Tamil Nadu State Board (Samacheer Kalvi) Class 10 school AI Teacher (அன்பான 10-ஆம் வகுப்பு ஆசிரியர்).
+    const AI_TEACHER_SYSTEM = `You are "உன்னால் முடியும்" (Vunnal Mudiyum) Tamil Nadu State Board (Samacheer Kalvi) Class 10 school AI Teacher (அன்பான 10-ஆம் வகுப்பு ஆசிரியர்).
 CRITICAL RULES:
 1. STRICT LANGUAGE MATCHING:
    - If the student's question, prompt, or context is in ENGLISH (or for English Medium / EM), respond 100% in clear, simple, fluent ENGLISH. Do NOT mix Tamil into English Medium explanations!
@@ -16053,14 +16053,24 @@ Important:
     appendUserQuestionCard(displayText, mode, contextQ);
 
     // Asynchronously log student query to teacher's Google Sheet
+    const isEmLogging = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+    const modeLabel = mode === 'custom' ? (isEmLogging ? 'Custom Doubt' : 'சுய சந்தேகம் (Custom Doubt)') :
+                      mode === 'mindmap' ? (isEmLogging ? 'Mind Map (Diagram)' : 'மன வரைபடம் (Mind Map)') :
+                      mode === 'steps' ? (isEmLogging ? 'Step-by-step Solution' : 'படிநிலைத் தீர்வு (Step-by-Step)') :
+                      mode === 'tips' ? (isEmLogging ? 'Scoring Tips' : 'தேர்வு குறிப்புகள் (Scoring Tips)') :
+                      (isEmLogging ? 'Simple Explanation' : 'எளிய விளக்கம் (Simple)');
+
     logAIQuestionToSheet({
-      subject: (typeof currentSubject !== 'undefined' && currentSubject ? (currentSubject.name || currentSubject.id) : ''),
-      mode: mode === 'custom' ? 'à®šà¯à®¯ à®šà®¨à¯à®¤à¯‡à®•à®®à¯ (Custom Doubt)' : (mode === 'mindmap' ? 'à®®à®© à®µà®°à¯ˆà®ªà®Ÿà®®à¯ (Mindmap)' : (mode === 'steps' ? 'à®ªà®Ÿà®¿à®¨à®¿à®²à¯ˆà®¤à¯ à®¤à¯€à®°à¯à®µà¯ (Steps)' : (mode === 'tips' ? 'à®¤à¯‡à®°à¯à®µà¯ à®•à¯à®±à®¿à®ªà¯à®ªà¯à®•à®³à¯ (Tips)' : 'à®Žà®³à®¿à®¯ à®µà®¿à®³à®•à¯à®•à®®à¯ (Simple)'))),
+      subject: (typeof currentSubject !== 'undefined' && currentSubject ? (currentSubject.name || currentSubject.id) : (isEmLogging ? 'English Medium' : '10-ஆம் வகுப்பு')),
+      mode: modeLabel,
       question: displayText,
       context: contextQ ? (contextQ.q || contextQ.id || '') : ''
     });
 
     // 2. Show the Teacher Thinking / Loading Indicator
+    const loadingId = appendAILoadingIndicator();
+
+
     const loadingId = appendAILoadingIndicator();
 
     // 3. Query Gemini
@@ -16825,14 +16835,16 @@ Important:
 
     // Asynchronously log student answer evaluation to teacher's Google Sheet
     logAIQuestionToSheet({
-      subject: (typeof currentSubject !== 'undefined' && currentSubject ? (currentSubject.name || currentSubject.id) : (isEm ? 'English Medium' : 'à®ªà¯Šà®¤à¯à®µà®¾à®©à®¤à¯')),
-      mode: isEm ? 'Answer Evaluation (Paper Correction)' : 'à®µà®¿à®Ÿà¯ˆà®¤à¯à®¤à®¾à®³à¯ à®®à®¤à®¿à®ªà¯à®ªà¯€à®Ÿà¯ (Evaluation)',
+      subject: (typeof currentSubject !== 'undefined' && currentSubject ? (currentSubject.name || currentSubject.id) : (isEm ? 'English Medium' : '10-ஆம் வகுப்பு')),
+      mode: isEm ? 'Answer Evaluation' : 'விடைத்தாள் மதிப்பீடு (Evaluation)',
       question: cleanQ,
-      context: 'à®®à®¾à®£à®µà®°à¯ à®Žà®´à¯à®¤à®¿à®¯ à®µà®¿à®Ÿà¯ˆ: ' + cleanHtmlEntities(studentAns).slice(0, 300)
+      context: (isEm ? 'Student Answer: ' : 'மாணவர் விடை: ') + cleanHtmlEntities(studentAns).slice(0, 300)
     });
 
     try {
       const evaluation = await callGeminiAPI(prompt, AI_EVALUATOR_SYSTEM);
+
+
       if (resArea && resContent) {
         const formatted = formatAIResponseForDisplay(evaluation);
 

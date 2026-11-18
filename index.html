@@ -6248,9 +6248,9 @@
       var mistakes = [];
       var fullMath = (qText + ' ' + ansText).toLowerCase();
       var rawMath = qText + ' ' + ansText;
+      var qLow = qText.toLowerCase();
 
       // 1. Cartesian Product & Sets (A × B, B × A, n(A × B))
-      var qLow = qText.toLowerCase();
       var isCartesian = fullMath.indexOf('a × b') !== -1 || fullMath.indexOf('b × a') !== -1 || fullMath.indexOf('a \\times b') !== -1 || fullMath.indexOf('b \\times a') !== -1 || fullMath.indexOf('cartesian') !== -1 || (rawMath.indexOf('A ×') !== -1);
       var isCartesianGivenInQ = qLow.indexOf('b × a =') !== -1 || qLow.indexOf('b \\times a =') !== -1 || qLow.indexOf('a × b =') !== -1 || qLow.indexOf('a \\times b =') !== -1 || qLow.indexOf('b x a =') !== -1 || qLow.indexOf('a x b =') !== -1;
       var isFindingSets = isCartesian && (isCartesianGivenInQ || ((qLow.indexOf('find a and b') !== -1 || qLow.indexOf('a மற்றும் b ஆகியவற்றைக் காண்க') !== -1) && qLow.indexOf('a =') === -1));
@@ -6317,7 +6317,83 @@
         });
       }
 
-      // 2. Relations and Functions (Domain, Range, Arrow Diagram, Function Check)
+      // 2. Line Tests (Vertical line / Horizontal line test)
+      else if (fullMath.indexOf('குத்துக்கோடு') !== -1 || fullMath.indexOf('vertical line') !== -1 || fullMath.indexOf('கிடைமட்ட') !== -1 || fullMath.indexOf('horizontal line') !== -1) {
+        var isHoriz = fullMath.indexOf('கிடைமட்ட') !== -1 || fullMath.indexOf('horizontal') !== -1;
+        var isVert = !isHoriz && (fullMath.indexOf('குத்துக்கோடு') !== -1 || fullMath.indexOf('vertical') !== -1);
+        mistakes.push({
+          type: isEm ? "Omission of 'At Most One Point' Keyword" : "'அதிகபட்சமாக ஒரே ஒரு புள்ளி' விடுபாடு",
+          icon: "📝",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Writing vaguely that 'the line cuts the curve' without stating the decisive exam keyword: 'cuts the curve in at most one point'."
+            : "'அதிகபட்சமாக ஒரே ஒரு புள்ளியில் மட்டுமே வெட்டினால்' என்ற அரசு விடைக்குறிப்பிலுள்ள முதன்மைச் சொற்களை எழுதாமல் விடுதல்.",
+          correction: isEm
+            ? (isVert ? "State explicitly: 'A curve represents a function if any vertical line intersects the curve in at most one point'." : "State explicitly: 'A curve represents a one-to-one function if any horizontal line intersects the curve in at most one point'.")
+            : (isVert ? "'வளைவரையை குத்துக்கோடு அதிகபட்சமாக ஒரே ஒரு புள்ளியில் மட்டுமே வெட்டினால் அவ்வளைவரை ஒரு சார்பினைக் குறிக்கும்' என முழுமையாக எழுதவும்." : "'வளைவரையை எந்த ஒரு கிடைமட்டக் கோடும் அதிகபட்சமாக ஒரே ஒரு புள்ளியில் மட்டுமே வெட்டினால் அது ஓர் ஒன்றுக்கொன்றான சார்பினைக் குறிக்கும்' என முழுமையாக எழுதவும்.")
+        });
+        mistakes.push({
+          type: isEm ? (isVert ? "Confusing Function with One-to-One" : "Confusing One-to-One with Function") : (isVert ? "சார்பு vs ஒன்றுக்கொன்றான சார்பு குழப்பம்" : "ஒன்றுக்கொன்றான சார்பு vs சார்பு குழப்பம்"),
+          icon: "⚠️",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? (isVert ? "Writing that vertical line test proves one-to-one (vertical line test tests for function; horizontal line test tests for one-to-one)." : "Writing that horizontal line test tests for function (it tests specifically for one-to-one function).")
+            : (isVert ? "குத்துக்கோட்டுச் சோதனை சார்பினைக் கண்டறியும் சோதனை; அதை ஒன்றுக்கொன்றான சார்புக்கானது என மாற்றி எழுதுதல்." : "கிடைமட்டக் கோட்டுச் சோதனை ஒன்றுக்கொன்றான சார்பினைக் கண்டறியும் சோதனை; அதை பொதுவான சார்புக்கானது என எழுதுதல்."),
+          correction: isEm
+            ? (isVert ? "Vertical line test = tests if curve is a FUNCTION." : "Horizontal line test = tests if function is ONE-TO-ONE.")
+            : (isVert ? "குத்துக்கோட்டுச் சோதனை = 'சார்பு' என்பதைக் கண்டறிய மட்டுமே பயன்படும்." : "கிடைமட்டக் கோட்டுச் சோதனை = 'ஒன்றுக்கொன்றான சார்பு' (1-1 Function) என்பதைக் கண்டறியப் பயன்படும்.")
+        });
+        mistakes.push({
+          type: isEm ? "Rough Diagram & Intersection Label Omission" : "தோராய வரைபடம் & வெட்டும் புள்ளி விடுபாடு",
+          icon: "📈",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? (isVert ? "Stating definition without a quick rough sketch showing vertical line cutting curve at 1 point P (function) or 2 points P, Q (not a function)." : "Stating definition without a quick rough sketch showing horizontal line cutting curve at 1 point P (one-to-one) or 2 points P, Q (not one-to-one).")
+            : (isVert ? "வரையறையை மட்டும் எழுதிவிட்டு, குத்துக்கோடு வளைவரையை 1 புள்ளியில் (P) அல்லது 2 புள்ளிகளில் (P, Q) வெட்டுவதைத் தோராயமாக வரைந்து காட்டாமல் விடுதல்." : "வரையறையை மட்டும் எழுதிவிட்டு, கிடைமட்டக்கோடு வளைவரையை 1 புள்ளியில் (P) அல்லது 2 புள்ளிகளில் (P, Q) வெட்டுவதைத் தோராயமாக வரைந்து காட்டாமல் விடுதல்."),
+          correction: isEm
+            ? (isVert ? "Draw a quick rough sketch: mark the curve, vertical test line, and label intersection point P." : "Draw a quick rough sketch: mark the curve, horizontal test line, and label intersection point P.")
+            : (isVert ? "விடையின் அருகே எளிய வரைபடம் வரைந்து குத்துக்கோடு வெட்டும் புள்ளி P-ஐக் குறித்துக் காட்டவும்." : "விடையின் அருகே எளிய வரைபடம் வரைந்து கிடைமட்டக்கோடு வெட்டும் புள்ளி P-ஐக் குறித்துக் காட்டவும்.")
+        });
+      }
+
+      // 3. Four-way Function Representation (Arrow Diagram, Table, Graph, Ordered Pairs)
+      else if ((fullMath.indexOf('அம்பு வரைபடம்') !== -1 || fullMath.indexOf('arrow diagram') !== -1) && (fullMath.indexOf('அட்டவணை') !== -1 || fullMath.indexOf('table') !== -1 || fullMath.indexOf('ordered pairs') !== -1 || fullMath.indexOf('வரிசைச் சோடி') !== -1)) {
+        mistakes.push({
+          type: isEm ? "Arrowhead Direction Omission in Arrow Diagram" : "அம்பு வரைபடத்தில் அம்புக்குறி (Direction) விடுபாடு",
+          icon: "🎯",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Connecting elements between domain A and co-domain B with plain lines without placing arrowheads pointing from A to B."
+            : "கணம் A-ல் இருந்து B-க்கு கோடுகளை இணைக்கும் போது அம்புக்குறிகளை (Arrowheads) இடாமல் விடுதல் அல்லது மாற்றி B-ல் இருந்து A-க்கு வரைதல்.",
+          correction: isEm
+            ? "Every relation line in the arrow diagram must carry an arrowhead pointing strictly from Domain (A) to Co-domain (B)."
+            : "அம்பு வரைபடத்தில் ஒவ்வொரு இணைப்புக் கோட்டிலும் A-ல் இருந்து B-ஐ நோக்கிச் செல்லும் அம்புக்குறியைக் கட்டாயம் இட வேண்டும்."
+        });
+        mistakes.push({
+          type: isEm ? "Coordinate Inversion (y, x) in Cartesian Graph Plotting" : "வரைபடத்தில் ஆயத்தொலைவுகளை மாற்றிப் புள்ளி குறித்தல்",
+          icon: "📈",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Plotting (y, x) instead of (x, y) on the coordinate plane (e.g. plotting (0, 2) instead of (2, 0)), or omitting coordinate names beside plotted points."
+            : "கார்டீசியன் தளத்தில் குறிக்கும்போது (x, y)-க்கு பதிலாக (y, x) என மாற்றிப் புள்ளி குறித்தல் (எ.கா: (2, 0)-க்கு பதிலாக (0, 2) என குறிப்பது தவறு), மற்றும் புள்ளிகளின் ஆயத்தொலைவுகளை எழுதாமல் விடுதல்.",
+          correction: isEm
+            ? "Always plot x on horizontal axis and f(x) on vertical axis, and write coordinate labels beside each dot: (2, 0), (4, 1), (6, 2)."
+            : "கிடைமட்ட அச்சில் x-ஐயும், செங்குத்து அச்சில் y-ஐயும் கொண்டு புள்ளிகளைச் சரியாகக் குறித்து (2, 0), (4, 1) எனப் பெயரிடவும்."
+        });
+        mistakes.push({
+          type: isEm ? "Set Braces { } Omission for Ordered Pairs" : "வரிசைச் சோடிகளின் கணத்தில் அடைப்புக்குறி { } விடுபாடு",
+          icon: "⚠️",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Writing ordered pairs without enclosing them in outer set braces: writing f = (2,0), (4,1) instead of f = {(2,0), (4,1)}."
+            : "வரிசைச் சோடிகளை எழுதும்போது வெளிப்புறக் கண அடைப்புக்குறியை { } இடாமல் வெறும் அடைப்புக் குறிகளை மட்டும் எழுதுதல்.",
+          correction: isEm
+            ? "Always enclose all ordered pairs inside set braces: f = {(2, 0), (4, 1), (6, 2), (10, 4), (12, 5)}."
+            : "வரிசைச் சோடிகளின் கணத்தை f = {(2, 0), (4, 1), ...} என வெளிப்புறக் கண அடைப்புக்குறிக்குள் { } எழுதவும்."
+        });
+      }
+
+      // 4. Relations and Functions (Domain, Range, Arrow Diagram, Function Check)
       else if (fullMath.indexOf('மதிப்பகம்') !== -1 || fullMath.indexOf('வீச்சகம்') !== -1 || fullMath.indexOf('domain') !== -1 || fullMath.indexOf('range') !== -1 || fullMath.indexOf('சார்பாகுமா') !== -1) {
         mistakes.push({
           type: isEm ? "Confusing Co-domain with Range" : "துணை மதிப்பகம் vs வீச்சகம் குழப்பம்",
@@ -6354,7 +6430,7 @@
         });
       }
 
-      // 3. Composite Functions (f ∘ g, g ∘ f, Finding k)
+      // 5. Composite Functions (f ∘ g, g ∘ f, Finding k)
       else if (fullMath.indexOf('f ∘ g') !== -1 || fullMath.indexOf('g ∘ f') !== -1 || fullMath.indexOf('f \\circ g') !== -1 || fullMath.indexOf('f(g(x))') !== -1) {
         var isFindK = fullMath.indexOf('k') !== -1;
         if (isFindK) {
@@ -6406,34 +6482,88 @@
         }
       }
 
-      // 4. Line Tests (Vertical line / Horizontal line test)
-      else if (fullMath.indexOf('குத்துக்கோடு') !== -1 || fullMath.indexOf('vertical line') !== -1 || fullMath.indexOf('கிடைமட்ட') !== -1 || fullMath.indexOf('horizontal line') !== -1) {
-        var isVert = fullMath.indexOf('குத்துக்கோடு') !== -1 || fullMath.indexOf('vertical') !== -1;
+      // 6. Euclid's Division Lemma & Algorithm (a = bq + r)
+      else if (fullMath.indexOf('யூக்ளிட்') !== -1 || fullMath.indexOf('யூக்ளிட') !== -1 || fullMath.indexOf('euclid') !== -1 || fullMath.indexOf('வகுத்தல் துணைத் தேற்றம்') !== -1) {
         mistakes.push({
-          type: isEm ? "Omission of 'At Most One Point' Keyword" : "'அதிகபட்சமாக ஒரே ஒரு புள்ளி' விடுபாடு",
-          icon: "📝",
+          type: isEm ? "Remainder Condition (0 ≤ r < b) Omission" : "மீதிக்கான நிபந்தனை (0 ≤ r < b) விடுபாடு",
+          icon: "📐",
           deduction: "-1 Mark",
           mistake: isEm
-            ? "Writing vaguely that 'the line cuts the curve' without stating the decisive exam keyword: 'cuts the curve in at most one point'."
-            : "'அதிகபட்சமாக ஒரே ஒரு புள்ளியில் மட்டுமே வெட்டினால்' என்ற அரசு விடைக்குறிப்பிலுள்ள முதன்மைச் சொற்களை எழுதாமல் விடுதல்.",
+            ? "Writing a = bq + r but omitting the mandatory condition 0 ≤ r < b (r can never be negative or greater than divisor b)."
+            : "a = bq + r என எழுதிவிட்டு, மீதிக்கான கட்டாய நிபந்தனையான 0 ≤ r < b என்பதை எழுதாமல் விடுத்து மதிப்பெண் இழத்தல்.",
           correction: isEm
-            ? "State explicitly: 'A curve represents a function if any vertical line intersects the curve in at most one point'."
-            : "'வளைவரையை குத்துக்கோடு அதிகபட்சமாக ஒரே ஒரு புள்ளியில் மட்டுமே வெட்டினால் அவ்வளைவரை ஒரு சார்பினைக் குறிக்கும்' என முழுமையாக எழுதவும்."
+            ? "Always state the complete lemma: a = bq + r, where 0 ≤ r < b."
+            : "யூக்ளிடின் வகுத்தல் தேற்றத்தை எழுதும்போது கட்டாயம் '0 ≤ r < b' என்ற நிபந்தனையையும் சேர்த்து எழுத வேண்டும்."
         });
         mistakes.push({
-          type: isEm ? (isVert ? "Confusing Function with One-to-One" : "Confusing One-to-One with Function") : (isVert ? "சார்பு vs ஒன்றுக்கொன்றான சார்பு குழப்பம்" : "ஒன்றுக்கொன்றான சார்பு vs சார்பு குழப்பம்"),
+          type: isEm ? "HCF Identification: Quotient vs Divisor Confusion" : "மீ.பொ.வ (HCF)-ல் ஈவு vs வகுக்கும் எண் குழப்பம்",
           icon: "⚠️",
           deduction: "-½ Mark",
           mistake: isEm
-            ? (isVert ? "Writing that vertical line test proves one-to-one (vertical line test tests for function; horizontal line test tests for one-to-one)." : "Writing that horizontal line test tests for function (it tests specifically for one-to-one function).")
-            : (isVert ? "குத்துக்கோட்டுச் சோதனை சார்பினைக் கண்டறியும் சோதனை; அதை ஒன்றுக்கொன்றான சார்புக்கானது என மாற்றி எழுதுதல்." : "கிடைமட்டக் கோட்டுச் சோதனை ஒன்றுக்கொன்றான சார்பினைக் கண்டறியும் சோதனை; அதை பொதுவான சார்புக்கானது என எழுதுதல்."),
+            ? "When remainder reaches 0, mistakenly writing the quotient q as HCF instead of the divisor b."
+            : "மீதி பூஜ்ஜியம் (r = 0) வரும் இறுதிப் படியில் வகுக்கும் எண்ணை (Divisor) மீ.பொ.வ-ஆக எழுதாமல், ஈவை (Quotient) மீ.பொ.வ என மாற்றி எழுதுதல்.",
           correction: isEm
-            ? (isVert ? "Vertical line test = tests if curve is a FUNCTION." : "Horizontal line test = tests if function is ONE-TO-ONE.")
-            : (isVert ? "குத்துக்கோட்டுச் சோதனை = 'சார்பு' என்பதைக் கண்டறிய மட்டுமே பயன்படும்." : "கிடைமட்டக் கோட்டுச் சோதனை = 'ஒன்றுக்கொன்றான சார்பு' என்பதைக் கண்டறியப் பயன்படும்.")
+            ? "The HCF is strictly the LAST DIVISOR that leaves remainder 0."
+            : "மீதி பூஜ்ஜியம் வரும் போது உள்ள வகுக்கும் எண்ணே (Divisor) மீ.பொ.வ ஆகும்."
         });
       }
 
-      // 5. Arithmetic & Geometric Progressions (AP / GP)
+      // 7. Sum of Special Series (Σn, Σn², Σn³)
+      else if (fullMath.indexOf('1 + 2 + 3') !== -1 || fullMath.indexOf('1² + 2²') !== -1 || fullMath.indexOf('1³ + 2³') !== -1 || fullMath.indexOf('இயல் எண்களின் கூடுதல்') !== -1 || fullMath.indexOf('sum of cubes') !== -1 || fullMath.indexOf('sum of squares') !== -1) {
+        var isShifted = fullMath.indexOf('16 + 17') !== -1 || fullMath.indexOf('11 + 12') !== -1 || fullMath.indexOf('6² + 7²') !== -1 || fullMath.indexOf('10³ + 11³') !== -1 || fullMath.indexOf('15² + 16²') !== -1 || (fullMath.indexOf('முதல்') === -1 && fullMath.indexOf('first') === -1 && rawMath.indexOf('+') !== -1 && rawMath.indexOf('1 +') === -1 && rawMath.indexOf('1² +') === -1 && rawMath.indexOf('1³ +') === -1);
+        if (isShifted) {
+          mistakes.push({
+            type: isEm ? "Omission of Subtraction for Initial Terms" : "தொடக்க உறுப்புகளைக் கழிக்கத் தவறுதல்",
+            icon: "➖",
+            deduction: "-1 Mark",
+            mistake: isEm
+              ? "Applying standard formula directly from 1 to N without subtracting the unincluded first (k-1) terms."
+              : "தொடர் 1-ல் இருந்து தொடங்காத போது (எ.கா: 16+17+...+75), தொடக்க 15 உறுப்புகளின் கூடுதலைக் கழிக்காமல் (Σ 75 - Σ 15) நேரடியாக சூத்திரத்தைப் பயன்படுத்துதல்.",
+            correction: isEm
+              ? "Split the series: (1 to n) - (1 to k-1), then apply the formula to each part separately."
+              : "தொடரை (1 முதல் n) - (1 முதல் k-1) என இரு பிரிவுகளாகப் பிரித்து, பின்னர் சூத்திரத்தைப் பிரதியிட்டு கழிக்கவும்."
+          });
+        }
+        mistakes.push({
+          type: isEm ? "Formula Confusion (Squares vs Cubes Series)" : "கூடுதல் சூத்திரக் குழப்பம் (வர்க்கங்கள் vs கனங்கள்)",
+          icon: "📝",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Using [n(n+1)/2]² for squares or n(n+1)(2n+1)/6 for cubes."
+            : "வர்க்கங்களின் கூடுதலுக்கு n(n+1)(2n+1)/6 மற்றும் கனங்களின் கூடுதலுக்கு [n(n+1)/2]² சூத்திரங்களை ஒன்றிற்குப் பதில் மற்றொன்றை மாற்றிப் பயன்படுத்துதல்.",
+          correction: isEm
+            ? "Sum of n natural numbers = n(n+1)/2; Squares = n(n+1)(2n+1)/6; Cubes = [n(n+1)/2]²."
+            : "இயல் எண்கள்: n(n+1)/2; வர்க்கங்கள்: n(n+1)(2n+1)/6; கனங்கள்: [n(n+1)/2]²."
+        });
+      }
+
+      // 8. Square Root of Polynomials
+      else if (fullMath.indexOf('வர்க்கமூலம்') !== -1 || fullMath.indexOf('square root') !== -1) {
+        mistakes.push({
+          type: isEm ? "Modulus Sign | | Omission in Square Root" : "வர்க்கமூல விடைக்கு மட்டு | | குறியீடு விடுபாடு",
+          icon: "📐",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Writing the final square root polynomial without the mandatory absolute value symbol | ax² + bx + c |."
+            : "வர்க்கமூல விடையை எழுதும்போது விடையின் இருபுறமும் மட்டு அடைப்புக் குறியை | ax² + bx + c | இடாமல் விடுதல்.",
+          correction: isEm
+            ? "Always enclose the final polynomial in modulus bars: | 2x² - 5x + 3 |."
+            : "இறுதி விடையை எப்பொழுதும் மட்டு அடைப்புக்குறிக்குள் | ax² + bx + c | எழுதவும்."
+        });
+        mistakes.push({
+          type: isEm ? "Sign Flipping in Long Division Subtraction" : "நீள்வகுத்தல் கழித்தலில் குறியீட்டுப் பிழை",
+          icon: "➕",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Failing to flip signs (+ to -, - to +) of the subtracted row during polynomial long division."
+            : "பல்லுறுப்புக் கோவைகளின் நீள்வகுத்தலில் அடுத்த படிநிலையைக் கழிக்கும் போது குறிகளை (+-ஆகவும், -+-ஆகவும்) மாற்றாமல் நேரடியாகக் கூட்டி மதிப்பிழத்தல்.",
+          correction: isEm
+            ? "Circle the changed signs under each term and add algebraically with the upper row."
+            : "ஒவ்வொரு படிநிலையிலும் கழிக்கப்படும் உறுப்புகளின் குறிகளை மாற்றி வட்டமிட்டு, கவனமாகக் கூட்டவும்."
+        });
+      }
+
+      // 9. Arithmetic & Geometric Progressions (AP / GP)
       else if (fullMath.indexOf('கூட்டுத்தொடர்') !== -1 || fullMath.indexOf('பெருக்குத்தொடர்') !== -1 || fullMath.indexOf('a.p') !== -1 || fullMath.indexOf('g.p') !== -1 || fullMath.indexOf('arithmetic') !== -1 || fullMath.indexOf('geometric') !== -1) {
         var isGP = fullMath.indexOf('பெருக்குத்தொடர்') !== -1 || fullMath.indexOf('g.p') !== -1 || fullMath.indexOf('geometric') !== -1;
         if (isGP) {
@@ -6485,7 +6615,7 @@
         }
       }
 
-      // 6. Quadratic Equations & Algebra
+      // 10. Quadratic Equations & Algebra
       else if (fullMath.indexOf('x²') !== -1 || fullMath.indexOf('x^2') !== -1 || fullMath.indexOf('மூலங்கள்') !== -1 || fullMath.indexOf('roots') !== -1 || fullMath.indexOf('quadratic') !== -1) {
         mistakes.push({
           type: isEm ? "Sign Slips in Quadratic Formula (-b and -4ac)" : "இருபடிச் சமன்பாட்டுச் சூத்திரத்தில் குறியீட்டுப் பிழை",
@@ -6511,7 +6641,7 @@
         });
       }
 
-      // 7. Matrices (அணிகள்)
+      // 11. Matrices (அணிகள்)
       else if (fullMath.indexOf('அணி') !== -1 || fullMath.indexOf('matrix') !== -1 || fullMath.indexOf('matrices') !== -1) {
         mistakes.push({
           type: isEm ? "Element-by-Element Multiplication Fallacy" : "அணிகள் பெருக்கலில் நேரடிப் பெருக்கல் தவறு",
@@ -6537,7 +6667,7 @@
         });
       }
 
-      // 8. Coordinate Geometry
+      // 12. Coordinate Geometry
       else if (fullMath.indexOf('ஆயத்தொலை') !== -1 || fullMath.indexOf('சாய்வு') !== -1 || fullMath.indexOf('slope') !== -1 || fullMath.indexOf('collinear') !== -1 || fullMath.indexOf('முக்கோணத்தின் பரப்பு') !== -1 || fullMath.indexOf('area of triangle') !== -1) {
         mistakes.push({
           type: isEm ? "Anticlockwise Vertex Order for Area" : "உச்சிகளை கடிகார எதிர்ச்சுற்றில் எடுக்காமை",
@@ -6563,7 +6693,7 @@
         });
       }
 
-      // 9. Trigonometry
+      // 13. Trigonometry
       else if (fullMath.indexOf('sin') !== -1 || fullMath.indexOf('cos') !== -1 || fullMath.indexOf('tan') !== -1 || fullMath.indexOf('ஏற்றக்கோணம்') !== -1 || fullMath.indexOf('elevation') !== -1) {
         mistakes.push({
           type: isEm ? "Trigonometric Ratio & Table Value Slip" : "முக்கோணவியல் விகிதம் & அட்டவணை மதிப்புப் பிழை",
@@ -6589,7 +6719,7 @@
         });
       }
 
-      // 10. Mensuration
+      // 14. Mensuration
       else if (fullMath.indexOf('உருளை') !== -1 || fullMath.indexOf('கூம்பு') !== -1 || fullMath.indexOf('கோளம்') !== -1 || fullMath.indexOf('cylinder') !== -1 || fullMath.indexOf('cone') !== -1 || fullMath.indexOf('sphere') !== -1 || fullMath.indexOf('volume') !== -1 || fullMath.indexOf('கனஅளவு') !== -1) {
         mistakes.push({
           type: isEm ? "Formula Confusion (Cylinder vs Cone Volume)" : "கனஅளவு சூத்திரத்தில் (உருளை vs கூம்பு) குழப்பம்",
@@ -6615,7 +6745,7 @@
         });
       }
 
-      // 11. Statistics & Probability
+      // 15. Statistics & Probability
       else if (fullMath.indexOf('நிகழ்தகவு') !== -1 || fullMath.indexOf('probability') !== -1 || fullMath.indexOf('புள்ளியியல்') !== -1 || fullMath.indexOf('deviation') !== -1 || fullMath.indexOf('variance') !== -1) {
         mistakes.push({
           type: isEm ? "Probability Value Out of Range [0, 1]" : "நிகழ்தகவு மதிப்பு எல்லை மீறுதல் (0 ≤ P(E) ≤ 1)",
@@ -6641,7 +6771,7 @@
         });
       }
 
-      // 12. General Math Fallback (Sign, Formula, Units)
+      // 16. General Math Fallback (Sign, Formula, Units)
       else {
         mistakes.push({
           type: isEm ? "Sign Errors (+ / -) in Algebraic Transposition" : "இயற்கணிதக் குறியீட்டுப் பிழைகள் (+ / -)",
@@ -13691,7 +13821,7 @@
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261118_v94')
+        navigator.serviceWorker.register('./sw.js?v=20261118_v95')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

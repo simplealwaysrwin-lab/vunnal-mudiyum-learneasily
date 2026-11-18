@@ -5854,7 +5854,165 @@
     }
   };
 
-      function generateCommonMistakesForItem(item, isEm) {
+        var KNOWN_ENGLISH_MISSPELLINGS = {
+    'courage': 'curage',
+    'soul': 'sole',
+    'mourn': 'morn',
+    'mourning': 'morning',
+    'cheer': 'chear',
+    'cheerful': 'cheerfull',
+    'youth': 'yooth',
+    'travels': 'travells',
+    'disappear': 'dissappear',
+    'reluctant': 'reluctent',
+    'unreluctant': 'unreluctent',
+    'hurrying': 'huring',
+    'veils': 'vales',
+    'quest': 'queste',
+    'crown': 'croun',
+    'ledge': 'ledg',
+    'seagull': 'seegull',
+    'afraid': 'afriad',
+    'frightened': 'frigtened',
+    'expanse': 'expance',
+    'attempted': 'atempted',
+    'support': 'suport',
+    'shrilly': 'shrily',
+    'starve': 'starv',
+    'threatening': 'threating',
+    'monstrous': 'monsterous',
+    'exhausted': 'exhasted',
+    'herring': 'hering',
+    'devour': 'divour',
+    'plateau': 'plato',
+    'preen': 'prean',
+    'dizziness': 'diziness',
+    'prospero': 'prosperro',
+    'miranda': 'mirandha',
+    'caliban': 'caleban',
+    'ariel': 'airiel',
+    'sycorax': 'sicorax',
+    'tempest': 'tempist',
+    'ferdinand': 'ferdinent',
+    'gonzalo': 'gonzolo',
+    'torment': 'tormant',
+    'island': 'iland',
+    'treachery': 'trechery',
+    'drowned': 'drownd',
+    'receive': 'recieve',
+    'received': 'recieved',
+    'believe': 'beleive',
+    'believed': 'beleived',
+    'piece': 'peice',
+    'peace': 'peice',
+    'weather': 'wether',
+    'whether': 'wether',
+    'separate': 'seperate',
+    'grammar': 'grammer',
+    'writing': 'writting',
+    'written': 'writen',
+    'beginning': 'begining',
+    'tomorrow': 'tommorrow',
+    'occurred': 'occured',
+    'occurrence': 'occurance',
+    'successful': 'succesful',
+    'definitely': 'definately',
+    'environment': 'enviroment',
+    'government': 'goverment',
+    'knowledge': 'knowlege',
+    'privilege': 'priviledge',
+    'truly': 'truely',
+    'until': 'untill',
+    'across': 'accross',
+    'address': 'adress',
+    'embarrass': 'embarass',
+    'forty': 'fourty',
+    'ninety': 'ninty',
+    'ninth': 'nineth',
+    'noticeable': 'noticable',
+    'pronunciation': 'pronounciation',
+    'rhythm': 'rythm',
+    'schedule': 'shedule',
+    'strength': 'strenth',
+    'surprise': 'surprize',
+    'twelfth': 'twelth',
+    'vacuum': 'vaccuum',
+    'business': 'buisness',
+    'foreign': 'foriegn',
+    'height': 'heigth',
+    'humorous': 'humerous',
+    'immediate': 'imediate',
+    'necessary': 'neccessary',
+    'neighbor': 'nieghbor',
+    'neighbour': 'nieghbour',
+    'occasion': 'occassion',
+    'parallel': 'paralell',
+    'possession': 'posession',
+    'pursue': 'persue',
+    'quiet': 'quite',
+    'speech': 'speach',
+    'stubborn': 'stuborn',
+    'tongue': 'tounge',
+    'weird': 'wierd',
+    'journey': 'journy',
+    'courageous': 'couragous',
+    'patient': 'paitent',
+    'patience': 'patiance',
+    'adventure': 'adventur',
+    'achievement': 'acheivement',
+    'attitude': 'atitude'
+  };
+
+  var ENGLISH_STOP_WORDS = [
+    'the', 'and', 'that', 'this', 'with', 'from', 'have', 'were', 'which', 'their',
+    'there', 'they', 'would', 'could', 'should', 'about', 'these', 'those', 'because',
+    'between', 'through', 'under', 'above', 'being', 'having', 'doing', 'shall', 'might',
+    'while', 'where', 'when', 'what', 'which', 'whose', 'whom', 'before', 'after',
+    'other', 'some', 'such', 'into', 'than', 'them', 'then', 'also', 'many', 'more',
+    'most', 'only', 'same', 'very', 'even', 'first', 'second', 'marks', 'answer', 'question'
+  ];
+
+  function generateEnglishMisspelling(word) {
+    if (!word) return null;
+    var low = word.toLowerCase().replace(/[^a-z]/g, '');
+    if (ENGLISH_STOP_WORDS.indexOf(low) !== -1 || low.length < 4) {
+      return null;
+    }
+    if (KNOWN_ENGLISH_MISSPELLINGS[low]) {
+      return KNOWN_ENGLISH_MISSPELLINGS[low];
+    }
+
+    var miss = low;
+    if (miss.indexOf('dg') !== -1) miss = miss.replace('dg', 'g');
+    else if (miss.indexOf('ght') !== -1) miss = miss.replace('ght', 't');
+    else if (miss.indexOf('gh') !== -1) miss = miss.replace('gh', 'g');
+    else if (miss.indexOf('ph') !== -1) miss = miss.replace('ph', 'f');
+    else if (miss.indexOf('ll') !== -1) miss = miss.replace('ll', 'l');
+    else if (miss.indexOf('ss') !== -1) miss = miss.replace('ss', 's');
+    else if (miss.indexOf('rr') !== -1) miss = miss.replace('rr', 'r');
+    else if (miss.indexOf('tt') !== -1) miss = miss.replace('tt', 't');
+    else if (miss.indexOf('pp') !== -1) miss = miss.replace('pp', 'p');
+    else if (miss.indexOf('mm') !== -1) miss = miss.replace('mm', 'm');
+    else if (miss.indexOf('nn') !== -1) miss = miss.replace('nn', 'n');
+    else if (miss.indexOf('cc') !== -1) miss = miss.replace('cc', 'c');
+    else if (miss.indexOf('ff') !== -1) miss = miss.replace('ff', 'f');
+    else if (miss.indexOf('ei') !== -1) miss = miss.replace('ei', 'ie');
+    else if (miss.indexOf('ie') !== -1) miss = miss.replace('ie', 'ei');
+    else if (miss.indexOf('ea') !== -1) miss = miss.replace('ea', 'ee');
+    else if (miss.indexOf('ou') !== -1) miss = miss.replace('ou', 'u');
+    else if (miss.indexOf('ful') !== -1 && !miss.endsWith('full')) miss = miss.replace('ful', 'full');
+    else if (miss.indexOf('ance') !== -1) miss = miss.replace('ance', 'ence');
+    else if (miss.indexOf('ence') !== -1) miss = miss.replace('ence', 'ance');
+    else if (miss.indexOf('ous') !== -1) miss = miss.replace('ous', 'us');
+
+    // STRICT GUARD: Must be different from original!
+    if (miss === low || miss.length < 3) {
+      return null;
+    }
+    return miss;
+  }
+
+  function generateCommonMistakesForItem(item, isEm) {
     if (item.commonMistakes && Array.isArray(item.commonMistakes) && item.commonMistakes.length > 0) {
       return item.commonMistakes;
     }
@@ -5878,14 +6036,16 @@
       if (nThreeWords.length > 0) {
         var w = nThreeWords[0];
         var badW = w.replace(/ண்/g, 'ன்').replace(/ண/g, 'ன');
-        mistakes.push({
-          type: "மயங்கொலிப் பிழை (இரண்டுசுழி / மூன்றுசுழி ண் - ன் வேறுபாடு)",
-          icon: "🔤",
-          deduction: "-½ Mark",
-          mistake: "இவ்விடையில் வரும் <b>" + w + "</b> என்பதில் டண்ணகர 'ண்/ண' (மூன்றுசுழி) போடுவதற்குப் பதிலாக தவறுதலாக இரண்டுசுழி 'ன்/ன' போட்டு <b>'" + badW + "'</b> என மயங்கொலிப் பிழையுடன் எழுதுதல்.",
-          mistakeTa: "டண்ணகர 'ண்' வரவேண்டிய இடத்தில் றன்னகர 'ன்' எழுதினால் அரசுத் தேர்வில் -½ மதிப்பெண் குறைக்கப்படும்.",
-          correction: "'" + w + "' என்பதில் வருவது மூன்றுசுழி <b>'ண்/ண'</b> என்பதை நினைவில் கொண்டு சரியான எழுத்துடன் எழுதவும்."
-        });
+        if (badW !== w) {
+          mistakes.push({
+            type: "மயங்கொலிப் பிழை (இரண்டுசுழி / மூன்றுசுழி ண் - ன் வேறுபாடு)",
+            icon: "🔤",
+            deduction: "-½ Mark",
+            mistake: "இவ்விடையில் வரும் <b>" + w + "</b> என்பதில் டண்ணகர 'ண்/ண' (மூன்றுசுழி) போடுவதற்குப் பதிலாக தவறுதலாக இரண்டுசுழி 'ன்/ன' போட்டு <b>'" + badW + "'</b> என மயங்கொலிப் பிழையுடன் எழுதுதல்.",
+            mistakeTa: "டண்ணகர 'ண்' வரவேண்டிய இடத்தில் றன்னகர 'ன்' எழுதினால் அரசுத் தேர்வில் -½ மதிப்பெண் குறைக்கப்படும்.",
+            correction: "'" + w + "' என்பதில் வருவது மூன்றுசுழி <b>'ண்/ண'</b> என்பதை நினைவில் கொண்டு சரியான எழுத்துடன் எழுதவும்."
+          });
+        }
       }
 
       // B. இரண்டுசுழி 'ன்/ன/னை' (றன்னகரம்) & நெடில் எழுத்துக்கள்
@@ -5895,14 +6055,16 @@
       if (nTwoWords.length > 0 && mistakes.length < 3) {
         var w2 = nTwoWords[0];
         var badW2 = w2.replace(/னை/g, 'ன').replace(/ன்/g, 'ண்');
-        mistakes.push({
-          type: "எழுத்துப் பிழை & நெடில் வேறுபாடு (இரண்டுசுழி ன் / ன)",
-          icon: "✍️",
-          deduction: "-½ Mark",
-          mistake: "இவ்விடையில் உள்ள <b>" + w2 + "</b> என்பதில் நெடில் எழுத்தை விடுத்து <b>'" + badW2 + "'</b> என மாற்றி எழுதுதல் அல்லது இரண்டுசுழி 'ன்' போடுவதற்குப் பதிலாக மூன்றுசுழி 'ண்' இடுதல்.",
-          mistakeTa: "சொல்லின் நெடில் எழுத்தை மாற்றினாலோ அல்லது றன்னகர 'ன்' தவறாக எழுதினாலோ மதிப்பெண் இழக்க நேரிடும்.",
-          correction: "'" + w2 + "' என்ற சொல்லின் சரியான குறில்/நெடில் வரிவடிவத்தையும் இரண்டுசுழி <b>'ன்'</b> எழுத்தையும் உறுதிசெய்து எழுதவும்."
-        });
+        if (badW2 !== w2) {
+          mistakes.push({
+            type: "எழுத்துப் பிழை & நெடில் வேறுபாடு (இரண்டுசுழி ன் / ன)",
+            icon: "✍️",
+            deduction: "-½ Mark",
+            mistake: "இவ்விடையில் உள்ள <b>" + w2 + "</b> என்பதில் நெடில் எழுத்தை விடுத்து <b>'" + badW2 + "'</b> என மாற்றி எழுதுதல் அல்லது இரண்டுசுழி 'ன்' போடுவதற்குப் பதிலாக மூன்றுசுழி 'ண்' இடுதல்.",
+            mistakeTa: "சொல்லின் நெடில் எழுத்தை மாற்றினாலோ அல்லது றன்னகர 'ன்' தவறாக எழுதினாலோ மதிப்பெண் இழக்க நேரிடும்.",
+            correction: "'" + w2 + "' என்ற சொல்லின் சரியான குறில்/நெடில் வரிவடிவத்தையும் இரண்டுசுழி <b>'ன்'</b> எழுத்தையும் உறுதிசெய்து எழுதவும்."
+          });
+        }
       }
 
       // C. சிறப்பு ழகரம் (ழ / ள / ல வேறுபாடு)
@@ -5910,14 +6072,16 @@
       if (zhaWords.length > 0 && mistakes.length < 3) {
         var wz = zhaWords[0];
         var badWz = wz.replace(/ழ/g, 'ல');
-        mistakes.push({
-          type: "சிறப்பு ழகரப் பிழை (ழ / ள / ல மயங்கொலி வேறுபாடு)",
-          icon: "🔤",
-          deduction: "-½ Mark",
-          mistake: "இவ்விடையில் வரும் <b>" + wz + "</b> என்பதில் சிறப்பு ழகரமான 'ழ' போடுவதற்குப் பதிலாக தவறுதலாக 'ல' அல்லது 'ள' போட்டு <b>'" + badWz + "'</b> என மாற்றி எழுதுதல்.",
-          mistakeTa: "ழகரத்திற்குப் பதிலாக லகரம் இட்டால் சொல்லின் பொருளே முற்றிலும் மாறிவிடும்.",
-          correction: "'" + wz + "' என்பதில் உச்சரிப்பிற்குரிய சிறப்பு <b>'ழ'</b> எழுத்தை கவனமாக எழுதவும்."
-        });
+        if (badWz !== wz) {
+          mistakes.push({
+            type: "சிறப்பு ழகரப் பிழை (ழ / ள / ல மயங்கொலி வேறுபாடு)",
+            icon: "🔤",
+            deduction: "-½ Mark",
+            mistake: "இவ்விடையில் வரும் <b>" + wz + "</b> என்பதில் சிறப்பு ழகரமான 'ழ' போடுவதற்குப் பதிலாக தவறுதலாக 'ல' அல்லது 'ள' போட்டு <b>'" + badWz + "'</b> என மாற்றி எழுதுதல்.",
+            mistakeTa: "ழகரத்திற்குப் பதிலாக லகரம் இட்டால் சொல்லின் பொருளே முற்றிலும் மாறிவிடும்.",
+            correction: "'" + wz + "' என்பதில் உச்சரிப்பிற்குரிய சிறப்பு <b>'ழ'</b> எழுத்தை கவனமாக எழுதவும்."
+          });
+        }
       }
 
       // D. பொது ளகரம் (ள / ல வேறுபாடு)
@@ -5925,14 +6089,16 @@
       if (laWords.length > 0 && mistakes.length < 3) {
         var wl = laWords[0];
         var badWl = wl.replace(/ள/g, 'ல');
-        mistakes.push({
-          type: "மயங்கொலிப் பிழை (ள / ல வேறுபாடு)",
-          icon: "🔤",
-          deduction: "-½ Mark",
-          mistake: "இவ்விடையில் உள்ள <b>" + wl + "</b> என்பதில் பொது ளகரத்திற்கு ('ள') பதிலாக மேல்நோக்கு 'ல' போட்டு <b>'" + badWl + "'</b> என எழுதுதல்.",
-          mistakeTa: "எடுத்துக்காட்டாக 'வளம்' -> 'வலம்', 'இலை' -> 'இளை' என மயங்கொலிப் பிழை ஏற்படுதல்.",
-          correction: "'" + wl + "' என்பதில் சரியான <b>'ள'</b> எழுத்தை இட்டுப் பிழையின்றி எழுதவும்."
-        });
+        if (badWl !== wl) {
+          mistakes.push({
+            type: "மயங்கொலிப் பிழை (ள / ல வேறுபாடு)",
+            icon: "🔤",
+            deduction: "-½ Mark",
+            mistake: "இவ்விடையில் உள்ள <b>" + wl + "</b> என்பதில் பொது ளகரத்திற்கு ('ள') பதிலாக மேல்நோக்கு 'ல' போட்டு <b>'" + badWl + "'</b> என எழுதுதல்.",
+            mistakeTa: "எடுத்துக்காட்டாக 'வளம்' -> 'வலம்', 'இலை' -> 'இளை' என மயங்கொலிப் பிழை ஏற்படுதல்.",
+            correction: "'" + wl + "' என்பதில் சரியான <b>'ள'</b> எழுத்தை இட்டுப் பிழையின்றி எழுதவும்."
+          });
+        }
       }
 
       // E. வல்லின றகரம் vs இடையின ரகரம் (ர / ற வேறுபாடு)
@@ -5940,14 +6106,16 @@
       if (rraWords.length > 0 && mistakes.length < 3) {
         var wr = rraWords[0];
         var badWr = wr.replace(/ற்று/g, 'த்து').replace(/ற/g, 'ர');
-        mistakes.push({
-          type: "மயங்கொலிப் பிழை (ர / ற வேறுபாடு)",
-          icon: "🔤",
-          deduction: "-½ Mark",
-          mistake: "இவ்விடையில் உள்ள <b>" + wr + "</b> என்பதில் வல்லின 'ற/ற்று' போடுவதற்குப் பதிலாக இடையின 'ர/ரு' போட்டு <b>'" + badWr + "'</b> என மாற்றி எழுதுதல்.",
-          mistakeTa: "எடுத்துக்காட்டாக 'பயிறு' -> 'பயிரு', 'நாற்று' -> 'நாத்து' என பேச்சு வழக்கு வடிவில் தவறாக எழுதுதல்.",
-          correction: "'" + wr + "' என்பதில் வல்லின <b>'ற'</b> எழுத்தைச் சரியாகப் பயன்படுத்தி எழுதவும்."
-        });
+        if (badWr !== wr) {
+          mistakes.push({
+            type: "மயங்கொலிப் பிழை (ர / ற வேறுபாடு)",
+            icon: "🔤",
+            deduction: "-½ Mark",
+            mistake: "இவ்விடையில் உள்ள <b>" + wr + "</b> என்பதில் வல்லின 'ற/ற்று' போடுவதற்குப் பதிலாக இடையின 'ர/ரு' போட்டு <b>'" + badWr + "'</b> என மாற்றி எழுதுதல்.",
+            mistakeTa: "எடுத்துக்காட்டாக 'பயிறு' -> 'பயிரு', 'நாற்று' -> 'நாத்து' என பேச்சு வழக்கு வடிவில் தவறாக எழுதுதல்.",
+            correction: "'" + wr + "' என்பதில் வல்லின <b>'ற'</b> எழுத்தைச் சரியாகப் பயன்படுத்தி எழுதவும்."
+          });
+        }
       }
 
       // F. சந்தி & ஒற்றெழுத்துப் பிழைகள் (க், ச், த், ப் மிகும் இடங்கள்)
@@ -5988,43 +6156,29 @@
       var mistakes = [];
       var words = ansText.match(/[a-zA-Z]{4,}/g) || [];
 
-      // A. Tricky spellings in this answer: silent letters, double letters, diphthongs
-      var trickyWords = words.filter(function(w) {
-        var low = w.toLowerCase();
-        return (
-          low.indexOf('dg') !== -1 || low.indexOf('gh') !== -1 || low.indexOf('ph') !== -1 ||
-          low.indexOf('ei') !== -1 || low.indexOf('ie') !== -1 || low.indexOf('ea') !== -1 ||
-          low.indexOf('ou') !== -1 || low.indexOf('ll') !== -1 || low.indexOf('ss') !== -1 ||
-          low.indexOf('rr') !== -1 || low.indexOf('tt') !== -1 || low.indexOf('pp') !== -1 ||
-          low.indexOf('mm') !== -1 || low.indexOf('nn') !== -1 || low.indexOf('ance') !== -1 ||
-          low.indexOf('ence') !== -1 || low.indexOf('ight') !== -1
-        );
-      });
-
-      var uniqueTricky = [];
-      trickyWords.forEach(function(w) {
-        var low = w.toLowerCase();
-        if (!uniqueTricky.some(function(u) { return u.toLowerCase() === low; })) {
-          uniqueTricky.push(w);
+      // Extract unique content words
+      var uniqueWords = [];
+      words.forEach(function(w) {
+        var clean = w.toLowerCase().replace(/[^a-z]/g, '');
+        if (clean.length >= 4 && ENGLISH_STOP_WORDS.indexOf(clean) === -1) {
+          if (!uniqueWords.some(function(u) { return u.toLowerCase() === clean; })) {
+            uniqueWords.push(clean);
+          }
         }
       });
 
-      if (uniqueTricky.length > 0) {
-        var targetWords = uniqueTricky.slice(0, 3);
-        var misspelledExamples = targetWords.map(function(tw) {
-          var low = tw.toLowerCase();
-          var miss = low;
-          if (miss.indexOf('dg') !== -1) miss = miss.replace('dg', 'g');
-          else if (miss.indexOf('gh') !== -1) miss = miss.replace('gh', 'g');
-          else if (miss.indexOf('ll') !== -1) miss = miss.replace('ll', 'l');
-          else if (miss.indexOf('ss') !== -1) miss = miss.replace('ss', 's');
-          else if (miss.indexOf('rr') !== -1) miss = miss.replace('rr', 'r');
-          else if (miss.indexOf('tt') !== -1) miss = miss.replace('tt', 't');
-          else if (miss.indexOf('pp') !== -1) miss = miss.replace('pp', 'p');
-          else if (miss.indexOf('ei') !== -1) miss = miss.replace('ei', 'ie');
-          else if (miss.indexOf('ie') !== -1) miss = miss.replace('ie', 'ei');
-          else if (miss.indexOf('ea') !== -1) miss = miss.replace('ea', 'ee');
-          return "'" + miss + "' instead of <b>'" + tw + "'</b>";
+      // Generate verified non-identical spelling errors
+      var validPairs = [];
+      uniqueWords.forEach(function(w) {
+        var m = generateEnglishMisspelling(w);
+        if (m && m !== w.toLowerCase() && validPairs.length < 3) {
+          validPairs.push({ original: w, misspelled: m });
+        }
+      });
+
+      if (validPairs.length > 0) {
+        var misspelledExamples = validPairs.map(function(p) {
+          return "'" + p.misspelled + "' instead of <b>'" + p.original + "'</b>";
         }).join(', ');
 
         mistakes.push({
@@ -6033,11 +6187,11 @@
           deduction: "-½ Mark",
           mistake: "Misspelling difficult textbook words from this answer: e.g. writing " + misspelledExamples + ".",
           mistakeTa: "இவ்விடையில் உள்ள முக்கியச் சொற்களின் எழுத்துக்களில் (spellings) பிழை ஏற்படுதல்.",
-          correction: "Carefully verify and memorize the exact spellings of: " + targetWords.map(function(t) { return '<b>' + t + '</b>'; }).join(', ') + "."
+          correction: "Carefully verify and memorize the exact spellings of: " + validPairs.map(function(p) { return '<b>' + p.original + '</b>'; }).join(', ') + "."
         });
       }
 
-      // B. Proper Nouns & Capitalization
+      // Proper Nouns & Capitalization
       var properNouns = (ansText.match(/\b[A-Z][a-z]{3,}\b/g) || []).filter(function(w) {
         var low = w.toLowerCase();
         var commonStarts = ['the', 'when', 'this', 'that', 'they', 'with', 'from', 'then', 'after', 'before', 'there', 'because', 'first', 'these', 'those'];
@@ -6072,12 +6226,8 @@
         });
       }
 
-      // C. Core Textbook Key Points Omission
-      var keyPhrases = words.filter(function(w) {
-        var low = w.toLowerCase();
-        var stops = ['which', 'where', 'there', 'their', 'about', 'these', 'those', 'because', 'between', 'through', 'should', 'would', 'could', 'first', 'second', 'marks', 'answer', 'question'];
-        return stops.indexOf(low) === -1 && w.length >= 5;
-      }).slice(0, 3);
+      // Core Textbook Key Points Omission
+      var keyPhrases = uniqueWords.slice(0, 3);
       var keyStr = keyPhrases.length > 0 ? keyPhrases.map(function(k) { return '<b>' + k + '</b>'; }).join(', ') : '<b>textbook core terms</b>';
       mistakes.push({
         type: "Omission of Core Exam Key Points (விடைக்குறிப்பு விடுபாடு)",
@@ -6151,7 +6301,6 @@
         });
       }
 
-      // Step & Formula
       mistakes.push({
         type: isEm ? "Formula Omission & Step Skipping" : "சூத்திரம் (Formula) & படிநிலைகளை விடுதல்",
         icon: "📝",
@@ -6164,7 +6313,6 @@
           : "முதலில் சூத்திரத்தை எழுதி கட்டம் இடவும், பின்னர் மதிப்புகளைப் பிரதியிட்டுப் படிநிலைகளைத் தெளிவாகக் காட்டவும்."
       });
 
-      // Units or Boxed Answer
       mistakes.push({
         type: isEm ? (hasUnits ? "Missing or Incorrect Units (cm², m³, units)" : "Final Answer Highlighting & Conclusion") : (hasUnits ? "அலகுகள் (Units) விடுபாடு" : "இறுதி விடை கட்டமிடுதல் & விடைக்குறிப்பு"),
         icon: "⚠️",
@@ -13112,7 +13260,7 @@
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261118_v92')
+        navigator.serviceWorker.register('./sw.js?v=20261118_v93')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -12554,7 +12554,7 @@
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261117_v88')
+        navigator.serviceWorker.register('./sw.js?v=20261118_v89')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 
@@ -16070,9 +16070,6 @@ Important:
     // 2. Show the Teacher Thinking / Loading Indicator
     const loadingId = appendAILoadingIndicator();
 
-
-    const loadingId = appendAILoadingIndicator();
-
     // 3. Query Gemini
     try {
       let reply = await callGeminiAPI(fullPrompt, AI_TEACHER_SYSTEM);
@@ -17177,8 +17174,8 @@ Important:
       </div>
       <div id="settingsKeyStatus" style="font-size:12px; font-weight:700; text-align:center;"></div>
       <div style="margin-top:12px; padding:10px 14px; background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.3); border-radius:8px; display:flex; align-items:center; gap:8px;">
-        <span style="font-size:16px;">ðŸ“Š</span>
-        <span style="font-size:12px; color:#6ee7b7; font-weight:700;">Google Sheet AI Doubts Logger: à®‡à®£à¯ˆà®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà¯à®³à¯à®³à®¤à¯ (Active)</span>
+        <span style="font-size:16px;">📊</span>
+        <span style="font-size:12px; color:#6ee7b7; font-weight:700;">Google Sheet AI Doubts Logger: இணைக்கப்பட்டுள்ளது (Active)</span>
       </div>
     </div>
   </div>

@@ -132,7 +132,7 @@
 <script src="data_english_u6.js?v=20261104_v51"></script>
 <script src="data_english_u7.js?v=20261116_v82"></script>
 <script src="data_english_writing.js?v=20261116_v84"></script>
-  <script src="data_maths_tm_u1.js?v=20261103_v50"></script>
+  <script src="data_maths_tm_u1.js?v=20261118_v96"></script>
 <script src="data_maths_tm_u2.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u4.js?v=20261105_v56"></script>
@@ -140,7 +140,7 @@
 <script src="data_maths_tm_u6.js?v=20261105_v56"></script>
 <script src="data_maths_tm_u7.js?v=20261116_v82"></script>
 <script src="data_maths_tm_u8.js?v=20261116_v82"></script>
-  <script src="data_maths_em_u1.js?v=20261103_v50"></script>
+  <script src="data_maths_em_u1.js?v=20261118_v96"></script>
 <script src="data_maths_em_u2.js?v=20261103_v50"></script>
 <script src="data_maths_em_u3.js?v=20261031_v31"></script>
 <script src="data_maths_em_u4.js?v=20261105_v56"></script>
@@ -9792,7 +9792,7 @@
       if ('serviceWorker' in navigator) {
         const regs = await navigator.serviceWorker.getRegistrations();
         for (let reg of regs) {
-          await reg.update();
+          await reg.unregister();
         }
       }
       if ('caches' in window) {
@@ -9805,8 +9805,9 @@
       sessionStorage.removeItem('vm_recovered');
     } catch(e) {}
     setTimeout(() => {
-      window.location.reload();
-    }, 300);
+      const cleanUrl = window.location.origin + window.location.pathname + '?reload=' + Date.now() + window.location.hash;
+      window.location.replace(cleanUrl);
+    }, 350);
   }
 
   function handleSearch(query) {
@@ -13815,17 +13816,38 @@
   }
 
   // -------------------------------------------------------------
-  // PWA Service Worker Registration - Zero Downtime, Never Crashes
+  // PWA Service Worker Registration - Zero Downtime & Auto-Reload
   // -------------------------------------------------------------
   if ('serviceWorker' in navigator) {
+    // Auto-reload immediately when a new service worker takes over so users see latest updates without manual reload!
+    let isReloading = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!isReloading) {
+        isReloading = true;
+        console.log('[PWA] New service worker version active. Reloading to apply fresh updates...');
+        window.location.reload();
+      }
+    });
+
     window.addEventListener('load', () => {
-      // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261118_v95')
+        navigator.serviceWorker.register('./sw.js?v=20261118_v96')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 
-            // Check immediately and after 4 seconds for fresh service worker and caches
+            reg.addEventListener('updatefound', () => {
+              const newWorker = reg.installing;
+              if (newWorker) {
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    if (typeof showToast === 'function') {
+                      showToast('🔄 புதிய பதிப்பு நிறுவப்பட்டது! புதுப்பிக்கப்படுகிறது...');
+                    }
+                  }
+                });
+              }
+            });
+
             if (navigator.onLine && reg.update) {
               reg.update().catch(() => {});
             }
@@ -13833,12 +13855,12 @@
               if (navigator.onLine && reg.update) {
                 reg.update().catch(() => {});
               }
-            }, 4000);
+            }, 3000);
           })
           .catch((err) => {
             console.warn('[PWA] Service Worker registration note:', err);
           });
-      }, 400);
+      }, 300);
 
       // Self-Healing: Re-render if empty, NEVER delete offline caches or infinite loop!
       setTimeout(() => {

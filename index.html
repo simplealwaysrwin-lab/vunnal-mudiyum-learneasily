@@ -6242,52 +6242,407 @@
     }
 
     // -------------------------------------------------------------
-    // 3. MATHEMATICS DEEP CONCEPTUAL ANALYZER
+    // 3. MATHEMATICS DEEP TOPICAL & EQUATION ANALYZER
     // -------------------------------------------------------------
-    if (subId.indexOf('math') !== -1 || (item.id && item.id.startsWith('mat'))) {
+    if (subId.indexOf('math') !== -1 || (item.id && item.id.startsWith('mat')) || (item.id && item.id.startsWith('m_'))) {
       var mistakes = [];
-      var hasSets = ansText.indexOf('{') !== -1 || ansText.indexOf('times') !== -1 || ansText.indexOf('×') !== -1 || ansText.indexOf('Cartesian') !== -1 || ansText.indexOf('subset') !== -1;
-      var hasMatrix = ansText.indexOf('bmatrix') !== -1 || ansText.indexOf('pmatrix') !== -1 || ansText.indexOf('[') !== -1 || ansText.indexOf('matrix') !== -1 || ansText.indexOf('Matrix') !== -1;
-      var hasTrig = ansText.indexOf('sin') !== -1 || ansText.indexOf('cos') !== -1 || ansText.indexOf('tan') !== -1 || ansText.indexOf('theta') !== -1 || ansText.indexOf('θ') !== -1;
-      var hasUnits = ansText.indexOf('cm') !== -1 || ansText.indexOf('m^') !== -1 || ansText.indexOf('sq.') !== -1 || ansText.indexOf('units') !== -1 || ansText.indexOf('செ.மீ') !== -1;
+      var fullMath = (qText + ' ' + ansText).toLowerCase();
+      var rawMath = qText + ' ' + ansText;
 
-      if (hasSets) {
+      // 1. Cartesian Product & Sets (A × B, B × A, n(A × B))
+      var qLow = qText.toLowerCase();
+      var isCartesian = fullMath.indexOf('a × b') !== -1 || fullMath.indexOf('b × a') !== -1 || fullMath.indexOf('a \\times b') !== -1 || fullMath.indexOf('b \\times a') !== -1 || fullMath.indexOf('cartesian') !== -1 || (rawMath.indexOf('A ×') !== -1);
+      var isCartesianGivenInQ = qLow.indexOf('b × a =') !== -1 || qLow.indexOf('b \\times a =') !== -1 || qLow.indexOf('a × b =') !== -1 || qLow.indexOf('a \\times b =') !== -1 || qLow.indexOf('b x a =') !== -1 || qLow.indexOf('a x b =') !== -1;
+      var isFindingSets = isCartesian && (isCartesianGivenInQ || ((qLow.indexOf('find a and b') !== -1 || qLow.indexOf('a மற்றும் b ஆகியவற்றைக் காண்க') !== -1) && qLow.indexOf('a =') === -1));
+      var isNegativeSet = isCartesian && (rawMath.indexOf('-') !== -1);
+
+      if (isFindingSets) {
         mistakes.push({
-          type: isEm ? "Ordered Pairs vs Set Brackets Confusion" : "வரிசைச் சோடிகள் & கணக்குறியீட்டுக் குழப்பம்",
+          type: isEm ? "Swapping Sets A and B from B × A" : "B × A-ல் இருந்து A, B கணங்களை மாற்றி எழுதுதல்",
           icon: "📐",
           deduction: "-1 Mark",
           mistake: isEm
-            ? "Writing ordered pairs as sets like {a, b} instead of ordered pairs (a, b), or swapping coordinate positions."
-            : "வரிசைச் சோடிகளை (a, b) என அடைப்புக் குறிக்குள் எழுதாமல் கணக்குறியீடான {a, b} என எழுதுதல் அல்லது உறுப்புகளின் வரிசையை மாற்றி எழுதுதல்.",
+            ? "When B × A is given, the first coordinates belong to B and the second coordinates belong to A. Students carelessly swap and write A = {first coordinates} and B = {second coordinates}."
+            : "B × A கொடுக்கப்பட்டுள்ள போது, வரிசைச் சோடிகளின் முதல் உறுப்புகள் B-க்கும், இரண்டாம் உறுப்புகள் A-க்கும் உரியவை. அவசரத்தில் முதல் உறுப்புகளை A என்றும் இரண்டாம் உறுப்புகளை B என்றும் மாற்றி எழுதி முழு மதிப்பெண்ணை இழத்தல்.",
           correction: isEm
-            ? "Elements of Cartesian product must be enclosed in parentheses (x, y) and the entire collection wrapped in curly braces { }."
-            : "கார்ட்டீசியன் பெருக்கலின் உறுப்புகளை அடைப்புக் குறி (x, y) இட்டு, முழு கணத்தையும் கண அடைப்புக்குறிக்குள் { } எழுதவும்."
+            ? "B = {set of all first coordinates of elements in B × A}, A = {set of all second coordinates of elements in B × A}."
+            : "B = {B × A-ன் முதல் ஆயத்தொலைவு உறுப்புகள்}, A = {B × A-ன் இரண்டாம் ஆயத்தொலைவு உறுப்புகள்} எனச் சரியாகப் பிரித்து எழுதவும்."
         });
-      } else if (hasMatrix) {
         mistakes.push({
-          type: isEm ? "Matrix Row-by-Column Multiplication Slips" : "அணிகள் பெருக்கல் படிநிலைத் தவறுகள்",
+          type: isEm ? "Writing Duplicate Elements in Set" : "கணத்தில் மீண்டும் வரும் உறுப்புகளை எழுதுதல்",
+          icon: "✍️",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Listing repeated coordinate numbers multiple times inside the set (e.g. writing B = {-2, -2, 0, 0, 3, 3} instead of {-2, 0, 3})."
+            : "கண அடைப்புக்குறிக்குள் மீண்டும் மீண்டும் வரும் எண்களைத் திரும்பத் திரும்ப எழுதுதல் (எ.கா: B = {-2, -2, 0, 0, 3, 3} என எழுதுவது தவறு).",
+          correction: isEm
+            ? "By set definition, no element should be repeated: write each unique element only once: B = {-2, 0, 3}."
+            : "கணத்தின் விதிகளின்படி ஓர் உறுப்பு ஒருமுறை மட்டுமே வர வேண்டும்: B = {-2, 0, 3} என எழுதவும்."
+        });
+      } else if (isCartesian) {
+        if (isNegativeSet) {
+          mistakes.push({
+            type: isEm ? "Sign Slips in Negative Coordinates" : "குறை எண்கள் (-ve) கொண்ட வரிசைச் சோடிப் பிழைகள்",
+            icon: "➕",
+            deduction: "-1 Mark",
+            mistake: isEm
+              ? "Dropping minus signs when pairing elements (e.g. pairing 2 with -4 as (2, 4) instead of (2, -4), or -2 with 1 as (2, 1))."
+              : "கணங்களில் உள்ள குறை எண்களை (-2, -4) பெருக்கும் போது, மைனஸ் குறியை விட்டுவிட்டு (2, 4) அல்லது (-2, 1)-க்கு (2, 1) என எழுதுதல்.",
+            correction: isEm
+              ? "Carry the exact sign of each coordinate carefully into every ordered pair: (2, -4), (-2, 1), (-2, -4)."
+              : "ஒவ்வொரு வரிசைச் சோடியிலும் உறுப்புகளின் உண்மையான குறிகளை (+ / -) கவனமாகச் சரிபார்த்து எழுதவும்."
+          });
+        }
+        mistakes.push({
+          type: isEm ? "B × A Order Reversal Slips" : "B × A வரிசை மாற்றம் & ஆயத்தொலைவுக் குழப்பம்",
           icon: "📐",
           deduction: "-1 Mark",
           mistake: isEm
-            ? "Confusing row-by-column multiplication order or failing to verify if number of columns in A equals number of rows in B."
-            : "நிரை-நிரல் பெருக்கல் வரிசையை மாற்றிப் பெருக்குதல் அல்லது அணிகளின் வரிசை (Order) பொருந்தாத போது பெருக்குதல்.",
+            ? "When finding B × A, mistakenly writing elements of A first (just like in A × B) instead of elements of B first."
+            : "B × A காணும்போது B-ன் உறுப்புகளை முதலில் எழுதாமல், A × B போலவே A-ன் உறுப்புகளை முதலில் மாற்றி எழுதுதல்.",
           correction: isEm
-            ? "Always multiply the first row by the first column systematically and write intermediate calculation terms."
-            : "முதல் அணியின் நிரையைக் கொண்டு இரண்டாவது அணியின் நிரலைப் பெருக்கிப் படிநிலைகளைத் தெளிவாகக் காட்டவும்."
+            ? "For B × A, the first coordinate must strictly come from set B and the second from set A."
+            : "B × A-ல் ஒவ்வொரு வரிசைச் சோடியின் முதல் உறுப்பு கணம் B-யிலும், இரண்டாம் உறுப்பு கணம் A-யிலும் இருக்க வேண்டும்."
         });
-      } else if (hasTrig) {
         mistakes.push({
-          type: isEm ? "Trigonometric Ratio & Identity Slips" : "முக்கோணவியல் விகிதங்கள் & முற்றொருமைத் தவறுகள்",
+          type: isEm ? "Missing Pairs (Count Verification n(A) × n(B))" : "வரிசைச் சோடிகளின் எண்ணிக்கை விடுபாடு",
+          icon: "⚠️",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Omitting one or more ordered pairs from the set due to hasty writing without verifying total pairs = n(A) × n(B)."
+            : "A × B-ல் வர வேண்டிய மொத்த உறுப்புகளின் எண்ணிக்கையை n(A) × n(B) கொண்டு சரிபார்க்காமல், அவசரத்தில் ஏதேனும் ஒரு சோடியை விடுத்து எழுதுதல்.",
+          correction: isEm
+            ? "Always verify: if n(A)=3 and n(B)=2, your final set must contain exactly 3 × 2 = 6 ordered pairs."
+            : "எப்பொழுதும் n(A × B) = n(A) × n(B) எண்ணிக்கையைச் சரிபார்த்து அனைத்து வரிசைச் சோடிகளையும் விடுபடாமல் எழுதவும்."
+        });
+      }
+
+      // 2. Relations and Functions (Domain, Range, Arrow Diagram, Function Check)
+      else if (fullMath.indexOf('மதிப்பகம்') !== -1 || fullMath.indexOf('வீச்சகம்') !== -1 || fullMath.indexOf('domain') !== -1 || fullMath.indexOf('range') !== -1 || fullMath.indexOf('சார்பாகுமா') !== -1) {
+        mistakes.push({
+          type: isEm ? "Confusing Co-domain with Range" : "துணை மதிப்பகம் vs வீச்சகம் குழப்பம்",
           icon: "📐",
           deduction: "-1 Mark",
           mistake: isEm
-            ? "Confusing complementary identities (e.g. sin(90-θ) = cos θ) or writing tan θ as adjacent/opposite instead of opposite/adjacent."
-            : "முக்கோணவியல் முற்றொருமைகளைத் தவறாகப் பயன்படுத்துதல் அல்லது tan θ = எதிர்பக்கம் / அடுத்துள்ள பக்கம் என்பதை மாற்றி எழுதுதல்.",
+            ? "Writing the entire set B (Co-domain) as the Range, instead of only the elements of B that have pre-images in A."
+            : "துணை மதிப்பகத்தில் உள்ள அனைத்து உறுப்புகளையும் வீச்சகமாக எழுதிவிடுதல் (முன் உருக்கள் கொண்ட உறுப்புகள் மட்டுமே வீச்சகமாகும்).",
           correction: isEm
-            ? "Verify the trigonometric identity and check values against the standard angle table before simplifying."
-            : "முக்கோணவியல் அட்டவணை மதிப்புகளையும் சூத்திரங்களையும் கவனமாகப் பிரதியிட்டுத் தீர்க்கவும்."
+            ? "Domain = {elements of A having images}, Range = {actual output values in B}; Co-domain = all elements of B."
+            : "மதிப்பகம் = {உறவுடைய A-ன் உறுப்புகள்}, வீச்சகம் = {நிழல் உருக்களின் கணம்}; துணை மதிப்பகம் = B-ன் முழு கணம்."
         });
-      } else {
+        mistakes.push({
+          type: isEm ? "Function Justification Omission" : "சார்பு என்பதற்கான காரணம் விடுபடுதல்",
+          icon: "📝",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Merely writing 'It is a function' or 'Not a function' without writing the required mathematical reason: 'Each element in domain has a unique image'."
+            : "காரணத்தை விளக்காமல் 'இது ஒரு சார்பாகும்' அல்லது 'சார்பல்ல' என்று மட்டும் ஒற்றை வரியில் எழுதி மதிப்பெண் இழத்தல்.",
+          correction: isEm
+            ? "State explicitly: 'Yes, it is a function because every element in the domain has a unique image in the co-domain'."
+            : "'மதிப்பகத்திலுள்ள ஒவ்வொரு உறுப்பிற்கும் ஒரே ஒரு நிழல் உரு மட்டுமே உள்ளதால், இது ஒரு சார்பாகும்' என முழுமையாக எழுதவும்."
+        });
+        mistakes.push({
+          type: isEm ? "Set Braces { } Omission" : "கண அடைப்புக்குறி { } விடுபாடு",
+          icon: "⚠️",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Writing Domain and Range values as bare numbers separated by commas without enclosing them in set brackets { }."
+            : "மதிப்பகம் மற்றும் வீச்சகத்தை வெறும் எண்களாக மட்டும் எழுதி, கண அடைப்புக்குறிக்குள் { } எழுதாமல் விடுதல்.",
+          correction: isEm
+            ? "Always present Domain and Range inside set brackets: Domain = {1, 2, 3}, Range = {2, 4, 6}."
+            : "மதிப்பகம் மற்றும் வீச்சகத்தை எப்பொழுதும் கணக் குறியீட்டுக்குள் { } எழுதவும்."
+        });
+      }
+
+      // 3. Composite Functions (f ∘ g, g ∘ f, Finding k)
+      else if (fullMath.indexOf('f ∘ g') !== -1 || fullMath.indexOf('g ∘ f') !== -1 || fullMath.indexOf('f \\circ g') !== -1 || fullMath.indexOf('f(g(x))') !== -1) {
+        var isFindK = fullMath.indexOf('k') !== -1;
+        if (isFindK) {
+          mistakes.push({
+            type: isEm ? "Bracket Expansion & Sign Error with k" : "அடைப்புக்குறிப் பெருக்கல் & k-ன் குறியீட்டுப் பிழை",
+            icon: "➕",
+            deduction: "-1 Mark",
+            mistake: isEm
+              ? "Making sign errors when multiplying outer coefficient into brackets containing k (e.g. 3(6x - k) + 2 expanded as 18x - k + 2 instead of 18x - 3k + 2)."
+              : "f(g(x))-ல் அடைப்புக்குறிக்குள் உள்ள k-ஐ பெருக்கும்போது, 3(6x - k) என்பதற்கு 18x - k என 3-ஆல் k-ஐ பெருக்காமல் விடுதல் அல்லது மைனஸ் குறியை மாற்றுதல்.",
+            correction: isEm
+              ? "Multiply the outer factor with every term inside brackets: 3(6x - k) = 18x - 3k."
+              : "அடைப்புக்குறிக்கு வெளியே உள்ள எண்ணால் k உட்பட அனைத்து உறுப்புகளையும் முறையாகப் பெருக்கவும்: 3(6x - k) = 18x - 3k."
+          });
+          mistakes.push({
+            type: isEm ? "Transposition Sign Error when Solving for k" : "k-ன் மதிப்பில் இடமாற்றக் குறியீட்டுப் பிழை",
+            icon: "📐",
+            deduction: "-1 Mark",
+            mistake: isEm
+              ? "Careless sign flips when equating f ∘ g = g ∘ f and moving k terms to the left and constant terms to the right."
+              : "f ∘ g = g ∘ f சமன்பாட்டில் k உறுப்புகளை இடப்பக்கமும் மாறிலிகளை வலப்பக்கமும் கொண்டு செல்லும்போது குறிகளை மாற்றாமல் (+ / -) தவறு செய்தல்.",
+            correction: isEm
+              ? "Group like terms carefully: -3k + 6k = 3k, and divide properly to find the unique value of k."
+              : "k உறுப்புகளை ஒருபுறமும் எண்களை மறுபுறமும் கவனமாக மாற்றிச் சுருக்கி k-ன் சரியான மதிப்பைக் காண்க."
+          });
+        } else {
+          mistakes.push({
+            type: isEm ? "Treating f ∘ g as Multiplication f(x) · g(x)" : "f ∘ g-ஐ பெருக்கல் f(x) · g(x) எனத் தவறாகக் கொள்ளுதல்",
+            icon: "📐",
+            deduction: "-1 Mark",
+            mistake: isEm
+              ? "Multiplying the two functions f(x) · g(x) instead of substituting g(x) into the variable x of f(x)."
+              : "f ∘ g காணும்போது f(x)-ல் உள்ள x-க்கு பதிலாக g(x)-ஐ பிரதியிடாமல், f(x) மற்றும் g(x)-ஐ ஒன்றோடொன்று பெருக்கி விடுதல்.",
+            correction: isEm
+              ? "f ∘ g(x) = f(g(x)): replace every 'x' in formula of f with the entire expression of g(x)."
+              : "f ∘ g(x) = f(g(x)): f(x)-ல் x இருக்கும் இடத்தில் g(x)-ன் முழுக்கோவையை பிரதியிட்டுச் சுருக்கவும்."
+          });
+          mistakes.push({
+            type: isEm ? "Assuming f ∘ g = g ∘ f without Verification" : "f ∘ g = g ∘ f என நேரடியாக முடிவு செய்தல்",
+            icon: "⚠️",
+            deduction: "-½ Mark",
+            mistake: isEm
+              ? "Assuming function composition is commutative (f ∘ g = g ∘ f) without showing that generally f ∘ g ≠ g ∘ f."
+              : "சார்புகளின் சேர்ப்பு பொதுவாக பரிமாற்று விதிக்கு உட்படாது (f ∘ g ≠ g ∘ f) என்பதை தனித்தனியாகக் கணக்கிட்டுக் காட்டாமல் சமம் என தவறாக எழுதுதல்.",
+            correction: isEm
+              ? "Calculate (1) f ∘ g and (2) g ∘ f separately, compare the resulting polynomials, and state: 'From (1) & (2), f ∘ g ≠ g ∘ f'."
+              : "(1) f ∘ g மற்றும் (2) g ∘ f இரண்டையும் தனித்தனியாகக் கண்டு, (1) ≠ (2) என ஒப்பிட்டு 'f ∘ g ≠ g ∘ f' என விடை அளிக்கவும்."
+          });
+        }
+      }
+
+      // 4. Line Tests (Vertical line / Horizontal line test)
+      else if (fullMath.indexOf('குத்துக்கோடு') !== -1 || fullMath.indexOf('vertical line') !== -1 || fullMath.indexOf('கிடைமட்ட') !== -1 || fullMath.indexOf('horizontal line') !== -1) {
+        var isVert = fullMath.indexOf('குத்துக்கோடு') !== -1 || fullMath.indexOf('vertical') !== -1;
+        mistakes.push({
+          type: isEm ? "Omission of 'At Most One Point' Keyword" : "'அதிகபட்சமாக ஒரே ஒரு புள்ளி' விடுபாடு",
+          icon: "📝",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Writing vaguely that 'the line cuts the curve' without stating the decisive exam keyword: 'cuts the curve in at most one point'."
+            : "'அதிகபட்சமாக ஒரே ஒரு புள்ளியில் மட்டுமே வெட்டினால்' என்ற அரசு விடைக்குறிப்பிலுள்ள முதன்மைச் சொற்களை எழுதாமல் விடுதல்.",
+          correction: isEm
+            ? "State explicitly: 'A curve represents a function if any vertical line intersects the curve in at most one point'."
+            : "'வளைவரையை குத்துக்கோடு அதிகபட்சமாக ஒரே ஒரு புள்ளியில் மட்டுமே வெட்டினால் அவ்வளைவரை ஒரு சார்பினைக் குறிக்கும்' என முழுமையாக எழுதவும்."
+        });
+        mistakes.push({
+          type: isEm ? (isVert ? "Confusing Function with One-to-One" : "Confusing One-to-One with Function") : (isVert ? "சார்பு vs ஒன்றுக்கொன்றான சார்பு குழப்பம்" : "ஒன்றுக்கொன்றான சார்பு vs சார்பு குழப்பம்"),
+          icon: "⚠️",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? (isVert ? "Writing that vertical line test proves one-to-one (vertical line test tests for function; horizontal line test tests for one-to-one)." : "Writing that horizontal line test tests for function (it tests specifically for one-to-one function).")
+            : (isVert ? "குத்துக்கோட்டுச் சோதனை சார்பினைக் கண்டறியும் சோதனை; அதை ஒன்றுக்கொன்றான சார்புக்கானது என மாற்றி எழுதுதல்." : "கிடைமட்டக் கோட்டுச் சோதனை ஒன்றுக்கொன்றான சார்பினைக் கண்டறியும் சோதனை; அதை பொதுவான சார்புக்கானது என எழுதுதல்."),
+          correction: isEm
+            ? (isVert ? "Vertical line test = tests if curve is a FUNCTION." : "Horizontal line test = tests if function is ONE-TO-ONE.")
+            : (isVert ? "குத்துக்கோட்டுச் சோதனை = 'சார்பு' என்பதைக் கண்டறிய மட்டுமே பயன்படும்." : "கிடைமட்டக் கோட்டுச் சோதனை = 'ஒன்றுக்கொன்றான சார்பு' என்பதைக் கண்டறியப் பயன்படும்.")
+        });
+      }
+
+      // 5. Arithmetic & Geometric Progressions (AP / GP)
+      else if (fullMath.indexOf('கூட்டுத்தொடர்') !== -1 || fullMath.indexOf('பெருக்குத்தொடர்') !== -1 || fullMath.indexOf('a.p') !== -1 || fullMath.indexOf('g.p') !== -1 || fullMath.indexOf('arithmetic') !== -1 || fullMath.indexOf('geometric') !== -1) {
+        var isGP = fullMath.indexOf('பெருக்குத்தொடர்') !== -1 || fullMath.indexOf('g.p') !== -1 || fullMath.indexOf('geometric') !== -1;
+        if (isGP) {
+          mistakes.push({
+            type: isEm ? "Common Ratio r Calculation Error" : "பொது விகிதம் r கணக்கீட்டுப் பிழை",
+            icon: "📐",
+            deduction: "-1 Mark",
+            mistake: isEm
+              ? "Subtracting terms (t₂ - t₁) like an AP instead of dividing consecutive terms (r = t₂ / t₁), or inverting fractions."
+              : "பொது விகிதம் r = t₂ / t₁ என வகுக்காமல் கூட்டுத்தொடர் போல t₂ - t₁ என கழித்து விடுதல் அல்லது பின்னங்களை வகுக்கும்போது தவறு செய்தல்.",
+            correction: isEm
+              ? "Always use division: r = t₂ / t₁ = t₃ / t₂. Invert the denominator fraction when dividing."
+              : "பெருக்குத்தொடரில் பொது விகிதம் r = t₂ / t₁ என வகுத்துச் சரியான r மதிப்பைப் பெறவும்."
+          });
+          mistakes.push({
+            type: isEm ? "Power Index Error in GP Formula" : "பெருக்குத்தொடர் சூத்திரத்தில் அடுக்குக் குழப்பம்",
+            icon: "📝",
+            deduction: "-1 Mark",
+            mistake: isEm
+              ? "Writing t_n = a · r^n instead of a · r^(n-1), making the power one index too high."
+              : "t_n = a r^{n-1} சூத்திரத்தில் r-ன் அடுக்கை n-1 என்பதற்குப் பதிலாக n என தவறாக எழுதுதல்.",
+            correction: isEm
+              ? "The nth term of GP is strictly t_n = a · r^(n-1)."
+              : "பெருக்குத்தொடரின் n-வது உறுப்பு சூத்திரம்: t_n = a · r^{n-1}."
+          });
+        } else {
+          mistakes.push({
+            type: isEm ? "Common Difference d Sign & Order Error" : "பொது வித்தியாசம் d-ல் குறியீட்டுப் பிழை",
+            icon: "➕",
+            deduction: "-1 Mark",
+            mistake: isEm
+              ? "Calculating d as t₁ - t₂ instead of d = t₂ - t₁, resulting in reversed positive/negative signs throughout the working."
+              : "பொது வித்தியாசம் d = t₂ - t₁ என்பதற்குப் பதிலாக t₁ - t₂ என கழித்தல், அல்லது t₂-ல் மைனஸ் எண் இருக்கும்போது குறிகளைத் தவறாக மாற்றுதல்.",
+            correction: isEm
+              ? "Common difference is strictly: d = t₂ - t₁ (second term minus first term)."
+              : "பொது வித்தியாசம் காணும் சரியான சூத்திரம்: d = t₂ - t₁ (இரண்டாம் உறுப்பு - முதல் உறுப்பு)."
+          });
+          mistakes.push({
+            type: isEm ? "Sum Formula Confusion (a vs 2a)" : "கூடுதல் சூத்திரத்தில் (a vs 2a) குழப்பம்",
+            icon: "📝",
+            deduction: "-1 Mark",
+            mistake: isEm
+              ? "Writing S_n = n/2 [a + (n-1)d] instead of the correct formula S_n = n/2 [2a + (n-1)d]."
+              : "கூட்டுத்தொடரின் முதல் n உறுப்புகளின் கூடுதல் சூத்திரத்தில் 2a என்பதற்கு வெறும் a என தவறாக எழுதுதல்.",
+            correction: isEm
+              ? "Use S_n = n/2 [2a + (n-1)d] or S_n = n/2 [a + l] when last term l is known."
+              : "கூடுதல் சூத்திரம்: S_n = n/2 [2a + (n-1)d] அல்லது கடைசி உறுப்பு தெரிந்தால் S_n = n/2 [a + l]."
+          });
+        }
+      }
+
+      // 6. Quadratic Equations & Algebra
+      else if (fullMath.indexOf('x²') !== -1 || fullMath.indexOf('x^2') !== -1 || fullMath.indexOf('மூலங்கள்') !== -1 || fullMath.indexOf('roots') !== -1 || fullMath.indexOf('quadratic') !== -1) {
+        mistakes.push({
+          type: isEm ? "Sign Slips in Quadratic Formula (-b and -4ac)" : "இருபடிச் சமன்பாட்டுச் சூத்திரத்தில் குறியீட்டுப் பிழை",
+          icon: "➕",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "When b is negative, failing to change sign: writing -b as -5 instead of -(-5) = +5, or squaring negative numbers as negative (e.g. (-3)² as -9 instead of +9)."
+            : "b-ன் மதிப்பு மைனஸாக இருக்கும்போது, சூத்திரத்தில் -b பிரதியிடும்போது -(-b) = +b என மாற்றாமல் விடுதல் அல்லது (-3)² = +9 என்பதற்கு -9 என எழுதுதல்.",
+          correction: isEm
+            ? "x = [-b ± √(b² - 4ac)] / (2a). Double check: (-b) becomes positive if b is negative, and (-number)² is ALWAYS positive."
+            : "x = [-b ± √(b² - 4ac)] / (2a). b மைனஸாக இருந்தால் -b நேர்மறையாகும், மற்றும் எந்த எண்ணின் வர்க்கமும் (+ve) ஆகும்."
+        });
+        mistakes.push({
+          type: isEm ? "Division Line Length Omission" : "வகுத்தல் கோடு நீளக் குறைபாடு",
+          icon: "📝",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Drawing the fraction division bar only under the radical √(b² - 4ac) instead of extending it beneath the entire numerator (-b ± √...)."
+            : "2a வகுத்தல் கோட்டை முழுத் தொகுதிக்கும் நீட்டாமல், வெறும் வர்க்கமூலப் பகுதிக்கு (√) மட்டும் வகுத்தலாக எழுதுதல்.",
+          correction: isEm
+            ? "The denominator (2a) divides the ENTIRE expression: [-b ± √(b² - 4ac)] / 2a."
+            : "வகுத்தல் கோடு -b மற்றும் வர்க்கமூலம் ஆகிய முழுத் தொகுதிக்கும் கீழ் நீளமாக இருக்க வேண்டும்."
+        });
+      }
+
+      // 7. Matrices (அணிகள்)
+      else if (fullMath.indexOf('அணி') !== -1 || fullMath.indexOf('matrix') !== -1 || fullMath.indexOf('matrices') !== -1) {
+        mistakes.push({
+          type: isEm ? "Element-by-Element Multiplication Fallacy" : "அணிகள் பெருக்கலில் நேரடிப் பெருக்கல் தவறு",
+          icon: "📐",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Multiplying corresponding entries directly (a₁₁ · b₁₁) instead of the mandatory Row-by-Column dot product."
+            : "அணிகள் பெருக்கலில் நிரை-நிரல் (Row by Column) முறைப்படி பெருக்காமல், ஒத்த உறுப்புகளை நேருக்கு நேராகப் பெருக்கி விடுதல்.",
+          correction: isEm
+            ? "Multiply each element of the row in matrix A with each element of the column in matrix B and add them: (a₁₁b₁₁ + a₁₂b₂₁)."
+            : "முதல் அணியின் நிரையையும் இரண்டாம் அணியின் நிரலையும் பெருக்கிக் கூட்டி ஒற்றை உறுப்பாக அமைக்க வேண்டும்."
+        });
+        mistakes.push({
+          type: isEm ? "Transpose Property Order Slip" : "இடமாற்று அணியில் வரிசை மாற்றம் விடுபாடு",
+          icon: "⚠️",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Writing (AB)^T = A^T B^T instead of the correct reversal law (AB)^T = B^T A^T."
+            : "இடமாற்று அணியின் பெருக்கல் விதியில் (AB)^T = B^T A^T என்பதற்குப் பதிலாக (AB)^T = A^T B^T என மாற்றி அமைத்தல்.",
+          correction: isEm
+            ? "Remember the reversal law for matrix transpose: (AB)^T = B^T A^T."
+            : "அணிகள் பெருக்கலின் இடமாற்று விதி: (AB)^T = B^T A^T என்பதை நினைவில் கொண்டு சரிபார்க்கவும்."
+        });
+      }
+
+      // 8. Coordinate Geometry
+      else if (fullMath.indexOf('ஆயத்தொலை') !== -1 || fullMath.indexOf('சாய்வு') !== -1 || fullMath.indexOf('slope') !== -1 || fullMath.indexOf('collinear') !== -1 || fullMath.indexOf('முக்கோணத்தின் பரப்பு') !== -1 || fullMath.indexOf('area of triangle') !== -1) {
+        mistakes.push({
+          type: isEm ? "Anticlockwise Vertex Order for Area" : "உச்சிகளை கடிகார எதிர்ச்சுற்றில் எடுக்காமை",
+          icon: "📐",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Taking vertices in arbitrary order resulting in a negative area, without arranging vertices in anticlockwise order."
+            : "கொடுக்கப்பட்ட புள்ளிகளைத் தோராய வரைபடத்தில் குறித்து கடிகார எதிர்ச்சுற்று (anticlockwise) வரிசையில் எடுக்காமல் பரப்பளவு மைனஸில் (-ve) வருமாறு தவறாகக் கணக்கிடுதல்.",
+          correction: isEm
+            ? "Plot the 3 points on a rough sketch, order them strictly counter-clockwise (A, B, C), and apply formula: 1/2 [(x₁y₂ + x₂y₃ + x₃y₁) - (x₂y₁ + x₃y₂ + x₁y₃)]."
+            : "புள்ளிகளைத் தோராய வரைபடத்தில் குறித்து கடிகார எதிர்ச்சுற்று வரிசையில் எடுத்து 1/2 [(x₁y₂ + x₂y₃ + x₃y₁) - (x₂y₁ + x₃y₂ + x₁y₃)] சூத்திரத்தைப் பயன்படுத்தவும்."
+        });
+        mistakes.push({
+          type: isEm ? "Slope Ratio Inversion (x vs y)" : "சாய்வு சூத்திரத்தில் ஆயத்தொலைவுகள் மாற்றம்",
+          icon: "📝",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Inverting the slope formula: writing (x₂ - x₁) / (y₂ - y₁) instead of (y₂ - y₁) / (x₂ - x₁)."
+            : "சாய்வு சூத்திரத்தில் y-ன் வித்தியாசத்திற்குப் பதிலாக x-ன் வித்தியாசத்தை மேலே எழுதி (x₂ - x₁) / (y₂ - y₁) என தலைகீழாக மாற்றுதல்.",
+          correction: isEm
+            ? "Slope m = (Change in y) / (Change in x) = (y₂ - y₁) / (x₂ - x₁)."
+            : "சாய்வு சூத்திரம்: m = (y₂ - y₁) / (x₂ - x₁) (y-ன் வித்தியாசம் / x-ன் வித்தியாசம்)."
+        });
+      }
+
+      // 9. Trigonometry
+      else if (fullMath.indexOf('sin') !== -1 || fullMath.indexOf('cos') !== -1 || fullMath.indexOf('tan') !== -1 || fullMath.indexOf('ஏற்றக்கோணம்') !== -1 || fullMath.indexOf('elevation') !== -1) {
+        mistakes.push({
+          type: isEm ? "Trigonometric Ratio & Table Value Slip" : "முக்கோணவியல் விகிதம் & அட்டவணை மதிப்புப் பிழை",
+          icon: "📐",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Confusing standard table values: e.g. taking tan 30° = √3 (actual is 1/√3) or tan 60° = 1/√3 (actual is √3), or swapping opposite and adjacent sides."
+            : "முக்கோணவியல் அட்டவணை மதிப்புகளைக் குழப்புதல்: tan 30° = √3 என தவறாக எடுத்தல் (உண்மை மதிப்பு 1/√3) அல்லது tan 60° = 1/√3 என மாற்றி எடுத்தல்.",
+          correction: isEm
+            ? "Verify table values: tan 30° = 1/√3, tan 45° = 1, tan 60° = √3. tan θ = Opposite side / Adjacent side."
+            : "அட்டவணை மதிப்புகளை உறுதிசெய்க: tan 30° = 1/√3, tan 45° = 1, tan 60° = √3. tan θ = எதிர்ப்பக்கம் / அடுத்துள்ள பக்கம்."
+        });
+        mistakes.push({
+          type: isEm ? "Unit Omission in Height / Distance" : "உயரம் மற்றும் தொலைவில் அலகுகள் (m) விடுபாடு",
+          icon: "⚠️",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Calculating the numerical height or distance correctly but omitting the unit 'metres' (m) at the conclusion."
+            : "கோபுரத்தின் உயரம் அல்லது தொலைவின் கணக்கீட்டு முடிவில் 'மீட்டர்' (m) என்ற அலகை எழுதாமல் வெறும் எண்ணை மட்டும் விடையாக விடுதல்.",
+          correction: isEm
+            ? "Always state the concluding answer with its correct unit: 'Height of the tower = 50 m'."
+            : "இறுதி விடையை அலகுகளுடன் நிறைவு செய்க: 'கோபுரத்தின் உயரம் = 50 மீட்டர் (m)'."
+        });
+      }
+
+      // 10. Mensuration
+      else if (fullMath.indexOf('உருளை') !== -1 || fullMath.indexOf('கூம்பு') !== -1 || fullMath.indexOf('கோளம்') !== -1 || fullMath.indexOf('cylinder') !== -1 || fullMath.indexOf('cone') !== -1 || fullMath.indexOf('sphere') !== -1 || fullMath.indexOf('volume') !== -1 || fullMath.indexOf('கனஅளவு') !== -1) {
+        mistakes.push({
+          type: isEm ? "Formula Confusion (Cylinder vs Cone Volume)" : "கனஅளவு சூத்திரத்தில் (உருளை vs கூம்பு) குழப்பம்",
+          icon: "📐",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Omitting 1/3 when calculating volume of a cone (using πr²h instead of 1/3 πr²h), or confusing slant height l = √(h² + r²) with vertical height h."
+            : "கூம்பின் கனஅளவைக் கணக்கிடும் போது 1/3-ஐ விட்டுவிட்டு உருளையின் கனஅளவாக (πr²h) எழுதி விடுதல், அல்லது சாயுயரம் l = √(h² + r²)-க்கு பதிலாக h என மாற்றிப் பிரதியிடுதல்.",
+          correction: isEm
+            ? "Volume of Cone = 1/3 πr²h; Volume of Cylinder = πr²h; Slant height l = √(r² + h²)."
+            : "கூம்பின் கனஅளவு = 1/3 πr²h; உருளையின் கனஅளவு = πr²h; சாயுயரம் l = √(r² + h²)."
+        });
+        mistakes.push({
+          type: isEm ? "Area vs Volume Units Confusion (cm² vs cm³)" : "பரப்பளவு vs கனஅளவு அலகுகள் குழப்பம்",
+          icon: "⚠️",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Writing linear units (cm) or square units (cm²) for Volume instead of cubic units (cm³ / m³)."
+            : "கனஅளவிற்கான அலகுகளில் சதுர செ.மீ (cm²) என்றோ அல்லது வெறும் செ.மீ என்றோ தவறான அலகுகளை எழுதுதல்.",
+          correction: isEm
+            ? "Surface area must always be in cm² / m²; Volume must ALWAYS be in cubic units: cm³ / m³."
+            : "பரப்பளவிற்கு சதுர செ.மீ (cm²); கனஅளவிற்கு கட்டாயம் கன செ.மீ (cm³ / மீ³) என எழுதவும்."
+        });
+      }
+
+      // 11. Statistics & Probability
+      else if (fullMath.indexOf('நிகழ்தகவு') !== -1 || fullMath.indexOf('probability') !== -1 || fullMath.indexOf('புள்ளியியல்') !== -1 || fullMath.indexOf('deviation') !== -1 || fullMath.indexOf('variance') !== -1) {
+        mistakes.push({
+          type: isEm ? "Probability Value Out of Range [0, 1]" : "நிகழ்தகவு மதிப்பு எல்லை மீறுதல் (0 ≤ P(E) ≤ 1)",
+          icon: "📐",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Writing a final probability value greater than 1 or a negative value without realizing probability is strictly between 0 and 1."
+            : "நிகழ்தகவின் மதிப்பு 1-ஐ விட அதிகமாகவோ அல்லது குறை எண்ணாகவோ (-ve) வரும்படி தவறாகக் கணக்கிடுதல் (நிகழ்தகவு எப்போதும் 0 முதல் 1 வரை மட்டுமே இருக்கும்).",
+          correction: isEm
+            ? "Always verify 0 ≤ P(E) ≤ 1. If P(E) > 1 or negative, check your sample space n(S) and event count n(E)."
+            : "எப்பொழுதும் 0 ≤ P(E) ≤ 1 என்பதை உறுதிசெய்க. விடை 1-ஐ விட அதிகமானால் கூறுவெளி n(S) கணக்கீட்டைச் சரிபார்க்கவும்."
+        });
+        mistakes.push({
+          type: isEm ? "Sample Space n(S) Calculation Error" : "கூறுவெளி n(S) கணக்கீட்டுப் பிழை",
+          icon: "📝",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Miscounting sample space: e.g. for two dice n(S)=36 (taking as 12), or for three coins n(S)=8 (taking as 6)."
+            : "கூறுவெளியின் மொத்த எண்ணிக்கையைக் கணக்கிடுவதில் பிழை: இரண்டு பகடைகள் உருட்டப்படும் போது n(S) = 36 (12 எனத் தவறாக எடுத்தல்), மூன்று நாணயங்களுக்கு n(S) = 8.",
+          correction: isEm
+            ? "For n coins: n(S) = 2ⁿ; For n dice: n(S) = 6ⁿ."
+            : "நாணயங்களுக்கு n(S) = 2ⁿ; பகடைகளுக்கு n(S) = 6ⁿ எனச் சரியான கூறுவெளியை எழுதவும்."
+        });
+      }
+
+      // 12. General Math Fallback (Sign, Formula, Units)
+      else {
         mistakes.push({
           type: isEm ? "Sign Errors (+ / -) in Algebraic Transposition" : "இயற்கணிதக் குறியீட்டுப் பிழைகள் (+ / -)",
           icon: "➕",
@@ -6299,36 +6654,38 @@
             ? "Re-check every sign (+ and -) carefully during expansion, transposition, and substitution."
             : "ஒவ்வொரு படிநிலையிலும் கூட்டல், கழித்தல் மற்றும் பெருக்கல் குறியீடுகளைக் கவனமாகச் சரிபார்க்கவும்."
         });
+        mistakes.push({
+          type: isEm ? "Formula Omission & Step Skipping" : "சூத்திரம் (Formula) & படிநிலைகளை விடுதல்",
+          icon: "📝",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Jumping directly to the final value without explicitly stating the governing formula and standard substitution steps."
+            : "சூத்திரத்தை (Formula) எழுதாமல் நேரடியாக விடையை மட்டும் எழுதுதல் அல்லது இடைப்பட்ட கணக்கீட்டுப் படிகளைத் தவிர்த்தல்.",
+          correction: isEm
+            ? "Always write the governing formula first in a neat box, substitute values, and show simplification steps."
+            : "முதலில் சூத்திரத்தை எழுதி கட்டம் இடவும், பின்னர் மதிப்புகளைப் பிரதியிட்டுப் படிநிலைகளைத் தெளிவாகக் காட்டவும்."
+        });
       }
 
-      mistakes.push({
-        type: isEm ? "Formula Omission & Step Skipping" : "சூத்திரம் (Formula) & படிநிலைகளை விடுதல்",
-        icon: "📝",
-        deduction: "-½ Mark",
-        mistake: isEm
-          ? "Jumping directly to the final value without explicitly stating the governing formula and standard substitution steps."
-          : "சூத்திரத்தை (Formula) எழுதாமல் நேரடியாக விடையை மட்டும் எழுதுதல் அல்லது இடைப்பட்ட கணக்கீட்டுப் படிகளைத் தவிர்த்தல்.",
-        correction: isEm
-          ? "Always write the governing formula first in a neat box, substitute values, and show simplification steps."
-          : "முதலில் சூத்திரத்தை எழுதி கட்டம் இடவும், பின்னர் மதிப்புகளைப் பிரதியிட்டுப் படிநிலைகளைத் தெளிவாகக் காட்டவும்."
-      });
-
-      mistakes.push({
-        type: isEm ? (hasUnits ? "Missing or Incorrect Units (cm², m³, units)" : "Final Answer Highlighting & Conclusion") : (hasUnits ? "அலகுகள் (Units) விடுபாடு" : "இறுதி விடை கட்டமிடுதல் & விடைக்குறிப்பு"),
-        icon: "⚠️",
-        deduction: "-½ Mark",
-        mistake: isEm
-          ? (hasUnits ? "Forgetting to write the appropriate unit (e.g. cm², m³, km/h, units) at the end of the final numerical answer." : "Failing to write the concluding answer statement or leaving the final answer unhighlighted.")
-          : (hasUnits ? "கணக்கீட்டின் முடிவில் இறுதி விடையுடன் அலகுகளைக் (செ.மீ², மீ³, அலகுகள்) குறிப்பிடாமல் விடுதல்." : "இறுதி விடையைத் தனியாக எடுத்துக் காட்டாமல் அல்லது கட்டமிடாமல் விடுதல்."),
-        correction: isEm
-          ? "Enclose the final answer along with its correct unit in a neat rectangular box."
-          : "இறுதி விடையைச் சரியான அலகுகளுடன் எழுதி கட்டமிட்டுக் காட்டவும்."
-      });
+      // Final Answer Highlighting (if less than 3 alerts)
+      if (mistakes.length < 3) {
+        var hasUnits = fullMath.indexOf('cm') !== -1 || fullMath.indexOf('m^') !== -1 || fullMath.indexOf('மீட்டர்') !== -1 || fullMath.indexOf('செ.மீ') !== -1;
+        mistakes.push({
+          type: isEm ? (hasUnits ? "Missing or Incorrect Units (cm², m³, units)" : "Final Answer Highlighting & Conclusion") : (hasUnits ? "அலகுகள் (Units) விடுபாடு" : "இறுதி விடை கட்டமிடுதல் & விடைக்குறிப்பு"),
+          icon: "⚠️",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? (hasUnits ? "Forgetting to write the appropriate unit (e.g. cm², m³, km/h, units) at the end of the final numerical answer." : "Failing to write the concluding answer statement or leaving the final answer unhighlighted.")
+            : (hasUnits ? "கணக்கீட்டின் முடிவில் இறுதி விடையுடன் அலகுகளைக் (செ.மீ², மீ³, அலகுகள்) குறிப்பிடாமல் விடுதல்." : "இறுதி விடையைத் தனியாக எடுத்துக் காட்டாமல் அல்லது கட்டமிடாமல் விடுதல்."),
+          correction: isEm
+            ? "Enclose the final answer along with its correct unit in a neat rectangular box."
+            : "இறுதி விடையைச் சரியான அலகுகளுடன் எழுதி கட்டமிட்டுக் காட்டவும்."
+        });
+      }
 
       return mistakes.slice(0, 3);
     }
 
-    // -------------------------------------------------------------
     // 4. SCIENCE DEEP CONCEPTUAL ANALYZER
     // -------------------------------------------------------------
     if (subId.indexOf('science') !== -1 || (item.id && item.id.startsWith('sci'))) {
@@ -9851,6 +10208,80 @@
   function insertDoubtChip() {}
   function sendDoubtMail() {}
 
+  // In-App Distraction-Free Video Player Controller
+  window.openInAppVideoModal = function(videoSource, title) {
+    if (!videoSource) return;
+    const modal = document.getElementById('inAppVideoModal');
+    const container = document.getElementById('videoModalContainer');
+    const titleEl = document.getElementById('videoModalTitle');
+    if (!modal || !container) return;
+
+    const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+    if (titleEl) {
+      if (title && typeof title === 'string' && title.trim().length > 0) {
+        const cleanHeading = title.replace(/^[^\w\u0B80-\u0BFF]+/, '').trim();
+        titleEl.textContent = cleanHeading || (isEm ? 'Video Solution' : 'வீடியோ நேரடி விளக்கம்');
+      } else {
+        titleEl.textContent = isEm ? 'Video Solution' : 'வீடியோ நேரடி விளக்கம்';
+      }
+    }
+    const subEl = document.getElementById('videoModalSub');
+    if (subEl) {
+      subEl.textContent = isEm ? '🔒 Ad-Free & Distraction-Free Direct Video' : '🔒 விளம்பரங்கள் / அடுத்த வீடியோக்கள் அற்ற நேரடி இயக்கம்';
+    }
+
+    // Stop audio players to prevent overlapping sound
+    if (window.teacherAudioPlayer) teacherAudioPlayer.stop();
+    if (window.blackboardPlayer) blackboardPlayer.stop();
+    if (window.continuousAudioPlayer) continuousAudioPlayer.stop();
+
+    // Check if YouTube link (handles youtu.be, youtube.com/watch, embed, shorts)
+    const ytMatch = videoSource.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/);
+    if (ytMatch && ytMatch[1]) {
+      const videoId = ytMatch[1];
+      container.innerHTML = `
+        <iframe 
+          src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&controls=1&playsinline=1" 
+          title="Video Player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen 
+          style="position: absolute; top:0; left:0; width:100%; height:100%; border:none;">
+        </iframe>
+      `;
+    } else {
+      container.innerHTML = `
+        <video 
+          controls 
+          autoplay 
+          playsinline 
+          controlslist="nodownload" 
+          style="position: absolute; top:0; left:0; width:100%; height:100%; background:#000;">
+          <source src="${videoSource}" type="video/mp4">
+          ${isEm ? 'Your browser cannot play this video.' : 'உங்கள் பிரவுசரில் இந்த வீடியோவை இயக்க இயலவில்லை.'}
+        </video>
+      `;
+    }
+
+    modal.classList.add('open');
+    modal.classList.add('show');
+    modal.style.display = 'flex';
+  };
+
+  window.closeInAppVideoModal = function() {
+    const modal = document.getElementById('inAppVideoModal');
+    const container = document.getElementById('videoModalContainer');
+    if (container) {
+      container.innerHTML = '';
+    }
+    if (modal) {
+      modal.classList.remove('open');
+      modal.classList.remove('show');
+      modal.style.display = 'none';
+    }
+  };
+
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeImageModal();
@@ -13260,7 +13691,7 @@
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261118_v93')
+        navigator.serviceWorker.register('./sw.js?v=20261118_v94')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

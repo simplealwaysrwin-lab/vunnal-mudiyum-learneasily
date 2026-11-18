@@ -5854,281 +5854,479 @@
     }
   };
 
-    function generateCommonMistakesForItem(item, isEm) {
+      function generateCommonMistakesForItem(item, isEm) {
     if (item.commonMistakes && Array.isArray(item.commonMistakes) && item.commonMistakes.length > 0) {
       return item.commonMistakes;
     }
     if (!item || item.type === '1m') return null;
 
     var subId = (typeof currentSubject !== 'undefined' && currentSubject && currentSubject.id) ? currentSubject.id : '';
-    var rawText = (item.ans || '') + ' ' + (item.ansTamil || '') + ' ' + (item.q || '');
-    var cleanText = rawText.replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+    var qText = (item.q || '').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+    var ansText = (item.ans || item.ansTamil || '').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
 
-    // Extract significant English keywords (words > 4 chars, excluding stopwords)
-    var engWords = (cleanText.match(/[a-zA-Z]{5,}/g) || []).filter(function(w) {
-      var low = w.toLowerCase();
-      var stopWords = ['which', 'where', 'there', 'their', 'about', 'these', 'those', 'because', 'between', 'through', 'should', 'would', 'could', 'first', 'second', 'marks', 'answer', 'question'];
-      return stopWords.indexOf(low) === -1;
-    });
-    var uniqueEngWords = [];
-    engWords.forEach(function(w) {
-      var low = w.toLowerCase();
-      if (!uniqueEngWords.some(function(u) { return u.toLowerCase() === low; })) {
-        uniqueEngWords.push(w);
-      }
-    });
-
-    var mistakes = [];
-
-    // 1. TAMIL SUBJECT
+    // -------------------------------------------------------------
+    // 1. TAMIL MEDIUM / TAMIL SUBJECT DEEP LEXICAL ANALYZER
+    // -------------------------------------------------------------
     if (subId === 'tamil' || (item.id && item.id.startsWith('tam'))) {
-      mistakes.push({
-        type: 'ஒற்றுப் பிழை (வல்லினம் மிகும் / மிகா இடங்கள்)',
-        icon: '✍️',
-        deduction: '-½ Mark',
-        mistake: 'விடையில் சொற்களைச் சேர்க்கும்போது க், ச், த், ப் ஆகிய மெய்யெழுத்துகளை (ஒற்றெழுத்து) இட வேண்டிய இடத்தில் இடாமல் விடுதல் அல்லது தேவையில்லாத இடங்களில் இடுதல்.',
-        mistakeTa: 'எடுத்துக்காட்டாக: "படிப்பதற்கு சென்றான்" என்று தேவையில்லாமல் ஒற்றெழுத்து இடுதல் அல்லது "பார்க்க சென்றான்" எனத் தேவையான இடத்தில் ஒற்றெழுத்து (ச்) இடாமல் விடுதல்.',
-        correction: 'பெயரெச்சம், வினைத்தொகை, இரண்டாம்/நான்காம் வேற்றுமை விரிகளில் வல்லினம் மிகும்/மிகா விதிகளை நினைவில் கொண்டு ஒற்றெழுத்துப் பிழையின்றி எழுதவும்.'
+      var mistakes = [];
+      var tamilWords = ansText.match(/[\u0B80-\u0BFF]{2,}/g) || [];
+
+      // A. மூன்றுசுழி 'ண்/ண' (டண்ணகரம்)
+      var nThreeWords = tamilWords.filter(function(w) {
+        return (w.indexOf('ண்') !== -1 || w.indexOf('ண') !== -1) && w !== 'எண்ண' && w !== 'கொண்டு';
       });
-      mistakes.push({
-        type: 'மயங்கொலி & எழுத்துப் பிழைகள் (ர/ற, ல/ள/ழ, ந/ண/ன)',
-        icon: '🔤',
-        deduction: '-½ Mark',
-        mistake: 'சொற்களில் ஒத்த ஒலிப்புடைய எழுத்துக்களை மாற்றி எழுதுதல் (எ.கா: "மணம்" என்பதற்குப் பதிலாக "மனம்", "பணி" என்பதற்குப் பதிலாக "பனி").',
-        mistakeTa: 'மயங்கொலி எழுத்துப் பிழைகள் ஏற்படும்போது சொல்லின் பொருளே மாறி மதிப்பெண் குறையும்.',
-        correction: 'இப்பாடத்தின் விடைக்குறிப்பிலுள்ள முக்கியச் சொற்களைச் சரியான எழுத்துக்களுடன் ஒருமுறை எழுதிப் பார்த்துப் பிழைகளைத் தவிர்க்கவும்.'
+      if (nThreeWords.length > 0) {
+        var w = nThreeWords[0];
+        var badW = w.replace(/ண்/g, 'ன்').replace(/ண/g, 'ன');
+        mistakes.push({
+          type: "மயங்கொலிப் பிழை (இரண்டுசுழி / மூன்றுசுழி ண் - ன் வேறுபாடு)",
+          icon: "🔤",
+          deduction: "-½ Mark",
+          mistake: "இவ்விடையில் வரும் <b>" + w + "</b> என்பதில் டண்ணகர 'ண்/ண' (மூன்றுசுழி) போடுவதற்குப் பதிலாக தவறுதலாக இரண்டுசுழி 'ன்/ன' போட்டு <b>'" + badW + "'</b> என மயங்கொலிப் பிழையுடன் எழுதுதல்.",
+          mistakeTa: "டண்ணகர 'ண்' வரவேண்டிய இடத்தில் றன்னகர 'ன்' எழுதினால் அரசுத் தேர்வில் -½ மதிப்பெண் குறைக்கப்படும்.",
+          correction: "'" + w + "' என்பதில் வருவது மூன்றுசுழி <b>'ண்/ண'</b> என்பதை நினைவில் கொண்டு சரியான எழுத்துடன் எழுதவும்."
+        });
+      }
+
+      // B. இரண்டுசுழி 'ன்/ன/னை' (றன்னகரம்) & நெடில் எழுத்துக்கள்
+      var nTwoWords = tamilWords.filter(function(w) {
+        return (w.indexOf('ன்') !== -1 || w.indexOf('னை') !== -1 || w.indexOf('னெ') !== -1) && nThreeWords.indexOf(w) === -1;
       });
-      mistakes.push({
-        type: 'விடைக்குறிப்புச் சொல் விடுபாடு & வினா எண் குறிப்பு',
-        icon: '⚠️',
-        deduction: '-1 Mark',
-        mistake: 'அரசுத் தேர்வு விடைக்குறிப்பில் உள்ள முக்கியக் கருத்துச் சொற்களை எழுதாமல், பொதுவான வரிகளை மட்டும் எழுதுதல் மற்றும் வினா எண் இடாமல் அல்லது தவறாக இடுதல்.',
-        mistakeTa: 'வினா எண்ணைத் தவறாக இட்டாலோ அல்லது அரசு மதிப்பீட்டுக் குறிப்பிலுள்ள முதன்மைக் கருத்துச் சொற்களை எழுதாமல் விட்டாலோ மதிப்பெண் முழுமையாகக் குறைக்கப்படும்.',
-        correction: 'விடைத்தாளின் இடது ஓரத்தில் வினா எண்ணைத் தெளிவாக எழுதி, அரசு விடைக்குறிப்பில் கேட்கப்பட்டுள்ள முதன்மைக் கருத்துகளை முழுமையாக எழுதவும்.'
+      if (nTwoWords.length > 0 && mistakes.length < 3) {
+        var w2 = nTwoWords[0];
+        var badW2 = w2.replace(/னை/g, 'ன').replace(/ன்/g, 'ண்');
+        mistakes.push({
+          type: "எழுத்துப் பிழை & நெடில் வேறுபாடு (இரண்டுசுழி ன் / ன)",
+          icon: "✍️",
+          deduction: "-½ Mark",
+          mistake: "இவ்விடையில் உள்ள <b>" + w2 + "</b> என்பதில் நெடில் எழுத்தை விடுத்து <b>'" + badW2 + "'</b> என மாற்றி எழுதுதல் அல்லது இரண்டுசுழி 'ன்' போடுவதற்குப் பதிலாக மூன்றுசுழி 'ண்' இடுதல்.",
+          mistakeTa: "சொல்லின் நெடில் எழுத்தை மாற்றினாலோ அல்லது றன்னகர 'ன்' தவறாக எழுதினாலோ மதிப்பெண் இழக்க நேரிடும்.",
+          correction: "'" + w2 + "' என்ற சொல்லின் சரியான குறில்/நெடில் வரிவடிவத்தையும் இரண்டுசுழி <b>'ன்'</b> எழுத்தையும் உறுதிசெய்து எழுதவும்."
+        });
+      }
+
+      // C. சிறப்பு ழகரம் (ழ / ள / ல வேறுபாடு)
+      var zhaWords = tamilWords.filter(function(w) { return w.indexOf('ழ') !== -1; });
+      if (zhaWords.length > 0 && mistakes.length < 3) {
+        var wz = zhaWords[0];
+        var badWz = wz.replace(/ழ/g, 'ல');
+        mistakes.push({
+          type: "சிறப்பு ழகரப் பிழை (ழ / ள / ல மயங்கொலி வேறுபாடு)",
+          icon: "🔤",
+          deduction: "-½ Mark",
+          mistake: "இவ்விடையில் வரும் <b>" + wz + "</b> என்பதில் சிறப்பு ழகரமான 'ழ' போடுவதற்குப் பதிலாக தவறுதலாக 'ல' அல்லது 'ள' போட்டு <b>'" + badWz + "'</b> என மாற்றி எழுதுதல்.",
+          mistakeTa: "ழகரத்திற்குப் பதிலாக லகரம் இட்டால் சொல்லின் பொருளே முற்றிலும் மாறிவிடும்.",
+          correction: "'" + wz + "' என்பதில் உச்சரிப்பிற்குரிய சிறப்பு <b>'ழ'</b> எழுத்தை கவனமாக எழுதவும்."
+        });
+      }
+
+      // D. பொது ளகரம் (ள / ல வேறுபாடு)
+      var laWords = tamilWords.filter(function(w) { return w.indexOf('ள') !== -1 && zhaWords.indexOf(w) === -1; });
+      if (laWords.length > 0 && mistakes.length < 3) {
+        var wl = laWords[0];
+        var badWl = wl.replace(/ள/g, 'ல');
+        mistakes.push({
+          type: "மயங்கொலிப் பிழை (ள / ல வேறுபாடு)",
+          icon: "🔤",
+          deduction: "-½ Mark",
+          mistake: "இவ்விடையில் உள்ள <b>" + wl + "</b> என்பதில் பொது ளகரத்திற்கு ('ள') பதிலாக மேல்நோக்கு 'ல' போட்டு <b>'" + badWl + "'</b> என எழுதுதல்.",
+          mistakeTa: "எடுத்துக்காட்டாக 'வளம்' -> 'வலம்', 'இலை' -> 'இளை' என மயங்கொலிப் பிழை ஏற்படுதல்.",
+          correction: "'" + wl + "' என்பதில் சரியான <b>'ள'</b> எழுத்தை இட்டுப் பிழையின்றி எழுதவும்."
+        });
+      }
+
+      // E. வல்லின றகரம் vs இடையின ரகரம் (ர / ற வேறுபாடு)
+      var rraWords = tamilWords.filter(function(w) { return (w.indexOf('ற') !== -1 || w.indexOf('ற்று') !== -1 || w.indexOf('ற்ற') !== -1); });
+      if (rraWords.length > 0 && mistakes.length < 3) {
+        var wr = rraWords[0];
+        var badWr = wr.replace(/ற்று/g, 'த்து').replace(/ற/g, 'ர');
+        mistakes.push({
+          type: "மயங்கொலிப் பிழை (ர / ற வேறுபாடு)",
+          icon: "🔤",
+          deduction: "-½ Mark",
+          mistake: "இவ்விடையில் உள்ள <b>" + wr + "</b> என்பதில் வல்லின 'ற/ற்று' போடுவதற்குப் பதிலாக இடையின 'ர/ரு' போட்டு <b>'" + badWr + "'</b> என மாற்றி எழுதுதல்.",
+          mistakeTa: "எடுத்துக்காட்டாக 'பயிறு' -> 'பயிரு', 'நாற்று' -> 'நாத்து' என பேச்சு வழக்கு வடிவில் தவறாக எழுதுதல்.",
+          correction: "'" + wr + "' என்பதில் வல்லின <b>'ற'</b> எழுத்தைச் சரியாகப் பயன்படுத்தி எழுதவும்."
+        });
+      }
+
+      // F. சந்தி & ஒற்றெழுத்துப் பிழைகள் (க், ச், த், ப் மிகும் இடங்கள்)
+      var othruWords = tamilWords.filter(function(w) {
+        return (w.indexOf('க்க') !== -1 || w.indexOf('ச்ச') !== -1 || w.indexOf('த்த') !== -1 || w.indexOf('ப்ப') !== -1 || w.indexOf('ட்டை') !== -1 || w.indexOf('க்கை') !== -1);
       });
-      return mistakes;
+      if (othruWords.length > 0 && mistakes.length < 3) {
+        var wo = othruWords.slice(0, 2).join(', ');
+        mistakes.push({
+          type: "ஒற்றுப் பிழை (சந்தி & மெய்யெழுத்து மிகும் இடங்கள்)",
+          icon: "🔠",
+          deduction: "-½ Mark",
+          mistake: "இவ்விடையில் வரும் <b>" + wo + "</b> ஆகிய சொற்களில் நிலைமொழி-வருமொழி இணையும் போது வரும் ஒற்றெழுத்துக்களை (க், ச், த், ப்) விடுத்து எழுதுதல்.",
+          mistakeTa: "வல்லினம் மிகும் இடங்களில் ஒற்றெழுத்து விடுபட்டால் விடைத்தாளில் -½ மதிப்பெண் குறைக்கப்படும்.",
+          correction: "சந்தி விதிகளை நினைவில் கொண்டு <b>" + wo + "</b> ஆகிய சொற்களில் உரிய ஒற்றெழுத்துக்களுடன் முழுமையாக எழுதவும்."
+        });
+      }
+
+      // G. விடைக்குறிப்புச் சொல் விடுபாடு (Specific Core Keywords from THIS Answer)
+      var coreTerms = tamilWords.filter(function(w) { return w.length >= 4; }).slice(0, 3);
+      var coreStr = coreTerms.length > 0 ? coreTerms.map(function(t) { return '<b>' + t + '</b>'; }).join(', ') : '<b>முக்கியக் கருத்துச் சொற்கள்</b>';
+      mistakes.push({
+        type: "அரசு விடைக்குறிப்புச் சொல் விடுபாடு",
+        icon: "⚠️",
+        deduction: "-1 Mark",
+        mistake: "அரசுத் தேர்வு மதிப்பீட்டுக் குறிப்பில் உள்ள முதன்மைச் சொற்களான " + coreStr + " ஆகியவற்றை எழுதாமல், பொதுவான வரிகளை மட்டும் எழுதி முடித்து விடுதல்.",
+        mistakeTa: "வினா எண் இடாமல் விட்டாலோ அல்லது அரசு விடைக்குறிப்பில் உள்ள முக்கியச் சொற்களை விடுத்தாலோ முழு மதிப்பெண் கிடைக்காது.",
+        correction: "விடைத்தாளில் வினா எண்ணை எழுதி, " + coreStr + " ஆகிய முக்கிய விடைக்குறிப்புகளை அடிக்கோடிட்டுக் காட்டவும்."
+      });
+
+      return mistakes.slice(0, 3);
     }
 
-    // 2. ENGLISH SUBJECT
+    // -------------------------------------------------------------
+    // 2. ENGLISH DEEP LEXICAL ANALYZER
+    // -------------------------------------------------------------
     if (subId === 'english' || (item.id && item.id.startsWith('eng'))) {
-      var sampleWords = uniqueEngWords.slice(0, 3);
-      var wordsStr = sampleWords.length > 0 ? sampleWords.map(function(w) { return '<b>' + w + '</b>'; }).join(', ') : '<b>textbook keywords</b>';
-      
-      mistakes.push({
-        type: 'Spelling Mistakes (எழுத்துப் பிழைகள்)',
-        icon: '🔤',
-        deduction: '-½ Mark',
-        mistake: 'Misspelling essential vocabulary from this lesson: especially words like ' + wordsStr + '. Evaluators deduct marks for phonetic spelling slips.',
-        mistakeTa: 'முக்கியச் சொற்களின் எழுத்துக்களில் (spellings) பிழை ஏற்படுதல். அரசுத் தேர்வில் எழுத்துப் பிழைகளுக்கு -½ மதிப்பெண் குறைக்கப்படும்.',
-        correction: 'Carefully verify textbook spellings of key terms (' + wordsStr + ') before submitting your answer sheet.'
+      var mistakes = [];
+      var words = ansText.match(/[a-zA-Z]{4,}/g) || [];
+
+      // A. Tricky spellings in this answer: silent letters, double letters, diphthongs
+      var trickyWords = words.filter(function(w) {
+        var low = w.toLowerCase();
+        return (
+          low.indexOf('dg') !== -1 || low.indexOf('gh') !== -1 || low.indexOf('ph') !== -1 ||
+          low.indexOf('ei') !== -1 || low.indexOf('ie') !== -1 || low.indexOf('ea') !== -1 ||
+          low.indexOf('ou') !== -1 || low.indexOf('ll') !== -1 || low.indexOf('ss') !== -1 ||
+          low.indexOf('rr') !== -1 || low.indexOf('tt') !== -1 || low.indexOf('pp') !== -1 ||
+          low.indexOf('mm') !== -1 || low.indexOf('nn') !== -1 || low.indexOf('ance') !== -1 ||
+          low.indexOf('ence') !== -1 || low.indexOf('ight') !== -1
+        );
       });
-      mistakes.push({
-        type: 'Capital Letters & Punctuation (தலைப்பெழுத்து & நிறுத்தக்குறிகள்)',
-        icon: '🔠',
-        deduction: '-½ Mark',
-        mistake: 'Starting sentences with small letters, omitting apostrophes in contractions/possessives, or forgetting introductory clause commas and the final full stop (.).',
-        mistakeTa: 'வாக்கியத் தொடக்கத்தில் சிறிய எழுத்து (small letter) பயன்படுத்துதல் மற்றும் முற்றுப்புள்ளி (.), கமா (,) போன்ற நிறுத்தக்குறிகளை இடாமல் விடுதல்.',
-        correction: 'Every sentence must start with a capital letter, use correct commas for subordinate clauses, and terminate with a distinct full stop (.).'
+
+      var uniqueTricky = [];
+      trickyWords.forEach(function(w) {
+        var low = w.toLowerCase();
+        if (!uniqueTricky.some(function(u) { return u.toLowerCase() === low; })) {
+          uniqueTricky.push(w);
+        }
       });
-      mistakes.push({
-        type: 'Omission of Core Exam Key Points (விடைக்குறிப்பு விடுபாடு)',
-        icon: '⚠️',
-        deduction: '-1 Mark',
-        mistake: 'Writing casual conversational sentences while missing the official government answer key requirements for this question.',
-        mistakeTa: 'அரசுத் தேர்வு விடைக்குறிப்பில் எதிர்பார்க்கப்படும் மையக் கருத்துகளை (core points) விடுத்து, பொதுவான வாக்கியங்களை மட்டும் எழுதுதல்.',
-        correction: 'Ensure your answer directly addresses the core keywords and concepts specified in the model answer to secure full marks.'
+
+      if (uniqueTricky.length > 0) {
+        var targetWords = uniqueTricky.slice(0, 3);
+        var misspelledExamples = targetWords.map(function(tw) {
+          var low = tw.toLowerCase();
+          var miss = low;
+          if (miss.indexOf('dg') !== -1) miss = miss.replace('dg', 'g');
+          else if (miss.indexOf('gh') !== -1) miss = miss.replace('gh', 'g');
+          else if (miss.indexOf('ll') !== -1) miss = miss.replace('ll', 'l');
+          else if (miss.indexOf('ss') !== -1) miss = miss.replace('ss', 's');
+          else if (miss.indexOf('rr') !== -1) miss = miss.replace('rr', 'r');
+          else if (miss.indexOf('tt') !== -1) miss = miss.replace('tt', 't');
+          else if (miss.indexOf('pp') !== -1) miss = miss.replace('pp', 'p');
+          else if (miss.indexOf('ei') !== -1) miss = miss.replace('ei', 'ie');
+          else if (miss.indexOf('ie') !== -1) miss = miss.replace('ie', 'ei');
+          else if (miss.indexOf('ea') !== -1) miss = miss.replace('ea', 'ee');
+          return "'" + miss + "' instead of <b>'" + tw + "'</b>";
+        }).join(', ');
+
+        mistakes.push({
+          type: "Spelling Mistakes on Key Vocabulary (எழுத்துப் பிழைகள்)",
+          icon: "🔤",
+          deduction: "-½ Mark",
+          mistake: "Misspelling difficult textbook words from this answer: e.g. writing " + misspelledExamples + ".",
+          mistakeTa: "இவ்விடையில் உள்ள முக்கியச் சொற்களின் எழுத்துக்களில் (spellings) பிழை ஏற்படுதல்.",
+          correction: "Carefully verify and memorize the exact spellings of: " + targetWords.map(function(t) { return '<b>' + t + '</b>'; }).join(', ') + "."
+        });
+      }
+
+      // B. Proper Nouns & Capitalization
+      var properNouns = (ansText.match(/\b[A-Z][a-z]{3,}\b/g) || []).filter(function(w) {
+        var low = w.toLowerCase();
+        var commonStarts = ['the', 'when', 'this', 'that', 'they', 'with', 'from', 'then', 'after', 'before', 'there', 'because', 'first', 'these', 'those'];
+        return commonStarts.indexOf(low) === -1;
       });
-      return mistakes;
+      var uniqueProper = [];
+      properNouns.forEach(function(p) {
+        if (!uniqueProper.some(function(u) { return u.toLowerCase() === p.toLowerCase(); })) {
+          uniqueProper.push(p);
+        }
+      });
+
+      if (uniqueProper.length > 0) {
+        var pName = uniqueProper.slice(0, 2).join(' / ');
+        mistakes.push({
+          type: "Capital Letters & Proper Nouns (தலைப்பெழுத்துப் பிழை)",
+          icon: "🔠",
+          deduction: "-½ Mark",
+          mistake: "Starting character/proper names like <b>'" + pName + "'</b> with a lowercase letter (e.g. '" + pName.toLowerCase() + "') or omitting initial capital letter of sentences.",
+          mistakeTa: "கதை மாந்தர்கள் மற்றும் இடங்களின் பெயர்களை சிறிய எழுத்தில் (lowercase) தொடங்குதல்.",
+          correction: "Always capitalize proper nouns (<b>" + pName + "</b>) and the first letter of every sentence."
+        });
+      } else {
+        var firstWord = words[0] || 'The';
+        mistakes.push({
+          type: "Capital Letters & Punctuation (தலைப்பெழுத்து & நிறுத்தக்குறிகள்)",
+          icon: "🔠",
+          deduction: "-½ Mark",
+          mistake: "Starting the sentence with a lowercase letter ('" + firstWord.toLowerCase() + "...'), omitting clause commas, or missing the terminal full stop (.).",
+          mistakeTa: "வாக்கியத் தொடக்கத்தில் சிறிய எழுத்து பயன்படுத்துதல் மற்றும் முற்றுப்புள்ளி (.), கமா (,) இடாமல் விடுதல்.",
+          correction: "Always begin with a capital letter ('<b>" + firstWord + "</b>...'), use commas for subordinate clauses, and end with a full stop (.)."
+        });
+      }
+
+      // C. Core Textbook Key Points Omission
+      var keyPhrases = words.filter(function(w) {
+        var low = w.toLowerCase();
+        var stops = ['which', 'where', 'there', 'their', 'about', 'these', 'those', 'because', 'between', 'through', 'should', 'would', 'could', 'first', 'second', 'marks', 'answer', 'question'];
+        return stops.indexOf(low) === -1 && w.length >= 5;
+      }).slice(0, 3);
+      var keyStr = keyPhrases.length > 0 ? keyPhrases.map(function(k) { return '<b>' + k + '</b>'; }).join(', ') : '<b>textbook core terms</b>';
+      mistakes.push({
+        type: "Omission of Core Exam Key Points (விடைக்குறிப்பு விடுபாடு)",
+        icon: "⚠️",
+        deduction: "-1 Mark",
+        mistake: "Writing a brief vague sentence while omitting required government answer keys for this question: " + keyStr + ".",
+        mistakeTa: "அரசுத் தேர்வு விடைக்குறிப்பில் எதிர்பார்க்கப்படும் மையக் கருத்துகளை (" + keyStr + ") விடுத்து, பொதுவான வரிகளை மட்டும் எழுதுதல்.",
+        correction: "Both main points and mandatory vocabulary (" + keyStr + ") must be explicitly included to obtain full marks."
+      });
+
+      return mistakes.slice(0, 3);
     }
 
-    // 3. MATHS (EM & TM)
+    // -------------------------------------------------------------
+    // 3. MATHEMATICS DEEP CONCEPTUAL ANALYZER
+    // -------------------------------------------------------------
     if (subId.indexOf('math') !== -1 || (item.id && item.id.startsWith('mat'))) {
+      var mistakes = [];
+      var hasSets = ansText.indexOf('{') !== -1 || ansText.indexOf('times') !== -1 || ansText.indexOf('×') !== -1 || ansText.indexOf('Cartesian') !== -1 || ansText.indexOf('subset') !== -1;
+      var hasMatrix = ansText.indexOf('bmatrix') !== -1 || ansText.indexOf('pmatrix') !== -1 || ansText.indexOf('[') !== -1 || ansText.indexOf('matrix') !== -1 || ansText.indexOf('Matrix') !== -1;
+      var hasTrig = ansText.indexOf('sin') !== -1 || ansText.indexOf('cos') !== -1 || ansText.indexOf('tan') !== -1 || ansText.indexOf('theta') !== -1 || ansText.indexOf('θ') !== -1;
+      var hasUnits = ansText.indexOf('cm') !== -1 || ansText.indexOf('m^') !== -1 || ansText.indexOf('sq.') !== -1 || ansText.indexOf('units') !== -1 || ansText.indexOf('செ.மீ') !== -1;
+
+      if (hasSets) {
+        mistakes.push({
+          type: isEm ? "Ordered Pairs vs Set Brackets Confusion" : "வரிசைச் சோடிகள் & கணக்குறியீட்டுக் குழப்பம்",
+          icon: "📐",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Writing ordered pairs as sets like {a, b} instead of ordered pairs (a, b), or swapping coordinate positions."
+            : "வரிசைச் சோடிகளை (a, b) என அடைப்புக் குறிக்குள் எழுதாமல் கணக்குறியீடான {a, b} என எழுதுதல் அல்லது உறுப்புகளின் வரிசையை மாற்றி எழுதுதல்.",
+          correction: isEm
+            ? "Elements of Cartesian product must be enclosed in parentheses (x, y) and the entire collection wrapped in curly braces { }."
+            : "கார்ட்டீசியன் பெருக்கலின் உறுப்புகளை அடைப்புக் குறி (x, y) இட்டு, முழு கணத்தையும் கண அடைப்புக்குறிக்குள் { } எழுதவும்."
+        });
+      } else if (hasMatrix) {
+        mistakes.push({
+          type: isEm ? "Matrix Row-by-Column Multiplication Slips" : "அணிகள் பெருக்கல் படிநிலைத் தவறுகள்",
+          icon: "📐",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Confusing row-by-column multiplication order or failing to verify if number of columns in A equals number of rows in B."
+            : "நிரை-நிரல் பெருக்கல் வரிசையை மாற்றிப் பெருக்குதல் அல்லது அணிகளின் வரிசை (Order) பொருந்தாத போது பெருக்குதல்.",
+          correction: isEm
+            ? "Always multiply the first row by the first column systematically and write intermediate calculation terms."
+            : "முதல் அணியின் நிரையைக் கொண்டு இரண்டாவது அணியின் நிரலைப் பெருக்கிப் படிநிலைகளைத் தெளிவாகக் காட்டவும்."
+        });
+      } else if (hasTrig) {
+        mistakes.push({
+          type: isEm ? "Trigonometric Ratio & Identity Slips" : "முக்கோணவியல் விகிதங்கள் & முற்றொருமைத் தவறுகள்",
+          icon: "📐",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Confusing complementary identities (e.g. sin(90-θ) = cos θ) or writing tan θ as adjacent/opposite instead of opposite/adjacent."
+            : "முக்கோணவியல் முற்றொருமைகளைத் தவறாகப் பயன்படுத்துதல் அல்லது tan θ = எதிர்பக்கம் / அடுத்துள்ள பக்கம் என்பதை மாற்றி எழுதுதல்.",
+          correction: isEm
+            ? "Verify the trigonometric identity and check values against the standard angle table before simplifying."
+            : "முக்கோணவியல் அட்டவணை மதிப்புகளையும் சூத்திரங்களையும் கவனமாகப் பிரதியிட்டுத் தீர்க்கவும்."
+        });
+      } else {
+        mistakes.push({
+          type: isEm ? "Sign Errors (+ / -) in Algebraic Transposition" : "இயற்கணிதக் குறியீட்டுப் பிழைகள் (+ / -)",
+          icon: "➕",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Careless sign flips when transposing terms across '=' or expanding negative brackets (e.g. writing -(a - b) as -a - b instead of -a + b)."
+            : "சமன்பாட்டின் ஒரு பக்கத்திலிருந்து மற்றொரு பக்கத்திற்கு மாற்றும்போது (+ / -) குறியீடுகளை மாற்றாமல் தவறுதலாக எழுதுதல்.",
+          correction: isEm
+            ? "Re-check every sign (+ and -) carefully during expansion, transposition, and substitution."
+            : "ஒவ்வொரு படிநிலையிலும் கூட்டல், கழித்தல் மற்றும் பெருக்கல் குறியீடுகளைக் கவனமாகச் சரிபார்க்கவும்."
+        });
+      }
+
+      // Step & Formula
       mistakes.push({
-        type: isEm ? 'Sign Errors & Algebraic Slips (+ / -)' : 'குறியீட்டுப் பிழைகள் (+ / -) & இயற்கணித தவறுகள்',
-        icon: '➕',
-        deduction: '-1 Mark',
-        mistake: isEm 
-          ? 'Careless sign slips when transposing terms across "=" or multiplying negative numbers (e.g., writing -(-) as - instead of +).' 
-          : 'சமன்பாட்டின் ஒரு பக்கத்திலிருந்து மற்றொரு பக்கத்திற்கு மாற்றும்போது அல்லது குறிகளைப் பெருக்கும்போது (+ / -) கவனக்குறைவாகக் குறியீட்டை மாற்றி எழுதுதல்.',
-        mistakeTa: isEm ? '' : 'குறியீட்டுப் பிழை ஏற்பட்டால் முழுத் தீர்வும் தவறாகி 1 முதல் 2 மதிப்பெண்கள் வரை இழக்க நேரிடும்.',
-        correction: isEm
-          ? 'Always re-check every sign (+ and -) carefully during substitution, expansion, and transposition.'
-          : 'ஒவ்வொரு படிநிலையிலும் கூட்டல், கழித்தல் மற்றும் பெருக்கல் குறியீடுகளைக் கவனமாகச் சரிபார்க்கவும்.'
-      });
-      mistakes.push({
-        type: isEm ? 'Formula Omission & Step Skipping' : 'சூத்திரம் (Formula) & படிநிலைகளை விடுதல்',
-        icon: '📐',
-        deduction: '-½ Mark',
+        type: isEm ? "Formula Omission & Step Skipping" : "சூத்திரம் (Formula) & படிநிலைகளை விடுதல்",
+        icon: "📝",
+        deduction: "-½ Mark",
         mistake: isEm
-          ? 'Jumping straight to the final numerical answer without stating the governing formula and standard intermediate steps.'
-          : 'சூத்திரத்தை (Formula) எழுதாமல் நேரடியாக விடையை மட்டும் எழுதுதல் அல்லது இடைப்பட்ட கணக்கீட்டுப் படிகளைத் தவிர்த்தல்.',
-        mistakeTa: isEm ? '' : 'அரசு விடைக்குறிப்பில் சூத்திரத்திற்கும் ஒவ்வொரு படிநிலைக்கும் தனித்தனியாக மதிப்பெண் ஒதுக்கப்பட்டுள்ளது.',
+          ? "Jumping directly to the final value without explicitly stating the governing formula and standard substitution steps."
+          : "சூத்திரத்தை (Formula) எழுதாமல் நேரடியாக விடையை மட்டும் எழுதுதல் அல்லது இடைப்பட்ட கணக்கீட்டுப் படிகளைத் தவிர்த்தல்.",
         correction: isEm
-          ? 'Always write the general formula first in a neat box, substitute given values systematically, and show all simplification steps.'
-          : 'முதலில் சூத்திரத்தை எழுதி கட்டம் இடவும், பின்னர் மதிப்புகளைப் பிரதியிட்டுப் படிநிலைகளைத் தெளிவாகக் காட்டவும்.'
+          ? "Always write the governing formula first in a neat box, substitute values, and show simplification steps."
+          : "முதலில் சூத்திரத்தை எழுதி கட்டம் இடவும், பின்னர் மதிப்புகளைப் பிரதியிட்டுப் படிநிலைகளைத் தெளிவாகக் காட்டவும்."
       });
+
+      // Units or Boxed Answer
       mistakes.push({
-        type: isEm ? 'Missing Units & Final Answer Highlighting' : 'அலகுகள் (Units) விடுபாடு & இறுதி விடை குறிப்பு',
-        icon: '⚠️',
-        deduction: '-½ Mark',
+        type: isEm ? (hasUnits ? "Missing or Incorrect Units (cm², m³, units)" : "Final Answer Highlighting & Conclusion") : (hasUnits ? "அலகுகள் (Units) விடுபாடு" : "இறுதி விடை கட்டமிடுதல் & விடைக்குறிப்பு"),
+        icon: "⚠️",
+        deduction: "-½ Mark",
         mistake: isEm
-          ? 'Forgetting to append appropriate units (e.g., cm², m³, km/h, units) to the final answer or omitting the concluding statement.'
-          : 'இறுதி விடையின் முடிவில் அலகுகளை (எ.கா: செ.மீ², மீ³, அலகுகள்) குறிப்பிடாமல் விடுதல் அல்லது விடையைத் தனியாக எடுத்துக் காட்டாமல் விடுதல்.',
-        mistakeTa: isEm ? '' : 'அலகுகள் விடுபட்டால் அரசுத் தேர்வில் -½ மதிப்பெண் குறைக்கப்படும்.',
+          ? (hasUnits ? "Forgetting to write the appropriate unit (e.g. cm², m³, km/h, units) at the end of the final numerical answer." : "Failing to write the concluding answer statement or leaving the final answer unhighlighted.")
+          : (hasUnits ? "கணக்கீட்டின் முடிவில் இறுதி விடையுடன் அலகுகளைக் (செ.மீ², மீ³, அலகுகள்) குறிப்பிடாமல் விடுதல்." : "இறுதி விடையைத் தனியாக எடுத்துக் காட்டாமல் அல்லது கட்டமிடாமல் விடுதல்."),
         correction: isEm
-          ? 'Always write the correct unit with the final numerical value and enclose the final answer in a neat rectangular box.'
-          : 'இறுதி விடையைச் சரியான அலகுகளுடன் எழுதி கட்டமிட்டுக் காட்டவும்.'
+          ? "Enclose the final answer along with its correct unit in a neat rectangular box."
+          : "இறுதி விடையைச் சரியான அலகுகளுடன் எழுதி கட்டமிட்டுக் காட்டவும்."
       });
-      return mistakes;
+
+      return mistakes.slice(0, 3);
     }
 
-    // 4. SCIENCE (EM & TM)
+    // -------------------------------------------------------------
+    // 4. SCIENCE DEEP CONCEPTUAL ANALYZER
+    // -------------------------------------------------------------
     if (subId.indexOf('science') !== -1 || (item.id && item.id.startsWith('sci'))) {
-      var hasEquation = cleanText.indexOf('=') !== -1 || cleanText.indexOf('->') !== -1 || cleanText.indexOf('→') !== -1;
+      var mistakes = [];
+      var hasUnits = ansText.indexOf(' N') !== -1 || ansText.indexOf(' J') !== -1 || ansText.indexOf(' W') !== -1 || ansText.indexOf(' Ω') !== -1 || ansText.indexOf('m/s') !== -1 || ansText.indexOf('kg') !== -1;
+      var hasFormula = ansText.indexOf('=') !== -1 || ansText.indexOf('->') !== -1 || ansText.indexOf('→') !== -1 || ansText.indexOf('H2') !== -1 || ansText.indexOf('CO2') !== -1 || ansText.indexOf('NaCl') !== -1;
+      var sciWords = ansText.match(/[a-zA-Z]{5,}/g) || [];
+
+      if (hasUnits) {
+        mistakes.push({
+          type: isEm ? "Missing or Incorrect SI Units" : "SI அலகுகள் & குறியீடுகள் விடுபாடு",
+          icon: "🔬",
+          deduction: "-½ Mark",
+          mistake: isEm
+            ? "Omitting the standard SI unit in the calculated answer or writing non-standard lowercase symbols (e.g. writing 'n' instead of 'N', 'w' instead of 'W')."
+            : "கணக்கீடுகள் மற்றும் விடையின் முடிவில் SI அலகுகளைக் (N, J, W, Ω, m/s²) குறிப்பிடாமல் விடுதல்.",
+          correction: isEm
+            ? "Every numerical science answer must state the exact standard SI unit explicitly."
+            : "அனைத்து அறிவியல் கணக்கீட்டு விடைகளுக்கும் சரியான SI அலகை மறக்காமல் எழுதவும்."
+        });
+      } else if (hasFormula) {
+        mistakes.push({
+          type: isEm ? "Unbalanced Chemical Equation / State Symbols" : "வேதிச் சமன்பாட்டுப் பிழை & சமன் செய்யாமை",
+          icon: "🧪",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Writing unbalanced chemical equations, omitting physical state symbols ((s), (l), (g), (aq)), or missing reaction arrows."
+            : "வேதியியல் சமன்பாடுகளைச் சமன் செய்யாமல் எழுதுதல் அல்லது வினைபடு மற்றும் வினைவிளை பொருட்களின் நிலைகளைக் குறிக்காமல் விடுதல்.",
+          correction: isEm
+            ? "Balance both reactant and product atoms and indicate physical states / catalysts clearly."
+            : "வேதிச் சமன்பாடுகளை முழுமையாகச் சமன்செய்து, வினையின் நிபந்தனைகளைத் தெளிவாக எழுதவும்."
+        });
+      }
+
+      var techTerms = sciWords.slice(0, 3);
+      var techStr = techTerms.length > 0 ? techTerms.map(function(t) { return '<b>' + t + '</b>'; }).join(', ') : '<b>scientific keywords</b>';
       mistakes.push({
-        type: isEm ? 'Missing SI Units & Standard Symbols' : 'SI அலகுகள் & குறியீடுகள் விடுபாடு',
-        icon: '🔬',
-        deduction: '-½ Mark',
+        type: isEm ? "Scientific Terminology & Spelling Slips" : "அறிவியல் கலைச்சொற்கள் & எழுத்துப் பிழைகள்",
+        icon: "🔤",
+        deduction: "-½ Mark",
         mistake: isEm
-          ? 'Forgetting to specify the standard SI unit (e.g., N, J, W, Ω, m/s², kg) in final numerical answers or using lowercase/uppercase symbols incorrectly.'
-          : 'கணக்கீடுகள் மற்றும் வரையறைகளில் SI அலகுகளைக் (N, J, W, Ω, m/s²) குறிப்பிடாமல் விடுதல் அல்லது தவறான குறியீடுகளைப் பயன்படுத்துதல்.',
-        mistakeTa: isEm ? '' : 'அறிவியல் விடைகளில் அலகுகள் விடுபட்டால் -½ மதிப்பெண் கட்டாயம் கழிக்கப்படும்.',
+          ? "Misspelling scientific technical terminology from this answer: especially terms like " + techStr + "."
+          : "இவ்விடையில் உள்ள முக்கிய அறிவியல் கலைச்சொற்களை (" + techStr + ") எழுத்துப் பிழையுடன் எழுதுதல்.",
         correction: isEm
-          ? 'Every physical quantity and calculated answer must have its correct SI unit explicitly written.'
-          : 'அனைத்து அறிவியல் அளவுகளுக்கும் கணக்கீட்டு விடைகளுக்கும் சரியான SI அலகை மறக்காமல் எழுதவும்.'
+          ? "Memorize the exact textbook spellings of key scientific terms: " + techStr + "."
+          : "அறிவியல் கலைச்சொற்களைப் பாடநூலில் உள்ளவாறு சரியான எழுத்துக்கூட்டுடன் எழுதிப் பழகவும்."
       });
+
       mistakes.push({
-        type: isEm ? (hasEquation ? 'Unbalanced Chemical Equation / Law Statement' : 'Scientific Terminology & Spellings') : 'அறிவியல் கலைச்சொற்கள் & சமன்பாட்டுப் பிழைகள்',
-        icon: '🧪',
-        deduction: hasEquation ? '-1 Mark' : '-½ Mark',
+        type: isEm ? "Diagram Labeling & Key Points Omission" : "படத்தின் பாகங்கள் குறித்தல் & விடைக்குறிப்பு விடுபாடு",
+        icon: "⚠️",
+        deduction: "-1 Mark",
         mistake: isEm
-          ? (hasEquation ? 'Writing unbalanced chemical equations, omitting reaction conditions (heat, catalyst), or missing directional gas/precipitate arrows (↑, ↓).' : 'Misspelling biological technical terms, organ names, chemical compound names, or physical laws.')
-          : 'வேதியியல் சமன்பாடுகளைச் சமன் செய்யாமல் எழுதுதல் அல்லது தாவரவியல், விலங்கியல் கலைச்சொற்களை எழுத்துப் பிழையுடன் எழுதுதல்.',
-        mistakeTa: isEm ? '' : 'அறிவியல் கலைச்சொற்கள் மற்றும் சமன்பாடுகள் பிழையின்றி இருக்க வேண்டும்.',
+          ? "Drawing rough sketches without ruler-guided labeling on the right-hand side, or omitting mandatory law statements / principles."
+          : "அறிவியல் படங்களை வரையும்போது பாகங்களைக் குறிக்காமல் விடுதல் அல்லது அரசு விடைக்குறிப்பிலுள்ள முதன்மை விதிகளை எழுதாமல் விடுதல்.",
         correction: isEm
-          ? (hasEquation ? 'Always balance both reactant and product atoms and state physical states / conditions clearly.' : 'Review and memorize the exact scientific spelling of technical terms from the textbook.')
-          : 'வேதிச் சமன்பாடுகளை முழுமையாகச் சமன்செய்து, கலைச்சொற்களைச் சரியான எழுத்துக்கூட்டுடன் எழுதவும்.'
+          ? "Draw neat pencil diagrams with right-aligned labels and write answers in structured bullet points."
+          : "படங்களை பென்சிலால் நேர்த்தியாக வரைந்து, பாகங்களை வலப்பக்கமாகக் குறித்து, விடைகளைக் குறிப்புப் புள்ளிகளாக எழுதவும்."
       });
-      mistakes.push({
-        type: isEm ? 'Diagram Labeling & Key Point Omission' : 'படத்தின் பாகங்கள் குறித்தல் & முக்கியக் குறிப்புகள் விடுபாடு',
-        icon: '⚠️',
-        deduction: '-1 Mark',
-        mistake: isEm
-          ? 'Drawing rough diagrams without proper pencil shading or omitting mandatory labels, or writing general essays without state board key points.'
-          : 'அறிவியல் படங்களை வரையும்போது பாகங்களைக் குறிக்காமல் விடுதல் அல்லது அரசு விடைக்குறிப்பிலுள்ள முதன்மைப் புள்ளிகளை எழுதாமல் விடுதல்.',
-        mistakeTa: isEm ? '' : 'படம் வரைந்து பாகங்களைக் குறிக்காவிட்டால் 1 மதிப்பெண் வரை குறைக்கப்படும்.',
-        correction: isEm
-          ? 'Always draw neat diagrams using pencil, label all parts on the right-hand side using a ruler, and write bulleted key points.'
-          : 'படங்களை பென்சிலால் நேர்த்தியாக வரைந்து, பாகங்களை வலப்பக்கமாகக் குறித்து, விடைகளைக் குறிப்புப் புள்ளிகளாக எழுதவும்.'
-      });
-      return mistakes;
+
+      return mistakes.slice(0, 3);
     }
 
-    // 5. SOCIAL SCIENCE (EM & TM)
+    // -------------------------------------------------------------
+    // 5. SOCIAL SCIENCE DEEP HISTORICAL & GEOGRAPHICAL ANALYZER
+    // -------------------------------------------------------------
     if (subId.indexOf('social') !== -1 || (item.id && item.id.startsWith('soc'))) {
+      var mistakes = [];
       var isMap = (item.id && item.id.indexOf('map') !== -1) || (item.mark && (item.mark.indexOf('Map') !== -1 || item.mark.indexOf('வரைபடம்') !== -1));
+
       if (isMap) {
         mistakes.push({
-          type: isEm ? 'Imprecise Location Pinning' : 'வரைபடத்தில் தவறான இடத்தில் குறித்தல்',
-          icon: '📍',
-          deduction: '-1 Mark',
+          type: isEm ? "Imprecise Geographic Location Pinning" : "வரைபடத்தில் தவறான இடத்தில் குறித்தல்",
+          icon: "📍",
+          deduction: "-1 Mark",
           mistake: isEm
-            ? 'Marking a city, mountain peak, or port far from its actual geographic coordinate on the outline map.'
-            : 'மலைகள், ஆறுகள், துறைமுகங்கள் மற்றும் வரலாற்று இடங்களை வரைபடத்தில் தவறான அல்லது துல்லியமற்ற இடத்தில் குறித்தல்.',
-          mistakeTa: isEm ? '' : 'வரைபடத்தில் இடத்தின் துல்லியம் மிக முக்கியம்; தள்ளிக்குறித்தால் மதிப்பெண் வழங்கப்படாது.',
+            ? "Marking mountain ranges, ports, or historical places off their true coordinates on the outline map."
+            : "மலைகள், ஆறுகள், துறைமுகங்கள் மற்றும் வரலாற்று இடங்களை வரைபடத்தில் தவறான அல்லது துல்லியமற்ற இடத்தில் குறித்தல்.",
           correction: isEm
-            ? 'Use coastline bends, latitude references, and state borders to pinpoint the exact location with a neat dot (•).'
-            : 'கடற்கரை வளைவுகள் மற்றும் மாநில எல்லைகளை அடிப்படையாகக் கொண்டு சரியான இடத்தில் புள்ளியிட்டு (•) குறிக்கவும்.'
+            ? "Use coastline indentations and state boundaries as reference points to pinpoint locations accurately."
+            : "கடற்கரை வளைவுகள் மற்றும் மாநில எல்லைகளை அடிப்படையாகக் கொண்டு சரியான இடத்தில் புள்ளியிட்டு (•) குறிக்கவும்."
         });
         mistakes.push({
-          type: isEm ? 'Missing Name Labels & Legend' : 'பெயர் & குறியீடுகள் (Legend) விடுபாடு',
-          icon: '🗺️',
-          deduction: '-½ Mark',
+          type: isEm ? "Missing Place Name Labels & Legend" : "பெயர் & குறியீடுகள் (Legend) விடுபாடு",
+          icon: "🗺️",
+          deduction: "-½ Mark",
           mistake: isEm
-            ? 'Marking the symbol on the map but forgetting to write the name of the place in neat capital letters or omitting arrow pointers.'
-            : 'வரைபடத்தில் இடத்தைக் குறித்துவிட்டு அதன் பெயரைத் தெளிவாக எழுதாமல் விடுதல்.',
-          mistakeTa: isEm ? '' : 'பெயர் எழுதப்படாவிட்டால் மதிப்பீட்டாளர் மதிப்பெண் வழங்க முடியாது.',
+            ? "Marking the symbol on the map but forgetting to write the name of the place in neat capital letters."
+            : "வரைபடத்தில் இடத்தைக் குறித்துவிட்டு அதன் பெயரைத் தெளிவாக எழுதாமல் விடுதல்.",
           correction: isEm
-            ? 'Always write the place name legibly beside the marked point or draw an arrow to write in clear print.'
-            : 'குறித்த இடத்தின் அருகில் அல்லது அம்புக்குறி வரைந்து அந்த இடத்தின் பெயரைத் தெளிவாக எழுதவும்.'
+            ? "Always write the place name legibly in capital letters beside the marked point or with an arrow pointer."
+            : "குறித்த இடத்தின் அருகில் அல்லது அம்புக்குறி வரைந்து அந்த இடத்தின் பெயரைத் தெளிவாக எழுதவும்."
         });
         return mistakes;
       }
 
+      var years = ansText.match(/\b(1[789][0-9]{2}|20[0-2][0-9])\b/g) || [];
+      var uniqueYears = [];
+      years.forEach(function(y) { if (uniqueYears.indexOf(y) === -1) uniqueYears.push(y); });
+
+      if (uniqueYears.length > 0) {
+        var yStr = uniqueYears.slice(0, 2).join(', ');
+        mistakes.push({
+          type: isEm ? "Historical Year & Timeline Confusion" : "வரலாற்று ஆண்டுகள் & காலக்கோடு குழப்பம்",
+          icon: "📅",
+          deduction: "-1 Mark",
+          mistake: isEm
+            ? "Confusing chronological years from this answer: e.g. writing wrong years instead of <b>" + yStr + "</b> for key treaties/acts/events."
+            : "இவ்விடையில் உள்ள முக்கிய வரலாற்று ஆண்டுகளை (<b>" + yStr + "</b>) மாற்றி எழுதுதல் அல்லது காலக்கோடு நிகழ்வுகளைக் குழப்புதல்.",
+          correction: isEm
+            ? "Double check historical timelines and memorize exact years: <b>" + yStr + "</b>."
+            : "வரலாற்று நிகழ்வுகளின் ஆண்டுகளைக் (<b>" + yStr + "</b>) காலக்கோடு முறையில் நினைவில் வைத்துச் சரியான ஆண்டை எழுதவும்."
+        });
+      }
+
+      var socWords = ansText.match(/[a-zA-Z]{5,}/g) || [];
+      var socTerms = socWords.slice(0, 3);
+      var socStr = socTerms.length > 0 ? socTerms.map(function(s) { return '<b>' + s + '</b>'; }).join(', ') : '<b>textbook keywords</b>';
       mistakes.push({
-        type: isEm ? 'Historical Year & Event Confusion' : 'வரலாற்று ஆண்டுகள் & நிகழ்வுகள் குழப்பம்',
-        icon: '📅',
-        deduction: '-1 Mark',
+        type: isEm ? "Geographical / Historical Terminology Omission" : "பாடநூல் கலைச்சொற்கள் விடுபாடு",
+        icon: "🌍",
+        deduction: "-½ Mark",
         mistake: isEm
-          ? 'Writing wrong years for treaties, battles, constitutional amendments, or acts (e.g., confusing 1919 with 1920).'
-          : 'வரலாற்றுப் போர்கள், உடன்படிக்கைகள், மாநாடுகள் மற்றும் சட்டங்கள் இயற்றப்பட்ட ஆண்டுகளைத் தவறாகக் குறிப்பிடுதல்.',
-        mistakeTa: isEm ? '' : 'வரலாற்றில் ஆண்டுகள் விடைக்குறிப்பின் முக்கிய மதிப்பீட்டு காரணியாகும்; தவறான ஆண்டுக்கு மதிப்பெண் இழக்க நேரிடும்.',
+          ? "Writing colloquial descriptions while omitting essential textbook terms: " + socStr + "."
+          : "அரசுத் தேர்வில் கேட்கப்படும் துறை சார்ந்த முதன்மைச் சொற்களான " + socStr + " ஆகியவற்றை எழுதாமல் பொதுவான வரிகளை எழுதுதல்.",
         correction: isEm
-          ? 'Double check chronological timelines; if you are unsure of the exact month/day, ensure at least the correct year is written accurately.'
-          : 'வரலாற்று நிகழ்வுகளின் ஆண்டுகளைக் காலக்கோடு முறையில் நினைவில் வைத்துச் சரியான ஆண்டை எழுதவும்.'
+          ? "Include precise textbook vocabulary (" + socStr + ") and cause-and-effect factors in your answers."
+          : "பாடநூலிலுள்ள முக்கியக் கலைச்சொற்களையும் (" + socStr + ") காரண-காரியங்களையும் தெளிவாக எடுத்துரைக்கவும்."
       });
+
       mistakes.push({
-        type: isEm ? 'Geographical Terminology & Factor Omission' : 'புவியியல் கலைச்சொற்கள் & காரணிகள் விடுபாடு',
-        icon: '🌍',
-        deduction: '-½ Mark',
+        type: isEm ? "Unstructured Paragraph Writing & Headings" : "பத்தி அமைப்பின்றி எழுதுதல் & உட்தலைப்புகள் விடுபாடு",
+        icon: "📝",
+        deduction: "-½ Mark",
         mistake: isEm
-          ? 'Missing core geographic terms like "leeward side", "alluvial deposit", "black soil", "monsoon trough", or writing generic non-geographical descriptions.'
-          : 'புவியியல் காரணங்களை எழுதும்போது "வண்டல் மண்", "மழை மறைவுப் பிரதேசம்", "பருவக்காற்று" போன்ற கலைச்சொற்களை எழுதாமல் விடுதல்.',
-        mistakeTa: isEm ? '' : 'புவியியல் விடைகளில் துறை சார்ந்த கலைச்சொற்களுக்கு முதன்மை மதிப்பெண் உண்டு.',
+          ? "Writing continuous long paragraphs without numbered bullet points, underlined keywords, or subheadings."
+          : "முக்கிய வினாக்களுக்கு உட்தலைப்புகள் (Sub-headings) மற்றும் குறிப்புப் புள்ளிகள் (Bullet points) இல்லாமல் ஒரே பத்தியாக எழுதுதல்.",
         correction: isEm
-          ? 'Include precise textbook geographical vocabulary and cause-and-effect reasons in your explanation.'
-          : 'பாடநூலிலுள்ள புவியியல் கலைச்சொற்களையும் காரண-காரியங்களையும் தெளிவாக எடுத்துரைக்கவும்.'
+          ? "Structure answers with bold sub-headings, numbered points, and underline core keywords for examiner clarity."
+          : "வினாக்களுக்கு பொருத்தமான உட்தலைப்புகள் கொடுத்து, முக்கியச் சொற்களை அடிக்கோடிட்டுக் குறிப்புப் புள்ளிகளாக எழுதவும்."
       });
-      mistakes.push({
-        type: isEm ? 'Unstructured Paragraph Writing' : 'பத்தி அமைப்பின்றி எழுதுதல் & தலைப்புகள் விடுபாடு',
-        icon: '📝',
-        deduction: '-½ Mark',
-        mistake: isEm
-          ? 'Writing continuous unstructured prose blocks without bullet points, sub-headings, or structured numbering.'
-          : 'முக்கிய வினாக்களுக்கு உட்தலைப்புகள் (Sub-headings) மற்றும் குறிப்புப் புள்ளிகள் (Bullet points) இல்லாமல் ஒரே பத்தியாக எழுதுதல்.',
-        mistakeTa: isEm ? '' : 'அரசுத் தேர்வில் குறிப்புப் புள்ளிகளுடன் எழுதப்படும் விடைகளுக்கே முழு மதிப்பெண் வழங்கப்படுகிறது.',
-        correction: isEm
-          ? 'Present 2-mark and 5-mark answers using clear numbered points, underlined keywords, and neat sub-headings.'
-          : 'வினாக்களுக்கு பொருத்தமான உட்தலைப்புகள் கொடுத்து, முக்கியச் சொற்களை அடிக்கோடிட்டுக் குறிப்புப் புள்ளிகளாக எழுதவும்.'
-      });
-      return mistakes;
+
+      return mistakes.slice(0, 3);
     }
 
-    // Default fallback for any other non-1m
-    mistakes.push({
-      type: isEm ? 'Spelling Mistakes & Key Vocabulary' : 'எழுத்துப் பிழைகள் & முக்கியச் சொற்கள்',
-      icon: '🔤',
-      deduction: '-½ Mark',
-      mistake: isEm
-        ? 'Careless spelling errors in key textbook terms and proper nouns.'
-        : 'விடையில் உள்ள முதன்மைச் சொற்களை எழுத்துப் பிழையுடன் எழுதுதல்.',
-      correction: isEm
-        ? 'Verify spellings of core keywords and proper nouns.'
-        : 'முக்கியச் சொற்களைப் பிழையின்றி எழுதவும்.'
-    });
-    mistakes.push({
-      type: isEm ? 'Capital Letters & Punctuation' : 'தலைப்பெழுத்து & நிறுத்தக்குறிகள்',
-      icon: '🔠',
-      deduction: '-½ Mark',
-      mistake: isEm
-        ? 'Starting sentences with small letters or omitting punctuation marks.'
-        : 'வாக்கியத் தொடக்கத்தில் சிறிய எழுத்து மற்றும் நிறுத்தக்குறிகளைத் தவிர்த்தல்.',
-      correction: isEm
-        ? 'Begin with capital letters and punctuate every sentence properly.'
-        : 'வாக்கியத்தை பெரிய எழுத்தில் தொடங்கி நிறுத்தக்குறிகளைச் சரியாக இடவும்.'
-    });
-    mistakes.push({
-      type: isEm ? 'Omission of Core Exam Key Points' : 'அரசு விடைக்குறிப்பு விடுபாடு',
-      icon: '⚠️',
-      deduction: '-1 Mark',
-      mistake: isEm
-        ? 'Omitting mandatory keywords and concepts specified in the government answer key.'
-        : 'அரசுத் தேர்வு விடைக்குறிப்பில் உள்ள முதன்மைக் கருத்துகளை எழுதாமல் விடுதல்.',
-      correction: isEm
-        ? 'Ensure all core points specified in the textbook model answer are included.'
-        : 'அரசு விடைக்குறிப்பில் உள்ள முக்கியக் கருத்துகளை முழுமையாக எழுதவும்.'
-    });
-    return mistakes;
+    return null;
   }
   window.generateCommonMistakesForItem = generateCommonMistakesForItem;
 
@@ -12914,7 +13112,7 @@
     window.addEventListener('load', () => {
       // Delay SW registration slightly so initial app boot is 100% finished in <50ms
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261118_v91')
+        navigator.serviceWorker.register('./sw.js?v=20261118_v92')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

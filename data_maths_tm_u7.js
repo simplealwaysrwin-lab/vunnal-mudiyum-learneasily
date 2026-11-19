@@ -1,4 +1,4 @@
-// 10-ஆம் வகுப்பு கணிதம் - அலகு 7: அளவியல் (Mensuration)
+﻿// 10-ஆம் வகுப்பு கணிதம் - அலகு 7: அளவியல் (Mensuration)
 // தமிழ்நாடு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const MATHS_TM_UNIT_7_DATA = {
@@ -430,22 +430,140 @@ const MATHS_TM_UNIT_7_DATA = {
         },
         {
           id: "m_tm_7_3_2",
+          videoUrl: "https://youtu.be/vVKlLCox73o",
           type: "5m",
           mark: "5 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு சிறப்பு",
+          examTag: "அரசுத் தேர்வு வினா (எடுத்துக்காட்டு 7.29)",
           isImportant: true,
           q: "16 செ.மீ ஆரமுள்ள ஒரு திண்ம உலோகக் கோளமானது உருக்கப்பட்டு, 2 செ.மீ ஆரமுள்ள சிறு திண்மக் கோளங்களாக மாற்றப்பட்டால் எத்தனை சிறிய கோளங்கள் கிடைக்கும்?",
-          ans: `<div style="line-height:1.8;">
-            <b>கொடுக்கப்பட்டது:</b><br>
-            பெரிய கோளத்தின் ஆரம் R = 16 செ.மீ.<br>
-            சிறிய கோளத்தின் ஆரம் r = 2 செ.மீ.<br><br>
-            <b>சூத்திரம்:</b><br>
-            சிறிய கோளங்களின் எண்ணிக்கை (n) = (பெரிய கோளத்தின் கனஅளவு) / (ஒரு சிறிய கோளத்தின் கனஅளவு)<br>
-            n = [(4/3)πR³] / [(4/3)πr³] = R³ / r³ = (R / r)³<br><br>
-            <b>கணக்கீடு:</b><br>
-            n = (16 / 2)³ = 8³ = <b>512</b>.<br>
-            <b>விடை:</b> <b>512</b> சிறிய கோளங்கள் கிடைக்கும்.
-          </div>`
+          diagramCaption: "திண்ம உலோகக் கோளத்தின் உருமாற்றம்: பெரிய கோளம் (R = 16 செ.மீ) உருக்கப்பட்டு 512 சிறிய கோளங்களாக (r = 2 செ.மீ) மாற்றப்படுகிறது.",
+          diagramSvg: `<div style="max-width:340px; margin:12px auto; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); text-align:center;">
+            <div style="font-size:12px; font-weight:700; color:#1e3a8a; margin-bottom:8px;">🔥 திண்மக் கோள உருமாற்றம் (Melting &amp; Recasting)</div>
+            <svg viewBox="0 0 340 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:340/260;">
+              <defs>
+                <radialGradient id="sphereBigTm" cx="35%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="#93c5fd"/>
+                  <stop offset="40%" stop-color="#3b82f6"/>
+                  <stop offset="100%" stop-color="#1e3a8a"/>
+                </radialGradient>
+                <radialGradient id="sphereSmallTm" cx="35%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="#fdba74"/>
+                  <stop offset="40%" stop-color="#f97316"/>
+                  <stop offset="100%" stop-color="#9a3412"/>
+                </radialGradient>
+                <linearGradient id="arrowGradTm" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#ef4444"/>
+                  <stop offset="100%" stop-color="#f97316"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Big Metallic Sphere -->
+              <circle cx="75" cy="100" r="55" fill="url(#sphereBigTm)" stroke="#1e40af" stroke-width="2"/>
+              <line x1="75" y1="100" x2="130" y2="100" stroke="#ffffff" stroke-width="2" stroke-dasharray="3,3"/>
+              <circle cx="75" cy="100" r="3" fill="#ffffff"/>
+              <circle cx="130" cy="100" r="2.5" fill="#ffffff"/>
+              <text x="102" y="93" font-size="11" fill="#ffffff" font-weight="bold" text-anchor="middle">R = 16 cm</text>
+              <text x="75" y="172" font-size="12" fill="#1e3a8a" font-weight="bold" text-anchor="middle">பெரிய கோளம்</text>
+              <text x="75" y="188" font-size="10.5" fill="#475569" text-anchor="middle">V₁ = ⁴⁄₃ π R³</text>
+
+              <!-- Transformation Melting Arrow -->
+              <g transform="translate(138, 75)">
+                <path d="M 0,20 L 30,20 L 30,10 L 52,28 L 30,46 L 30,36 L 0,36 Z" fill="url(#arrowGradTm)"/>
+                <text x="26" y="5" font-size="10" fill="#dc2626" font-weight="bold" text-anchor="middle">🔥 உருக்கி</text>
+                <text x="26" y="60" font-size="10" fill="#ea580c" font-weight="bold" text-anchor="middle">மாற்றப்படுகிறது</text>
+              </g>
+
+              <!-- Small Spheres Cluster -->
+              <g transform="translate(205, 45)">
+                <circle cx="18" cy="16" r="14" fill="url(#sphereSmallTm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="54" cy="16" r="14" fill="url(#sphereSmallTm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="90" cy="16" r="14" fill="url(#sphereSmallTm)" stroke="#9a3412" stroke-width="1.2"/>
+
+                <circle cx="18" cy="50" r="14" fill="url(#sphereSmallTm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="54" cy="50" r="14" fill="url(#sphereSmallTm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="90" cy="50" r="14" fill="url(#sphereSmallTm)" stroke="#9a3412" stroke-width="1.2"/>
+
+                <circle cx="18" cy="84" r="14" fill="url(#sphereSmallTm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="54" cy="84" r="14" fill="url(#sphereSmallTm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="90" cy="84" r="14" fill="url(#sphereSmallTm)" stroke="#9a3412" stroke-width="1.2"/>
+
+                <line x1="54" y1="50" x2="68" y2="50" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="54" y="115" font-size="11" fill="#c2410c" font-weight="bold" text-anchor="middle">r = 2 cm (ஒவ்வொன்றும்)</text>
+                <text x="54" y="130" font-size="10" fill="#475569" text-anchor="middle">V₂ = ⁴⁄₃ π r³</text>
+              </g>
+
+              <!-- Bottom Result Callout -->
+              <rect x="20" y="212" width="300" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+              <text x="170" y="234" font-size="12.5" fill="#1e40af" font-weight="bold" text-anchor="middle">சிறிய கோளங்கள் n = (16/2)³ = 8³ = 512</text>
+            </svg>
+          </div>`,
+          ans: `<div style="line-height:1.9;">
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 1: கொடுக்கப்பட்ட விவரங்கள் (Given Data):</b><br>
+              • பெரிய உலோகக் கோளத்தின் ஆரம், R = <b>16 செ.மீ</b><br>
+              • சிறிய கோளத்தின் ஆரம், r = <b>2 செ.மீ</b>
+            </div>
+
+            <div style="background:#f8fafc; border-left:4px solid #0284c7; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 2: கனஅளவு மாறாக் கொள்கை (Conservation of Volume):</b><br>
+              திண்மங்களை உருக்கி மறுவடிவாக்கம் செய்யும்போது:<br>
+              • <b>'n' சிறிய கோளங்களின் மொத்தக் கனஅளவு = பெரிய கோளத்தின் கனஅளவு</b><br>
+              • n × ஒரு சிறிய கோளத்தின் கனஅளவு = பெரிய கோளத்தின் கனஅளவு
+            </div>
+
+            <div style="background:#fff7ed; border-left:4px solid #ea580c; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 3: சூத்திரம் மற்றும் எளிய சுருக்குதல்:</b><br>
+              திண்மக் கோளத்தின் கனஅளவு = <b>(4/3)πr³</b><br><br>
+              சிறிய கோளங்களின் எண்ணிக்கை (n) = <span style="font-size:15px; font-weight:700;">(பெரிய கோளத்தின் கனஅளவு) / (ஒரு சிறிய கோளத்தின் கனஅளவு)</span><br>
+              n = <span style="font-size:15px; font-weight:700;">[(4/3)πR³] / [(4/3)πr³]</span><br><br>
+              <i>தொகுதி மற்றும் பகுதி இரண்டிலும் உள்ள (4/3)π பொது உறுப்பு முழுமையாக நீங்கிவிடும்:</i><br>
+              <b>n = R³ / r³ = (R / r)³</b>
+            </div>
+
+            <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 4: மதிப்புகளைப் பிரதியிட்டு விரைவாகக் கணக்கிடுதல்:</b><br>
+              n = (16 / 2)³<br>
+              n = 8³<br>
+              n = 8 × 8 × 8 = 64 × 8 = <b>512</b>
+            </div>
+
+            <div style="margin-top:14px; padding:12px; background:#eff6ff; border:2px solid #2563eb; border-radius:8px; text-align:center;">
+              <span style="font-size:16px; font-weight:800; color:#1e40af;">இறுதி விடை: கிடைக்கும் சிறிய கோளங்களின் எண்ணிக்கை = 512</span>
+            </div>
+
+            <div style="margin-top:12px; font-size:13px; color:#475569; background:#f8fafc; padding:10px; border-radius:6px; border:1px solid #e2e8f0;">
+              <b>💡 பொதுத்தேர்வு மதிப்பெண் குறிப்புகள்:</b><br>
+              1. <b>π-ன் மதிப்பை பெருக்க வேண்டாம்:</b> (4/3) மற்றும் π இரண்டும் நேரடியாக அடிபட்டுவிடும். தசம எண்களாகப் பெருக்கினால் நேர விரயமும் கூட்டல்-கழித்தல் பிழையும் ஏற்படும்.<br>
+              2. முதலில் ஆரங்களை வகுக்கவும்: (16 / 2) = 8, பின்னர் 8-ஐ க்யூப் செய்யவும்: 8³ = 512.<br>
+              3. எண்ணிக்கை என்பதால் செ.மீ அல்லது செ.மீ³ போன்ற அலகுகள் எழுதக் கூடாது.
+            </div>
+          </div>`,
+          commonMistakes: [
+            {
+              type: "π-ன் மதிப்பை பிரதியிட்டு தசம எண்களில் வகுத்தல் (நேர விரயம் & பிழை)",
+              icon: "⏱️",
+              deduction: "-1 Mark",
+              mistake: "மாணவர்கள் π = 22/7 என பிரதியிட்டு 17157.28 மற்றும் 33.51 என பெரிய தசமக் கணக்கீடுகளைச் செய்து நேரம் வீணாவதோடு தவறான விடையைப் பெறுகின்றனர்.",
+              mistakeTa: "பொதுவான (4/3)π உறுப்பை நீக்காமல் பெருக்கினால் நீண்ட தசமப் பெருக்கலில் பிழை ஏற்படும்.",
+              correction: "(4/3)π-ஐ நேரடியாக நீக்கிவிட்டு, n = (R / r)³ = (16 / 2)³ = 8³ = 512 என எளிதாகக் கணக்கிடவும்."
+            },
+            {
+              type: "கனஅளவிற்கு பதிலாக ஆரத்தை மட்டும் வகுத்தல் (R/r என எழுதுதல்)",
+              icon: "🔢",
+              deduction: "-2 Marks",
+              mistake: "கனஅளவு r³-க்கு நேர்விகிதத்தில் இருக்கும் என்பதை மறந்து n = 16 / 2 = 8 கோளங்கள் என்று மட்டும் எழுதிவிடுதல்.",
+              mistakeTa: "கோளத்தின் கனஅளவு r³ ஆகும். ஆரங்களை மட்டும் வகுத்து 8 என எழுதினால் விடை முற்றிலும் தவறாகும்.",
+              correction: "எப்போதும் ஆரங்களின் விகிதத்தை கனம் (Cube) செய்ய வேண்டும்: (16 / 2)³ = 8³ = 512."
+            },
+            {
+              type: "எண்ணிக்கைக்கு அலகு சேர்த்தல் (எ.கா. '512 செ.மீ³')",
+              icon: "📏",
+              deduction: "-½ Mark",
+              mistake: "இறுதி விடைக்கு '512 செ.மீ³' அல்லது '512 செ.மீ' என அலகு எழுதுதல்.",
+              mistakeTa: "கேள்வி 'எத்தனை சிறிய கோளங்கள்' என்று கேட்கப்பட்டுள்ளது. இது ஒரு எண்ணிக்கை, கனஅளவு அல்ல.",
+              correction: "'கிடைக்கும் சிறிய கோளங்களின் எண்ணிக்கை = 512' என மட்டும் தெளிவாகக் கட்டமிடவும்."
+            }
+          ]
         }
       ]
     }

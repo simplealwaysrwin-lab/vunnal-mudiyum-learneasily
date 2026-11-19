@@ -1,4 +1,4 @@
-// 10th Standard Mathematics - Unit 7: Mensuration (English Medium)
+﻿// 10th Standard Mathematics - Unit 7: Mensuration (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_7_DATA = {
@@ -430,22 +430,140 @@ const MATHS_EM_UNIT_7_DATA = {
         },
         {
           id: "m_em_7_3_2",
+          videoUrl: "https://youtu.be/vVKlLCox73o",
           type: "5m",
           mark: "5 Marks",
-          examTag: "Important 5M",
+          examTag: "Board Exam Model (Example 7.29)",
           isImportant: true,
           q: "A metallic sphere of radius 16 cm is melted and recast into small spheres each of radius 2 cm. How many small spheres can be obtained?",
-          ans: `<div style="line-height:1.8;">
-            <b>Given:</b><br>
-            Radius of big metallic sphere R = 16 cm.<br>
-            Radius of small sphere r = 2 cm.<br><br>
-            <b>Formula:</b><br>
-            Number of small spheres (n) = (Volume of big sphere) / (Volume of one small sphere)<br>
-            n = [(4/3)πR³] / [(4/3)πr³] = R³ / r³ = (R / r)³<br><br>
-            <b>Calculation:</b><br>
-            n = (16 / 2)³ = 8³ = <b>512</b>.<br>
-            <b>Answer:</b> <b>512</b> small spheres can be obtained.
-          </div>`
+          diagramCaption: "Recasting of Solid Metallic Sphere: Large Sphere (R = 16 cm) melted and recast into 512 Small Spheres (r = 2 cm).",
+          diagramSvg: `<div style="max-width:340px; margin:12px auto; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); text-align:center;">
+            <div style="font-size:12px; font-weight:700; color:#1e3a8a; margin-bottom:8px;">🔥 Melting &amp; Recasting: Solid Metallic Spheres</div>
+            <svg viewBox="0 0 340 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:340/260;">
+              <defs>
+                <radialGradient id="sphereBigEm" cx="35%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="#93c5fd"/>
+                  <stop offset="40%" stop-color="#3b82f6"/>
+                  <stop offset="100%" stop-color="#1e3a8a"/>
+                </radialGradient>
+                <radialGradient id="sphereSmallEm" cx="35%" cy="35%" r="65%">
+                  <stop offset="0%" stop-color="#fdba74"/>
+                  <stop offset="40%" stop-color="#f97316"/>
+                  <stop offset="100%" stop-color="#9a3412"/>
+                </radialGradient>
+                <linearGradient id="arrowGradEm" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#ef4444"/>
+                  <stop offset="100%" stop-color="#f97316"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Big Metallic Sphere -->
+              <circle cx="75" cy="100" r="55" fill="url(#sphereBigEm)" stroke="#1e40af" stroke-width="2"/>
+              <line x1="75" y1="100" x2="130" y2="100" stroke="#ffffff" stroke-width="2" stroke-dasharray="3,3"/>
+              <circle cx="75" cy="100" r="3" fill="#ffffff"/>
+              <circle cx="130" cy="100" r="2.5" fill="#ffffff"/>
+              <text x="102" y="93" font-size="11" fill="#ffffff" font-weight="bold" text-anchor="middle">R = 16 cm</text>
+              <text x="75" y="172" font-size="12" fill="#1e3a8a" font-weight="bold" text-anchor="middle">Large Sphere</text>
+              <text x="75" y="188" font-size="10.5" fill="#475569" text-anchor="middle">V₁ = ⁴⁄₃ π R³</text>
+
+              <!-- Transformation Melting Arrow -->
+              <g transform="translate(138, 75)">
+                <path d="M 0,20 L 30,20 L 30,10 L 52,28 L 30,46 L 30,36 L 0,36 Z" fill="url(#arrowGradEm)"/>
+                <text x="26" y="5" font-size="10" fill="#dc2626" font-weight="bold" text-anchor="middle">🔥 Melted &amp;</text>
+                <text x="26" y="60" font-size="10" fill="#ea580c" font-weight="bold" text-anchor="middle">Recast</text>
+              </g>
+
+              <!-- Small Spheres Cluster -->
+              <g transform="translate(205, 45)">
+                <circle cx="18" cy="16" r="14" fill="url(#sphereSmallEm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="54" cy="16" r="14" fill="url(#sphereSmallEm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="90" cy="16" r="14" fill="url(#sphereSmallEm)" stroke="#9a3412" stroke-width="1.2"/>
+
+                <circle cx="18" cy="50" r="14" fill="url(#sphereSmallEm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="54" cy="50" r="14" fill="url(#sphereSmallEm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="90" cy="50" r="14" fill="url(#sphereSmallEm)" stroke="#9a3412" stroke-width="1.2"/>
+
+                <circle cx="18" cy="84" r="14" fill="url(#sphereSmallEm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="54" cy="84" r="14" fill="url(#sphereSmallEm)" stroke="#9a3412" stroke-width="1.2"/>
+                <circle cx="90" cy="84" r="14" fill="url(#sphereSmallEm)" stroke="#9a3412" stroke-width="1.2"/>
+
+                <line x1="54" y1="50" x2="68" y2="50" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="54" y="115" font-size="11" fill="#c2410c" font-weight="bold" text-anchor="middle">r = 2 cm (each)</text>
+                <text x="54" y="130" font-size="10" fill="#475569" text-anchor="middle">V₂ = ⁴⁄₃ π r³</text>
+              </g>
+
+              <!-- Bottom Result Callout -->
+              <rect x="20" y="212" width="300" height="34" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+              <text x="170" y="234" font-size="12.5" fill="#1e40af" font-weight="bold" text-anchor="middle">Number of Small Spheres n = (16/2)³ = 8³ = 512</text>
+            </svg>
+          </div>`,
+          ans: `<div style="line-height:1.9;">
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>Step 1: Given Data:</b><br>
+              • Radius of big metallic sphere, R = <b>16 cm</b><br>
+              • Radius of small sphere, r = <b>2 cm</b>
+            </div>
+
+            <div style="background:#f8fafc; border-left:4px solid #0284c7; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>Step 2: Principle of Conservation of Volume:</b><br>
+              When a solid is melted and recast into other solids without wastage:<br>
+              • <b>Total Volume of 'n' small spheres = Volume of the big sphere</b><br>
+              • n × Volume of one small sphere = Volume of big sphere
+            </div>
+
+            <div style="background:#fff7ed; border-left:4px solid #ea580c; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>Step 3: Formula Derivation &amp; Simplification:</b><br>
+              Volume of a solid sphere = <b>(4/3)πr³</b><br><br>
+              Number of small spheres (n) = <span style="font-size:15px; font-weight:700;">(Volume of big sphere) / (Volume of one small sphere)</span><br>
+              n = <span style="font-size:15px; font-weight:700;">[(4/3)πR³] / [(4/3)πr³]</span><br><br>
+              <i>Notice that (4/3)π in both numerator and denominator cancel out completely:</i><br>
+              <b>n = R³ / r³ = (R / r)³</b>
+            </div>
+
+            <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>Step 4: Substitution &amp; Quick Calculation:</b><br>
+              n = (16 / 2)³<br>
+              n = 8³<br>
+              n = 8 × 8 × 8 = 64 × 8 = <b>512</b>
+            </div>
+
+            <div style="margin-top:14px; padding:12px; background:#eff6ff; border:2px solid #2563eb; border-radius:8px; text-align:center;">
+              <span style="font-size:16px; font-weight:800; color:#1e40af;">Final Answer: Number of small spheres obtained = 512</span>
+            </div>
+
+            <div style="margin-top:12px; font-size:13px; color:#475569; background:#f8fafc; padding:10px; border-radius:6px; border:1px solid #e2e8f0;">
+              <b>💡 Public Exam Tips:</b><br>
+              1. <b>Never multiply out π (22/7 or 3.14):</b> Both (4/3) and π cancel out directly. Calculating full decimal volume wastes time and introduces calculation mistakes.<br>
+              2. Divide the radii first: (16 / 2) = 8, then cube 8 to get 8³ = 512.<br>
+              3. The answer is a dimensionless count (number of spheres), so do not attach units like cm or cm³.
+            </div>
+          </div>`,
+          commonMistakes: [
+            {
+              type: "Multiplying π and Calculating Decimal Volumes (Wasting Exam Time)",
+              icon: "⏱️",
+              deduction: "-1 Mark",
+              mistake: "Students substitute π = 22/7 or 3.14 and calculate the full volume of both spheres (e.g. 17157.28 cm³ and 33.51 cm³), leading to lengthy decimal long division and careless arithmetic errors.",
+              mistakeTa: "Multiplying out (4/3)π instead of cancelling it wastes 10 minutes and often produces wrong decimal answers.",
+              correction: "Always cancel the common constant factor (4/3)π first: n = (R / r)³ = (16 / 2)³ = 8³ = 512."
+            },
+            {
+              type: "Forgetting to Cube (Using R/r instead of R³/r³)",
+              icon: "🔢",
+              deduction: "-2 Marks",
+              mistake: "Dividing radii directly without cubing: writing n = 16 / 2 = 8 spheres. Volume is proportional to r³, not r.",
+              mistakeTa: "Volume depends on the cube of the radius. Writing 16/2 = 8 is completely wrong.",
+              correction: "Remember volume of a sphere is proportional to r³. Always cube the ratio: (16 / 2)³ = 8³ = 512."
+            },
+            {
+              type: "Attaching Units to a Count (e.g. Writing '512 cm³')",
+              icon: "📏",
+              deduction: "-½ Mark",
+              mistake: "Writing the final answer as '512 cm³' or '512 cm' instead of just the count '512 small spheres'.",
+              mistakeTa: "The question asks 'How many small spheres', which is a number, not a volume.",
+              correction: "Box the final answer as: 'Number of small spheres = 512'."
+            }
+          ]
         }
       ]
     }

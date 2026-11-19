@@ -4,7 +4,7 @@
 // Zero-Downtime Architecture - Auto-Update on Deploy Engine
 // =======================================================================
 
-const CACHE_NAME = 'vm-offline-v20261119_v98';
+const CACHE_NAME = 'vm-offline-v20261119_v99';
 
 // Core essential assets for instant offline app shell and subject question banks
 const PRECACHE_ASSETS = [
@@ -190,7 +190,51 @@ const PRECACHE_ASSETS = [
   './data_social_u13.js',
   './data_social_u14.js',
   './data_social_em_u13.js',
-  './data_social_em_u14.js'
+  './data_social_em_u14.js',
+  './data_science_u15.js',
+  './data_science_u16.js',
+  './data_science_u17.js',
+  './data_science_u18.js',
+  './data_science_u19.js',
+  './data_science_u20.js',
+  './data_science_u21.js',
+  './data_science_u22.js',
+  './data_science_u23.js',
+  './data_science_em_u15.js',
+  './data_science_em_u16.js',
+  './data_science_em_u17.js',
+  './data_science_em_u18.js',
+  './data_science_em_u19.js',
+  './data_science_em_u20.js',
+  './data_science_em_u21.js',
+  './data_science_em_u22.js',
+  './data_science_em_u23.js',
+  './data_social_u15.js',
+  './data_social_u16.js',
+  './data_social_u17.js',
+  './data_social_u18.js',
+  './data_social_u19.js',
+  './data_social_u20.js',
+  './data_social_u21.js',
+  './data_social_u22.js',
+  './data_social_u23.js',
+  './data_social_u24.js',
+  './data_social_u25.js',
+  './data_social_u26.js',
+  './data_social_u27.js',
+  './data_social_em_u15.js',
+  './data_social_em_u16.js',
+  './data_social_em_u17.js',
+  './data_social_em_u18.js',
+  './data_social_em_u19.js',
+  './data_social_em_u20.js',
+  './data_social_em_u21.js',
+  './data_social_em_u22.js',
+  './data_social_em_u23.js',
+  './data_social_em_u24.js',
+  './data_social_em_u25.js',
+  './data_social_em_u26.js',
+  './data_social_em_u27.js'
 ];
 
 // Install Event: Cache essential shell in background and skip waiting immediately

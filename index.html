@@ -204,6 +204,52 @@
   <script src="data_social_u14.js?v=20261114_v73"></script>
   <script src="data_social_em_u13.js?v=20261114_v73"></script>
   <script src="data_social_em_u14.js?v=20261114_v73"></script>
+  <!-- Science Units 15-23 (TM & EM) -->
+  <script src="data_science_u15.js?v=20261119_v99"></script>
+  <script src="data_science_u16.js?v=20261119_v99"></script>
+  <script src="data_science_u17.js?v=20261119_v99"></script>
+  <script src="data_science_u18.js?v=20261119_v99"></script>
+  <script src="data_science_u19.js?v=20261119_v99"></script>
+  <script src="data_science_u20.js?v=20261119_v99"></script>
+  <script src="data_science_u21.js?v=20261119_v99"></script>
+  <script src="data_science_u22.js?v=20261119_v99"></script>
+  <script src="data_science_u23.js?v=20261119_v99"></script>
+  <script src="data_science_em_u15.js?v=20261119_v99"></script>
+  <script src="data_science_em_u16.js?v=20261119_v99"></script>
+  <script src="data_science_em_u17.js?v=20261119_v99"></script>
+  <script src="data_science_em_u18.js?v=20261119_v99"></script>
+  <script src="data_science_em_u19.js?v=20261119_v99"></script>
+  <script src="data_science_em_u20.js?v=20261119_v99"></script>
+  <script src="data_science_em_u21.js?v=20261119_v99"></script>
+  <script src="data_science_em_u22.js?v=20261119_v99"></script>
+  <script src="data_science_em_u23.js?v=20261119_v99"></script>
+  <!-- Social Lessons 15-27 (TM & EM) -->
+  <script src="data_social_u15.js?v=20261119_v99"></script>
+  <script src="data_social_u16.js?v=20261119_v99"></script>
+  <script src="data_social_u17.js?v=20261119_v99"></script>
+  <script src="data_social_u18.js?v=20261119_v99"></script>
+  <script src="data_social_u19.js?v=20261119_v99"></script>
+  <script src="data_social_u20.js?v=20261119_v99"></script>
+  <script src="data_social_u21.js?v=20261119_v99"></script>
+  <script src="data_social_u22.js?v=20261119_v99"></script>
+  <script src="data_social_u23.js?v=20261119_v99"></script>
+  <script src="data_social_u24.js?v=20261119_v99"></script>
+  <script src="data_social_u25.js?v=20261119_v99"></script>
+  <script src="data_social_u26.js?v=20261119_v99"></script>
+  <script src="data_social_u27.js?v=20261119_v99"></script>
+  <script src="data_social_em_u15.js?v=20261119_v99"></script>
+  <script src="data_social_em_u16.js?v=20261119_v99"></script>
+  <script src="data_social_em_u17.js?v=20261119_v99"></script>
+  <script src="data_social_em_u18.js?v=20261119_v99"></script>
+  <script src="data_social_em_u19.js?v=20261119_v99"></script>
+  <script src="data_social_em_u20.js?v=20261119_v99"></script>
+  <script src="data_social_em_u21.js?v=20261119_v99"></script>
+  <script src="data_social_em_u22.js?v=20261119_v99"></script>
+  <script src="data_social_em_u23.js?v=20261119_v99"></script>
+  <script src="data_social_em_u24.js?v=20261119_v99"></script>
+  <script src="data_social_em_u25.js?v=20261119_v99"></script>
+  <script src="data_social_em_u26.js?v=20261119_v99"></script>
+  <script src="data_social_em_u27.js?v=20261119_v99"></script>
 <script src="map_data_and_engine.js?v=20261115_v79"></script>
 <script src="map_practice_evaluator.js?v=20261115_v79"></script>
 <style>
@@ -5251,6 +5297,87 @@
             subSections: (typeof SCIENCE_UNIT_14_DATA !== 'undefined') ? SCIENCE_UNIT_14_DATA.subSections : [],
             questions: (typeof SCIENCE_UNIT_14_DATA !== 'undefined' && SCIENCE_UNIT_14_DATA.subSections) ? SCIENCE_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof SCIENCE_UNIT_14_DATA !== 'undefined') ? SCIENCE_UNIT_14_DATA.formulas : []
+          },
+          {
+            id: 'sci_u15',
+            unit: 'அலகு 15',
+            title: 'நரம்பு மண்டலம் (Nervous System)',
+            qCount: (typeof SCIENCE_UNIT_15_DATA !== 'undefined' && SCIENCE_UNIT_15_DATA.subSections) ? SCIENCE_UNIT_15_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_15_DATA !== 'undefined') ? SCIENCE_UNIT_15_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_15_DATA !== 'undefined' && SCIENCE_UNIT_15_DATA.subSections) ? SCIENCE_UNIT_15_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_15_DATA !== 'undefined') ? SCIENCE_UNIT_15_DATA.formulas : []
+          },
+          {
+            id: 'sci_u16',
+            unit: 'அலகு 16',
+            title: 'தாவர மற்றும் விலங்கு ஹார்மோன்கள் (Plant and Animal Hormones)',
+            qCount: (typeof SCIENCE_UNIT_16_DATA !== 'undefined' && SCIENCE_UNIT_16_DATA.subSections) ? SCIENCE_UNIT_16_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_16_DATA !== 'undefined') ? SCIENCE_UNIT_16_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_16_DATA !== 'undefined' && SCIENCE_UNIT_16_DATA.subSections) ? SCIENCE_UNIT_16_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_16_DATA !== 'undefined') ? SCIENCE_UNIT_16_DATA.formulas : []
+          },
+          {
+            id: 'sci_u17',
+            unit: 'அலகு 17',
+            title: 'தாவரங்கள் மற்றும் விலங்குகளில் இனப்பெருக்கம் (Reproduction in Plants and Animals)',
+            qCount: (typeof SCIENCE_UNIT_17_DATA !== 'undefined' && SCIENCE_UNIT_17_DATA.subSections) ? SCIENCE_UNIT_17_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_17_DATA !== 'undefined') ? SCIENCE_UNIT_17_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_17_DATA !== 'undefined' && SCIENCE_UNIT_17_DATA.subSections) ? SCIENCE_UNIT_17_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_17_DATA !== 'undefined') ? SCIENCE_UNIT_17_DATA.formulas : []
+          },
+          {
+            id: 'sci_u18',
+            unit: 'அலகு 18',
+            title: 'மரபியல் (Heredity)',
+            qCount: (typeof SCIENCE_UNIT_18_DATA !== 'undefined' && SCIENCE_UNIT_18_DATA.subSections) ? SCIENCE_UNIT_18_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_18_DATA !== 'undefined') ? SCIENCE_UNIT_18_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_18_DATA !== 'undefined' && SCIENCE_UNIT_18_DATA.subSections) ? SCIENCE_UNIT_18_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_18_DATA !== 'undefined') ? SCIENCE_UNIT_18_DATA.formulas : []
+          },
+          {
+            id: 'sci_u19',
+            unit: 'அலகு 19',
+            title: 'உயிரின் தோற்றமும் பரிணாமமும் (Origin and Evolution of Life)',
+            qCount: (typeof SCIENCE_UNIT_19_DATA !== 'undefined' && SCIENCE_UNIT_19_DATA.subSections) ? SCIENCE_UNIT_19_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_19_DATA !== 'undefined') ? SCIENCE_UNIT_19_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_19_DATA !== 'undefined' && SCIENCE_UNIT_19_DATA.subSections) ? SCIENCE_UNIT_19_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_19_DATA !== 'undefined') ? SCIENCE_UNIT_19_DATA.formulas : []
+          },
+          {
+            id: 'sci_u20',
+            unit: 'அலகு 20',
+            title: 'இனக்கலப்பு மற்றும் உயிரித்தொழில்நுட்பவியல் (Breeding and Biotechnology)',
+            qCount: (typeof SCIENCE_UNIT_20_DATA !== 'undefined' && SCIENCE_UNIT_20_DATA.subSections) ? SCIENCE_UNIT_20_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_20_DATA !== 'undefined') ? SCIENCE_UNIT_20_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_20_DATA !== 'undefined' && SCIENCE_UNIT_20_DATA.subSections) ? SCIENCE_UNIT_20_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_20_DATA !== 'undefined') ? SCIENCE_UNIT_20_DATA.formulas : []
+          },
+          {
+            id: 'sci_u21',
+            unit: 'அலகு 21',
+            title: 'உடல் நலம் மற்றும் நோய்கள் (Health and Diseases)',
+            qCount: (typeof SCIENCE_UNIT_21_DATA !== 'undefined' && SCIENCE_UNIT_21_DATA.subSections) ? SCIENCE_UNIT_21_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_21_DATA !== 'undefined') ? SCIENCE_UNIT_21_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_21_DATA !== 'undefined' && SCIENCE_UNIT_21_DATA.subSections) ? SCIENCE_UNIT_21_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_21_DATA !== 'undefined') ? SCIENCE_UNIT_21_DATA.formulas : []
+          },
+          {
+            id: 'sci_u22',
+            unit: 'அலகு 22',
+            title: 'சுற்றுச்சூழல் மேலாண்மை (Environmental Management)',
+            qCount: (typeof SCIENCE_UNIT_22_DATA !== 'undefined' && SCIENCE_UNIT_22_DATA.subSections) ? SCIENCE_UNIT_22_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_22_DATA !== 'undefined') ? SCIENCE_UNIT_22_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_22_DATA !== 'undefined' && SCIENCE_UNIT_22_DATA.subSections) ? SCIENCE_UNIT_22_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_22_DATA !== 'undefined') ? SCIENCE_UNIT_22_DATA.formulas : []
+          },
+          {
+            id: 'sci_u23',
+            unit: 'அலகு 23',
+            title: 'காட்சித் தொடர்பு (Visual Communication)',
+            qCount: (typeof SCIENCE_UNIT_23_DATA !== 'undefined' && SCIENCE_UNIT_23_DATA.subSections) ? SCIENCE_UNIT_23_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_UNIT_23_DATA !== 'undefined') ? SCIENCE_UNIT_23_DATA.subSections : [],
+            questions: (typeof SCIENCE_UNIT_23_DATA !== 'undefined' && SCIENCE_UNIT_23_DATA.subSections) ? SCIENCE_UNIT_23_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_UNIT_23_DATA !== 'undefined') ? SCIENCE_UNIT_23_DATA.formulas : []
           }
         ]
       },
@@ -5388,6 +5515,87 @@
             subSections: (typeof SCIENCE_EM_UNIT_14_DATA !== 'undefined') ? SCIENCE_EM_UNIT_14_DATA.subSections : [],
             questions: (typeof SCIENCE_EM_UNIT_14_DATA !== 'undefined' && SCIENCE_EM_UNIT_14_DATA.subSections) ? SCIENCE_EM_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             formulas: (typeof SCIENCE_EM_UNIT_14_DATA !== 'undefined') ? SCIENCE_EM_UNIT_14_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u15',
+            unit: 'Unit 15',
+            title: 'Nervous System',
+            qCount: (typeof SCIENCE_EM_UNIT_15_DATA !== 'undefined' && SCIENCE_EM_UNIT_15_DATA.subSections) ? SCIENCE_EM_UNIT_15_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_15_DATA !== 'undefined') ? SCIENCE_EM_UNIT_15_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_15_DATA !== 'undefined' && SCIENCE_EM_UNIT_15_DATA.subSections) ? SCIENCE_EM_UNIT_15_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_15_DATA !== 'undefined') ? SCIENCE_EM_UNIT_15_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u16',
+            unit: 'Unit 16',
+            title: 'Plant and Animal Hormones',
+            qCount: (typeof SCIENCE_EM_UNIT_16_DATA !== 'undefined' && SCIENCE_EM_UNIT_16_DATA.subSections) ? SCIENCE_EM_UNIT_16_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_16_DATA !== 'undefined') ? SCIENCE_EM_UNIT_16_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_16_DATA !== 'undefined' && SCIENCE_EM_UNIT_16_DATA.subSections) ? SCIENCE_EM_UNIT_16_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_16_DATA !== 'undefined') ? SCIENCE_EM_UNIT_16_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u17',
+            unit: 'Unit 17',
+            title: 'Reproduction in Plants and Animals',
+            qCount: (typeof SCIENCE_EM_UNIT_17_DATA !== 'undefined' && SCIENCE_EM_UNIT_17_DATA.subSections) ? SCIENCE_EM_UNIT_17_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_17_DATA !== 'undefined') ? SCIENCE_EM_UNIT_17_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_17_DATA !== 'undefined' && SCIENCE_EM_UNIT_17_DATA.subSections) ? SCIENCE_EM_UNIT_17_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_17_DATA !== 'undefined') ? SCIENCE_EM_UNIT_17_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u18',
+            unit: 'Unit 18',
+            title: 'Heredity',
+            qCount: (typeof SCIENCE_EM_UNIT_18_DATA !== 'undefined' && SCIENCE_EM_UNIT_18_DATA.subSections) ? SCIENCE_EM_UNIT_18_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_18_DATA !== 'undefined') ? SCIENCE_EM_UNIT_18_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_18_DATA !== 'undefined' && SCIENCE_EM_UNIT_18_DATA.subSections) ? SCIENCE_EM_UNIT_18_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_18_DATA !== 'undefined') ? SCIENCE_EM_UNIT_18_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u19',
+            unit: 'Unit 19',
+            title: 'Origin and Evolution of Life',
+            qCount: (typeof SCIENCE_EM_UNIT_19_DATA !== 'undefined' && SCIENCE_EM_UNIT_19_DATA.subSections) ? SCIENCE_EM_UNIT_19_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_19_DATA !== 'undefined') ? SCIENCE_EM_UNIT_19_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_19_DATA !== 'undefined' && SCIENCE_EM_UNIT_19_DATA.subSections) ? SCIENCE_EM_UNIT_19_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_19_DATA !== 'undefined') ? SCIENCE_EM_UNIT_19_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u20',
+            unit: 'Unit 20',
+            title: 'Breeding and Biotechnology',
+            qCount: (typeof SCIENCE_EM_UNIT_20_DATA !== 'undefined' && SCIENCE_EM_UNIT_20_DATA.subSections) ? SCIENCE_EM_UNIT_20_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_20_DATA !== 'undefined') ? SCIENCE_EM_UNIT_20_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_20_DATA !== 'undefined' && SCIENCE_EM_UNIT_20_DATA.subSections) ? SCIENCE_EM_UNIT_20_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_20_DATA !== 'undefined') ? SCIENCE_EM_UNIT_20_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u21',
+            unit: 'Unit 21',
+            title: 'Health and Diseases',
+            qCount: (typeof SCIENCE_EM_UNIT_21_DATA !== 'undefined' && SCIENCE_EM_UNIT_21_DATA.subSections) ? SCIENCE_EM_UNIT_21_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_21_DATA !== 'undefined') ? SCIENCE_EM_UNIT_21_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_21_DATA !== 'undefined' && SCIENCE_EM_UNIT_21_DATA.subSections) ? SCIENCE_EM_UNIT_21_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_21_DATA !== 'undefined') ? SCIENCE_EM_UNIT_21_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u22',
+            unit: 'Unit 22',
+            title: 'Environmental Management',
+            qCount: (typeof SCIENCE_EM_UNIT_22_DATA !== 'undefined' && SCIENCE_EM_UNIT_22_DATA.subSections) ? SCIENCE_EM_UNIT_22_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_22_DATA !== 'undefined') ? SCIENCE_EM_UNIT_22_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_22_DATA !== 'undefined' && SCIENCE_EM_UNIT_22_DATA.subSections) ? SCIENCE_EM_UNIT_22_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_22_DATA !== 'undefined') ? SCIENCE_EM_UNIT_22_DATA.formulas : []
+          },
+          {
+            id: 'sci_em_u23',
+            unit: 'Unit 23',
+            title: 'Visual Communication',
+            qCount: (typeof SCIENCE_EM_UNIT_23_DATA !== 'undefined' && SCIENCE_EM_UNIT_23_DATA.subSections) ? SCIENCE_EM_UNIT_23_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SCIENCE_EM_UNIT_23_DATA !== 'undefined') ? SCIENCE_EM_UNIT_23_DATA.subSections : [],
+            questions: (typeof SCIENCE_EM_UNIT_23_DATA !== 'undefined' && SCIENCE_EM_UNIT_23_DATA.subSections) ? SCIENCE_EM_UNIT_23_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_EM_UNIT_23_DATA !== 'undefined') ? SCIENCE_EM_UNIT_23_DATA.formulas : []
           }
         ]
       },
@@ -5528,6 +5736,136 @@
             questions: (typeof SOCIAL_UNIT_14_DATA !== 'undefined' && SOCIAL_UNIT_14_DATA.subSections) ? SOCIAL_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             geoHighlights: (typeof SOCIAL_UNIT_14_DATA !== 'undefined') ? SOCIAL_UNIT_14_DATA.geoHighlights : [],
             timeline: (typeof SOCIAL_UNIT_14_DATA !== 'undefined') ? SOCIAL_UNIT_14_DATA.timeline : []
+          },
+          {
+            id: 'soc_c4',
+            unit: 'குடிமையியல் 4',
+            title: 'இந்தியாவின் வெளியுறவுக் கொள்கை (India''s Foreign Policy)',
+            qCount: (typeof SOCIAL_UNIT_15_DATA !== 'undefined' && SOCIAL_UNIT_15_DATA.subSections) ? SOCIAL_UNIT_15_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_15_DATA !== 'undefined') ? SOCIAL_UNIT_15_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_15_DATA !== 'undefined' && SOCIAL_UNIT_15_DATA.subSections) ? SOCIAL_UNIT_15_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            civicsHighlights: (typeof SOCIAL_UNIT_15_DATA !== 'undefined') ? SOCIAL_UNIT_15_DATA.civicsHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_15_DATA !== 'undefined') ? SOCIAL_UNIT_15_DATA.timeline : []
+          },
+          {
+            id: 'soc_e4',
+            unit: 'பொருளியல் 4',
+            title: 'அரசாங்கமும் வரிகளும் (Government and Taxes)',
+            qCount: (typeof SOCIAL_UNIT_16_DATA !== 'undefined' && SOCIAL_UNIT_16_DATA.subSections) ? SOCIAL_UNIT_16_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_16_DATA !== 'undefined') ? SOCIAL_UNIT_16_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_16_DATA !== 'undefined' && SOCIAL_UNIT_16_DATA.subSections) ? SOCIAL_UNIT_16_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            econHighlights: (typeof SOCIAL_UNIT_16_DATA !== 'undefined') ? SOCIAL_UNIT_16_DATA.econHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_16_DATA !== 'undefined') ? SOCIAL_UNIT_16_DATA.timeline : []
+          },
+          {
+            id: 'soc_h5',
+            unit: 'வரலாறு 5',
+            title: '19-ஆம் நூற்றாண்டில் சமூக, சமய சீர்திருத்த இயக்கங்கள் (Social and Religious Reform Movements)',
+            qCount: (typeof SOCIAL_UNIT_17_DATA !== 'undefined' && SOCIAL_UNIT_17_DATA.subSections) ? SOCIAL_UNIT_17_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_17_DATA !== 'undefined') ? SOCIAL_UNIT_17_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_17_DATA !== 'undefined' && SOCIAL_UNIT_17_DATA.subSections) ? SOCIAL_UNIT_17_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_UNIT_17_DATA !== 'undefined') ? SOCIAL_UNIT_17_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_17_DATA !== 'undefined') ? SOCIAL_UNIT_17_DATA.timeline : []
+          },
+          {
+            id: 'soc_g5',
+            unit: 'புவியியல் 5',
+            title: 'இந்தியா - மக்கள் தொகை, போக்குவரத்து, தகவல் தொடர்பு மற்றும் வணிகம் (Population, Transport & Trade)',
+            qCount: (typeof SOCIAL_UNIT_18_DATA !== 'undefined' && SOCIAL_UNIT_18_DATA.subSections) ? SOCIAL_UNIT_18_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_18_DATA !== 'undefined') ? SOCIAL_UNIT_18_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_18_DATA !== 'undefined' && SOCIAL_UNIT_18_DATA.subSections) ? SOCIAL_UNIT_18_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            geoHighlights: (typeof SOCIAL_UNIT_18_DATA !== 'undefined') ? SOCIAL_UNIT_18_DATA.geoHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_18_DATA !== 'undefined') ? SOCIAL_UNIT_18_DATA.timeline : []
+          },
+          {
+            id: 'soc_c5',
+            unit: 'குடிமையியல் 5',
+            title: 'இந்தியாவின் சர்வதேச உறவுகள் (India''s International Relations)',
+            qCount: (typeof SOCIAL_UNIT_19_DATA !== 'undefined' && SOCIAL_UNIT_19_DATA.subSections) ? SOCIAL_UNIT_19_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_19_DATA !== 'undefined') ? SOCIAL_UNIT_19_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_19_DATA !== 'undefined' && SOCIAL_UNIT_19_DATA.subSections) ? SOCIAL_UNIT_19_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            civicsHighlights: (typeof SOCIAL_UNIT_19_DATA !== 'undefined') ? SOCIAL_UNIT_19_DATA.civicsHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_19_DATA !== 'undefined') ? SOCIAL_UNIT_19_DATA.timeline : []
+          },
+          {
+            id: 'soc_e5',
+            unit: 'பொருளியல் 5',
+            title: 'தமிழ்நாட்டில் தொழிற்துறை தொகுப்புகள் (Industrial Clusters in Tamil Nadu)',
+            qCount: (typeof SOCIAL_UNIT_20_DATA !== 'undefined' && SOCIAL_UNIT_20_DATA.subSections) ? SOCIAL_UNIT_20_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_20_DATA !== 'undefined') ? SOCIAL_UNIT_20_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_20_DATA !== 'undefined' && SOCIAL_UNIT_20_DATA.subSections) ? SOCIAL_UNIT_20_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            econHighlights: (typeof SOCIAL_UNIT_20_DATA !== 'undefined') ? SOCIAL_UNIT_20_DATA.econHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_20_DATA !== 'undefined') ? SOCIAL_UNIT_20_DATA.timeline : []
+          },
+          {
+            id: 'soc_h6',
+            unit: 'வரலாறு 6',
+            title: 'ஆங்கிலேய ஆட்சிக்கு எதிராக தமிழகத்தில் நிகழ்ந்த தொடக்ககால கிளர்ச்சிகள் (Early Revolts in Tamil Nadu)',
+            qCount: (typeof SOCIAL_UNIT_21_DATA !== 'undefined' && SOCIAL_UNIT_21_DATA.subSections) ? SOCIAL_UNIT_21_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_21_DATA !== 'undefined') ? SOCIAL_UNIT_21_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_21_DATA !== 'undefined' && SOCIAL_UNIT_21_DATA.subSections) ? SOCIAL_UNIT_21_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_UNIT_21_DATA !== 'undefined') ? SOCIAL_UNIT_21_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_21_DATA !== 'undefined') ? SOCIAL_UNIT_21_DATA.timeline : []
+          },
+          {
+            id: 'soc_g6',
+            unit: 'புவியியல் 6',
+            title: 'தமிழ்நாடு - இயற்கை பிரிவுகள் (Physical Geography of Tamil Nadu)',
+            qCount: (typeof SOCIAL_UNIT_22_DATA !== 'undefined' && SOCIAL_UNIT_22_DATA.subSections) ? SOCIAL_UNIT_22_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_22_DATA !== 'undefined') ? SOCIAL_UNIT_22_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_22_DATA !== 'undefined' && SOCIAL_UNIT_22_DATA.subSections) ? SOCIAL_UNIT_22_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            geoHighlights: (typeof SOCIAL_UNIT_22_DATA !== 'undefined') ? SOCIAL_UNIT_22_DATA.geoHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_22_DATA !== 'undefined') ? SOCIAL_UNIT_22_DATA.timeline : []
+          },
+          {
+            id: 'soc_h7',
+            unit: 'வரலாறு 7',
+            title: 'காலனியத்துக்கு எதிரான இயக்கங்களும் தேசியத்தின் தோற்றமும் (Anti-Colonial Movements & Nationalism)',
+            qCount: (typeof SOCIAL_UNIT_23_DATA !== 'undefined' && SOCIAL_UNIT_23_DATA.subSections) ? SOCIAL_UNIT_23_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_23_DATA !== 'undefined') ? SOCIAL_UNIT_23_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_23_DATA !== 'undefined' && SOCIAL_UNIT_23_DATA.subSections) ? SOCIAL_UNIT_23_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_UNIT_23_DATA !== 'undefined') ? SOCIAL_UNIT_23_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_23_DATA !== 'undefined') ? SOCIAL_UNIT_23_DATA.timeline : []
+          },
+          {
+            id: 'soc_g7',
+            unit: 'புவியியல் 7',
+            title: 'தமிழ்நாடு - மானுடப் புவியியல் (Human Geography of Tamil Nadu)',
+            qCount: (typeof SOCIAL_UNIT_24_DATA !== 'undefined' && SOCIAL_UNIT_24_DATA.subSections) ? SOCIAL_UNIT_24_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_24_DATA !== 'undefined') ? SOCIAL_UNIT_24_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_24_DATA !== 'undefined' && SOCIAL_UNIT_24_DATA.subSections) ? SOCIAL_UNIT_24_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            geoHighlights: (typeof SOCIAL_UNIT_24_DATA !== 'undefined') ? SOCIAL_UNIT_24_DATA.geoHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_24_DATA !== 'undefined') ? SOCIAL_UNIT_24_DATA.timeline : []
+          },
+          {
+            id: 'soc_h8',
+            unit: 'வரலாறு 8',
+            title: 'தேசியம்: காந்திய காலகட்டம் (Nationalism: Gandhian Phase)',
+            qCount: (typeof SOCIAL_UNIT_25_DATA !== 'undefined' && SOCIAL_UNIT_25_DATA.subSections) ? SOCIAL_UNIT_25_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_25_DATA !== 'undefined') ? SOCIAL_UNIT_25_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_25_DATA !== 'undefined' && SOCIAL_UNIT_25_DATA.subSections) ? SOCIAL_UNIT_25_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_UNIT_25_DATA !== 'undefined') ? SOCIAL_UNIT_25_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_25_DATA !== 'undefined') ? SOCIAL_UNIT_25_DATA.timeline : []
+          },
+          {
+            id: 'soc_h9',
+            unit: 'வரலாறு 9',
+            title: 'தமிழ்நாட்டில் விடுதலைப் போராட்டம் (Freedom Struggle in Tamil Nadu)',
+            qCount: (typeof SOCIAL_UNIT_26_DATA !== 'undefined' && SOCIAL_UNIT_26_DATA.subSections) ? SOCIAL_UNIT_26_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_26_DATA !== 'undefined') ? SOCIAL_UNIT_26_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_26_DATA !== 'undefined' && SOCIAL_UNIT_26_DATA.subSections) ? SOCIAL_UNIT_26_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_UNIT_26_DATA !== 'undefined') ? SOCIAL_UNIT_26_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_26_DATA !== 'undefined') ? SOCIAL_UNIT_26_DATA.timeline : []
+          },
+          {
+            id: 'soc_h10',
+            unit: 'வரலாறு 10',
+            title: 'தமிழ்நாட்டில் சமூக மாற்றங்கள் (Social Transformation in Tamil Nadu)',
+            qCount: (typeof SOCIAL_UNIT_27_DATA !== 'undefined' && SOCIAL_UNIT_27_DATA.subSections) ? SOCIAL_UNIT_27_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_UNIT_27_DATA !== 'undefined') ? SOCIAL_UNIT_27_DATA.subSections : [],
+            questions: (typeof SOCIAL_UNIT_27_DATA !== 'undefined' && SOCIAL_UNIT_27_DATA.subSections) ? SOCIAL_UNIT_27_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_UNIT_27_DATA !== 'undefined') ? SOCIAL_UNIT_27_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_UNIT_27_DATA !== 'undefined') ? SOCIAL_UNIT_27_DATA.timeline : []
           }
         ]
       },
@@ -5667,6 +6005,136 @@
             questions: (typeof SOCIAL_EM_UNIT_14_DATA !== 'undefined' && SOCIAL_EM_UNIT_14_DATA.subSections) ? SOCIAL_EM_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
             geoHighlights: (typeof SOCIAL_EM_UNIT_14_DATA !== 'undefined') ? SOCIAL_EM_UNIT_14_DATA.geoHighlights : [],
             timeline: (typeof SOCIAL_EM_UNIT_14_DATA !== 'undefined') ? SOCIAL_EM_UNIT_14_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_c4',
+            unit: 'Civics 4',
+            title: "India's Foreign Policy",
+            qCount: (typeof SOCIAL_EM_UNIT_15_DATA !== 'undefined' && SOCIAL_EM_UNIT_15_DATA.subSections) ? SOCIAL_EM_UNIT_15_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_15_DATA !== 'undefined') ? SOCIAL_EM_UNIT_15_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_15_DATA !== 'undefined' && SOCIAL_EM_UNIT_15_DATA.subSections) ? SOCIAL_EM_UNIT_15_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            civicsHighlights: (typeof SOCIAL_EM_UNIT_15_DATA !== 'undefined') ? SOCIAL_EM_UNIT_15_DATA.civicsHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_15_DATA !== 'undefined') ? SOCIAL_EM_UNIT_15_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_e4',
+            unit: 'Economics 4',
+            title: 'Government and Taxes',
+            qCount: (typeof SOCIAL_EM_UNIT_16_DATA !== 'undefined' && SOCIAL_EM_UNIT_16_DATA.subSections) ? SOCIAL_EM_UNIT_16_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_16_DATA !== 'undefined') ? SOCIAL_EM_UNIT_16_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_16_DATA !== 'undefined' && SOCIAL_EM_UNIT_16_DATA.subSections) ? SOCIAL_EM_UNIT_16_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            econHighlights: (typeof SOCIAL_EM_UNIT_16_DATA !== 'undefined') ? SOCIAL_EM_UNIT_16_DATA.econHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_16_DATA !== 'undefined') ? SOCIAL_EM_UNIT_16_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_h5',
+            unit: 'History 5',
+            title: 'Social and Religious Reform Movements in the 19th Century',
+            qCount: (typeof SOCIAL_EM_UNIT_17_DATA !== 'undefined' && SOCIAL_EM_UNIT_17_DATA.subSections) ? SOCIAL_EM_UNIT_17_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_17_DATA !== 'undefined') ? SOCIAL_EM_UNIT_17_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_17_DATA !== 'undefined' && SOCIAL_EM_UNIT_17_DATA.subSections) ? SOCIAL_EM_UNIT_17_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_EM_UNIT_17_DATA !== 'undefined') ? SOCIAL_EM_UNIT_17_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_17_DATA !== 'undefined') ? SOCIAL_EM_UNIT_17_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_g5',
+            unit: 'Geography 5',
+            title: 'India - Population, Transport, Communication and Trade',
+            qCount: (typeof SOCIAL_EM_UNIT_18_DATA !== 'undefined' && SOCIAL_EM_UNIT_18_DATA.subSections) ? SOCIAL_EM_UNIT_18_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_18_DATA !== 'undefined') ? SOCIAL_EM_UNIT_18_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_18_DATA !== 'undefined' && SOCIAL_EM_UNIT_18_DATA.subSections) ? SOCIAL_EM_UNIT_18_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            geoHighlights: (typeof SOCIAL_EM_UNIT_18_DATA !== 'undefined') ? SOCIAL_EM_UNIT_18_DATA.geoHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_18_DATA !== 'undefined') ? SOCIAL_EM_UNIT_18_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_c5',
+            unit: 'Civics 5',
+            title: "India's International Relations",
+            qCount: (typeof SOCIAL_EM_UNIT_19_DATA !== 'undefined' && SOCIAL_EM_UNIT_19_DATA.subSections) ? SOCIAL_EM_UNIT_19_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_19_DATA !== 'undefined') ? SOCIAL_EM_UNIT_19_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_19_DATA !== 'undefined' && SOCIAL_EM_UNIT_19_DATA.subSections) ? SOCIAL_EM_UNIT_19_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            civicsHighlights: (typeof SOCIAL_EM_UNIT_19_DATA !== 'undefined') ? SOCIAL_EM_UNIT_19_DATA.civicsHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_19_DATA !== 'undefined') ? SOCIAL_EM_UNIT_19_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_e5',
+            unit: 'Economics 5',
+            title: 'Industrial Clusters in Tamil Nadu',
+            qCount: (typeof SOCIAL_EM_UNIT_20_DATA !== 'undefined' && SOCIAL_EM_UNIT_20_DATA.subSections) ? SOCIAL_EM_UNIT_20_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_20_DATA !== 'undefined') ? SOCIAL_EM_UNIT_20_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_20_DATA !== 'undefined' && SOCIAL_EM_UNIT_20_DATA.subSections) ? SOCIAL_EM_UNIT_20_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            econHighlights: (typeof SOCIAL_EM_UNIT_20_DATA !== 'undefined') ? SOCIAL_EM_UNIT_20_DATA.econHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_20_DATA !== 'undefined') ? SOCIAL_EM_UNIT_20_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_h6',
+            unit: 'History 6',
+            title: 'Early Revolts Against British Rule in Tamil Nadu',
+            qCount: (typeof SOCIAL_EM_UNIT_21_DATA !== 'undefined' && SOCIAL_EM_UNIT_21_DATA.subSections) ? SOCIAL_EM_UNIT_21_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_21_DATA !== 'undefined') ? SOCIAL_EM_UNIT_21_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_21_DATA !== 'undefined' && SOCIAL_EM_UNIT_21_DATA.subSections) ? SOCIAL_EM_UNIT_21_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_EM_UNIT_21_DATA !== 'undefined') ? SOCIAL_EM_UNIT_21_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_21_DATA !== 'undefined') ? SOCIAL_EM_UNIT_21_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_g6',
+            unit: 'Geography 6',
+            title: 'Physical Geography of Tamil Nadu',
+            qCount: (typeof SOCIAL_EM_UNIT_22_DATA !== 'undefined' && SOCIAL_EM_UNIT_22_DATA.subSections) ? SOCIAL_EM_UNIT_22_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_22_DATA !== 'undefined') ? SOCIAL_EM_UNIT_22_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_22_DATA !== 'undefined' && SOCIAL_EM_UNIT_22_DATA.subSections) ? SOCIAL_EM_UNIT_22_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            geoHighlights: (typeof SOCIAL_EM_UNIT_22_DATA !== 'undefined') ? SOCIAL_EM_UNIT_22_DATA.geoHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_22_DATA !== 'undefined') ? SOCIAL_EM_UNIT_22_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_h7',
+            unit: 'History 7',
+            title: 'Anti-Colonial Movements and the Birth of Nationalism',
+            qCount: (typeof SOCIAL_EM_UNIT_23_DATA !== 'undefined' && SOCIAL_EM_UNIT_23_DATA.subSections) ? SOCIAL_EM_UNIT_23_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_23_DATA !== 'undefined') ? SOCIAL_EM_UNIT_23_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_23_DATA !== 'undefined' && SOCIAL_EM_UNIT_23_DATA.subSections) ? SOCIAL_EM_UNIT_23_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_EM_UNIT_23_DATA !== 'undefined') ? SOCIAL_EM_UNIT_23_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_23_DATA !== 'undefined') ? SOCIAL_EM_UNIT_23_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_g7',
+            unit: 'Geography 7',
+            title: 'Human Geography of Tamil Nadu',
+            qCount: (typeof SOCIAL_EM_UNIT_24_DATA !== 'undefined' && SOCIAL_EM_UNIT_24_DATA.subSections) ? SOCIAL_EM_UNIT_24_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_24_DATA !== 'undefined') ? SOCIAL_EM_UNIT_24_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_24_DATA !== 'undefined' && SOCIAL_EM_UNIT_24_DATA.subSections) ? SOCIAL_EM_UNIT_24_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            geoHighlights: (typeof SOCIAL_EM_UNIT_24_DATA !== 'undefined') ? SOCIAL_EM_UNIT_24_DATA.geoHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_24_DATA !== 'undefined') ? SOCIAL_EM_UNIT_24_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_h8',
+            unit: 'History 8',
+            title: 'Nationalism: Gandhian Phase',
+            qCount: (typeof SOCIAL_EM_UNIT_25_DATA !== 'undefined' && SOCIAL_EM_UNIT_25_DATA.subSections) ? SOCIAL_EM_UNIT_25_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_25_DATA !== 'undefined') ? SOCIAL_EM_UNIT_25_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_25_DATA !== 'undefined' && SOCIAL_EM_UNIT_25_DATA.subSections) ? SOCIAL_EM_UNIT_25_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_EM_UNIT_25_DATA !== 'undefined') ? SOCIAL_EM_UNIT_25_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_25_DATA !== 'undefined') ? SOCIAL_EM_UNIT_25_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_h9',
+            unit: 'History 9',
+            title: 'Freedom Struggle in Tamil Nadu',
+            qCount: (typeof SOCIAL_EM_UNIT_26_DATA !== 'undefined' && SOCIAL_EM_UNIT_26_DATA.subSections) ? SOCIAL_EM_UNIT_26_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_26_DATA !== 'undefined') ? SOCIAL_EM_UNIT_26_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_26_DATA !== 'undefined' && SOCIAL_EM_UNIT_26_DATA.subSections) ? SOCIAL_EM_UNIT_26_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_EM_UNIT_26_DATA !== 'undefined') ? SOCIAL_EM_UNIT_26_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_26_DATA !== 'undefined') ? SOCIAL_EM_UNIT_26_DATA.timeline : []
+          },
+          {
+            id: 'soc_em_h10',
+            unit: 'History 10',
+            title: 'Social Transformation in Tamil Nadu',
+            qCount: (typeof SOCIAL_EM_UNIT_27_DATA !== 'undefined' && SOCIAL_EM_UNIT_27_DATA.subSections) ? SOCIAL_EM_UNIT_27_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
+            subSections: (typeof SOCIAL_EM_UNIT_27_DATA !== 'undefined') ? SOCIAL_EM_UNIT_27_DATA.subSections : [],
+            questions: (typeof SOCIAL_EM_UNIT_27_DATA !== 'undefined' && SOCIAL_EM_UNIT_27_DATA.subSections) ? SOCIAL_EM_UNIT_27_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            historyHighlights: (typeof SOCIAL_EM_UNIT_27_DATA !== 'undefined') ? SOCIAL_EM_UNIT_27_DATA.historyHighlights : [],
+            timeline: (typeof SOCIAL_EM_UNIT_27_DATA !== 'undefined') ? SOCIAL_EM_UNIT_27_DATA.timeline : []
           }
         ]
       }
@@ -8217,6 +8685,252 @@
       lesson.questions = SOCIAL_EM_UNIT_14_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
       lesson.geoHighlights = SOCIAL_EM_UNIT_14_DATA.geoHighlights || [];
       lesson.timeline = SOCIAL_EM_UNIT_14_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u15' && typeof SCIENCE_UNIT_15_DATA !== 'undefined' && SCIENCE_UNIT_15_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_15_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_15_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_15_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u15' && typeof SCIENCE_EM_UNIT_15_DATA !== 'undefined' && SCIENCE_EM_UNIT_15_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_15_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_15_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_15_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u16' && typeof SCIENCE_UNIT_16_DATA !== 'undefined' && SCIENCE_UNIT_16_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_16_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_16_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_16_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u16' && typeof SCIENCE_EM_UNIT_16_DATA !== 'undefined' && SCIENCE_EM_UNIT_16_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_16_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_16_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_16_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u17' && typeof SCIENCE_UNIT_17_DATA !== 'undefined' && SCIENCE_UNIT_17_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_17_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_17_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_17_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u17' && typeof SCIENCE_EM_UNIT_17_DATA !== 'undefined' && SCIENCE_EM_UNIT_17_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_17_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_17_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_17_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u18' && typeof SCIENCE_UNIT_18_DATA !== 'undefined' && SCIENCE_UNIT_18_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_18_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_18_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_18_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u18' && typeof SCIENCE_EM_UNIT_18_DATA !== 'undefined' && SCIENCE_EM_UNIT_18_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_18_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_18_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_18_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u19' && typeof SCIENCE_UNIT_19_DATA !== 'undefined' && SCIENCE_UNIT_19_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_19_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_19_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_19_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u19' && typeof SCIENCE_EM_UNIT_19_DATA !== 'undefined' && SCIENCE_EM_UNIT_19_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_19_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_19_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_19_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u20' && typeof SCIENCE_UNIT_20_DATA !== 'undefined' && SCIENCE_UNIT_20_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_20_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_20_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_20_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u20' && typeof SCIENCE_EM_UNIT_20_DATA !== 'undefined' && SCIENCE_EM_UNIT_20_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_20_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_20_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_20_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u21' && typeof SCIENCE_UNIT_21_DATA !== 'undefined' && SCIENCE_UNIT_21_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_21_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_21_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_21_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u21' && typeof SCIENCE_EM_UNIT_21_DATA !== 'undefined' && SCIENCE_EM_UNIT_21_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_21_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_21_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_21_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u22' && typeof SCIENCE_UNIT_22_DATA !== 'undefined' && SCIENCE_UNIT_22_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_22_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_22_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_22_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u22' && typeof SCIENCE_EM_UNIT_22_DATA !== 'undefined' && SCIENCE_EM_UNIT_22_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_22_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_22_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_22_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_u23' && typeof SCIENCE_UNIT_23_DATA !== 'undefined' && SCIENCE_UNIT_23_DATA.subSections) {
+      lesson.subSections = SCIENCE_UNIT_23_DATA.subSections;
+      lesson.questions = SCIENCE_UNIT_23_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_UNIT_23_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'sci_em_u23' && typeof SCIENCE_EM_UNIT_23_DATA !== 'undefined' && SCIENCE_EM_UNIT_23_DATA.subSections) {
+      lesson.subSections = SCIENCE_EM_UNIT_23_DATA.subSections;
+      lesson.questions = SCIENCE_EM_UNIT_23_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_EM_UNIT_23_DATA.formulas || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_c4' && typeof SOCIAL_UNIT_15_DATA !== 'undefined' && SOCIAL_UNIT_15_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_15_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_15_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.civicsHighlights = SOCIAL_UNIT_15_DATA.civicsHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_15_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_c4' && typeof SOCIAL_EM_UNIT_15_DATA !== 'undefined' && SOCIAL_EM_UNIT_15_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_15_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_15_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.civicsHighlights = SOCIAL_EM_UNIT_15_DATA.civicsHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_15_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_e4' && typeof SOCIAL_UNIT_16_DATA !== 'undefined' && SOCIAL_UNIT_16_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_16_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_16_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.econHighlights = SOCIAL_UNIT_16_DATA.econHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_16_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_e4' && typeof SOCIAL_EM_UNIT_16_DATA !== 'undefined' && SOCIAL_EM_UNIT_16_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_16_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_16_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.econHighlights = SOCIAL_EM_UNIT_16_DATA.econHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_16_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_h5' && typeof SOCIAL_UNIT_17_DATA !== 'undefined' && SOCIAL_UNIT_17_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_17_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_17_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_UNIT_17_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_17_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_h5' && typeof SOCIAL_EM_UNIT_17_DATA !== 'undefined' && SOCIAL_EM_UNIT_17_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_17_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_17_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_EM_UNIT_17_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_17_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_g5' && typeof SOCIAL_UNIT_18_DATA !== 'undefined' && SOCIAL_UNIT_18_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_18_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_18_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.geoHighlights = SOCIAL_UNIT_18_DATA.geoHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_18_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_g5' && typeof SOCIAL_EM_UNIT_18_DATA !== 'undefined' && SOCIAL_EM_UNIT_18_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_18_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_18_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.geoHighlights = SOCIAL_EM_UNIT_18_DATA.geoHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_18_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_c5' && typeof SOCIAL_UNIT_19_DATA !== 'undefined' && SOCIAL_UNIT_19_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_19_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_19_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.civicsHighlights = SOCIAL_UNIT_19_DATA.civicsHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_19_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_c5' && typeof SOCIAL_EM_UNIT_19_DATA !== 'undefined' && SOCIAL_EM_UNIT_19_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_19_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_19_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.civicsHighlights = SOCIAL_EM_UNIT_19_DATA.civicsHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_19_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_e5' && typeof SOCIAL_UNIT_20_DATA !== 'undefined' && SOCIAL_UNIT_20_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_20_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_20_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.econHighlights = SOCIAL_UNIT_20_DATA.econHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_20_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_e5' && typeof SOCIAL_EM_UNIT_20_DATA !== 'undefined' && SOCIAL_EM_UNIT_20_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_20_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_20_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.econHighlights = SOCIAL_EM_UNIT_20_DATA.econHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_20_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_h6' && typeof SOCIAL_UNIT_21_DATA !== 'undefined' && SOCIAL_UNIT_21_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_21_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_21_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_UNIT_21_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_21_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_h6' && typeof SOCIAL_EM_UNIT_21_DATA !== 'undefined' && SOCIAL_EM_UNIT_21_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_21_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_21_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_EM_UNIT_21_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_21_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_g6' && typeof SOCIAL_UNIT_22_DATA !== 'undefined' && SOCIAL_UNIT_22_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_22_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_22_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.geoHighlights = SOCIAL_UNIT_22_DATA.geoHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_22_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_g6' && typeof SOCIAL_EM_UNIT_22_DATA !== 'undefined' && SOCIAL_EM_UNIT_22_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_22_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_22_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.geoHighlights = SOCIAL_EM_UNIT_22_DATA.geoHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_22_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_h7' && typeof SOCIAL_UNIT_23_DATA !== 'undefined' && SOCIAL_UNIT_23_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_23_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_23_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_UNIT_23_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_23_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_h7' && typeof SOCIAL_EM_UNIT_23_DATA !== 'undefined' && SOCIAL_EM_UNIT_23_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_23_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_23_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_EM_UNIT_23_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_23_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_g7' && typeof SOCIAL_UNIT_24_DATA !== 'undefined' && SOCIAL_UNIT_24_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_24_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_24_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.geoHighlights = SOCIAL_UNIT_24_DATA.geoHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_24_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_g7' && typeof SOCIAL_EM_UNIT_24_DATA !== 'undefined' && SOCIAL_EM_UNIT_24_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_24_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_24_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.geoHighlights = SOCIAL_EM_UNIT_24_DATA.geoHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_24_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_h8' && typeof SOCIAL_UNIT_25_DATA !== 'undefined' && SOCIAL_UNIT_25_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_25_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_25_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_UNIT_25_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_25_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_h8' && typeof SOCIAL_EM_UNIT_25_DATA !== 'undefined' && SOCIAL_EM_UNIT_25_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_25_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_25_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_EM_UNIT_25_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_25_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_h9' && typeof SOCIAL_UNIT_26_DATA !== 'undefined' && SOCIAL_UNIT_26_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_26_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_26_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_UNIT_26_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_26_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_h9' && typeof SOCIAL_EM_UNIT_26_DATA !== 'undefined' && SOCIAL_EM_UNIT_26_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_26_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_26_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_EM_UNIT_26_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_26_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_h10' && typeof SOCIAL_UNIT_27_DATA !== 'undefined' && SOCIAL_UNIT_27_DATA.subSections) {
+      lesson.subSections = SOCIAL_UNIT_27_DATA.subSections;
+      lesson.questions = SOCIAL_UNIT_27_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_UNIT_27_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_UNIT_27_DATA.timeline || [];
+      lesson.qCount = lesson.questions.length;
+    } else if (lesId === 'soc_em_h10' && typeof SOCIAL_EM_UNIT_27_DATA !== 'undefined' && SOCIAL_EM_UNIT_27_DATA.subSections) {
+      lesson.subSections = SOCIAL_EM_UNIT_27_DATA.subSections;
+      lesson.questions = SOCIAL_EM_UNIT_27_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.historyHighlights = SOCIAL_EM_UNIT_27_DATA.historyHighlights || [];
+      lesson.timeline = SOCIAL_EM_UNIT_27_DATA.timeline || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'soc_em_g3' && typeof SOCIAL_EM_UNIT_10_DATA !== 'undefined' && SOCIAL_EM_UNIT_10_DATA.subSections) {
       lesson.subSections = SOCIAL_EM_UNIT_10_DATA.subSections;
@@ -13851,7 +14565,7 @@
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261119_v98')
+        navigator.serviceWorker.register('./sw.js?v=20261119_v99')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

@@ -132,22 +132,22 @@
 <script src="data_english_u6.js?v=20261104_v51"></script>
 <script src="data_english_u7.js?v=20261116_v82"></script>
 <script src="data_english_writing.js?v=20261116_v84"></script>
-  <script src="data_maths_tm_u1.js?v=20261119_v102"></script>
+  <script src="data_maths_tm_u1.js?v=20261119_v103"></script>
 <script src="data_maths_tm_u2.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u4.js?v=20261105_v56"></script>
 <script src="data_maths_tm_u5.js?v=20261104_v51"></script>
 <script src="data_maths_tm_u6.js?v=20261105_v56"></script>
-<script src="data_maths_tm_u7.js?v=20261119_v102"></script>
-<script src="data_maths_tm_u8.js?v=20261119_v102"></script>
-  <script src="data_maths_em_u1.js?v=20261119_v102"></script>
+<script src="data_maths_tm_u7.js?v=20261119_v103"></script>
+<script src="data_maths_tm_u8.js?v=20261119_v103"></script>
+  <script src="data_maths_em_u1.js?v=20261119_v103"></script>
 <script src="data_maths_em_u2.js?v=20261103_v50"></script>
 <script src="data_maths_em_u3.js?v=20261031_v31"></script>
 <script src="data_maths_em_u4.js?v=20261105_v56"></script>
 <script src="data_maths_em_u5.js?v=20261104_v51"></script>
 <script src="data_maths_em_u6.js?v=20261105_v56"></script>
-<script src="data_maths_em_u7.js?v=20261119_v102"></script>
-<script src="data_maths_em_u8.js?v=20261119_v102"></script>
+<script src="data_maths_em_u7.js?v=20261119_v103"></script>
+<script src="data_maths_em_u8.js?v=20261119_v103"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
 <script src="data_science_u3.js?v=20261031_v31"></script>
@@ -1474,6 +1474,31 @@
     color: #f8fafc;
     line-height: 1.85;
     font-size: 15.5px;
+  }
+  /* Safeguard: Ensure high-contrast dark text on any light container inside chalkboard / blackboard */
+  .bb-board [style*="background:#ffffff"],
+  .bb-board [style*="background: #ffffff"],
+  .bb-board [style*="background:white"],
+  .bb-board [style*="background: white"],
+  .bb-board [style*="background:#f8fafc"],
+  .bb-board [style*="background: #f8fafc"],
+  .chalk-content [style*="background:#ffffff"],
+  .chalk-content [style*="background: #ffffff"],
+  .chalk-content [style*="background:white"],
+  .chalk-content [style*="background: white"],
+  .chalk-content [style*="background:#f8fafc"],
+  .chalk-content [style*="background: #f8fafc"] {
+    color: #0f172a !important;
+  }
+  .bb-board [style*="background:#ffffff"] *,
+  .bb-board [style*="background: #ffffff"] *,
+  .bb-board [style*="background:white"] *,
+  .bb-board [style*="background: white"] *,
+  .chalk-content [style*="background:#ffffff"] *,
+  .chalk-content [style*="background: #ffffff"] *,
+  .chalk-content [style*="background:white"] *,
+  .chalk-content [style*="background: white"] * {
+    color: #0f172a !important;
   }
   .bb-step-card {
     background: rgba(0, 0, 0, 0.28);
@@ -12675,10 +12700,10 @@
         qEl.innerHTML = `<span style="color:#fef08a; font-weight:800;">${isEm ? 'Question: ' : 'வினா: '}</span>${item.q}`;
       }
 
-      // Configure View Tabs for ALL blackboard questions (hide for Maths where animated steps are removed)
-      const isMath = currentSubject && (currentSubject.id.includes('maths') || currentSubject.id.includes('math'));
+      // Configure View Tabs for ALL blackboard questions
+      const hasSteps = item.blackboard && item.blackboard.steps && item.blackboard.steps.length > 1;
       if (viewTabs) {
-        if (isMath) {
+        if (!hasSteps) {
           viewTabs.style.display = 'none';
         } else {
           viewTabs.style.display = 'flex';
@@ -12689,7 +12714,7 @@
 
       const stepNav = document.getElementById('bbStepNav');
       const controls = document.querySelector('.bb-controls');
-      if (isMath) {
+      if (!hasSteps) {
         if (stepNav) stepNav.style.display = 'none';
         if (controls) controls.style.display = 'none';
       } else {
@@ -12698,20 +12723,20 @@
       }
 
       // Preserve Blackboard URL across phone calls and reloads
+      const defaultView = (initialView === 'board') ? 'board' : (hasSteps ? 'steps' : 'board');
       if (currentSubject && currentLesson) {
-        const bbHash = `#${currentSubject.id}/${currentLesson.id}/bb_${qId}_${isMath ? 'board' : (initialView || 'steps')}`;
+        const bbHash = `#${currentSubject.id}/${currentLesson.id}/bb_${qId}_${defaultView}`;
         if (window.location.hash !== bbHash) {
           try {
-            history.pushState({ bbQId: qId, initialView: isMath ? 'board' : (initialView || 'steps') }, '', bbHash);
+            history.pushState({ bbQId: qId, initialView: defaultView }, '', bbHash);
           } catch(e) {
             window.location.hash = bbHash;
           }
         }
       }
 
-      const targetView = isMath ? 'board' : ((initialView === 'board') ? 'board' : 'steps');
-      this.switchView(targetView, true);
-      if (!isMath) {
+      this.switchView(defaultView, true);
+      if (defaultView === 'steps') {
         this.renderStepNav();
         this.renderCurrentStep(false);
         this.updateControlsUI();
@@ -12720,9 +12745,9 @@
       modal.classList.add('open');
       modal.classList.add('show');
 
-      // Auto start explanation only if steps view and NOT maths
+      // Auto start explanation only if steps view
       setTimeout(() => {
-        if (!isMath && this.currentView === 'steps') {
+        if (this.currentView === 'steps') {
           this.play();
         }
       }, 350);
@@ -13498,8 +13523,7 @@
           }
         }
       }
-      // For Maths, always open Full Blackboard view (Animated BB removed)
-      blackboardPlayer.open(qId, isMath ? 'board' : (initialView || 'steps'));
+      blackboardPlayer.open(qId, initialView || 'steps');
     }
   }
 
@@ -14006,7 +14030,7 @@
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261119_v102')
+        navigator.serviceWorker.register('./sw.js?v=20261119_v103')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

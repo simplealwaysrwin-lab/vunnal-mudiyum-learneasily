@@ -76,20 +76,152 @@ const MATHS_TM_UNIT_7_DATA = {
           examTag: "பொதுத்தேர்வு வினா",
           isImportant: true,
           q: "ஒரு திண்ம பொம்மையானது அரைக்கோளத்தின் மேல் கூம்பு இணைந்த வடிவில் உள்ளது. கூம்பின் உயரம் 4 செ.மீ மற்றும் விட்டம் 6 செ.மீ எனில், பொம்மையின் கனஅளவைக் காண்க. (π = 3.14 என்க)",
-          ans: `<div style="line-height:1.8;">
-            <b>கொடுக்கப்பட்டது:</b><br>
-            விட்டம் = 6 செ.மீ ➔ ஆரம் r = 3 செ.மீ.<br>
-            கூம்பின் உயரம் h = 4 செ.மீ.<br>
-            அரைக்கோளத்தின் ஆரம் r = 3 செ.மீ.<br><br>
-            <b>சூத்திரம்:</b><br>
-            பொம்மையின் மொத்தக் கனஅளவு = கூம்பின் கனஅளவு + அரைக்கோளத்தின் கனஅளவு<br>
-            = (1/3)πr²h + (2/3)πr³ = (1/3)πr²(h + 2r)<br><br>
-            <b>பிரதியிடல்:</b><br>
-            = (1/3) × 3.14 × 3² × [4 + 2(3)]<br>
-            = (1/3) × 3.14 × 9 × [4 + 6]<br>
-            = 3.14 × 3 × 10 = <b>94.2 செ.மீ³</b>.<br>
-            <b>விடை:</b> பொம்மையின் கனஅளவு <b>94.2 செ.மீ³</b> ஆகும்.
-          </div>`
+          diagramCaption: "திண்மப் பொம்மையின் வடிவம்: அடிப்புற அரைக்கோளம் (r = 3 செ.மீ) மற்றும் மேற்புறக் கூம்பு (h = 4 செ.மீ, r = 3 செ.மீ)",
+          diagramSvg: `<div style="max-width:320px; margin:12px auto; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); text-align:center;">
+            <div style="font-size:12px; font-weight:700; color:#1e3a8a; margin-bottom:8px;">🎯 திண்மப் பொம்மையின் வரைபடம் (Solid Toy Illustration)</div>
+            <svg viewBox="0 0 320 370" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:320/370;">
+              <defs>
+                <linearGradient id="coneGrad7_1_tm" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#fef3c7"/>
+                  <stop offset="50%" stop-color="#fde68a"/>
+                  <stop offset="100%" stop-color="#fef3c7"/>
+                </linearGradient>
+                <linearGradient id="hemiGrad7_1_tm" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#ffedd5"/>
+                  <stop offset="100%" stop-color="#fed7aa"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Cone Body -->
+              <polygon points="160,45 80,185 240,185" fill="url(#coneGrad7_1_tm)" stroke="#d97706" stroke-width="2.2" stroke-linejoin="round"/>
+
+              <!-- Hemisphere Body -->
+              <path d="M 80,185 A 80,80 0 0,0 240,185" fill="url(#hemiGrad7_1_tm)" stroke="#ea580c" stroke-width="2.5"/>
+
+              <!-- Common Circular Interface Ellipse -->
+              <ellipse cx="160" cy="185" rx="80" ry="24" fill="#fde68a" fill-opacity="0.5" stroke="#d97706" stroke-width="1.8" stroke-dasharray="5,4"/>
+
+              <!-- Cone Vertical Height Line (h = 4 cm) -->
+              <line x1="160" y1="45" x2="160" y2="185" stroke="#475569" stroke-width="2" stroke-dasharray="4,4"/>
+              <rect x="160" y="173" width="12" height="12" fill="none" stroke="#475569" stroke-width="1.5"/>
+
+              <!-- Radius Line on Interface (r = 3 cm) -->
+              <line x1="160" y1="185" x2="240" y2="185" stroke="#dc2626" stroke-width="2.5"/>
+              <circle cx="160" cy="185" r="3.5" fill="#1e293b"/>
+              <circle cx="240" cy="185" r="3" fill="#dc2626"/>
+
+              <!-- Height Dimension Line on Left (h = 4 cm) -->
+              <line x1="55" y1="45" x2="55" y2="185" stroke="#2563eb" stroke-width="1.5"/>
+              <line x1="48" y1="45" x2="62" y2="45" stroke="#2563eb" stroke-width="1.5"/>
+              <line x1="48" y1="185" x2="62" y2="185" stroke="#2563eb" stroke-width="1.5"/>
+              <text x="45" y="120" font-size="12" fill="#2563eb" font-weight="bold" text-anchor="end">h = 4 cm</text>
+
+              <!-- Diameter Dimension Line Below (d = 6 cm) -->
+              <line x1="80" y1="285" x2="240" y2="285" stroke="#475569" stroke-width="1.5"/>
+              <line x1="80" y1="278" x2="80" y2="292" stroke="#475569" stroke-width="1.5"/>
+              <line x1="240" y1="278" x2="240" y2="292" stroke="#475569" stroke-width="1.5"/>
+              <text x="160" y="303" font-size="12" fill="#475569" font-weight="bold" text-anchor="middle">விட்டம் d = 6 cm (ஆரம் r = 3 cm)</text>
+
+              <!-- Labels & Annotations -->
+              <circle cx="160" cy="45" r="3" fill="#d97706"/>
+              <text x="160" y="32" font-size="12" fill="#b45309" font-weight="bold" text-anchor="middle">கூம்பு உச்சி (Apex)</text>
+
+              <!-- Cone Name Badge -->
+              <rect x="180" y="95" width="125" height="24" rx="4" fill="#ffffff" stroke="#d97706" stroke-width="1"/>
+              <text x="242" y="111" font-size="11" fill="#b45309" font-weight="bold" text-anchor="middle">கூம்பு: V₂ = ⅓πr²h</text>
+
+              <!-- Radius Label -->
+              <text x="200" y="177" font-size="12" fill="#dc2626" font-weight="bold" text-anchor="middle">r = 3 cm</text>
+
+              <!-- Hemisphere Name Badge -->
+              <rect x="95" y="225" width="130" height="24" rx="4" fill="#ffffff" stroke="#ea580c" stroke-width="1"/>
+              <text x="160" y="241" font-size="11" fill="#c2410c" font-weight="bold" text-anchor="middle">அரைக்கோளம்: V₁ = ⅔πr³</text>
+
+              <!-- Bottom Result Callout -->
+              <rect x="40" y="325" width="240" height="32" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+              <text x="160" y="346" font-size="12" fill="#1d4ed8" font-weight="bold" text-anchor="middle">மொத்தக் கனஅளவு V = 94.2 cm³</text>
+            </svg>
+          </div>`,
+          ans: `<div style="line-height:1.9;">
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 1: கொடுக்கப்பட்ட விவரங்கள் (Given Data):</b><br>
+              • கூம்பின் உயரம் h = 4 செ.மீ<br>
+              • அடிப்புற விட்டம் d = 6 செ.மீ<br>
+              • பொது ஆரம் r = 6 / 2 = <b>3 செ.மீ</b><br>
+              • π = <b>3.14</b> (வினாவில் கொடுக்கப்பட்ட நிபந்தனை)
+            </div>
+
+            <div style="background:#f8fafc; border-left:4px solid #0284c7; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 2: தேவையான சூத்திரங்கள் (Formulas):</b><br>
+              • பொம்மையின் மொத்தக் கனஅளவு V = அரைக்கோளத்தின் கனஅளவு (V₁) + கூம்பின் கனஅளவு (V₂)<br>
+              • அரைக்கோளத்தின் கனஅளவு V₁ = <b>(2/3)πr³</b><br>
+              • கூம்பின் கனஅளவு V₂ = <b>(1/3)πr²h</b>
+            </div>
+
+            <div style="background:#fff7ed; border-left:4px solid #ea580c; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 3: அரைக்கோளத்தின் கனஅளவு (V₁):</b><br>
+              V₁ = (2/3) × 3.14 × (3)³<br>
+              = (2/3) × 3.14 × 27<br>
+              = 2 × 3.14 × 9 = 18 × 3.14 = <b>56.52 செ.மீ³</b>
+            </div>
+
+            <div style="background:#fefce8; border-left:4px solid #eab308; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 4: கூம்பின் கனஅளவு (V₂):</b><br>
+              V₂ = (1/3) × 3.14 × (3)² × 4<br>
+              = (1/3) × 3.14 × 9 × 4<br>
+              = 3.14 × 3 × 4 = 3.14 × 12 = <b>37.68 செ.மீ³</b>
+            </div>
+
+            <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 5: பொம்மையின் மொத்தக் கனஅளவு (V):</b><br>
+              V = V₁ + V₂<br>
+              = 56.52 + 37.68 = <b>94.2 செ.மீ³</b><br><br>
+              <div style="background:#ffffff; border:1px dashed #16a34a; padding:8px 12px; border-radius:6px;">
+                <b>மாற்று முறை (காரணி முறை):</b><br>
+                V = (1/3)πr²(h + 2r)<br>
+                = (1/3) × 3.14 × 3² × [4 + 2(3)]<br>
+                = (1/3) × 3.14 × 9 × [4 + 6]<br>
+                = 3.14 × 3 × 10 = <b>94.2 செ.மீ³</b>
+              </div>
+            </div>
+
+            <div style="margin-top:14px; padding:12px; background:#eff6ff; border:2px solid #2563eb; border-radius:8px; text-align:center;">
+              <span style="font-size:16px; font-weight:800; color:#1e40af;">இறுதி விடை: பொம்மையின் மொத்தக் கனஅளவு = 94.2 செ.மீ³</span>
+            </div>
+
+            <div style="margin-top:12px; font-size:13px; color:#475569; background:#f8fafc; padding:10px; border-radius:6px; border:1px solid #e2e8f0;">
+              <b>💡 அரசு பொதுத்தேர்வு குறிப்பு (Exam Tips):</b><br>
+              1. விட்டம் 6 செ.மீ எனில் ஆரம் r = 3 செ.மீ என மாற்றிய பின்னரே கணக்கிட வேண்டும்.<br>
+              2. வினாவில் π = 3.14 எனக் கொடுக்கப்பட்டுள்ளதால் 22/7-ஐப் பயன்படுத்தக் கூடாது.<br>
+              3. V₁ மற்றும் V₂ ஆகிய இரண்டையும் தனித்தனியாகக் கணக்கிட்டுக் கூட்டினால் அரசுத் தேர்வு மதிப்பீட்டில் படிநிலைகளுக்கான மதிப்பெண் (Step Marks) முழுமையாகக் கிடைக்கும்.
+            </div>
+          </div>`,
+          commonMistakes: [
+            {
+              type: "விட்டம் vs ஆரம் கவனக்குறைவு (d = 6 செ.மீ ➔ r = 3 செ.மீ)",
+              icon: "⚠️",
+              deduction: "-1 Mark",
+              mistake: "கணக்கில் விட்டம் = 6 செ.மீ எனக் கொடுக்கப்பட்டுள்ளது. அவசரத்தில் விட்டத்தையே ஆரமாகக் கொண்டு r = 6 செ.மீ எனப் பிரதியிட்டு தவறான விடையைப் பெறுதல்.",
+              mistakeTa: "விட்டம் கொடுக்கப்பட்டால் கட்டாயம் 2-ஆல் வகுத்து ஆரம் r = 6/2 = 3 செ.மீ என மாற்றிய பின்னரே சூத்திரத்தில் பயன்படுத்த வேண்டும்.",
+              correction: "முதலில் 'ஆரம் r = விட்டம் / 2 = 6 / 2 = 3 செ.மீ' எனத் தெளிவாக எழுதி கட்டமிட்டு பின்னர் கணக்கிடவும்."
+            },
+            {
+              type: "π-ன் மதிப்பில் பிழை (3.14-க்கு பதிலாக 22/7 பயன்படுத்துதல்)",
+              icon: "🔢",
+              deduction: "-½ Mark",
+              mistake: "வினாவில் 'π = 3.14 என்க' என்று தெளிவாகக் குறிப்பிடப்பட்டுள்ளது. அதை கவனிக்காமல் π = 22/7 எனப் பிரதியிட்டு தசமப் புள்ளி பிழைகளுடன் (94.28 என) விடை எழுதுதல்.",
+              mistakeTa: "வினாவில் π-ன் மதிப்பு குறிப்பிடப்பட்டிருந்தால் அதே மதிப்பை மட்டுமே பயன்படுத்த வேண்டும். இல்லையேல் அரசுத் தேர்வில் -½ மதிப்பெண் குறைக்கப்படும்.",
+              correction: "வினாவின் நிபந்தனைப்படி π = 3.14 என்றே பிரதியிட்டு, துல்லியமான விடை 94.2 செ.மீ³ என்பதைப் பெறவும்."
+            },
+            {
+              type: "கனஅளவு அலகு விடுபாடு (செ.மீ² vs செ.மீ³)",
+              icon: "📏",
+              deduction: "-½ Mark",
+              mistake: "இறுதி விடைக்கு கனஅளவின் சரியான அலகான 'கன செ.மீ' அல்லது 'செ.மீ³' என எழுதாமல், பரப்பளவின் அலகான 'செ.மீ²' என எழுதுதல் அல்லது அலகு எழுதாமல் வெறும் 94.2 என மட்டும் விடுதல்.",
+              mistakeTa: "அரசு விடைக்குறிப்பில் இறுதி விடையின் அலகிற்கு ½ மதிப்பெண் உண்டு. அலகு தவறினால் மதிப்பெண் குறையும்.",
+              correction: "இறுதி விடையை 'பொம்மையின் கனஅளவு = 94.2 செ.மீ³ (அல்லது கன செ.மீ)' என அலகோடு எழுதி கட்டமிடவும்."
+            }
+          ]
         }
       ]
     },
@@ -126,20 +258,160 @@ const MATHS_TM_UNIT_7_DATA = {
           examTag: "அரசு மாதிரி 5M",
           isImportant: true,
           q: "ஒரு கூடாரமானது உருளையின் மீது கூம்பு அமைந்த வடிவில் உள்ளது. உருளையின் விட்டம் 4 மீ, உயரம் 2.1 மீ மற்றும் கூம்பின் சாய்வுயரம் 2.8 மீ எனில், கூடாரம் அமைக்கத் தேவையான தார்ப்பாயின் பரப்பளவைக் காண்க.",
-          ans: `<div style="line-height:1.8;">
-            <b>கொடுக்கப்பட்டது:</b><br>
-            விட்டம் = 4 மீ ➔ ஆரம் r = 2 மீ.<br>
-            உருளையின் உயரம் h = 2.1 மீ.<br>
-            கூம்பின் சாய்வுயரம் l = 2.8 மீ.<br><br>
-            <b>சூத்திரம்:</b><br>
-            தார்ப்பாயின் மொத்தப் பரப்பு = உருளையின் வளைபரப்பு + கூம்பின் வளைபரப்பு<br>
-            = 2πrh + πrl = πr(2h + l)<br><br>
-            <b>கணக்கீடு:</b><br>
-            = (22/7) × 2 × [2(2.1) + 2.8]<br>
-            = (44/7) × [4.2 + 2.8]<br>
-            = (44/7) × 7.0 = <b>44 மீ²</b>.<br>
-            <b>விடை:</b> தேவையான தார்ப்பாயின் பரப்பு <b>44 மீ²</b> ஆகும்.
-          </div>`
+          diagramCaption: "கூடாரத்தின் வடிவம்: உருளை வடிவ அடிப்பகுதி (h = 2.1 மீ, r = 2 மீ) மற்றும் கூம்பு வடிவ மேற்பகுதி (l = 2.8 மீ). தரைப்பகுதி திறந்த நிலை.",
+          diagramSvg: `<div style="max-width:320px; margin:12px auto; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); text-align:center;">
+            <div style="font-size:12px; font-weight:700; color:#1e3a8a; margin-bottom:8px;">🎪 கூடாரத்தின் வடிவமைப்பு வரைபடம் (Tent Illustration)</div>
+            <svg viewBox="0 0 320 390" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:320/390;">
+              <defs>
+                <linearGradient id="tentRoofGrad7_2_tm" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#e0f2fe"/>
+                  <stop offset="50%" stop-color="#bae6fd"/>
+                  <stop offset="100%" stop-color="#e0f2fe"/>
+                </linearGradient>
+                <linearGradient id="tentWallGrad7_2_tm" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#f0fdf4"/>
+                  <stop offset="50%" stop-color="#dcfce7"/>
+                  <stop offset="100%" stop-color="#f0fdf4"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Conical Top (Roof) -->
+              <polygon points="160,40 70,140 250,140" fill="url(#tentRoofGrad7_2_tm)" stroke="#0284c7" stroke-width="2.2" stroke-linejoin="round"/>
+
+              <!-- Interface Ellipse (Between Cone & Cylinder) -->
+              <ellipse cx="160" cy="140" rx="90" ry="20" fill="#bae6fd" fill-opacity="0.4" stroke="#0284c7" stroke-width="1.8" stroke-dasharray="5,4"/>
+
+              <!-- Cylindrical Base Body (Walls) -->
+              <rect x="70" y="140" width="180" height="120" fill="url(#tentWallGrad7_2_tm)" stroke="none"/>
+              <line x1="70" y1="140" x2="70" y2="260" stroke="#16a34a" stroke-width="2.2"/>
+              <line x1="250" y1="140" x2="250" y2="260" stroke="#16a34a" stroke-width="2.2"/>
+
+              <!-- Bottom Base Ellipse (Ground Level) -->
+              <ellipse cx="160" cy="260" rx="90" ry="20" fill="#f1f5f9" fill-opacity="0.6" stroke="#16a34a" stroke-width="2"/>
+              <ellipse cx="160" cy="260" rx="90" ry="20" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+              <!-- Slant Height Dimension Line (l = 2.8 m) on Cone -->
+              <line x1="210" y1="80" x2="258" y2="133" stroke="#e11d48" stroke-width="2"/>
+              <text x="245" y="95" font-size="12" fill="#e11d48" font-weight="bold">l = 2.8 m</text>
+
+              <!-- Cylinder Height Dimension Line (h = 2.1 m) on Left -->
+              <line x1="45" y1="140" x2="45" y2="260" stroke="#16a34a" stroke-width="1.5"/>
+              <line x1="38" y1="140" x2="52" y2="140" stroke="#16a34a" stroke-width="1.5"/>
+              <line x1="38" y1="260" x2="52" y2="260" stroke="#16a34a" stroke-width="1.5"/>
+              <text x="40" y="205" font-size="12" fill="#15803d" font-weight="bold" text-anchor="end">h = 2.1 m</text>
+
+              <!-- Base Diameter Line (d = 4 m ➔ r = 2 m) -->
+              <line x1="70" y1="260" x2="250" y2="260" stroke="#dc2626" stroke-width="2"/>
+              <circle cx="70" cy="260" r="3" fill="#1e293b"/>
+              <circle cx="250" cy="260" r="3" fill="#1e293b"/>
+              <circle cx="160" cy="260" r="3.5" fill="#dc2626"/>
+              <text x="60" y="264" font-size="11" fill="#334155" font-weight="bold">A</text>
+              <text x="256" y="264" font-size="11" fill="#334155" font-weight="bold">B</text>
+              <text x="160" y="254" font-size="11" fill="#dc2626" font-weight="bold" text-anchor="middle">r = 2 m</text>
+
+              <!-- Apex Label -->
+              <circle cx="160" cy="40" r="3" fill="#0284c7"/>
+              <text x="160" y="28" font-size="12" fill="#0369a1" font-weight="bold" text-anchor="middle">உச்சி P (Apex)</text>
+
+              <!-- Conical Top Formula Callout -->
+              <text x="160" y="115" font-size="11" fill="#0284c7" font-weight="bold" text-anchor="middle">கூம்பு வளைபரப்பு = πrl = 17.6 m²</text>
+
+              <!-- Cylinder Formula Callout -->
+              <text x="160" y="195" font-size="11" fill="#15803d" font-weight="bold" text-anchor="middle">உருளை வளைபரப்பு = 2πrh = 26.4 m²</text>
+
+              <!-- Diameter Dimension Label Below Base -->
+              <text x="160" y="295" font-size="11.5" fill="#475569" font-weight="bold" text-anchor="middle">விட்டம் = 4 மீ (ஆரம் r = 2 மீ)</text>
+
+              <!-- Warning / Note Badge: Open Floor -->
+              <rect x="25" y="310" width="270" height="26" rx="5" fill="#fff7ed" stroke="#f97316" stroke-width="1"/>
+              <text x="160" y="327" font-size="11" fill="#c2410c" font-weight="bold" text-anchor="middle">⚠️ தரைப்பகுதி திறந்த நிலை (அடித்தள பரப்பு இல்லை)</text>
+
+              <!-- Total Area Callout Box -->
+              <rect x="40" y="345" width="240" height="32" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+              <text x="160" y="366" font-size="12.5" fill="#15803d" font-weight="bold" text-anchor="middle">தார்ப்பாயின் மொத்தப் பரப்பு = 44 m²</text>
+            </svg>
+          </div>`,
+          ans: `<div style="line-height:1.9;">
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 1: கொடுக்கப்பட்ட விவரங்கள் (Given Data):</b><br>
+              • உருளையின் விட்டம் d = 4 மீ ➔ ஆரம் r = 4 / 2 = <b>2 மீ</b><br>
+              • உருளையின் உயரம் h = <b>2.1 மீ</b><br>
+              • கூம்பின் சாய்வுயரம் l = <b>2.8 மீ</b><br>
+              • π = <b>22/7</b><br>
+              <span style="color:#b91c1c; font-weight:700;">⚠️ குறிப்பு: கூடாரத்தின் அடிப்பகுதி தரை என்பதால் அதற்கு தார்ப்பாய் தேவையில்லை. எனவே உருளை மற்றும் கூம்பின் வளைபரப்பை மட்டுமே கணக்கிட வேண்டும்.</span>
+            </div>
+
+            <div style="background:#f8fafc; border-left:4px solid #0284c7; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 2: தேவையான சூத்திரங்கள் (Formulas):</b><br>
+              • தார்ப்பாயின் மொத்தப் பரப்பு = உருளையின் வளைபரப்பு + கூம்பின் வளைபரப்பு<br>
+              • உருளையின் வளைபரப்பு (CSA₁) = <b>2πrh</b><br>
+              • கூம்பின் வளைபரப்பு (CSA₂) = <b>πrl</b>
+            </div>
+
+            <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 3: உருளையின் வளைபரப்பு (CSA₁):</b><br>
+              CSA₁ = 2πrh<br>
+              = 2 × (22/7) × 2 × 2.1<br>
+              = (88 × 2.1) / 7 = 88 × 0.3 = <b>26.4 மீ²</b>
+            </div>
+
+            <div style="background:#e0f2fe; border-left:4px solid #0284c7; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 4: கூம்பின் வளைபரப்பு (CSA₂):</b><br>
+              CSA₂ = πrl<br>
+              = (22/7) × 2 × 2.8<br>
+              = (44 × 2.8) / 7 = 44 × 0.4 = <b>17.6 மீ²</b>
+            </div>
+
+            <div style="background:#fefce8; border-left:4px solid #ca8a04; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
+              <b>படி 5: தார்ப்பாயின் மொத்தப் பரப்பளவு:</b><br>
+              மொத்தப் பரப்பு A = CSA₁ + CSA₂<br>
+              = 26.4 + 17.6 = <b>44 மீ²</b><br><br>
+              <div style="background:#ffffff; border:1px dashed #ca8a04; padding:8px 12px; border-radius:6px;">
+                <b>மாற்று முறை (காரணி முறை):</b><br>
+                A = πr(2h + l)<br>
+                = (22/7) × 2 × [2(2.1) + 2.8]<br>
+                = (44/7) × [4.2 + 2.8]<br>
+                = (44/7) × 7.0 = <b>44 மீ²</b>
+              </div>
+            </div>
+
+            <div style="margin-top:14px; padding:12px; background:#eff6ff; border:2px solid #2563eb; border-radius:8px; text-align:center;">
+              <span style="font-size:16px; font-weight:800; color:#1e40af;">இறுதி விடை: கூடாரம் அமைக்கத் தேவையான தார்ப்பாயின் பரப்பு = 44 மீ²</span>
+            </div>
+
+            <div style="margin-top:12px; font-size:13px; color:#475569; background:#f8fafc; padding:10px; border-radius:6px; border:1px solid #e2e8f0;">
+              <b>💡 அரசு பொதுத்தேர்வு குறிப்பு (Exam Tips):</b><br>
+              1. தரைப்பகுதிக்கு தார்ப்பாய் பயன்படுத்தப்படாது; எனவே πr²-ஐக் கூட்டக் கூடாது.<br>
+              2. கூம்பின் சாய்வுயரம் l = 2.8 மீ நேரடியாக வினாவிலேயே தரப்பட்டுள்ளது. மீண்டும் l = √(h² + r²) எனக் கணக்கிடத் தேவையில்லை.<br>
+              3. அலகைக் கட்டாயம் மீ² (சதுர மீட்டர்) என எழுதவும்.
+            </div>
+          </div>`,
+          commonMistakes: [
+            {
+              type: "அடித்தளப் பரப்பைக் கூட்டுதல் (கூடாரத்தின் தரைக்கு தார்ப்பாய் தேவை இல்லை)",
+              icon: "⚠️",
+              deduction: "-1 Mark",
+              mistake: "கூடாரத்தின் அடிப்பகுதி தரை என்பதால் அதற்கு தார்ப்பாய் தேவையில்லை. ஆனால் சில மாணவர்கள் மொத்தப் புறப்பரப்பு (TSA) என நினைத்து அடிப்பரப்பான πr²-ஐயும் சேர்த்து கணக்கிடுதல்.",
+              mistakeTa: "கூடாரத்தின் தரைக்கு தார்ப்பாய் பயன்படாது என்பதை நினைவில் கொள்ளவும். உருளையின் வளைபரப்பு + கூம்பின் வளைபரப்பு மட்டுமே கணக்கிட வேண்டும்.",
+              correction: "தார்ப்பாயின் மொத்தப் பரப்பு = உருளையின் வளைபரப்பு + கூம்பின் வளைபரப்பு = 2πrh + πrl என மட்டுமே எழுதவும்."
+            },
+            {
+              type: "விட்டம் vs ஆரம் (d = 4 மீ ➔ r = 2 மீ)",
+              icon: "📐",
+              deduction: "-1 Mark",
+              mistake: "உருளையின் விட்டம் 4 மீ எனக் கொடுக்கப்பட்டுள்ளது. 2-ஆல் வகுக்காமல் r = 4 மீ எனத் தவறாகப் பிரதியிட்டு கணக்கீடுகளைச் செய்தல்.",
+              mistakeTa: "விட்டம் 4 மீ என்பதால் ஆரம் r = 4/2 = 2 மீ ஆகும். இதைத் தொடக்கத்திலேயே குறித்துக் கொள்ளவும்.",
+              correction: "ஆரம் r = 4 / 2 = 2 மீ என்பதைத் தெளிவாக எழுதி பிரதியிடவும்."
+            },
+            {
+              type: "தேவையற்ற சாய்வுயரக் கணக்கீடு (l ஏற்கனவே கொடுக்கப்பட்டுள்ளது)",
+              icon: "⏱️",
+              deduction: "-½ Mark",
+              mistake: "வினாவில் கூம்பின் சாய்வுயரம் l = 2.8 மீ என நேரடியாகக் கொடுக்கப்பட்டுள்ளது. அதை கவனிக்காமல் l = √(h² + r²) என உருளையின் உயரமான 2.1-ஐப் பயன்படுத்தி நேரத்தை வீணடித்தலும் தவறிழைத்தலும்.",
+              mistakeTa: "சாய்வுயரம் (slant height) வினாவிலேயே கொடுக்கப்பட்டிருப்பதால் தனியாகக் கண்டுபிடிக்கத் தேவையில்லை.",
+              correction: "கூம்பின் சாய்வுயரம் l = 2.8 மீ என நேரடியாக எடுத்துக்கொண்டு πrl சூத்திரத்தில் பிரதியிடவும்."
+            }
+          ]
         }
       ]
     },

@@ -1319,7 +1319,75 @@ const MATHS_EM_UNIT_1_DATA = {
             A curve on the coordinate plane represents a <b>function</b> if every vertical line intersects the curve in <b>at most one point</b>.<br><br>
             • If any vertical line intersects the curve at more than one point, then the curve <b>does not represent a function</b>.
           </div>`,
-          explanation: "A vertical line test checks whether an input value maps to more than one output value."
+          explanation: "A vertical line test checks whether an input value maps to more than one output value.",
+          diagramCaption: "Vertical Line Test Diagrams: (a) Parabola - Function, (b) Linear Line - Function, (c) Circle - Not a Function",
+          diagramSvg: `<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:12px; width:100%; margin:8px 0;">
+            <!-- Panel 1: Parabola (Function) -->
+            <div style="background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:10px; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:center;">
+              <div style="font-size:12px; font-weight:700; color:#1e3a8a; margin-bottom:6px;">(a) Parabola (Function)</div>
+              <svg viewBox="0 0 280 200" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:280/200;">
+                <line x1="20" y1="50" x2="260" y2="50" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="20" y1="100" x2="260" y2="100" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="20" y1="150" x2="260" y2="150" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="20" y1="160" x2="260" y2="160" stroke="#64748b" stroke-width="1.6"/>
+                <polygon points="260,160 252,156 252,164" fill="#64748b"/>
+                <text x="254" y="176" font-size="11" fill="#475569" font-weight="bold">x</text>
+                <line x1="140" y1="185" x2="140" y2="15" stroke="#64748b" stroke-width="1.6"/>
+                <polygon points="140,15 136,23 144,23" fill="#64748b"/>
+                <text x="146" y="22" font-size="11" fill="#475569" font-weight="bold">y</text>
+                <path d="M 50 35 Q 140 185 230 35" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linecap="round"/>
+                <line x1="185" y1="15" x2="185" y2="185" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,4"/>
+                <circle cx="185" cy="95" r="5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="194" y="93" font-size="10.5" font-weight="bold" fill="#dc2626">P</text>
+                <rect x="25" y="172" width="230" height="22" rx="6" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+                <text x="140" y="187" text-anchor="middle" font-size="11" font-weight="bold" fill="#047857">✓ Intersects at 1 point (Function)</text>
+              </svg>
+            </div>
+            <!-- Panel 2: Straight Line (Function) -->
+            <div style="background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:10px; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:center;">
+              <div style="font-size:12px; font-weight:700; color:#1e3a8a; margin-bottom:6px;">(b) Straight Line (Function)</div>
+              <svg viewBox="0 0 280 200" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:280/200;">
+                <line x1="20" y1="50" x2="260" y2="50" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="20" y1="100" x2="260" y2="100" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="20" y1="150" x2="260" y2="150" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="20" y1="110" x2="260" y2="110" stroke="#64748b" stroke-width="1.6"/>
+                <polygon points="260,110 252,106 252,114" fill="#64748b"/>
+                <text x="254" y="125" font-size="11" fill="#475569" font-weight="bold">x</text>
+                <line x1="140" y1="185" x2="140" y2="15" stroke="#64748b" stroke-width="1.6"/>
+                <polygon points="140,15 136,23 144,23" fill="#64748b"/>
+                <text x="146" y="22" font-size="11" fill="#475569" font-weight="bold">y</text>
+                <line x1="45" y1="175" x2="235" y2="35" stroke="#2563eb" stroke-width="2.6" stroke-linecap="round"/>
+                <line x1="185" y1="15" x2="185" y2="185" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,4"/>
+                <circle cx="185" cy="72" r="5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="194" y="70" font-size="10.5" font-weight="bold" fill="#dc2626">P</text>
+                <rect x="25" y="172" width="230" height="22" rx="6" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+                <text x="140" y="187" text-anchor="middle" font-size="11" font-weight="bold" fill="#047857">✓ Intersects at 1 point (Function)</text>
+              </svg>
+            </div>
+            <!-- Panel 3: Circle (Not a Function) -->
+            <div style="background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:10px; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:center;">
+              <div style="font-size:12px; font-weight:700; color:#b91c1c; margin-bottom:6px;">(c) Circle (Not a Function)</div>
+              <svg viewBox="0 0 280 200" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:280/200;">
+                <line x1="20" y1="50" x2="260" y2="50" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="20" y1="100" x2="260" y2="100" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="20" y1="150" x2="260" y2="150" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="20" y1="100" x2="260" y2="100" stroke="#64748b" stroke-width="1.6"/>
+                <polygon points="260,100 252,96 252,104" fill="#64748b"/>
+                <text x="254" y="115" font-size="11" fill="#475569" font-weight="bold">x</text>
+                <line x1="140" y1="185" x2="140" y2="15" stroke="#64748b" stroke-width="1.6"/>
+                <polygon points="140,15 136,23 144,23" fill="#64748b"/>
+                <text x="146" y="22" font-size="11" fill="#475569" font-weight="bold">y</text>
+                <circle cx="140" cy="100" r="60" fill="none" stroke="#2563eb" stroke-width="2.6"/>
+                <line x1="175" y1="15" x2="175" y2="185" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,4"/>
+                <circle cx="175" cy="51" r="5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="183" y="49" font-size="10.5" font-weight="bold" fill="#dc2626">P</text>
+                <circle cx="175" cy="149" r="5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="183" y="157" font-size="10.5" font-weight="bold" fill="#dc2626">Q</text>
+                <rect x="20" y="172" width="240" height="22" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+                <text x="140" y="187" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#b91c1c">✕ Intersects at 2 points (Not a Function)</text>
+              </svg>
+            </div>
+          </div>`
         },
         {
           id: "m_em_4_2",
@@ -1331,7 +1399,53 @@ const MATHS_EM_UNIT_1_DATA = {
             A curve on the coordinate plane represents a <b>One-to-One (Injective) function</b> if every horizontal line intersects the curve in <b>at most one point</b>.<br><br>
             • If any horizontal line intersects the curve at more than one point, then the function is <b>not one-to-one</b> (it is many-to-one).
           </div>`,
-          explanation: "A horizontal line test checks whether two distinct inputs produce the same output."
+          explanation: "A horizontal line test checks whether two distinct inputs produce the same output.",
+          diagramCaption: "Horizontal Line Test Diagrams: (a) Cubic Curve - One-to-One Function, (b) Parabola - Not One-to-One Function",
+          diagramSvg: `<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px; width:100%; margin:8px 0;">
+            <!-- Panel 1: Cubic Curve (One-to-One Function) -->
+            <div style="background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:10px; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:center;">
+              <div style="font-size:12.5px; font-weight:700; color:#1e3a8a; margin-bottom:6px;">(a) One-to-One Function</div>
+              <svg viewBox="0 0 320 220" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:320/220;">
+                <line x1="20" y1="110" x2="300" y2="110" stroke="#64748b" stroke-width="1.6"/>
+                <polygon points="300,110 292,106 292,114" fill="#64748b"/>
+                <text x="296" y="125" font-size="11" fill="#475569" font-weight="bold">x</text>
+                <line x1="160" y1="195" x2="160" y2="15" stroke="#64748b" stroke-width="1.6"/>
+                <polygon points="160,15 156,23 164,23" fill="#64748b"/>
+                <text x="166" y="22" font-size="11" fill="#475569" font-weight="bold">y</text>
+                <path d="M 60 185 C 130 175, 145 110, 160 110 C 175 110, 190 45, 260 35" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linecap="round"/>
+                <line x1="30" y1="60" x2="290" y2="60" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="5,4"/>
+                <circle cx="230" cy="60" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="238" y="56" font-size="10" font-weight="bold" fill="#dc2626">P</text>
+                <line x1="30" y1="110" x2="290" y2="110" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="5,4"/>
+                <circle cx="160" cy="110" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+                <line x1="30" y1="160" x2="290" y2="160" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="5,4"/>
+                <circle cx="90" cy="160" r="4.5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="98" y="156" font-size="10" font-weight="bold" fill="#dc2626">Q</text>
+                <rect x="15" y="190" width="290" height="22" rx="6" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1"/>
+                <text x="160" y="205" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#047857">✓ Intersects at at most 1 point (1 - 1)</text>
+              </svg>
+            </div>
+            <!-- Panel 2: Parabola (Not One-to-One Function) -->
+            <div style="background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:10px; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:center;">
+              <div style="font-size:12.5px; font-weight:700; color:#b91c1c; margin-bottom:6px;">(b) Not One-to-One Function</div>
+              <svg viewBox="0 0 320 220" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:320/220;">
+                <line x1="20" y1="165" x2="300" y2="165" stroke="#64748b" stroke-width="1.6"/>
+                <polygon points="300,165 292,161 292,169" fill="#64748b"/>
+                <text x="296" y="179" font-size="11" fill="#475569" font-weight="bold">x</text>
+                <line x1="160" y1="195" x2="160" y2="15" stroke="#64748b" stroke-width="1.6"/>
+                <polygon points="160,15 156,23 164,23" fill="#64748b"/>
+                <text x="166" y="22" font-size="11" fill="#475569" font-weight="bold">y</text>
+                <path d="M 65 35 Q 160 175 255 35" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linecap="round"/>
+                <line x1="30" y1="80" x2="290" y2="80" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="5,4"/>
+                <circle cx="100" cy="80" r="5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="90" y="74" font-size="10.5" font-weight="bold" fill="#dc2626">P</text>
+                <circle cx="220" cy="80" r="5" fill="#dc2626" stroke="#ffffff" stroke-width="1.5"/>
+                <text x="228" y="74" font-size="10.5" font-weight="bold" fill="#dc2626">Q</text>
+                <rect x="15" y="190" width="290" height="22" rx="6" fill="#fef2f2" stroke="#fecaca" stroke-width="1"/>
+                <text x="160" y="205" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#b91c1c">✕ Intersects at 2 points (Many-to-One)</text>
+              </svg>
+            </div>
+          </div>`
         },
         {
           id: "m_em_4_3",

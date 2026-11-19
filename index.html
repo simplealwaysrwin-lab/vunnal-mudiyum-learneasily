@@ -5740,7 +5740,7 @@
           {
             id: 'soc_c4',
             unit: 'குடிமையியல் 4',
-            title: 'இந்தியாவின் வெளியுறவுக் கொள்கை (India''s Foreign Policy)',
+            title: "இந்தியாவின் வெளியுறவுக் கொள்கை (India's Foreign Policy)",
             qCount: (typeof SOCIAL_UNIT_15_DATA !== 'undefined' && SOCIAL_UNIT_15_DATA.subSections) ? SOCIAL_UNIT_15_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
             subSections: (typeof SOCIAL_UNIT_15_DATA !== 'undefined') ? SOCIAL_UNIT_15_DATA.subSections : [],
             questions: (typeof SOCIAL_UNIT_15_DATA !== 'undefined' && SOCIAL_UNIT_15_DATA.subSections) ? SOCIAL_UNIT_15_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
@@ -5780,7 +5780,7 @@
           {
             id: 'soc_c5',
             unit: 'குடிமையியல் 5',
-            title: 'இந்தியாவின் சர்வதேச உறவுகள் (India''s International Relations)',
+            title: "இந்தியாவின் சர்வதேச உறவுகள் (India's International Relations)",
             qCount: (typeof SOCIAL_UNIT_19_DATA !== 'undefined' && SOCIAL_UNIT_19_DATA.subSections) ? SOCIAL_UNIT_19_DATA.subSections.reduce((s, x) => s + x.questions.length, 0) : 8,
             subSections: (typeof SOCIAL_UNIT_19_DATA !== 'undefined') ? SOCIAL_UNIT_19_DATA.subSections : [],
             questions: (typeof SOCIAL_UNIT_19_DATA !== 'undefined' && SOCIAL_UNIT_19_DATA.subSections) ? SOCIAL_UNIT_19_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
@@ -14565,7 +14565,7 @@
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261119_v99')
+        navigator.serviceWorker.register('./sw.js?v=20261119_v100')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

@@ -132,21 +132,21 @@
 <script src="data_english_u6.js?v=20261104_v51"></script>
 <script src="data_english_u7.js?v=20261116_v82"></script>
 <script src="data_english_writing.js?v=20261116_v84"></script>
-  <script src="data_maths_tm_u1.js?v=20261118_v96"></script>
+  <script src="data_maths_tm_u1.js?v=20261119_v97"></script>
 <script src="data_maths_tm_u2.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u4.js?v=20261105_v56"></script>
 <script src="data_maths_tm_u5.js?v=20261104_v51"></script>
 <script src="data_maths_tm_u6.js?v=20261105_v56"></script>
-<script src="data_maths_tm_u7.js?v=20261116_v82"></script>
+<script src="data_maths_tm_u7.js?v=20261119_v98"></script>
 <script src="data_maths_tm_u8.js?v=20261116_v82"></script>
-  <script src="data_maths_em_u1.js?v=20261118_v96"></script>
+  <script src="data_maths_em_u1.js?v=20261119_v97"></script>
 <script src="data_maths_em_u2.js?v=20261103_v50"></script>
 <script src="data_maths_em_u3.js?v=20261031_v31"></script>
 <script src="data_maths_em_u4.js?v=20261105_v56"></script>
 <script src="data_maths_em_u5.js?v=20261104_v51"></script>
 <script src="data_maths_em_u6.js?v=20261105_v56"></script>
-<script src="data_maths_em_u7.js?v=20261116_v82"></script>
+<script src="data_maths_em_u7.js?v=20261119_v98"></script>
 <script src="data_maths_em_u8.js?v=20261116_v82"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
@@ -9370,6 +9370,9 @@
                         </div>
                       ` : item.diagramSvg ? `
                         <div class="diagram-box">
+                          <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
+                            <span style="display:inline-flex; align-items:center; gap:6px;">🎨 ${isEm || isEnglish ? 'Textbook Geometric Illustration' : (isTm ? 'பாட விளக்க வரைபடம்' : 'பாட விளக்க வரைபடம் (Textbook Illustration)')}</span>
+                          </div>
                           ${item.diagramSvg}
                           <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
                         </div>
@@ -9523,6 +9526,9 @@
                   ` : item.diagramSvg ? `
 
                     <div class="diagram-box">
+                      <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
+                        <span style="display:inline-flex; align-items:center; gap:6px;">🎨 ${isEm || isEnglish ? 'Textbook Geometric Illustration' : (isTm ? 'பாட விளக்க வரைபடம்' : 'பாட விளக்க வரைபடம் (Textbook Illustration)')}</span>
+                      </div>
                       ${item.diagramSvg}
                       <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
                     </div>
@@ -12939,6 +12945,20 @@
                 <div class="chalk-content" style="font-size:16.5px; line-height:2;">
                   ${ansHtml}
                 </div>
+                ${this.currentQ.diagramSvg ? `
+                  <div class="diagram-box" style="margin: 16px 0; background: rgba(255,255,255,0.98); border-radius: 12px; padding: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                    <div style="font-size:13px; font-weight:800; color:#0369a1; margin-bottom:8px; text-align:center;">
+                      🎨 ${isEm ? 'Geometrical Diagram Illustration' : 'பாட விளக்க வரைபடம்'}
+                    </div>
+                    ${this.currentQ.diagramSvg}
+                    <div class="diagram-caption" style="color: #0f172a; font-weight: 700; margin-top: 8px; font-size:13px; text-align:center;">${this.currentQ.diagramCaption || (isEm ? 'Diagram' : 'வரைபடம்')}</div>
+                  </div>
+                ` : (this.currentQ.diagramImg ? `
+                  <div class="diagram-box" style="margin: 16px 0; background: rgba(255,255,255,0.98); border-radius: 12px; padding: 14px; text-align:center; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                    <img src="${(isEm && this.currentQ.diagramImg === 'images/math_bb_ex1_4.png') ? 'images/math_bb_ex1_4_en.png' : this.currentQ.diagramImg}" alt="${(this.currentQ.diagramCaption || (isEm ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" style="max-width:100%; max-height:55vh; border-radius:8px;" onerror="handleDiagramImgError(this)" />
+                    <div class="diagram-caption" style="color: #0f172a; font-weight: 700; margin-top: 8px; font-size:13px; text-align:center;">${this.currentQ.diagramCaption || (isEm ? 'Diagram' : 'வரைபடம்')}</div>
+                  </div>
+                ` : '')}
                 ${keyConcept ? `
                   <div class="chalk-concept-wrap" style="margin-top:16px;">
                     <div class="chalk-concept-badge">\uD83D\uDCA1 ${isEm ? 'Key Concept / Scoring Note:' : '\u0BAE\u0BC1\u0B95\u0BCD\u0B95\u0BBF\u0BAF\u0B95\u0BCD \u0B95\u0BB0\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1 (Key Concept):'}</div>
@@ -13831,7 +13851,7 @@
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261118_v96')
+        navigator.serviceWorker.register('./sw.js?v=20261119_v98')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

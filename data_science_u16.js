@@ -136,7 +136,8 @@ const SCIENCE_UNIT_16_DATA = {
           type: "7m",
           mark: "4 / 7 மதிப்பெண்",
           examTag: "அரசு பொதுத்தேர்வு 7M",
-          diagramImg: (typeof window !== "undefined" && window.IMG_PLANT_B64) ? window.IMG_PLANT_B64 : "images/sci_plant_hormones_diagram.png",
+          diagramImg: (typeof window !== "undefined" && window.IMG_PLANT_TM_B64) ? window.IMG_PLANT_TM_B64 : "images/sci_plant_hormones_diagram_tm.png",
+          diagramCaption: "தாவர ஹார்மோன்களும் அவற்றின் வாழ்வியல் விளைவுகளும் (Plant Hormones Diagram)",
           q: "தாவர ஹார்மோன்களின் (ஆக்ஸின், ஜிப்ரல்லின், சைட்டோகைனின், எத்திலீன்) வாழ்வியல் விளைவுகளை விரிவாகத் தொகுத்து எழுதுக.",
           ans: `<div style="line-height:1.8;">
             <p style="margin-bottom:12px; font-size:14.5px;">

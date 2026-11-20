@@ -120,7 +120,8 @@ const SCIENCE_UNIT_15_DATA = {
           type: "7m",
           mark: "4 / 7 மதிப்பெண்",
           examTag: "அரசு பொதுத்தேர்வு 7M",
-          diagramImg: (typeof window !== "undefined" && window.IMG_BRAIN_B64) ? window.IMG_BRAIN_B64 : "images/sci_brain_diagram.jpg",
+          diagramImg: (typeof window !== "undefined" && window.IMG_BRAIN_TM_B64) ? window.IMG_BRAIN_TM_B64 : "images/sci_brain_diagram_tm.jpg",
+          diagramCaption: "மனித மூளையின் அமைப்பு மற்றும் உடலியல் பணிகள் (Human Brain Diagram)",
           q: "மனித மூளையின் அமைப்பை அதன் முதன்மைப் பிரிவுகளான முன்மூளை, நடுமூளை மற்றும் பின்மூளை ஆகியவற்றின் பணிகள் வாயிலாக விரிவாக விளக்குக.",
           ans: `<div style="line-height:1.8;">
             <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:12px 16px; border-radius:8px; margin-bottom:14px;">

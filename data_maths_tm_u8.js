@@ -50,6 +50,8 @@ const MATHS_TM_UNIT_8_DATA = {
           mark: "2 மதிப்பெண்",
           examTag: "முக்கிய வினா",
           isImportant: true,
+          diagramImg: (typeof window !== "undefined" && window.IMG_DICE_PART1_TM_B64) ? window.IMG_DICE_PART1_TM_B64 : "images/maths_two_dice_board_part1_tm.jpg",
+          diagramCaption: "இரு பகடைகள் — நிகழ்தகவு கரும்பலகை விளக்கம் (Chalkboard Solution)",
           q: "பின்வரும் தரவுகளுக்கு வீச்சு மற்றும் வீச்சுக் கெழுவைக் காண்க: 25, 67, 48, 53, 18, 39, 44.",
           ans: `<div style="line-height:1.8;">
             மீப்பெரு மதிப்பு (L) = 67<br>
@@ -77,6 +79,8 @@ const MATHS_TM_UNIT_8_DATA = {
           mark: "5 மதிப்பெண்",
           examTag: "அரசு மாதிரி 5M",
           isImportant: true,
+          diagramImg: (typeof window !== "undefined" && window.IMG_DICE_PART1_TM_B64) ? window.IMG_DICE_PART1_TM_B64 : "images/maths_two_dice_board_part1_tm.jpg",
+          diagramCaption: "இரு பகடைகள் — நிகழ்தகவு கரும்பலகை விளக்கம் (Chalkboard Solution)",
           q: "A, B ஆகிய இரு மாணவர்கள் 5 தேர்வுகளில் பெற்ற மதிப்பெண்கள் கீழே தரப்பட்டுள்ளன. இவர்களில் யார் அதிக நிலைத்தன்மை உடையவர்?<br>A: 56, 64, 48, 60, 72<br>B: 68, 72, 70, 64, 76",
           ans: `<div style="line-height:1.8;">
             <b>மாணவர் A-விற்கு:</b><br>
@@ -149,6 +153,8 @@ const MATHS_TM_UNIT_8_DATA = {
           type: "2m",
           mark: "2 மதிப்பெண்",
           isImportant: true,
+          diagramImg: (typeof window !== "undefined" && window.IMG_DICE_PART1_TM_B64) ? window.IMG_DICE_PART1_TM_B64 : "images/maths_two_dice_board_part1_tm.jpg",
+          diagramCaption: "இரு பகடைகள் — நிகழ்தகவு கரும்பலகை விளக்கம் (Chalkboard Solution)",
           q: "இரு நாணயங்கள் ஒரே நேரத்தில் சுண்டப்படுகின்றன. குறைந்தது ஒரு தலை கிடைப்பதற்கான நிகழ்தகவைக் காண்க.",
           ans: `<div style="line-height:1.8;">
             கூறுவெளி S = {HH, HT, TH, TT} ➔ n(S) = 4.<br>
@@ -163,14 +169,16 @@ const MATHS_TM_UNIT_8_DATA = {
           mark: "5 மதிப்பெண்",
           examTag: "அரசுத் தேர்வு வினா (பயிற்சி 8.4 வினா 6)",
           isImportant: true,
+          diagramImg: (typeof window !== "undefined" && window.IMG_DICE_PART1_TM_B64) ? window.IMG_DICE_PART1_TM_B64 : "images/maths_two_dice_board_part1_tm.jpg",
+          diagramCaption: "இரு பகடைகள் — நிகழ்தகவு கரும்பலகை விளக்கம் (Chalkboard Solution)",
           q: "இரு பகடைகள் உருட்டப்படுகின்றன. முதல் பகடையில் இரட்டை எண் அல்லது முக எண்களின் கூடுதல் 8 கிடைப்பதற்கான நிகழ்தகவைக் காண்க.",
           blackboard: {
             title: "இரு பகடைகள் உருட்டுதல்: முதல் பகடை இரட்டை எண் அல்லது கூடுதல் 8",
             engTitle: "Two Dice Rolled Once: Probability of Even on 1st Die OR Total of 8",
-            fullBoardImg: (typeof window !== "undefined" && window.IMG_DICE_PART1_B64) ? window.IMG_DICE_PART1_B64 : "images/maths_two_dice_board_part1.jpg",
+            fullBoardImg: (typeof window !== "undefined" && window.IMG_DICE_PART1_TM_B64) ? window.IMG_DICE_PART1_TM_B64 : "images/maths_two_dice_board_part1_tm.jpg",
             fullBoardImages: [
-              "images/maths_two_dice_board_part1.jpg",
-              "images/maths_two_dice_board_part2.jpg"
+              (typeof window !== "undefined" && window.IMG_DICE_PART1_TM_B64) ? window.IMG_DICE_PART1_TM_B64 : "images/maths_two_dice_board_part1_tm.jpg",
+              (typeof window !== "undefined" && window.IMG_DICE_PART2_TM_B64) ? window.IMG_DICE_PART2_TM_B64 : "images/maths_two_dice_board_part2_tm.jpg"
             ],
             steps: [
               {

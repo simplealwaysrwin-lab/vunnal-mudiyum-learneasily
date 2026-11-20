@@ -436,7 +436,92 @@ const MATHS_TM_UNIT_7_DATA = {
           examTag: "அரசுத் தேர்வு வினா (எடுத்துக்காட்டு 7.29)",
           isImportant: true,
           q: "16 செ.மீ ஆரமுள்ள ஒரு திண்ம உலோகக் கோளமானது உருக்கப்பட்டு, 2 செ.மீ ஆரமுள்ள சிறு திண்மக் கோளங்களாக மாற்றப்பட்டால் எத்தனை சிறிய கோளங்கள் கிடைக்கும்?",
-          diagramCaption: "திண்ம உலோகக் கோளத்தின் உருமாற்றம்: பெரிய கோளம் (R = 16 செ.மீ) உருக்கப்பட்டு 512 சிறிய கோளங்களாக (r = 2 செ.மீ) மாற்றப்படுகிறது.",
+                    blackboard: {
+            title: "திண்ம உலோகக் கோளத்தை உருக்கி சிறிய கோளங்களாக மாற்றுதல்",
+            engTitle: "Melting and Recasting Solid Sphere (R = 16 cm into r = 2 cm)",
+            steps: [
+              {
+                stepNum: 1,
+                badge: "① படி 1 — கொடுக்கப்பட்ட அளவுகள்",
+                badgeEn: "① Step 1 — Given Dimensions",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">படி 1 — கோளங்களின் அளவுகள்</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • பெரிய உலோகக் கோளத்தின் ஆரம்: <b>R = 16 செ.மீ</b><br>
+                      • சிறிய திண்மக் கோளத்தின் ஆரம்: <b>r = 2 செ.மீ</b><br>
+                      • கிடைக்கும் சிறிய கோளங்களின் எண்ணிக்கை <b>n</b> என்க.
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 1. Given dimensions. Radius of big metallic sphere R equals 16 cm. Radius of each small sphere r equals 2 cm. Let n be the number of small spheres.",
+                audioScriptTa: "படி 1. கொடுக்கப்பட்ட அளவுகள்: பெரிய உலோகக் கோளத்தின் ஆரம் R = 16 செ.மீ. சிறிய கோளத்தின் ஆரம் r = 2 செ.மீ. சிறிய கோளங்களின் எண்ணிக்கை n என்க."
+              },
+              {
+                stepNum: 2,
+                badge: "② படி 2 — கனஅளவு மாறாக் கொள்கை",
+                badgeEn: "② Step 2 — Conservation of Volume",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">படி 2 — கனஅளவு மாறாக் கொள்கை</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      உலோகக் கோளம் உருக்கப்பட்டு மறுவடிவாக்கம் செய்யப்படும்போது மொத்தக் கனஅளவு மாறாது:<br>
+                      <div style="background:#1e293b; border:1.5px solid #fde047; border-radius:8px; padding:10px; text-align:center; color:#fde047; font-size:15px; font-weight:800; margin:10px 0;">
+                        n சிறிய கோளங்களின் மொத்தக் கனஅளவு = பெரிய கோளத்தின் கனஅளவு
+                      </div>
+                      <span style="font-size:15px; color:#38bdf8; font-weight:700;">n × (ஒரு சிறிய கோளத்தின் கனஅளவு) = பெரிய கோளத்தின் கனஅளவு</span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 2. Law of conservation of volume. Total volume of n small spheres equals volume of the large sphere.",
+                audioScriptTa: "படி 2. கனஅளவு மாறாக் கொள்கை: n சிறிய கோளங்களின் மொத்தக் கனஅளவு = பெரிய கோளத்தின் கனஅளவு."
+              },
+              {
+                stepNum: 3,
+                badge: "③ படி 3 — சூத்திரச் சுருக்குதல்",
+                badgeEn: "③ Step 3 — Formula & π Cancellation",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">படி 3 — சூத்திரம் &amp; (4/3)π நீக்குதல்</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.8;">
+                      கோளத்தின் கனஅளவு = <b>(4/3) π r³</b><br><br>
+                      n = [ (4/3) π R³ ] / [ (4/3) π r³ ]<br><br>
+                      <span style="color:#4ade80; font-weight:700;">தொகுதி மற்றும் பகுதியில் உள்ள (4/3)π நேரடியாக நீங்குகிறது:</span><br>
+                      <div style="background:#1e293b; border:1.5px solid #38bdf8; border-radius:8px; padding:8px; text-align:center; margin-top:6px; color:#38bdf8; font-size:16px; font-weight:800;">
+                        n = R³ / r³ = (R / r)³
+                      </div>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 3. Formula derivation. (4/3)pi cancels completely, giving n equals (R divided by r) whole cubed.",
+                audioScriptTa: "படி 3. சூத்திரச் சுருக்குதல்: நான்கு கீழ் மூன்று பை நேரடியாக நீங்குகிறது. எனவே n = (R கீழ் r) ஹோல் க்யூப்."
+              },
+              {
+                stepNum: 4,
+                badge: "④ படி 4 — பிரதியிடல் & இறுதி விடை",
+                badgeEn: "④ Step 4 — Substitution & Final Answer",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">படி 4 — பிரதியிடல் &amp; கணக்கீடு</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #4ade80; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:15px; line-height:1.8;">
+                      n = (16 / 2)³<br>
+                      n = 8³<br>
+                      n = 8 × 8 × 8 = 64 × 8 = <b>512</b><br><br>
+                      <div style="background:#14532d; border:2.5px solid #22c55e; border-radius:10px; padding:12px; text-align:center;">
+                        <span style="color:#ffffff; font-size:13px; font-weight:700; display:block; margin-bottom:4px;">இறுதி விடை:</span>
+                        <span style="color:#fde047; font-size:20px; font-weight:900;">
+                          கிடைக்கும் சிறிய கோளங்களின் எண்ணிக்கை = 512
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 4. Substitution and answer. n equals 8 cubed, which is 512. Therefore, 512 small spheres can be obtained.",
+                audioScriptTa: "படி 4. பிரதியிடல் மற்றும் விடை: n = 8 க்யூப் = 512. எனவே உருவாக்கப்படும் சிறிய கோளங்களின் எண்ணிக்கை 512 ஆகும்."
+              }
+            ]
+          },
+diagramCaption: "திண்ம உலோகக் கோளத்தின் உருமாற்றம்: பெரிய கோளம் (R = 16 செ.மீ) உருக்கப்பட்டு 512 சிறிய கோளங்களாக (r = 2 செ.மீ) மாற்றப்படுகிறது.",
           diagramSvg: `<div style="max-width:340px; margin:12px auto; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); text-align:center;">
             <div style="font-size:12px; font-weight:700; color:#1e3a8a; margin-bottom:8px;">🔥 திண்மக் கோள உருமாற்றம் (Melting &amp; Recasting)</div>
             <svg viewBox="0 0 340 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:340/260;">

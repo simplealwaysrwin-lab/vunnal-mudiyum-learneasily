@@ -436,7 +436,92 @@ const MATHS_EM_UNIT_7_DATA = {
           examTag: "Board Exam Model (Example 7.29)",
           isImportant: true,
           q: "A metallic sphere of radius 16 cm is melted and recast into small spheres each of radius 2 cm. How many small spheres can be obtained?",
-          diagramCaption: "Recasting of Solid Metallic Sphere: Large Sphere (R = 16 cm) melted and recast into 512 Small Spheres (r = 2 cm).",
+                    blackboard: {
+            title: "Melting and Recasting Solid Sphere (R = 16 cm into r = 2 cm)",
+            engTitle: "Melting and Recasting Solid Sphere (R = 16 cm into r = 2 cm)",
+            steps: [
+              {
+                stepNum: 1,
+                badge: "① Step 1 — Given Dimensions",
+                badgeEn: "① Step 1 — Given Dimensions",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Step 1 — Given Dimensions of Spheres</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • Radius of big metallic sphere: <b>R = 16 cm</b><br>
+                      • Radius of each small recast sphere: <b>r = 2 cm</b><br>
+                      • Let <b>n</b> be the number of small spheres obtained.
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 1. Given dimensions. Radius of big metallic sphere R equals 16 cm. Radius of each small sphere r equals 2 cm. Let n be the number of small spheres.",
+                audioScriptTa: "படி 1. கொடுக்கப்பட்ட அளவுகள்: பெரிய உலோகக் கோளத்தின் ஆரம் R = 16 செ.மீ. சிறிய கோளத்தின் ஆரம் r = 2 செ.மீ. சிறிய கோளங்களின் எண்ணிக்கை n என்க."
+              },
+              {
+                stepNum: 2,
+                badge: "② Step 2 — Conservation of Volume",
+                badgeEn: "② Step 2 — Conservation of Volume",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Step 2 — Law of Conservation of Volume</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      When a solid is melted and recast, total volume remains unchanged:<br>
+                      <div style="background:#1e293b; border:1.5px solid #fde047; border-radius:8px; padding:10px; text-align:center; color:#fde047; font-size:15px; font-weight:800; margin:10px 0;">
+                        Total Volume of 'n' Small Spheres = Volume of Big Sphere
+                      </div>
+                      <span style="font-size:15px; color:#38bdf8; font-weight:700;">n × (Volume of 1 small sphere) = Volume of big sphere</span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 2. Law of conservation of volume. Total volume of n small spheres equals volume of the large sphere.",
+                audioScriptTa: "படி 2. கனஅளவு மாறாக் கொள்கை: n சிறிய கோளங்களின் மொத்தக் கனஅளவு = பெரிய கோளத்தின் கனஅளவு."
+              },
+              {
+                stepNum: 3,
+                badge: "③ Step 3 — Formula & π Cancellation",
+                badgeEn: "③ Step 3 — Formula & π Cancellation",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Step 3 — Formula Derivation & π Cancellation</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.8;">
+                      Volume of sphere = <b>(4/3) π r³</b><br><br>
+                      n = [ (4/3) π R³ ] / [ (4/3) π r³ ]<br><br>
+                      <span style="color:#4ade80; font-weight:700;">(4/3)π cancels directly from both numerator and denominator:</span><br>
+                      <div style="background:#1e293b; border:1.5px solid #38bdf8; border-radius:8px; padding:8px; text-align:center; margin-top:6px; color:#38bdf8; font-size:16px; font-weight:800;">
+                        n = R³ / r³ = (R / r)³
+                      </div>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 3. Formula derivation. Volume of sphere equals four-thirds pi r cubed. The constant four-thirds pi cancels completely, giving n equals (R divided by r) whole cubed.",
+                audioScriptTa: "படி 3. சூத்திரச் சுருக்குதல்: நான்கு கீழ் மூன்று பை நேரடியாக நீங்குகிறது. எனவே n = (R கீழ் r) ஹோல் க்யூப்."
+              },
+              {
+                stepNum: 4,
+                badge: "④ Step 4 — Substitution & Final Answer",
+                badgeEn: "④ Step 4 — Substitution & Final Answer",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Step 4 — Substitution & Calculation</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #4ade80; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:15px; line-height:1.8;">
+                      n = (16 / 2)³<br>
+                      n = 8³<br>
+                      n = 8 × 8 × 8 = 64 × 8 = <b>512</b><br><br>
+                      <div style="background:#14532d; border:2.5px solid #22c55e; border-radius:10px; padding:12px; text-align:center;">
+                        <span style="color:#ffffff; font-size:13px; font-weight:700; display:block; margin-bottom:4px;">FINAL ANSWER:</span>
+                        <span style="color:#fde047; font-size:20px; font-weight:900;">
+                          Number of small spheres obtained = 512
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 4. Substitution and answer. n equals 8 cubed, which is 512. Therefore, 512 small spheres can be obtained.",
+                audioScriptTa: "படி 4. பிரதியிடல் மற்றும் விடை: n = 8 க்யூப் = 512. எனவே உருவாக்கப்படும் சிறிய கோளங்களின் எண்ணிக்கை 512 ஆகும்."
+              }
+            ]
+          },
+diagramCaption: "Recasting of Solid Metallic Sphere: Large Sphere (R = 16 cm) melted and recast into 512 Small Spheres (r = 2 cm).",
           diagramSvg: `<div style="max-width:340px; margin:12px auto; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); text-align:center;">
             <div style="font-size:12px; font-weight:700; color:#1e3a8a; margin-bottom:8px;">🔥 Melting &amp; Recasting: Solid Metallic Spheres</div>
             <svg viewBox="0 0 340 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:340/260;">

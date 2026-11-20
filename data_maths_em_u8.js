@@ -164,7 +164,147 @@ const MATHS_EM_UNIT_8_DATA = {
           examTag: "Top Addition Theorem Question",
           isImportant: true,
           q: "Two dice are rolled once. Find the probability of getting an even number on the first die or a total of 8.",
-          diagramCaption: "Sample Space Matrix (6 × 6 = 36 outcomes) illustrating Event A (Even on 1st die, 18 outcomes in blue), Event B (Sum = 8, 5 outcomes in orange), and their overlap A ∩ B (3 outcomes highlighted with stars).",
+                    blackboard: {
+            title: "Two Dice Rolled Once: Probability of Even on 1st Die OR Total of 8",
+            engTitle: "Two Dice Rolled Once: Probability of Even on 1st Die OR Total of 8",
+            steps: [
+              {
+                stepNum: 1,
+                badge: "① Step 1 — Sample Space S",
+                badgeEn: "① Step 1 — Sample Space S",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Step 1 — Sample Space (S)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      S = all ordered pairs (a, b), a, b = 1..6<br>
+                      <div style="background:#1e293b; border:1px solid #475569; border-radius:8px; padding:10px; margin:8px 0; font-family:monospace; color:#38bdf8; font-size:12.5px; line-height:1.7;">
+                        S = {<br>
+                        &nbsp;&nbsp;(1,1), (1,2), (1,3), (1,4), (1,5), (1,6),<br>
+                        &nbsp;&nbsp;(2,1), (2,2), (2,3), (2,4), (2,5), (2,6),<br>
+                        &nbsp;&nbsp;(3,1), (3,2), (3,3), (3,4), (3,5), (3,6),<br>
+                        &nbsp;&nbsp;(4,1), (4,2), (4,3), (4,4), (4,5), (4,6),<br>
+                        &nbsp;&nbsp;(5,1), (5,2), (5,3), (5,4), (5,5), (5,6),<br>
+                        &nbsp;&nbsp;(6,1), (6,2), (6,3), (6,4), (6,5), (6,6)<br>
+                        }
+                      </div>
+                      <span style="color:#fde047; font-weight:800; font-size:15px;">n(S) = 6 × 6 = 36 equally likely outcomes</span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 1. Sample space S. All ordered pairs a, b from 1 to 6. Total number of outcomes, n of S equals 6 times 6, which is 36.",
+                audioScriptTa: "படி 1. கூறுவெளி S. இரண்டு பகடைகள் உருட்டப்படும் போது n of S = 6 பெருக்கல் 6 = 36 சமவாய்ப்பு விளைவுகள் உள்ளன."
+              },
+              {
+                stepNum: 2,
+                badge: "② Step 2 — Event A (Even on 1st Die)",
+                badgeEn: "② Step 2 — Event A (Even on 1st Die)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Step 2 — Event A: Even Number on First Die</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      A = {2, 4, 6} × {1, 2, 3, 4, 5, 6}<br>
+                      <div style="background:#1e293b; border:1px solid #475569; border-radius:8px; padding:10px; margin:8px 0; font-family:monospace; color:#60a5fa; font-size:12.5px; line-height:1.7;">
+                        A = { (2,1), (2,2), (2,3), (2,4), (2,5), (2,6),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4,1), (4,2), (4,3), (4,4), (4,5), (4,6),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6,1), (6,2), (6,3), (6,4), (6,5), (6,6) }
+                      </div>
+                      <span style="color:#fde047; font-weight:800;">n(A) = 3 × 6 = 18</span><br>
+                      <span style="color:#4ade80; font-weight:800; font-size:15px;">P(A) = n(A) / n(S) = 18 / 36</span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 2. Event A: even number on the first die. A contains 18 ordered pairs. n of A equals 18. P of A equals 18 divided by 36.",
+                audioScriptTa: "படி 2. நிகழ்ச்சி A: முதல் பகடையில் இரட்டை எண் கிடைப்பது. n of A = 18. P of A = 18 கீழ் 36."
+              },
+              {
+                stepNum: 3,
+                badge: "③ Step 3 — Event B (Total of 8)",
+                badgeEn: "③ Step 3 — Event B (Total of 8)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Step 3 — Event B: Total of 8</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      Pairs whose sum equals 8:<br>
+                      <div style="background:#1e293b; border:1px solid #475569; border-radius:8px; padding:10px; margin:8px 0; font-family:monospace; color:#fb923c; font-size:13.5px; line-height:1.7;">
+                        B = {(2,6), (3,5), (4,4), (5,3), (6,2)}
+                      </div>
+                      <span style="color:#fde047; font-weight:800;">n(B) = 5</span><br>
+                      <span style="color:#4ade80; font-weight:800; font-size:15px;">P(B) = n(B) / n(S) = 5 / 36</span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 3. Event B: total of 8. B equals (2,6), (3,5), (4,4), (5,3), (6,2). n of B equals 5. P of B equals 5 divided by 36.",
+                audioScriptTa: "படி 3. நிகழ்ச்சி B: முக எண்களின் கூடுதல் 8 கிடைப்பது. B = (2,6), (3,5), (4,4), (5,3), (6,2). n of B = 5. P of B = 5 கீழ் 36."
+              },
+              {
+                stepNum: 4,
+                badge: "④ Step 4 — The Intersection (A ∩ B)",
+                badgeEn: "④ Step 4 — The Intersection (A ∩ B)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Step 4 — The Intersection A ∩ B</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #f87171; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      Total 8 <b>AND</b> even on 1st die:<br>
+                      <div style="background:#1e293b; border:1.5px solid #ef4444; border-radius:8px; padding:10px; margin:8px 0; font-family:monospace; color:#f87171; font-size:13.5px; line-height:1.7;">
+                        A ∩ B = {(2,6), (4,4), (6,2)}
+                      </div>
+                      <span style="color:#fde047; font-weight:800;">n(A ∩ B) = 3</span><br>
+                      <span style="color:#4ade80; font-weight:800; font-size:15px;">P(A ∩ B) = n(A ∩ B) / n(S) = 3 / 36</span><br><br>
+                      <span style="color:#fbbf24; font-size:13px; font-weight:600;">
+                        📌 Note: Events A and B are NOT mutually exclusive. Those 3 outcomes are counted twice, so we must subtract P(A ∩ B)!
+                      </span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 4. The intersection A intersection B. Total 8 and even on first die gives 3 outcomes: (2,6), (4,4), and (6,2). n of A intersection B equals 3, and P of A intersection B equals 3 divided by 36.",
+                audioScriptTa: "படி 4. வெட்டு A வெட்டு B. கூடுதல் 8 மற்றும் முதல் பகடையில் இரட்டை எண் கொண்ட 3 பொதுவான கூறுகள். n of A intersection B = 3, P of A intersection B = 3 கீழ் 36."
+              },
+              {
+                stepNum: 5,
+                badge: "⑤ Step 5 — Substitute (Addition Theorem)",
+                badgeEn: "⑤ Step 5 — Substitute (Addition Theorem)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Step 5 — Addition Theorem for Two Events</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.8;">
+                      <div style="background:#1e293b; border:1.5px solid #fde047; border-radius:8px; padding:10px; text-align:center; color:#fde047; font-size:15px; font-weight:800; margin-bottom:10px;">
+                        DEFINITION: P(A ∪ B) = P(A) + P(B) − P(A ∩ B)
+                      </div>
+                      <span style="color:#94a3b8; font-size:13px;">(we subtract P(A ∩ B) because those outcomes are counted twice)</span><br><br>
+                      <b>STEP 5 — SUBSTITUTE:</b><br>
+                      <span style="font-size:16px; font-weight:700; color:#38bdf8;">P(A ∪ B) = 18/36 + 5/36 − 3/36</span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 5. Substitute into the addition theorem: P of A union B equals P of A plus P of B minus P of A intersection B. Substituting gives 18/36 plus 5/36 minus 3/36.",
+                audioScriptTa: "படி 5. கூட்டல் தேற்றத்தில் பிரதியிடல்: P of A union B = P of A + P of B - P of A intersection B = 18/36 + 5/36 - 3/36."
+              },
+              {
+                stepNum: 6,
+                badge: "⑥ Step 6 — Simplify & Boxed Answer",
+                badgeEn: "⑥ Step 6 — Simplify & Boxed Answer",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Step 6 — Simplify</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #4ade80; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:15px; line-height:1.8;">
+                      = (18 + 5 − 3) / 36<br>
+                      = <b>20 / 36</b><br><br>
+                      Dividing numerator and denominator by 4:<br>
+                      <div style="background:#14532d; border:2.5px solid #fde047; border-radius:10px; padding:12px; text-align:center; margin-top:10px;">
+                        <span style="color:#ffffff; font-size:13px; font-weight:700; display:block; margin-bottom:4px;">ANSWER (boxed, yellow chalk):</span>
+                        <span style="color:#fde047; font-size:20px; font-weight:900;">
+                          P(even on 1st die or total 8) = 5/9 ≈ 0.556
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 6. Simplify: 18 plus 5 minus 3 over 36 equals 20/36. Reduced answer is 5/9, approximately 0.556.",
+                audioScriptTa: "படி 6. சுருக்குதல்: 20 கீழ் 36. 4-ஆல் வகுக்க, இறுதி விடை 5 கீழ் 9 = தோராயமாக 0.556."
+              }
+            ]
+          },
+diagramCaption: "Sample Space Matrix (6 × 6 = 36 outcomes) illustrating Event A (Even on 1st die, 18 outcomes in blue), Event B (Sum = 8, 5 outcomes in orange), and their overlap A ∩ B (3 outcomes highlighted with stars).",
           diagramSvg: `<div style="max-width:380px; margin:12px auto; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); text-align:center;">
             <div style="font-size:12.5px; font-weight:700; color:#1e3a8a; margin-bottom:8px;">🎲 Two Dice Sample Space &amp; Addition Theorem</div>
             <svg viewBox="0 0 380 475" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:380/475;">
@@ -313,7 +453,7 @@ const MATHS_EM_UNIT_8_DATA = {
             <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
               <b>Step 1 — Sample Space (S):</b><br>
               When two dice are rolled simultaneously, the sample space consists of all ordered pairs (a, b) where a, b ∈ {1, 2, 3, 4, 5, 6}:<br>
-              <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
+              <div style="background:#ffffff; color:#0f172a; border:1px solid #cbd5e1; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
                 S = {<br>
                 &nbsp;&nbsp;(1,1), (1,2), (1,3), (1,4), (1,5), (1,6),<br>
                 &nbsp;&nbsp;(2,1), (2,2), (2,3), (2,4), (2,5), (2,6),<br>
@@ -329,7 +469,7 @@ const MATHS_EM_UNIT_8_DATA = {
             <div style="background:#f0f9ff; border-left:4px solid #0284c7; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
               <b>Step 2 — Event A: Getting an even number on the first die:</b><br>
               The first die can take values {2, 4, 6} (3 choices) while the second die takes any of {1, 2, 3, 4, 5, 6} (6 choices):<br>
-              <div style="background:#ffffff; border:1px solid #bae6fd; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
+              <div style="background:#ffffff; color:#0f172a; border:1px solid #bae6fd; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
                 A = {<br>
                 &nbsp;&nbsp;(2,1), (2,2), (2,3), (2,4), (2,5), (2,6),<br>
                 &nbsp;&nbsp;(4,1), (4,2), (4,3), (4,4), (4,5), (4,6),<br>
@@ -343,7 +483,7 @@ const MATHS_EM_UNIT_8_DATA = {
             <div style="background:#fff7ed; border-left:4px solid #ea580c; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
               <b>Step 3 — Event B: Getting a total (sum) of 8:</b><br>
               Ordered pairs (a, b) whose sum a + b = 8:<br>
-              <div style="background:#ffffff; border:1px solid #fed7aa; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
+              <div style="background:#ffffff; color:#0f172a; border:1px solid #fed7aa; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
                 B = {(2,6), (3,5), (4,4), (5,3), (6,2)}<br>
                 <b>Number of outcomes in B, n(B) = 5</b><br>
                 <b>Probability, P(B) = n(B) / n(S) = 5 / 36</b>
@@ -353,7 +493,7 @@ const MATHS_EM_UNIT_8_DATA = {
             <div style="background:#fef2f2; border-left:4px solid #dc2626; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
               <b>Step 4 — The Intersection (A ∩ B):</b><br>
               Total 8 <b>AND</b> even on 1st die:<br>
-              <div style="background:#ffffff; border:1px solid #fecaca; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
+              <div style="background:#ffffff; color:#0f172a; border:1px solid #fecaca; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
                 A ∩ B = {(2,6), (4,4), (6,2)}<br>
                 <b>Number of outcomes in A ∩ B, n(A ∩ B) = 3</b><br>
                 <b>Probability, P(A ∩ B) = n(A ∩ B) / n(S) = 3 / 36</b>

@@ -164,7 +164,146 @@ const MATHS_TM_UNIT_8_DATA = {
           examTag: "அரசுத் தேர்வு வினா (பயிற்சி 8.4 வினா 6)",
           isImportant: true,
           q: "இரு பகடைகள் உருட்டப்படுகின்றன. முதல் பகடையில் இரட்டை எண் அல்லது முக எண்களின் கூடுதல் 8 கிடைப்பதற்கான நிகழ்தகவைக் காண்க.",
-          diagramCaption: "கூறுவெளி கட்ட வரைபடம் (6 × 6 = 36 கூறுகள்): நிகழ்ச்சி A (முதல் பகடை இரட்டை எண், 18 கூறுகள் நீல வண்ணம்), நிகழ்ச்சி B (கூடுதல் 8, 5 கூறுகள் ஆரஞ்சு வண்ணம்), பொது வெட்டு A ∩ B (3 பொதுக் கூறுகள் நட்சத்திரக் குறியுடன்).",
+                    blackboard: {
+            title: "இரு பகடைகள் உருட்டுதல்: முதல் பகடை இரட்டை எண் அல்லது கூடுதல் 8",
+            engTitle: "Two Dice Rolled Once: Probability of Even on 1st Die OR Total of 8",
+            steps: [
+              {
+                stepNum: 1,
+                badge: "① படி 1 — கூறுவெளி S",
+                badgeEn: "① Step 1 — Sample Space S",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">படி 1 — கூறுவெளி (Sample Space S)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      இரு பகடைகள் உருட்டப்படும் போது கிடைக்கும் கூறுவெளி S:<br>
+                      <div style="background:#1e293b; border:1px solid #475569; border-radius:8px; padding:10px; margin:8px 0; font-family:monospace; color:#38bdf8; font-size:12.5px; line-height:1.7;">
+                        S = {<br>
+                        &nbsp;&nbsp;(1,1), (1,2), (1,3), (1,4), (1,5), (1,6),<br>
+                        &nbsp;&nbsp;(2,1), (2,2), (2,3), (2,4), (2,5), (2,6),<br>
+                        &nbsp;&nbsp;(3,1), (3,2), (3,3), (3,4), (3,5), (3,6),<br>
+                        &nbsp;&nbsp;(4,1), (4,2), (4,3), (4,4), (4,5), (4,6),<br>
+                        &nbsp;&nbsp;(5,1), (5,2), (5,3), (5,4), (5,5), (5,6),<br>
+                        &nbsp;&nbsp;(6,1), (6,2), (6,3), (6,4), (6,5), (6,6)<br>
+                        }
+                      </div>
+                      <span style="color:#fde047; font-weight:800; font-size:15px;">மொத்தக் கூறுகளின் எண்ணிக்கை n(S) = 6 × 6 = 36</span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 1. Sample space S. Total number of outcomes, n of S equals 6 times 6, which is 36.",
+                audioScriptTa: "படி 1. கூறுவெளி S. இரண்டு பகடைகள் உருட்டப்படும் போது n of S = 6 பெருக்கல் 6 = 36 சமவாய்ப்பு விளைவுகள் உள்ளன."
+              },
+              {
+                stepNum: 2,
+                badge: "② படி 2 — நிகழ்ச்சி A (முதல் பகடையில் இரட்டை எண்)",
+                badgeEn: "② Step 2 — Event A (Even on 1st Die)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">படி 2 — நிகழ்ச்சி A: முதல் பகடையில் இரட்டை எண்</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      முதல் பகடையில் {2, 4, 6} (3 வாய்ப்புகள்), இரண்டாம் பகடையில் {1..6} (6 வாய்ப்புகள்):<br>
+                      <div style="background:#1e293b; border:1px solid #475569; border-radius:8px; padding:10px; margin:8px 0; font-family:monospace; color:#60a5fa; font-size:12.5px; line-height:1.7;">
+                        A = { (2,1), (2,2), (2,3), (2,4), (2,5), (2,6),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4,1), (4,2), (4,3), (4,4), (4,5), (4,6),<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6,1), (6,2), (6,3), (6,4), (6,5), (6,6) }
+                      </div>
+                      <span style="color:#fde047; font-weight:800;">n(A) = 3 × 6 = 18</span><br>
+                      <span style="color:#4ade80; font-weight:800; font-size:15px;">P(A) = n(A) / n(S) = 18 / 36</span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 2. Event A: even number on the first die. n of A equals 18. P of A equals 18 divided by 36.",
+                audioScriptTa: "படி 2. நிகழ்ச்சி A: முதல் பகடையில் இரட்டை எண் கிடைப்பது. n of A = 18. P of A = 18 கீழ் 36."
+              },
+              {
+                stepNum: 3,
+                badge: "③ படி 3 — நிகழ்ச்சி B (கூடுதல் 8)",
+                badgeEn: "③ Step 3 — Event B (Total of 8)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">படி 3 — நிகழ்ச்சி B: முக எண்களின் கூடுதல் 8</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      கூடுதல் a + b = 8 கிடைக்கும் ஜோடிகள்:<br>
+                      <div style="background:#1e293b; border:1px solid #475569; border-radius:8px; padding:10px; margin:8px 0; font-family:monospace; color:#fb923c; font-size:13.5px; line-height:1.7;">
+                        B = {(2,6), (3,5), (4,4), (5,3), (6,2)}
+                      </div>
+                      <span style="color:#fde047; font-weight:800;">n(B) = 5</span><br>
+                      <span style="color:#4ade80; font-weight:800; font-size:15px;">P(B) = n(B) / n(S) = 5 / 36</span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 3. Event B: total of 8. B has 5 outcomes. n of B equals 5. P of B equals 5 divided by 36.",
+                audioScriptTa: "படி 3. நிகழ்ச்சி B: முக எண்களின் கூடுதல் 8 கிடைப்பது. B = (2,6), (3,5), (4,4), (5,3), (6,2). n of B = 5. P of B = 5 கீழ் 36."
+              },
+              {
+                stepNum: 4,
+                badge: "④ படி 4 — வெட்டு நிகழ்ச்சி (A ∩ B)",
+                badgeEn: "④ Step 4 — The Intersection (A ∩ B)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">படி 4 — வெட்டு நிகழ்ச்சி A ∩ B</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #f87171; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      கூடுதல் 8 <b>மற்றும்</b> முதல் பகடையில் இரட்டை எண்:<br>
+                      <div style="background:#1e293b; border:1.5px solid #ef4444; border-radius:8px; padding:10px; margin:8px 0; font-family:monospace; color:#f87171; font-size:13.5px; line-height:1.7;">
+                        A ∩ B = {(2,6), (4,4), (6,2)}
+                      </div>
+                      <span style="color:#fde047; font-weight:800;">n(A ∩ B) = 3</span><br>
+                      <span style="color:#4ade80; font-weight:800; font-size:15px;">P(A ∩ B) = n(A ∩ B) / n(S) = 3 / 36</span><br><br>
+                      <span style="color:#fbbf24; font-size:13px; font-weight:600;">
+                        📌 குறிப்பு: A, B இரண்டும் ஒன்றையொன்று விலக்கா நிகழ்ச்சிகள். இந்த 3 கூறுகள் இருமுறை எண்ணப்படுவதைத் தவிர்க்க P(A ∩ B)-ஐ கழிக்க வேண்டும்!
+                      </span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 4. The intersection A intersection B. Total 8 and even on first die gives 3 outcomes. n of A intersection B equals 3, and P of A intersection B equals 3 divided by 36.",
+                audioScriptTa: "படி 4. வெட்டு A வெட்டு B. கூடுதல் 8 மற்றும் முதல் பகடையில் இரட்டை எண் கொண்ட 3 பொதுவான கூறுகள். n of A intersection B = 3, P of A intersection B = 3 கீழ் 36."
+              },
+              {
+                stepNum: 5,
+                badge: "⑤ படி 5 — கூட்டல் தேற்றத்தில் பிரதியிடல்",
+                badgeEn: "⑤ Step 5 — Substitute (Addition Theorem)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">படி 5 — நிகழ்தகவின் கூட்டல் தேற்றம்</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.8;">
+                      <div style="background:#1e293b; border:1.5px solid #fde047; border-radius:8px; padding:10px; text-align:center; color:#fde047; font-size:15px; font-weight:800; margin-bottom:10px;">
+                        சூத்திரம்: P(A ∪ B) = P(A) + P(B) − P(A ∩ B)
+                      </div>
+                      மதிப்புகளைப் பிரதியிட:<br>
+                      <span style="font-size:16px; font-weight:700; color:#38bdf8;">P(A ∪ B) = 18/36 + 5/36 − 3/36</span>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 5. Substitute into addition theorem: P of A union B equals 18/36 plus 5/36 minus 3/36.",
+                audioScriptTa: "படி 5. கூட்டல் தேற்றத்தில் பிரதியிடல்: P of A union B = 18/36 + 5/36 - 3/36."
+              },
+              {
+                stepNum: 6,
+                badge: "⑥ படி 6 — சுருக்குதல் & இறுதி விடை",
+                badgeEn: "⑥ Step 6 — Simplify & Boxed Answer",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">படி 6 — சுருக்குதல் &amp; விடை</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #4ade80; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:15px; line-height:1.8;">
+                      P(A ∪ B) = (18 + 5 − 3) / 36<br>
+                      = <b>20 / 36</b><br><br>
+                      தொகுதி மற்றும் பகுதியை 4-ஆல் வகுக்க:<br>
+                      <div style="background:#14532d; border:2.5px solid #fde047; border-radius:10px; padding:12px; text-align:center; margin-top:10px;">
+                        <span style="color:#ffffff; font-size:13px; font-weight:700; display:block; margin-bottom:4px;">இறுதி விடை (மஞ்சள் கட்டம்):</span>
+                        <span style="color:#fde047; font-size:20px; font-weight:900;">
+                          P(A ∪ B) = 5/9 ≈ 0.556
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Step 6. Simplify: 20 divided by 36 equals 5/9, which is approximately 0.556.",
+                audioScriptTa: "படி 6. சுருக்குதல்: 20 கீழ் 36 = 5 கீழ் 9, தோராயமாக 0.556 ஆகும்."
+              }
+            ]
+          },
+diagramCaption: "கூறுவெளி கட்ட வரைபடம் (6 × 6 = 36 கூறுகள்): நிகழ்ச்சி A (முதல் பகடை இரட்டை எண், 18 கூறுகள் நீல வண்ணம்), நிகழ்ச்சி B (கூடுதல் 8, 5 கூறுகள் ஆரஞ்சு வண்ணம்), பொது வெட்டு A ∩ B (3 பொதுக் கூறுகள் நட்சத்திரக் குறியுடன்).",
           diagramSvg: `<div style="max-width:380px; margin:12px auto; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:12px; padding:12px; box-shadow:0 2px 8px rgba(0,0,0,0.06); text-align:center;">
             <div style="font-size:12.5px; font-weight:700; color:#1e3a8a; margin-bottom:8px;">🎲 இரு பகடைகளின் கூறுவெளி &amp; கூட்டல் தேற்றம்</div>
             <svg viewBox="0 0 380 475" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="background:#f8fafc; border-radius:8px; display:block; aspect-ratio:380/475;">
@@ -313,7 +452,7 @@ const MATHS_TM_UNIT_8_DATA = {
             <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
               <b>படி 1 — கூறுவெளி (Sample Space S):</b><br>
               இரு பகடைகள் ஒரே நேரத்தில் உருட்டப்படும் போது கிடைக்கும் கூறுவெளி (a, b) இங்கு a, b ∈ {1, 2, 3, 4, 5, 6}:<br>
-              <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
+              <div style="background:#ffffff; color:#0f172a; border:1px solid #cbd5e1; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
                 S = {<br>
                 &nbsp;&nbsp;(1,1), (1,2), (1,3), (1,4), (1,5), (1,6),<br>
                 &nbsp;&nbsp;(2,1), (2,2), (2,3), (2,4), (2,5), (2,6),<br>
@@ -329,7 +468,7 @@ const MATHS_TM_UNIT_8_DATA = {
             <div style="background:#f0f9ff; border-left:4px solid #0284c7; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
               <b>படி 2 — நிகழ்ச்சி A: முதல் பகடையில் இரட்டை எண் கிடைப்பது:</b><br>
               முதல் பகடையில் {2, 4, 6} (3 வாய்ப்புகள்), இரண்டாம் பகடையில் {1, 2, 3, 4, 5, 6} (6 வாய்ப்புகள்):<br>
-              <div style="background:#ffffff; border:1px solid #bae6fd; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
+              <div style="background:#ffffff; color:#0f172a; border:1px solid #bae6fd; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
                 A = {<br>
                 &nbsp;&nbsp;(2,1), (2,2), (2,3), (2,4), (2,5), (2,6),<br>
                 &nbsp;&nbsp;(4,1), (4,2), (4,3), (4,4), (4,5), (4,6),<br>
@@ -343,7 +482,7 @@ const MATHS_TM_UNIT_8_DATA = {
             <div style="background:#fff7ed; border-left:4px solid #ea580c; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
               <b>படி 3 — நிகழ்ச்சி B: முக எண்களின் கூடுதல் 8 கிடைப்பது:</b><br>
               கூடுதல் a + b = 8 கிடைக்கும் ஜோடிகள்:<br>
-              <div style="background:#ffffff; border:1px solid #fed7aa; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
+              <div style="background:#ffffff; color:#0f172a; border:1px solid #fed7aa; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
                 B = {(2,6), (3,5), (4,4), (5,3), (6,2)}<br>
                 <b>n(B) = 5</b><br>
                 <b>நிகழ்தகவு, P(B) = n(B) / n(S) = 5 / 36</b>
@@ -353,7 +492,7 @@ const MATHS_TM_UNIT_8_DATA = {
             <div style="background:#fef2f2; border-left:4px solid #dc2626; padding:10px 14px; border-radius:4px; margin-bottom:12px;">
               <b>படி 4 — வெட்டு நிகழ்ச்சி (A ∩ B):</b><br>
               முதல் பகடையில் இரட்டை எண் <b>மற்றும்</b> முக எண்களின் கூடுதல் 8 கிடைப்பது:<br>
-              <div style="background:#ffffff; border:1px solid #fecaca; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
+              <div style="background:#ffffff; color:#0f172a; border:1px solid #fecaca; border-radius:6px; padding:8px 12px; margin:8px 0; font-family:monospace; font-size:12.5px; line-height:1.7;">
                 A ∩ B = {(2,6), (4,4), (6,2)}<br>
                 <b>n(A ∩ B) = 3</b><br>
                 <b>நிகழ்தகவு, P(A ∩ B) = n(A ∩ B) / n(S) = 3 / 36</b>

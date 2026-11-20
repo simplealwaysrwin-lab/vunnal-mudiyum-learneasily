@@ -119,7 +119,7 @@ const SCIENCE_EM_UNIT_15_DATA = {
           type: "7m",
           mark: "4 / 7 Marks",
           examTag: "Public Exam 7M",
-          diagramImg: "images/sci_brain_diagram.jpg",
+          diagramImg: (typeof window !== "undefined" && window.IMG_BRAIN_B64) ? window.IMG_BRAIN_B64 : "images/sci_brain_diagram.jpg",
           q: "Describe the structural organization and physiological specializations of the Human Brain under Forebrain, Midbrain, and Hindbrain.",
           ans: `<div style="line-height:1.8;">
             <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:12px 16px; border-radius:8px; margin-bottom:14px;">

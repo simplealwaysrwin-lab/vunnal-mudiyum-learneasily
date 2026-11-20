@@ -167,7 +167,7 @@ const MATHS_TM_UNIT_8_DATA = {
           blackboard: {
             title: "இரு பகடைகள் உருட்டுதல்: முதல் பகடை இரட்டை எண் அல்லது கூடுதல் 8",
             engTitle: "Two Dice Rolled Once: Probability of Even on 1st Die OR Total of 8",
-            fullBoardImg: "images/maths_two_dice_board_part1.jpg",
+            fullBoardImg: (typeof window !== "undefined" && window.IMG_DICE_PART1_B64) ? window.IMG_DICE_PART1_B64 : "images/maths_two_dice_board_part1.jpg",
             fullBoardImages: [
               "images/maths_two_dice_board_part1.jpg",
               "images/maths_two_dice_board_part2.jpg"

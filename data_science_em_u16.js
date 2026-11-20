@@ -136,7 +136,7 @@ const SCIENCE_EM_UNIT_16_DATA = {
           type: "7m",
           mark: "4 / 7 Marks",
           examTag: "Public Exam 7M",
-          diagramImg: "images/sci_plant_hormones_diagram.png",
+          diagramImg: (typeof window !== "undefined" && window.IMG_PLANT_B64) ? window.IMG_PLANT_B64 : "images/sci_plant_hormones_diagram.png",
           q: "Detail the physiological roles of the four major plant hormones: Auxins, Gibberellins, Cytokinins, and Ethylene.",
           ans: `<div style="line-height:1.8;">
             <p style="margin-bottom:12px; font-size:14.5px;">

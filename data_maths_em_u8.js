@@ -164,9 +164,14 @@ const MATHS_EM_UNIT_8_DATA = {
           examTag: "Top Addition Theorem Question",
           isImportant: true,
           q: "Two dice are rolled once. Find the probability of getting an even number on the first die or a total of 8.",
-                    blackboard: {
+          blackboard: {
             title: "Two Dice Rolled Once: Probability of Even on 1st Die OR Total of 8",
             engTitle: "Two Dice Rolled Once: Probability of Even on 1st Die OR Total of 8",
+            fullBoardImg: "images/maths_two_dice_board_part1.jpg",
+            fullBoardImages: [
+              "images/maths_two_dice_board_part1.jpg",
+              "images/maths_two_dice_board_part2.jpg"
+            ],
             steps: [
               {
                 stepNum: 1,

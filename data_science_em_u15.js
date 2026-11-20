@@ -1,4 +1,4 @@
-// Class 10 Science - Unit 15: Nervous System
+﻿// Class 10 Science - Unit 15: Nervous System
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SCIENCE_EM_UNIT_15_DATA = {
@@ -119,28 +119,154 @@ const SCIENCE_EM_UNIT_15_DATA = {
           type: "7m",
           mark: "4 / 7 Marks",
           examTag: "Public Exam 7M",
+          diagramImg: "images/sci_brain_diagram.jpg",
           q: "Describe the structural organization and physiological specializations of the Human Brain under Forebrain, Midbrain, and Hindbrain.",
           ans: `<div style="line-height:1.8;">
-            The human brain serves as the primary coordination and decision-making center of the body. It is organized into three major regions:<br><br>
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:12px 16px; border-radius:8px; margin-bottom:14px;">
+              <b style="color:#1e40af; font-size:15px;">🧠 Structural Organization:</b><br>
+              • The human brain is the main control and coordination centre of the nervous system.<br>
+              • It is enclosed in the skull (cranium) and protected by three meninges (Dura mater, Arachnoid membrane, and Pia mater) and cerebrospinal fluid (CSF).<br>
+              • Structurally, it is organized into three major parts — <b>Forebrain, Midbrain, and Hindbrain</b>.
+            </div>
 
-            <b>1. Forebrain (Prosencephalon):</b><br>
-            • <b>Cerebrum:</b> Largest component occupying nearly two-thirds of the brain, characterized by surface gyri (ridges) and sulci (grooves).<br>
-            &nbsp;&nbsp;<i>Functions:</i> Seat of intelligence, reasoning, memory, imagination, will power, speech comprehension, and voluntary motor control.<br>
-            • <b>Thalamus:</b> Centrally positioned sensory relay station transmitting incoming sensory impulses (except olfaction) to corresponding cerebral cortex zones.<br>
-            • <b>Hypothalamus:</b> Master homeostatic center regulating body temperature (thermoregulation), thirst, hunger, sleep-wake cycles, emotional responses, and pituitary endocrine secretions.<br><br>
+            <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; margin-bottom:14px; overflow-x:auto;">
+              <div style="color:#0f172a; font-weight:800; font-size:15px; margin-bottom:8px; border-bottom:2px solid #3b82f6; padding-bottom:4px;">
+                📊 Structural Organization & Physiological Specializations (Functions)
+              </div>
+              <table style="width:100%; border-collapse:collapse; font-size:13.5px; text-align:left;">
+                <thead>
+                  <tr style="background:#1e3a8a; color:#ffffff;">
+                    <th style="padding:10px 12px; border:1px solid #94a3b8; width:18%;">Part</th>
+                    <th style="padding:10px 12px; border:1px solid #94a3b8; width:34%;">Structural Organization</th>
+                    <th style="padding:10px 12px; border:1px solid #94a3b8; width:48%;">Physiological Specializations (Functions)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background:#fdf2f8;">
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; font-weight:800; color:#9d174d; vertical-align:top;">Forebrain</td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • Largest and most developed part.<br>
+                      • Includes <b>Cerebrum</b>, <b>Thalamus</b>, and <b>Hypothalamus</b>.
+                    </td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • <b>Cerebrum:</b> Centre for thinking, memory, learning, intelligence, perception, and voluntary actions.<br>
+                      • <b>Thalamus:</b> Relay station for sensory information to the cerebrum.<br>
+                      • <b>Hypothalamus:</b> Maintains homeostasis (body temperature, hunger, thirst, water balance) and controls endocrine functions through the pituitary gland.
+                    </td>
+                  </tr>
+                  <tr style="background:#f0f9ff;">
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; font-weight:800; color:#0369a1; vertical-align:top;">Midbrain</td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • Located between the forebrain and hindbrain.<br>
+                      • A small part, forming a connecting link between them.
+                    </td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • Involved in reflexes to visual and auditory stimuli.<br>
+                      • Helps in the control of eye movements and pupil size.<br>
+                      • Acts as a relay centre for nerve impulses between forebrain and hindbrain.
+                    </td>
+                  </tr>
+                  <tr style="background:#fefce8;">
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; font-weight:800; color:#854d0e; vertical-align:top;">Hindbrain</td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • Composed of <b>Cerebellum</b>, <b>Pons</b>, and <b>Medulla oblongata</b>.
+                    </td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • <b>Cerebellum:</b> Maintains balance and posture; coordinates the precision of voluntary movements.<br>
+                      • <b>Pons:</b> Acts as a bridge between different parts of the brain and helps in the regulation of breathing.<br>
+                      • <b>Medulla oblongata:</b> Controls vital involuntary functions such as breathing, heartbeat, and blood pressure.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-            <b>2. Midbrain (Mesencephalon):</b><br>
-            • Located between the thalamus and the pons.<br>
-            &nbsp;&nbsp;<i>Functions:</i> Coordinates visual and auditory reflexes, regulating pupil diameter, eye movement, and acoustic orientation responses.<br><br>
-
-            <b>3. Hindbrain (Rhombencephalon):</b><br>
-            • <b>Cerebellum:</b> Second largest brain division situated beneath the occipital lobes.<br>
-            &nbsp;&nbsp;<i>Functions:</i> Coordinates voluntary neuromuscular activity, fine motor skills, body posture, and equilibrium.<br>
-            • <b>Pons Varolii:</b> Bridge of transverse nerve fibers connecting cerebellum hemispheres and coordinating respiratory pneumotaxic centers.<br>
-            • <b>Medulla Oblongata:</b> Conical posterior region merging with the spinal cord.<br>
-            &nbsp;&nbsp;<i>Functions:</i> Vital autonomic cardiovascular and respiratory reflex center regulating heart rate, blood vessel diameter (vasomotor), breathing, coughing, sneezing, and swallowing.
+            <div style="background:#fdf4ff; border-left:4px solid #a855f7; padding:10px 14px; border-radius:6px; margin-top:10px;">
+              <b style="color:#7e22ce;">⭐ Key Points for Exam (Quick Recall):</b><br>
+              ✔ <b>Brain:</b> Control and coordination centre.<br>
+              ✔ <b>Three main parts:</b> Forebrain, Midbrain, Hindbrain.<br>
+              ✔ <b>Forebrain:</b> Higher mental functions and homeostasis.<br>
+              ✔ <b>Midbrain:</b> Visual / auditory reflexes and relay.<br>
+              ✔ <b>Hindbrain:</b> Balance, coordination, and vital involuntary actions.
+            </div>
           </div>`,
-          ansTamil: "மூளை 3 பகுதிகள்: முன்மூளை (சிந்தனை, அறிவு), நடுமூளை (பார்வை, கேட்டல்), பின்மூளை (சமநிலை, சுவாசம், இதயத்துடிப்பு)."
+          ansTamil: "மூளை 3 பகுதிகள்: முன்மூளை (சிந்தனை, அறிவு, சமநிலை பராமரிப்பு), நடுமூளை (பார்வை, கேட்டல் அனிச்சை), பின்மூளை (சமநிலை, சுவாசம், இதயத்துடிப்பு).",
+          blackboard: {
+            title: "Human Brain: Structural Organization & Physiological Specializations",
+            engTitle: "Human Brain: Structural Organization & Physiological Specializations",
+            fullBoardImg: "images/sci_brain_diagram.jpg",
+            steps: [
+              {
+                stepNum: 1,
+                badge: "🧠 1. Structural Organization of Brain",
+                badgeEn: "🧠 1. Structural Organization of Brain",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">Structural Organization of Human Brain</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • Main control and coordination centre of the nervous system.<br>
+                      • Enclosed in the skull (cranium), protected by 3 meninges (Dura mater, Arachnoid membrane, Pia mater) and cerebrospinal fluid (CSF).<br>
+                      • Organised into 3 major divisions: <span style="color:#fde047; font-weight:700;">Forebrain, Midbrain, and Hindbrain</span>.
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Structural Organization: The human brain is the main control and coordination centre of the nervous system. Enclosed in the skull and protected by three meninges and cerebrospinal fluid. It is organised into Forebrain, Midbrain, and Hindbrain.",
+                audioScriptTa: "மனித மூளையின் அமைப்பு: மனித மூளை நரம்பு மண்டலத்தின் முதன்மைக் கட்டுப்பாட்டு மையம். மண்டையோட்டினுள் மூன்று பாதுகாப்பு சவ்வுகள் மற்றும் மூளை தண்டுவட திரவத்தால் பாதுகாக்கப்படுகிறது. இது முன்மூளை, நடுமூளை மற்றும் பின்மூளை என மூன்று பகுதிகளாகப் பிரிக்கப்பட்டுள்ளது."
+              },
+              {
+                stepNum: 2,
+                badge: "🔬 2. Forebrain Specializations",
+                badgeEn: "🔬 2. Forebrain Specializations",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#f472b6; font-weight:800; font-size:16px;">Forebrain (Cerebrum, Thalamus, Hypothalamus)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #f472b6; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#f472b6;">Cerebrum:</b> Largest part. Centre for thinking, memory, learning, intelligence, perception, and voluntary movements.<br>
+                      • <b style="color:#f472b6;">Thalamus:</b> Major relay station for sensory inputs to cerebrum.<br>
+                      • <b style="color:#f472b6;">Hypothalamus:</b> Controls homeostasis (body temperature, hunger, thirst, water balance) and pituitary endocrine secretions.
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Forebrain: Cerebrum is the centre for thinking, memory, intelligence, and voluntary actions. Thalamus acts as a relay station for sensory impulses. Hypothalamus maintains homeostasis and controls pituitary gland.",
+                audioScriptTa: "முன்மூளை: பெருமூளை சிந்தனை, நினைவுத்திறன் மற்றும் இயக்கங்களின் மையம். தலாமஸ் உணர்வுத் தகவல்களை கடத்தும் மறுஒலிபரப்பு மையம். ஹைப்போதலாமஸ் உடல் வெப்பநிலை, பசி, தாகம் மற்றும் பிட்யூட்டரி சுரப்பியை கட்டுப்படுத்துகிறது."
+              },
+              {
+                stepNum: 3,
+                badge: "⚡ 3. Midbrain Specializations",
+                badgeEn: "⚡ 3. Midbrain Specializations",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#38bdf8; font-weight:800; font-size:16px;">Midbrain (Reflex & Relay Link)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • Located between forebrain and hindbrain, forming a connecting link.<br>
+                      • Controls <span style="color:#38bdf8; font-weight:700;">visual and auditory reflexes</span>.<br>
+                      • Coordinates eye movements and pupil dilation/constriction.<br>
+                      • Relay centre for nerve impulses between forebrain and hindbrain.
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Midbrain: Located between forebrain and hindbrain. It coordinates visual and auditory reflexes, eye movements, pupil size, and impulse relay.",
+                audioScriptTa: "நடுமூளை: முன்மூளைக்கும் பின்மூளைக்கும் இடையில் அமைந்துள்ளது. பார்வை மற்றும் கேட்டல் அனிச்சை செயல்களை ஒருங்கிணைக்கிறது; கண் இயக்கத்தைக் கட்டுப்படுத்துகிறது."
+              },
+              {
+                stepNum: 4,
+                badge: "⚖️ 4. Hindbrain Specializations",
+                badgeEn: "⚖️ 4. Hindbrain Specializations",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#facc15; font-weight:800; font-size:16px;">Hindbrain (Cerebellum, Pons, Medulla Oblongata)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #facc15; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#facc15;">Cerebellum:</b> Coordinates precision of voluntary movements; maintains posture and body balance.<br>
+                      • <b style="color:#facc15;">Pons:</b> Bridge connecting brain parts; regulates respiratory rhythm.<br>
+                      • <b style="color:#facc15;">Medulla Oblongata:</b> Vital autonomic centre for breathing, heartbeat, and blood pressure regulation.
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Hindbrain: Cerebellum maintains body posture and balance. Pons acts as a bridge and regulates breathing. Medulla oblongata controls vital involuntary functions like heartbeat, respiration, and blood pressure.",
+                audioScriptTa: "பின்மூளை: சிறுமூளை உடலின் சமநிலை மற்றும் தோரணையைப் பராமரிக்கிறது. பான்ஸ் சுவாசத்தை ஒழுங்குபடுத்துகிறது. முகுளம் சுவாசம், இதயத்துடிப்பு மற்றும் இரத்த அழுத்தத்தைக் கட்டுப்படுத்தும் உயிர்காக்கும் மையம்."
+              }
+            ]
+          }
         }
       ]
     }

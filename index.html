@@ -132,22 +132,22 @@
 <script src="data_english_u6.js?v=20261104_v51"></script>
 <script src="data_english_u7.js?v=20261116_v82"></script>
 <script src="data_english_writing.js?v=20261116_v84"></script>
-  <script src="data_maths_tm_u1.js?v=20261119_v103"></script>
+  <script src="data_maths_tm_u1.js?v=20261120_v104"></script>
 <script src="data_maths_tm_u2.js?v=20261103_v50"></script>
 <script src="data_maths_tm_u3.js?v=20261031_v31"></script>
 <script src="data_maths_tm_u4.js?v=20261105_v56"></script>
 <script src="data_maths_tm_u5.js?v=20261104_v51"></script>
 <script src="data_maths_tm_u6.js?v=20261105_v56"></script>
-<script src="data_maths_tm_u7.js?v=20261119_v103"></script>
-<script src="data_maths_tm_u8.js?v=20261119_v103"></script>
-  <script src="data_maths_em_u1.js?v=20261119_v103"></script>
+<script src="data_maths_tm_u7.js?v=20261120_v105"></script>
+<script src="data_maths_tm_u8.js?v=20261120_v105"></script>
+  <script src="data_maths_em_u1.js?v=20261120_v104"></script>
 <script src="data_maths_em_u2.js?v=20261103_v50"></script>
 <script src="data_maths_em_u3.js?v=20261031_v31"></script>
 <script src="data_maths_em_u4.js?v=20261105_v56"></script>
 <script src="data_maths_em_u5.js?v=20261104_v51"></script>
 <script src="data_maths_em_u6.js?v=20261105_v56"></script>
-<script src="data_maths_em_u7.js?v=20261119_v103"></script>
-<script src="data_maths_em_u8.js?v=20261119_v103"></script>
+<script src="data_maths_em_u7.js?v=20261120_v105"></script>
+<script src="data_maths_em_u8.js?v=20261120_v105"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
 <script src="data_science_u3.js?v=20261031_v31"></script>
@@ -205,8 +205,8 @@
   <script src="data_social_em_u13.js?v=20261114_v73"></script>
   <script src="data_social_em_u14.js?v=20261114_v73"></script>
   <!-- Science Units 15-23 (TM & EM) -->
-  <script src="data_science_u15.js?v=20261119_v99"></script>
-  <script src="data_science_u16.js?v=20261119_v99"></script>
+  <script src="data_science_u15.js?v=20261120_v105"></script>
+  <script src="data_science_u16.js?v=20261120_v105"></script>
   <script src="data_science_u17.js?v=20261119_v99"></script>
   <script src="data_science_u18.js?v=20261119_v99"></script>
   <script src="data_science_u19.js?v=20261119_v99"></script>
@@ -214,8 +214,8 @@
   <script src="data_science_u21.js?v=20261119_v99"></script>
   <script src="data_science_u22.js?v=20261119_v99"></script>
   <script src="data_science_u23.js?v=20261119_v99"></script>
-  <script src="data_science_em_u15.js?v=20261119_v99"></script>
-  <script src="data_science_em_u16.js?v=20261119_v99"></script>
+  <script src="data_science_em_u15.js?v=20261120_v105"></script>
+  <script src="data_science_em_u16.js?v=20261120_v105"></script>
   <script src="data_science_em_u17.js?v=20261119_v99"></script>
   <script src="data_science_em_u18.js?v=20261119_v99"></script>
   <script src="data_science_em_u19.js?v=20261119_v99"></script>
@@ -1476,26 +1476,42 @@
     font-size: 15.5px;
   }
   /* Safeguard: Ensure high-contrast dark text on any light container inside chalkboard / blackboard */
-  .bb-board [style*="background:#ffffff"],
-  .bb-board [style*="background: #ffffff"],
+  .bb-board [style*="background:#e"],
+  .bb-board [style*="background: #e"],
+  .bb-board [style*="background:#f"],
+  .bb-board [style*="background: #f"],
   .bb-board [style*="background:white"],
   .bb-board [style*="background: white"],
-  .bb-board [style*="background:#f8fafc"],
-  .bb-board [style*="background: #f8fafc"],
-  .chalk-content [style*="background:#ffffff"],
-  .chalk-content [style*="background: #ffffff"],
+  .bb-stage [style*="background:#e"],
+  .bb-stage [style*="background: #e"],
+  .bb-stage [style*="background:#f"],
+  .bb-stage [style*="background: #f"],
+  .bb-stage [style*="background:white"],
+  .bb-stage [style*="background: white"],
+  .chalk-content [style*="background:#e"],
+  .chalk-content [style*="background: #e"],
+  .chalk-content [style*="background:#f"],
+  .chalk-content [style*="background: #f"],
   .chalk-content [style*="background:white"],
-  .chalk-content [style*="background: white"],
-  .chalk-content [style*="background:#f8fafc"],
-  .chalk-content [style*="background: #f8fafc"] {
+  .chalk-content [style*="background: white"] {
     color: #0f172a !important;
   }
-  .bb-board [style*="background:#ffffff"] *,
-  .bb-board [style*="background: #ffffff"] *,
+  .bb-board [style*="background:#e"] *,
+  .bb-board [style*="background: #e"] *,
+  .bb-board [style*="background:#f"] *,
+  .bb-board [style*="background: #f"] *,
   .bb-board [style*="background:white"] *,
   .bb-board [style*="background: white"] *,
-  .chalk-content [style*="background:#ffffff"] *,
-  .chalk-content [style*="background: #ffffff"] *,
+  .bb-stage [style*="background:#e"] *,
+  .bb-stage [style*="background: #e"] *,
+  .bb-stage [style*="background:#f"] *,
+  .bb-stage [style*="background: #f"] *,
+  .bb-stage [style*="background:white"] *,
+  .bb-stage [style*="background: white"] *,
+  .chalk-content [style*="background:#e"] *,
+  .chalk-content [style*="background: #e"] *,
+  .chalk-content [style*="background:#f"] *,
+  .chalk-content [style*="background: #f"] *,
   .chalk-content [style*="background:white"] *,
   .chalk-content [style*="background: white"] * {
     color: #0f172a !important;
@@ -10731,16 +10747,16 @@
     for (let part of rawParts) {
       part = part.trim();
       if (!part) continue;
-      // Strip leading punctuation or dots from start of chunk
-      part = part.replace(/^[\.,:;\s\-]+/, '').trim();
+      // Strip leading punctuation or dots from start of chunk (Never strip minus or words!)
+      part = part.replace(/^[\.,:;\s]+/, '').trim();
       if (!part) continue;
       if (part.length <= maxLen) {
         chunks.push(part);
       } else {
-        const clauses = part.split(/(?<=[,:\-])\s+/);
+        const clauses = part.split(/(?<=[,;])\s+/);
         let buf = '';
         for (let cl of clauses) {
-          cl = cl.trim().replace(/^[\.,:;\s\-]+/, '').trim();
+          cl = cl.trim().replace(/^[\.,:;\s]+/, '').trim();
           if (!cl) continue;
           if ((buf + ' ' + cl).trim().length <= maxLen) {
             buf = (buf + ' ' + cl).trim();
@@ -10755,7 +10771,7 @@
 
     const result = [];
     for (let c of chunks) {
-      c = c.trim().replace(/^[\.,:;\s\-]+/, '').trim();
+      c = c.trim().replace(/^[\.,:;\s]+/, '').trim();
       if (!c) continue;
       if (c.length <= (maxLen > 150 ? maxLen : 150)) {
         result.push(c);
@@ -11106,189 +11122,153 @@
     },
 
     formatMathForSpeech: function(rawHtml, lang) {
-      if (!rawHtml) return '';
-      const isEnglish = (lang && lang.startsWith('en')) || (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
-      rawHtml = formatTableForSpeech(rawHtml, isEnglish);
-      let text = rawHtml.replace(/<svg[\s\S]*?<\/svg>/gi, ' ');
-      text = text.replace(/<\/td>\s*<td[^>]*>/gi, ', ');
-      text = text.replace(/<\/th>\s*<th[^>]*>/gi, ', ');
-      text = text.replace(/<\/tr>/gi, '. ');
-      text = text.replace(/<br\s*[\/]?>/gi, '. ');
-      text = text.replace(/<\/(p|div|li|h1|h2|h3|h4|h5|h6|table)>/gi, '. ');
-      text = text.replace(/<[^>]+>/g, ' ');
-      text = text.replace(/&nbsp;/g, ' ')
-                 .replace(/&amp;/g, '&')
-                 .replace(/&lt;/g, '<')
-                 .replace(/&gt;/g, '>')
-                 .replace(/&times;/g, '×');
+  if (!rawHtml) return '';
+  const isEnglish = (lang && lang.startsWith('en')) || (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+  
+  let text = rawHtml.replace(/<svg[\s\S]*?<\/svg>/gi, ' ');
+  text = text.replace(/<\/td>\s*<td[^>]*>/gi, ', ');
+  text = text.replace(/<\/th>\s*<th[^>]*>/gi, ', ');
+  text = text.replace(/<\/tr>/gi, '. ');
+  text = text.replace(/<br\s*[\/]?>/gi, '. ');
+  text = text.replace(/<\/(p|div|li|h1|h2|h3|h4|h5|h6|table)>/gi, '. ');
+  text = text.replace(/<[^>]+>/g, ' ');
+  text = text.replace(/&nbsp;/g, ' ')
+             .replace(/&amp;/g, '&')
+             .replace(/&lt;/g, '<')
+             .replace(/&gt;/g, '>')
+             .replace(/&times;/g, '×');
 
-      // 0. Strip LaTeX delimiter dollars ($) completely so TTS NEVER speaks "dollar" / "ADollar"
-      text = text.replace(/\$/g, ' ');
+  // 0. Strip LaTeX delimiter dollars ($) completely
+  text = text.replace(/\$/g, ' ');
 
-      // 0.1 Convert Unicode subscripts & superscripts into distinct pronounced digits
-      text = text.replace(/₀/g, ' 0 ').replace(/₁/g, ' 1 ').replace(/₂/g, ' 2 ').replace(/₃/g, ' 3 ').replace(/₄/g, ' 4 ')
-                 .replace(/₅/g, ' 5 ').replace(/₆/g, ' 6 ').replace(/₇/g, ' 7 ').replace(/₈/g, ' 8 ').replace(/₉/g, ' 9 ')
-                 .replace(/⁰/g, ' 0 ').replace(/¹/g, ' 1 ').replace(/²/g, ' squared ').replace(/³/g, ' cubed ');
+  // 0.1 Convert Unicode subscripts & superscripts
+  text = text.replace(/₀/g, ' 0 ').replace(/₁/g, ' 1 ').replace(/₂/g, ' 2 ').replace(/₃/g, ' 3 ').replace(/₄/g, ' 4 ')
+             .replace(/₅/g, ' 5 ').replace(/₆/g, ' 6 ').replace(/₇/g, ' 7 ').replace(/₈/g, ' 8 ').replace(/₉/g, ' 9 ')
+             .replace(/⁰/g, ' 0 ').replace(/¹/g, ' 1 ').replace(/²/g, ' squared ').replace(/³/g, ' cubed ');
 
-      // 0.2 Convert LaTeX math commands
-      text = text.replace(/\\times\b/g, ' × ')
-                 .replace(/\\cdot\b/g, ' · ')
-                 .replace(/\\approx\b/g, ' ≈ ')
-                 .replace(/\\pm\b/g, ' ± ')
-                 .replace(/\\sqrt\{([^}]+)\}/g, ' square root of $1 ')
-                 .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, ' $1 by $2 ')
-                 .replace(/\\[a-zA-Z]+/g, ' ')
-                 .replace(/[{}]/g, ' ');
+  // 0.2 LaTeX math commands
+  text = text.replace(/\\times\b/g, ' × ')
+             .replace(/\\cdot\b/g, ' · ')
+             .replace(/\\approx\b/g, ' ≈ ')
+             .replace(/\\pm\b/g, isEnglish ? ' plus or minus ' : ' கூட்டல் அல்லது கழித்தல் ')
+             .replace(/\\sqrt\{([^}]+)\}/g, isEnglish ? ' square root of $1 ' : ' ஸ்கொயர் ரூட் $1 ')
+             .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, isEnglish ? ' $1 by $2 ' : ' $1 கீழ் $2 ')
+             .replace(/\\[a-zA-Z]+/g, ' ')
+             .replace(/[{}]/g, ' ');
 
-      // 1. Strip ALL Unicode Emojis completely so TTS never speaks emoji names (e.g. ⛰️ -> "மலைகள்", 🏞️ -> "தேசிய பூங்கா", ⭐ -> "நட்சத்திரம்")
-      text = text.replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{FE00}-\u{FE0F}]/gu, '');
+  // 1. Strip ALL Unicode Emojis
+  text = text.replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{FE00}-\u{FE0F}]/gu, '');
 
-      // 2. Remove commas inside numbers (e.g. 2,695 -> 2695, 1,690 -> 1690) so TTS never splits them into "2 ... 695"
-      text = text.replace(/(\d+),(\d+)/g, '$1$2');
+  // 2. Remove commas inside numbers (e.g. 2,695 -> 2695, 1,690 -> 1690)
+  text = text.replace(/(\d+),(\d+)/g, '$1$2');
 
-      // Bullets become period separators so each point gets a distinct pause
-      text = text.replace(/[•\-\*]\s+/g, '. ');
+  // Math symbols: Math symbols must be converted BEFORE generic punctuation!
+  // Math Equal Sign:
+  text = text.replace(/\s*=\s*/g, isEnglish ? ' equals ' : ' சமம் ');
+  text = text.replace(/\s*≈\s*/g, isEnglish ? ' approximately equals ' : ' தோராயமாக சமம் ');
 
-      // Avoid point numbers in voice (User request: "AVOID POINT NUMBERS. IN THIS, POINT NUMBERS IT DIFFERS IN VOICE")
-      // Replaces leading/stray point numbers like "1.", "2.", "3." with a clean sentence pause
-      text = text.replace(/(?:^|\s)\d+[\.\)](?!\d)\s*/g, '. ');
+  // Units with slash (e.g. m/s, km/h, cm/s, மீ/வி)
+  if (isEnglish) {
+    text = text.replace(/\b(\d+)\s*m\/s\b/gi, ' $1 meters per second ')
+               .replace(/\b(\d+)\s*km\/h\b/gi, ' $1 kilometers per hour ')
+               .replace(/\b(\d+)\s*cm\/s\b/gi, ' $1 centimeters per second ');
+  } else {
+    text = text.replace(/\b(\d+)\s*m\/s\b/gi, ' $1 மீட்டர் பெர் விநாடி ')
+               .replace(/\b(\d+)\s*மீ\/வி\b/g, ' $1 மீட்டர் பெர் விநாடி ')
+               .replace(/\b(\d+)\s*km\/h\b/gi, ' $1 கிலோமீட்டர் பெர் மணி ')
+               .replace(/\b(\d+)\s*கி\.?மீ\/மணி\b/g, ' $1 கிலோமீட்டர் பெர் மணி ');
+  }
 
-      if (lang.startsWith('ta')) {
-        // Phonetic correction: Ensure English "App"/"app" or Tamil "ஆப்" is never mispronounced as "ஆஃப்" ("off")
-        text = text.replace(/\b[aA]pp\b/g, ' ஆப்பை ');
-        text = text.replace(/\b[aA]pps\b/g, ' ஆப்ஸ்களை ');
-        text = text.replace(/ஆப்\b(?!\u0BC8)/g, ' ஆப்பை ');
+  // Numerical Fractions (e.g. 3/4, 18/36, 5/9, 49/85, 20/36)
+  // In English: "3 by 4" (standard fraction pronunciation in mathematics)
+  // In Tamil: "3 கீழ் 4" (standard TN State Board maths reading)
+  text = text.replace(/(\d+)\s*\/\s*(\d+)/g, isEnglish ? ' $1 by $2 ' : ' $1 கீழ் $2 ');
 
-        // Physics and Math variables with subscripts in Tamil (m1, m2, u1, u2, v1, v2, p1, p2, F1, F2)
-        text = text.replace(/\b(m|M)[_\s]*1\b/g, ' எம் ஒன்று ')
-                   .replace(/\b(m|M)[_\s]*2\b/g, ' எம் இரண்டு ')
-                   .replace(/\b(u|U)[_\s]*1\b/g, ' யு ஒன்று ')
-                   .replace(/\b(u|U)[_\s]*2\b/g, ' யு இரண்டு ')
-                   .replace(/\b(v|V)[_\s]*1\b/g, ' வி ஒன்று ')
-                   .replace(/\b(v|V)[_\s]*2\b/g, ' வி இரண்டு ')
-                   .replace(/\b(p|P)[_\s]*1\b/g, ' பி ஒன்று ')
-                   .replace(/\b(p|P)[_\s]*2\b/g, ' பி இரண்டு ')
-                   .replace(/\b(f|F)[_\s]*1\b/g, ' எஃப் ஒன்று ')
-                   .replace(/\b(f|F)[_\s]*2\b/g, ' எஃப் இரண்டு ')
-                   .replace(/\b(a|A)[_\s]*1\b/g, ' ஏ ஒன்று ')
-                   .replace(/\b(a|A)[_\s]*2\b/g, ' ஏ இரண்டு ')
-                   .replace(/\bn\s*\(\s*([A-Za-z])\s*\)/g, ' என் ஆஃப் $1 ')
-                   .replace(/\b([A-Za-z])\s*[×*]\s*([A-Za-z])\b/g, ' $1 கிராஸ் $2 ');
+  // Algebraic Division expressions like (L - S) / (L + S) or (a + b) / (c + d)
+  text = text.replace(/\)\s*\/\s*\(/g, isEnglish ? ' ) divided by ( ' : ' ) வகுத்தல் ( ');
+  text = text.replace(/([a-zA-Z\d\)]+)\s*\/\s*([a-zA-Z\d\(]+)/g, isEnglish ? ' $1 divided by $2 ' : ' $1 வகுத்தல் $2 ');
 
-        text = text.replace(/எ[-.]கா[:.]?/g, ' எடுத்துக்காட்டாக: ');
-        text = text.replace(/உ[-.]ம்[:.]?/g, ' உதாரணமாக: ');
-        text = text.replace(/\s*\/\s*/g, ' அல்லது ');
-        text = text.replace(/[–—]/g, ', ');
-        text = text.replace(/\s*\+\s*/g, ' கூட்டல் ');
-        text = text.replace(/\s*=\s*/g, ' சமம் ');
+  // Plus symbol (+)
+  text = text.replace(/\s*\+\s*/g, isEnglish ? ' plus ' : ' கூட்டல் ');
 
-        // Phonetic decimal expansions for Tamil TTS so values are pronounced perfectly
-        text = text.replace(/\b17\.2\s*மீட்டர்\b/g, ' பதினேழு புள்ளி இரண்டு மீட்டர் ');
-        text = text.replace(/\b17\.2\s*மீ(?:\b|[^\u0B80-\u0BFF])/g, ' பதினேழு புள்ளி இரண்டு மீட்டர் ');
-        text = text.replace(/\b17\.2\b/g, ' பதினேழு புள்ளி இரண்டு ');
-        text = text.replace(/\b0\.1\s*வி[ந|ன]ாடி\b/g, ' பூஜ்ஜியம் புள்ளி ஒரு விநாடி ');
-        text = text.replace(/\b0\.1\s*s\b/gi, ' பூஜ்ஜியம் புள்ளி ஒரு விநாடி ');
-        text = text.replace(/\b0\.1\b/g, ' பூஜ்ஜியம் புள்ளி ஒன்று ');
-        text = text.replace(/\b344\s*m\/s\b/gi, ' 344 மீட்டர் பெர் விநாடி ');
-        text = text.replace(/\b344\s*மீ\/வி\b/g, ' 344 மீட்டர் பெர் விநாடி ');
-        text = text.replace(/(\d+)\.(\d+)/g, '$1 புள்ளி $2');
+  // Minus symbol (- or − or –)
+  // Negative number (e.g. -5, -18, -x)
+  text = text.replace(/(?:^|[\s\(=+,])\s*[-−–]\s*(\d+|[a-zA-Z])/g, isEnglish ? ' minus $1 ' : ' மைனஸ் $1 ');
+  // Minus between terms (e.g. 67 - 18, L - S, 18 + 5 - 3)
+  text = text.replace(/(\w|\))\s*[-−–]\s*(\w|\()/g, isEnglish ? ' $1 minus $2 ' : ' $1 மைனஸ் $2 ');
+  // Free-standing minus operator
+  text = text.replace(/\s+[-−–]\s+/g, isEnglish ? ' minus ' : ' மைனஸ் ');
 
-        // Phonetic number & measurement expansions for Tamil so TTS speaks full natural words
-        text = text.replace(/\b(100000|1,00,000)\b/g, ' ஒரு லட்சம் ');
-        text = text.replace(/\b(6600|6,600)\b/g, ' ஆறாயிரத்து அறுநூறு ');
-        text = text.replace(/\b1919\b/g, ' ஆயிரத்து தொள்ளாயிரத்து பத்தொன்பது ');
-        text = text.replace(/\b1920\b/g, ' ஆயிரத்து தொள்ளாயிரத்து இருபது ');
-        text = text.replace(/\b1914\b/g, ' ஆயிரத்து தொள்ளாயிரத்து பதினான்கு ');
-        text = text.replace(/\b1918\b/g, ' ஆயிரத்து தொள்ளாயிரத்து பதினெட்டு ');
-        text = text.replace(/\b1939\b/g, ' ஆயிரத்து தொள்ளாயிரத்து முப்பத்து ஒன்பது ');
-        text = text.replace(/\b1945\b/g, ' ஆயிரத்து தொள்ளாயிரத்து நாற்பத்து ஐந்து ');
-        text = text.replace(/\b2695\b/g, ' இரண்டாயிரத்து அறுநூற்று தொண்ணூற்று ஐந்து ');
-        text = text.replace(/\b2690\b/g, ' இரண்டாயிரத்து அறுநூற்று தொண்ணூறு ');
-        text = text.replace(/\b1690\b/g, ' ஆயிரத்து அறுநூற்று தொண்ணூறு ');
-        text = text.replace(/\b1600\b/g, ' ஆயிரத்து அறுநூறு ');
-        text = text.replace(/\b900\b/g, ' ஒன்பது நூறு ');
-        text = text.replace(/\b600\b/g, ' அறுநூறு ');
-        text = text.replace(/(\d+)\s*மீ(?:\b|[^\u0B80-\u0BFF])/g, ' $1 மீட்டர் ');
-        text = text.replace(/(\d+)\s*கி\.?மீ/g, ' $1 கிலோமீட்டர் ');
-        // Set ordered pairs in Tamil with distinct periods
-        text = text.replace(/\(\s*(-?\d+)\s*,\s*(-?\d+)\s*\)/g, (m, a, b) => {
-          const spokenA = a.startsWith('-') ? ('மைனஸ் ' + a.substring(1)) : a;
-          const spokenB = b.startsWith('-') ? ('மைனஸ் ' + b.substring(1)) : b;
-          return ` வரிசைச் சோடி ${spokenA} கமா ${spokenB} . `;
-        });
-        text = text.replace(/(?:^|\s)-(\d+)/g, ' மைனஸ் $1 ');
-      } else {
-        // Physics and Math variables with subscripts in English (m1, m2, u1, u2, v1, v2, p1, p2, F1, F2)
-        text = text.replace(/\b(m|M)[_\s]*1\b/g, ' m 1 ')
-                   .replace(/\b(m|M)[_\s]*2\b/g, ' m 2 ')
-                   .replace(/\b(u|U)[_\s]*1\b/g, ' u 1 ')
-                   .replace(/\b(u|U)[_\s]*2\b/g, ' u 2 ')
-                   .replace(/\b(v|V)[_\s]*1\b/g, ' v 1 ')
-                   .replace(/\b(v|V)[_\s]*2\b/g, ' v 2 ')
-                   .replace(/\b(p|P)[_\s]*1\b/g, ' p 1 ')
-                   .replace(/\b(p|P)[_\s]*2\b/g, ' p 2 ')
-                   .replace(/\b(f|F)[_\s]*1\b/g, ' F 1 ')
-                   .replace(/\b(f|F)[_\s]*2\b/g, ' F 2 ')
-                   .replace(/\b(a|A)[_\s]*1\b/g, ' a 1 ')
-                   .replace(/\b(a|A)[_\s]*2\b/g, ' a 2 ')
-                   .replace(/\bn\s*\(\s*([A-Za-z])\s*\)/g, ' n of $1 ')
-                   .replace(/\b([A-Za-z])\s*[×*]\s*([A-Za-z])\b/g, ' $1 cross $2 ');
+  // Decimals (e.g. 0.576, 0.556, 36.67, 6.05)
+  // Pronounce each decimal digit individually so "0.576" is spoken as "0 point 5 7 6" / "பூஜ்ஜியம் புள்ளி 5 7 6"
+  text = text.replace(/(\d+)\.(\d+)/g, (match, intPart, decPart) => {
+    const spacedDigits = decPart.split('').join(' ');
+    if (isEnglish) {
+      return `${intPart} point ${spacedDigits}`;
+    } else {
+      const spokenInt = (intPart === '0') ? 'பூஜ்ஜியம்' : intPart;
+      return `${spokenInt} புள்ளி ${spacedDigits}`;
+    }
+  });
 
-        text = text.replace(/[\u0B80-\u0BFF]+/g, '');
-        text = text.replace(/\(\s*\)/g, '');
-        text = text.replace(/\[\s*\]/g, '');
+  // Multiplication symbol (×)
+  text = text.replace(/×/g, isEnglish ? ' multiplied by ' : ' பெருக்கல் ');
 
-        text = text.replace(/\be\.g\.?/gi, 'for example');
-        text = text.replace(/\bi\.e\.?/gi, 'that is');
-        text = text.replace(/\betc\.?/gi, 'etcetera');
-        text = text.replace(/\s*\/\s*/g, ' or ');
-        text = text.replace(/[–—]/g, ', ');
+  // Ordered pairs (e.g. (2, 6), (-2, 3))
+  if (isEnglish) {
+    text = text.replace(/\(\s*([a-zA-Z0-9\-\+]+)\s*,\s*([a-zA-Z0-9\-\+]+)\s*\)/g, ' ordered pair $1 comma $2. ');
+  } else {
+    text = text.replace(/\(\s*([a-zA-Z0-9\-\+]+)\s*,\s*([a-zA-Z0-9\-\+]+)\s*\)/g, ' வரிசைச் சோடி $1 கமா $2 . ');
+  }
 
-        text = text.replace(/\bcan't\b/gi, 'cannot')
-                   .replace(/\bwon't\b/gi, 'will not')
-                   .replace(/\bdon't\b/gi, 'do not')
-                   .replace(/\bdoesn't\b/gi, 'does not')
-                   .replace(/\bdidn't\b/gi, 'did not')
-                   .replace(/\bcouldn't\b/gi, 'could not')
-                   .replace(/\bwouldn't\b/gi, 'would not')
-                   .replace(/\bshouldn't\b/gi, 'should not')
-                   .replace(/\bisn't\b/gi, 'is not')
-                   .replace(/\baren't\b/gi, 'are not')
-                   .replace(/\bwasn't\b/gi, 'was not')
-                   .replace(/\bweren't\b/gi, 'were not')
-                   .replace(/\bit's\b/gi, 'it is')
-                   .replace(/\bhe's\b/gi, 'he is')
-                   .replace(/\bshe's\b/gi, 'she is')
-                   .replace(/\bthey're\b/gi, 'they are');
+  // Set operators
+  text = text.replace(/∪/g, isEnglish ? ' union ' : ' சேர்ப்பு ')
+             .replace(/∩/g, isEnglish ? ' intersection ' : ' வெட்டு ')
+             .replace(/⊆/g, isEnglish ? ' subset of ' : ' உட்கணம் ')
+             .replace(/∈/g, isEnglish ? ' belongs to ' : ' உறுப்பு ')
+             .replace(/∉/g, isEnglish ? ' does not belong to ' : ' உறுப்பல்ல ')
+             .replace(/≤/g, isEnglish ? ' less than or equal to ' : ' குறைவு அல்லது சமம் ')
+             .replace(/≥/g, isEnglish ? ' greater than or equal to ' : ' அதிகம் அல்லது சமம் ');
 
-        text = text.replace(/\(\s*(-?\d+)\s*,\s*(-?\d+)\s*\)/g, ' ordered pair $1 comma $2. ');
-        text = text.replace(/(?:^|\s)-(\d+)/g, ' minus $1 ');
-        text = text.replace(/:\s+/g, ', ');
+  if (!isEnglish) {
+    // Tamil numbers & measurements
+    text = text.replace(/\b(100000|1,00,000)\b/g, ' ஒரு லட்சம் ')
+               .replace(/\b(6600|6,600)\b/g, ' ஆறாயிரத்து அறுநூறு ')
+               .replace(/\b1919\b/g, ' ஆயிரத்து தொள்ளாயிரத்து பத்தொன்பது ')
+               .replace(/\b1920\b/g, ' ஆயிரத்து தொள்ளாயிரத்து இருபது ')
+               .replace(/\b1914\b/g, ' ஆயிரத்து தொள்ளாயிரத்து பதினான்கு ')
+               .replace(/\b1918\b/g, ' ஆயிரத்து தொள்ளாயிரத்து பதினெட்டு ')
+               .replace(/\b1939\b/g, ' ஆயிரத்து தொள்ளாயிரத்து முப்பத்து ஒன்பது ')
+               .replace(/\b1945\b/g, ' ஆயிரத்து தொள்ளாயிரத்து நாற்பத்து ஐந்து ')
+               .replace(/\b2695\b/g, ' இரண்டாயிரத்து அறுநூற்று தொண்ணூற்று ஐந்து ')
+               .replace(/\b2690\b/g, ' இரண்டாயிரத்து அறுநூற்று தொண்ணூறு ')
+               .replace(/\b1690\b/g, ' ஆயிரத்து அறுநூற்று தொண்ணூறு ')
+               .replace(/\b1600\b/g, ' ஆயிரத்து அறுநூறு ')
+               .replace(/\b900\b/g, ' ஒன்பது நூறு ')
+               .replace(/\b600\b/g, ' அறுநூறு ')
+               .replace(/(\d+)\s*மீ(?:\b|[^\u0B80-\u0BFF])/g, ' $1 மீட்டர் ')
+               .replace(/(\d+)\s*கி\.?மீ/g, ' $1 கிலோமீட்டர் ');
+  }
 
-        // Phonetic decimal expansions for English TTS so values are pronounced perfectly
-        text = text.replace(/\b17\.2\s*meters?\b/gi, ' 17 point 2 meters ');
-        text = text.replace(/\b17\.2\s*m\b/gi, ' 17 point 2 meters ');
-        text = text.replace(/\b17\.2\b/g, ' 17 point 2 ');
-        text = text.replace(/\b0\.1\s*sec(?:ond)?s?\b/gi, ' 0 point 1 seconds ');
-        text = text.replace(/\b0\.1\s*s\b/gi, ' 0 point 1 seconds ');
-        text = text.replace(/\b0\.1\b/g, ' 0 point 1 ');
-        text = text.replace(/\b344\s*m\/s\b/gi, ' 344 meters per second ');
-        text = text.replace(/(\d+)\.(\d+)/g, '$1 point $2');
-      }
+  // Strip true bullet markers at start of lines ONLY
+  text = text.replace(/(?:^|\n)\s*[•*]\s+/g, '. ');
 
-      text = text.replace(/[:\?,]\s*\./g, '. ')
-                 .replace(/\s+\./g, '.')
-                 .replace(/\.{2,}/g, '.')
-                 .replace(/,\s*,+/g, ',')
-                 .replace(/\s*,\s*/g, ', ')
-                 .replace(/\s*\.\s*/g, '. ')
-                 .replace(/(?:\.|\s)+\d+[\.\)]\s*$/g, '.')
-                 .replace(/^\s*\d+[\.\)]\s*/g, '')
-                 .replace(/^\s*[\.,:;\s\-]+/, '')
-                 .replace(/[\.,:;\s\-]+$/, '')
-                 .replace(/\s+/g, ' ')
-                 .trim();
-      return text;
+  // Slashes between words (e.g. true/false) -> "or" / "அல்லது"
+  text = text.replace(/([a-zA-Z\u0B80-\u0BFF]+)\s*\/\s*([a-zA-Z\u0B80-\u0BFF]+)/g, isEnglish ? '$1 or $2' : '$1 அல்லது $2');
+
+  // Clean extra spaces & periods
+  text = text.replace(/[:\?,]\s*\./g, '. ')
+             .replace(/\s+\./g, '.')
+             .replace(/\.{2,}/g, '.')
+             .replace(/,\s*,+/g, ',')
+             .replace(/\s*,\s*/g, ', ')
+             .replace(/\s*\.\s*/g, '. ')
+             .replace(/^\s*[\.,:;\s\-]+/, '')
+             .replace(/[\.,:;\s\-]+$/, '')
+             .replace(/\s+/g, ' ')
+             .trim();
+
+  return text;
     },
 
     toggle: function(qId) {
@@ -12518,84 +12498,10 @@
 
     phoneticMath: function(str, isEm) {
       if (!str) return '';
-      let s = str;
-      if (isEm) {
-        // Distinct ordered pairs with sentence periods so pairs never blur together:
-        s = s.replace(/\(\s*([a-zA-Z0-9\-\+]+)\s*,\s*([a-zA-Z0-9\-\+]+)\s*\)/g, ' ordered pair $1 comma $2. ');
-        s = s.replace(/(?:^|\s)-(\d+)/g, ' minus $1 ');
-        s = s.replace(/\{/g, ' set ')
-             .replace(/\}/g, ' ')
-             .replace(/×/g, ' multiplied by ')
-             .replace(/÷/g, ' divided by ')
-             .replace(/∪/g, ' union ')
-             .replace(/∩/g, ' intersection ')
-             .replace(/≤/g, ' less than or equal to ')
-             .replace(/≥/g, ' greater than or equal to ')
-             .replace(/∈/g, ' belongs to ')
-             .replace(/∉/g, ' does not belong to ')
-             .replace(/⊆/g, ' subset of ')
-             .replace(/²/g, ' squared ')
-             .replace(/³/g, ' cubed ')
-             .replace(/=/g, ' equals ');
-      } else {
-        // Tamil maths reading:
-        // Convert negative numbers within pairs: Example (-2, 3) or (-2, -4)
-        s = s.replace(/\(\s*(-?\d+)\s*,\s*(-?\d+)\s*\)/g, (m, a, b) => {
-          const spokenA = a.startsWith('-') ? ('மைனஸ் ' + a.substring(1)) : a;
-          const spokenB = b.startsWith('-') ? ('மைனஸ் ' + b.substring(1)) : b;
-          return ` வரிசைச் சோடி ${spokenA} கமா ${spokenB} . `;
-        });
-        s = s.replace(/\(\s*([a-zA-Z0-9\-\+]+)\s*,\s*([a-zA-Z0-9\-\+]+)\s*\)/g, ' வரிசைச் சோடி $1 கமா $2 . ');
-
-        s = s.replace(/(?:^|\s)-(\d+)/g, ' மைனஸ் $1 ')
-             .replace(/\{/g, ' கணம் ')
-             .replace(/\}/g, ' கண மூடுக. ')
-             .replace(/×/g, ' பெருக்கல் ')
-             .replace(/÷/g, ' வகுத்தல் ')
-             .replace(/∪/g, ' சேர்ப்பு ')
-             .replace(/∩/g, ' வெட்டு ')
-             .replace(/≤/g, ' குறைவு அல்லது சமம் ')
-             .replace(/≥/g, ' அதிகம் அல்லது சமம் ')
-             .replace(/∈/g, ' உறுப்பு ')
-             .replace(/∉/g, ' உறுப்பல்ல ')
-             .replace(/⊆/g, ' உட்கணம் ')
-             .replace(/²/g, ' ஸ்கொயர் ')
-             .replace(/³/g, ' கியூப் ')
-             .replace(/=/g, ' சமம் ');
-        s = s.replace(/\b(100000|1,00,000)\b/g, ' ஒரு லட்சம் ')
-             .replace(/\b(6600|6,600)\b/g, ' ஆறாயிரத்து அறுநூறு ')
-             .replace(/\b1919\b/g, ' ஆயிரத்து தொள்ளாயிரத்து பத்தொன்பது ')
-             .replace(/\b1920\b/g, ' ஆயிரத்து தொள்ளாயிரத்து இருபது ')
-             .replace(/\b1914\b/g, ' ஆயிரத்து தொள்ளாயிரத்து பதினான்கு ')
-             .replace(/\b1918\b/g, ' ஆயிரத்து தொள்ளாயிரத்து பதினெட்டு ')
-             .replace(/\b1939\b/g, ' ஆயிரத்து தொள்ளாயிரத்து முப்பத்து ஒன்பது ')
-             .replace(/\b1945\b/g, ' ஆயிரத்து தொள்ளாயிரத்து நாற்பத்து ஐந்து ')
-             .replace(/\b2695\b/g, ' இரண்டாயிரத்து அறுநூற்று தொண்ணூற்று ஐந்து ')
-             .replace(/\b2690\b/g, ' இரண்டாயிரத்து அறுநூற்று தொண்ணூறு ')
-             .replace(/\b1690\b/g, ' ஆயிரத்து அறுநூற்று தொண்ணூறு ')
-             .replace(/\b1600\b/g, ' ஆயிரத்து அறுநூறு ')
-             .replace(/\b900\b/g, ' ஒன்பது நூறு ')
-             .replace(/\b600\b/g, ' அறுநூறு ')
-             .replace(/(\d+)\s*மீ(?:\b|[^\u0B80-\u0BFF])/g, ' $1 மீட்டர் ')
-             .replace(/(\d+)\s*கி\.?மீ/g, ' $1 கிலோமீட்டர் ');
-
-        // Avoid point numbers in voice (User request: "AVOID POINT NUMBERS. IN THIS, POINT NUMBERS IT DIFFERS IN VOICE")
-        s = s.replace(/(?:^|\s)\d+[\.\)]\s*/g, '. ')
-             .replace(/(?:\.|\s)+\d+[\.\)]?\s*$/g, '.')
-             .replace(/\s+\d+[\.\)]?\s*$/g, '')
-             .replace(/^\s*\d+[\.\)]\s*/g, '');
+      if (window.teacherAudioPlayer && typeof teacherAudioPlayer.formatMathForSpeech === 'function') {
+        return teacherAudioPlayer.formatMathForSpeech(str, isEm ? 'en-IN' : 'ta-IN');
       }
-
-      // Clean punctuation
-      s = s.replace(/[:\?,]\s*\./g, '. ')
-           .replace(/\s+\./g, '.')
-           .replace(/\.{2,}/g, '.')
-           .replace(/,\s*,+/g, ',')
-           .replace(/\s*,\s*/g, ', ')
-           .replace(/\s*\.\s*/g, '. ')
-           .replace(/\s+/g, ' ')
-           .trim();
-      return s;
+      return str;
     },
 
     open: function(qId, initialView) {
@@ -13055,26 +12961,32 @@
         if (stepsView) stepsView.style.display = 'none';
         if (fullBoardView) {
           fullBoardView.style.display = 'block';
-          if (this.currentQ && this.currentQ.blackboard && this.currentQ.blackboard.fullBoardImg) {
-                        const rawImg = this.currentQ.blackboard.fullBoardImg;
-            const fullBoardImgSrc = (isEm && rawImg === 'images/math_bb_ex1_4.png') ? 'images/math_bb_ex1_4_en.png' : rawImg;
-            const bbTitle = (isEm ? (this.currentQ.blackboard.engTitle || this.currentQ.blackboard.title) : this.currentQ.blackboard.title) || 'கரும்பலகை விளக்கம்';
+          if (this.currentQ && this.currentQ.blackboard && (this.currentQ.blackboard.fullBoardImages || this.currentQ.blackboard.fullBoardImg)) {
+            const rawList = this.currentQ.blackboard.fullBoardImages || [this.currentQ.blackboard.fullBoardImg];
+            const bbTitle = (isEm ? (this.currentQ.blackboard.engTitle || this.currentQ.blackboard.title) : this.currentQ.blackboard.title) || (isEm ? 'Blackboard Chalkboard' : 'கரும்பலகை விளக்கம்');
+            let imgCardsHtml = rawList.map((rawImg, bIdx) => {
+              const fullBoardImgSrc = (isEm && rawImg === 'images/math_bb_ex1_4.png') ? 'images/math_bb_ex1_4_en.png' : rawImg;
+              const partLabel = rawList.length > 1 ? (isEm ? `Part ${bIdx + 1}` : `பாகம் ${bIdx + 1}`) : '';
+              return `
+                <div style="margin-bottom:20px;">
+                  ${partLabel ? `<div style="color:#fde047; font-weight:800; font-size:14px; margin-bottom:8px;">📋 ${partLabel}</div>` : ''}
+                  <div class="diagram-img-wrap" onclick="openImageModal('${fullBoardImgSrc}', '${bbTitle.replace(/'/g, "\\'")} ${partLabel}')" style="cursor:zoom-in; display:inline-block; position:relative; max-width:100%;">
+                    <img src="${fullBoardImgSrc}" alt="${bbTitle.replace(/"/g, '&quot;')}" onerror="handleDiagramImgError(this)" style="max-width:100%; max-height:72vh; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.7); border:2px solid #334155; display:block; margin:0 auto;" />
+                    <div class="diagram-zoom-hint">
+                      <span>🔍 ${isEm ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாக்குக'}</span>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }).join('');
             fullBoardView.innerHTML = `
               <div style="max-width:100%; overflow:auto; text-align:center; padding:4px 0;">
-                <div style="margin-bottom:12px; display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap;">
+                <div style="margin-bottom:14px; display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap;">
                   <span style="color:#94a3b8; font-size:12.5px; display:inline-flex; align-items:center; gap:6px; background:rgba(0,0,0,0.3); padding:4px 12px; border-radius:14px; border:1px solid rgba(255,255,255,0.1);">
                     <span>🎨</span> <span>${isEm ? 'Full Visual Chalkboard Poster' : 'முழு வண்ண விளக்கப்படக் கரும்பலகை'}</span>
                   </span>
-                  <button type="button" class="zoom-btn" onclick="openImageModal('${fullBoardImgSrc}', '${bbTitle.replace(/'/g, "\\'")}')" style="padding:4px 14px; font-size:12px; font-weight:800; background:rgba(253,224,71,0.2); border:1.5px solid #fde047; color:#fde047; border-radius:14px; cursor:pointer;" title="தொட்டுப் பெரிதாக்க (Open Fullscreen Lightbox with Zoom Controls)">
-                    🔍 ${isEm ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாக்குக (Zoom)'}
-                  </button>
                 </div>
-                <div class="diagram-img-wrap" onclick="openImageModal('${fullBoardImgSrc}', '${bbTitle.replace(/'/g, "\\'")}')" style="cursor:zoom-in; display:inline-block; position:relative; max-width:100%;">
-                  <img src="${fullBoardImgSrc}" alt="${bbTitle.replace(/"/g, '&quot;')}" onerror="handleDiagramImgError(this)" style="max-width:100%; max-height:72vh; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.7); border:2px solid #334155; display:block;" />
-                  <div class="diagram-zoom-hint">
-                    <span>🔍 ${isEm ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாக்குக'}</span>
-                  </div>
-                </div>
+                ${imgCardsHtml}
               </div>
             `;
           } else if (this.currentQ && this.currentQ.blackboard && this.currentQ.blackboard.steps) {
@@ -14030,7 +13942,7 @@
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261119_v103')
+        navigator.serviceWorker.register('./sw.js?v=20261120_v105')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

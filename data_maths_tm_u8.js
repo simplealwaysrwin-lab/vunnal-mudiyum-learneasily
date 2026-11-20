@@ -164,9 +164,14 @@ const MATHS_TM_UNIT_8_DATA = {
           examTag: "அரசுத் தேர்வு வினா (பயிற்சி 8.4 வினா 6)",
           isImportant: true,
           q: "இரு பகடைகள் உருட்டப்படுகின்றன. முதல் பகடையில் இரட்டை எண் அல்லது முக எண்களின் கூடுதல் 8 கிடைப்பதற்கான நிகழ்தகவைக் காண்க.",
-                    blackboard: {
+          blackboard: {
             title: "இரு பகடைகள் உருட்டுதல்: முதல் பகடை இரட்டை எண் அல்லது கூடுதல் 8",
             engTitle: "Two Dice Rolled Once: Probability of Even on 1st Die OR Total of 8",
+            fullBoardImg: "images/maths_two_dice_board_part1.jpg",
+            fullBoardImages: [
+              "images/maths_two_dice_board_part1.jpg",
+              "images/maths_two_dice_board_part2.jpg"
+            ],
             steps: [
               {
                 stepNum: 1,

@@ -1,4 +1,4 @@
-// 10-ஆம் வகுப்பு அறிவியல் - அலகு 15: நரம்பு மண்டலம் (Nervous System)
+﻿// 10-ஆம் வகுப்பு அறிவியல் - அலகு 15: நரம்பு மண்டலம் (Nervous System)
 // தமிழ்நாடு அரசு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const SCIENCE_UNIT_15_DATA = {
@@ -120,28 +120,154 @@ const SCIENCE_UNIT_15_DATA = {
           type: "7m",
           mark: "4 / 7 மதிப்பெண்",
           examTag: "அரசு பொதுத்தேர்வு 7M",
+          diagramImg: "images/sci_brain_diagram.jpg",
           q: "மனித மூளையின் அமைப்பை அதன் முதன்மைப் பிரிவுகளான முன்மூளை, நடுமூளை மற்றும் பின்மூளை ஆகியவற்றின் பணிகள் வாயிலாக விரிவாக விளக்குக.",
           ans: `<div style="line-height:1.8;">
-            மனித மூளை மைய நரம்பு மண்டலத்தின் முதன்மைக் கட்டுப்பாட்டு உறுப்பாகும். இது மூன்று பெரும் பிரிவுகளைக் கொண்டது:<br><br>
+            <div style="background:#eff6ff; border-left:4px solid #2563eb; padding:12px 16px; border-radius:8px; margin-bottom:14px;">
+              <b style="color:#1e40af; font-size:15px;">🧠 மனித மூளையின் அமைப்பு:</b><br>
+              • மனித மூளை மைய நரம்பு மண்டலத்தின் முதன்மைக் கட்டுப்பாட்டு மற்றும் ஒருங்கிணைப்பு மையமாகும்.<br>
+              • மண்டையோட்டின் (Cranium) உள்பகுதியில் மூன்று பாதுகாப்பு சவ்வுகளாலும் (டியூரா மேட்டர், அரக்னாய்டு சவ்வு, பயா மேட்டர்) மற்றும் மூளை-தண்டுவட திரவத்தினாலும் (CSF) பாதுகாக்கப்படுகிறது.<br>
+              • அமைப்பு ரீதியாக மூளை மூன்று பெரும் பிரிவுகளாகப் பிரிக்கப்பட்டுள்ளது: <b>முன்மூளை, நடுமூளை, மற்றும் பின்மூளை</b>.
+            </div>
 
-            <b>1. முன்மூளை (Forebrain):</b><br>
-            • <b>பெருமூளை (Cerebrum):</b> மூளையின் மூன்றில் இரண்டு பங்கு பகுதியை உள்ளடக்கிய மிகப்பெரிய பகுதி. இதன் மேற்புறப் பகுதி பல மடிப்புகளையும் (கைரி) பள்ளங்களையும் (சல்சி) கொண்டது.<br>
-            &nbsp;&nbsp;<b>பணிகள்:</b> சிந்தனை, அறிவுக்கூர்மை, நினைவுத்திறன், கற்பனைத் திறன், உணர்வு விழிப்புணர்வு மற்றும் திட்டமிடல் ஆகியவற்றின் இருப்பிடம்.<br>
-            • <b>தலாமஸ் (Thalamus):</b> உணர்ச்சி மற்றும் இயக்க சமிக்ஞைகளை கடத்தும் முதன்மை மறு ஒலிபரப்பு மையம் (Relay centre).<br>
-            • <b>ஹைப்போதலாமஸ் (Hypothalamus):</b> உடல் வெப்பநிலை, பசி, தாகம், தூக்கம், இரத்த அழுத்தம் மற்றும் நாளமில்லாச் சுரப்பிகளின் தலைவனான பிட்யூட்டரியைக் கட்டுப்படுத்துகிறது.<br><br>
+            <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; margin-bottom:14px; overflow-x:auto;">
+              <div style="color:#0f172a; font-weight:800; font-size:15px; margin-bottom:8px; border-bottom:2px solid #3b82f6; padding-bottom:4px;">
+                📊 அமைப்பும் வாழ்வியல் பணிகளும் (அட்டவணை)
+              </div>
+              <table style="width:100%; border-collapse:collapse; font-size:13.5px; text-align:left;">
+                <thead>
+                  <tr style="background:#1e3a8a; color:#ffffff;">
+                    <th style="padding:10px 12px; border:1px solid #94a3b8; width:20%;">பகுதி</th>
+                    <th style="padding:10px 12px; border:1px solid #94a3b8; width:34%;">அமைப்பு</th>
+                    <th style="padding:10px 12px; border:1px solid #94a3b8; width:46%;">வாழ்வியல் பணிகள்</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background:#fdf2f8;">
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; font-weight:800; color:#9d174d; vertical-align:top;">முன்மூளை (Forebrain)</td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • மூளையின் மிகப்பெரிய மற்றும் நன்கு வளர்ச்சியடைந்த பகுதி.<br>
+                      • <b>பெருமூளை</b>, <b>தலாமஸ்</b>, மற்றும் <b>ஹைப்போதலாமஸ்</b> ஆகியவற்றைக் கொண்டது.
+                    </td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • <b>பெருமூளை:</b> சிந்தனை, நினைவாற்றல், கற்றல், அறிவுக்கூர்மை மற்றும் இயக்கு இயக்கங்களின் மையம்.<br>
+                      • <b>தலாமஸ்:</b> உணர்வுத் தகவல்களைப் பெருமூளைக்குக் கடத்தும் முதன்மை மறு ஒலிபரப்பு மையம்.<br>
+                      • <b>ஹைப்போதலாமஸ்:</b> உடல் வெப்பநிலை, பசி, தாகம், நீர் சமநிலையைப் பேணுகிறது; பிட்யூட்டரி சுரப்பியைக் கட்டுப்படுத்துகிறது.
+                    </td>
+                  </tr>
+                  <tr style="background:#f0f9ff;">
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; font-weight:800; color:#0369a1; vertical-align:top;">நடுமூளை (Midbrain)</td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • முன்மூளைக்கும் பின்மூளைக்கும் இடையில் அமைந்துள்ளது.<br>
+                      • இவ்விரு பகுதிகளையும் இணைக்கும் சிறிய பகுதி.
+                    </td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • பார்வை மற்றும் கேட்டல் அனிச்சைச் செயல்களில் பங்கேற்கிறது.<br>
+                      • கண் இயக்கம் மற்றும் கண் பாவை சுருங்கி விரிதலைக் கட்டுப்படுத்துகிறது.<br>
+                      • முன்மூளை மற்றும் பின்மூளைக்கு இடையிலான நரம்பு தூண்டல்களின் கடத்து மையமாக செயல்படுகிறது.
+                    </td>
+                  </tr>
+                  <tr style="background:#fefce8;">
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; font-weight:800; color:#854d0e; vertical-align:top;">பின்மூளை (Hindbrain)</td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • <b>சிறுமூளை</b>, <b>பான்ஸ்</b>, மற்றும் <b>முகுளம்</b> ஆகியவற்றைக் கொண்டது.
+                    </td>
+                    <td style="padding:10px 12px; border:1px solid #cbd5e1; vertical-align:top; color:#1e293b;">
+                      • <b>சிறுமூளை:</b> உடலின் சமநிலை மற்றும் தோரணையைப் பராமரிக்கிறது; இயக்க தசைகளை ஒருங்கிணைக்கிறது.<br>
+                      • <b>பான்ஸ்:</b> மூளையின் பல்வேறு பகுதிகளை இணைக்கும் பாலம்; சுவாசத்தை ஒழுங்குபடுத்த உதவுகிறது.<br>
+                      • <b>முகுளம்:</b> சுவாசம், இதயத்துடிப்பு மற்றும் இரத்த அழுத்தம் போன்ற உயிர்காக்கும் தன்னிச்சையற்ற செயல்களைக் கட்டுப்படுத்துகிறது.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-            <b>2. நடுமூளை (Midbrain):</b><br>
-            • தலாமஸிற்கும் பின்மூளைக்கும் இடையில் அமைந்துள்ளது.<br>
-            • <b>பணிகள்:</b> பார்வை மற்றும் கேட்டல் சார்ந்த அனிச்சைச் செயல்களை ஒருங்கிணைக்கிறது; கண் பாவை சுருங்கி விரிதலைக் கட்டுப்படுத்துகிறது.<br><br>
-
-            <b>3. பின்மூளை (Hindbrain):</b><br>
-            • <b>சிறுமூளை (Cerebellum):</b> மூளையின் இரண்டாவது பெரிய பகுதி.<br>
-            &nbsp;&nbsp;<b>பணிகள்:</b> உடலின் சமநிலையைப் பேணுதல் மற்றும் இயக்க தசைகளின் இயக்கங்களை (நடத்தல், ஓடுதல்) ஒருங்கிணைத்தல்.<br>
-            • <b>பான்ஸ் (Pons):</b> 'பாலம்' போன்ற நரம்பு இழைப் பகுதி; தூக்கம் மற்றும் சுவாச சுழற்சியை ஒழுங்குபடுத்துகிறது.<br>
-            • <b>முகுளம் (Medulla Oblongata):</b> தண்டுவடத்துடன் இணையும் மூளையின் இறுதிப் பகுதி.<br>
-            &nbsp;&nbsp;<b>பணிகள்:</b> இதயம் துடித்தல், இரத்தக் குழாய் சுருக்கம், சுவாசம், இருமல், தும்மல், வாந்தி மற்றும் விழுங்குதல் போன்ற அனிச்சை இயக்கங்களின் முக்கிய மையமாக விளங்குகிறது.
+            <div style="background:#fdf4ff; border-left:4px solid #a855f7; padding:10px 14px; border-radius:6px; margin-top:10px;">
+              <b style="color:#7e22ce;">⭐ தேர்வுக்கான முக்கியக் குறிப்புகள்:</b><br>
+              ✔ <b>மூளை:</b> முதன்மைக் கட்டுப்பாட்டு மையம்.<br>
+              ✔ <b>3 முக்கியப் பகுதிகள்:</b> முன்மூளை, நடுமூளை, பின்மூளை.<br>
+              ✔ <b>முன்மூளை:</b> சிந்தனை, நினைவாற்றல் மற்றும் சமநிலை பராமரிப்பு.<br>
+              ✔ <b>நடுமூளை:</b> பார்வை, கேட்டல் அனிச்சைகள்.<br>
+              ✔ <b>பின்மூளை:</b> சமநிலை, சுவாசம், இதயத்துடிப்பு கட்டுப்பாடு.
+            </div>
           </div>`,
-          ansTamil: "மூளை 3 பகுதிகள்: முன்மூளை (சிந்தனை, அறிவு), நடுமூளை (பார்வை, கேட்டல்), பின்மூளை (சமநிலை, சுவாசம், இதயத்துடிப்பு)."
+          ansTamil: "மூளை 3 பகுதிகள்: முன்மூளை (சிந்தனை, அறிவு, சமநிலை பராமரிப்பு), நடுமூளை (பார்வை, கேட்டல் அனிச்சை), பின்மூளை (சமநிலை, சுவாசம், இதயத்துடிப்பு).",
+          blackboard: {
+            title: "மனித மூளை: அமைப்பு மற்றும் வாழ்வியல் பணிகள்",
+            engTitle: "Human Brain: Structural Organization & Physiological Specializations",
+            fullBoardImg: "images/sci_brain_diagram.jpg",
+            steps: [
+              {
+                stepNum: 1,
+                badge: "🧠 1. மனித மூளையின் அமைப்பு",
+                badgeEn: "🧠 1. Structural Organization of Brain",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fde047; font-weight:800; font-size:16px;">மனித மூளையின் கட்டமைப்பு (Structural Organization)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • மைய நரம்பு மண்டலத்தின் முதன்மைக் கட்டுப்பாட்டு மையம்.<br>
+                      • மண்டையோட்டின் (Cranium) உள்பகுதியில் 3 சவ்வுகளாலும் (Meninges) மற்றும் மூளை-தண்டுவட திரவத்தினாலும் (CSF) பாதுகாக்கப்படுகிறது.<br>
+                      • 3 பெரும் பிரிவுகள்: <span style="color:#fde047; font-weight:700;">முன்மூளை, நடுமூளை, மற்றும் பின்மூளை</span>.
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "மனித மூளையின் அமைப்பு: மனித மூளை நரம்பு மண்டலத்தின் முதன்மைக் கட்டுப்பாட்டு மையம். மண்டையோட்டினுள் மூன்று பாதுகாப்பு சவ்வுகள் மற்றும் மூளை தண்டுவட திரவத்தால் பாதுகாக்கப்படுகிறது. இது முன்மூளை, நடுமூளை மற்றும் பின்மூளை என மூன்று பகுதிகளாகப் பிரிக்கப்பட்டுள்ளது.",
+                audioScriptEn: "Structural Organization: The human brain is the main control and coordination centre of the nervous system. Protected by cranial cavity, meninges and CSF. Divided into Forebrain, Midbrain and Hindbrain."
+              },
+              {
+                stepNum: 2,
+                badge: "🔬 2. முன்மூளை (Forebrain)",
+                badgeEn: "🔬 2. Forebrain Specializations",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#f472b6; font-weight:800; font-size:16px;">முன்மூளை (பெருமூளை, தலாமஸ், ஹைப்போதலாமஸ்)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #f472b6; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#f472b6;">பெருமூளை (Cerebrum):</b> மிகப்பெரிய பகுதி. சிந்தனை, நினைவாற்றல், கற்றல், அறிவுக்கூர்மை மற்றும் இயக்க மையம்.<br>
+                      • <b style="color:#f472b6;">தலாமஸ் (Thalamus):</b> உணர்வு மற்றும் இயக்க சமிக்ஞைகளை கடத்தும் முதன்மை மறுஒலிபரப்பு மையம்.<br>
+                      • <b style="color:#f472b6;">ஹைப்போதலாமஸ்:</b> உடல் வெப்பநிலை, பசி, தாகம், தூக்கம் மற்றும் பிட்யூட்டரி சுரப்பியை கட்டுப்படுத்துகிறது.
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "முன்மூளை: பெருமூளை சிந்தனை, நினைவுத்திறன் மற்றும் இயக்கங்களின் மையம். தலாமஸ் உணர்வுத் தகவல்களை கடத்தும் மறுஒலிபரப்பு மையம். ஹைப்போதலாமஸ் உடல் வெப்பநிலை, பசி, தாகம் மற்றும் பிட்யூட்டரி சுரப்பியை கட்டுப்படுத்துகிறது.",
+                audioScriptEn: "Forebrain: Cerebrum is the centre for thinking, memory, intelligence, and voluntary actions. Thalamus acts as a relay station. Hypothalamus maintains homeostasis and controls pituitary gland."
+              },
+              {
+                stepNum: 3,
+                badge: "⚡ 3. நடுமூளை (Midbrain)",
+                badgeEn: "⚡ 3. Midbrain Specializations",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#38bdf8; font-weight:800; font-size:16px;">நடுமூளை (பார்வை & கேட்டல் அனிச்சை மையம்)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • முன்மூளைக்கும் பின்மூளைக்கும் இடையில் உள்ள சிறிய இணைப்பு பகுதி.<br>
+                      • <span style="color:#38bdf8; font-weight:700;">பார்வை மற்றும் கேட்டல் அனிச்சை செயல்களை</span> ஒருங்கிணைக்கிறது.<br>
+                      • கண் இயக்கம் மற்றும் கண் பாவை சுருங்கி விரிதலைக் கட்டுப்படுத்துகிறது.<br>
+                      • நரம்பு தூண்டல்களின் கடத்து மையமாக செயல்படுகிறது.
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "நடுமூளை: முன்மூளைக்கும் பின்மூளைக்கும் இடையில் அமைந்துள்ளது. பார்வை மற்றும் கேட்டல் அனிச்சை செயல்களை ஒருங்கிணைக்கிறது; கண் இயக்கத்தைக் கட்டுப்படுத்துகிறது.",
+                audioScriptEn: "Midbrain: Connects forebrain and hindbrain. Coordinates visual and auditory reflexes, eye movements, pupil size and impulse relay."
+              },
+              {
+                stepNum: 4,
+                badge: "⚖️ 4. பின்மூளை (Hindbrain)",
+                badgeEn: "⚖️ 4. Hindbrain Specializations",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#facc15; font-weight:800; font-size:16px;">பின்மூளை (சிறுமூளை, பான்ஸ், முகுளம்)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #facc15; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#facc15;">சிறுமூளை (Cerebellum):</b> உடலின் சமநிலை, தோரணையை பராமரிக்கிறது; இயக்க தசைகளை ஒருங்கிணைக்கிறது.<br>
+                      • <b style="color:#facc15;">பான்ஸ் (Pons):</b> மூளைப் பகுதிகளை இணைக்கும் பாலம்; சுவாசத்தை ஒழுங்குபடுத்துகிறது.<br>
+                      • <b style="color:#facc15;">முகுளம் (Medulla Oblongata):</b> சுவாசம், இதயத்துடிப்பு, இரத்த அழுத்தத்தை கட்டுப்படுத்தும் உயிர்காக்கும் மையம்.
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "பின்மூளை: சிறுமூளை உடலின் சமநிலை மற்றும் தோரணையைப் பராமரிக்கிறது. பான்ஸ் சுவாசத்தை ஒழுங்குபடுத்துகிறது. முகுளம் சுவாசம், இதயத்துடிப்பு மற்றும் இரத்த அழுத்தத்தைக் கட்டுப்படுத்தும் உயிர்காக்கும் மையம்.",
+                audioScriptEn: "Hindbrain: Cerebellum maintains body posture and balance. Pons regulates breathing. Medulla oblongata controls vital involuntary functions like heartbeat, respiration, and blood pressure."
+              }
+            ]
+          }
         }
       ]
     }

@@ -1,4 +1,4 @@
-// 10-ஆம் வகுப்பு அறிவியல் - அலகு 16: தாவர மற்றும் விலங்கு ஹார்மோன்கள் (Plant and Animal Hormones)
+﻿// 10-ஆம் வகுப்பு அறிவியல் - அலகு 16: தாவர மற்றும் விலங்கு ஹார்மோன்கள் (Plant and Animal Hormones)
 // தமிழ்நாடு அரசு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const SCIENCE_UNIT_16_DATA = {
@@ -136,32 +136,177 @@ const SCIENCE_UNIT_16_DATA = {
           type: "7m",
           mark: "4 / 7 மதிப்பெண்",
           examTag: "அரசு பொதுத்தேர்வு 7M",
+          diagramImg: "images/sci_plant_hormones_diagram.png",
           q: "தாவர ஹார்மோன்களின் (ஆக்ஸின், ஜிப்ரல்லின், சைட்டோகைனின், எத்திலீன்) வாழ்வியல் விளைவுகளை விரிவாகத் தொகுத்து எழுதுக.",
           ans: `<div style="line-height:1.8;">
-            தாவரங்களின் வளர்ச்சி மற்றும் உடலியல் மாற்றங்களை மிகக் குறைந்த செறிவில் ஒழுங்குபடுத்தும் கரிம வேதிப்பொருட்கள் தாவர ஹார்மோன்கள் எனப்படும்:<br><br>
+            <p style="margin-bottom:12px; font-size:14.5px;">
+              <b>தாவர ஹார்மோன்கள்:</b> தாவரங்களால் சுரக்கப்படும் வேதிப்பொருட்கள் தாவர ஹார்மோன்கள் எனப்படும். இவை தாவரங்களின் வளர்ச்சி மற்றும் வாழ்வியல் செயல்பாடுகளைக் கட்டுப்படுத்தி ஒழுங்குபடுத்துகின்றன. நான்கு முதன்மை தாவர ஹார்மோன்கள் கீழே விளக்கப்பட்டுள்ளன:
+            </p>
 
-            <b>1. ஆக்ஸின் (Auxins):</b><br>
-            • <b>முனை ஆதிக்கம்:</b> நுனி மொட்டின் வளர்ச்சியால் பக்கவாட்டு மொட்டுகளின் வளர்ச்சி தடைபடுகிறது.<br>
-            • <b>செல் நீட்சியடைதல்:</b> தண்டு மற்றும் வேர் முனைகளில் செல்கள் நீட்சியடைவதைத் தூண்டுகிறது.<br>
-            • <b>வேர் உருவாக்கம்:</b> தண்டு வெட்டுத்துண்டுகளில் வேர் உருவாவதைத் தூண்டுகிறது.<br>
-            • கருவுறாமலேயே விதையற்ற கனிகளை உருவாக்கும் <b>கருவுறாக்கனி உருவாதலை (Parthenocarpy)</b> தூண்டுகிறது (எ.கா: தக்காளி, திராட்சை).<br><br>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px; margin-bottom:16px;">
+              <!-- 1. ஆக்ஸின் -->
+              <div style="background:#fdf2f8; border:2px solid #ec4899; border-radius:10px; padding:12px 14px;">
+                <div style="color:#be185d; font-weight:800; font-size:15px; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+                  <span>🌱</span> <span>1. ஆக்ஸின்கள் (Auxins)</span>
+                </div>
+                <ul style="margin:0; padding-left:18px; color:#1e293b; font-size:13.5px; line-height:1.7;">
+                  <li><b>செல் நீட்சியடைதலைத்</b> தூண்டுகிறது (செல்களின் நீளத்தை அதிகரிக்கிறது).</li>
+                  <li><b>வேர் உருவாக்கத்திற்கு</b> உதவுகிறது.</li>
+                  <li>தாவரங்கள் ஒளியை நோக்கி வளைவதைக் (ஒளிசார்பசைவு) கட்டுப்படுத்துகிறது.</li>
+                  <li>இலைகள் மற்றும் கனிகள் இளம் வயதிலேயே உதிர்வதைத் தடுக்கிறது.</li>
+                </ul>
+              </div>
 
-            <b>2. ஜிப்ரல்லின்கள் (Gibberellins):</b><br>
-            • குட்டைத் தாவரங்களின் கணுவிடைப் பகுதிகளை நீட்சியடையச் செய்து நெட்டையாக்குகிறது (எ.கா: மக்காச்சோளம், பட்டாணி).<br>
-            • ரோஸட் தாவரங்களில் <b>போல்டிங் (Bolting)</b> மற்றும் மலர்தலைத் தூண்டுகிறது.<br>
-            • உருளைக்கிழங்கின் உறக்க நிலையை நீக்குகிறது; விதைகளின் முளைத்தலைத் தூண்டுகிறது.<br><br>
+              <!-- 2. ஜிப்ரல்லின்கள் -->
+              <div style="background:#eff6ff; border:2px solid #3b82f6; border-radius:10px; padding:12px 14px;">
+                <div style="color:#1d4ed8; font-weight:800; font-size:15px; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+                  <span>🌾</span> <span>2. ஜிப்ரல்லின்கள் (Gibberellins)</span>
+                </div>
+                <ul style="margin:0; padding-left:18px; color:#1e293b; font-size:13.5px; line-height:1.7;">
+                  <li><b>தண்டு நீட்சியடைவதைத்</b> தூண்டுகிறது.</li>
+                  <li><b>விதை முளைத்தலுக்கு</b> உதவுகிறது.</li>
+                  <li>விதைகளின் உறக்க நிலையை நீக்குகிறது.</li>
+                  <li>பழங்களின் அளவை அதிகரிக்கச் செய்கிறது.</li>
+                </ul>
+              </div>
 
-            <b>3. சைட்டோகைனின் (Cytokinins):</b><br>
-            • ஆக்ஸின் முன்னிலையில் செல் பகுப்பைத் (Cytokinesis) தீவிரமாகத் தூண்டுகிறது.<br>
-            • <b>ரிச்மாண்ட்-லாங் விளைவு:</b> தாவரங்களின் இலைகள் மற்றும் உறுப்புகள் முதிர்வடைவதைத் தாமதப்படுத்துகிறது.<br>
-            • நுனி மொட்டு ஆதிக்கத்தை முறித்து, பக்கவாட்டு மொட்டுகளின் வளர்ச்சியை ஊக்குவிக்கிறது.<br><br>
+              <!-- 3. சைட்டோகைனின்கள் -->
+              <div style="background:#f0fdf4; border:2px solid #22c55e; border-radius:10px; padding:12px 14px;">
+                <div style="color:#15803d; font-weight:800; font-size:15px; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+                  <span>🌿</span> <span>3. சைட்டோகைனின்கள் (Cytokinins)</span>
+                </div>
+                <ul style="margin:0; padding-left:18px; color:#1e293b; font-size:13.5px; line-height:1.7;">
+                  <li><b>செல் பகுப்பைத் (Cell Division)</b> தீவிரமாகத் தூண்டுகிறது.</li>
+                  <li><b>பக்கவாட்டு மொட்டுகளின்</b> வளர்ச்சிக்கு உதவுகிறது.</li>
+                  <li>இலைகள் முதிர்வடைவதைத் (முதுமை அடைவதை) தாமதப்படுத்துகிறது.</li>
+                  <li>தண்டுப் பகுதி மற்றும் கிளைகள் வளர்ச்சிக்கு உதவுகிறது.</li>
+                </ul>
+              </div>
 
-            <b>4. எத்திலீன் (Ethylene):</b><br>
-            • வாழை, மா, ஆப்பிள் போன்ற கனிகள் விரைவாக பழுக்க உதவுகிறது.<br>
-            • இலைகள், மலர்கள் மற்றும் கனிகள் முதிர்ந்து தாவரத்திலிருந்து உதிர்வதைத் தூண்டுகிறது.<br>
-            • தாவரத் தண்டுகள் மற்றும் வேர்களின் நீள் வளர்ச்சியைத் தடுத்து, பக்கவாட்டு வளர்ச்சியைத் தூண்டுகிறது.
+              <!-- 4. எத்திலீன் -->
+              <div style="background:#fff7ed; border:2px solid #f97316; border-radius:10px; padding:12px 14px;">
+                <div style="color:#c2410c; font-weight:800; font-size:15px; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+                  <span>🍎</span> <span>4. எத்திலீன் (வாயு நிலை ஹார்மோன்)</span>
+                </div>
+                <ul style="margin:0; padding-left:18px; color:#1e293b; font-size:13.5px; line-height:1.7;">
+                  <li>இது ஒரு <b>வாயு நிலை தாவர ஹார்மோன்</b> ஆகும்.</li>
+                  <li><b>பழங்கள் விரைவாக பழுப்பதற்கு</b> உதவுகிறது.</li>
+                  <li>மலர்கள் மற்றும் இலைகள் முதிர்வடைவதைத் தூண்டுகிறது.</li>
+                  <li>இலைகள், மலர்கள் மற்றும் கனிகள் உதிர்தலுக்கு உதவுகிறது.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- எளிதான நினைவூட்டல் அட்டவணை -->
+            <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; margin-bottom:14px; overflow-x:auto;">
+              <div style="color:#0f172a; font-weight:800; font-size:14.5px; margin-bottom:8px; border-bottom:2px solid #10b981; padding-bottom:4px;">
+                ⚡ எளிய திருப்புதல் அட்டவணை (Easy Revision Table)
+              </div>
+              <table style="width:100%; border-collapse:collapse; font-size:13.5px; text-align:left;">
+                <thead>
+                  <tr style="background:#0f766e; color:#ffffff;">
+                    <th style="padding:8px 12px; border:1px solid #94a3b8; width:35%;">ஹார்மோன்</th>
+                    <th style="padding:8px 12px; border:1px solid #94a3b8; width:65%;">முக்கியப் பணி</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background:#fdf2f8;"><td style="padding:8px 12px; border:1px solid #cbd5e1; font-weight:700; color:#be185d;">ஆக்ஸின்கள்</td><td style="padding:8px 12px; border:1px solid #cbd5e1; color:#1e293b;">செல் நீட்சி அடைதல்</td></tr>
+                  <tr style="background:#eff6ff;"><td style="padding:8px 12px; border:1px solid #cbd5e1; font-weight:700; color:#1d4ed8;">ஜிப்ரல்லின்கள்</td><td style="padding:8px 12px; border:1px solid #cbd5e1; color:#1e293b;">தண்டு நீட்சி அடைதல்</td></tr>
+                  <tr style="background:#f0fdf4;"><td style="padding:8px 12px; border:1px solid #cbd5e1; font-weight:700; color:#15803d;">சைட்டோகைனின்கள்</td><td style="padding:8px 12px; border:1px solid #cbd5e1; color:#1e293b;">செல் பகுப்பு அடைதல்</td></tr>
+                  <tr style="background:#fff7ed;"><td style="padding:8px 12px; border:1px solid #cbd5e1; font-weight:700; color:#c2410c;">எத்திலீன்</td><td style="padding:8px 12px; border:1px solid #cbd5e1; color:#1e293b;">பழம் பழுத்தல்</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; border-radius:6px; margin-top:10px;">
+              <b style="color:#15803d;">💡 5-மதிப்பெண் தேர்வு நுட்பம் – 4 முக்கியக் குறிச்சொற்கள்:</b><br>
+              • <b>ஆக்ஸின்:</b> செல் நீட்சி<br>
+              • <b>ஜிப்ரல்லின்:</b> தண்டு வளர்ச்சி<br>
+              • <b>சைட்டோகைனின்:</b> செல் பகுப்பு<br>
+              • <b>எத்திலீன்:</b> பழம் பழுத்தல்<br>
+              <i style="color:#475569; font-size:12.5px;">முடிவுரை: இந்த நான்கு தாவர ஹார்மோன்களும் தாவரங்களின் வளர்ச்சி, உறுப்பு உருவாக்கம் மற்றும் வாழ்வியல் நிகழ்வுகளை ஒருங்கிணைப்பதில் முக்கியப் பங்காற்றுகின்றன.</i>
+            </div>
           </div>`,
-          ansTamil: "ஆக்ஸின்: முனை ஆதிக்கம்; ஜிப்ரல்லின்: போல்டிங், தண்டு நீட்சி; சைட்டோகைனின்: செல் பகுப்பு, தாமத முதிர்வு; எத்திலீன்: பழம் பழுத்தல்."
+          ansTamil: "ஆக்ஸின் (செல் நீட்சி), ஜிப்ரல்லின் (தண்டு நீட்சி, முளைத்தல்), சைட்டோகைனின் (செல் பகுப்பு), எத்திலீன் (பழம் பழுத்தல்).",
+          blackboard: {
+            title: "தாவர ஹார்மோன்களின் வாழ்வியல் விளைவுகள்",
+            engTitle: "Plant Hormones and Their Physiological Roles",
+            fullBoardImg: "images/sci_plant_hormones_diagram.png",
+            steps: [
+              {
+                stepNum: 1,
+                badge: "🌱 1. ஆக்ஸின் (செல் நீட்சி)",
+                badgeEn: "🌱 1. Auxins (Cell Elongation)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#f472b6; font-weight:800; font-size:16px;">1. ஆக்ஸின்கள் (குறிச்சொல்: செல் நீட்சி)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #f472b6; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#f472b6;">செல் நீட்சி:</b> செல்கள் நீளமாக வளர்வதைத் தூண்டுகிறது.<br>
+                      • <b style="color:#f472b6;">வேர் உருவாக்கம்:</b> தண்டு வெட்டுத்துண்டுகளில் வேர் உருவாவதைத் தூண்டுகிறது.<br>
+                      • <b style="color:#f472b6;">ஒளிசார்பசைவு:</b> தாவரத் தண்டு ஒளியை நோக்கி வளைவதைக் கட்டுப்படுத்துகிறது.<br>
+                      • <b style="color:#f472b6;">உதிர்தல் தடுத்தல்:</b> இளம் இலைகள், கனிகள் உதிர்வதைத் தடுக்கிறது.
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "ஒன்று. ஆக்ஸின். செல்கள் நீட்சியடையச் செய்தல், வேர் உருவாக்கம், ஒளியை நோக்கி வளைதல் மற்றும் இலைகள், கனிகள் உதிர்வதைத் தடுத்தல்.",
+                audioScriptEn: "One. Auxins. Promotes cell elongation, root formation, bending towards light, and prevents early falling of leaves and fruits."
+              },
+              {
+                stepNum: 2,
+                badge: "🌾 2. ஜிப்ரல்லின்கள் (தண்டு வளர்ச்சி)",
+                badgeEn: "🌾 2. Gibberellins (Stem Growth)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#38bdf8; font-weight:800; font-size:16px;">2. ஜிப்ரல்லின்கள் (குறிச்சொல்: தண்டு வளர்ச்சி)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#38bdf8;">தண்டு நீட்சி:</b> குட்டைத் தாவரங்களை நெட்டையாக்குகிறது.<br>
+                      • <b style="color:#38bdf8;">விதை முளைத்தல்:</b> விதைகளின் முளைத்தலைத் தூண்டுகிறது.<br>
+                      • <b style="color:#38bdf8;">உறக்க நிலை நீக்கல்:</b> விதைகளின் உறக்க நிலையை முறிக்கிறது.<br>
+                      • <b style="color:#38bdf8;">பழ அளவு:</b> கனிகளின் அளவை அதிகரிக்கச் செய்கிறது (எ.கா: திராட்சை).
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "இரண்டு. ஜிப்ரல்லின்கள். தண்டு நீட்சியடைதல், விதை முளைத்தல், விதையின் உறக்க நிலையை நீக்குதல் மற்றும் பழங்களின் அளவை அதிகரித்தல்.",
+                audioScriptEn: "Two. Gibberellins. Promotes stem elongation, seed germination, breaks seed dormancy, and increases fruit size."
+              },
+              {
+                stepNum: 3,
+                badge: "🌿 3. சைட்டோகைனின்கள் (செல் பகுப்பு)",
+                badgeEn: "🌿 3. Cytokinins (Cell Division)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#4ade80; font-weight:800; font-size:16px;">3. சைட்டோகைனின்கள் (குறிச்சொல்: செல் பகுப்பு)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #4ade80; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#4ade80;">செல் பகுப்பு:</b> செல்களின் தொடர் பகுப்பை தீவிரமாகத் தூண்டுகிறது.<br>
+                      • <b style="color:#4ade80;">பக்கவாட்டு மொட்டு:</b> நுனி மொட்டு ஆதிக்கத்தை முறித்து பக்க மொட்டுகளை வளர்க்கிறது.<br>
+                      • <b style="color:#4ade80;">முதுமை தாமதம்:</b> இலைகள் முதிர்வடைவதைத் தாமதப்படுத்துகிறது.<br>
+                      • <b style="color:#4ade80;">தண்டு உருவாக்கம்:</b> திசு வளர்ப்பில் புதிய தண்டுகள் உருவாக உதவுகிறது.
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "மூன்று. சைட்டோகைனின்கள். செல் பகுப்பைத் தூண்டுதல், பக்கவாட்டு மொட்டுகளின் வளர்ச்சி, இலைகள் முதிர்வடைவதைத் தாமதப்படுத்துதல் மற்றும் தண்டு வளர்ச்சி.",
+                audioScriptEn: "Three. Cytokinins. Promotes cell division, lateral bud growth, delays ageing of leaves, and helps in shoot development."
+              },
+              {
+                stepNum: 4,
+                badge: "🍎 4. எத்திலீன் (பழம் பழுத்தல்)",
+                badgeEn: "🍎 4. Ethylene (Fruit Ripening)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fb923c; font-weight:800; font-size:16px;">4. எத்திலீன் (குறிச்சொல்: பழம் பழுத்தல்)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #fb923c; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#fb923c;">வாயு நிலை ஹார்மோன்:</b> தாவரங்களில் உள்ள ஒரே வாயு நிலை ஹார்மோன்.<br>
+                      • <b style="color:#fb923c;">பழம் பழுத்தல்:</b> வாழை, ஆப்பிள், மாங்காய்கள் பழுப்பதை விரைவுபடுத்துகிறது.<br>
+                      • <b style="color:#fb923c;">முதுமை அடைதல்:</b> மலர்கள் மற்றும் இலைகள் முதுமை அடைவதைத் தூண்டுகிறது.<br>
+                      • <b style="color:#fb923c;">உதிர்தல்:</b> முதிர்ந்த இலைகள், பூக்கள், கனிகள் உதிர்வதற்கு உதவுகிறது.
+                    </div>
+                  </div>
+                `,
+                audioScriptTa: "நான்கு. எத்திலீன். இது ஒரு வாயு நிலை தாவர ஹார்மோன். பழங்கள் பழுக்க உதவுதல், இலைகள் மலர்கள் முதிர்வடைதல் மற்றும் உதிர்தலைத் தூண்டுதல்.",
+                audioScriptEn: "Four. Ethylene. Gaseous plant hormone. Promotes fruit ripening, ageing of flowers, and falling of leaves and fruits."
+              }
+            ]
+          }
         }
       ]
     }

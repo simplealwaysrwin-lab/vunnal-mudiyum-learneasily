@@ -1,4 +1,4 @@
-// Class 10 Science - Unit 16: Plant and Animal Hormones
+﻿// Class 10 Science - Unit 16: Plant and Animal Hormones
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SCIENCE_EM_UNIT_16_DATA = {
@@ -136,32 +136,177 @@ const SCIENCE_EM_UNIT_16_DATA = {
           type: "7m",
           mark: "4 / 7 Marks",
           examTag: "Public Exam 7M",
+          diagramImg: "images/sci_plant_hormones_diagram.png",
           q: "Detail the physiological roles of the four major plant hormones: Auxins, Gibberellins, Cytokinins, and Ethylene.",
           ans: `<div style="line-height:1.8;">
-            Plant hormones are organic trace chemicals regulating growth, differentiation, and environmental responses:<br><br>
+            <p style="margin-bottom:12px; font-size:14.5px;">
+              <b>Plant Hormones:</b> Plant hormones are chemical substances produced by plants. They control and regulate the growth and development of plants. There are four major plant hormones:
+            </p>
 
-            <b>1. Auxins (Indole-3-Acetic Acid / IAA):</b><br>
-            • <b>Apical Dominance:</b> Growing apical bud suppresses lateral axillary bud sprouting.<br>
-            • <b>Cell Elongation:</b> Induces cell wall loosening and longitudinal elongation in shoots and coleoptiles.<br>
-            • <b>Root Initiation:</b> Stimulates adventitious root formation in stem cuttings.<br>
-            • <b>Parthenocarpy:</b> Induces development of seedless fruits without fertilization (e.g. Tomatoes).<br><br>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px; margin-bottom:16px;">
+              <!-- 1. Auxins -->
+              <div style="background:#fdf2f8; border:2px solid #ec4899; border-radius:10px; padding:12px 14px;">
+                <div style="color:#be185d; font-weight:800; font-size:15px; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+                  <span>🌱</span> <span>1. Auxins</span>
+                </div>
+                <ul style="margin:0; padding-left:18px; color:#1e293b; font-size:13.5px; line-height:1.7;">
+                  <li>Promote <b>cell elongation</b> (increase in cell length).</li>
+                  <li>Help in <b>root formation</b>.</li>
+                  <li>Control the <b>bending of plants towards light</b> (phototropism).</li>
+                  <li><b>Prevent early falling</b> of leaves and fruits.</li>
+                </ul>
+              </div>
 
-            <b>2. Gibberellins (GA₃):</b><br>
-            • <b>Internodal Elongation:</b> Reverses genetic dwarfism in single-gene dwarf plants (e.g. Maize, Pea).<br>
-            • <b>Bolting & Flowering:</b> Causes rapid stem elongation and synchronous flowering in rosette species.<br>
-            • <b>Breaks Seed Dormancy:</b> Triggers alpha-amylase synthesis in cereal endosperm to initiate germination.<br><br>
+              <!-- 2. Gibberellins -->
+              <div style="background:#eff6ff; border:2px solid #3b82f6; border-radius:10px; padding:12px 14px;">
+                <div style="color:#1d4ed8; font-weight:800; font-size:15px; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+                  <span>🌾</span> <span>2. Gibberellins</span>
+                </div>
+                <ul style="margin:0; padding-left:18px; color:#1e293b; font-size:13.5px; line-height:1.7;">
+                  <li>Promote <b>stem elongation</b>.</li>
+                  <li>Help in <b>seed germination</b>.</li>
+                  <li>Break <b>seed dormancy</b>.</li>
+                  <li>Increase the <b>size of fruits</b>.</li>
+                </ul>
+              </div>
 
-            <b>3. Cytokinins (Kinetin / Zeatin):</b><br>
-            • <b>Cell Division:</b> Actively drives cytokinesis in the presence of auxin.<br>
-            • <b>Overcomes Apical Dominance:</b> Stimulates lateral bud growth when applied topically.<br>
-            • <b>Richmond-Lang Effect:</b> Delays leaf senescence by preserving chlorophyll, proteins, and RNA.<br><br>
+              <!-- 3. Cytokinins -->
+              <div style="background:#f0fdf4; border:2px solid #22c55e; border-radius:10px; padding:12px 14px;">
+                <div style="color:#15803d; font-weight:800; font-size:15px; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+                  <span>🌿</span> <span>3. Cytokinins</span>
+                </div>
+                <ul style="margin:0; padding-left:18px; color:#1e293b; font-size:13.5px; line-height:1.7;">
+                  <li>Promote <b>cell division</b>.</li>
+                  <li>Help in the growth of <b>lateral buds</b>.</li>
+                  <li>Delay <b>ageing (senescence) of leaves</b>.</li>
+                  <li>Help in the <b>development of shoots</b>.</li>
+                </ul>
+              </div>
 
-            <b>4. Ethylene:</b><br>
-            • <b>Fruit Ripening:</b> Speeds up the climacteric ripening of fleshy fruits (banana, mango).<br>
-            • <b>Abscission:</b> Promotes formation of abscission layers in senescent leaves, flowers, and fruits.<br>
-            • <b>Triple Response:</b> Inhibits longitudinal elongation while enhancing radial swelling of stems.
+              <!-- 4. Ethylene -->
+              <div style="background:#fff7ed; border:2px solid #f97316; border-radius:10px; padding:12px 14px;">
+                <div style="color:#c2410c; font-weight:800; font-size:15px; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+                  <span>🍎</span> <span>4. Ethylene (Gaseous Hormone)</span>
+                </div>
+                <ul style="margin:0; padding-left:18px; color:#1e293b; font-size:13.5px; line-height:1.7;">
+                  <li>It is a <b>gaseous plant hormone</b>.</li>
+                  <li>Helps in <b>fruit ripening</b>.</li>
+                  <li>Promotes <b>ageing of flowers and leaves</b>.</li>
+                  <li>Helps in the <b>falling (abscission) of leaves and fruits</b>.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Easy Revision Table -->
+            <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:8px; padding:12px; margin-bottom:14px; overflow-x:auto;">
+              <div style="color:#0f172a; font-weight:800; font-size:14.5px; margin-bottom:8px; border-bottom:2px solid #10b981; padding-bottom:4px;">
+                ⚡ Easy Revision Table
+              </div>
+              <table style="width:100%; border-collapse:collapse; font-size:13.5px; text-align:left;">
+                <thead>
+                  <tr style="background:#0f766e; color:#ffffff;">
+                    <th style="padding:8px 12px; border:1px solid #94a3b8; width:35%;">Hormone</th>
+                    <th style="padding:8px 12px; border:1px solid #94a3b8; width:65%;">Main Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background:#fdf2f8;"><td style="padding:8px 12px; border:1px solid #cbd5e1; font-weight:700; color:#be185d;">Auxins</td><td style="padding:8px 12px; border:1px solid #cbd5e1; color:#1e293b;">Cell elongation</td></tr>
+                  <tr style="background:#eff6ff;"><td style="padding:8px 12px; border:1px solid #cbd5e1; font-weight:700; color:#1d4ed8;">Gibberellins</td><td style="padding:8px 12px; border:1px solid #cbd5e1; color:#1e293b;">Stem elongation</td></tr>
+                  <tr style="background:#f0fdf4;"><td style="padding:8px 12px; border:1px solid #cbd5e1; font-weight:700; color:#15803d;">Cytokinins</td><td style="padding:8px 12px; border:1px solid #cbd5e1; color:#1e293b;">Cell division</td></tr>
+                  <tr style="background:#fff7ed;"><td style="padding:8px 12px; border:1px solid #cbd5e1; font-weight:700; color:#c2410c;">Ethylene</td><td style="padding:8px 12px; border:1px solid #cbd5e1; color:#1e293b;">Fruit ripening</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="background:#f0fdf4; border-left:4px solid #16a34a; padding:10px 14px; border-radius:6px; margin-top:10px;">
+              <b style="color:#15803d;">💡 Exam Tip – Remember these 4 Keywords:</b><br>
+              • <b>Auxins:</b> Elongation<br>
+              • <b>Gibberellins:</b> Stem growth<br>
+              • <b>Cytokinins:</b> Cell division<br>
+              • <b>Ethylene:</b> Fruit ripening<br>
+              <i style="color:#475569; font-size:12.5px;">Conclusion: These four plant hormones play an important role in the growth, development and other activities of plants.</i>
+            </div>
           </div>`,
-          ansTamil: "ஆக்ஸின்: முனை ஆதிக்கம்; ஜிப்ரல்லின்: போல்டிங், தண்டு நீட்சி; சைட்டோகைனின்: செல் பகுப்பு, தாமத முதிர்வு; எத்திலீன்: பழம் பழுத்தல்."
+          ansTamil: "ஆக்ஸின் (செல் நீட்சி), ஜிப்ரல்லின் (தண்டு நீட்சி, முளைத்தல்), சைட்டோகைனின் (செல் பகுப்பு), எத்திலீன் (பழம் பழுத்தல்).",
+          blackboard: {
+            title: "Plant Hormones and Their Physiological Roles",
+            engTitle: "Plant Hormones and Their Physiological Roles",
+            fullBoardImg: "images/sci_plant_hormones_diagram.png",
+            steps: [
+              {
+                stepNum: 1,
+                badge: "🌱 1. Auxins (Cell Elongation)",
+                badgeEn: "🌱 1. Auxins (Cell Elongation)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#f472b6; font-weight:800; font-size:16px;">1. Auxins (Keyword: Elongation)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #f472b6; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#f472b6;">Cell Elongation:</b> Promotes increase in cell length.<br>
+                      • <b style="color:#f472b6;">Root Formation:</b> Stimulates adventitious root initiation.<br>
+                      • <b style="color:#f472b6;">Phototropism:</b> Controls bending of shoots towards light.<br>
+                      • <b style="color:#f472b6;">Abscission Prevention:</b> Prevents early drop of young leaves and fruits.
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "One. Auxins. Promotes cell elongation, root formation, bending towards light, and prevents early falling of leaves and fruits.",
+                audioScriptTa: "ஒன்று. ஆக்ஸின். செல்கள் நீட்சியடையச் செய்தல், வேர் உருவாக்கம், ஒளியை நோக்கி வளைதல் மற்றும் இலைகள், கனிகள் உதிர்வதைத் தடுத்தல்."
+              },
+              {
+                stepNum: 2,
+                badge: "🌾 2. Gibberellins (Stem Growth)",
+                badgeEn: "🌾 2. Gibberellins (Stem Growth)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#38bdf8; font-weight:800; font-size:16px;">2. Gibberellins (Keyword: Stem Growth)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #38bdf8; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#38bdf8;">Stem Elongation:</b> Promotes internodal elongation in dwarf plants.<br>
+                      • <b style="color:#38bdf8;">Seed Germination:</b> Triggers enzymatic food mobilization.<br>
+                      • <b style="color:#38bdf8;">Breaks Dormancy:</b> Breaks seed and bud dormancy.<br>
+                      • <b style="color:#38bdf8;">Fruit Size:</b> Increases the size of fruits (e.g., Grapes).
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Two. Gibberellins. Promotes stem elongation, seed germination, breaks seed dormancy, and increases fruit size.",
+                audioScriptTa: "இரண்டு. ஜிப்ரல்லின்கள். தண்டு நீட்சியடைதல், விதை முளைத்தல், விதையின் உறக்க நிலையை நீக்குதல் மற்றும் பழங்களின் அளவை அதிகரித்தல்."
+              },
+              {
+                stepNum: 3,
+                badge: "🌿 3. Cytokinins (Cell Division)",
+                badgeEn: "🌿 3. Cytokinins (Cell Division)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#4ade80; font-weight:800; font-size:16px;">3. Cytokinins (Keyword: Cell Division)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #4ade80; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#4ade80;">Cell Division:</b> Actively induces cytokinesis in plant tissues.<br>
+                      • <b style="color:#4ade80;">Lateral Bud Growth:</b> Overcomes apical dominance.<br>
+                      • <b style="color:#4ade80;">Delays Ageing:</b> Retards leaf senescence (preserves chlorophyll).<br>
+                      • <b style="color:#4ade80;">Shoot Development:</b> Promotes organogenesis of shoots.
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Three. Cytokinins. Promotes cell division, lateral bud growth, delays ageing of leaves, and helps in shoot development.",
+                audioScriptTa: "மூன்று. சைட்டோகைனின்கள். செல் பகுப்பைத் தூண்டுதல், பக்கவாட்டு மொட்டுகளின் வளர்ச்சி, இலைகள் முதிர்வடைவதைத் தாமதப்படுத்துதல் மற்றும் தண்டு வளர்ச்சி."
+              },
+              {
+                stepNum: 4,
+                badge: "🍎 4. Ethylene (Fruit Ripening)",
+                badgeEn: "🍎 4. Ethylene (Fruit Ripening)",
+                chalkHtml: `
+                  <div class="bb-line bb-title" style="color:#fb923c; font-weight:800; font-size:16px;">4. Ethylene (Keyword: Fruit Ripening)</div>
+                  <div class="bb-box-cyan" style="background:#0f172a; border:2px solid #fb923c; border-radius:10px; padding:12px; margin-top:8px;">
+                    <div class="bb-line" style="color:#e2e8f0; font-size:14.5px; line-height:1.7;">
+                      • <b style="color:#fb923c;">Gaseous Hormone:</b> Only naturally occurring gaseous phytohormone.<br>
+                      • <b style="color:#fb923c;">Fruit Ripening:</b> Hastens ripening of bananas, apples, and tomatoes.<br>
+                      • <b style="color:#fb923c;">Senescence:</b> Promotes natural ageing of flowers and leaves.<br>
+                      • <b style="color:#fb923c;">Abscission:</b> Stimulates dropping of mature leaves and fruits.
+                    </div>
+                  </div>
+                `,
+                audioScriptEn: "Four. Ethylene. It is a gaseous plant hormone. Promotes fruit ripening, ageing of flowers, and falling of leaves and fruits.",
+                audioScriptTa: "நான்கு. எத்திலீன். இது ஒரு வாயு நிலை தாவர ஹார்மோன். பழங்கள் பழுக்க உதவுதல், இலைகள் மலர்கள் முதிர்வடைதல் மற்றும் உதிர்தலைத் தூண்டுதல்."
+              }
+            ]
+          }
         }
       ]
     }

@@ -4442,7 +4442,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
               போட்டி வழிகாட்டி & விதிமுறைகள் (Manual & Rules)
             </h3>
             <div style="font-size:11.5px; color:var(--text-muted); font-weight:600;">
-              மாதிரித் தேர்வு மற்றும் தினசரி ₹100 அமேசான் கல்வி கிஃப்ட் வவுச்சர் திட்டம்
+              மாதிரித் தேர்வு மற்றும் சுயபயிற்சி அறிவு வழிகாட்டி
             </div>
           </div>
         </div>
@@ -4586,7 +4586,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
             0
           </div>
           <div style="font-size:12px; color:#64748b;" id="shareRankBadge">
-            🔥 இன்னும் அதிகமாகப் பகிருங்கள் • ஒவ்வொரு பகிர்வும் உங்களை முதலிடத்திற்கு உயர்த்தும்!
+            🌟 உங்கள் வகுப்புத் தோழர்களுடன் பகிர்ந்து ஒன்றாகப் படித்து வெற்றி பெறுங்கள்!
           </div>
         </div>
 
@@ -4631,23 +4631,6 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
           </div>
         </div>
 
-        <!-- Claim Top Sharer Award via Email Section -->
-        <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:14px; margin-top:14px;">
-          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
-            <div style="font-size:13px; font-weight:800; color:#1e3a8a;">
-              🏆 இன்றைய பகிர்வை மின்னஞ்சல் வழி பதிவு செய்க:
-            </div>
-            <div style="font-size:11px; font-family:monospace; background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:6px; font-weight:700;" id="shareVerificationHashPill">
-              HASH GENERATING...
-            </div>
-          </div>
-          <div style="font-size:12px; color:#1e40af; margin-bottom:10px; line-height:1.4;">
-            உங்கள் பகிர்வுகளை முடித்த பிறகு, இரவு 9:00 மணிக்குள் இப்பட்டனைத் தட்டி எங்களின் அதிகாரப்பூர்வ மின்னஞ்சலுக்கு (<strong>simplealwaysrwin@gmail.com</strong>) அனுப்பி வவுச்சரைப் பெறுங்கள்!
-          </div>
-          <button type="button" class="tab-btn" onclick="ShareRewardManager.claimTopSharerVoucher()" 
-                  style="background:linear-gradient(135deg, #d97706, #b45309); color:#fff; font-weight:800; font-size:13.5px; padding:11px 16px; border-radius:10px; border:none; width:100%; justify-content:center; box-shadow:0 4px 10px rgba(217,119,6,0.3);">
-            ✉️ தினசரி பகிர்வு வவுச்சருக்கு விண்ணப்பிக்க (Claim via Email)
-          </button>
         </div>
       </div>
     </div>
@@ -6854,6 +6837,20 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
     `;
   }
 
+    function saveLastVisitedLesson(subId, lesId, subName, lesTitle) {
+    try {
+      if (subId) {
+        localStorage.setItem('vm_last_visited', JSON.stringify({
+          subId: subId,
+          lesId: lesId || '',
+          subName: subName || '',
+          lesTitle: lesTitle || ''
+        }));
+      }
+    } catch(e) {}
+  }
+  window.saveLastVisitedLesson = saveLastVisitedLesson;
+
   function getLastVisitedLesson() {
     try {
       const saved = localStorage.getItem('vm_last_visited');
@@ -6863,14 +6860,13 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       }
     } catch(e) {}
     return {
-      subId: 'maths_tm',
-      lesId: 'math_tm_u2',
-      subName: 'கணிதம் (Maths)',
-      lesTitle: 'அலகு 2: எண்களும் தொடர்வரிசைகளும்'
+      subId: 'tamil',
+      lesId: 'tam_u1',
+      subName: 'தமிழ் (Tamil)',
+      lesTitle: 'அலகு 1: அமுதூற்று'
     };
   }
-
-  function resumeLastVisitedLesson() {
+function resumeLastVisitedLesson() {
     const last = getLastVisitedLesson();
     if (last && last.subId) {
       if (last.lesId) {
@@ -6956,33 +6952,6 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       </div>
       ` : ''}
 
-      <!-- 3-Year Public Exam Question Bank Quick Hub (Home) -->
-      <div class="home-public-exam-banner" style="background:linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border:2px solid #6366f1; border-radius:14px; padding:12px 18px; margin:8px 0 14px 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; box-shadow:0 4px 16px rgba(49,46,129,0.25);">
-        <div style="display:flex; align-items:center; gap:10px; flex:1; min-width:220px;">
-          <span style="font-size:28px; background:#4338ca; width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">🏆</span>
-          <div>
-            <div style="font-size:14.5px; font-weight:800; color:#ffffff;">
-              கடந்த 3 ஆண்டுகளின் அரசுப் பொதுத்தேர்வு வினா-விடை வங்கி (2022 - 2024)
-            </div>
-            <div style="font-size:11.5px; color:#c7d2fe; margin-top:2px;">
-              Maths & Science • ஏப்ரல் 2024, ஏப்ரல் 2023, மே 2022 • கரும்பலகைத் தீர்வுகள் & கட்டாய வினாக்கள்
-            </div>
-          </div>
-        </div>
-        <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
-          <button type="button" class="tab-btn" onclick="openSubjectPublicExamHub('maths_tm')" style="background:linear-gradient(135deg, #f59e0b, #d97706); color:#fff; font-weight:800; font-size:11.5px; padding:6px 12px; border-radius:8px; border:none; cursor:pointer;">
-            📐 கணிதம் (TM)
-          </button>
-          <button type="button" class="tab-btn" onclick="openSubjectPublicExamHub('maths_em')" style="background:linear-gradient(135deg, #3b82f6, #2563eb); color:#fff; font-weight:800; font-size:11.5px; padding:6px 12px; border-radius:8px; border:none; cursor:pointer;">
-            📐 Maths (EM)
-          </button>
-          <button type="button" class="tab-btn" onclick="openSubjectPublicExamHub('science_tm')" style="background:linear-gradient(135deg, #10b981, #059669); color:#fff; font-weight:800; font-size:11.5px; padding:6px 12px; border-radius:8px; border:none; cursor:pointer;">
-            🔬 அறிவியல் (TM)
-          </button>
-          <button type="button" class="tab-btn" onclick="openSubjectPublicExamHub('science_em')" style="background:linear-gradient(135deg, #06b6d4, #0891b2); color:#fff; font-weight:800; font-size:11.5px; padding:6px 12px; border-radius:8px; border:none; cursor:pointer;">
-            🔬 Science (EM)
-          </button>
-        </div>
       </div>
       <!-- Home Dynamic Content Area (Filter Bar + Subjects Grid OR Search Results) -->
       <div id="homeContentArea"></div>
@@ -7070,6 +7039,192 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
         <!-- Modern Cards Grid matching user's screenshot -->
         <div class="modern-subject-grid">
           ${displayedSubjects.map(s => renderModernSubjectCard(s)).join('')}
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- ALL SUBJECT QUESTION PAPERS — YEAR WISE — ONE PLACE ONLY      -->
+        <!-- ============================================================= -->
+        <div class="home-unified-public-exam-section" style="margin-top:28px; background:linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #312e81 100%); border:2px solid #818cf8; border-radius:18px; padding:22px 24px; box-shadow:0 8px 30px rgba(15,23,42,0.3); color:#ffffff;">
+          
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:14px; margin-bottom:16px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="font-size:32px; background:rgba(255,255,255,0.12); width:50px; height:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">🏛️</span>
+              <div>
+                <div style="font-size:11px; font-weight:800; color:#fde047; text-transform:uppercase; letter-spacing:0.8px;">
+                  TAMIL NADU SSLC BOARD EXAMINATIONS
+                </div>
+                <h2 style="font-size:19px; font-weight:800; color:#ffffff; margin:2px 0;">
+                  அரசுப் பொதுத்தேர்வு வினாத்தாள்கள் (Public Exam Question Papers)
+                </h2>
+                <div style="font-size:12px; color:#c7d2fe;">
+                  2024, 2023, 2022 • அசல் தேர்வு வினாத்தாள் வடிவம் • அனைத்துப் பாடங்களும் ஒரே இடத்தில்
+                </div>
+              </div>
+            </div>
+            <button type="button" class="tab-btn" onclick="openSubjectPublicExamHub('maths_tm', '2024')" style="background:linear-gradient(135deg, #10b981, #059669); color:#fff; font-weight:800; padding:9px 18px; border-radius:10px; border:none; cursor:pointer; font-size:13px; box-shadow:0 3px 10px rgba(16,185,129,0.3);">
+              🚀 வினாத்தாள் பகுதிக்குச் செல்க ➔
+            </button>
+          </div>
+
+          <!-- Subject Cards Grid -->
+          <div style="font-size:12px; font-weight:800; color:#e0e7ff; margin-bottom:10px; text-transform:uppercase; letter-spacing:0.5px;">
+            📚 பாடத்தைத் தேர்ந்தெடுக்கவும் (Choose Subject & Year Wise Real Exam Paper):
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:12px;">
+            
+            <!-- Tamil -->
+            <div class="home-pub-sub-card" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:12px; padding:12px 14px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:24px;">📖</span>
+                  <div>
+                    <div style="font-size:14px; font-weight:800; color:#ffffff;">தமிழ்</div>
+                    <div style="font-size:11px; color:#cbd5e1;">Tamil (Part I - V)</div>
+                  </div>
+                </div>
+                <span style="font-size:10.5px; font-weight:800; background:#ec4899; color:#fff; padding:3px 8px; border-radius:6px;">100 மதிப்பெண்</span>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <button type="button" onclick="openSubjectPublicExamHub('tamil', '2024')" style="flex:1; background:#f59e0b; color:#fff; font-weight:800; font-size:11.5px; padding:6px 0; border:none; border-radius:6px; cursor:pointer;">🏆 2024</button>
+                <button type="button" onclick="openSubjectPublicExamHub('tamil', '2023')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2023</button>
+                <button type="button" onclick="openSubjectPublicExamHub('tamil', '2022')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2022</button>
+              </div>
+            </div>
+
+            <!-- English -->
+            <div class="home-pub-sub-card" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:12px; padding:12px 14px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:24px;">🅰️</span>
+                  <div>
+                    <div style="font-size:14px; font-weight:800; color:#ffffff;">English</div>
+                    <div style="font-size:11px; color:#cbd5e1;">English (Part I - IV)</div>
+                  </div>
+                </div>
+                <span style="font-size:10.5px; font-weight:800; background:#8b5cf6; color:#fff; padding:3px 8px; border-radius:6px;">100 Marks</span>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <button type="button" onclick="openSubjectPublicExamHub('english', '2024')" style="flex:1; background:#f59e0b; color:#fff; font-weight:800; font-size:11.5px; padding:6px 0; border:none; border-radius:6px; cursor:pointer;">🏆 2024</button>
+                <button type="button" onclick="openSubjectPublicExamHub('english', '2023')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2023</button>
+                <button type="button" onclick="openSubjectPublicExamHub('english', '2022')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2022</button>
+              </div>
+            </div>
+
+            <!-- Maths TM -->
+            <div class="home-pub-sub-card" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:12px; padding:12px 14px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:24px;">📐</span>
+                  <div>
+                    <div style="font-size:14px; font-weight:800; color:#ffffff;">கணிதம் (TM)</div>
+                    <div style="font-size:11px; color:#cbd5e1;">Maths Tamil Medium</div>
+                  </div>
+                </div>
+                <span style="font-size:10.5px; font-weight:800; background:#f59e0b; color:#fff; padding:3px 8px; border-radius:6px;">100 மதிப்பெண்</span>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <button type="button" onclick="openSubjectPublicExamHub('maths_tm', '2024')" style="flex:1; background:#f59e0b; color:#fff; font-weight:800; font-size:11.5px; padding:6px 0; border:none; border-radius:6px; cursor:pointer;">🏆 2024</button>
+                <button type="button" onclick="openSubjectPublicExamHub('maths_tm', '2023')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2023</button>
+                <button type="button" onclick="openSubjectPublicExamHub('maths_tm', '2022')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2022</button>
+              </div>
+            </div>
+
+            <!-- Maths EM -->
+            <div class="home-pub-sub-card" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:12px; padding:12px 14px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:24px;">📐</span>
+                  <div>
+                    <div style="font-size:14px; font-weight:800; color:#ffffff;">Mathematics (EM)</div>
+                    <div style="font-size:11px; color:#cbd5e1;">Maths English Medium</div>
+                  </div>
+                </div>
+                <span style="font-size:10.5px; font-weight:800; background:#3b82f6; color:#fff; padding:3px 8px; border-radius:6px;">100 Marks</span>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <button type="button" onclick="openSubjectPublicExamHub('maths_em', '2024')" style="flex:1; background:#f59e0b; color:#fff; font-weight:800; font-size:11.5px; padding:6px 0; border:none; border-radius:6px; cursor:pointer;">🏆 2024</button>
+                <button type="button" onclick="openSubjectPublicExamHub('maths_em', '2023')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2023</button>
+                <button type="button" onclick="openSubjectPublicExamHub('maths_em', '2022')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2022</button>
+              </div>
+            </div>
+
+            <!-- Science TM -->
+            <div class="home-pub-sub-card" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:12px; padding:12px 14px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:24px;">🔬</span>
+                  <div>
+                    <div style="font-size:14px; font-weight:800; color:#ffffff;">அறிவியல் (TM)</div>
+                    <div style="font-size:11px; color:#cbd5e1;">Science Tamil Medium</div>
+                  </div>
+                </div>
+                <span style="font-size:10.5px; font-weight:800; background:#10b981; color:#fff; padding:3px 8px; border-radius:6px;">75 மதிப்பெண்</span>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <button type="button" onclick="openSubjectPublicExamHub('science_tm', '2024')" style="flex:1; background:#f59e0b; color:#fff; font-weight:800; font-size:11.5px; padding:6px 0; border:none; border-radius:6px; cursor:pointer;">🏆 2024</button>
+                <button type="button" onclick="openSubjectPublicExamHub('science_tm', '2023')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2023</button>
+                <button type="button" onclick="openSubjectPublicExamHub('science_tm', '2022')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2022</button>
+              </div>
+            </div>
+
+            <!-- Science EM -->
+            <div class="home-pub-sub-card" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:12px; padding:12px 14px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:24px;">🔬</span>
+                  <div>
+                    <div style="font-size:14px; font-weight:800; color:#ffffff;">Science (EM)</div>
+                    <div style="font-size:11px; color:#cbd5e1;">Science English Medium</div>
+                  </div>
+                </div>
+                <span style="font-size:10.5px; font-weight:800; background:#06b6d4; color:#fff; padding:3px 8px; border-radius:6px;">75 Marks</span>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <button type="button" onclick="openSubjectPublicExamHub('science_em', '2024')" style="flex:1; background:#f59e0b; color:#fff; font-weight:800; font-size:11.5px; padding:6px 0; border:none; border-radius:6px; cursor:pointer;">🏆 2024</button>
+                <button type="button" onclick="openSubjectPublicExamHub('science_em', '2023')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2023</button>
+                <button type="button" onclick="openSubjectPublicExamHub('science_em', '2022')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2022</button>
+              </div>
+            </div>
+
+            <!-- Social TM -->
+            <div class="home-pub-sub-card" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:12px; padding:12px 14px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:24px;">🌍</span>
+                  <div>
+                    <div style="font-size:14px; font-weight:800; color:#ffffff;">சமூக அறிவியல் (TM)</div>
+                    <div style="font-size:11px; color:#cbd5e1;">Social Tamil Medium</div>
+                  </div>
+                </div>
+                <span style="font-size:10.5px; font-weight:800; background:#f97316; color:#fff; padding:3px 8px; border-radius:6px;">100 மதிப்பெண்</span>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <button type="button" onclick="openSubjectPublicExamHub('social_tm', '2024')" style="flex:1; background:#f59e0b; color:#fff; font-weight:800; font-size:11.5px; padding:6px 0; border:none; border-radius:6px; cursor:pointer;">🏆 2024</button>
+                <button type="button" onclick="openSubjectPublicExamHub('social_tm', '2023')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2023</button>
+                <button type="button" onclick="openSubjectPublicExamHub('social_tm', '2022')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2022</button>
+              </div>
+            </div>
+
+            <!-- Social EM -->
+            <div class="home-pub-sub-card" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:12px; padding:12px 14px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:24px;">🌍</span>
+                  <div>
+                    <div style="font-size:14px; font-weight:800; color:#ffffff;">Social Science (EM)</div>
+                    <div style="font-size:11px; color:#cbd5e1;">Social English Medium</div>
+                  </div>
+                </div>
+                <span style="font-size:10.5px; font-weight:800; background:#64748b; color:#fff; padding:3px 8px; border-radius:6px;">100 Marks</span>
+              </div>
+              <div style="display:flex; gap:6px;">
+                <button type="button" onclick="openSubjectPublicExamHub('social_em', '2024')" style="flex:1; background:#f59e0b; color:#fff; font-weight:800; font-size:11.5px; padding:6px 0; border:none; border-radius:6px; cursor:pointer;">🏆 2024</button>
+                <button type="button" onclick="openSubjectPublicExamHub('social_em', '2023')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2023</button>
+                <button type="button" onclick="openSubjectPublicExamHub('social_em', '2022')" style="flex:1; background:rgba(255,255,255,0.15); color:#fff; font-weight:700; font-size:11.5px; padding:6px 0; border:1px solid rgba(255,255,255,0.3); border-radius:6px; cursor:pointer;">📅 2022</button>
+              </div>
+            </div>
+
+          </div>
         </div>
       `;
       return;
@@ -7261,6 +7416,13 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
   }
 
   function selectSubject(subId) {
+    try {
+      const s = APP_DATA.subjects.find(sub => sub.id === subId);
+      if (s) {
+        const firstLes = s.lessons && s.lessons[0] ? s.lessons[0] : null;
+        saveLastVisitedLesson(s.id, firstLes ? firstLes.id : '', s.name, firstLes ? (firstLes.title || firstLes.unit || '') : '');
+      }
+    } catch(e) {}
     window.location.hash = subId;
   }
 
@@ -7320,30 +7482,6 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
         <button type="button" class="tab-btn" onclick="openQuestionPaperPatternModal(currentSubject ? currentSubject.id : '')" style="background:linear-gradient(135deg, #16a34a, #15803d); color:#fff; font-weight:800; font-size:13px; padding:9px 18px; border-radius:10px; border:none; cursor:pointer; box-shadow:0 3px 8px rgba(22,163,74,0.3); display:inline-flex; align-items:center; gap:6px;">
           <span>🔍</span>
           <span>${isEm ? 'View Pattern (Blueprint) ➔' : 'வினாத்தாள் வடிவம் காண்க ➔'}</span>
-        </button>
-      </div>
-      <!-- Dedicated 3-Year Public Exam Question Bank Banner -->
-      <div style="background:linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #fef08a 100%); border:2px solid #f59e0b; border-radius:14px; padding:15px 18px; margin-bottom:18px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; box-shadow:0 4px 14px rgba(245,158,11,0.18);">
-        <div style="display:flex; align-items:center; gap:12px; flex:1; min-width:240px;">
-          <span style="font-size:36px; background:#ffffff; width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,0.08); flex-shrink:0;">🏆</span>
-          <div>
-            <div style="font-size:16px; font-weight:800; color:#92400e;">
-              \$\{isEm ? \\$\{currentSubject.name\}: Last 3 Years Public Exam Question Bank (2022 - 2024)\ : \\$\{currentSubject.name\}: கடந்த 3 ஆண்டுகளின் அரசுப் பொதுத்தேர்வு வினா-விடை வங்கி\`\}
-            </div>
-            <div style="font-size:12px; color:#78350f; margin-top:2px; line-height:1.4;">
-              \$\{isEm ? '⭐ April 2024, April 2023, May 2022 & Supplementary • All Chapters Compiled with Solutions & Compulsory Questions' : '⭐ ஏப்ரல் 2024, ஏப்ரல் 2023, மே 2022 • அனைத்து அலகுகளின் அரசுத் தேர்வு வினாக்கள், கட்டாய வினாக்கள் & முழுத் தீர்வுகள்'\}
-            </div>
-            <div style="display:flex; gap:6px; margin-top:6px; flex-wrap:wrap;">
-              <span style="background:#ca8a04; color:#fff; font-size:10.5px; font-weight:800; padding:2px 7px; border-radius:5px;">2024 ஏப்ரல்</span>
-              <span style="background:#0284c7; color:#fff; font-size:10.5px; font-weight:800; padding:2px 7px; border-radius:5px;">2023 ஏப்ரல்</span>
-              <span style="background:#7c3aed; color:#fff; font-size:10.5px; font-weight:800; padding:2px 7px; border-radius:5px;">2022 மே</span>
-              <span style="background:#dc2626; color:#fff; font-size:10.5px; font-weight:800; padding:2px 7px; border-radius:5px;">🔴 கட்டாய வினாக்கள்</span>
-            </div>
-          </div>
-        </div>
-        <button type="button" class="tab-btn" onclick="openSubjectPublicExamHub(currentSubject ? currentSubject.id : '')" style="background:linear-gradient(135deg, #d97706, #b45309); color:#fff; font-weight:800; font-size:13px; padding:10px 18px; border-radius:10px; border:none; box-shadow:0 3px 10px rgba(217,119,6,0.3); cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
-          <span>🚀</span>
-          <span>\$\{isEm ? 'Open Public Exam Bank ➔' : 'அரசுத் தேர்வு வங்கி தனிப்பிரிவு ➔'\}</span>
         </button>
       </div>
 
@@ -8156,6 +8294,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       lesId = currentLesson.id;
     }
     resolveLessonData(currentLesson);
+    try { if (currentSubject && currentLesson) { saveLastVisitedLesson(subId, lesId, currentSubject.name, currentLesson.title || currentLesson.unit || ''); } } catch(e) {}
     currentSubSection = 'all';
     currentFilter = defaultFilter;
     lessonSearchQuery = '';
@@ -11020,7 +11159,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
         window.speechSynthesis.resume();
       }
 
-      const isEnglish = currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em'));
+      const isEnglish = (typeof isEm !== 'undefined' && isEm) || (currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
       const lang = isEnglish ? 'en-IN' : 'ta-IN';
 
       const voices = (window.speechSynthesis.getVoices() && window.speechSynthesis.getVoices().length > 0)
@@ -11110,7 +11249,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       if (this.audioInstance) {
         this.audioInstance.play();
       } else if (window.speechQueueEngine) {
-        const isEnglish = currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em'));
+        const isEnglish = (typeof isEm !== 'undefined' && isEm) || (currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
         const lang = isEnglish ? 'en-IN' : 'ta-IN';
         speechQueueEngine.resume({
           lang: lang,
@@ -11156,7 +11295,13 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       if (this.audioInstance) {
         this.audioInstance.playbackRate = this.rate;
       } else if (this.isPlaying && !this.isPaused && this.currentId) {
-        const item = currentLesson.questions.find(q => q.id === this.currentId);
+        let item = null;
+        if (currentLesson && currentLesson.questions) {
+          item = currentLesson.questions.find(q => q.id === this.currentId);
+        }
+        if (!item && typeof pubExamState !== 'undefined' && pubExamState.questions) {
+          item = pubExamState.questions.find(q => q.id === this.currentId);
+        }
         const isEm = currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english');
         if (item) this.playSpeechSynthesis(item, isEm);
       }
@@ -11289,7 +11434,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
     audioInstance: null,
 
     startPlaylist: function(items, startIndex = 0, mode = '2m') {
-      const isEnglish = currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em'));
+      const isEnglish = (typeof isEm !== 'undefined' && isEm) || (currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
       
       // Auto-detect items if not provided
       if (!items || items.length === 0) {
@@ -11345,7 +11490,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
         return;
       }
 
-      const isEnglish = currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em'));
+      const isEnglish = (typeof isEm !== 'undefined' && isEm) || (currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
       const lang = (this.mode === 'manapaadam' || !isEnglish) ? 'ta-IN' : 'en-IN';
 
       // Update Floating Dock UI
@@ -11437,7 +11582,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
     handleItemEnded: function() {
       if (!this.isPlaying || this.isPaused) return;
 
-      const isEnglish = currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em'));
+      const isEnglish = (typeof isEm !== 'undefined' && isEm) || (currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
       const isLast = (this.currentIndex >= this.playlist.length - 1);
 
       if (isLast) {
@@ -11520,7 +11665,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       if (this.audioInstance) {
         this.audioInstance.play();
       } else {
-        const isEnglish = currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em'));
+        const isEnglish = (typeof isEm !== 'undefined' && isEm) || (currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
         const lang = (this.mode === 'manapaadam' || !isEnglish) ? 'ta-IN' : 'en-IN';
         speechQueueEngine.resume({
           lang: lang,
@@ -11566,7 +11711,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
     },
 
     finishPlaylist: function() {
-      const isEnglish = currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em'));
+      const isEnglish = (typeof isEm !== 'undefined' && isEm) || (currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
       let msg = '';
       let statusMsg = '';
 
@@ -11639,7 +11784,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       if (!dock) return;
       const statusEl = document.getElementById('audioDockStatus');
       const playPauseIcon = document.getElementById('audioDockPlayPauseIcon');
-      const isEnglish = currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em'));
+      const isEnglish = (typeof isEm !== 'undefined' && isEm) || (currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
 
       if (this.isPlaying || this.isPaused) {
         ensureAudioDockVisible();
@@ -13411,6 +13556,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
           lesId = currentLesson.id;
         }
         if (currentLesson) {
+          try { if (currentSubject && currentLesson) { saveLastVisitedLesson(subId, lesId, currentSubject.name, currentLesson.title || currentLesson.unit || ''); } } catch(e) {}
           resolveLessonData(currentLesson);
           currentSubSection = 'all';
           currentFilter = 'all';
@@ -13611,12 +13757,18 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
   // Complete Steps, Marking Schemes, Compulsory Question Guidance & Reveal Modes
   // =======================================================================
 
+  // =======================================================================
+  // 10-ஆம் வகுப்பு அரசுப் பொதுத்தேர்வு வினாத்தாள்கள் (Public Exam Question Papers)
+  // Authentic Year-Wise Question Paper Pattern (2024, 2023, 2022)
+  // Complete Steps, Marking Schemes, Compulsory Question Guidance & Reveal Modes
+  // =======================================================================
+
   window.pubExamState = {
     subjectId: 'maths_tm',
     year: '2024',
-    viewMode: 'full',          // 'full' (with answers) or 'paper' (exam question paper only with reveal buttons)
+    viewMode: 'paper',         // DEFAULT IS 'paper' (Question Paper Mode) as requested!
     revealedAnswers: {},       // { [qId]: boolean }
-    activePart: 'all',          // 'all', 'part1', 'part2', 'part3', 'part4', 'part5'
+    activePart: 'all',
     search: '',
     questions: []
   };
@@ -13631,7 +13783,6 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
     // Map to known public exam subject
     var data = window.PUBLIC_EXAM_PAPERS_DATA || {};
     if (!data[targetId]) {
-      // Find fallback or matching subject
       if (targetId.startsWith('maths') && targetId.endsWith('_em')) targetId = 'maths_em';
       else if (targetId.startsWith('maths')) targetId = 'maths_tm';
       else if (targetId.startsWith('science') && targetId.endsWith('_em')) targetId = 'science_em';
@@ -13645,19 +13796,18 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
 
     pubExamState.subjectId = targetId;
 
-    // Check available years for this subject
     var subjData = data[targetId];
-    var availYears = subjData && subjData.papers ? Object.keys(subjData.papers) : ['2024'];
+    var availYears = subjData && subjData.papers ? Object.keys(subjData.papers) : ['2024', '2023', '2022'];
     if (targetYear && availYears.includes(targetYear)) {
       pubExamState.year = targetYear;
     } else {
       pubExamState.year = availYears[0] || '2024';
     }
 
+    pubExamState.viewMode = 'paper'; // Default to Question Paper view!
     pubExamState.activePart = 'all';
     pubExamState.search = '';
 
-    // Match with app subject for navigation & breadcrumbs
     var appSubj = APP_DATA.subjects.find(function(s) { return s.id === targetId || (s.aliasIds && s.aliasIds.includes(targetId)); });
     if (appSubj) currentSubject = appSubj;
     currentLesson = null;
@@ -13682,7 +13832,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
   };
 
   window.setPubExamSubject = function(subId) {
-    openSubjectPublicExamHub(subId);
+    openSubjectPublicExamHub(subId, pubExamState.year);
   };
 
   window.setPubExamYear = function(year) {
@@ -13696,9 +13846,11 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
     renderSubjectPublicExamHub();
   };
 
-  window.setPubExamPartFilter = function(partId) {
-    pubExamState.activePart = partId;
-    renderSubjectPublicExamHub();
+  window.scrollToExamPart = function(partId) {
+    var el = document.getElementById('partAnchor_' + partId) || document.getElementById(partId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   window.toggleRevealExamAns = function(qId) {
@@ -13720,26 +13872,13 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
     }
   };
 
-  window.revealAllExamAnswers = function() {
-    pubExamState.viewMode = 'full';
-    renderSubjectPublicExamHub();
-  };
-
-  window.hideAllExamAnswers = function() {
-    pubExamState.viewMode = 'paper';
-    pubExamState.revealedAnswers = {};
-    renderSubjectPublicExamHub();
-  };
-
   window.playPubExamQuestionAudio = function(qId) {
-    var qItem = null;
-    if (pubExamState.questions) {
-      qItem = pubExamState.questions.find(function(q) { return q.id === qId; });
-    }
-    if (!qItem) return;
-
-    if (window.teacherAudioPlayer && typeof teacherAudioPlayer.playItem === 'function') {
-      teacherAudioPlayer.playItem(qItem, 'pub_exam');
+    if (window.teacherAudioPlayer) {
+      if (teacherAudioPlayer.currentId === qId && teacherAudioPlayer.isPlaying) {
+        teacherAudioPlayer.stop();
+      } else {
+        teacherAudioPlayer.play(qId);
+      }
     }
   };
 
@@ -13792,10 +13931,8 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
     }
     pubExamState.questions = allQInPaper;
 
-    // Blueprint summary
     var bp = subjData.blueprint || {};
 
-    // Subject tabs definitions
     var allSubjectsList = [
       { id: 'tamil', name: 'தமிழ்', icon: '📖' },
       { id: 'english', name: 'English', icon: '🅰️' },
@@ -13807,48 +13944,50 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       { id: 'social_em', name: 'Social (EM)', icon: '🌍' }
     ];
 
+    var isPaperMode = (pubExamState.viewMode === 'paper');
+
     var html = `
       <div class="pub-exam-hub-container" style="max-width:1150px; margin:0 auto; padding-bottom:50px;">
         <div id="pubExamListAnchor"></div>
 
-        <!-- 1. HERO BANNER: OFFICIAL GOVERNMENT SSLC BOARD EXAMINATION -->
-        <div style="background:linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); border:2px solid #818cf8; border-radius:18px; padding:22px 24px; margin-bottom:18px; box-shadow:0 8px 28px rgba(15,23,42,0.35); color:#ffffff;">
+        <!-- 1. TOP HEADER BANNER -->
+        <div style="background:linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); border:2px solid #818cf8; border-radius:18px; padding:20px 24px; margin-bottom:16px; box-shadow:0 8px 28px rgba(15,23,42,0.35); color:#ffffff;">
           <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
             <div style="display:flex; align-items:center; gap:16px;">
-              <span style="font-size:44px; background:rgba(255,255,255,0.1); width:64px; height:64px; border-radius:14px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.2); flex-shrink:0;">
+              <span style="font-size:40px; background:rgba(255,255,255,0.1); width:60px; height:60px; border-radius:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
                 ${subjData.icon || '🏛️'}
               </span>
               <div>
-                <div style="font-size:12px; font-weight:800; color:#fde047; text-transform:uppercase; letter-spacing:1px; display:flex; align-items:center; gap:6px;">
+                <div style="font-size:11.5px; font-weight:800; color:#fde047; text-transform:uppercase; letter-spacing:1px; display:flex; align-items:center; gap:6px;">
                   <span>🏛️ GOVERNMENT OF TAMIL NADU</span>
                   <span>•</span>
                   <span>SSLC BOARD EXAMINATIONS</span>
                 </div>
-                <h1 style="font-size:22px; font-weight:800; color:#ffffff; margin:4px 0;">
-                  ${isEm ? subjData.subjectName + ' — Official Question Papers & Answers' : subjData.subjectName + ' — அசல் அரசுப் பொதுத்தேர்வு வினாத்தாள்கள் & முழு விடைகள்'}
+                <h1 style="font-size:21px; font-weight:800; color:#ffffff; margin:3px 0;">
+                  ${isEm ? subjData.subjectName + ' — Official Question Paper & Solutions' : subjData.subjectName + ' — அசல் அரசுப் பொதுத்தேர்வு வினாத்தாள் & தீர்வுகள்'}
                 </h1>
-                <div style="font-size:13px; color:#c7d2fe; margin-top:3px; line-height:1.4;">
-                  ${isEm ? 'Exact Board Exam Question Paper Pattern • Compulsory Questions Highlighted • Step-by-Step Marking Scheme & TTS Voice Explanation' : 'அரசுப் பொதுத்தேர்வு வினாத்தாள் அமைப்பு • கட்டாய வினாக்கள் பிரத்யேக விளக்கம் • படிமுறை மதிப்பெண் தீர்வுகள் & ஒலி விளக்கம்'}
+                <div style="font-size:12.5px; color:#c7d2fe; margin-top:2px;">
+                  ${isEm ? 'Authentic SSLC Question Paper Pattern • Compulsory Questions Highlighted • Step-by-Step Solutions & Voice Audio' : 'அசல் தேர்வு வினாத்தாள் வடிவம் • கட்டாய வினாக்கள் வழிகாட்டி • படிமுறைத் தீர்வுகள் & ஒலி விளக்கம்'}
                 </div>
               </div>
             </div>
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-              <button class="tab-btn" onclick="selectSubject('${currentSubId}')" style="background:#4338ca; color:#ffffff; font-weight:800; border:1px solid #6366f1; padding:9px 15px; border-radius:10px; cursor:pointer;">
+              <button class="tab-btn" onclick="selectSubject('${currentSubId}')" style="background:#4338ca; color:#ffffff; font-weight:800; border:1px solid #6366f1; padding:8px 14px; border-radius:10px; cursor:pointer;">
                 ⬅️ ${isEm ? 'Subject Lessons' : 'பாட அலகுகள்'}
               </button>
-              <button class="tab-btn" onclick="openQuestionPaperPatternModal('${currentSubId}')" style="background:linear-gradient(135deg, #16a34a, #15803d); color:#ffffff; font-weight:800; border:none; padding:9px 15px; border-radius:10px; cursor:pointer; box-shadow:0 3px 10px rgba(22,163,74,0.3);">
-                📋 ${isEm ? 'Pattern & Blueprint' : 'புளூபிரிண்ட்'}
+              <button class="tab-btn" onclick="openQuestionPaperPatternModal('${currentSubId}')" style="background:linear-gradient(135deg, #16a34a, #15803d); color:#ffffff; font-weight:800; border:none; padding:8px 14px; border-radius:10px; cursor:pointer; box-shadow:0 3px 10px rgba(22,163,74,0.3);">
+                📋 ${isEm ? 'Pattern (Blueprint)' : 'புளூபிரிண்ட்'}
               </button>
-              <button class="tab-btn" onclick="goHome()" style="background:#ffffff; color:#1e1b4b; font-weight:800; padding:9px 15px; border-radius:10px; border:none; cursor:pointer;">
+              <button class="tab-btn" onclick="goHome()" style="background:#ffffff; color:#1e1b4b; font-weight:800; padding:8px 14px; border-radius:10px; border:none; cursor:pointer;">
                 🏠 ${isEm ? 'Home' : 'முகப்பு'}
               </button>
             </div>
           </div>
         </div>
 
-        <!-- 2. SUBJECT SELECTOR TABS (ALL 8 SUBJECTS) -->
-        <div style="background:#ffffff; border:1.5px solid var(--border); border-radius:14px; padding:12px 14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
-          <div style="font-size:12px; font-weight:800; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">
+        <!-- 2. SUBJECT SWITCHER TABS -->
+        <div style="background:#ffffff; border:1.5px solid var(--border); border-radius:14px; padding:12px 14px; margin-bottom:12px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+          <div style="font-size:11.5px; font-weight:800; color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">
             📚 ${isEm ? 'Select Subject:' : 'பாடத்தைத் தேர்ந்தெடுக்க:'}
           </div>
           <div style="display:flex; gap:6px; overflow-x:auto; padding-bottom:4px; flex-wrap:wrap;">
@@ -13857,45 +13996,48 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
               var btnBg = isActive ? 'linear-gradient(135deg, #2563eb, #1d4ed8)' : '#f8fafc';
               var btnColor = isActive ? '#ffffff' : '#334155';
               var btnBorder = isActive ? 'none' : '1px solid #cbd5e1';
-              return `<button type="button" class="tab-btn" onclick="setPubExamSubject('${s.id}')" style="background:${btnBg}; color:${btnColor}; border:${btnBorder}; border-radius:10px; font-weight:800; padding:7px 13px; font-size:12.5px; cursor:pointer; box-shadow:${isActive ? '0 3px 8px rgba(37,99,235,0.25)' : 'none'};">
+              return `<button type="button" class="tab-btn" onclick="setPubExamSubject('${s.id}')" style="background:${btnBg}; color:${btnColor}; border:${btnBorder}; border-radius:10px; font-weight:800; padding:7px 12px; font-size:12px; cursor:pointer; box-shadow:${isActive ? '0 3px 8px rgba(37,99,235,0.25)' : 'none'};">
                 <span>${s.icon} ${s.name}</span>
               </button>`;
             }).join('')}
           </div>
         </div>
 
-        <!-- 3. YEAR TABS & VIEW MODE TOGGLE -->
-        <div style="background:#ffffff; border:1.5px solid var(--border); border-radius:14px; padding:14px 16px; margin-bottom:16px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+        <!-- 3. YEAR TABS & VIEW MODE TOGGLE BAR -->
+        <div style="background:#ffffff; border:1.5px solid var(--border); border-radius:14px; padding:12px 16px; margin-bottom:16px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+          
+          <!-- Year Selector -->
           <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-            <span style="font-size:12.5px; font-weight:800; color:var(--text-muted); text-transform:uppercase;">
-              📅 ${isEm ? 'Exam Year:' : 'அரசுத் தேர்வு ஆண்டு:'}
+            <span style="font-size:12px; font-weight:800; color:var(--text-muted); text-transform:uppercase;">
+              📅 ${isEm ? 'Select Year:' : 'அரசுத் தேர்வு ஆண்டு:'}
             </span>
             ${availYears.map(function(yr) {
               var isActiveYear = yr === pubExamState.year;
               var yrBg = isActiveYear ? 'linear-gradient(135deg, #f59e0b, #d97706)' : '#f1f5f9';
               var yrColor = isActiveYear ? '#ffffff' : '#1e293b';
               var yrBorder = isActiveYear ? 'none' : '1px solid #cbd5e1';
-              var yrLabel = (yr === '2024') ? '🏆 ஏப்ரல் 2024 (Latest Board Exam)' : (yr === '2023') ? '📅 ஏப்ரல் 2023' : '📅 மே 2022';
+              var yrLabel = (yr === '2024') ? '🏆 ஏப்ரல் 2024' : (yr === '2023') ? '📅 ஏப்ரல் 2023' : '📅 மே 2022';
               if (isEm) {
-                yrLabel = (yr === '2024') ? '🏆 April 2024 (Official Board Exam)' : (yr === '2023') ? '📅 April 2023' : '📅 May 2022';
+                yrLabel = (yr === '2024') ? '🏆 April 2024' : (yr === '2023') ? '📅 April 2023' : '📅 May 2022';
               }
-              return `<button type="button" class="tab-btn" onclick="setPubExamYear('${yr}')" style="background:${yrBg}; color:${yrColor}; border:${yrBorder}; border-radius:10px; font-weight:800; padding:8px 15px; font-size:13px; cursor:pointer; box-shadow:${isActiveYear ? '0 3px 8px rgba(217,119,6,0.3)' : 'none'};">
+              return `<button type="button" class="tab-btn" onclick="setPubExamYear('${yr}')" style="background:${yrBg}; color:${yrColor}; border:${yrBorder}; border-radius:8px; font-weight:800; padding:7px 14px; font-size:12.5px; cursor:pointer; box-shadow:${isActiveYear ? '0 3px 8px rgba(217,119,6,0.3)' : 'none'};">
                 ${yrLabel}
               </button>`;
             }).join('')}
           </div>
 
+          <!-- View Mode Toggle: Question Paper Mode vs Full Solutions -->
           <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
-            <span style="font-size:12.5px; font-weight:800; color:var(--text-muted);">
+            <span style="font-size:12px; font-weight:800; color:var(--text-muted);">
               👁️ ${isEm ? 'View Mode:' : 'பார்வை முறை:'}
             </span>
-            <button type="button" class="tab-btn" onclick="setPubExamViewMode('full')" style="background:${pubExamState.viewMode === 'full' ? '#059669' : '#f1f5f9'}; color:${pubExamState.viewMode === 'full' ? '#ffffff' : '#334155'}; border:1px solid #cbd5e1; border-radius:8px; font-weight:800; padding:6px 12px; font-size:12px; cursor:pointer;">
-              📖 ${isEm ? 'Full Solutions' : 'முழு வினா-விடைகள்'}
+            <button type="button" class="tab-btn" onclick="setPubExamViewMode('paper')" style="background:${isPaperMode ? '#2563eb' : '#f1f5f9'}; color:${isPaperMode ? '#ffffff' : '#334155'}; border:1px solid #cbd5e1; border-radius:8px; font-weight:800; padding:6px 13px; font-size:12px; cursor:pointer;">
+              📝 ${isEm ? 'Question Paper Mode' : 'அசல் வினாத்தாள் வடிவம்'}
             </button>
-            <button type="button" class="tab-btn" onclick="setPubExamViewMode('paper')" style="background:${pubExamState.viewMode === 'paper' ? '#2563eb' : '#f1f5f9'}; color:${pubExamState.viewMode === 'paper' ? '#ffffff' : '#334155'}; border:1px solid #cbd5e1; border-radius:8px; font-weight:800; padding:6px 12px; font-size:12px; cursor:pointer;">
-              📝 ${isEm ? 'Question Paper Only' : 'வினாத்தாள் வடிவம் (சுய பயிற்சி)'}
+            <button type="button" class="tab-btn" onclick="setPubExamViewMode('full')" style="background:${!isPaperMode ? '#059669' : '#f1f5f9'}; color:${!isPaperMode ? '#ffffff' : '#334155'}; border:1px solid #cbd5e1; border-radius:8px; font-weight:800; padding:6px 13px; font-size:12px; cursor:pointer;">
+              📖 ${isEm ? 'Full Solutions' : 'முழு விடைகளுடன்'}
             </button>
-            <button type="button" class="tab-btn" onclick="window.print()" style="background:#ffffff; color:#475569; border:1px solid #cbd5e1; border-radius:8px; font-weight:700; padding:6px 10px; font-size:12px; cursor:pointer;" title="Print / PDF">
+            <button type="button" class="tab-btn" onclick="window.print()" style="background:#ffffff; color:#475569; border:1px solid #cbd5e1; border-radius:8px; font-weight:700; padding:6px 10px; font-size:12px; cursor:pointer;" title="Print Paper">
               🖨️ ${isEm ? 'Print' : 'அச்சிடு'}
             </button>
           </div>
@@ -13903,15 +14045,14 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
 
         ${!paper ? `
           <div style="background:#f8fafc; border:1.5px dashed #cbd5e1; border-radius:14px; padding:30px; text-align:center;">
-            <h3>இந்த ஆண்டிற்கான வினாத்தாள் விரைவில் இணைக்கப்படும்.</h3>
-            <p>தயவுசெய்து மேலே உள்ள 2024 ஆம் ஆண்டைத் தேர்ந்தெடுக்கவும்.</p>
+            <h3>இந்த ஆண்டிற்கான வினாத்தாள் ஏற்றப்படுகிறது...</h3>
           </div>
         ` : `
 
-        <!-- 4. OFFICIAL QUESTION PAPER HEADER (DGE SSLC PATTERN) -->
-        <div class="official-paper-sheet" style="background:#ffffff; border:2px solid #334155; border-radius:16px; padding:24px 28px; margin-bottom:20px; box-shadow:0 4px 18px rgba(0,0,0,0.06); font-family:inherit;">
+        <!-- 4. OFFICIAL QUESTION PAPER SHEET -->
+        <div class="official-paper-sheet" style="background:#ffffff; border:2px solid #334155; border-radius:16px; padding:24px 28px; margin-bottom:20px; box-shadow:0 4px 18px rgba(0,0,0,0.06);">
           
-          <!-- State Board Official Title Banner -->
+          <!-- Examination Title Banner -->
           <div style="text-align:center; border-bottom:2px solid #0f172a; padding-bottom:14px; margin-bottom:16px;">
             <div style="font-size:13px; font-weight:900; letter-spacing:1px; color:#1e293b; text-transform:uppercase;">
               GOVERNMENT OF TAMIL NADU • DIRECTORATE OF GOVERNMENT EXAMINATIONS
@@ -13919,14 +14060,14 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
             <div style="font-size:18px; font-weight:900; color:#0f172a; margin:4px 0;">
               ${paper.examTitle || 'தமிழ்நாடு அரசுப் பொதுத்தேர்வு வினாத்தாள்'}
             </div>
-            <div style="display:flex; justify-content:space-between; align-items:center; font-size:14px; font-weight:800; color:#334155; margin-top:8px; padding:0 10px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; font-size:13.5px; font-weight:800; color:#334155; margin-top:8px; padding:0 8px;">
               <span>⏱️ ${isEm ? 'Time Allowed: ' : 'நேரம்: '}<strong>${subjData.timeAllowed || '3.00 Hours'}</strong></span>
               <span>⭐ ${isEm ? 'Maximum Marks: ' : 'மொத்த மதிப்பெண்கள்: '}<strong>${subjData.totalMarks || 100} ${isEm ? 'Marks' : 'மதிப்பெண்கள்'}</strong></span>
             </div>
           </div>
 
           <!-- General Instructions Box -->
-          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px 16px; margin-bottom:18px; font-size:12.5px; color:#334155; line-height:1.5;">
+          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px 16px; margin-bottom:16px; font-size:12.5px; color:#334155; line-height:1.5;">
             <div style="font-weight:800; color:#0f172a; margin-bottom:4px;">
               📌 ${isEm ? 'General Instructions to Candidates:' : 'பொதுவான அறிவுரைகள்:'}
             </div>
@@ -13937,35 +14078,37 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
               ]).map(function(ins) { return `<li>${ins}</li>`; }).join('')}
             </ul>
             ${bp.compulsoryHighlights ? `
-              <div style="margin-top:8px; font-size:12.5px; font-weight:800; color:#b91c1c; background:#fee2e2; border-left:4px solid #ef4444; padding:6px 10px; border-radius:4px;">
+              <div style="margin-top:8px; font-size:12px; font-weight:800; color:#b91c1c; background:#fee2e2; border-left:4px solid #ef4444; padding:6px 10px; border-radius:4px;">
                 ${bp.compulsoryHighlights}
               </div>
             ` : ''}
           </div>
 
-          <!-- Quick Navigation Jump Bar for Parts -->
+          <!-- Quick Navigation Jump Bar for Parts (Buttons with smooth scroll, NO hash change!) -->
           <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:10px 14px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
             <span style="font-size:12px; font-weight:800; color:#1e40af; text-transform:uppercase;">
               ⚡ ${isEm ? 'Jump to Part:' : 'பகுதிக்கு நேரடியாகச் செல்க:'}
             </span>
             <div style="display:flex; gap:6px; flex-wrap:wrap;">
               ${(paper.parts || []).map(function(pt, pIdx) {
-                return `<a href="#partAnchor_${pt.partId || pIdx}" style="text-decoration:none; background:#ffffff; color:#1d4ed8; border:1px solid #93c5fd; padding:5px 10px; border-radius:6px; font-size:11.5px; font-weight:800;">
+                var pId = pt.partId || ('part' + (pIdx + 1));
+                return `<button type="button" class="tab-btn" onclick="scrollToExamPart('${pId}')" style="background:#ffffff; color:#1d4ed8; border:1px solid #93c5fd; padding:5px 11px; border-radius:6px; font-size:11.5px; font-weight:800; cursor:pointer;">
                   📌 ${pt.partTitle.split('/')[0].trim()}
-                </a>`;
+                </button>`;
               }).join('')}
             </div>
           </div>
 
           <!-- 5. RENDER ALL PARTS OF THIS OFFICIAL QUESTION PAPER -->
           ${(paper.parts || []).map(function(part, pIdx) {
+            var partAnchorId = part.partId || ('part' + (pIdx + 1));
             return `
-              <div id="partAnchor_${part.partId || pIdx}" class="exam-part-section" style="margin-bottom:28px;">
+              <div id="partAnchor_${partAnchorId}" class="exam-part-section" style="margin-bottom:28px;">
                 
                 <!-- Part Official Header -->
                 <div style="background:linear-gradient(135deg, #1e293b, #0f172a); color:#ffffff; border-radius:12px; padding:12px 18px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                   <div>
-                    <h3 style="font-size:15.5px; font-weight:900; margin:0; letter-spacing:0.3px;">
+                    <h3 style="font-size:15px; font-weight:900; margin:0; letter-spacing:0.3px;">
                       ${part.partTitle}
                     </h3>
                   </div>
@@ -13978,7 +14121,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
                 <div class="part-questions-grid" style="display:flex; flex-direction:column; gap:16px;">
                   ${(part.questions || []).map(function(qItem) {
                     var isCompulsory = !!qItem.isCompulsory;
-                    var isRevealed = (pubExamState.viewMode === 'full') || !!pubExamState.revealedAnswers[qItem.id];
+                    var isRevealed = (!isPaperMode) || !!pubExamState.revealedAnswers[qItem.id];
                     var qCardBorder = isCompulsory ? '2px solid #ef4444' : '1px solid #cbd5e1';
                     var qCardBg = isCompulsory ? '#fffafb' : '#ffffff';
 
@@ -14007,34 +14150,35 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
                             <span style="font-size:12px; font-weight:800; color:#0369a1; background:#e0f2fe; padding:2px 8px; border-radius:6px;">
                               ${qItem.mark || (qItem.type === '1m' ? '1 Mark' : qItem.type === '2m' ? '2 Marks' : qItem.type === '4m' ? '4 Marks' : qItem.type === '5m' ? '5 Marks' : '8 Marks')}
                             </span>
-                            <button type="button" class="tab-btn" onclick="playPubExamQuestionAudio('${qItem.id}')" style="background:#10b981; color:#fff; border:none; padding:4px 9px; border-radius:6px; font-size:11px; font-weight:800; cursor:pointer;" title="Listen Audio Explanation">
-                              🔊 ${isEm ? 'Listen' : 'ஒலி விளக்கம்'}
+                            <button type="button" id="audioBtn_${qItem.id}" class="tab-btn" onclick="playPubExamQuestionAudio('${qItem.id}')" style="background:#10b981; color:#fff; border:none; padding:5px 10px; border-radius:6px; font-size:11.5px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:4px;" title="Listen Audio Explanation">
+                              <span id="audioIcon_${qItem.id}">🔊</span>
+                              <span id="audioText_${qItem.id}">${isEm ? 'Listen' : 'ஒலி விளக்கம்'}</span>
                             </button>
-                            ${(qItem.type === '5m' || qItem.type === '8m' || qItem.type === '2m') ? `
-                              <button type="button" class="tab-btn" onclick="openPubExamBlackboard('${qItem.id}')" style="background:#0f172a; color:#fde047; border:none; padding:4px 9px; border-radius:6px; font-size:11px; font-weight:800; cursor:pointer;" title="Blackboard Demo">
+                            ${(qItem.type === '5m' || qItem.type === '8m' || qItem.type === '2m' || qItem.type === '4m') ? `
+                              <button type="button" class="tab-btn" onclick="openPubExamBlackboard('${qItem.id}')" style="background:#0f172a; color:#fde047; border:none; padding:5px 10px; border-radius:6px; font-size:11.5px; font-weight:800; cursor:pointer;" title="Blackboard Chalk Demo">
                                 🎬 ${isEm ? 'Blackboard' : 'கரும்பலகை'}
                               </button>
                             ` : ''}
                           </div>
                         </div>
 
-                        <!-- Question Text -->
-                        <div class="pub-exam-question-text" style="font-size:15px; font-weight:700; color:#0f172a; line-height:1.6; margin-bottom:12px;">
+                        <!-- Question Text (Real Exam Paper Format) -->
+                        <div class="pub-exam-question-text" style="font-size:15px; font-weight:700; color:#0f172a; line-height:1.6; margin-bottom:10px;">
                           ${qItem.q}
                         </div>
 
-                        <!-- Reveal Toggle Button (Visible in Practice Mode) -->
-                        ${pubExamState.viewMode === 'paper' ? `
-                          <div style="margin:10px 0;">
+                        <!-- Reveal Toggle Button (Visible in Question Paper Mode) -->
+                        ${isPaperMode ? `
+                          <div style="margin:8px 0;">
                             <button type="button" id="revealBtn_${qItem.id}" class="tab-btn" onclick="toggleRevealExamAns('${qItem.id}')" style="background:${isRevealed ? '#f1f5f9' : 'linear-gradient(135deg, #2563eb, #1d4ed8)'}; color:${isRevealed ? '#475569' : '#ffffff'}; border:1px solid #cbd5e1; font-weight:800; font-size:12px; padding:6px 14px; border-radius:8px; cursor:pointer;">
                               ${isRevealed ? '🙈 விடையை மறைக்க (Hide Solution)' : '👁️ விடையைக் காண்க (Reveal Answer & Steps)'}
                             </button>
                           </div>
                         ` : ''}
 
-                        <!-- Answer Box -->
+                        <!-- Answer & Step-by-Step Solution Box -->
                         <div id="ansBox_${qItem.id}" class="pub-exam-answer-box" style="display:${isRevealed ? 'block' : 'none'}; background:#f0fdf4; border:1px solid #86efac; border-left:4px solid #16a34a; border-radius:10px; padding:14px 16px; margin-top:10px;">
-                          <div style="font-size:12.5px; font-weight:900; color:#166534; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+                          <div style="font-size:12px; font-weight:900; color:#166534; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
                             ✓ ${isEm ? 'Step-by-Step Official Solution / Answer:' : 'அதிகாரப்பூர்வ மாதிரி விடை & தீர்வு படிமுறைகள்:'}
                           </div>
                           <div style="font-size:14.5px; color:#14532d; line-height:1.65;">
@@ -14555,7 +14699,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
         } else if (count >= 5) {
           rankBadge.innerHTML = '🥉 <strong style="color:#16a34a;">அற்புதம்!</strong> தொடர்ந்து 10-ஆம் வகுப்பு நண்பர்களுக்குப் பகிருங்கள்!';
         } else {
-          rankBadge.innerHTML = '🔥 இன்னும் அதிகமாகப் பகிருங்கள் • ஒவ்வொரு பகிர்வும் உங்களை முதலிடத்திற்கு உயர்த்தும்!';
+          rankBadge.innerHTML = '🌟 உங்கள் வகுப்புத் தோழர்களுடன் பகிர்ந்து ஒன்றாகப் படித்து வெற்றி பெறுங்கள்!';
         }
       }
     },

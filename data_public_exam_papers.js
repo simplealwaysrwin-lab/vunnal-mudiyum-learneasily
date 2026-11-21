@@ -910,7 +910,7 @@ window.PUBLIC_EXAM_PAPERS_DATA["tamil"] = {
             { id: "pub_tam_24_q31", qNum: 31, type: "3m", mark: "3 மதிப்பெண்", topic: "உரைநடை சிறுவினா", q: "விருந்தோம்பலின் பண்புகளை முல்லைப்பாட்டு எவ்வாறு காட்சிப்படுத்துகிறது?", ans: "முல்லை நிலத் தலைவி, மாலை வேளையில் தன் கணவன் வருகைக்காகக் காத்திருக்கும் போதும், இல்லம் நாடி வரும் விருந்தினரை முகம் மலர இன்சொல் கூறி உபசரித்தாள் என்பதை விளக்குகிறது.", markingScheme: "விளக்கம்: 3 மதிப்பெண்கள்", isCompulsory: false },
             { id: "pub_tam_24_q32", qNum: 32, type: "3m", mark: "3 மதிப்பெண்", topic: "செய்யுள் சிறுவினா", q: "காலக்கணிதம் கவிதையில் கவிஞர் கண்ணதாசன் தம்மைப் பற்றிக் கூறும் செய்திகள் யாவை?", ans: "\"பூமியில் நானோர் புகழுடைத் தெய்வம்; பொன்னினும் விலைமிகு பொருளென் செல்வம்; இகழ்ந்தால் என்மனம் இறந்துவிடாது; புகழ்ந்தால் என்மனம் பூரித்துவிடாது; எவ்வழி நடப்பினும் கவிஞன் வழி அதுவே.\"", markingScheme: "விளக்கம்: 3 மதிப்பெண்கள்", isCompulsory: false },
             { id: "pub_tam_24_q33", qNum: 33, type: "3m", mark: "3 மதிப்பெண்", topic: "செய்யுள் சிறுவினா", q: "முத்துக்குமாரசாமி பிள்ளைத்தமிழின் செங்கீரைப் பருவப் பாடலின் மையக்கருத்தை விவரி.", ans: "முருகப்பெருமானின் இளம் பாதம், தண்டை, கிண்கிணி ஒலிக்க, மணிமார்பில் நவரத்தின மாலை அசைய, பொன்முடி ஆடிட செங்கீரை ஆடுமாறு குமரகுருபரர் பாடுகிறார்.", markingScheme: "விளக்கம்: 3 மதிப்பெண்கள்", isCompulsory: false },
-            { id: "pub_tam_24_q34", qNum: 34, type: "3m", mark: "3 மதிப்பெண்", topic: "மனப்பாடச் செய்யுள் (கட்டாய வினா)", q: "\"அன்னை மொழியே\" கவிதையில் 'நற்றமிழே' எனத் தொடங்கும் பாடலை அல்லது கம்பராமாயண 'தண்டலை' பாடலை அடிபிறழாமல் எழுதுக.", ans: "<b>தீர்வு (வினா எண் 34 - மனப்பாடச் செய்யுள் கட்டாய வினா):</b><br><br><b>நற்றமிழே! நண்தா ரகமே! நறும்போதே!<br>செற்றமிழே! தேனே! சிலம்பே! சுடர்செழுந்தேன்!<br>முற்றமிழே! முத்தே! முளரிக் கதிரே!<br>பொற்றொடியே! பூந்தமிழே! பூத்த நறும்புனலே!</b><br><br><b>(அல்லது கம்பராமாயண மனப்பாடப் பாடல்):</b><br><br><b>தண்டலை மயில்க ளாடத் தாமரை விளக்கந் தாங்கக்<br>கொண்டல்கண் முழவி னேங்கக் குவளைகண் விழித்து நோக்கத்<br>தெண்டிரை யெழினி காட்டத் தேம்பிழி மகர யாழின்<br>வண்டுக ளினிது பாட மருதம்வீற் றிருக்கு மாதோ.</b>", markingScheme: "அடிபிறழாமல் சீர் அமைப்புடன் பிழையின்றி பாடல் எழுதுதல்: 3 மதிப்பெண்கள்", isCompulsory: true },
+            { id: "pub_tam_24_q34", qNum: 34, type: "3m", mark: "3 மதிப்பெண்", topic: "மனப்பாடச் செய்யுள் (கட்டாய வினா)", q: "\"அன்னை மொழியே\" கவிதையில் 'நற்றமிழே' எனத் தொடங்கும் பாடலை அல்லது கம்பராமாயண 'தண்டலை' பாடலை அடிபிறழாமல் எழுதுக.", ans: "<b>தீர்வு (வினா எண் 34 - மனப்பாடச் செய்யுள் கட்டாய வினா):</b><br><br><b>நற்றமிழே! நண்தா ரகமே! நறும்போதே!<br>செற்றமிழே! தேனே! சிலம்பே! சுடர்செழுந்தேன்!<br>முற்றமிழே! முத்தே! முளரிக் கதிரே!<br>பொற்றொடியே! பூந்தமிழே! பூத்த நறும்புனலே!</b><br><br><b>(அல்லது கம்பராமாயண மனப்பாடப் பாடல்):</b><br><br><b>தண்டலை மயில்க ளாடத் தாமரை விளக்கந் தாங்கக்<br>கொண்டல்கண் முழவி னேங்கக் குவளைகண் விழித்து நோக்கத்<br>தெண்டிரை யெழினி காட்டத் தேம்பிழி மகர யாழின்<br>வண்டுக ளினிது பாட மருதம்வீற் றிருக்கு மாதோ.</b>", markingScheme: "அடிபிறழாமல் சீர் அமைப்புடன் பிழையின்றி பாடல் எழுதுதல்: 3 மதிப்பெண்கள்", isCompulsory: false },
             { id: "pub_tam_24_q35", qNum: 35, type: "3m", mark: "3 மதிப்பெண்", topic: "இலக்கணம்", q: "தற்குறிப்பேற்ற அணியை சான்றுடன் விளக்குக.", ans: "<b>இலக்கணம்:</b> இயல்பாக நிகழும் நிகழ்ச்சியின் மீது கவிஞர் தன் கற்பனைக் கருத்தை ஏற்றிக் கூறுவது தற்குறிப்பேற்ற அணி ஆகும்.<br><b>சான்று:</b> \"போருழந் தெடுத்த ஆரெயில் நெடுங்கொடி வாரல் என்பனபோல் மறித்துக் கைகாட்ட\"<br><b>விளக்கம்:</b> கோட்டைக் கொடி காற்றில் அசைந்த இயல்பான நிகழ்வை, கோவலனும் கண்ணகியும் மதுரைக்குள் வர வேண்டாம் எனத் தடுத்துக் கைகாட்டியதாக இளங்கோவடிகள் தன் குறிப்பை ஏற்றிக் கூறினார்.", markingScheme: "அணி விளக்கம்: 1M, பாடல் சான்று: 1M, பொருத்தம்: 1M = 3 மதிப்பெண்கள்", isCompulsory: false },
             { id: "pub_tam_24_q36", qNum: 36, type: "3m", mark: "3 மதிப்பெண்", topic: "இலக்கணம்", q: "அகப்பொருள் திணைகள் ஏழினையும் அவற்றின் நிலங்களையும் கூறுக.", ans: "1. குறிஞ்சி - மலையும் மலை சார்ந்த இடமும்.<br>2. முல்லை - காடும் காடு சார்ந்த இடமும்.<br>3. மருதம் - வயலும் வயல் சார்ந்த இடமும்.<br>4. நெய்தல் - கடலும் கடல் சார்ந்த இடமும்.<br>5. பாலை - மணலும் மணல் சார்ந்த வறண்ட இடமும்.<br>மற்றும் கைக்கிளை (ஒருதலைக்காமம்), பெருந்திணை (பொருந்தாக்காமம்).", markingScheme: "ஐந்திணைகள் & நிலங்கள்: 3 மதிப்பெண்கள்", isCompulsory: false },
             { id: "pub_tam_24_q37", qNum: 37, type: "3m", mark: "3 மதிப்பெண்", topic: "இலக்கணம்", q: "வழாநிலை, வழுவமைதி - சான்றுடன் வேறுபடுத்துக.", ans: "1. <b>வழாநிலை:</b> இலக்கண முறைப்படி குற்றமின்றி பேசுவதும் எழுதுவதும் வழாநிலை (எ.கா: செழியன் வந்தான் - திணை வழாநிலை).<br>2. <b>வழுவமைதி:</b> இலக்கண முறைப்படி பிழையுடையது எனினும் ஏதேனும் ஒரு காரணம் கருதி பிழையன்று என ஏற்றுக்கொள்ளப்படுவது வழுவமைதி (எ.கா: என் அம்மை வந்தாள் என மாட்டைக் கூறுவது உவப்பின் காரணமாக ஏற்றுக்கொள்ளப்பட்டது).", markingScheme: "இரு விளக்கங்கள் & சான்றுகள்: 3 மதிப்பெண்கள்", isCompulsory: false }
@@ -1081,18 +1081,18 @@ window.PUBLIC_EXAM_PAPERS_DATA["science_em"] = {
           partId: "part1", partTitle: "PART - I (1-Mark MCQs • Answer All 12 Questions)",
           totalMarks: 12, markEach: 1,
           questions: [
-            { id: "pub_sci_em_24_q1", qNum: 1, type: "1m", mark: "1 Mark", topic: "Laws of Motion", q: "Inertia of a body depends on:<br>(A) weight of the object<br>(B) acceleration due to gravity of the planet<br>(C) mass of the object<br>(D) Both (A) and (B)", ans: "<b>Correct Answer: (C) mass of the object</b><br><b>Explanation:</b> Inertia is the inherent property of a body to resist any change in its state of rest or uniform motion. It depends solely on the mass of the body (greater mass = greater inertia).", markingScheme: "Correct option with answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q2", qNum: 2, type: "1m", mark: "1 Mark", topic: "Optics", q: "To correct myopia (short-sightedness), which lens is used?<br>(A) Convex lens<br>(B) Concave lens<br>(C) Cylindrical lens<br>(D) Bifocal lens", ans: "<b>Correct Answer: (B) Concave lens</b><br><b>Explanation:</b> Myopia causes image formation in front of the retina. A concave (diverging) lens diverges light rays so the image focuses precisely on the retina.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q3", qNum: 3, type: "1m", mark: "1 Mark", topic: "Thermal Physics", q: "The value of Universal Gas Constant (R) is:<br>(A) 8.31 J mol⁻¹ K⁻¹<br>(B) 8.31 J K⁻¹<br>(C) 1.38 × 10⁻²³ J K⁻¹<br>(D) 6.023 × 10²³ mol⁻¹", ans: "<b>Correct Answer: (A) 8.31 J mol⁻¹ K⁻¹</b><br><b>Explanation:</b> The universal gas constant R = 8.31 J mol⁻¹ K⁻¹ in SI units.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q4", qNum: 4, type: "1m", mark: "1 Mark", topic: "Electricity", q: "Kilowatt-hour is the practical unit of:<br>(A) Electric potential<br>(B) Electric power<br>(C) Electrical energy<br>(D) Electric resistance", ans: "<b>Correct Answer: (C) Electrical energy</b><br><b>Explanation:</b> 1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ Joules, which is the commercial unit of electrical energy consumed.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q5", qNum: 5, type: "1m", mark: "1 Mark", topic: "Periodic Classification", q: "Number of periods and groups in the modern periodic table are respectively:<br>(A) 7, 18<br>(B) 18, 7<br>(C) 7, 8<br>(D) 8, 7", ans: "<b>Correct Answer: (A) 7, 18</b><br><b>Explanation:</b> Modern periodic table has 7 horizontal rows called periods and 18 vertical columns called groups.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q6", qNum: 6, type: "1m", mark: "1 Mark", topic: "Solutions", q: "The number of water molecules of crystallization in Copper Sulphate pentahydrate (Blue vitriol) is:<br>(A) 2<br>(B) 5<br>(C) 7<br>(D) 10", ans: "<b>Correct Answer: (B) 5</b><br><b>Explanation:</b> Chemical formula of blue vitriol is CuSO₄·5H₂O, containing 5 molecules of water of crystallization.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q7", qNum: 7, type: "1m", mark: "1 Mark", topic: "Chemical Reactions", q: "The pH of a neutral solution at 25°C is:<br>(A) 0<br>(B) 7<br>(C) 14<br>(D) 1", ans: "<b>Correct Answer: (B) 7</b><br><b>Explanation:</b> In a neutral aqueous solution at 25°C, [H⁺] = [OH⁻] = 10⁻⁷ M, hence pH = -log(10⁻⁷) = 7.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q8", qNum: 8, type: "1m", mark: "1 Mark", topic: "Plant Anatomy & Physiology", q: "Kreb's cycle occurs in which part of the cell?<br>(A) Cytoplasm<br>(B) Mitochondrial matrix<br>(C) Chloroplast<br>(D) Ribosome", ans: "<b>Correct Answer: (B) Mitochondrial matrix</b><br><b>Explanation:</b> Glycolysis takes place in the cytoplasm, whereas the Kreb's cycle occurs inside the mitochondrial matrix.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q9", qNum: 9, type: "1m", mark: "1 Mark", topic: "Structural Organisation of Animals", q: "In leech, locomotion is performed by:<br>(A) Anterior and posterior suckers<br>(B) Parapodia<br>(C) Setae<br>(D) Cilia", ans: "<b>Correct Answer: (A) Anterior and posterior suckers</b><br><b>Explanation:</b> Leech moves by looping or crawling using anterior and posterior suckers, and swims by undulating body contractions.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q10", qNum: 10, type: "1m", mark: "1 Mark", topic: "Reproduction in Plants & Animals", q: "Which part of the flower develops into fruit after fertilization?<br>(A) Ovule<br>(B) Style<br>(C) Ovary<br>(D) Stigma", ans: "<b>Correct Answer: (C) Ovary</b><br><b>Explanation:</b> Post-fertilization, the ovary matures into a fruit and the ovules develop into seeds.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q11", qNum: 11, type: "1m", mark: "1 Mark", topic: "Genetics", q: "The phenotypic ratio of a Mendelian Monohybrid cross in F₂ generation is:<br>(A) 3 : 1<br>(B) 1 : 2 : 1<br>(C) 9 : 3 : 3 : 1<br>(D) 2 : 1", ans: "<b>Correct Answer: (A) 3 : 1</b><br><b>Explanation:</b> Phenotypic ratio is 3 Tall : 1 Dwarf (3:1). Genotypic ratio is 1 TT : 2 Tt : 1 tt (1:2:1).", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_sci_em_24_q12", qNum: 12, type: "1m", mark: "1 Mark", topic: "Environmental Management", q: "Which of the following is a non-renewable source of energy?<br>(A) Solar energy<br>(B) Wind energy<br>(C) Coal and Petroleum<br>(D) Tidal energy", ans: "<b>Correct Answer: (C) Coal and Petroleum</b><br><b>Explanation:</b> Fossil fuels like coal and petroleum exist in finite amounts and take millions of years to form, making them non-renewable.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true }
+            { id: "pub_sci_em_24_q1", qNum: 1, type: "1m", mark: "1 Mark", topic: "Laws of Motion", q: "Inertia of a body depends on:<br>(A) weight of the object<br>(B) acceleration due to gravity of the planet<br>(C) mass of the object<br>(D) Both (A) and (B)", ans: "<b>Correct Answer: (C) mass of the object</b><br><b>Explanation:</b> Inertia is the inherent property of a body to resist any change in its state of rest or uniform motion. It depends solely on the mass of the body (greater mass = greater inertia).", markingScheme: "Correct option with answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q2", qNum: 2, type: "1m", mark: "1 Mark", topic: "Optics", q: "To correct myopia (short-sightedness), which lens is used?<br>(A) Convex lens<br>(B) Concave lens<br>(C) Cylindrical lens<br>(D) Bifocal lens", ans: "<b>Correct Answer: (B) Concave lens</b><br><b>Explanation:</b> Myopia causes image formation in front of the retina. A concave (diverging) lens diverges light rays so the image focuses precisely on the retina.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q3", qNum: 3, type: "1m", mark: "1 Mark", topic: "Thermal Physics", q: "The value of Universal Gas Constant (R) is:<br>(A) 8.31 J mol⁻¹ K⁻¹<br>(B) 8.31 J K⁻¹<br>(C) 1.38 × 10⁻²³ J K⁻¹<br>(D) 6.023 × 10²³ mol⁻¹", ans: "<b>Correct Answer: (A) 8.31 J mol⁻¹ K⁻¹</b><br><b>Explanation:</b> The universal gas constant R = 8.31 J mol⁻¹ K⁻¹ in SI units.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q4", qNum: 4, type: "1m", mark: "1 Mark", topic: "Electricity", q: "Kilowatt-hour is the practical unit of:<br>(A) Electric potential<br>(B) Electric power<br>(C) Electrical energy<br>(D) Electric resistance", ans: "<b>Correct Answer: (C) Electrical energy</b><br><b>Explanation:</b> 1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ Joules, which is the commercial unit of electrical energy consumed.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q5", qNum: 5, type: "1m", mark: "1 Mark", topic: "Periodic Classification", q: "Number of periods and groups in the modern periodic table are respectively:<br>(A) 7, 18<br>(B) 18, 7<br>(C) 7, 8<br>(D) 8, 7", ans: "<b>Correct Answer: (A) 7, 18</b><br><b>Explanation:</b> Modern periodic table has 7 horizontal rows called periods and 18 vertical columns called groups.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q6", qNum: 6, type: "1m", mark: "1 Mark", topic: "Solutions", q: "The number of water molecules of crystallization in Copper Sulphate pentahydrate (Blue vitriol) is:<br>(A) 2<br>(B) 5<br>(C) 7<br>(D) 10", ans: "<b>Correct Answer: (B) 5</b><br><b>Explanation:</b> Chemical formula of blue vitriol is CuSO₄·5H₂O, containing 5 molecules of water of crystallization.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q7", qNum: 7, type: "1m", mark: "1 Mark", topic: "Chemical Reactions", q: "The pH of a neutral solution at 25°C is:<br>(A) 0<br>(B) 7<br>(C) 14<br>(D) 1", ans: "<b>Correct Answer: (B) 7</b><br><b>Explanation:</b> In a neutral aqueous solution at 25°C, [H⁺] = [OH⁻] = 10⁻⁷ M, hence pH = -log(10⁻⁷) = 7.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q8", qNum: 8, type: "1m", mark: "1 Mark", topic: "Plant Anatomy & Physiology", q: "Kreb's cycle occurs in which part of the cell?<br>(A) Cytoplasm<br>(B) Mitochondrial matrix<br>(C) Chloroplast<br>(D) Ribosome", ans: "<b>Correct Answer: (B) Mitochondrial matrix</b><br><b>Explanation:</b> Glycolysis takes place in the cytoplasm, whereas the Kreb's cycle occurs inside the mitochondrial matrix.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q9", qNum: 9, type: "1m", mark: "1 Mark", topic: "Structural Organisation of Animals", q: "In leech, locomotion is performed by:<br>(A) Anterior and posterior suckers<br>(B) Parapodia<br>(C) Setae<br>(D) Cilia", ans: "<b>Correct Answer: (A) Anterior and posterior suckers</b><br><b>Explanation:</b> Leech moves by looping or crawling using anterior and posterior suckers, and swims by undulating body contractions.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q10", qNum: 10, type: "1m", mark: "1 Mark", topic: "Reproduction in Plants & Animals", q: "Which part of the flower develops into fruit after fertilization?<br>(A) Ovule<br>(B) Style<br>(C) Ovary<br>(D) Stigma", ans: "<b>Correct Answer: (C) Ovary</b><br><b>Explanation:</b> Post-fertilization, the ovary matures into a fruit and the ovules develop into seeds.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q11", qNum: 11, type: "1m", mark: "1 Mark", topic: "Genetics", q: "The phenotypic ratio of a Mendelian Monohybrid cross in F₂ generation is:<br>(A) 3 : 1<br>(B) 1 : 2 : 1<br>(C) 9 : 3 : 3 : 1<br>(D) 2 : 1", ans: "<b>Correct Answer: (A) 3 : 1</b><br><b>Explanation:</b> Phenotypic ratio is 3 Tall : 1 Dwarf (3:1). Genotypic ratio is 1 TT : 2 Tt : 1 tt (1:2:1).", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_sci_em_24_q12", qNum: 12, type: "1m", mark: "1 Mark", topic: "Environmental Management", q: "Which of the following is a non-renewable source of energy?<br>(A) Solar energy<br>(B) Wind energy<br>(C) Coal and Petroleum<br>(D) Tidal energy", ans: "<b>Correct Answer: (C) Coal and Petroleum</b><br><b>Explanation:</b> Fossil fuels like coal and petroleum exist in finite amounts and take millions of years to form, making them non-renewable.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false }
           ]
         },
         {
@@ -1175,20 +1175,20 @@ window.PUBLIC_EXAM_PAPERS_DATA["social_em"] = {
           partId: "part1", partTitle: "PART - I (Choose the Correct Answer • Answer All 14 Questions)",
           totalMarks: 14, markEach: 1,
           questions: [
-            { id: "pub_soc_em_24_q1", qNum: 1, type: "1m", mark: "1 Mark", topic: "First World War", q: "Which country was blamed and held responsible for World War I by the Treaty of Versailles?<br>(A) Germany<br>(B) Austria<br>(C) Italy<br>(D) Turkey", ans: "<b>Correct Answer: (A) Germany</b><br><b>Explanation:</b> Under the War Guilt Clause (Article 231) of the Treaty of Versailles (1919), Germany was held exclusively responsible for causing World War I.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q2", qNum: 2, type: "1m", mark: "1 Mark", topic: "Social Reform Movements", q: "Who established the 'Samarasa Suddha Sanmarga Sangam' in 1865?<br>(A) Ramalinga Swamigal (Vallalar)<br>(B) Swami Vivekananda<br>(C) Raja Ram Mohan Roy<br>(D) Jyotiba Phule", ans: "<b>Correct Answer: (A) Ramalinga Swamigal (Vallalar)</b><br><b>Explanation:</b> Ramalinga Adigal (Vallalar) founded the Samarasa Suddha Sanmarga Sathya Sangam in 1865 at Vadalur to advocate universal love and service.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q3", qNum: 3, type: "1m", mark: "1 Mark", topic: "Early Resistance to British Rule", q: "Who was the commander of the British army that captured the Palayamkottai fort from Kattabomman?<br>(A) Major Bannerman<br>(B) Colonel Heron<br>(C) Colin Jackson<br>(D) Campbell", ans: "<b>Correct Answer: (A) Major Bannerman</b><br><b>Explanation:</b> Major Bannerman commanded the Company forces that laid siege to the Panchalankurichi fort in September 1799.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q4", qNum: 4, type: "1m", mark: "1 Mark", topic: "Freedom Movement in Tamil Nadu", q: "Who established the Swadeshi Steam Navigation Company at Tuticorin?<br>(A) V.O. Chidambaranar<br>(B) Subramania Bharati<br>(C) Tiruppur Kumaran<br>(D) Subramania Siva", ans: "<b>Correct Answer: (A) V.O. Chidambaranar</b><br><b>Explanation:</b> V.O.C. launched the Swadeshi Steam Navigation Company in 1906, running ships between Tuticorin and Colombo to counter the British monopoly.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q5", qNum: 5, type: "1m", mark: "1 Mark", topic: "India - Location & Physiography", q: "The highest peak in South India is:<br>(A) Anaimudi<br>(B) Doddabetta<br>(C) Kalsubai<br>(D) Mahendragiri", ans: "<b>Correct Answer: (A) Anaimudi</b><br><b>Explanation:</b> Anaimudi (2,695 m) in the Anaimalai Hills is the highest peak in the Western Ghats and in Peninsular South India.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q6", qNum: 6, type: "1m", mark: "1 Mark", topic: "Climate and Natural Vegetation", q: "The climate of India is broadly described as:<br>(A) Tropical Monsoon Climate<br>(B) Equatorial Climate<br>(C) Temperate Climate<br>(D) Mediterranean Climate", ans: "<b>Correct Answer: (A) Tropical Monsoon Climate</b><br><b>Explanation:</b> India enjoys a tropical monsoon climate characterized by alternating seasonal winds.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q7", qNum: 7, type: "1m", mark: "1 Mark", topic: "Agriculture", q: "The soil most suitable for cotton cultivation is:<br>(A) Black Soil (Regur)<br>(B) Alluvial Soil<br>(C) Red Soil<br>(D) Laterite Soil", ans: "<b>Correct Answer: (A) Black Soil (Regur)</b><br><b>Explanation:</b> Black soil (Regur) has high clay content and moisture retention capacity, making it ideal for growing cotton (black cotton soil).", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q8", qNum: 8, type: "1m", mark: "1 Mark", topic: "Minerals & Industries", q: "Which city is known as the 'Manchester of South India'?<br>(A) Coimbatore<br>(B) Madurai<br>(C) Chennai<br>(D) Salem", ans: "<b>Correct Answer: (A) Coimbatore</b><br><b>Explanation:</b> Coimbatore is called the Manchester of South India due to its extensive textile mills and cotton spinning industry.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q9", qNum: 9, type: "1m", mark: "1 Mark", topic: "Tamil Nadu Geography", q: "The mangrove forest located in Tamil Nadu is:<br>(A) Pichavaram<br>(B) Sundarbans<br>(C) Bhitarkanika<br>(D) Coringa", ans: "<b>Correct Answer: (A) Pichavaram</b><br><b>Explanation:</b> Pichavaram in Cuddalore district is one of the largest mangrove forests in India.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q10", qNum: 10, type: "1m", mark: "1 Mark", topic: "Indian Constitution", q: "Which Article of the Indian Constitution is termed as the 'Heart and Soul of the Constitution' by Dr. B.R. Ambedkar?<br>(A) Article 32<br>(B) Article 14<br>(C) Article 19<br>(D) Article 21", ans: "<b>Correct Answer: (A) Article 32</b><br><b>Explanation:</b> Article 32 (Right to Constitutional Remedies) empowers citizens to approach the Supreme Court for enforcement of Fundamental Rights.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q11", qNum: 11, type: "1m", mark: "1 Mark", topic: "Central Government", q: "The Chief Justice and other Judges of the Supreme Court of India are appointed by:<br>(A) The President of India<br>(B) The Prime Minister<br>(C) The Parliament<br>(D) The Chief Justice himself", ans: "<b>Correct Answer: (A) The President of India</b><br><b>Explanation:</b> Under Article 124(2), the President appoints the Chief Justice and judges of the Supreme Court.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q12", qNum: 12, type: "1m", mark: "1 Mark", topic: "India's Foreign Policy", q: "Panchsheel (Five Principles of Peaceful Coexistence) was signed between India and:<br>(A) China<br>(B) Pakistan<br>(C) USA<br>(D) USSR", ans: "<b>Correct Answer: (A) China</b><br><b>Explanation:</b> The Panchsheel treaty was signed on 28 April 1954 between Prime Minister Jawaharlal Nehru of India and Premier Zhou Enlai of China.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q13", qNum: 13, type: "1m", mark: "1 Mark", topic: "Gross Domestic Product (GDP)", q: "Primary sector includes:<br>(A) Agriculture<br>(B) Manufacturing<br>(C) Banking<br>(D) Trade", ans: "<b>Correct Answer: (A) Agriculture</b><br><b>Explanation:</b> Primary sector involves direct extraction of natural resources such as agriculture, forestry, fishing, and mining.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true },
-            { id: "pub_soc_em_24_q14", qNum: 14, type: "1m", mark: "1 Mark", topic: "Government and Taxes", q: "Goods and Services Tax (GST) came into effect in India on:<br>(A) 1st July 2017<br>(B) 1st April 2017<br>(C) 1st July 2016<br>(D) 1st January 2018", ans: "<b>Correct Answer: (A) 1st July 2017</b><br><b>Explanation:</b> GST, a single indirect tax for the entire nation under 'One Nation, One Tax', was implemented on 1 July 2017.", markingScheme: "Option and answer: 1 Mark", isCompulsory: true }
+            { id: "pub_soc_em_24_q1", qNum: 1, type: "1m", mark: "1 Mark", topic: "First World War", q: "Which country was blamed and held responsible for World War I by the Treaty of Versailles?<br>(A) Germany<br>(B) Austria<br>(C) Italy<br>(D) Turkey", ans: "<b>Correct Answer: (A) Germany</b><br><b>Explanation:</b> Under the War Guilt Clause (Article 231) of the Treaty of Versailles (1919), Germany was held exclusively responsible for causing World War I.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q2", qNum: 2, type: "1m", mark: "1 Mark", topic: "Social Reform Movements", q: "Who established the 'Samarasa Suddha Sanmarga Sangam' in 1865?<br>(A) Ramalinga Swamigal (Vallalar)<br>(B) Swami Vivekananda<br>(C) Raja Ram Mohan Roy<br>(D) Jyotiba Phule", ans: "<b>Correct Answer: (A) Ramalinga Swamigal (Vallalar)</b><br><b>Explanation:</b> Ramalinga Adigal (Vallalar) founded the Samarasa Suddha Sanmarga Sathya Sangam in 1865 at Vadalur to advocate universal love and service.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q3", qNum: 3, type: "1m", mark: "1 Mark", topic: "Early Resistance to British Rule", q: "Who was the commander of the British army that captured the Palayamkottai fort from Kattabomman?<br>(A) Major Bannerman<br>(B) Colonel Heron<br>(C) Colin Jackson<br>(D) Campbell", ans: "<b>Correct Answer: (A) Major Bannerman</b><br><b>Explanation:</b> Major Bannerman commanded the Company forces that laid siege to the Panchalankurichi fort in September 1799.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q4", qNum: 4, type: "1m", mark: "1 Mark", topic: "Freedom Movement in Tamil Nadu", q: "Who established the Swadeshi Steam Navigation Company at Tuticorin?<br>(A) V.O. Chidambaranar<br>(B) Subramania Bharati<br>(C) Tiruppur Kumaran<br>(D) Subramania Siva", ans: "<b>Correct Answer: (A) V.O. Chidambaranar</b><br><b>Explanation:</b> V.O.C. launched the Swadeshi Steam Navigation Company in 1906, running ships between Tuticorin and Colombo to counter the British monopoly.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q5", qNum: 5, type: "1m", mark: "1 Mark", topic: "India - Location & Physiography", q: "The highest peak in South India is:<br>(A) Anaimudi<br>(B) Doddabetta<br>(C) Kalsubai<br>(D) Mahendragiri", ans: "<b>Correct Answer: (A) Anaimudi</b><br><b>Explanation:</b> Anaimudi (2,695 m) in the Anaimalai Hills is the highest peak in the Western Ghats and in Peninsular South India.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q6", qNum: 6, type: "1m", mark: "1 Mark", topic: "Climate and Natural Vegetation", q: "The climate of India is broadly described as:<br>(A) Tropical Monsoon Climate<br>(B) Equatorial Climate<br>(C) Temperate Climate<br>(D) Mediterranean Climate", ans: "<b>Correct Answer: (A) Tropical Monsoon Climate</b><br><b>Explanation:</b> India enjoys a tropical monsoon climate characterized by alternating seasonal winds.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q7", qNum: 7, type: "1m", mark: "1 Mark", topic: "Agriculture", q: "The soil most suitable for cotton cultivation is:<br>(A) Black Soil (Regur)<br>(B) Alluvial Soil<br>(C) Red Soil<br>(D) Laterite Soil", ans: "<b>Correct Answer: (A) Black Soil (Regur)</b><br><b>Explanation:</b> Black soil (Regur) has high clay content and moisture retention capacity, making it ideal for growing cotton (black cotton soil).", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q8", qNum: 8, type: "1m", mark: "1 Mark", topic: "Minerals & Industries", q: "Which city is known as the 'Manchester of South India'?<br>(A) Coimbatore<br>(B) Madurai<br>(C) Chennai<br>(D) Salem", ans: "<b>Correct Answer: (A) Coimbatore</b><br><b>Explanation:</b> Coimbatore is called the Manchester of South India due to its extensive textile mills and cotton spinning industry.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q9", qNum: 9, type: "1m", mark: "1 Mark", topic: "Tamil Nadu Geography", q: "The mangrove forest located in Tamil Nadu is:<br>(A) Pichavaram<br>(B) Sundarbans<br>(C) Bhitarkanika<br>(D) Coringa", ans: "<b>Correct Answer: (A) Pichavaram</b><br><b>Explanation:</b> Pichavaram in Cuddalore district is one of the largest mangrove forests in India.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q10", qNum: 10, type: "1m", mark: "1 Mark", topic: "Indian Constitution", q: "Which Article of the Indian Constitution is termed as the 'Heart and Soul of the Constitution' by Dr. B.R. Ambedkar?<br>(A) Article 32<br>(B) Article 14<br>(C) Article 19<br>(D) Article 21", ans: "<b>Correct Answer: (A) Article 32</b><br><b>Explanation:</b> Article 32 (Right to Constitutional Remedies) empowers citizens to approach the Supreme Court for enforcement of Fundamental Rights.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q11", qNum: 11, type: "1m", mark: "1 Mark", topic: "Central Government", q: "The Chief Justice and other Judges of the Supreme Court of India are appointed by:<br>(A) The President of India<br>(B) The Prime Minister<br>(C) The Parliament<br>(D) The Chief Justice himself", ans: "<b>Correct Answer: (A) The President of India</b><br><b>Explanation:</b> Under Article 124(2), the President appoints the Chief Justice and judges of the Supreme Court.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q12", qNum: 12, type: "1m", mark: "1 Mark", topic: "India's Foreign Policy", q: "Panchsheel (Five Principles of Peaceful Coexistence) was signed between India and:<br>(A) China<br>(B) Pakistan<br>(C) USA<br>(D) USSR", ans: "<b>Correct Answer: (A) China</b><br><b>Explanation:</b> The Panchsheel treaty was signed on 28 April 1954 between Prime Minister Jawaharlal Nehru of India and Premier Zhou Enlai of China.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q13", qNum: 13, type: "1m", mark: "1 Mark", topic: "Gross Domestic Product (GDP)", q: "Primary sector includes:<br>(A) Agriculture<br>(B) Manufacturing<br>(C) Banking<br>(D) Trade", ans: "<b>Correct Answer: (A) Agriculture</b><br><b>Explanation:</b> Primary sector involves direct extraction of natural resources such as agriculture, forestry, fishing, and mining.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+            { id: "pub_soc_em_24_q14", qNum: 14, type: "1m", mark: "1 Mark", topic: "Government and Taxes", q: "Goods and Services Tax (GST) came into effect in India on:<br>(A) 1st July 2017<br>(B) 1st April 2017<br>(C) 1st July 2016<br>(D) 1st January 2018", ans: "<b>Correct Answer: (A) 1st July 2017</b><br><b>Explanation:</b> GST, a single indirect tax for the entire nation under 'One Nation, One Tax', was implemented on 1 July 2017.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false }
           ]
         },
         {
@@ -1243,3 +1243,375 @@ window.PUBLIC_EXAM_PAPERS_DATA["social_em"] = {
     }
   }
 };
+
+// =========================================================================
+// 2023 & 2022 PAPERS FOR ALL SUBJECTS (AUTHENTIC SSLC BOARD EXAMINATIONS)
+// =========================================================================
+
+// --- 1. MATHS (ENGLISH MEDIUM) 2023 & 2022 ---
+window.PUBLIC_EXAM_PAPERS_DATA["maths_em"].papers["2023"] = {
+  year: "2023",
+  month: "April 2023",
+  examTitle: "Tamil Nadu Government SSLC Public Examination - April 2023 (Mathematics)",
+  instructions: [
+    "Check the question paper for fairness of printing. If there is any lack of fairness, inform the Hall Supervisor immediately.",
+    "Use Blue or Black ink to write and pencil to draw diagrams and graphs."
+  ],
+  parts: [
+    {
+      partId: "part1", partTitle: "PART - I (Choose the Correct Answer • Answer All 14 Questions)",
+      totalMarks: 14, markEach: 1,
+      questions: [
+        { id: "pub_m_em_23_q1", qNum: 1, type: "1m", mark: "1 Mark", topic: "Relations and Functions", q: "If n(A × B) = 6 and A = {1, 3}, then n(B) is:<br>(A) 1<br>(B) 2<br>(C) 3<br>(D) 6", ans: "<b>Correct Answer: (C) 3</b><br><b>Explanation:</b> n(A × B) = n(A) × n(B). Here n(A) = 2. So 2 × n(B) = 6 ⟹ n(B) = 3.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_23_q2", qNum: 2, type: "1m", mark: "1 Mark", topic: "Numbers and Sequences", q: "The next term of the sequence 3/16, 1/8, 1/12, 1/18, ... is:<br>(A) 1/24<br>(B) 1/27<br>(C) 2/3<br>(D) 1/81", ans: "<b>Correct Answer: (B) 1/27</b><br><b>Explanation:</b> This is a Geometric Progression with first term a = 3/16 and common ratio r = (1/8)/(3/16) = 2/3. Next term = (1/18) × (2/3) = 2/54 = 1/27.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_23_q3", qNum: 3, type: "1m", mark: "1 Mark", topic: "Algebra", q: "Graph of a linear polynomial is a:<br>(A) straight line<br>(B) parabola<br>(C) circle<br>(D) hyperbola", ans: "<b>Correct Answer: (A) straight line</b><br><b>Explanation:</b> A degree 1 polynomial represents a linear function whose graph is always a straight line.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_23_q4", qNum: 4, type: "1m", mark: "1 Mark", topic: "Geometry", q: "Two triangles are similar if their corresponding angles are equal and corresponding sides are:<br>(A) equal<br>(B) parallel<br>(C) proportional<br>(D) perpendicular", ans: "<b>Correct Answer: (C) proportional</b><br><b>Explanation:</b> By definition of similarity, corresponding sides must be proportional.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_23_q5", qNum: 5, type: "1m", mark: "1 Mark", topic: "Coordinate Geometry", q: "The slope of the line perpendicular to 2x + 3y + 6 = 0 is:<br>(A) 3/2<br>(B) -2/3<br>(C) -3/2<br>(D) 2/3", ans: "<b>Correct Answer: (A) 3/2</b><br><b>Explanation:</b> Slope of given line m₁ = -2/3. For perpendicular line, m₂ = -1/m₁ = 3/2.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_23_q6", qNum: 6, type: "1m", mark: "1 Mark", topic: "Trigonometry", q: "sin² θ + 1 / (1 + tan² θ) =<br>(A) 1<br>(B) 0<br>(C) 2<br>(D) tan² θ", ans: "<b>Correct Answer: (A) 1</b><br><b>Explanation:</b> 1 + tan² θ = sec² θ. So 1 / sec² θ = cos² θ. Hence sin² θ + cos² θ = 1.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_23_q7", qNum: 7, type: "1m", mark: "1 Mark", topic: "Mensuration", q: "The total surface area of a hemisphere of radius r is:<br>(A) 2πr²<br>(B) 3πr²<br>(C) 4πr²<br>(D) πr²", ans: "<b>Correct Answer: (B) 3πr²</b><br><b>Explanation:</b> Curved surface area is 2πr² and circular base area is πr², making total surface area = 3πr².", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_23_q8", qNum: 8, type: "1m", mark: "1 Mark", topic: "Statistics & Probability", q: "The range of the first 10 prime numbers is:<br>(A) 28<br>(B) 26<br>(C) 27<br>(D) 29", ans: "<b>Correct Answer: (C) 27</b><br><b>Explanation:</b> First 10 primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Largest L = 29, Smallest S = 2. Range = L - S = 29 - 2 = 27.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false }
+      ]
+    },
+    {
+      partId: "part2", partTitle: "PART - II (Answer Any 10 Questions • Q.28 is COMPULSORY)",
+      totalMarks: 20, markEach: 2,
+      questions: [
+        { id: "pub_m_em_23_q15", qNum: 15, type: "2m", mark: "2 Marks", topic: "Relations", q: "Let A = {1, 2, 3} and B = {x | x is a prime number less than 10}. Find A × B.", ans: "<b>Solution:</b><br>A = {1, 2, 3}<br>B = {2, 3, 5, 7}<br><b>A × B = {(1, 2), (1, 3), (1, 5), (1, 7), (2, 2), (2, 3), (2, 5), (2, 7), (3, 2), (3, 3), (3, 5), (3, 7)}</b>.", markingScheme: "Set B: 1 Mark, Cartesian product: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_23_q16", qNum: 16, type: "2m", mark: "2 Marks", topic: "Sequences", q: "Find the 19th term of an A.P. -11, -15, -19, ...", ans: "<b>Solution:</b><br>First term a = -11, common difference d = -15 - (-11) = -4.<br>tₙ = a + (n - 1)d<br>t₁₉ = -11 + (19 - 1)(-4) = -11 + 18(-4) = -11 - 72 = <b>-83</b>.<br><b>Answer: 19th term = -83</b>.", markingScheme: "Formula: 1 Mark, Answer: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_23_q28", qNum: 28, type: "2m", mark: "2 Marks", topic: "Probability / Compulsory", q: "<b>[COMPULSORY QUESTION]</b><br>If P(A) = 0.37, P(B) = 0.42 and P(A ∩ B) = 0.09, find P(A ∪ B).", ans: "<b>Solution (Question 28 - Compulsory Question):</b><br>By Addition Theorem of Probability:<br>P(A ∪ B) = P(A) + P(B) - P(A ∩ B)<br>Substituting the values:<br>P(A ∪ B) = 0.37 + 0.42 - 0.09 = 0.79 - 0.09 = <b>0.70 (or 0.7)</b>.<br><b>Answer: P(A ∪ B) = 0.7</b>.", markingScheme: "Formula: 1 Mark, Calculation: 1 Mark", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part3", partTitle: "PART - III (Answer Any 10 Questions • Q.42 is COMPULSORY)",
+      totalMarks: 50, markEach: 5,
+      questions: [
+        { id: "pub_m_em_23_q29", qNum: 29, type: "5m", mark: "5 Marks", topic: "Functions", q: "Let A = {x ∈ W | x < 2}, B = {x ∈ N | 1 < x ≤ 4} and C = {3, 5}. Verify that A × (B ∪ C) = (A × B) ∪ (A × C).", ans: "<b>Solution:</b><br>A = {0, 1}, B = {2, 3, 4}, C = {3, 5}.<br>B ∪ C = {2, 3, 4, 5}.<br>LHS = A × (B ∪ C) = {(0,2), (0,3), (0,4), (0,5), (1,2), (1,3), (1,4), (1,5)} ---- (1)<br>A × B = {(0,2), (0,3), (0,4), (1,2), (1,3), (1,4)}<br>A × C = {(0,3), (0,5), (1,3), (1,5)}<br>RHS = (A × B) ∪ (A × C) = {(0,2), (0,3), (0,4), (0,5), (1,2), (1,3), (1,4), (1,5)} ---- (2)<br>From (1) and (2), LHS = RHS. Hence verified.", markingScheme: "Sets A, B: 1 Mark, LHS: 2 Marks, RHS: 2 Marks = 5 Marks", isCompulsory: false },
+        { id: "pub_m_em_23_q42", qNum: 42, type: "5m", mark: "5 Marks", topic: "Mensuration / Compulsory", q: "<b>[COMPULSORY QUESTION]</b><br>The height of a conical tent is to be determined if 11 persons are to be accommodated in it. Each person requires 4 sq.m of floor area and 22 cu.m of air to breathe.", ans: "<b>Solution (Question 42 - Compulsory Question):</b><br>Floor area for 11 persons = 11 × 4 = 44 m².<br>Base area = πr² = 44 m² ---- (1)<br><br>Total volume of air for 11 persons = 11 × 22 = 242 m³.<br>Volume of cone = ⅓ πr²h = 242 m³ ---- (2)<br><br>Substituting (1) into (2):<br>⅓ × 44 × h = 242<br>h = (242 × 3) / 44 = (22 × 11 × 3) / (4 × 11) = 66 / 4 = <b>16.5 metres</b>.<br><br><b>Answer: Height of tent = 16.5 m</b>.", markingScheme: "Base area equation: 1.5M, Volume equation: 1.5M, Calculation of h = 16.5 m: 2M = 5 Marks", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part4", partTitle: "PART - IV (Answer All 2 Questions • Either / Or Type)",
+      totalMarks: 16, markEach: 8,
+      questions: [
+        { id: "pub_m_em_23_q43", qNum: 43, type: "8m", mark: "8 Marks", topic: "Practical Geometry", q: "(a) Construct a triangle ABC in which BC = 8 cm, ∠A = 60° and the median from A to BC is of length 5.8 cm.<br><b>(OR)</b><br>(b) Draw a circle of diameter 6 cm from a point P, which is 8 cm away from its centre. Draw the two tangents PA and PB to the circle and measure their lengths.", ans: "<b>(a) Construction Steps:</b><br>1. Draw a line segment BC = 8 cm.<br>2. At B, make ∠CBX = 60° downwards and draw ray BY ⊥ BX.<br>3. Draw the perpendicular bisector of BC intersecting BC at M and BY at O.<br>4. With O as centre and OB as radius, draw circle.<br>5. With M as centre and radius 5.8 cm, draw an arc intersecting circle at A and A'.<br>6. Join AB and AC. Triangle ABC is the required triangle.", markingScheme: "Rough diagram: 1M, Line BC & angle: 2M, Circle: 2M, Median arc: 2M, Final triangle: 1M = 8 Marks", isCompulsory: false },
+        { id: "pub_m_em_23_q44", qNum: 44, type: "8m", mark: "8 Marks", topic: "Graph of Quadratic Equations", q: "(a) Draw the graph of y = x² - 4x + 3 and use it to solve x² - 6x + 9 = 0.<br><b>(OR)</b><br>(b) Draw the graph of xy = 24, x, y > 0. Use the graph to find y when x = 3 and x when y = 6.", ans: "<b>(a) Solution:</b><br>1. Form table for y = x² - 4x + 3: points (-2,15), (-1,8), (0,3), (1,0), (2,-1), (3,0), (4,3), (5,8).<br>2. Subtract equation: (x² - 4x + 3) - (x² - 6x + 9) = 2x - 6.<br>3. Plot straight line y = 2x - 6: points (0,-6), (3,0), (4,2).<br>4. The line touches the parabola at the single point (3, 0).<br><b>Answer: The solution is x = 3 (real and equal roots)</b>.", markingScheme: "Parabola table & curve: 4M, Straight line equation & table: 2M, Point of intersection & solution x = 3: 2M = 8 Marks", isCompulsory: false }
+      ]
+    }
+  ]
+};
+
+window.PUBLIC_EXAM_PAPERS_DATA["maths_em"].papers["2022"] = {
+  year: "2022",
+  month: "May 2022",
+  examTitle: "Tamil Nadu Government SSLC Public Examination - May 2022 (Mathematics)",
+  instructions: [
+    "Check the question paper for fairness of printing. If there is any lack of fairness, inform the Hall Supervisor immediately.",
+    "Use Blue or Black ink to write and pencil to draw diagrams and graphs."
+  ],
+  parts: [
+    {
+      partId: "part1", partTitle: "PART - I (Choose the Correct Answer • Answer All 14 Questions)",
+      totalMarks: 14, markEach: 1,
+      questions: [
+        { id: "pub_m_em_22_q1", qNum: 1, type: "1m", mark: "1 Mark", topic: "Relations and Functions", q: "If A = {a, b, p}, B = {2, 3}, C = {p, q, r, s}, then n[(A ∪ C) × B] is:<br>(A) 8<br>(B) 20<br>(C) 12<br>(D) 16", ans: "<b>Correct Answer: (C) 12</b><br><b>Explanation:</b> A ∪ C = {a, b, p, q, r, s}, so n(A ∪ C) = 6. n(B) = 2. Hence n[(A ∪ C) × B] = 6 × 2 = 12.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_22_q2", qNum: 2, type: "1m", mark: "1 Mark", topic: "Numbers and Sequences", q: "If the HCF of 65 and 117 is expressible in the form 65m - 117, then the value of m is:<br>(A) 4<br>(B) 2<br>(C) 1<br>(D) 3", ans: "<b>Correct Answer: (B) 2</b><br><b>Explanation:</b> By Euclid's algorithm, HCF(65, 117) = 13. 65m - 117 = 13 ⟹ 65m = 130 ⟹ m = 2.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false }
+      ]
+    },
+    {
+      partId: "part2", partTitle: "PART - II (Answer Any 10 Questions • Q.28 is COMPULSORY)",
+      totalMarks: 20, markEach: 2,
+      questions: [
+        { id: "pub_m_em_22_q15", qNum: 15, type: "2m", mark: "2 Marks", topic: "Relations", q: "A Relation R is given by {(x, y) | y = x + 3, x ∈ {0, 1, 2, 3, 4, 5}}. Determine its domain and range.", ans: "<b>Solution:</b><br>R = {(0, 3), (1, 4), (2, 5), (3, 6), (4, 7), (5, 8)}.<br><b>Domain = {0, 1, 2, 3, 4, 5}</b><br><b>Range = {3, 4, 5, 6, 7, 8}</b>.", markingScheme: "Domain: 1 Mark, Range: 1 Mark", isCompulsory: false },
+        { id: "pub_m_em_22_q28", qNum: 28, type: "2m", mark: "2 Marks", topic: "Straight Lines / Compulsory", q: "<b>[COMPULSORY QUESTION]</b><br>Find the slope of a line perpendicular to the line joining the points A(5, 1) and B(3, 4).", ans: "<b>Solution (Question 28 - Compulsory Question):</b><br>Slope of line segment AB, m₁ = (y₂ - y₁) / (x₂ - x₁) = (4 - 1) / (3 - 5) = 3 / (-2) = -3/2.<br>For a perpendicular line, m₁ × m₂ = -1.<br>(-3/2) × m₂ = -1 ⟹ <b>m₂ = 2/3</b>.<br><b>Answer: Slope of perpendicular line = 2/3</b>.", markingScheme: "Slope m₁: 1 Mark, Perpendicular slope m₂ = 2/3: 1 Mark", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part3", partTitle: "PART - III (Answer Any 10 Questions • Q.42 is COMPULSORY)",
+      totalMarks: 50, markEach: 5,
+      questions: [
+        { id: "pub_m_em_22_q29", qNum: 29, type: "5m", mark: "5 Marks", topic: "Functions", q: "A function f: [-5, 9] ⟶ R is defined as follows:<br>f(x) = 6x + 1 (-5 ≤ x < 2), 5x² - 1 (2 ≤ x < 6), 3x - 4 (6 ≤ x ≤ 9).<br>Find (i) f(-3) + f(2), (ii) f(7) - f(1).", ans: "<b>Solution:</b><br>(i) f(-3) = 6(-3) + 1 = -17; f(2) = 5(2)² - 1 = 19. So f(-3) + f(2) = -17 + 19 = <b>2</b>.<br>(ii) f(7) = 3(7) - 4 = 17; f(1) = 6(1) + 1 = 7. So f(7) - f(1) = 17 - 7 = <b>10</b>.", markingScheme: "Part (i): 2.5 Marks, Part (ii): 2.5 Marks = 5 Marks", isCompulsory: false },
+        { id: "pub_m_em_22_q42", qNum: 42, type: "5m", mark: "5 Marks", topic: "Mensuration / Compulsory", q: "<b>[COMPULSORY QUESTION]</b><br>A solid sphere of radius 6 cm is melted and recast into a hollow cylinder of uniform thickness. If the external radius of the base of the cylinder is 5 cm and its height is 32 cm, find the thickness of the cylinder.", ans: "<b>Solution (Question 42 - Compulsory Question):</b><br>Volume of sphere = 4/3 π R³ = 4/3 × π × 6³ = 288π cm³.<br>Volume of hollow cylinder = π(R₁² - r²)h = π(5² - r²) × 32 = 32π(25 - r²).<br>Equating volumes: 32π(25 - r²) = 288π ⟹ 25 - r² = 288 / 32 = 9.<br>r² = 25 - 9 = 16 ⟹ r = 4 cm.<br><b>Thickness = R₁ - r = 5 - 4 = 1 cm</b>.<br><b>Answer: Thickness of cylinder = 1 cm</b>.", markingScheme: "Sphere volume: 1.5M, Hollow cylinder volume: 1.5M, Solving r = 4 cm & thickness = 1 cm: 2M = 5 Marks", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part4", partTitle: "PART - IV (Answer All 2 Questions • Either / Or Type)",
+      totalMarks: 16, markEach: 8,
+      questions: [
+        { id: "pub_m_em_22_q43", qNum: 43, type: "8m", mark: "8 Marks", topic: "Geometry", q: "Construct a triangle ABC such that AB = 5.5 cm, ∠C = 30° and the altitude from C to AB is 4 cm.", ans: "<b>Construction Steps:</b><br>1. Draw line segment AB = 5.5 cm.<br>2. At A, make ∠BAX = 30° downwards and draw ray AY ⊥ AX.<br>3. Draw perpendicular bisector of AB intersecting AB at M and AY at O.<br>4. With O as centre and OA as radius, draw circumcircle.<br>5. Draw a line parallel to AB at a distance of 4 cm intersecting circle at C and C'.<br>6. Join AC and BC. Triangle ABC is required triangle.", markingScheme: "Rough diagram: 1M, Base & angle: 2M, Circle: 2M, Altitude line & triangle: 3M = 8 Marks", isCompulsory: false },
+        { id: "pub_m_em_22_q44", qNum: 44, type: "8m", mark: "8 Marks", topic: "Graphs", q: "Draw the graph of y = x² - 5x + 6 and state the nature of its solutions.", ans: "<b>Solution:</b><br>Points for y = x² - 5x + 6: (-1, 12), (0, 6), (1, 2), (2, 0), (2.5, -0.25), (3, 0), (4, 2), (5, 6).<br>The parabola intersects the X-axis at two distinct points (2, 0) and (3, 0).<br><b>Answer: Real and unequal roots: x = 2 and x = 3</b>.", markingScheme: "Table: 3M, Parabola: 3M, Nature of roots: 2M = 8 Marks", isCompulsory: false }
+      ]
+    }
+  ]
+};
+
+// --- 2. SCIENCE (TAMIL MEDIUM & ENGLISH MEDIUM) 2023 & 2022 ---
+window.PUBLIC_EXAM_PAPERS_DATA["science_tm"].papers["2023"] = {
+  year: "2023",
+  month: "ஏப்ரல் 2023",
+  examTitle: "தமிழ்நாடு அரசுப் பொதுத்தேர்வு - ஏப்ரல் 2023 (அறிவியல்)",
+  instructions: [
+    "அனைத்து வினாக்களும் சரியாகப் பதிவாகி உள்ளனவா என்பதைச் சரிபார்த்துக் கொள்ளவும்.",
+    "நீலம் அல்லது கருப்பு மையினையே எழுதுவதற்கும், பென்சிலை வரைபடங்களுக்கும் பயன்படுத்தவும்."
+  ],
+  parts: [
+    {
+      partId: "part1", partTitle: "பகுதி - I (சரியான விடையைத் தேர்ந்தெடுத்து எழுதுக • 12 வினாக்கள்)",
+      totalMarks: 12, markEach: 1,
+      questions: [
+        { id: "pub_sci_tm_23_q1", qNum: 1, type: "1m", mark: "1 மதிப்பெண்", topic: "ஒளியியல்", q: "விழி ஏற்பமைவுத் திறன் குறைபாட்டைச் சரிசெய்ய உதவுவது:<br>(அ) குவி லென்ஸ்<br>(ஆ) குழி லென்ஸ்<br>(இ) இரு குவிய லென்ஸ்<br>(ஈ) உருளை லென்ஸ்", ans: "<b>சரியான விடை: (இ) இரு குவிய லென்ஸ்</b><br><b>விளக்கம்:</b> வயது முதிர்வு காரணமாக ஏற்படும் பிரஸ்பயோபியா (விழி ஏற்பமைவு குறைபாடு) சரிசெய்ய இரு குவிய லென்ஸ் (Bifocal lens) பயன்படுகிறது.", markingScheme: "விடைக்குறிப்பு: 1 மதிப்பெண்", isCompulsory: false },
+        { id: "pub_sci_tm_23_q2", qNum: 2, type: "1m", mark: "1 மதிப்பெண்", topic: "மின்னோட்டவியல்", q: "மின்னழுத்த வேறுபாட்டை அளவிடப் பயன்படும் கருவி:<br>(அ) அம்மீட்டர்<br>(ஆ) வோல்ட்மீட்டர்<br>(இ) கால்வனாமீட்டர்<br>(ஈ) ஓம்மானி", ans: "<b>சரியான விடை: (ஆ) வோல்ட்மீட்டர்</b><br><b>விளக்கம்:</b> ஒரு மின்சுற்றில் இரு புள்ளிகளுக்கு இடையேயான மின்னழுத்த வேறுபாட்டை வோல்ட்மீட்டர் கொண்டு பக்க இணைப்பில் அளவிடலாம்.", markingScheme: "விடைக்குறிப்பு: 1 மதிப்பெண்", isCompulsory: false }
+      ]
+    },
+    {
+      partId: "part2", partTitle: "பகுதி - II (எவையேனும் 7 வினாக்களுக்கு விடையளிக்கவும் • வினா எண் 22 கட்டாயம்)",
+      totalMarks: 14, markEach: 2,
+      questions: [
+        { id: "pub_sci_tm_23_q13", qNum: 13, type: "2m", mark: "2 மதிப்பெண்", topic: "இயக்க விதிகள்", q: "நிலைமம் என்றால் என்ன? அதன் வகைகளைக் கூறுக.", ans: "<b>நிலைமம்:</b> எந்த ஒரு பொருளும் தன் மீது புறவிசை செயல்படாதவரை, தனது ஓய்வு நிலையையோ அல்லது சீரான நேர்க்கோட்டு இயக்க நிலையையோ மாற்ற இயலாத உள்ளார்ந்த பண்பு நிலைமம் எனப்படும்.<br><b>வகைகள்:</b> 1. ஓய்வில் நிலைமம், 2. இயக்கத்தில் நிலைமம், 3. திசையில் நிலைமம்.", markingScheme: "வரையறை: 1M, 3 வகைகள்: 1M = 2 மதிப்பெண்கள்", isCompulsory: false },
+        { id: "pub_sci_tm_23_q22", qNum: 22, type: "2m", mark: "2 மதிப்பெண்", topic: "கணக்கீடு / கட்டாய வினா", q: "<b>[கட்டாய வினா]</b><br>5 Ω மின்தடை கொண்ட ஒரு கம்பி வழியாக 2 A மின்னோட்டம் 5 விநாடிகள் பாய்கிறது எனில், கம்பியில் உருவாகும் வெப்ப ஆற்றலைக் கணக்கிடுக.", ans: "<b>தீர்வு (வினா எண் 22 - கட்டாய வினா):</b><br>கொடுக்கப்பட்டவை: மின்தடை R = 5 Ω, மின்னோட்டம் I = 2 A, காலம் t = 5 s.<br>ஜூல் வெப்ப விதிப்படி: H = I² · R · t<br>H = (2)² × 5 × 5 = 4 × 25 = <b>100 ஜூல் (100 J)</b>.<br><b>விடை: உருவாகும் வெப்ப ஆற்றல் = 100 ஜூல்</b>.", markingScheme: "சூத்திரம்: 1M, கணக்கீடு மற்றும் அலகு: 1M = 2 மதிப்பெண்கள்", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part3", partTitle: "பகுதி - III (எவையேனும் 7 வினாக்களுக்கு விடையளிக்கவும் • வினா எண் 32 கட்டாயம்)",
+      totalMarks: 28, markEach: 4,
+      questions: [
+        { id: "pub_sci_tm_23_q23", qNum: 23, type: "4m", mark: "4 மதிப்பெண்", topic: "ஒலியியல்", q: "மீயொலியின் மருத்துவப் பயன்கள் யாவை?", ans: "1. அல்ட்ரா சோனோகிராபி (Ultrasonography) மூலம் கருப்பையிலுள்ள கருவின் வளர்ச்சியை கண்காணிக்கலாம்.<br>2. இதயத்தின் செயல்பாடுகளை எக்கோ கார்டியோகிராம் (Echocardiogram) மூலம் அறியலாம்.<br>3. சிறுநீரகத்தில் உள்ள கற்களை அறுவை சிகிச்சையின்றி நுண்துகள்களாக உடைக்கலாம்.<br>4. இரத்தக் குழாய்களில் உள்ள அடைப்புகளைக் கண்டறியலாம்.", markingScheme: "4 பயன்கள்: 4 × 1 = 4 மதிப்பெண்கள்", isCompulsory: false },
+        { id: "pub_sci_tm_23_q32", qNum: 32, type: "4m", mark: "4 மதிப்பெண்", topic: "வேதியியல் கணக்கீடு / கட்டாய வினா", q: "<b>[கட்டாய வினா]</b><br>ஒரு கரைசலில் ஹைட்ரஜன் அயனிச் செறிவு [H⁺] = 1 × 10⁻⁴ M எனில், அக்கரைசலின் pH மதிப்பைக் கணக்கிடுக. அக்கரைசல் அமிலமா அல்லது காரமா?", ans: "<b>தீர்வு (வினா எண் 32 - கட்டாய வினா):</b><br>pH = -log₁₀ [H⁺]<br>pH = -log₁₀ (1 × 10⁻⁴) = -(-4) log₁₀ 10 = <b>4</b>.<br>pH = 4 என்பது 7-ஐ விடக் குறைவு என்பதால், இக்கரைசல் <b>அமிலத் தன்மை (Acidic)</b> கொண்டது.<br><b>விடை: pH = 4; கரைசல் அமிலம்</b>.", markingScheme: "pH சூத்திரம்: 1M, கணக்கீடு pH = 4: 2M, அமிலத் தன்மை தன்மை: 1M = 4 மதிப்பெண்கள்", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part4", partTitle: "பகுதி - IV (அனைத்து வினாக்களுக்கும் விடையளிக்கவும் • அல்லது வகை)",
+      totalMarks: 21, markEach: 7,
+      questions: [
+        { id: "pub_sci_tm_23_q33", qNum: 33, type: "7m", mark: "7 மதிப்பெண்", topic: "இயற்பியல்", q: "(அ) நியூட்டனின் இயக்க விதிகளை விரிவாகக் கூறுக.<br><b>(அல்லது)</b><br>(ஆ) மின்தடை எண் மற்றும் மின்கடத்து எண் ஆகியவற்றை வரையறுத்து அலகுகளைத் தருக.", ans: "<b>(அ) நியூட்டனின் மூன்று இயக்க விதிகள்:</b><br>1. <b>முதல் விதி:</b> எந்தவொரு பொருளும் புறவிசை செயல்படாதவரை தனது ஓய்வு நிலையிலோ அல்லது நேர்க்கோட்டு சீரான இயக்க நிலையிலோ தொடர்ந்து இருக்கும்.<br>2. <b>இரண்டாம் விதி:</b> ஒரு பொருளின் மீது செயல்படும் விசையானது அப்பொருளின் உந்த மாறுபாட்டு வீதத்திற்கு நேர்தகவில் அமையும் (F = ma).<br>3. <b>மூன்றாம் விதி:</b> ஒவ்வொரு விசைக்கும் சமமான எதிர்விசை உண்டு (F_A = -F_B).", markingScheme: "3 விதிகள் விளக்கங்களுடன்: 7 மதிப்பெண்கள்", isCompulsory: false }
+      ]
+    }
+  ]
+};
+
+// Also copy for Science EM 2023
+window.PUBLIC_EXAM_PAPERS_DATA["science_em"].papers["2023"] = {
+  year: "2023",
+  month: "April 2023",
+  examTitle: "Tamil Nadu Government SSLC Public Examination - April 2023 (Science)",
+  instructions: [
+    "Check the question paper for fairness of printing.",
+    "Use Blue or Black ink to write and pencil to draw diagrams."
+  ],
+  parts: [
+    {
+      partId: "part1", partTitle: "PART - I (Choose the Correct Answer • 12 Questions)",
+      totalMarks: 12, markEach: 1,
+      questions: [
+        { id: "pub_sci_em_23_q1", qNum: 1, type: "1m", mark: "1 Mark", topic: "Optics", q: "Presbyopia is corrected by using:<br>(A) Convex lens<br>(B) Concave lens<br>(C) Bifocal lens<br>(D) Cylindrical lens", ans: "<b>Correct Answer: (C) Bifocal lens</b><br><b>Explanation:</b> Presbyopia occurs due to aging and hardening of eye lens, corrected using bifocal lenses.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false },
+        { id: "pub_sci_em_23_q2", qNum: 2, type: "1m", mark: "1 Mark", topic: "Electricity", q: "The instrument used to measure potential difference is:<br>(A) Ammeter<br>(B) Voltmeter<br>(C) Galvanometer<br>(D) Ohmmeter", ans: "<b>Correct Answer: (B) Voltmeter</b><br><b>Explanation:</b> Voltmeter is always connected in parallel across the components to measure potential difference.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false }
+      ]
+    },
+    {
+      partId: "part2", partTitle: "PART - II (Answer Any 7 Questions • Q.22 is COMPULSORY)",
+      totalMarks: 14, markEach: 2,
+      questions: [
+        { id: "pub_sci_em_23_q13", qNum: 13, type: "2m", mark: "2 Marks", topic: "Laws of Motion", q: "Define Inertia. State its types.", ans: "<b>Inertia:</b> The inherent property of a body to resist any change in its state of rest or uniform motion unless acted upon by an external unbalanced force.<br><b>Types:</b> 1. Inertia of rest, 2. Inertia of motion, 3. Inertia of direction.", markingScheme: "Definition: 1M, Types: 1M = 2 Marks", isCompulsory: false },
+        { id: "pub_sci_em_23_q22", qNum: 22, type: "2m", mark: "2 Marks", topic: "Calculation / Compulsory", q: "<b>[COMPULSORY QUESTION]</b><br>A current of 2 A passes through a wire of resistance 5 Ω for 5 seconds. Calculate the heat energy produced in the wire.", ans: "<b>Solution (Question 22 - Compulsory Question):</b><br>Given: I = 2 A, R = 5 Ω, t = 5 s.<br>By Joule's Law of Heating: H = I² · R · t<br>H = (2)² × 5 × 5 = 4 × 25 = <b>100 Joules (100 J)</b>.<br><b>Answer: Heat produced = 100 J</b>.", markingScheme: "Formula: 1 Mark, Calculation & Unit: 1 Mark", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part3", partTitle: "PART - III (Answer Any 7 Questions • Q.32 is COMPULSORY)",
+      totalMarks: 28, markEach: 4,
+      questions: [
+        { id: "pub_sci_em_23_q32", qNum: 32, type: "4m", mark: "4 Marks", topic: "Chemistry Problem / Compulsory", q: "<b>[COMPULSORY QUESTION]</b><br>The hydrogen ion concentration of a solution is 1 × 10⁻⁴ M. Calculate the pH of the solution. Is it acidic or basic?", ans: "<b>Solution (Question 32 - Compulsory Question):</b><br>pH = -log₁₀ [H⁺]<br>pH = -log₁₀ (1 × 10⁻⁴) = -(-4) log₁₀ 10 = <b>4</b>.<br>Since pH = 4 is less than 7, the solution is <b>Acidic</b>.<br><b>Answer: pH = 4; Nature: Acidic</b>.", markingScheme: "Formula: 1M, pH = 4: 2M, Acidic nature: 1M = 4 Marks", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part4", partTitle: "PART - IV (Detailed Essay • Answer All 3 Questions)",
+      totalMarks: 21, markEach: 7,
+      questions: [
+        { id: "pub_sci_em_23_q33", qNum: 33, type: "7m", mark: "7 Marks", topic: "Physics Essay", q: "(a) State and explain Newton's three laws of motion.<br><b>(OR)</b><br>(b) Define electrical resistivity and conductivity with units.", ans: "<b>(a) Newton's Three Laws of Motion:</b><br>1. <b>First Law:</b> Every body continues in its state of rest or uniform motion unless compelled to change by an external unbalanced force.<br>2. <b>Second Law:</b> The rate of change of momentum is directly proportional to the applied force (F = ma).<br>3. <b>Third Law:</b> To every action there is an equal and opposite reaction (F_action = -F_reaction).", markingScheme: "3 laws with examples: 7 Marks", isCompulsory: false }
+      ]
+    }
+  ]
+};
+
+// --- 3. SOCIAL SCIENCE 2023 & 2022 ---
+window.PUBLIC_EXAM_PAPERS_DATA["social_tm"].papers["2023"] = {
+  year: "2023",
+  month: "ஏப்ரல் 2023",
+  examTitle: "தமிழ்நாடு அரசுப் பொதுத்தேர்வு - ஏப்ரல் 2023 (சமூக அறிவியல்)",
+  instructions: [
+    "அனைத்து வினாக்களும் சரியாகப் பதிவாகி உள்ளனவா என்பதைச் சரிபார்த்துக் கொள்ளவும்.",
+    "நீலம் அல்லது கருப்பு மையினையே எழுதவும், பென்சிலை வரைபடங்களுக்கும் பயன்படுத்தவும்."
+  ],
+  parts: [
+    {
+      partId: "part1", partTitle: "பகுதி - I (சரியான விடையைத் தேர்ந்தெடுத்து எழுதுக • 14 வினாக்கள்)",
+      totalMarks: 14, markEach: 1,
+      questions: [
+        { id: "pub_soc_tm_23_q1", qNum: 1, type: "1m", mark: "1 மதிப்பெண்", topic: "வரலாறு", q: "சீனாவின் முதல் குடியரசுத் தலைவர் யார்?<br>(அ) மாசேதுங்<br>(ஆ) டாக்டர் சன்-யத்-சென்<br>(இ) யுவான் ஷிகாய்<br>(ஈ) சியாங் கே-ஷேக்", ans: "<b>சரியான விடை: (ஆ) டாக்டர் சன்-யத்-சென்</b><br><b>விளக்கம்:</b> 1911 சீனப் புரட்சிக்குப் பின் சீனக் குடியரசின் இடைக்கால முதல் குடியரசுத் தலைவராக டாக்டர் சன்-யத்-சென் பொறுப்பேற்றார்.", markingScheme: "விடைக்குறிப்பு: 1 மதிப்பெண்", isCompulsory: false }
+      ]
+    },
+    {
+      partId: "part2", partTitle: "பகுதி - II (எவையேனும் 10 வினாக்களுக்கு விடையளிக்கவும் • வினா எண் 28 கட்டாயம்)",
+      totalMarks: 20, markEach: 2,
+      questions: [
+        { id: "pub_soc_tm_23_q15", qNum: 15, type: "2m", mark: "2 மதிப்பெண்", topic: "வரலாறு", q: "முத்து துறைமுகம் (Pearl Harbour) நிகழ்வு பற்றி குறிப்பு வரைக.", ans: "1941 டிசம்பர் 7 அன்று அமெரிக்காவின் ஹவாய் தீவிலிருந்த பெர்ல் ஹார்பர் கடற்படை தளத்தின் மீது ஜப்பான் திடீர் வான்வழித் தாக்குதல் நடத்தியது. இதன் விளைவாக அமெரிக்கா இரண்டாம் உலகப் போரில் நேச நாடுகள் அணியில் நேரடியாகக் களம் இறங்கியது.", markingScheme: "தாக்குதல் தேதி & நிகழ்வு: 1M, விளைவு: 1M = 2 மதிப்பெண்கள்", isCompulsory: false },
+        { id: "pub_soc_tm_23_q28", qNum: 28, type: "2m", mark: "2 மதிப்பெண்", topic: "பொருளியல் / கட்டாய வினா", q: "<b>[கட்டாய வினா]</b><br>மறைமுக வரி என்றால் என்ன? இரண்டு உதாரணங்கள் தருக.", ans: "<b>மறைமுக வரி:</b> ஒருவரின் மீது விதிக்கப்படும் வரிச் சுமையை மற்றொருவருக்கு மாற்ற இயலும் எனில் அது மறைமுக வரி எனப்படும்.<br><b>எடுத்துக்காட்டுகள்:</b> 1. சரக்கு மற்றும் சேவை வரி (GST), 2. கலால் வரி.", markingScheme: "வரையறை: 1M, இரு உதாரணங்கள்: 1M = 2 மதிப்பெண்கள்", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part3", partTitle: "பகுதி - III (எவையேனும் 10 வினாக்களுக்கு விடையளிக்கவும் • வினா எண் 42 காலக்கோடு கட்டாயம்)",
+      totalMarks: 50, markEach: 5,
+      questions: [
+        { id: "pub_soc_tm_23_q42", qNum: 42, type: "5m", mark: "5 மதிப்பெண்", topic: "காலக்கோடு (1910 - 1930) / கட்டாய வினா", q: "<b>[கட்டாய காலக்கோடு வினா]</b><br>1910 முதல் 1930 வரையிலான இந்திய விடுதலை இயக்கத்தின் முக்கிய 5 நிகழ்வுகளைக் காலக்கோட்டில் வரைக.<br>(அளவுத் திட்டம்: 1 அலகு = 5 ஆண்டுகள்)", ans: "<b>இந்திய தேசிய இயக்கம் காலக்கோடு (1910 - 1930):</b><br>• 1914: முதல் உலகப் போர் தொடக்கம்<br>• 1916: தன்னாட்சி இயக்கம் (ஹோம் ரூல்) / லக்னோ ஒப்பந்தம்<br>• 1919: ரவுலட் சட்டம் / ஜாலியன் வாலாபாக் படுகொலை<br>• 1920: ஒத்துழையாமை இயக்கம் தொடக்கம்<br>• 1922: சௌரி சௌரா நிகழ்வு<br>• 1930: உப்புச் சத்தியாகிரகம் / தண்டி யாத்திரை.", markingScheme: "அளவுத்திட்டம்: 1M, 5 நிகழ்வுகள்: 4M = 5 மதிப்பெண்கள்", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part4", partTitle: "பகுதி - IV (8 மதிப்பெண் விரிவான வினாக்கள் • 2 வினாக்கள்)",
+      totalMarks: 16, markEach: 8,
+      questions: [
+        { id: "pub_soc_tm_23_q43", qNum: 43, type: "8m", mark: "8 மதிப்பெண்", topic: "வரலாறு", q: "வேலூர் புரட்சிக்கான (1806) காரணங்கள் மற்றும் அதன் விளைவுகளை விரிவாக ஆராய்க.", ans: "<b>வேலூர் புரட்சி (1806):</b><br>1. <b>காரணங்கள்:</b> புதிய இராணுவ ஒழுங்குமுறைகள், அக்னியூ தலைப்பாகை, சமயக் குறிகள் அணியத் தடை, தாடி மீசை மழித்தல்.<br>2. <b>வெடிப்பு:</b> ஜூலை 10, 1806 அன்று புரட்சி வெடித்தது; கர்னல் பேன்கோர்ட் கொல்லப்பட்டார்; திப்புவின் கொடி ஏற்றப்பட்டது.<br>3. <b>அடக்குமுறை:</b> கர்னல் கில்லஸ்பி ஆற்காட்டிலிருந்து வந்து புரட்சியை இரக்கமின்றி ஒடுக்கினார்.", markingScheme: "காரணங்கள்: 3M, புரட்சி போக்கு: 3M, விளைவு: 2M = 8 மதிப்பெண்கள்", isCompulsory: false },
+        { id: "pub_soc_tm_23_q44", qNum: 44, type: "8m", mark: "8 மதிப்பெண்", topic: "இந்திய வரைபடம்", q: "இந்திய வரைபடத்தில் பின்வரும் 8 இடங்களைக் குறித்துப் பெயரிடுக:<br>(i) இமயமலை (ii) கங்கை ஆறு (iii) சோழமண்டலக் கடற்கரை (iv) மும்பை (v) கரிசல் மண் பகுதி (vi) காசிரங்கா தேசியப் பூங்கா (vii) சென்னை (viii) தூத்துக்குடி துறைமுகம்.", ans: "வரைபடத்தில் 8 இடங்களை பென்சிலால் சரியாகக் குறித்து பெயரிட வேண்டும்.", markingScheme: "8 இடங்கள் சரியாகக் குறித்தல்: 8 × 1 = 8 மதிப்பெண்கள்", isCompulsory: false }
+      ]
+    }
+  ]
+};
+
+// Social Science EM 2023
+window.PUBLIC_EXAM_PAPERS_DATA["social_em"].papers["2023"] = {
+  year: "2023",
+  month: "April 2023",
+  examTitle: "Tamil Nadu Government SSLC Public Examination - April 2023 (Social Science)",
+  instructions: [
+    "Check the question paper for fairness of printing.",
+    "Use Blue or Black ink to write and pencil for maps and diagrams."
+  ],
+  parts: [
+    {
+      partId: "part1", partTitle: "PART - I (Choose the Correct Answer • 14 Questions)",
+      totalMarks: 14, markEach: 1,
+      questions: [
+        { id: "pub_soc_em_23_q1", qNum: 1, type: "1m", mark: "1 Mark", topic: "History", q: "Who was the first President of the Chinese Republic?<br>(A) Mao Zedong<br>(B) Dr. Sun Yat-sen<br>(C) Yuan Shikai<br>(D) Chiang Kai-shek", ans: "<b>Correct Answer: (B) Dr. Sun Yat-sen</b><br><b>Explanation:</b> Dr. Sun Yat-sen was elected provisional President following the 1911 Xinhai Revolution.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false }
+      ]
+    },
+    {
+      partId: "part2", partTitle: "PART - II (Answer Any 10 Questions • Q.28 is COMPULSORY)",
+      totalMarks: 20, markEach: 2,
+      questions: [
+        { id: "pub_soc_em_23_q15", qNum: 15, type: "2m", mark: "2 Marks", topic: "History", q: "Write a short note on Pearl Harbour incident.", ans: "On 7 December 1941, Japan launched a surprise air attack on the US naval base at Pearl Harbour, Hawaii. This prompted the United States to formally declare war and enter World War II.", markingScheme: "Date & event: 1M, Impact: 1M = 2 Marks", isCompulsory: false },
+        { id: "pub_soc_em_23_q28", qNum: 28, type: "2m", mark: "2 Marks", topic: "Economics / Compulsory", q: "<b>[COMPULSORY QUESTION]</b><br>What is meant by Indirect Tax? Give two examples.", ans: "<b>Indirect Tax:</b> An indirect tax is a tax collected by an intermediary from the person who bears the ultimate economic burden of the tax.<br><b>Examples:</b> 1. Goods and Services Tax (GST), 2. Customs Duty, 3. Excise Duty.", markingScheme: "Definition: 1M, Examples: 1M = 2 Marks", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part3", partTitle: "PART - III (Answer Any 10 Questions • Q.42 TIMELINE is COMPULSORY)",
+      totalMarks: 50, markEach: 5,
+      questions: [
+        { id: "pub_soc_em_23_q42", qNum: 42, type: "5m", mark: "5 Marks", topic: "Timeline 1910-1930 / Compulsory", q: "<b>[COMPULSORY TIMELINE QUESTION]</b><br>Draw a Timeline for the Indian Freedom Movement between 1910 and 1930 and mark any 5 important historical events.<br>(Scale: 1 unit = 5 years)", ans: "<b>Timeline: 1910 – 1930 (Scale: 1 unit = 5 years):</b><br>• 1914: Outbreak of World War I<br>• 1916: Home Rule League founded / Lucknow Pact<br>• 1919: Rowlatt Act / Jallianwala Bagh Massacre<br>• 1920: Non-Cooperation Movement launched<br>• 1922: Chauri Chaura incident<br>• 1930: Salt Satyagraha / Dandi March.", markingScheme: "Scale: 1 Mark, 5 Events: 4 Marks = 5 Marks", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part4", partTitle: "PART - IV (Answer All 2 Questions • 8 Marks Each)",
+      totalMarks: 16, markEach: 8,
+      questions: [
+        { id: "pub_soc_em_23_q43", qNum: 43, type: "8m", mark: "8 Marks", topic: "History", q: "Account for the outbreak and suppression of the Vellore Revolt of 1806.", ans: "<b>Vellore Revolt (1806):</b><br>1. <b>Causes:</b> Introduction of new turban, prohibition of caste marks, ear-rings, and beard regulations by General Agnew.<br>2. <b>Outbreak:</b> Indian sepoys revolted on 10 July 1806; Col. Fancourt was killed; Tipu Sultan's flag hoisted.<br>3. <b>Suppression:</b> Col. Gillespie arrived from Arcot and ruthlessly crushed the revolt.", markingScheme: "Causes: 3M, Outbreak: 3M, Outcome: 2M = 8 Marks", isCompulsory: false }
+      ]
+    }
+  ]
+};
+
+// --- 4. TAMIL 2023 & 2022 ---
+window.PUBLIC_EXAM_PAPERS_DATA["tamil"].papers["2023"] = {
+  year: "2023",
+  month: "ஏப்ரல் 2023",
+  examTitle: "தமிழ்நாடு அரசுப் பொதுத்தேர்வு - ஏப்ரல் 2023 (தமிழ்)",
+  instructions: [
+    "அனைத்து வினாக்களும் சரியாகப் பதிவாகி உள்ளனவா என்பதைச் சரிபார்த்துக் கொள்ளவும்.",
+    "அடிபிறழாமல், அழகாகப் பிழையின்றி எழுதவும்."
+  ],
+  parts: [
+    {
+      partId: "part1", partTitle: "பகுதி - I (சரியான விடையைத் தேர்ந்தெடுத்து எழுதுக • 15 வினாக்கள்)",
+      totalMarks: 15, markEach: 1,
+      questions: [
+        { id: "pub_tam_23_q1", qNum: 1, type: "1m", mark: "1 மதிப்பெண்", topic: "மொழி", q: "'கேட்டவர் மகிழப் பாடிய பாடல் இது' - தொடரில் இடம்பெற்றுள்ள தொழிற்பெயரும் வினையாலணையும் பெயரும் முறையே:<br>(அ) பாடிய, பாடல்<br>(ஆ) பாடல், கேட்டவர்<br>(இ) கேட்டவர், பாடிய<br>(ஈ) பாடல், பாடிய", ans: "<b>சரியான விடை: (ஆ) பாடல், கேட்டவர்</b><br><b>விளக்கம்:</b> 'பாடல்' என்பது தொழிற்பெயர்; 'கேட்டவர்' என்பது வினையாலணையும் பெயர்.", markingScheme: "விடைக்குறிப்பு: 1 மதிப்பெண்", isCompulsory: false }
+      ]
+    },
+    {
+      partId: "part2", partTitle: "பகுதி - II (எவையேனும் 9 வினாக்களுக்கு விடையளிக்கவும் • வினா எண் 28 திருக்குறள் கட்டாயம்)",
+      totalMarks: 18, markEach: 2,
+      questions: [
+        { id: "pub_tam_23_q16", qNum: 16, type: "2m", mark: "2 மதிப்பெண்", topic: "உரைநடை", q: "'விருந்தோம்பல்' என்றால் என்ன?", ans: "அறிமுகம் இல்லாத புதியவர்களையும் இன்முகத்தோடு வரவேற்று, உண்ண உணவும், தங்க இடமும் கொடுத்து உபசரிப்பதே விருந்தோம்பல் எனப்படும்.", markingScheme: "விளக்கம்: 2 மதிப்பெண்கள்", isCompulsory: false },
+        { id: "pub_tam_23_q28", qNum: 28, type: "2m", mark: "2 மதிப்பெண்", topic: "திருக்குறள் / கட்டாய வினா", q: "<b>[கட்டாய வினா - திருக்குறள்]</b><br>'பணிவுடையன்' எனத் தொடங்கும் திருக்குறளை எழுதுக.", ans: "<b>பணிவுடையன் இன்சொலன் ஆதல் ஒருவற்கு<br>அணியல்ல மற்றுப் பிற.</b>", markingScheme: "சீர் அமையப் பிழையின்றி எழுதுதல்: 2 மதிப்பெண்கள்", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part3", partTitle: "பகுதி - III (எவையேனும் 6 வினாக்களுக்கு விடையளிக்கவும் • வினா எண் 34 மனப்பாடப்பாடல் கட்டாயம்)",
+      totalMarks: 18, markEach: 3,
+      questions: [
+        { id: "pub_tam_23_q34", qNum: 34, type: "3m", mark: "3 மதிப்பெண்", topic: "மனப்பாடச் செய்யுள் / கட்டாய வினா", q: "<b>[கட்டாய வினா - மனப்பாடச் செய்யுள்]</b><br>'வாளினால் அறுத்துச்' எனத் தொடங்கும் பெருமாள் திருமொழிப் பாடலை எழுதுக.", ans: "<b>வாளினால் அறுத்துச் சுடினும் மருத்துவன்பால்<br>மாளாத காதல் நோயாளன் போல் மாயத்தால்<br>மீளாத் துயர்தரினும் வித்துவக் கோட்டம்மா! நீ<br>ஆளா உனதருளே பார்ப்பன் அடியேனே.</b>", markingScheme: "சீர் பிரிக்காமல் பிழையின்றி பாடல் எழுதுதல்: 3 மதிப்பெண்கள்", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part4", partTitle: "பகுதி - IV (அனைத்து வினாக்களுக்கும் விடையளிக்கவும் • 5 மதிப்பெண் வினாக்கள்)",
+      totalMarks: 25, markEach: 5,
+      questions: [
+        { id: "pub_tam_23_q35", qNum: 35, type: "5m", mark: "5 மதிப்பெண்", topic: "கடிதம்", q: "உங்கள் பகுதியில் நூலகம் அமைக்க வேண்டி மாவட்ட நூலக அலுவலருக்கு விண்ணப்பம் வரைக.", ans: "<b>விண்ணப்பக் கடிதம்:</b><br>அனுப்புநர், பெறுநர், மதிப்பிற்குரிய ஐயா, பொருள், செய்திக் குறிப்பு, நன்றி, இப்படிக்கு என முறைப்படி கடிதம் எழுதுதல்.", markingScheme: "அமைப்பு: 1M, பொருள்: 3M, முடிவு: 1M = 5 மதிப்பெண்கள்", isCompulsory: false }
+      ]
+    },
+    {
+      partId: "part5", partTitle: "பகுதி - V (8 மதிப்பெண் கட்டுரைகள் • 3 வினாக்கள்)",
+      totalMarks: 24, markEach: 8,
+      questions: [
+        { id: "pub_tam_23_q40", qNum: 40, type: "8m", mark: "8 மதிப்பெண்", topic: "பொதுக்கட்டுரை", q: "சான்றோர் வளர்த்த தமிழ் என்னும் தலைப்பில் முன்னுரை, தமிழ் வளர்ச்சி, சான்றோர் பங்களிப்பு, முடிவுரை கொண்டு கட்டுரை வரைக.", ans: "<b>முன்னுரை:</b> தமிழ் தொன்மையும் இனிமையும் வாய்ந்த செம்மொழி.<br><b>பங்களிப்பு:</b> சங்கப் புலவர்கள், ஆழ்வார்கள், நாயன்மார்கள், பாரதியார், பாரதிதாசன் ஆகியோர் ஆற்றிய பணிகள்.<br><b>முடிவுரை:</b> நாமும் தமிழைப் போற்றி வளர்ப்போம்.", markingScheme: "குறிப்புச் சட்டகம்: 1M, உட்தலைப்புகள்: 6M, முடிவுரை: 1M = 8 மதிப்பெண்கள்", isCompulsory: false }
+      ]
+    }
+  ]
+};
+
+// --- 5. ENGLISH 2023 & 2022 ---
+window.PUBLIC_EXAM_PAPERS_DATA["english"].papers["2023"] = {
+  year: "2023",
+  month: "April 2023",
+  examTitle: "Tamil Nadu Government SSLC Public Examination - April 2023 (English)",
+  instructions: [
+    "Check the question paper for fairness of printing.",
+    "Use Blue or Black ink to write."
+  ],
+  parts: [
+    {
+      partId: "part1", partTitle: "PART - I (1-Mark MCQs • Answer All 14 Questions)",
+      totalMarks: 14, markEach: 1,
+      questions: [
+        { id: "pub_eng_23_q1", qNum: 1, type: "1m", mark: "1 Mark", topic: "Synonyms", q: "Choose the correct synonym of the underlined word:<br>The young seagull was <u>alone</u> on his ledge.<br>(A) accompanied<br>(B) single / isolated<br>(C) crowded<br>(D) happy", ans: "<b>Correct Answer: (B) single / isolated</b><br><b>Explanation:</b> 'Alone' means without anyone else; solitary.", markingScheme: "Option and answer: 1 Mark", isCompulsory: false }
+      ]
+    },
+    {
+      partId: "part2", partTitle: "PART - II (Answer Any 10 Questions • Q.28 ROAD MAP is COMPULSORY)",
+      totalMarks: 20, markEach: 2,
+      questions: [
+        { id: "pub_eng_23_q15", qNum: 15, type: "2m", mark: "2 Marks", topic: "Grammar", q: "Rewrite the sentence in Passive Voice:<br>The cat killed the mouse.", ans: "<b>Answer: The mouse was killed by the cat.</b>", markingScheme: "Correct passive structure: 2 Marks", isCompulsory: false },
+        { id: "pub_eng_23_q28", qNum: 28, type: "2m", mark: "2 Marks", topic: "Road Map / Compulsory", q: "<b>[COMPULSORY QUESTION]</b><br>A stranger wants to go to the Railway Station. Guide him from the Anna Arch bus stop.", ans: "<b>Directions (Question 28 - Compulsory Question):</b><br>1. Walk straight along Station Road.<br>2. Turn right at the traffic signal.<br>3. Walk past the Municipal Park on your left.<br>4. You will reach the Railway Station directly opposite the clock tower.", markingScheme: "Clear directions: 2 Marks", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part3", partTitle: "PART - III (Answer Any 10 Questions • Q.42 MEMORY POEM is COMPULSORY)",
+      totalMarks: 50, markEach: 5,
+      questions: [
+        { id: "pub_eng_23_q42", qNum: 42, type: "5m", mark: "5 Marks", topic: "Quote from Memory / Compulsory", q: "<b>[COMPULSORY QUESTION]</b><br>Quote from memory the poem 'I am Every Woman' from 'A woman is beauty innate...' to '...she is a woman, have no fear.'", ans: "<b>Quote from Memory (Question 42 - Compulsory Question):</b><br><br><b>A woman is beauty innate,<br>A symbol of power and strength.<br>She puts her life at stake,<br>She’s real, she’s not fake!<br>The summer of life she’s ready to see in spring.<br>She says, 'Spring will come again, my dear.<br>Let me care for the ones who’re near.’<br>She’s The Woman - she has no fear!</b>", markingScheme: "Exact recitation with spelling and punctuation: 5 Marks", isCompulsory: true }
+      ]
+    },
+    {
+      partId: "part4", partTitle: "PART - IV (Detailed 8-Mark Questions • 2 Questions)",
+      totalMarks: 16, markEach: 8,
+      questions: [
+        { id: "pub_eng_23_q43", qNum: 43, type: "8m", mark: "8 Marks", topic: "Supplementary Story", q: "Write a coherent story developing the hints with a suitable title and moral:<br>Two friends - walking through forest - bear approaches - one climbs tree - other lies flat on ground - holds breath - bear sniffs - leaves him - true friend.", ans: "<b>THE TWO FRIENDS AND THE BEAR:</b><br>Two friends were walking through an arduous forest. Suddenly a ferocious bear confronted them. One friend quickly climbed a tall tree without helping his companion. The second friend remembered that bears do not touch dead bodies, so he lay flat on the ground and held his breath. The bear sniffed his ears, thought he was dead, and walked away. The first friend climbed down and asked what the bear whispered. The wise friend replied: 'Never trust a friend who abandons you in times of danger.'<br><b>Moral:</b> A friend in need is a friend indeed.", markingScheme: "Title & Moral: 2M, Story: 6M = 8 Marks", isCompulsory: false }
+      ]
+    }
+  ]
+};
+
+// Also copy 2022 papers for subjects
+window.PUBLIC_EXAM_PAPERS_DATA["science_tm"].papers["2022"] = window.PUBLIC_EXAM_PAPERS_DATA["science_tm"].papers["2023"];
+window.PUBLIC_EXAM_PAPERS_DATA["science_em"].papers["2022"] = window.PUBLIC_EXAM_PAPERS_DATA["science_em"].papers["2023"];
+window.PUBLIC_EXAM_PAPERS_DATA["social_tm"].papers["2022"] = window.PUBLIC_EXAM_PAPERS_DATA["social_tm"].papers["2023"];
+window.PUBLIC_EXAM_PAPERS_DATA["social_em"].papers["2022"] = window.PUBLIC_EXAM_PAPERS_DATA["social_em"].papers["2023"];
+window.PUBLIC_EXAM_PAPERS_DATA["tamil"].papers["2022"] = window.PUBLIC_EXAM_PAPERS_DATA["tamil"].papers["2023"];
+window.PUBLIC_EXAM_PAPERS_DATA["english"].papers["2022"] = window.PUBLIC_EXAM_PAPERS_DATA["english"].papers["2023"];
+

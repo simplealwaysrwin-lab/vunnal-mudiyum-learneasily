@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -14206,18 +14206,19 @@ function resumeLastVisitedLesson() {
     var isPaperMode = (pubExamState.viewMode === 'paper');
     var isSolutionsMode = (pubExamState.viewMode === 'solutions');
 
+    var totalQuestions = allQInPaper.length;
+    var perPage = 2;
+    var totalPages = Math.ceil(totalQuestions / perPage) || 1;
+    var page = pubExamState.page || 1;
+    if (page > totalPages) { page = totalPages; pubExamState.page = page; }
+    if (page < 1) { page = 1; pubExamState.page = page; }
+    var startIndex = (page - 1) * perPage;
+    var endIndex = Math.min(startIndex + perPage, totalQuestions);
+
     // Build question body HTML according to view mode
     var questionsBodyHtml = '';
 
     if (isPaperMode) {
-      var page = pubExamState.page || 1;
-      var perPage = 2;
-      var totalQuestions = allQInPaper.length;
-      var totalPages = Math.ceil(totalQuestions / perPage) || 1;
-      if (page > totalPages) { page = totalPages; pubExamState.page = page; }
-      if (page < 1) { page = 1; pubExamState.page = page; }
-      var startIndex = (page - 1) * perPage;
-      var endIndex = Math.min(startIndex + perPage, totalQuestions);
       var pageQuestions = allQInPaper.slice(startIndex, endIndex);
 
       var topPaginationHtml = renderPubExamPaginationBar(page, totalPages, startIndex, endIndex, totalQuestions, allQInPaper, isEm);
@@ -14456,15 +14457,23 @@ function resumeLastVisitedLesson() {
           <!-- 5. RENDER QUESTIONS (2 PER PAGE WITH NAVIGATION OR FULL SCROLL) -->
           ${questionsBodyHtml}
 
-          <!-- Paper End Footer -->
-          <div style="text-align:center; padding:20px 0; border-top:2px solid #0f172a; margin-top:24px;">
-            <div style="font-size:13px; font-weight:900; color:#475569; letter-spacing:1px;">
-              *** ${isEm ? 'END OF QUESTION PAPER' : 'வினாத்தாள் நிறைவுற்றது'} ***
+          <!-- Paper End Footer: ONLY SHOW "END OF QUESTION PAPER" ON THE LAST PAGE OR IN FULL SCROLL MODE -->
+          ${(!isPaperMode || page >= totalPages) ? `
+            <div style="text-align:center; padding:20px 0; border-top:2px solid #0f172a; margin-top:24px;">
+              <div style="font-size:13px; font-weight:900; color:#475569; letter-spacing:1px;">
+                *** ${isEm ? 'END OF QUESTION PAPER' : 'வினாத்தாள் நிறைவுற்றது'} ***
+              </div>
+              <div style="font-size:12px; color:#64748b; margin-top:4px;">
+                Vunnal Mudiyum Learn Easily • Tamil Nadu 10th Standard Samacheer Kalvi Education
+              </div>
             </div>
-            <div style="font-size:12px; color:#64748b; margin-top:4px;">
-              Vunnal Mudiyum Learn Easily • Tamil Nadu 10th Standard Samacheer Kalvi Education
+          ` : `
+            <div style="text-align:center; padding:12px 0; border-top:1px dashed #cbd5e1; margin-top:14px;">
+              <button type="button" class="tab-btn" onclick="nextPubExamPage()" style="background:#f1f5f9; color:#2563eb; border:1px solid #bfdbfe; border-radius:8px; padding:7px 16px; font-size:12.5px; font-weight:800; cursor:pointer;">
+                👉 ${isEm ? `Continue to Next Page (Questions ${endIndex + 1} - ${Math.min(endIndex + 2, totalQuestions)}) ▶` : `அடுத்த பக்கத்தில் தொடர்கிறது (வினாக்கள் ${endIndex + 1} - ${Math.min(endIndex + 2, totalQuestions)}) ▶`}
+              </button>
             </div>
-          </div>
+          `}
 
         </div>
         `}

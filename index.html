@@ -10563,7 +10563,18 @@ function resumeLastVisitedLesson() {
     }
     // CRITICAL: Filter out any chunks that do NOT contain letters or numbers
     // This strictly prevents bare "." or ".." from ever being sent to TTS (which would speak "dot")
-    return result.filter(r => /[a-zA-Z0-9\u0B80-\u0BFF]/.test(r));
+    // Merge tiny trailing chunks (e.g. 'All the best!' or 'ஆல் தி பெஸ்ட்!') into the previous chunk
+    // to prevent isolated sub-second speech utterances that sound clipped or cut off!
+    const finalMerged = [];
+    for (let i = 0; i < result.length; i++) {
+      const cur = result[i];
+      if (i > 0 && cur.length < 35 && (finalMerged[finalMerged.length - 1].length + cur.length) <= 180) {
+        finalMerged[finalMerged.length - 1] += ' ' + cur;
+      } else {
+        finalMerged.push(cur);
+      }
+    }
+    return finalMerged.filter(r => /[a-zA-Z0-9\u0B80-\u0BFF]/.test(r));
   }
 
   const speechQueueEngine = {
@@ -10898,6 +10909,10 @@ function resumeLastVisitedLesson() {
   const isEnglish = (lang && lang.startsWith('en')) || (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
   
   let text = rawHtml.replace(/<svg[\s\S]*?<\/svg>/gi, ' ');
+  if (isEnglish) {
+    text = text.replace(/\b10th\s+std\b/gi, 'tenth standard')
+               .replace(/\bstd\b/gi, 'standard');
+  }
   text = text.replace(/<\/td>\s*<td[^>]*>/gi, ', ');
   text = text.replace(/<\/th>\s*<th[^>]*>/gi, ', ');
   text = text.replace(/<\/tr>/gi, '. ');
@@ -11183,6 +11198,70 @@ function resumeLastVisitedLesson() {
       this.executeSpeech(item, isEnglish, lang);
     },
 
+    isMajorOutroQuestion: function(item) {
+      if (!item) return false;
+
+      // 1. Explicit boolean flags
+      if (item.is5m || item.is7m || item.is8m || item.is8Mark) return true;
+
+      // 2. Type check (5M, 7M, 8M ONLY - strictly excludes 1M, 2M, 3M, 4M)
+      const t = (item.type || '').toLowerCase().trim();
+      if (t === '5m' || t === '7m' || t === '8m') return true;
+      if (t === '1m' || t === '2m' || t === '3m' || t === '4m') return false;
+
+      // 3. Mark check
+      const m = (item.mark || '').toLowerCase().trim();
+      if (m.includes('5') || m.includes('7') || m.includes('8') ||
+          m.includes('ஐந்து') || m.includes('ஏழு') || m.includes('எட்டு') ||
+          m.includes('நெடுவினா') || m.includes('விரிவான விடை')) {
+        return true;
+      }
+      if (m.includes('1') || m.includes('2') || m.includes('3') || m.includes('4') ||
+          m.includes('ஒரு') || m.includes('இரு') || m.includes('மூன்று') ||
+          m.includes('குறுவினா') || m.includes('சிறுவினா')) {
+        return false;
+      }
+
+      // 4. Question ID check
+      const id = (item.id || '').toLowerCase();
+      if (id.includes('_5m') || id.includes('_7m') || id.includes('_8m') ||
+          id.includes('5mark') || id.includes('7mark') || id.includes('8mark')) {
+        return true;
+      }
+      if (id.includes('_1m') || id.includes('_2m') || id.includes('_3m') || id.includes('_4m') ||
+          id.includes('1mark') || id.includes('2mark') || id.includes('3mark')) {
+        return false;
+      }
+
+      // 5. Sub-section / special categories (Geometry, Graph, Map, Timeline are 8M in TN SSLC)
+      const sec = (item.subSectionId || '').toLowerCase();
+      if (sec.includes('geo') || sec.includes('graph') || sec.includes('map') || sec.includes('timeline')) {
+        return true;
+      }
+
+      // 6. Public exam question number checks
+      if (typeof item.qNum === 'number') {
+        const qNum = item.qNum;
+        if (id.startsWith('pub_m_') || id.startsWith('pe_math')) {
+          return qNum >= 29; // 5M (Q29-42) & 8M (Q43-44)
+        }
+        if (id.startsWith('pub_sci_') || id.startsWith('pe_sci')) {
+          return qNum >= 33; // 7M (Q33-35)
+        }
+        if (id.startsWith('pub_soc_') || id.startsWith('pe_soc')) {
+          return qNum >= 29; // 5M (Q29-42) & 8M (Q43-44)
+        }
+        if (id.startsWith('pub_tam_') || id.startsWith('pe_tam')) {
+          return qNum >= 35; // 5M (Part IV) & 8M (Part V)
+        }
+        if (id.startsWith('pub_eng_') || id.startsWith('pe_eng')) {
+          return qNum >= 29; // 5M (Part III) & 8M (Part IV)
+        }
+      }
+
+      return false;
+    },
+
     executeSpeech: function(item, isEnglish, lang) {
       if (!this.isPlaying || this.currentId !== item.id) return;
       if (!('speechSynthesis' in window)) return;
@@ -11197,11 +11276,18 @@ function resumeLastVisitedLesson() {
       const formattedQ = this.formatMathForSpeech(rawQ, lang).replace(/[\.,:;\s]+$/, '');
       const formattedAns = this.formatMathForSpeech(rawAns, lang).replace(/[\.,:;\s]+$/, '');
 
-            const promoOutro = isEnglish
-        ? "To learn 10th std subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best!"
-        : "10-ஆம் வகுப்பு பாடங்களை எளிதாகக் கற்கவும், நல்ல மதிப்பெண்கள் பெறவும் 'உன்னால் முடியும் Learn Easily' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!";
+                  // USER REQUIREMENT:
+      // Closing conclusion ONLY for 5M, 7M, 8M (& 2M Continuous Voice)
+      // NOT for individual 1M, 2M, 3M questions to avoid repetitive fatigue!
+      const isMajorQ = this.isMajorOutroQuestion(item);
 
-      let speechText = `${qHeading}, ${formattedQ}. ${aHeading}. ${formattedAns}. ${promoOutro}`;
+      let speechText = `${qHeading}, ${formattedQ}. ${aHeading}. ${formattedAns}.`;
+      if (isMajorQ) {
+        const promoOutro = isEnglish
+          ? "To learn 10th standard subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best!"
+          : "10-ஆம் வகுப்பு பாடங்களை எளிதாகக் கற்கவும், நல்ல மதிப்பெண்கள் பெறவும் 'உன்னால் முடியும் Learn Easily' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!";
+        speechText += ` ${promoOutro}`;
+      }
       speechText = speechText.replace(/\.{2,}/g, '.').replace(/\s*\.\s*/g, '. ').trim();
 
       const chunks = chunkTextForSpeech(speechText, 130);
@@ -11716,7 +11802,7 @@ function resumeLastVisitedLesson() {
       let statusMsg = '';
 
       const promoMsg = isEnglish
-        ? "To learn 10th std subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best!"
+        ? "To learn 10th standard subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best!"
         : "10-ஆம் வகுப்பு பாடங்களை எளிதாகக் கற்கவும், நல்ல மதிப்பெண்கள் பெறவும் 'உன்னால் முடியும் Learn Easily' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!";
 
       if (this.mode === 'manapaadam') {

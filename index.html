@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -10,8 +10,37 @@
     window.location.replace(target);
   }
 
-  // Early diagram error stub
-  window.handleDiagramImgError = function(img) { if (!img) return; img.style.display = 'none'; };
+  // Early diagram error fallback handler
+  window.handleDiagramImgError = function(img) {
+    if (!img) return;
+    var rawSrc = img.src || img.getAttribute('src') || '';
+    if ((rawSrc.indexOf('sci_neuron_diagram') !== -1 || rawSrc.indexOf('neuron') !== -1) && window.IMG_NEURON_B64) {
+      img.src = window.IMG_NEURON_B64;
+      img.removeAttribute('onerror');
+      return;
+    }
+    if (rawSrc.indexOf('sci_brain_diagram') !== -1 && window.IMG_BRAIN_B64) {
+      img.src = window.IMG_BRAIN_B64;
+      img.removeAttribute('onerror');
+      return;
+    }
+    if ((rawSrc.indexOf('sci_plant_hormones_diagram') !== -1 || rawSrc.indexOf('sci_plant_hormone') !== -1) && window.IMG_PLANT_B64) {
+      img.src = window.IMG_PLANT_B64;
+      img.removeAttribute('onerror');
+      return;
+    }
+    if (rawSrc.indexOf('maths_two_dice_board_part1') !== -1 && window.IMG_DICE_PART1_B64) {
+      img.src = window.IMG_DICE_PART1_B64;
+      img.removeAttribute('onerror');
+      return;
+    }
+    if (rawSrc.indexOf('maths_two_dice_board_part2') !== -1 && window.IMG_DICE_PART2_B64) {
+      img.src = window.IMG_DICE_PART2_B64;
+      img.removeAttribute('onerror');
+      return;
+    }
+    img.style.display = 'none';
+  };
 
   // 2. Global Universal Image Fallback: Handles both root (...jpg) and subfolder (images/...jpg) on GitHub Pages
   window.addEventListener('error', function(e) {
@@ -25,7 +54,7 @@
     }
   }, true);
 </script>
-<script src="images_b64.js?v=20261120_v106"></script>
+<script src="images_b64.js?v=20261122_v115"></script>
 <meta name="theme-color" content="#2563eb">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -254,7 +283,7 @@
   <script src="data_social_em_u25.js?v=20261119_v99"></script>
   <script src="data_social_em_u26.js?v=20261119_v99"></script>
   <script src="data_social_em_u27.js?v=20261119_v99"></script>
-  <script src="data_public_exam_papers.js?v=20261121_v109"></script>
+  <script src="data_public_exam_papers.js?v=20261122_v115"></script>
 <script src="map_data_and_engine.js?v=20261115_v79"></script>
 <script src="map_practice_evaluator.js?v=20261115_v79"></script>
 <style>
@@ -9852,6 +9881,11 @@ function resumeLastVisitedLesson() {
   function handleDiagramImgError(img) {
     if (!img) return;
     var rawSrc = img.src || img.getAttribute('src') || '';
+    if ((rawSrc.indexOf('sci_neuron_diagram') !== -1 || rawSrc.indexOf('neuron') !== -1) && window.IMG_NEURON_B64) {
+      img.src = window.IMG_NEURON_B64;
+      img.removeAttribute('onerror');
+      return;
+    }
     if (rawSrc.indexOf('sci_brain_diagram') !== -1 && window.IMG_BRAIN_B64) {
       img.src = window.IMG_BRAIN_B64;
       img.removeAttribute('onerror');

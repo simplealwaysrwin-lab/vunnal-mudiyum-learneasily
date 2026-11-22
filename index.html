@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -13852,7 +13852,9 @@ function resumeLastVisitedLesson() {
   window.pubExamState = {
     subjectId: 'maths_tm',
     year: '2024',
-    viewMode: 'paper',         // DEFAULT IS 'paper' (Question Paper Mode) as requested!
+    viewMode: 'paper',         // DEFAULT: 'paper' (2 Questions Per Page pagination mode)
+    page: 1,                   // Current page for 2 questions per page
+    perPage: 2,                // 2 questions per page
     revealedAnswers: {},       // { [qId]: boolean }
     activePart: 'all',
     search: '',
@@ -13890,7 +13892,8 @@ function resumeLastVisitedLesson() {
       pubExamState.year = availYears[0] || '2024';
     }
 
-    pubExamState.viewMode = 'paper'; // Default to Question Paper view!
+    pubExamState.viewMode = 'paper'; // Default to 2 Questions Per Page mode!
+    pubExamState.page = 1;           // Reset to page 1
     pubExamState.activePart = 'all';
     pubExamState.search = '';
 
@@ -13918,21 +13921,58 @@ function resumeLastVisitedLesson() {
   };
 
   window.setPubExamSubject = function(subId) {
+    pubExamState.page = 1;
     openSubjectPublicExamHub(subId, pubExamState.year);
   };
 
   window.setPubExamYear = function(year) {
     pubExamState.year = year;
+    pubExamState.page = 1;
     pubExamState.activePart = 'all';
     renderSubjectPublicExamHub();
   };
 
   window.setPubExamViewMode = function(mode) {
     pubExamState.viewMode = mode;
+    pubExamState.page = 1;
     renderSubjectPublicExamHub();
   };
 
+  window.goToPubExamPage = function(pageNumber) {
+    var totalQ = pubExamState.questions ? pubExamState.questions.length : 0;
+    var totalPages = Math.ceil(totalQ / 2) || 1;
+    pubExamState.page = Math.max(1, Math.min(pageNumber, totalPages));
+    renderSubjectPublicExamHub();
+    var anchor = document.getElementById('pubExamListAnchor') || document.querySelector('.official-paper-sheet');
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  window.prevPubExamPage = function() {
+    goToPubExamPage((pubExamState.page || 1) - 1);
+  };
+
+  window.nextPubExamPage = function() {
+    goToPubExamPage((pubExamState.page || 1) + 1);
+  };
+
   window.scrollToExamPart = function(partId) {
+    var allQ = pubExamState.questions || [];
+    if (pubExamState.viewMode === 'paper') {
+      var foundIdx = -1;
+      for (var i = 0; i < allQ.length; i++) {
+        if (allQ[i].partId === partId) {
+          foundIdx = i;
+          break;
+        }
+      }
+      if (foundIdx !== -1) {
+        var targetPage = Math.floor(foundIdx / 2) + 1;
+        goToPubExamPage(targetPage);
+        return;
+      }
+    }
     var el = document.getElementById('partAnchor_' + partId) || document.getElementById(partId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -13982,6 +14022,133 @@ function resumeLastVisitedLesson() {
     }
   };
 
+  function renderPubExamQuestionCard(qItem, isPaperMode, isSolutionsMode, isEm) {
+    var isCompulsory = !!qItem.isCompulsory;
+    var isRevealed = isSolutionsMode || (!isPaperMode && !!pubExamState.revealedAnswers[qItem.id]) || (isPaperMode && !!pubExamState.revealedAnswers[qItem.id]);
+    var qCardBorder = isCompulsory ? '2px solid #ef4444' : '1px solid #cbd5e1';
+    var qCardBg = isCompulsory ? '#fffafb' : '#ffffff';
+
+    return `
+      <div class="pub-exam-qcard" id="qcard_${qItem.id}" style="background:${qCardBg}; border:${qCardBorder}; border-radius:14px; padding:16px 20px; box-shadow:0 2px 8px rgba(0,0,0,0.04); position:relative;">
+        
+        <!-- Question Header Row -->
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:10px; border-bottom:1px solid #f1f5f9; padding-bottom:8px;">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <span style="font-size:15px; font-weight:900; color:#0f172a; background:#e2e8f0; padding:2px 10px; border-radius:8px;">
+              ${isEm ? 'Q.' + qItem.qNum : 'வினா எண் ' + qItem.qNum}
+            </span>
+            ${isCompulsory ? `
+              <span style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; font-size:11.5px; font-weight:900; padding:2px 8px; border-radius:6px; display:inline-flex; align-items:center; gap:4px; animation:pulse 2s infinite;">
+                🔴 ${isEm ? 'COMPULSORY QUESTION' : 'கட்டாய வினா'}
+              </span>
+            ` : ''}
+            ${qItem.topic ? `
+              <span style="font-size:11.5px; color:#475569; background:#f1f5f9; padding:2px 8px; border-radius:6px; font-weight:700;">
+                🏷️ ${qItem.topic}
+              </span>
+            ` : ''}
+          </div>
+          
+          <div style="display:flex; align-items:center; gap:6px;">
+            <span style="font-size:12px; font-weight:800; color:#0369a1; background:#e0f2fe; padding:2px 8px; border-radius:6px;">
+              ${qItem.mark || (qItem.type === '1m' ? '1 Mark' : qItem.type === '2m' ? '2 Marks' : qItem.type === '4m' ? '4 Marks' : qItem.type === '5m' ? '5 Marks' : qItem.type === '7m' ? '7 Marks' : '8 Marks')}
+            </span>
+            <button type="button" id="audioBtn_${qItem.id}" class="tab-btn" onclick="playPubExamQuestionAudio('${qItem.id}')" style="background:#10b981; color:#fff; border:none; padding:5px 10px; border-radius:6px; font-size:11.5px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:4px;" title="Listen Audio Explanation">
+              <span id="audioIcon_${qItem.id}">🔊</span>
+              <span id="audioText_${qItem.id}">${isEm ? 'Listen' : 'ஒலி விளக்கம்'}</span>
+            </button>
+            ${(qItem.type === '5m' || qItem.type === '8m' || qItem.type === '2m' || qItem.type === '4m' || qItem.type === '7m') ? `
+              <button type="button" class="tab-btn" onclick="openPubExamBlackboard('${qItem.id}')" style="background:#0f172a; color:#fde047; border:none; padding:5px 10px; border-radius:6px; font-size:11.5px; font-weight:800; cursor:pointer;" title="Blackboard Chalk Demo">
+                🎬 ${isEm ? 'Blackboard' : 'கரும்பலகை'}
+              </button>
+            ` : ''}
+          </div>
+        </div>
+
+        <!-- Question Text (Real Exam Paper Format) -->
+        <div class="pub-exam-question-text" style="font-size:15px; font-weight:700; color:#0f172a; line-height:1.6; margin-bottom:10px;">
+          ${qItem.q}
+        </div>
+
+        <!-- Options if 1m MCQ -->
+        ${(qItem.options && qItem.options.length) ? `
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:8px; margin:10px 0;">
+            ${qItem.options.map(function(opt) {
+              return `<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:7px 12px; font-size:13.5px; font-weight:600; color:#1e293b;">${opt}</div>`;
+            }).join('')}
+          </div>
+        ` : ''}
+
+        <!-- Reveal Toggle Button (Visible when NOT in all-solutions mode) -->
+        ${!isSolutionsMode ? `
+          <div style="margin:8px 0;">
+            <button type="button" id="revealBtn_${qItem.id}" class="tab-btn" onclick="toggleRevealExamAns('${qItem.id}')" style="background:${isRevealed ? '#f1f5f9' : 'linear-gradient(135deg, #2563eb, #1d4ed8)'}; color:${isRevealed ? '#475569' : '#ffffff'}; border:1px solid #cbd5e1; font-weight:800; font-size:12px; padding:6px 14px; border-radius:8px; cursor:pointer;">
+              ${isRevealed ? (isEm ? '🙈 Hide Solution' : '🙈 விடையை மறைக்க (Hide Solution)') : (isEm ? '👁️ Reveal Answer & Steps' : '👁️ விடையைக் காண்க (Reveal Answer & Steps)')}
+            </button>
+          </div>
+        ` : ''}
+
+        <!-- Answer & Step-by-Step Solution Box -->
+        <div id="ansBox_${qItem.id}" class="pub-exam-answer-box" style="display:${isRevealed ? 'block' : 'none'}; background:#f0fdf4; border:1px solid #86efac; border-left:4px solid #16a34a; border-radius:10px; padding:14px 16px; margin-top:10px;">
+          <div style="font-size:12px; font-weight:900; color:#166534; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+            ✓ ${isEm ? 'Step-by-Step Official Solution / Answer:' : 'அதிகாரப்பூர்வ மாதிரி விடை & தீர்வு படிமுறைகள்:'}
+          </div>
+          <div style="font-size:14.5px; color:#14532d; line-height:1.65;">
+            ${qItem.ans}
+          </div>
+
+          ${qItem.markingScheme ? `
+            <div style="margin-top:10px; padding-top:8px; border-top:1px dashed #86efac; font-size:12px; font-weight:800; color:#15803d; display:flex; align-items:center; gap:6px;">
+              <span>📋 ${isEm ? 'Marking Scheme: ' : 'மதிப்பெண் பங்கீடு: '}</span>
+              <span>${qItem.markingScheme}</span>
+            </div>
+          ` : ''}
+        </div>
+
+      </div>
+    `;
+  }
+
+  function renderPubExamPaginationBar(page, totalPages, startIndex, endIndex, totalQuestions, allQInPaper, isEm) {
+    var optionsHtml = '';
+    for (var i = 1; i <= totalPages; i++) {
+      var pStart = (i - 1) * 2 + 1;
+      var pEnd = Math.min(i * 2, totalQuestions);
+      var qObj = allQInPaper[pStart - 1];
+      var partSnippet = (qObj && qObj.partTitle) ? (' • ' + qObj.partTitle.split('/')[0].trim()) : '';
+      optionsHtml += '<option value="' + i + '" ' + (i === page ? 'selected' : '') + '>' +
+        (isEm ? ('Page ' + i + ' (Q.' + pStart + '-' + pEnd + partSnippet + ')') : ('பக்கம் ' + i + ' (வினா ' + pStart + '-' + pEnd + partSnippet + ')')) +
+        '</option>';
+    }
+
+    return `
+      <div class="pub-exam-pagination-bar" style="background:linear-gradient(135deg, #f8fafc, #edf2f7); border:1.5px solid #cbd5e1; border-radius:14px; padding:12px 18px; margin:16px 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; box-shadow:0 3px 10px rgba(0,0,0,0.04);">
+        <!-- Prev Button -->
+        <button type="button" class="tab-btn" onclick="prevPubExamPage()" ${page <= 1 ? 'disabled style="background:#e2e8f0; color:#94a3b8; cursor:not-allowed; border:none; padding:9px 18px; border-radius:10px; font-weight:800; font-size:13px;"' : 'style="background:linear-gradient(135deg, #2563eb, #1d4ed8); color:#ffffff; border:none; padding:9px 18px; border-radius:10px; font-weight:800; font-size:13px; cursor:pointer; box-shadow:0 3px 8px rgba(37,99,235,0.3);"'}>
+          ◀ ${isEm ? 'Previous 2 Questions' : 'முந்தைய 2 வினாக்கள்'}
+        </button>
+
+        <!-- Middle Page Info & Jump Dropdown -->
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:center;">
+          <div style="font-size:13.5px; font-weight:800; color:#0f172a;">
+            📄 ${isEm ? ('Page ' + page + ' of ' + totalPages) : ('பக்கம் ' + page + ' / ' + totalPages)}
+            <span style="color:#64748b; font-weight:600; font-size:12.5px;">(${isEm ? ('Questions ' + (startIndex + 1) + ' - ' + endIndex + ' of ' + totalQuestions) : ('வினாக்கள் ' + (startIndex + 1) + ' - ' + endIndex + ' / மொத்தம் ' + totalQuestions)})</span>
+          </div>
+
+          <!-- Quick Jump Select -->
+          <select onchange="goToPubExamPage(parseInt(this.value))" style="background:#ffffff; border:1.5px solid #94a3b8; border-radius:8px; padding:6px 10px; font-size:12.5px; font-weight:700; color:#1e293b; cursor:pointer; outline:none;">
+            ${optionsHtml}
+          </select>
+        </div>
+
+        <!-- Next Button -->
+        <button type="button" class="tab-btn" onclick="nextPubExamPage()" ${page >= totalPages ? 'disabled style="background:#e2e8f0; color:#94a3b8; cursor:not-allowed; border:none; padding:9px 18px; border-radius:10px; font-weight:800; font-size:13px;"' : 'style="background:linear-gradient(135deg, #2563eb, #1d4ed8); color:#ffffff; border:none; padding:9px 18px; border-radius:10px; font-weight:800; font-size:13px; cursor:pointer; box-shadow:0 3px 8px rgba(37,99,235,0.3);"'}>
+          ${isEm ? 'Next 2 Questions' : 'அடுத்த 2 வினாக்கள்'} ▶
+        </button>
+      </div>
+    `;
+  }
+
   window.renderSubjectPublicExamHub = function() {
     var recBox = document.getElementById('emergencyRecoveryBox'); if (recBox) recBox.style.display = 'none';
     var container = document.getElementById('appContainer');
@@ -14004,12 +14171,18 @@ function resumeLastVisitedLesson() {
 
     var paper = subjData.papers ? subjData.papers[pubExamState.year] : null;
 
-    // Collect all questions for audio & blackboard lookup
+    // Collect all questions with part metadata for audio, blackboard & pagination lookup
     var allQInPaper = [];
     if (paper && paper.parts) {
-      paper.parts.forEach(function(pt) {
+      paper.parts.forEach(function(pt, pIdx) {
+        var pId = pt.partId || ('part' + (pIdx + 1));
         if (pt.questions) {
-          pt.questions.forEach(function(q) {
+          pt.questions.forEach(function(q, qIdxInPart) {
+            q.partId = pId;
+            q.partTitle = pt.partTitle;
+            q.partInstruction = pt.instruction;
+            q.partTotalMarks = pt.totalMarks;
+            q.isFirstInPart = (qIdxInPart === 0);
             allQInPaper.push(q);
           });
         }
@@ -14031,6 +14204,98 @@ function resumeLastVisitedLesson() {
     ];
 
     var isPaperMode = (pubExamState.viewMode === 'paper');
+    var isSolutionsMode = (pubExamState.viewMode === 'solutions');
+
+    // Build question body HTML according to view mode
+    var questionsBodyHtml = '';
+
+    if (isPaperMode) {
+      var page = pubExamState.page || 1;
+      var perPage = 2;
+      var totalQuestions = allQInPaper.length;
+      var totalPages = Math.ceil(totalQuestions / perPage) || 1;
+      if (page > totalPages) { page = totalPages; pubExamState.page = page; }
+      if (page < 1) { page = 1; pubExamState.page = page; }
+      var startIndex = (page - 1) * perPage;
+      var endIndex = Math.min(startIndex + perPage, totalQuestions);
+      var pageQuestions = allQInPaper.slice(startIndex, endIndex);
+
+      var topPaginationHtml = renderPubExamPaginationBar(page, totalPages, startIndex, endIndex, totalQuestions, allQInPaper, isEm);
+      var bottomPaginationHtml = renderPubExamPaginationBar(page, totalPages, startIndex, endIndex, totalQuestions, allQInPaper, isEm);
+
+      var qItemsHtml = '';
+      var lastRenderedPart = '';
+
+      pageQuestions.forEach(function(qItem, idx) {
+        if (qItem.isFirstInPart) {
+          qItemsHtml += `
+            <div id="partAnchor_${qItem.partId}" style="background:linear-gradient(135deg, #1e293b, #0f172a); color:#ffffff; border-radius:12px; padding:12px 18px; margin-bottom:14px; margin-top:${idx > 0 ? '20px' : '0'}; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              <div>
+                <h3 style="font-size:15px; font-weight:900; margin:0; letter-spacing:0.3px;">${qItem.partTitle}</h3>
+                ${qItem.partInstruction ? `<div style="font-size:12px; color:#cbd5e1; margin-top:3px;">${qItem.partInstruction}</div>` : ''}
+              </div>
+              <div style="font-size:12px; font-weight:800; background:rgba(255,255,255,0.15); padding:4px 10px; border-radius:20px;">
+                ${qItem.partTotalMarks ? (isEm ? 'Total: ' + qItem.partTotalMarks + ' Marks' : 'மொத்த மதிப்பெண்கள்: ' + qItem.partTotalMarks) : ''}
+              </div>
+            </div>
+          `;
+          lastRenderedPart = qItem.partId;
+        } else if (idx === 0) {
+          // Continuation banner for ongoing part on this paginated page
+          qItemsHtml += `
+            <div id="partAnchor_${qItem.partId}" style="background:#eff6ff; border:1px solid #bfdbfe; border-left:4px solid #2563eb; border-radius:8px; padding:9px 14px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+              <span style="font-size:13px; font-weight:800; color:#1e40af;">
+                📌 ${qItem.partTitle} ${isEm ? '(Continued)' : '(தொடர்ச்சி)'}
+              </span>
+              ${qItem.partInstruction ? `<span style="font-size:11.5px; color:#475569; font-weight:600;">${qItem.partInstruction}</span>` : ''}
+            </div>
+          `;
+          lastRenderedPart = qItem.partId;
+        } else if (qItem.partId !== lastRenderedPart) {
+          qItemsHtml += `
+            <div id="partAnchor_${qItem.partId}" style="background:linear-gradient(135deg, #1e293b, #0f172a); color:#ffffff; border-radius:12px; padding:12px 18px; margin-bottom:14px; margin-top:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              <div>
+                <h3 style="font-size:15px; font-weight:900; margin:0; letter-spacing:0.3px;">${qItem.partTitle}</h3>
+                ${qItem.partInstruction ? `<div style="font-size:12px; color:#cbd5e1; margin-top:3px;">${qItem.partInstruction}</div>` : ''}
+              </div>
+              <div style="font-size:12px; font-weight:800; background:rgba(255,255,255,0.15); padding:4px 10px; border-radius:20px;">
+                ${qItem.partTotalMarks ? (isEm ? 'Total: ' + qItem.partTotalMarks + ' Marks' : 'மொத்த மதிப்பெண்கள்: ' + qItem.partTotalMarks) : ''}
+              </div>
+            </div>
+          `;
+          lastRenderedPart = qItem.partId;
+        }
+
+        qItemsHtml += renderPubExamQuestionCard(qItem, true, isSolutionsMode, isEm);
+      });
+
+      questionsBodyHtml = topPaginationHtml + '<div class="part-questions-grid" style="display:flex; flex-direction:column; gap:16px;">' + qItemsHtml + '</div>' + bottomPaginationHtml;
+
+    } else {
+      // Continuous scroll mode (either 'scroll' or 'solutions')
+      questionsBodyHtml = (paper.parts || []).map(function(part, pIdx) {
+        var partAnchorId = part.partId || ('part' + (pIdx + 1));
+        return `
+          <div id="partAnchor_${partAnchorId}" class="exam-part-section" style="margin-bottom:28px;">
+            <div style="background:linear-gradient(135deg, #1e293b, #0f172a); color:#ffffff; border-radius:12px; padding:12px 18px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              <div>
+                <h3 style="font-size:15px; font-weight:900; margin:0; letter-spacing:0.3px;">${part.partTitle}</h3>
+                ${part.instruction ? `<div style="font-size:12px; color:#cbd5e1; margin-top:3px;">${part.instruction}</div>` : ''}
+              </div>
+              <div style="font-size:12px; font-weight:800; background:rgba(255,255,255,0.15); padding:4px 10px; border-radius:20px;">
+                ${part.totalMarks ? (isEm ? 'Total: ' + part.totalMarks + ' Marks' : 'மொத்த மதிப்பெண்கள்: ' + part.totalMarks) : ''}
+              </div>
+            </div>
+
+            <div class="part-questions-grid" style="display:flex; flex-direction:column; gap:16px;">
+              ${(part.questions || []).map(function(qItem) {
+                return renderPubExamQuestionCard(qItem, false, isSolutionsMode, isEm);
+              }).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
 
     var html = `
       <div class="pub-exam-hub-container" style="max-width:1150px; margin:0 auto; padding-bottom:50px;">
@@ -14112,16 +14377,19 @@ function resumeLastVisitedLesson() {
             }).join('')}
           </div>
 
-          <!-- View Mode Toggle: Question Paper Mode vs Full Solutions -->
+          <!-- View Mode Toggle: 2 Questions Per Page vs Full Scroll vs All Solutions -->
           <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
             <span style="font-size:12px; font-weight:800; color:var(--text-muted);">
               👁️ ${isEm ? 'View Mode:' : 'பார்வை முறை:'}
             </span>
-            <button type="button" class="tab-btn" onclick="setPubExamViewMode('paper')" style="background:${isPaperMode ? '#2563eb' : '#f1f5f9'}; color:${isPaperMode ? '#ffffff' : '#334155'}; border:1px solid #cbd5e1; border-radius:8px; font-weight:800; padding:6px 13px; font-size:12px; cursor:pointer;">
-              📝 ${isEm ? 'Question Paper Mode' : 'அசல் வினாத்தாள் வடிவம்'}
+            <button type="button" class="tab-btn" onclick="setPubExamViewMode('paper')" style="background:${isPaperMode ? '#2563eb' : '#f1f5f9'}; color:${isPaperMode ? '#ffffff' : '#334155'}; border:1px solid #cbd5e1; border-radius:8px; font-weight:800; padding:6px 13px; font-size:12px; cursor:pointer;" title="2 Questions Per Page with Easy Navigation">
+              📄 ${isEm ? '2 Qns / Page' : '2 வினாக்கள் / பக்கம்'}
             </button>
-            <button type="button" class="tab-btn" onclick="setPubExamViewMode('full')" style="background:${!isPaperMode ? '#059669' : '#f1f5f9'}; color:${!isPaperMode ? '#ffffff' : '#334155'}; border:1px solid #cbd5e1; border-radius:8px; font-weight:800; padding:6px 13px; font-size:12px; cursor:pointer;">
-              📖 ${isEm ? 'Full Solutions' : 'முழு விடைகளுடன்'}
+            <button type="button" class="tab-btn" onclick="setPubExamViewMode('scroll')" style="background:${pubExamState.viewMode === 'scroll' ? '#2563eb' : '#f1f5f9'}; color:${pubExamState.viewMode === 'scroll' ? '#ffffff' : '#334155'}; border:1px solid #cbd5e1; border-radius:8px; font-weight:800; padding:6px 13px; font-size:12px; cursor:pointer;" title="Full Continuous Paper Scroll">
+              📜 ${isEm ? 'Full Paper Scroll' : 'முழு வினாத்தாள்'}
+            </button>
+            <button type="button" class="tab-btn" onclick="setPubExamViewMode('solutions')" style="background:${isSolutionsMode ? '#059669' : '#f1f5f9'}; color:${isSolutionsMode ? '#ffffff' : '#334155'}; border:1px solid #cbd5e1; border-radius:8px; font-weight:800; padding:6px 13px; font-size:12px; cursor:pointer;" title="All Step-by-Step Solutions Revealed">
+              📖 ${isEm ? 'All Solutions' : 'முழு விடைகளுடன்'}
             </button>
             <button type="button" class="tab-btn" onclick="window.print()" style="background:#ffffff; color:#475569; border:1px solid #cbd5e1; border-radius:8px; font-weight:700; padding:6px 10px; font-size:12px; cursor:pointer;" title="Print Paper">
               🖨️ ${isEm ? 'Print' : 'அச்சிடு'}
@@ -14170,123 +14438,23 @@ function resumeLastVisitedLesson() {
             ` : ''}
           </div>
 
-          <!-- Quick Navigation Jump Bar for Parts (Buttons with smooth scroll, NO hash change!) -->
-          <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:10px 14px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+          <!-- Quick Navigation Jump Bar for Parts (Buttons calculate target page in 2-Qn mode!) -->
+          <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:10px 14px; margin-bottom:16px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
             <span style="font-size:12px; font-weight:800; color:#1e40af; text-transform:uppercase;">
               ⚡ ${isEm ? 'Jump to Part:' : 'பகுதிக்கு நேரடியாகச் செல்க:'}
             </span>
             <div style="display:flex; gap:6px; flex-wrap:wrap;">
               ${(paper.parts || []).map(function(pt, pIdx) {
                 var pId = pt.partId || ('part' + (pIdx + 1));
-                return `<button type="button" class="tab-btn" onclick="scrollToExamPart('${pId}')" style="background:#ffffff; color:#1d4ed8; border:1px solid #93c5fd; padding:5px 11px; border-radius:6px; font-size:11.5px; font-weight:800; cursor:pointer;">
+                return `<button type="button" class="tab-btn" onclick="scrollToExamPart('${pId}')" style="background:#ffffff; color:#1d4ed8; border:1px solid #93c5fd; padding:6px 12px; border-radius:8px; font-size:12px; font-weight:800; cursor:pointer; box-shadow:0 1px 4px rgba(37,99,235,0.1);">
                   📌 ${pt.partTitle.split('/')[0].trim()}
                 </button>`;
               }).join('')}
             </div>
           </div>
 
-          <!-- 5. RENDER ALL PARTS OF THIS OFFICIAL QUESTION PAPER -->
-          ${(paper.parts || []).map(function(part, pIdx) {
-            var partAnchorId = part.partId || ('part' + (pIdx + 1));
-            return `
-              <div id="partAnchor_${partAnchorId}" class="exam-part-section" style="margin-bottom:28px;">
-                
-                <!-- Part Official Header -->
-                <div style="background:linear-gradient(135deg, #1e293b, #0f172a); color:#ffffff; border-radius:12px; padding:12px 18px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-                  <div>
-                    <h3 style="font-size:15px; font-weight:900; margin:0; letter-spacing:0.3px;">
-                      ${part.partTitle}
-                    </h3>
-                  </div>
-                  <div style="font-size:12px; font-weight:800; background:rgba(255,255,255,0.15); padding:4px 10px; border-radius:20px;">
-                    ${part.totalMarks ? (isEm ? 'Total: ' + part.totalMarks + ' Marks' : 'மொத்த மதிப்பெண்கள்: ' + part.totalMarks) : ''}
-                  </div>
-                </div>
-
-                <!-- Part Questions List -->
-                <div class="part-questions-grid" style="display:flex; flex-direction:column; gap:16px;">
-                  ${(part.questions || []).map(function(qItem) {
-                    var isCompulsory = !!qItem.isCompulsory;
-                    var isRevealed = (!isPaperMode) || !!pubExamState.revealedAnswers[qItem.id];
-                    var qCardBorder = isCompulsory ? '2px solid #ef4444' : '1px solid #cbd5e1';
-                    var qCardBg = isCompulsory ? '#fffafb' : '#ffffff';
-
-                    return `
-                      <div class="pub-exam-qcard" id="qcard_${qItem.id}" style="background:${qCardBg}; border:${qCardBorder}; border-radius:14px; padding:16px 20px; box-shadow:0 2px 8px rgba(0,0,0,0.04); position:relative;">
-                        
-                        <!-- Question Header Row -->
-                        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:10px; border-bottom:1px solid #f1f5f9; padding-bottom:8px;">
-                          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-                            <span style="font-size:15px; font-weight:900; color:#0f172a; background:#e2e8f0; padding:2px 10px; border-radius:8px;">
-                              ${isEm ? 'Q.' + qItem.qNum : 'வினா எண் ' + qItem.qNum}
-                            </span>
-                            ${isCompulsory ? `
-                              <span style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; font-size:11.5px; font-weight:900; padding:2px 8px; border-radius:6px; display:inline-flex; align-items:center; gap:4px; animation:pulse 2s infinite;">
-                                🔴 ${isEm ? 'COMPULSORY QUESTION' : 'கட்டாய வினா'}
-                              </span>
-                            ` : ''}
-                            ${qItem.topic ? `
-                              <span style="font-size:11.5px; color:#475569; background:#f1f5f9; padding:2px 8px; border-radius:6px; font-weight:700;">
-                                🏷️ ${qItem.topic}
-                              </span>
-                            ` : ''}
-                          </div>
-                          
-                          <div style="display:flex; align-items:center; gap:6px;">
-                            <span style="font-size:12px; font-weight:800; color:#0369a1; background:#e0f2fe; padding:2px 8px; border-radius:6px;">
-                              ${qItem.mark || (qItem.type === '1m' ? '1 Mark' : qItem.type === '2m' ? '2 Marks' : qItem.type === '4m' ? '4 Marks' : qItem.type === '5m' ? '5 Marks' : '8 Marks')}
-                            </span>
-                            <button type="button" id="audioBtn_${qItem.id}" class="tab-btn" onclick="playPubExamQuestionAudio('${qItem.id}')" style="background:#10b981; color:#fff; border:none; padding:5px 10px; border-radius:6px; font-size:11.5px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:4px;" title="Listen Audio Explanation">
-                              <span id="audioIcon_${qItem.id}">🔊</span>
-                              <span id="audioText_${qItem.id}">${isEm ? 'Listen' : 'ஒலி விளக்கம்'}</span>
-                            </button>
-                            ${(qItem.type === '5m' || qItem.type === '8m' || qItem.type === '2m' || qItem.type === '4m') ? `
-                              <button type="button" class="tab-btn" onclick="openPubExamBlackboard('${qItem.id}')" style="background:#0f172a; color:#fde047; border:none; padding:5px 10px; border-radius:6px; font-size:11.5px; font-weight:800; cursor:pointer;" title="Blackboard Chalk Demo">
-                                🎬 ${isEm ? 'Blackboard' : 'கரும்பலகை'}
-                              </button>
-                            ` : ''}
-                          </div>
-                        </div>
-
-                        <!-- Question Text (Real Exam Paper Format) -->
-                        <div class="pub-exam-question-text" style="font-size:15px; font-weight:700; color:#0f172a; line-height:1.6; margin-bottom:10px;">
-                          ${qItem.q}
-                        </div>
-
-                        <!-- Reveal Toggle Button (Visible in Question Paper Mode) -->
-                        ${isPaperMode ? `
-                          <div style="margin:8px 0;">
-                            <button type="button" id="revealBtn_${qItem.id}" class="tab-btn" onclick="toggleRevealExamAns('${qItem.id}')" style="background:${isRevealed ? '#f1f5f9' : 'linear-gradient(135deg, #2563eb, #1d4ed8)'}; color:${isRevealed ? '#475569' : '#ffffff'}; border:1px solid #cbd5e1; font-weight:800; font-size:12px; padding:6px 14px; border-radius:8px; cursor:pointer;">
-                              ${isRevealed ? '🙈 விடையை மறைக்க (Hide Solution)' : '👁️ விடையைக் காண்க (Reveal Answer & Steps)'}
-                            </button>
-                          </div>
-                        ` : ''}
-
-                        <!-- Answer & Step-by-Step Solution Box -->
-                        <div id="ansBox_${qItem.id}" class="pub-exam-answer-box" style="display:${isRevealed ? 'block' : 'none'}; background:#f0fdf4; border:1px solid #86efac; border-left:4px solid #16a34a; border-radius:10px; padding:14px 16px; margin-top:10px;">
-                          <div style="font-size:12px; font-weight:900; color:#166534; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
-                            ✓ ${isEm ? 'Step-by-Step Official Solution / Answer:' : 'அதிகாரப்பூர்வ மாதிரி விடை & தீர்வு படிமுறைகள்:'}
-                          </div>
-                          <div style="font-size:14.5px; color:#14532d; line-height:1.65;">
-                            ${qItem.ans}
-                          </div>
-
-                          ${qItem.markingScheme ? `
-                            <div style="margin-top:10px; padding-top:8px; border-top:1px dashed #86efac; font-size:12px; font-weight:800; color:#15803d; display:flex; align-items:center; gap:6px;">
-                              <span>📋 ${isEm ? 'Marking Scheme: ' : 'மதிப்பெண் பங்கீடு: '}</span>
-                              <span>${qItem.markingScheme}</span>
-                            </div>
-                          ` : ''}
-                        </div>
-
-                      </div>
-                    `;
-                  }).join('')}
-                </div>
-
-              </div>
-            `;
-          }).join('')}
+          <!-- 5. RENDER QUESTIONS (2 PER PAGE WITH NAVIGATION OR FULL SCROLL) -->
+          ${questionsBodyHtml}
 
           <!-- Paper End Footer -->
           <div style="text-align:center; padding:20px 0; border-top:2px solid #0f172a; margin-top:24px;">
@@ -14306,6 +14474,7 @@ function resumeLastVisitedLesson() {
 
     container.innerHTML = html;
   };
+
   // Pre-resolve all available lessons on initialization
   try {
     APP_DATA.subjects.forEach(s => {

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -10925,10 +10925,71 @@ function resumeLastVisitedLesson() {
              .replace(/&gt;/g, '>')
              .replace(/&times;/g, '×');
 
-  // 0. Strip LaTeX delimiter dollars ($) completely
-  text = text.replace(/\$/g, ' ');
+    // 0. Strip LaTeX delimiter dollars ($) completely
+text = text.replace(/\$/g, ' ');
 
-  // 0.1 Convert Unicode subscripts & superscripts
+// 0.05 Examples (e.g. / eg / எ.கா / உ.ம்) -> ALWAYS pronounce as "for example" (English) or "எடுத்துக்காட்டு" (Tamil)
+if (isEnglish) {
+  text = text.replace(/\b(?:e\.g\.|e\.g|eg\.|eg)\b[:,\s]*/gi, ' for example, ')
+             .replace(/\((?:e\.g\.|e\.g|eg\.|eg)\s*/gi, '(for example, ')
+             .replace(/\bi\.e\.?\b[:,\s]*/gi, ' that is, ')
+             .replace(/\betc\.?\b/gi, ' etcetera ');
+} else {
+  text = text.replace(/(?:எ\.கா\.|எ\.கா:|எ\.கா|எகா:|எகா\.|எகா)\s*[:\s]*/g, ' எடுத்துக்காட்டு: ')
+             .replace(/\((?:எ\.கா\.|எ\.கா:|எ\.கா|எகா)\s*[:\s]*/g, '(எடுத்துக்காட்டு: ')
+             .replace(/(?:உ\.ம்\.|உ\.ம்:|உ\.ம்|உம்:|உம்\.)\s*[:\s]*/g, ' உதாரணமாக: ')
+             .replace(/\b(?:e\.g\.|e\.g|eg\.|eg)\b[:,\s]*/gi, ' எடுத்துக்காட்டாக, ');
+}
+
+// 0.06 Physics formulas: F = ma (Force = mass x acceleration) -> NEVER pronounce as "maa" / "மா"!
+text = text.replace(/\bF\s*=\s*ma\b/gi, isEnglish ? ' F equals m into a ' : ' F சமம் m பெருக்கல் a ')
+           .replace(/\bF\s*=\s*m\s*[×·*]\s*a\b/gi, isEnglish ? ' F equals m into a ' : ' F சமம் m பெருக்கல் a ')
+           .replace(/\bma\b/g, isEnglish ? ' m into a ' : ' m a ');
+
+// 0.07 Chemical Formulas: Fe2O3, Fe₂O₃ · xH₂O, Rust, Water, Acids, Bases, Salts
+text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi, isEnglish ? ' F e 2 O 3 dot x H 2 O ' : ' F e 2 O 3 டாட் x H 2 O ')
+           .replace(/Fe[₂2]\s*O[₃3]/gi, ' F e 2 O 3 ')
+           .replace(/Fe[₃3]\s*O[₄4]/gi, ' F e 3 O 4 ')
+           .replace(/\b4Fe\b/gi, ' 4 F e ')
+           .replace(/\b2Fe\b/gi, ' 2 F e ')
+           .replace(/\bFe\b/g, ' F e ')
+           .replace(/\bCaCO[₃3]\b/gi, ' C a C O 3 ')
+           .replace(/\bCaO\b/gi, ' C a O ')
+           .replace(/\bCa\(OH\)[₂2]\b/gi, ' C a O H 2 ')
+           .replace(/\bNaOH\b/gi, ' N a O H ')
+           .replace(/\bNaCl\b/gi, ' N a C l ')
+           .replace(/\bHCl\b/gi, ' H C l ')
+           .replace(/\bH[₂2]SO[₄4]\b/gi, ' H 2 S O 4 ')
+           .replace(/\bCuSO[₄4]\s*[\u00B7\u22C5\.]\s*5\s*H[₂2]\s*O/gi, isEnglish ? ' C u S O 4 dot 5 H 2 O ' : ' C u S O 4 டாட் 5 H 2 O ')
+           .replace(/\bCuSO[₄4]\b/gi, ' C u S O 4 ')
+           .replace(/\bCH[₄4]\b/gi, ' C H 4 ')
+           .replace(/\bC[₂2]H[₅5]OH\b/gi, ' C 2 H 5 O H ')
+           .replace(/\bCH[₃3]COOH\b/gi, ' C H 3 C O O H ')
+           .replace(/\bBaCl[₂2]\b/gi, ' B a C l 2 ')
+           .replace(/\bNa[₂2]SO[₄4]\b/gi, ' N a 2 S O 4 ')
+           .replace(/\bBaSO[₄4]\b/gi, ' B a S O 4 ')
+           .replace(/\bZnSO[₄4]\b/gi, ' Z n S O 4 ')
+           .replace(/\bAgNO[₃3]\b/gi, ' A g N O 3 ')
+           .replace(/\bAgCl\b/gi, ' A g C l ')
+           .replace(/\bCO[₂2]\b/gi, ' C O 2 ')
+           .replace(/\bH[₂2]O\b/gi, ' H 2 O ')
+           .replace(/\bO[₂2]\b/gi, ' O 2 ')
+           .replace(/\bN[₂2]\b/gi, ' N 2 ')
+           .replace(/\bH[₂2]\b/gi, ' H 2 ')
+           .replace(/\bCl[₂2]\b/gi, ' C l 2 ')
+           .replace(/\bATP\b/g, ' A T P ')
+           .replace(/\bADP\b/g, ' A D P ')
+           .replace(/\bDNA\b/g, ' D N A ')
+           .replace(/\bRNA\b/g, ' R N A ')
+           .replace(/\bF[₁1]\b/g, ' F 1 ')
+           .replace(/\bF[₂2]\b/g, ' F 2 ')
+           .replace(/\bP[₁1]\b/g, ' P 1 ')
+           .replace(/\bTT\b/g, ' T T ')
+           .replace(/\btt\b/g, ' t t ')
+           .replace(/\bTt\b/g, ' T t ')
+           .replace(/→/g, isEnglish ? ' gives ' : ' தருகிறது ');
+
+// 0.1 Convert Unicode subscripts & superscripts
   text = text.replace(/₀/g, ' 0 ').replace(/₁/g, ' 1 ').replace(/₂/g, ' 2 ').replace(/₃/g, ' 3 ').replace(/₄/g, ' 4 ')
              .replace(/₅/g, ' 5 ').replace(/₆/g, ' 6 ').replace(/₇/g, ' 7 ').replace(/₈/g, ' 8 ').replace(/₉/g, ' 9 ')
              .replace(/⁰/g, ' 0 ').replace(/¹/g, ' 1 ').replace(/²/g, ' squared ').replace(/³/g, ' cubed ');
@@ -18332,6 +18393,15 @@ Important:
       text = text.replace(/(\d+)\.(\d+)/g, '$1 point $2');
       text = text.replace(/(\d+)\s*m\/s\b/gi, ' $1 meters per second ');
     }
+
+// 11.5 Speech substitutions for Physics and Chemistry in AI tutor
+    text = text.replace(/\bF\s*=\s*ma\b/gi, isEnglish ? ' F equals m into a ' : ' F சமம் m பெருக்கல் a ')
+               .replace(/\bF\s*=\s*m\s*[×·*]\s*a\b/gi, isEnglish ? ' F equals m into a ' : ' F சமம் m பெருக்கல் a ')
+               .replace(/\bma\b/g, isEnglish ? ' m into a ' : ' m a ')
+               .replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi, isEnglish ? ' F e 2 O 3 dot x H 2 O ' : ' F e 2 O 3 டாட் x H 2 O ')
+               .replace(/Fe[₂2]\s*O[₃3]/gi, ' F e 2 O 3 ')
+               .replace(/\bFe\b/g, ' F e ')
+               .replace(/→/g, isEnglish ? ' gives ' : ' தருகிறது ');
 
     // 12. Strip all stray symbols and brackets that TTS pronounces literally
     text = text.replace(/[`~^\\|<>{}\[\]\(\)]/g, ' ');

@@ -283,7 +283,7 @@
   <script src="data_social_em_u25.js?v=20261119_v99"></script>
   <script src="data_social_em_u26.js?v=20261119_v99"></script>
   <script src="data_social_em_u27.js?v=20261119_v99"></script>
-  <script src="data_public_exam_papers.js?v=20261122_v115"></script>
+  <script src="data_public_exam_papers.js?v=20261123_v118"></script>
 <script src="map_data_and_engine.js?v=20261115_v79"></script>
 <script src="map_practice_evaluator.js?v=20261115_v79"></script>
 <style>
@@ -10973,6 +10973,26 @@ if (isEnglish) {
              .replace(/\((?:எ\.கா\.|எ\.கா:|எ\.கா|எகா)\s*[:\s]*/g, '(எடுத்துக்காட்டு: ')
              .replace(/(?:உ\.ம்\.|உ\.ம்:|உ\.ம்|உம்:|உம்\.)\s*[:\s]*/g, ' உதாரணமாக: ')
              .replace(/\b(?:e\.g\.|e\.g|eg\.|eg)\b[:,\s]*/gi, ' எடுத்துக்காட்டாக, ');
+}
+
+// 0.055 Chemistry solutions: aqueous / non-aqueous pronunciation fix (prevents TTS pronouncing as "akway-us" or "non minus aqueous")
+if (isEnglish) {
+  text = text.replace(/\bnon[-\s]+aqueous\b/gi, 'non ay-kwee-us')
+             .replace(/\bnon[-\s]+ay-kwee-us\b/gi, 'non ay-kwee-us')
+             .replace(/\baqueous\b/gi, 'ay-kwee-us');
+} else {
+  text = text.replace(/\bnon[-\s]+aqueous\b/gi, 'நான் அக்வியஸ்')
+             .replace(/\baqueous\b/gi, 'அக்வியஸ்');
+}
+
+// 0.056 Relative Atomic Mass (Ar / Aᵣ) and Relative Molecular Mass (Mr / Mᵣ) pronunciation fix
+if (isEnglish) {
+  text = text.replace(/\bA[ᵣr]\b|Aᵣ|\(Aᵣ\)/g, ' A r ')
+             .replace(/\bM[ᵣr]\b|Mᵣ|\(Mᵣ\)/g, ' M r ')
+             .replace(/\bRAM\b/g, ' R A M, Relative Atomic Mass ');
+} else {
+  text = text.replace(/\bA[ᵣr]\b|Aᵣ|\(Aᵣ\)/g, ' ஏ ஆர் ')
+             .replace(/\bM[ᵣr]\b|Mᵣ|\(Mᵣ\)/g, ' எம் ஆர் ');
 }
 
 // 0.06 Physics formulas: F = ma (Force = mass x acceleration) -> NEVER pronounce as "maa" / "மா"!

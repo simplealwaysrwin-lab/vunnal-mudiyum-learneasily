@@ -10995,6 +10995,89 @@ if (isEnglish) {
              .replace(/\bM[ᵣr]\b|Mᵣ|\(Mᵣ\)/g, ' எம் ஆர் ');
 }
 
+// 0.057 Titles & Honorifics (Dr. -> Doctor / டாக்டர்)
+if (isEnglish) {
+  text = text.replace(/\bDr\.\s*/g, 'Doctor ')
+             .replace(/\bDr\b\s+(?=[A-Z])/g, 'Doctor ');
+} else {
+  text = text.replace(/\bDr\.\s*|\bDr\b\s+/gi, 'டாக்டர் ');
+}
+
+// 0.058 Tamil Nadu & Indian History, Geography, and Social Terms Pronunciation for English TTS
+if (isEnglish) {
+  // Vedas & Vedic
+  text = text.replace(/\bVedas\b/gi, 'Vay-dahs')
+             .replace(/\bVeda\b/gi, 'Vay-dah')
+             .replace(/\bVedic\b/gi, 'Vay-dik');
+
+  // Ramalinga Adigal (Vallalar), Jeevakarunya, Sanmarga Sangam, Sathya Dharma Salai, Vadalur
+  text = text.replace(/\bVallalar\b/gi, 'Valla-laar')
+             .replace(/\bRamalinga\s+Adigal\b/gi, 'Raama-linga Adigal')
+             .replace(/\bJeevakarunya\b/gi, 'Jeeva-Kaarunya')
+             .replace(/\bSamarasa\s+Suddha\s+Sanmarga(?:\s+Sathya)?\s+Sangam\b/gi, 'Samarasa Suddha Sanmaarga Sathya Sangam')
+             .replace(/\bSanmarga\b/gi, 'San-maarga')
+             .replace(/\bSathya\s+Dharma\s+Salai\b/gi, 'Sathya Dharma Saalai')
+             .replace(/\bDharma\s+Salai\b/gi, 'Dharma Saalai')
+             .replace(/\bVadalur\b/gi, 'Vada-loor');
+
+  // Vaikunda Swamigal, Ayya Vazhi (and typo Ayya Vashi), Samathuva Samajam, Nizhal Thangals
+  text = text.replace(/\bAyya\s+Va[zs]hi\b/gi, 'Ayya Vaazhi')
+             .replace(/\bVaikunda\s+Swamigal\b/gi, 'Vaikunda Swaamigal')
+             .replace(/\bSamathuva\s+Samajam\b/gi, 'Samathuva Samaajam')
+             .replace(/\bNizhal\s+Thangals?\b/gi, 'Ni-zhal Thaangals')
+             .replace(/\bNizhal\b/gi, 'Ni-zhal')
+             .replace(/\bThangals\b/gi, 'Thaangals');
+
+  // Sadhu Jana Paripalana Sangham, Sri Narayana Guru, SNDP
+  text = text.replace(/\b(?:Sadhu\s+)?Jana\s+Paripalana\s+Sangh?am\b/gi, 'Sadhu Jana Paari-paalana Sangam')
+             .replace(/\bParipalana\b/gi, 'Paari-paalana')
+             .replace(/\bAyyankali\b/gi, 'Ayyan-kaali')
+             .replace(/\bSNDP\s+Yogam\b/gi, 'S N D P Yogam')
+             .replace(/\bAruvippuram\b/gi, 'Aruvip-pooram');
+
+  // Palayakkarar system, Palayams, Palayamkottai
+  text = text.replace(/\bPalayakkarars\b|\bPalayakarars\b/gi, 'Paalaiya-kkaarars')
+             .replace(/\bPalayakkarar\b|\bPalayakarar\b/gi, 'Paalaiya-kkaarar')
+             .replace(/\bPalayamkottai\b/gi, 'Paalayam-kottai')
+             .replace(/\bPalayams\b/gi, 'Paalayams')
+             .replace(/\bPalayam\b/gi, 'Paalayam');
+
+  // Veerapandiya Kattabomman, Panchalankurichi, Kayathar
+  text = text.replace(/\bVeerapandiya\s+Kattabomman\b/gi, 'Veera-paandiya Katta-bomman')
+             .replace(/\bKattabomman\b/gi, 'Katta-bomman')
+             .replace(/\bPanchalankurichi\b/gi, 'Paan-chaalan-kurichi')
+             .replace(/\bKayathar\b/gi, 'Kaya-thaar');
+
+  // Industrial Clusters: Ambur, Vaniyambadi, Vellore, Ranipet, Tiruppur
+  text = text.replace(/\bAmbur\b/gi, 'Aamboor')
+             .replace(/\bVaniyambadi\b/gi, 'Vaani-yambaadi')
+             .replace(/\bVellore\b/gi, 'Vel-loor');
+
+  // Agricultural Cropping Seasons: Samba, Karthigai, Sornavari, Navarai, Chittirai, Aadi
+  text = text.replace(/\bSamba\b/gi, 'Saamba')
+             .replace(/\bKarthigai\b/gi, 'Kaar-thigai')
+             .replace(/\bSornavari\b/gi, 'Sorna-vaari')
+             .replace(/\bNavarai\b/gi, 'Nava-rai')
+             .replace(/\bChittirai\b/gi, 'Chithirai')
+             .replace(/\bAadi\b/gi, 'Aaadi')
+             .replace(/\bpattam\b/gi, 'pattam');
+
+  // Vanchinathan / Vanchinadan, Maniyachi
+  text = text.replace(/\bVanchinadan\b|\bVanchinathan\b/gi, 'Vaan-chi-naathan')
+             .replace(/\bManiyachi\b/gi, 'Mani-yaachi');
+
+  // Prominent Tamil Freedom Fighters & Movements
+  text = text.replace(/\bMarudu\s+Brothers\b/gi, 'Ma-rudhu Brothers')
+             .replace(/\bMarudu\s+Pandiyan\b/gi, 'Ma-rudhu Paandiyan')
+             .replace(/\bPuli\s+Thevar\b/gi, 'Pooli Thevar')
+             .replace(/\bVelu\s+Nachiyar\b/gi, 'Velu Naachiyar')
+             .replace(/\bTiruppur\s+Kumaran\b/gi, 'Thiruppoor Kumaran')
+             .replace(/\bKodikatha\s+Kumaran\b/gi, 'Kodi-kaatha Kumaran')
+             .replace(/\bV\.?\s*O\.?\s*Chidambaranar\b/gi, 'V O Chidambara-naar')
+             .replace(/\bSubramania\s+Bharati\b/gi, 'Subramania Bhaarathi')
+             .replace(/\bVedaranyam\b/gi, 'Veda-raanyam');
+}
+
 // 0.06 Physics formulas: F = ma (Force = mass x acceleration) -> NEVER pronounce as "maa" / "மா"!
 text = text.replace(/\bF\s*=\s*ma\b/gi, isEnglish ? ' F equals m into a ' : ' F சமம் m பெருக்கல் a ')
            .replace(/\bF\s*=\s*m\s*[×·*]\s*a\b/gi, isEnglish ? ' F equals m into a ' : ' F சமம் m பெருக்கல் a ')
@@ -18435,6 +18518,60 @@ Important:
       text = text.replace(/\b\u0B92\u0BA9\u0BCD\u0BB1\u0BC1\b/g, '1').replace(/\b\u0B87\u0BB0\u0BA3\u0BCD\u0B9F\u0BC1\b/g, '2').replace(/\b\u0BAE\u0BC2\u0BA9\u0BCD\u0BB1\u0BC1\b/g, '3')
                  .replace(/\b\u0BA8\u0BBE\u0BA9\u0BCD\u0B95\u0BC1\b/g, '4').replace(/\b\u0B90\u0BA8\u0BCD\u0BA4\u0BC1\b/g, '5');
       text = text.replace(/[\u0B80-\u0BFF]+/g, ' '); // strip stray Tamil in English answers
+
+      text = text.replace(/\bDr\.\s*/g, 'Doctor ')
+                 .replace(/\bDr\b\s+(?=[A-Z])/g, 'Doctor ');
+      text = text.replace(/\bVedas\b/gi, 'Vay-dahs')
+                 .replace(/\bVeda\b/gi, 'Vay-dah')
+                 .replace(/\bVedic\b/gi, 'Vay-dik');
+      text = text.replace(/\bVallalar\b/gi, 'Valla-laar')
+                 .replace(/\bRamalinga\s+Adigal\b/gi, 'Raama-linga Adigal')
+                 .replace(/\bJeevakarunya\b/gi, 'Jeeva-Kaarunya')
+                 .replace(/\bSamarasa\s+Suddha\s+Sanmarga(?:\s+Sathya)?\s+Sangam\b/gi, 'Samarasa Suddha Sanmaarga Sathya Sangam')
+                 .replace(/\bSanmarga\b/gi, 'San-maarga')
+                 .replace(/\bSathya\s+Dharma\s+Salai\b/gi, 'Sathya Dharma Saalai')
+                 .replace(/\bDharma\s+Salai\b/gi, 'Dharma Saalai')
+                 .replace(/\bVadalur\b/gi, 'Vada-loor');
+      text = text.replace(/\bAyya\s+Va[zs]hi\b/gi, 'Ayya Vaazhi')
+                 .replace(/\bVaikunda\s+Swamigal\b/gi, 'Vaikunda Swaamigal')
+                 .replace(/\bSamathuva\s+Samajam\b/gi, 'Samathuva Samaajam')
+                 .replace(/\bNizhal\s+Thangals?\b/gi, 'Ni-zhal Thaangals')
+                 .replace(/\bNizhal\b/gi, 'Ni-zhal')
+                 .replace(/\bThangals\b/gi, 'Thaangals');
+      text = text.replace(/\b(?:Sadhu\s+)?Jana\s+Paripalana\s+Sangh?am\b/gi, 'Sadhu Jana Paari-paalana Sangam')
+                 .replace(/\bParipalana\b/gi, 'Paari-paalana')
+                 .replace(/\bAyyankali\b/gi, 'Ayyan-kaali')
+                 .replace(/\bSNDP\s+Yogam\b/gi, 'S N D P Yogam');
+      text = text.replace(/\bPalayakkarars\b|\bPalayakarars\b/gi, 'Paalaiya-kkaarars')
+                 .replace(/\bPalayakkarar\b|\bPalayakarar\b/gi, 'Paalaiya-kkaarar')
+                 .replace(/\bPalayamkottai\b/gi, 'Paalayam-kottai')
+                 .replace(/\bPalayams\b/gi, 'Paalayams')
+                 .replace(/\bPalayam\b/gi, 'Paalayam');
+      text = text.replace(/\bVeerapandiya\s+Kattabomman\b/gi, 'Veera-paandiya Katta-bomman')
+                 .replace(/\bKattabomman\b/gi, 'Katta-bomman')
+                 .replace(/\bPanchalankurichi\b/gi, 'Paan-chaalan-kurichi')
+                 .replace(/\bKayathar\b/gi, 'Kaya-thaar');
+      text = text.replace(/\bAmbur\b/gi, 'Aamboor')
+                 .replace(/\bVaniyambadi\b/gi, 'Vaani-yambaadi')
+                 .replace(/\bVellore\b/gi, 'Vel-loor');
+      text = text.replace(/\bSamba\b/gi, 'Saamba')
+                 .replace(/\bKarthigai\b/gi, 'Kaar-thigai')
+                 .replace(/\bSornavari\b/gi, 'Sorna-vaari')
+                 .replace(/\bNavarai\b/gi, 'Nava-rai')
+                 .replace(/\bChittirai\b/gi, 'Chithirai')
+                 .replace(/\bAadi\b/gi, 'Aaadi')
+                 .replace(/\bpattam\b/gi, 'pattam');
+      text = text.replace(/\bVanchinadan\b|\bVanchinathan\b/gi, 'Vaan-chi-naathan')
+                 .replace(/\bManiyachi\b/gi, 'Mani-yaachi');
+      text = text.replace(/\bMarudu\s+Brothers\b/gi, 'Ma-rudhu Brothers')
+                 .replace(/\bMarudu\s+Pandiyan\b/gi, 'Ma-rudhu Paandiyan')
+                 .replace(/\bPuli\s+Thevar\b/gi, 'Pooli Thevar')
+                 .replace(/\bVelu\s+Nachiyar\b/gi, 'Velu Naachiyar')
+                 .replace(/\bTiruppur\s+Kumaran\b/gi, 'Thiruppoor Kumaran')
+                 .replace(/\bKodikatha\s+Kumaran\b/gi, 'Kodi-kaatha Kumaran')
+                 .replace(/\bV\.?\s*O\.?\s*Chidambaranar\b/gi, 'V O Chidambara-naar')
+                 .replace(/\bSubramania\s+Bharati\b/gi, 'Subramania Bhaarathi')
+                 .replace(/\bVedaranyam\b/gi, 'Veda-raanyam');
       text = text.replace(/\be\.g\.?/gi, 'for example');
       text = text.replace(/\bi\.e\.?/gi, 'that is');
       text = text.replace(/\betc\.?/gi, 'etcetera');

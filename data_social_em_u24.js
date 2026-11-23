@@ -1,4 +1,4 @@
-// Class 10 Social Science - Geography Unit 7: Human Geography of Tamil Nadu
+﻿// Class 10 Social Science - Geography Unit 7: Human Geography of Tamil Nadu
 // Tamil Nadu Samacheer Kalvi Q&A Guide (English Medium)
 
 const SOCIAL_EM_UNIT_24_DATA = {
@@ -73,7 +73,8 @@ const SOCIAL_EM_UNIT_24_DATA = {
           mistake_warning: `⚠️ Key Exam Pitfalls & Avoidable Errors:
 • Name all 3 seasons: Sornavari, Samba, and Navarai.
 • State that 'Samba' is the primary cultivation season corresponding to the Northeast monsoon.`,
-          ansTamil: "சொர்ணவாரி (சித்திரை பட்டம்), சம்பா (ஆடி பட்டம்) மற்றும் நவரை (கார்த்திகை பட்டம்)."
+          ansTamil: "சொர்ணவாரி (சித்திரை பட்டம்), சம்பா (ஆடி பட்டம்) மற்றும் நவரை (கார்த்திகை பட்டம்).",
+          audioScript: "Three principal cropping seasons of paddy in Tamil Nadu: 1. Sorna-vaari or Chithirai pattam: Sowing in April to May; harvesting in August to September. 2. Saamba or Aaadi pattam: Sowing in July to August; harvesting in January to February; this is the premier paddy cultivation season. 3. Nava-rai or Kaar-thigai pattam: Sowing in November to December; harvesting in February to March."
         },
         {
           id: "soc_em_24_5",

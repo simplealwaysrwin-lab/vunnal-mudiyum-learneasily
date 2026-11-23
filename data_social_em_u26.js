@@ -1,4 +1,4 @@
-// Class 10 Social Science - History Unit 9: Freedom Struggle in Tamil Nadu
+﻿// Class 10 Social Science - History Unit 9: Freedom Struggle in Tamil Nadu
 // Tamil Nadu Samacheer Kalvi Q&A Guide (English Medium)
 
 const SOCIAL_EM_UNIT_26_DATA = {
@@ -91,7 +91,8 @@ const SOCIAL_EM_UNIT_26_DATA = {
           mistake_warning: `⚠️ Key Exam Pitfalls & Avoidable Errors:
 • The date '17 June 1911' and location 'Maniyachi Junction' must be noted accurately.
 • The revolutionary society's name: 'Bharat Mata Association'.`,
-          ansTamil: "1911 ஜூன் 17 மணியாச்சி இரயில் சந்திப்பில் கலெக்டர் ஆஷ் துரையை வாஞ்சிநாதன் சுட்டுக் கொன்று வீரமரணமடைந்தார்."
+          ansTamil: "1911 ஜூன் 17 மணியாச்சி இரயில் சந்திப்பில் கலெக்டர் ஆஷ் துரையை வாஞ்சிநாதன் சுட்டுக் கொன்று வீரமரணமடைந்தார்.",
+          audioScript: "Assassination of Collector Ashe at Mani-yaachi: 1. Date and Venue: On 17 June 1911 at Mani-yaachi railway junction near Thiru-nel-veyli. 2. Action: Vaan-chi-naathan, a revolutionary member of the secret Bharat Mata Association, shot dead Robert William Ashe, the Collector of Tirunelveli who had crushed the Swadeshi movement. 3. Supreme Sacrifice: Vaan-chi-naathan immediately shot himself on the railway platform to avoid British capture."
         },
         {
           id: "soc_em_26_6",

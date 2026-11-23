@@ -1,4 +1,4 @@
-// Class 10 Social Science - Economics Unit 5: Industrial Clusters in Tamil Nadu
+﻿// Class 10 Social Science - Economics Unit 5: Industrial Clusters in Tamil Nadu
 // Tamil Nadu Samacheer Kalvi Q&A Guide (English Medium)
 
 const SOCIAL_EM_UNIT_20_DATA = {
@@ -135,7 +135,8 @@ const SOCIAL_EM_UNIT_20_DATA = {
           mistake_warning: `⚠️ To Secure Full Marks (5/5):
 • Write dedicated subheadings for Chennai, Coimbatore/Tiruppur, Karur/Erode/Salem, Vellore, and Sivakasi.
 • Mention hallmark phrases: 'Manchester of South India' (Coimbatore), 'Detroit of Asia' (Chennai), and 'Little Japan' (Sivakasi).`,
-          ansTamil: "சென்னை, கோவை, திருப்பூர், கரூர், சிவகாசி மற்றும் வேலூர் ஆகியவை தமிழ்நாட்டின் முன்னணி தொழில் தொகுப்புகளாகும்."
+          ansTamil: "சென்னை, கோவை, திருப்பூர், கரூர், சிவகாசி மற்றும் வேலூர் ஆகியவை தமிழ்நாட்டின் முன்னணி தொழில் தொகுப்புகளாகும்.",
+          audioScript: "Prominent industrial clusters in Tamil Nadu: 1. Chennai Cluster, known as the Detroit of Asia: Globally acclaimed for automobiles, auto ancillaries, I T software, and leather exports. 2. Coimbatore and Tiruppur Belt: Coimbatore is the Manchester of South India with spinning mills and motor pumps; Tiruppur is the Knitwear Capital generating over 40 percent of India's cotton knitwear exports. 3. Karur, Erode, and Salem: Karur produces home textiles and 60 percent of South India's bus bodies; Erode produces powerloom fabrics; Salem produces S A I L steel. 4. Leather and Footwear Cluster in Vel-loor and Ranipet: Aamboor, Vaani-yambaadi, and Ranipet produce over 60 percent of India's tanned leather and footwear exports. 5. Sivakasi Cluster, known as Little Japan: Produces 90 percent of fireworks and 80 percent of safety matches."
         },
         {
           id: "soc_em_20_8",

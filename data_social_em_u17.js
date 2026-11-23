@@ -1,4 +1,4 @@
-// Class 10 Social Science - History Unit 5: Social and Religious Reform Movements in the 19th Century
+﻿// Class 10 Social Science - History Unit 5: Social and Religious Reform Movements in the 19th Century
 // Tamil Nadu Samacheer Kalvi Q&A Guide (English Medium)
 
 const SOCIAL_EM_UNIT_17_DATA = {
@@ -107,7 +107,8 @@ const SOCIAL_EM_UNIT_17_DATA = {
           mistake_warning: `⚠️ Key Exam Pitfalls & Avoidable Errors:
 • Write the exact place name 'Vadalur' and foundational years: '1865' (Sanmarga Sangam) and '1867' (Dharma Salai).
 • Ensure correct spelling for 'Jeevakarunya' (compassion to all life forms).`,
-          ansTamil: "ஜீவகாருண்யம் போதித்தார்; 1867-ல் வடலூரில் சத்திய தருமச்சாலையை நிறுவினார்."
+          ansTamil: "ஜீவகாருண்யம் போதித்தார்; 1867-ல் வடலூரில் சத்திய தருமச்சாலையை நிறுவினார்.",
+          audioScript: "The core philosophy of Raama-linga Adigal, known as Valla-laar, is centered on three divine principles: 1. Jeeva-Kaarunya: He showed boundless compassion for all living beings, declaring, Whenever I saw withered crops, I withered too. 2. Samarasa Suddha Sanmaarga Sathya Sangam, established in 1865: He founded this society to unite all people across caste, creed, and religious divisions. 3. Sathya Dharma Saalai, established in 1867: He established an ever-burning kitchen at Vada-loor to feed the poor and hungry unconditionally."
         },
         {
           id: "soc_em_17_7",
@@ -138,7 +139,8 @@ const SOCIAL_EM_UNIT_17_DATA = {
 • Structure your answer into distinct numbered sections with Founder Name, Year of Establishment, and Major Contribution.
 • The Shuddhi Movement MUST be attributed to Arya Samaj (Dayananda Saraswathi); attributing it to Brahmo Samaj will cause a 1-mark deduction.
 • Spell 'Prarthana Samaj', 'Atmaram Pandurang', and 'Dayananda Saraswathi' accurately.`,
-          ansTamil: "பிரம்ம சமாஜம், பிரார்த்தனை சமாஜம், ஆரிய சமாஜம், ராமகிருஷ்ணா மிஷன் மற்றும் அலிகார் இயக்கம் ஆகியவை இந்திய மறுமலர்ச்சிக்கு வித்திட்டன."
+          ansTamil: "பிரம்ம சமாஜம், பிரார்த்தனை சமாஜம், ஆரிய சமாஜம், ராமகிருஷ்ணா மிஷன் மற்றும் அலிகார் இயக்கம் ஆகியவை இந்திய மறுமலர்ச்சிக்கு வித்திட்டன.",
+          audioScript: "Role of nineteenth-century socio-religious reform movements: 1. Brahmo Samaj, founded in 1828 by Raja Rammohan Roy: Promoted monotheism, denounced idol worship, and successfully led to the 1829 Abolition of Sati Act. 2. Prarthana Samaj, founded in 1867 by Doctor Atmaram Pandurang: Worked in Maharashtra for inter-dining, inter-caste marriages, widow remarriage, and education of depressed classes under leaders M.G. Ranade and R.G. Bhandarkar. 3. Arya Samaj, founded in 1875 by Swami Dayananda Saraswathi: Gave the war cry Go Back to the Vay-dahs, rejected child marriage and untouchability, and launched the Shuddhi movement. 4. Ramakrishna Mission, founded in 1897 by Swami Vivekananda: Integrated spiritualism with social relief, schools, hospitals, and disaster rehabilitation. 5. Aligarh Movement by Sir Syed Ahmed Khan: Inspired Muslims to embrace western education and scientific thinking through the M A O College at Aligarh."
         },
         {
           id: "soc_em_17_8",
@@ -151,7 +153,7 @@ const SOCIAL_EM_UNIT_17_DATA = {
             • Emphasized compassion (Jeevakarunya) as the highest spiritual virtue.<br>
             • Established Samarasa Suddha Sanmarga Sathya Sangam in 1865 and Sathya Dharma Salai at Vadalur in 1867 to feed all people unconditionally.<br><br>
 
-            <b>2. Vaikunda Swamigal (Ayya Vashi - Tamil Nadu):</b><br>
+            <b>2. Vaikunda Swamigal (Ayya Vazhi - Tamil Nadu):</b><br>
             • Born near Kanyakumari; championed equality and self-respect for oppressed castes.<br>
             • Instituted 'Samathuva Samajam' (community inter-dining) and built community halls called 'Nizhal Thangals'.<br><br>
 
@@ -166,7 +168,8 @@ const SOCIAL_EM_UNIT_17_DATA = {
 • Cover all four stalwart leaders: Ramalinga Adigal, Vaikunda Swamigal, Sri Narayana Guru, and Ayyankali.
 • Quote Sri Narayana Guru's dictum accurately: 'One Caste, One Religion, One God for All Humanity'.
 • Note Vaikunda Swamigal's distinctive institution: 'Nizhal Thangals' (shrine feeding centers).`,
-          ansTamil: "ராமலிங்க அடிகளார், வைகுண்ட சுவாமிகள், ஸ்ரீ நாராயண குரு மற்றும் அய்யன்காளி ஆகியோர் தென்னிந்திய சீர்திருத்தத்திற்கு அளப்பரிய பங்களிப்பு செய்தனர்."
+          ansTamil: "ராமலிங்க அடிகளார், வைகுண்ட சுவாமிகள், ஸ்ரீ நாராயண குரு மற்றும் அய்யன்காளி ஆகியோர் தென்னிந்திய சீர்திருத்தத்திற்கு அளப்பரிய பங்களிப்பு செய்தனர்.",
+          audioScript: "Prominent social reform leaders and movements of South India: 1. Raama-linga Adigal, known as Valla-laar: Emphasized compassion or Jeeva-Kaarunya as the highest virtue. Established Samarasa Suddha Sanmaarga Sathya Sangam in 1865 and Sathya Dharma Saalai at Vada-loor in 1867 to feed all people unconditionally. 2. Vaikunda Swaamigal, founder of Ayya Vaazhi: Born near Kanyakumari, championed equality and self-respect, instituted Samathuva Samajam inter-dining, and built community halls called Ni-zhal Thaangals. 3. Sri Narayana Guru of Kerala: Coined the slogan, One Caste, One Religion, One God for All Humanity, built the Shiva temple at Aruvippuram, and founded S N D P Yogam. 4. Ayyankali of Kerala: Championed Dalits right to use public roads and obtain schooling, founding the Sadhu Jana Paari-paalana Sangam in 1907."
         }
       ]
     }

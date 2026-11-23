@@ -1,4 +1,4 @@
-// Class 10 Social Science - History Unit 6: Early Revolts Against British Rule in Tamil Nadu
+﻿// Class 10 Social Science - History Unit 6: Early Revolts Against British Rule in Tamil Nadu
 // Tamil Nadu Samacheer Kalvi Q&A Guide (English Medium)
 
 const SOCIAL_EM_UNIT_21_DATA = {
@@ -73,7 +73,8 @@ const SOCIAL_EM_UNIT_21_DATA = {
           mistake_warning: `⚠️ Key Exam Pitfalls & Avoidable Errors:
 • Memorize the year: '1529' and names: 'Viswanatha Nayaka' and 'Ariyanatha Mudaliar'.
 • The number of palayams '72' must be mentioned without mistake.`,
-          ansTamil: "1529-ல் விஸ்வநாத நாயக்கரால் 72 பாளையங்களாகப் பிரிக்கப்பட்டு உருவாக்கப்பட்ட முறை."
+          ansTamil: "1529-ல் விஸ்வநாத நாயக்கரால் 72 பாளையங்களாகப் பிரிக்கப்பட்டு உருவாக்கப்பட்ட முறை.",
+          audioScript: "Origin and functions of the Paalaiya-kkaarar system: 1. Origin: Introduced in 1529 by Viswanatha Nayaka, ruler of Madurai, assisted by prime minister Ariyanatha Mudaliar. 2. Division: The entire realm was divided into 72 Paalayams, each held by a local chieftain or Paalaiya-kkaarar. 3. Functions: Collected tax tributes, performed policing duties known as Padikaval or Arasukaaval, and supplied armed troops during wars."
         },
         {
           id: "soc_em_21_5",
@@ -132,7 +133,8 @@ const SOCIAL_EM_UNIT_21_DATA = {
           mistake_warning: `⚠️ To Secure Full Marks (5/5):
 • Structure into distinct phases: Revenue dispute, Jackson confrontation, Bannerman's siege, Betrayal, and Hanging.
 • Write names accurately: 'Colin Jackson', 'Major Bannerman', 'Pudukkottai Tondaiman', and execution site 'Kayathar' on '16 October 1799'.`,
-          ansTamil: "வரி செலுத்த மறுப்பு, ஜாக்சன் சந்திப்பு, பானர்மேன் முற்றுகை மற்றும் 1799 அக்டோபர் 16 கயத்தாறு தூக்கு."
+          ansTamil: "வரி செலுத்த மறுப்பு, ஜாக்சன் சந்திப்பு, பானர்மேன் முற்றுகை மற்றும் 1799 அக்டோபர் 16 கயத்தாறு தூக்கு.",
+          audioScript: "Conflict between Veera-paandiya Katta-bomman and the East India Company: 1. Revenue Dispute: Katta-bomman refused to pay tax tributes, affirming sovereign independence. 2. Confrontation with Collector Jackson in 1798: Met Collector Colin Jackson at Ramanathapuram; insulted, he escaped with Oomaithurai. 3. Expedition of Major Bannerman in 1799: British troops laid siege to Paan-chaalan-kurichi fort; Katta-bomman escaped to Pudukkottai. 4. Betrayal: Raja of Pudukkottai captured Katta-bomman from Kalapore forests and handed him over to the British. 5. Hanging at Kaya-thaar on 16 October 1799: Katta-bomman was executed on an old tamarind tree at Kaya-thaar."
         },
         {
           id: "soc_em_21_8",
@@ -159,7 +161,8 @@ const SOCIAL_EM_UNIT_21_DATA = {
           mistake_warning: `⚠️ To Secure Full Marks (5/5):
 • Explicitly mention the 'Agnew Turban', Sir John Cradock, Colonel Fancourt, Fateh Hyder, and Colonel Gillespie.
 • Conclude by pointing out that Vellore Revolt was the precursor to the 1857 Great Indian Revolt.`,
-          ansTamil: "அக்னியூ தலைப்பாகையால் 1806 ஜூலை 10-ல் வெடித்தது; கர்னல் கில்லஸ்பியால் கொடூரமாக ஒடுக்கப்பட்டது."
+          ansTamil: "அக்னியூ தலைப்பாகையால் 1806 ஜூலை 10-ல் வெடித்தது; கர்னல் கில்லஸ்பியால் கொடூரமாக ஒடுக்கப்பட்டது.",
+          audioScript: "Causes, course, and suppression of the Vel-loor Revolt of 1806: 1. Causes: Grievances over low pay and racial humiliation; Commander-in-Chief Sir John Cradock banned caste marks and beards; imposition of the hated Agnew Turban with cow and pig leather cockades. 2. Outbreak on 10 July 1806: Sepoys mutinied at Vel-loor Fort, killed Colonel Fancourt, and hoisted Tipu Sultan's Mysore tiger flag. 3. Brutal Suppression: Colonel Gillespie arrived from Arcot, blew open the fort gates, and ruthlessly crushed the uprising. 4. Historical Significance: Regarded as the direct herald and precursor to the Great Revolt of 1857."
         }
       ]
     }

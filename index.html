@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -147,15 +147,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Serif+Tamil:wght@600;700;800&display=swap" rel="stylesheet">
-<script src="data_tamil_u1.js?v=20261031_v31"></script>
-<script src="data_tamil_u2.js?v=20261031_v31"></script>
-<script src="data_tamil_u3.js?v=20261031_v31"></script>
-<script src="data_tamil_u4.js?v=20261031_v31"></script>
-<script src="data_tamil_u5.js?v=20261104_v51"></script>
-<script src="data_tamil_u6.js?v=20261104_v51"></script>
-<script src="data_tamil_u7.js?v=20261116_v82"></script>
-<script src="data_tamil_u8.js?v=20261116_v82"></script>
-<script src="data_tamil_u9.js?v=20261116_v82"></script>
+<script src="data_tamil_u1.js?v=20261124_v128"></script>
+<script src="data_tamil_u2.js?v=20261124_v128"></script>
+<script src="data_tamil_u3.js?v=20261124_v128"></script>
+<script src="data_tamil_u4.js?v=20261124_v128"></script>
+<script src="data_tamil_u5.js?v=20261124_v128"></script>
+<script src="data_tamil_u6.js?v=20261124_v128"></script>
+<script src="data_tamil_u7.js?v=20261124_v128"></script>
+<script src="data_tamil_u8.js?v=20261124_v128"></script>
+<script src="data_tamil_u9.js?v=20261124_v128"></script>
 <script src="data_tamil_writing.js?v=20261117_v87"></script>
 <script src="data_english_u1.js?v=20261124_v125"></script>
 <script src="data_english_u2.js?v=20261124_v125"></script>
@@ -8999,16 +8999,24 @@ function resumeLastVisitedLesson() {
       ` : ''}
 
       ${currentFilter === 'extra' ? `
-        <div style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border:1px solid #bfdbfe; border-left:5px solid #2563eb; border-radius:12px; padding:14px 18px; margin:14px 0; box-shadow:0 2px 8px rgba(37,99,235,0.12);">
-          <div style="font-size:15px; font-weight:800; color:#1e40af; display:flex; align-items:center; gap:8px;">
-            <span style="font-size:18px;">📘</span>
-            <span>${isEm ? 'Additional Practice Questions Batch (In-Text)' : 'கூடுதல் பயிற்சி வினாக்கள் தொகுப்பு'}</span>
-            <span class="badge" style="background:#bfdbfe; color:#1e40af; font-size:11px; padding:3px 8px; border-radius:12px; font-weight:800;">${countExtra} ${isEm ? 'Questions' : 'வினாக்கள்'}</span>
+        <div class="student-tip-card" style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border:1.5px solid #bfdbfe; border-left:6px solid #2563eb; border-radius:14px; padding:16px 20px; margin:14px 0 18px 0; box-shadow:0 4px 14px rgba(37,99,235,0.15);">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:22px;">💡</span>
+              <span style="font-size:16px; font-weight:800; color:#1e40af;">
+                ${isEm ? '100% Score Success Tip for Students' : 'மாணவர்களுக்கான 100% வெற்றி வழிகாட்டல் குறிப்பு'}
+              </span>
+              <span class="badge" style="background:#bfdbfe; color:#1e40af; font-size:11px; padding:3px 8px; border-radius:12px; font-weight:800;">${countExtra} ${isEm ? 'Extra Questions' : 'கூடுதல் வினாக்கள்'}</span>
+            </div>
+            <button type="button" id="studentTipAudioBtn" onclick="playStudentTipVoice()" style="background:linear-gradient(135deg, #2563eb, #1d4ed8); color:#ffffff; font-weight:800; font-size:13px; padding:8px 16px; border-radius:24px; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 3px 10px rgba(37,99,235,0.3); transition:all 0.2s ease;">
+              <span>🔊</span>
+              <span>${isEm ? 'Listen Voice Tip' : 'குரல் வழிகாட்டலைக் கேட்க'}</span>
+            </button>
           </div>
-          <p style="margin:6px 0 0 0; font-size:13px; color:#1e3a8a; line-height:1.5;">
+          <p style="margin:10px 0 0 0; font-size:13.5px; color:#1e3a8a; line-height:1.65; font-weight:600;">
             ${isEm
-              ? 'High-probability in-text practice questions for deeper understanding and thorough board exam preparation.'
-              : 'பாடத்தின் உட்பகுதிகளிலிருந்து கூடுதல் பயிற்சி மற்றும் தெளிவான புரிதலுக்காக உருவாக்கப்பட்ட வினா-விடைகள்.'}
+              ? 'Students should not only study the book-back questions, but also prepare in-text additional questions thoroughly. In the board examination, unexpected interior questions can also be asked. Therefore, to secure a 100% centum score, practicing these additional questions is essential.'
+              : 'மாணவர்கள் புத்தகத்தின் பின்பக்க வினாக்கள் மட்டுமின்றி, பாடத்தின் உட்பகுதி கூடுதல் வினாக்களையும் படித்துக்கொள்வது மிகவும் நல்லது. அரசுப் பொதுத்தேர்வில் புத்தகப் பின்பக்க வினாக்கள் அல்லாத பிற உள்வினாக்களும் கேட்கப்படலாம். எனவே, மாணவர்கள் தேர்வில் 100% முழு மதிப்பெண் பெற இக்கூடுதல் வினாக்களையும் படிப்பது மிகவும் அவசியமாகும்.'}
           </p>
         </div>
       ` : ''}
@@ -9697,12 +9705,87 @@ function resumeLastVisitedLesson() {
     if (window.continuousAudioPlayer && filterType !== '2m' && filterType !== '2m_audio' && filterType !== 'manapaadam') {
       continuousAudioPlayer.stop();
     }
+    if (typeof stopStudentTipVoice === 'function') stopStudentTipVoice();
     if (filterType === 'extra') {
       currentSubSection = 'all';
     }
     currentFilter = filterType;
     currentLessonPage = 1;
     renderLessonGuide();
+    if (filterType === 'extra') {
+      setTimeout(() => {
+        if (typeof playStudentTipVoice === 'function') playStudentTipVoice();
+      }, 100);
+    }
+  }
+
+  let isStudentTipVoicePlaying = false;
+
+  function playStudentTipVoice() {
+    if (!('speechSynthesis' in window)) {
+      alert('Speech synthesis is not supported on your browser.');
+      return;
+    }
+    if (isStudentTipVoicePlaying) {
+      stopStudentTipVoice();
+      return;
+    }
+    if (window.teacherAudioPlayer) teacherAudioPlayer.stop();
+    if (window.continuousAudioPlayer) continuousAudioPlayer.stop();
+
+    const isEnglish = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+    const lang = isEnglish ? 'en-IN' : 'ta-IN';
+
+    const textToSpeak = isEnglish
+      ? "Special Success Tip for Students. Students should not only study the book-back questions, but also prepare in-text additional questions thoroughly. In the board examination, unexpected interior questions can also be asked. Therefore, to secure a 100 percent centum score, practicing these additional questions is essential. All the best for your examination!"
+      : "மாணவர்களுக்கான 100% வெற்றி வழிகாட்டல் குறிப்பு. மாணவர்கள் புத்தகத்தின் பின்பக்க வினாக்கள் மட்டுமின்றி, பாடத்தின் உட்பகுதி கூடுதல் வினாக்களையும் படித்துக்கொள்வது மிகவும் நல்லது. அரசுப் பொதுத்தேர்வில் புத்தகப் பின்பக்க வினாக்கள் அல்லாத பிற உள்வினாக்களும் கேட்கப்படலாம். எனவே, மாணவர்கள் தேர்வில் 100% முழு மதிப்பெண் பெற இக்கூடுதல் வினாக்களையும் படிப்பது மிகவும் அவசியமாகும். தேர்வில் வெற்றி பெற வாழ்த்துகள்!";
+
+    const chunks = typeof chunkTextForSpeech === 'function' ? chunkTextForSpeech(textToSpeak, 120) : [textToSpeak];
+    isStudentTipVoicePlaying = true;
+    updateStudentTipUI(true);
+
+    if (window.wakeLockManager) window.wakeLockManager.acquire();
+
+    if (window.speechQueueEngine) {
+      speechQueueEngine.play(chunks, {
+        lang: lang,
+        rate: isEnglish ? 0.85 : 0.95,
+        pitch: 1.0,
+        voice: (window.teacherAudioPlayer && teacherAudioPlayer.getBestVoice) ? teacherAudioPlayer.getBestVoice(lang) : null
+      }, null, () => {
+        stopStudentTipVoice();
+      });
+    } else {
+      const u = new SpeechSynthesisUtterance(textToSpeak);
+      u.lang = lang;
+      u.rate = isEnglish ? 0.85 : 0.95;
+      u.onend = () => { stopStudentTipVoice(); };
+      u.onerror = () => { stopStudentTipVoice(); };
+      window.speechSynthesis.speak(u);
+    }
+  }
+
+  function stopStudentTipVoice() {
+    isStudentTipVoicePlaying = false;
+    if (window.speechQueueEngine) speechQueueEngine.stop();
+    if ('speechSynthesis' in window) {
+      try { window.speechSynthesis.cancel(); } catch(e) {}
+    }
+    updateStudentTipUI(false);
+    if (window.wakeLockManager) window.wakeLockManager.release();
+  }
+
+  function updateStudentTipUI(isPlaying) {
+    const btn = document.getElementById('studentTipAudioBtn');
+    if (!btn) return;
+    const isEnglish = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+    if (isPlaying) {
+      btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+      btn.innerHTML = `<span>⏹️</span><span>${isEnglish ? 'Stop Voice' : 'நிறுத்துக'}</span>`;
+    } else {
+      btn.style.background = 'linear-gradient(135deg, #2563eb, #1d4ed8)';
+      btn.innerHTML = `<span>🔊</span><span>${isEnglish ? 'Listen Voice Tip' : 'குரல் வழிகாட்டலைக் கேட்க'}</span>`;
+    }
   }
 
   function openContinuous2MAudioTab() {
@@ -11020,22 +11103,31 @@ if (isEnglish) {
              .replace(/\baqueous\b/gi, 'அக்வியஸ்');
 }
 
-// 0.056 Relative Atomic Mass (Ar / Aᵣ) and Relative Molecular Mass (Mr / Mᵣ) pronunciation fix
+// 0.057 Titles & Honorifics (Mr. -> Mister, Mrs. -> Missus, Ms. -> Miz, Dr. -> Doctor)
 if (isEnglish) {
-  text = text.replace(/\bA[ᵣr]\b|Aᵣ|\(Aᵣ\)/g, ' A r ')
-             .replace(/\bM[ᵣr]\b|Mᵣ|\(Mᵣ\)/g, ' M r ')
-             .replace(/\bRAM\b/g, ' R A M, Relative Atomic Mass ');
-} else {
-  text = text.replace(/\bA[ᵣr]\b|Aᵣ|\(Aᵣ\)/g, ' ஏ ஆர் ')
-             .replace(/\bM[ᵣr]\b|Mᵣ|\(Mᵣ\)/g, ' எம் ஆர் ');
-}
-
-// 0.057 Titles & Honorifics (Dr. -> Doctor / டாக்டர்)
-if (isEnglish) {
-  text = text.replace(/\bDr\.\s*/g, 'Doctor ')
+  text = text.replace(/\bMr\.\s*/gi, 'Mister ')
+             .replace(/\bMr\b\s+(?=[A-Z])/g, 'Mister ')
+             .replace(/\bMrs\.\s*/gi, 'Missus ')
+             .replace(/\bMrs\b\s+(?=[A-Z])/g, 'Missus ')
+             .replace(/\bMs\.\s*/gi, 'Miz ')
+             .replace(/\bMs\b\s+(?=[A-Z])/g, 'Miz ')
+             .replace(/\bDr\.\s*/gi, 'Doctor ')
              .replace(/\bDr\b\s+(?=[A-Z])/g, 'Doctor ');
 } else {
-  text = text.replace(/\bDr\.\s*|\bDr\b\s+/gi, 'டாக்டர் ');
+  text = text.replace(/\bMr\.\s*|\bMr\b\s+/gi, 'திரு. ')
+             .replace(/\bMrs\.\s*|\bMrs\b\s+/gi, 'திருமதி. ')
+             .replace(/\bDr\.\s*|\bDr\b\s+/gi, 'டாக்டர் ');
+}
+
+// 0.056 Relative Atomic Mass (Ar / Aᵣ) and Relative Molecular Mass (Mr / Mᵣ) pronunciation fix
+if (isEnglish) {
+  text = text.replace(/\bAᵣ\b|\(Aᵣ\)|\(Ar\)/g, ' A r ')
+             .replace(/\bMᵣ\b|\(Mᵣ\)|\(Mr\)/g, ' M r ')
+             .replace(/\bRAM\b/g, ' R A M, Relative Atomic Mass ')
+             .replace(/\bRMM\b/g, ' R M M, Relative Molecular Mass ');
+} else {
+  text = text.replace(/\bAᵣ\b|\(Aᵣ\)|\(Ar\)/g, ' ஏ ஆர் ')
+             .replace(/\bMᵣ\b|\(Mᵣ\)|\(Mr\)/g, ' எம் ஆர் ');
 }
 
 // 0.058 Tamil Nadu & Indian History, Geography, and Social Terms Pronunciation for English TTS
@@ -11335,6 +11427,9 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
       }
       if (window.storyAudioPlayer && (storyAudioPlayer.isPlaying || storyAudioPlayer.isPaused)) {
         storyAudioPlayer.stop(false);
+      }
+      if (typeof stopStudentTipVoice === 'function') {
+        stopStudentTipVoice();
       }
       this.stop(false);
 
@@ -11753,6 +11848,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
     audioInstance: null,
 
     startPlaylist: function(items, startIndex = 0, mode = '2m') {
+      if (typeof stopStudentTipVoice === 'function') stopStudentTipVoice();
       const isEnglish = (typeof isEm !== 'undefined' && isEm) || (currentSubject && (currentSubject.id === 'english' || currentSubject.id.endsWith('_em')));
       
       // Auto-detect items if not provided
@@ -14749,7 +14845,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261124_v127')
+        navigator.serviceWorker.register('./sw.js?v=20261124_v129')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

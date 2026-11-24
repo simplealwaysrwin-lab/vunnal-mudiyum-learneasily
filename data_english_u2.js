@@ -360,6 +360,7 @@ const ENGLISH_UNIT_2_DATA = {
           isAdditionalPractice: true,
           q: "Why did the mother throw a shoe through the neighbour's window?",
           qTamil: "தாய் பக்கத்து வீட்டு ஜன்னல் வழியே காலணியை (shoe) ஏன் வீசினார்?",
+          audioScript: "The mother firmly believed that burglars had broken into the house. Since the telephone was located downstairs where the intruders were suspected to be, she threw a shoe through the neighbour Mister Bodwell's window to seek help.",
           ans: "The mother firmly believed that burglars had broken into the house. Since the telephone was located downstairs where the intruders were suspected to be, she threw a shoe through the neighbour Mr. Bodwell's window to seek help.",
           ansTamil: "வீட்டிற்குள் திருடர்கள் நுழைந்துவிட்டதாகத் தாய் உறுதியாக நம்பினார். தொலைபேசி கீழ்த்தளத்தில் இருந்ததால், பக்கத்து வீட்டுக்காரர் திரு. போட்வெல்லின் கவனத்தை ஈர்த்து உதவி பெற அவரது ஜன்னல் மீது காலணியை வீசினார்."
         },

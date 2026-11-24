@@ -272,6 +272,59 @@ const ENGLISH_UNIT_3_DATA = {
           </div>`,
           ansTamil: "இக்கட்டுரை மகளிர் சக்தியின் தன்னிகரற்ற சாதனையையும், தடைகளைத் தகர்த்தெறிந்த அவர்களின் மன உறுதியையும் படம்பிடித்துக் காட்டுகிறது."
         }
+      ,
+
+        // Additional Practice Questions (In-Text)
+        {
+          id: "eng3_add_2m_1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          q: "What was the main aim of the Navika Sagar Parikrama project?",
+          qTamil: "நாவிகா சாகர் பரிக்ரமா திட்டத்தின் முக்கிய நோக்கம் என்ன?",
+          ans: "The project aimed to promote women's empowerment, showcase India's indigenous shipbuilding capability under the 'Make in India' initiative, and promote ocean sailing in the Indian Navy.",
+          ansTamil: "பெண்கள் அதிகாரமளித்தல், 'மேக் இன் இந்தியா' திட்டத்தின் கீழ் உள்நாட்டிலேயே கப்பல் கட்டும் இந்தியாவின் திறமையை உலகிற்கு வெளிப்படுத்துதல் மற்றும் கடற்பயணத்தை ஊக்குவித்தல் ஆகியவையே இதன் முக்கிய நோக்கங்களாகும்."
+        },
+
+        // Additional Practice Questions (In-Text)
+        {
+          id: "eng3_add_2m_2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          q: "Why was INSV Tarini special?",
+          qTamil: "ஐ.என்.எஸ்.வி தாரிணி (INSV Tarini) ஏன் தனித்துவமானது?",
+          ans: "INSV Tarini was an indigenously built 55-foot sailing vessel of the Indian Navy. It was equipped with advanced navigation and communication systems and used green renewable energy.",
+          ansTamil: "ஐ.என்.எஸ்.வி தாரிணி என்பது இந்தியாவில் கோவாவில் கட்டப்பட்ட 55 அடி நீளப் பாய்மரக் கப்பலாகும். இதில் நவீன வழிகாட்டி அமைப்புகளும், புதுப்பிக்கத்தக்க இயற்கை ஆற்றல் பயன்பாடும் இடம்பெற்றிருந்தன."
+        },
+
+        // Additional Practice Questions (In-Text)
+        {
+          id: "eng3_add_2m_3",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          q: "How did the women sailors contribute to environmental protection?",
+          qTamil: "பெண் மாலுமிகள் சுற்றுச்சூழல் பாதுகாப்பிற்கு எவ்வாறு பங்களித்தனர்?",
+          ans: "They harnessed wind energy for navigation, recorded oceanographic and weather data, and monitored marine pollution levels across the oceans.",
+          ansTamil: "அவர்கள் காற்றாலை ஆற்றலைப் பயன்படுத்திப் பயணம் செய்தனர்; மேலும் கடல் நீரோட்டங்கள், வானிலை மாறுபாடுகள் மற்றும் கடல் மாசுபடுதல் குறித்த முக்கியத் தகவல்களைச் சேகரித்துப் பங்களித்தனர்."
+        },
+
+        // Additional Practice Questions (In-Text)
+        {
+          id: "eng3_add_5m_1",
+          type: "5m",
+          mark: "5 Marks | Additional Practice Paragraph",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          q: "Explain the achievements of the six women naval officers in Navika Sagar Parikrama.",
+          qTamil: "நாவிகா சாகர் பரிக்ரமாவில் ஆறு பெண் கடற்படை அதிகாரிகளின் சாதனைகளை விளக்குக.",
+          ans: "Navika Sagar Parikrama was a historic circumnavigation expedition undertaken by an all-woman Indian Navy crew led by Lieutenant Commander Vartika Joshi. Sailing aboard the indigenously built INSV Tarini, the crew departed from Goa in September 2017 and completed the voyage in 254 days across 21,600 nautical miles. They navigated through rough seas, treacherous currents, and extreme cold without external assistance. Along the way, they collected critical oceanographic, weather, and marine pollution data. Their voyage proved that women can handle demanding adventures with determination, becoming an inspiring symbol of courage, teamwork, and national pride.",
+          ansTamil: "லெப்டினன்ட் கமாண்டர் வர்திகா ஜோஷி தலைமையில் ஆறு பெண் கடற்படை அதிகாரிகள் ஐ.என்.எஸ்.வி தாரிணி கப்பலில் உலகைச் சுற்றி வரலாற்றுச் சாதனை படைத்தனர். செப்டம்பர் 2017-ல் கோவாவிலிருந்து புறப்பட்டு 254 நாட்களில் 21,600 நாட்டிக்கல் மைல்கள் பயணம் செய்தனர். கடும் புயல், பனி மற்றும் அலைகளைத் துணிவுடன் சமாளித்தனர். கடல் வானிலை மற்றும் கடல் மாசுபாடு குறித்த தகவல்களைத் திரட்டினர். இவர்களின் வெற்றி இந்தியப் பெண்களின் ஆற்றல், துணிச்சல் மற்றும் குழுப்பணிக்கு உலகளாவிய பெருமை சேர்த்தது."
+        }
       ]
     },
 

@@ -389,7 +389,33 @@ const ENGLISH_UNIT_1_DATA = {
           q: "Why did the young seagull fail to fly with his brothers and sister?",
           qTamil: "இளம் கடற்பறவை தன் சகோதரர்களுடன் பறக்கத் தவறியது ஏன்?",
           ans: "The young seagull was afraid to fly. When he ran to the brink of the ledge and attempted to flap his wings, he became frightened by the vast expanse of the sea below. He felt certain his wings would never support him.",
-          ansTamil: "இளம் கடற்பறவைக்குக் கடலைக் கண்டு பயம். தன் பலவீனமான சிறகுகள் தன்னைத் தாங்காது என்று தவறாக எண்ணியதால் அதனால் பறக்க முடியவில்லை."
+          ansTamil: "இளம் கடற்பறவைக்குக் கடலைக் கண்டு பயம். தன் பலவீனமான சிறகுகள் தன்னைத் தாங்காது என்று தவறாக எண்ணியதால் அதனால் பறக்க முடியவில்லை.",
+          commonMistakes: [
+            {
+              type: "Spelling Mistakes (எழுத்துப் பிழைகள்)",
+              icon: "🔤",
+              deduction: "-½ Mark",
+              mistake: "Misspelling key textbook vocabulary: writing 'ledg' or 'legde' instead of 'ledge', 'seegull' instead of 'seagull', or 'afriad' instead of 'afraid'.",
+              mistakeTa: "'ledge' என்பதற்குப் பதிலாக 'ledg' / 'legde' எனவும், 'seagull' என்பதற்கு 'seegull' எனவும், 'afraid' என்பதற்கு 'afriad' எனவும் எழுத்துப் பிழையுடன் எழுதுதல்.",
+              correction: "Double check spellings of core keywords: <b>ledge</b>, <b>seagull</b>, and <b>afraid</b>."
+            },
+            {
+              type: "Capital Letters & Punctuation (தலைப்பெழுத்து & நிறுத்தக்குறிகள்)",
+              icon: "🔠",
+              deduction: "-½ Mark",
+              mistake: "Starting the sentence with a small letter ('the young seagull...'), omitting the comma after introductory clause ('When he ran to the brink of the ledge, ...'), or forgetting the final full stop (.).",
+              mistakeTa: "வாக்கியத் தொடக்கத்தில் சிறிய எழுத்தில் ('the...') தொடங்குதல், துணை வாக்கியத்தின் முடிவில் கமா (,) இடாமல் விடுதல், அல்லது வாக்கிய முடிவில் முற்றுப்புள்ளி (.) வைக்காமல் விடுதல்.",
+              correction: "Always begin with a capital letter ('<b>The</b> young seagull...'), place a comma after the clause, and end with a full stop (.)."
+            },
+            {
+              type: "Omission of Core Keyword / Concept (முக்கிய விடைக்குறிப்பு விடுபாடு)",
+              icon: "⚠️",
+              deduction: "-1 Mark",
+              mistake: "Writing a casual generic sentence like 'He had fear so he did not fly' without mentioning the required textbook keys: 'brink of the ledge' and 'wings would never support him'.",
+              mistakeTa: "'பயத்தால் பறக்கவில்லை' என்று பொதுவாக மட்டும் எழுதி, அரசுத் தேர்வு விடைக்குறிப்பிலுள்ள 'brink of the ledge' மற்றும் 'wings would never support him' ஆகிய முக்கியச் சொற்களை எழுதாமல் விடுதல்.",
+              correction: "Both core points ('afraid on brink of the ledge' and 'wings would never support him') must be clearly stated for full 2/2 marks."
+            }
+          ]
         },
         {
           id: "eng1_1_12",
@@ -578,6 +604,59 @@ const ENGLISH_UNIT_1_DATA = {
               }
             ]
           }
+        }
+      ,
+
+        // Additional Practice Questions (In-Text)
+        {
+          id: "eng1_add_2m_1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          q: "Why did the young seagull remain alone on the ledge?",
+          qTamil: "இளம் கடற்காகம் ஏன் பாறை விளிம்பில் தனியாகத் தங்கியது?",
+          ans: "The young seagull was afraid of flying. He felt convinced that his wings would never support him, so he failed to muster up the courage to fly away like his brothers and sister.",
+          ansTamil: "இளம் கடற்காகம் பறப்பதற்கு மிகவும் பயந்தது. தன் இறக்கைகள் தனக்கு ஒத்துழைக்காது என்று நம்பியதால், தன் உடன் பிறந்தவர்களைப் போலப் பறக்கத் துணிச்சல் இல்லாமல் பாறை விளிம்பிலேயே தனியாகத் தங்கியது."
+        },
+
+        // Additional Practice Questions (In-Text)
+        {
+          id: "eng1_add_2m_2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          q: "How did hunger influence the young seagull?",
+          qTamil: "பசி இளம் கடற்காகத்தை எவ்வாறு பாதித்தது?",
+          ans: "The young seagull had not eaten for twenty-four hours. His mother tempted him with a piece of fish. Maddened by hunger, he dived towards the fish and began his first flight.",
+          ansTamil: "இளம் கடற்காகம் இருபத்து நான்கு மணி நேரமாக எதையும் சாப்பிடாமல் இருந்தது. தாய் தன் அலகில் மீனுடன் அருகில் வந்ததும், பசி மயக்கத்தில் மீனைப் பிடிக்கக் குதித்து, அது தன் முதல் பயணத்தைத் தொடங்கியது."
+        },
+
+        // Additional Practice Questions (In-Text)
+        {
+          id: "eng1_add_2m_3",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          q: "How did the family welcome the young seagull after his first flight?",
+          qTamil: "இளம் கடற்காகத்தின் முதல் பறத்தலுக்குப் பிறகு அதன் குடும்பத்தினர் அதனை எவ்வாறு வரவேற்றனர்?",
+          ans: "His parents, brothers, and sister flew around him screaming joyfully, praising his achievement, and offering him scraps of dog-fish when he landed on the green sea.",
+          ansTamil: "அவரது பெற்றோர் மற்றும் உடன் பிறந்தவர்கள் அவனைச் சுற்றிப் பறந்து மகிழ்ச்சிக் கூச்சலிட்டுப் பாராட்டினர்; மேலும் அவன் கடலில் அமர்ந்த போது சுவையான மீன் துண்டுகளை அவனுக்கு உணவாக வழங்கினர்."
+        },
+
+        // Additional Practice Questions (In-Text)
+        {
+          id: "eng1_add_5m_1",
+          type: "5m",
+          mark: "5 Marks | Additional Practice Paragraph",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          q: "Describe how the young seagull overcame his fear of flying.",
+          qTamil: "இளம் கடற்காகம் தன் பறக்கும் பயத்தை எவ்வாறு வென்றது என்பதை விவரிக்கவும்.",
+          ans: "The young seagull was afraid to fly because he thought his wings would not support him. His brothers and sister had already flown away, but he remained alone on the ledge. His parents scolded and threatened to let him starve, but he could not bring himself to move. Driven by intense hunger for twenty-four hours, he watched his mother tear a piece of fish. She flew towards him with the fish in her beak but halted just out of reach. Maddened by hunger, he dived for the fish and plunged into space. As he fell, terror seized him, but within moments his wings spread outward instinctively. He felt the wind under his wings and realized he was soaring. His family joined him in joyful celebration. Thus, hunger prompted his courage, and he successfully overcame his fear of flying.",
+          ansTamil: "இளம் கடற்காகம் தன் இறக்கைகள் தாங்காது என்று நினைத்துப் பறக்க அஞ்சியது. அதன் உடன் பிறந்தவர்கள் பறந்துவிட்ட போதும், அது பாறை விளிம்பிலேயே நின்றது. பெற்றோரின் எச்சரிக்கையும் பயனுறவில்லை. 24 மணி நேரக் கடும் பசிக்குப்பின், தாய் மீன் துண்டுடன் அருகில் வந்து நிற்காமல் எட்டாத உயரத்தில் நின்றது. பசியின் உந்துதலால் அது மீனை நோக்கிப் பாய்ந்து காற்றில் விழுந்தது. முதலில் பயம் சூழ்ந்தாலும், இறக்கைகள் இயல்பாக விரிந்து பறக்கத் தொடங்கியது. இவ்வாறு பசி அதன் பயத்தை விரட்டி, முதல் வெற்றிகரமான பறத்தலுக்கு வழிவகுத்தது."
         }
       ]
     },

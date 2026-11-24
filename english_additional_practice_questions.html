@@ -1,0 +1,959 @@
+﻿<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10th English - Additional Practice Questions (In-Text) | Vunnal Mudiyum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Mukta+Malar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #eff6ff;
+    --secondary: #059669;
+    --secondary-light: #ecfdf5;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --text-tamil: #1e3a8a;
+    --bg-page: #f8fafc;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --badge-2m-bg: #e0f2fe;
+    --badge-2m-text: #0369a1;
+    --badge-5m-bg: #fef3c7;
+    --badge-5m-text: #92400e;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Mukta Malar', system-ui, sans-serif;
+  }
+
+  body {
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding-bottom: 60px;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+    color: #ffffff;
+    padding: 32px 20px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .app-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+
+  .header p {
+    font-size: 14.5px;
+    color: #bfdbfe;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .action-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary {
+    background: #ffffff;
+    color: #1e3a8a;
+    border-color: #ffffff;
+  }
+
+  .btn-primary:hover {
+    background: #f1f5f9;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+
+  .nav-pills {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+    scrollbar-width: thin;
+  }
+
+  .nav-pills::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .nav-pills::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+
+  .nav-pill {
+    white-space: nowrap;
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+  }
+
+  .nav-pill:hover, .nav-pill.active {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+  }
+
+  .filter-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #ffffff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+  }
+
+  .filter-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .filter-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+
+  .unit-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    margin-bottom: 32px;
+    overflow: hidden;
+  }
+
+  .unit-header {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-bottom: 2px solid #e2e8f0;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .unit-header-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .unit-badge {
+    background: var(--primary);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .unit-name {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--text-main);
+  }
+
+  .author-tag {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .qa-list {
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .qa-item {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    background: #ffffff;
+    transition: all 0.2s ease;
+  }
+
+  .qa-item:hover {
+    border-color: #93c5fd;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.06);
+  }
+
+  .qa-item.mark-5m {
+    border-left: 4px solid #f59e0b;
+    background: #fffdfa;
+  }
+
+  .qa-item.mark-2m {
+    border-left: 4px solid #2563eb;
+  }
+
+  .qa-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .mark-pill {
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+
+  .mark-pill.pill-2m {
+    background: var(--badge-2m-bg);
+    color: var(--badge-2m-text);
+  }
+
+  .mark-pill.pill-5m {
+    background: var(--badge-5m-bg);
+    color: var(--badge-5m-text);
+  }
+
+  .section-tag {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
+  }
+
+  .question-text {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    line-height: 1.45;
+  }
+
+  .question-tamil {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-tamil);
+    margin-bottom: 12px;
+    line-height: 1.5;
+    background: #f0f7ff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border-left: 3px solid #3b82f6;
+  }
+
+  .answer-box {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+  }
+
+  .answer-label {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--secondary);
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+
+  .answer-text {
+    font-size: 14.5px;
+    color: #1e293b;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .answer-tamil {
+    font-size: 13px;
+    color: #166534;
+    line-height: 1.55;
+    background: var(--secondary-light);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left: 3px solid var(--secondary);
+  }
+
+  .summary-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .summary-text h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1e40af;
+  }
+
+  .summary-text p {
+    font-size: 13px;
+    color: #3b82f6;
+  }
+
+  .stats-pill {
+    background: #ffffff;
+    border: 1px solid #93c5fd;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #1d4ed8;
+  }
+
+  @media print {
+    body {
+      background: #ffffff;
+      padding: 0;
+    }
+    .header, .action-bar, .nav-pills, .filter-controls, .print-hide {
+      display: none !important;
+    }
+    .container {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .unit-card {
+      border: 1px solid #cbd5e1;
+      box-shadow: none;
+      page-break-after: always;
+      margin-bottom: 20px;
+    }
+    .qa-item {
+      page-break-inside: avoid;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="app-tag">âœ¨ à®‰à®©à¯à®©à®¾à®²à¯ à®®à¯à®Ÿà®¿à®¯à¯à®®à¯ (Vunnal Mudiyum) â€¢ 10th Standard English</div>
+  <h1>Additional Practice Questions (In-Text)</h1>
+  <p>Comprehensive in-text questions covering all 7 prose units for board exam mastery and deep comprehension (Not guaranteed questions â€” for practice & self-study).</p>
+  <div class="action-bar print-hide">
+    <a href="index.html" class="btn btn-primary">ðŸ  Back to App Home</a>
+    <button onclick="window.print()" class="btn">ðŸ–¨ï¸ Print / Save as PDF</button>
+    <button onclick="toggleTamil()" id="toggleLangBtn" class="btn">ðŸŒ Toggle Tamil Translations</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="summary-box print-hide">
+    <div class="summary-text">
+      <h3>All 7 Prose Units Covered</h3>
+      <p>Total 28 High-Yield Practice Questions (21 Short Answers + 7 Detailed Paragraphs)</p>
+    </div>
+    <div class="stats-pill">21 Ã— 2-Mark &nbsp;|&nbsp; 7 Ã— 5-Mark</div>
+  </div>
+
+  <!-- Unit Navigation Pills -->
+  <nav class="nav-pills print-hide">
+    <a href="#unit1" class="nav-pill">Unit 1: His First Flight</a>
+    <a href="#unit2" class="nav-pill">Unit 2: The Night the Ghost Got In</a>
+    <a href="#unit3" class="nav-pill">Unit 3: Empowered Women Navigating The World</a>
+    <a href="#unit4" class="nav-pill">Unit 4: The Attic</a>
+    <a href="#unit5" class="nav-pill">Unit 5: Tech Bloomers</a>
+    <a href="#unit6" class="nav-pill">Unit 6: The Last Lesson</a>
+    <a href="#unit7" class="nav-pill">Unit 7: The Dying Detective</a>
+  </nav>
+
+  <!-- Filter Controls -->
+  <div class="filter-controls print-hide">
+    <div style="font-size:13px; font-weight:700; color:var(--text-muted);">Filter Questions:</div>
+    <div class="filter-group">
+      <button class="filter-btn active" onclick="filterType('all', this)">All Questions (28)</button>
+      <button class="filter-btn" onclick="filterType('2m', this)">2-Mark Short (21)</button>
+      <button class="filter-btn" onclick="filterType('5m', this)">5-Mark Paragraphs (7)</button>
+    </div>
+  </div>
+  <!-- Unit 1 Card -->
+  <section id="unit1" class="unit-card">
+    <div class="unit-header">
+      <div class="unit-header-title">
+        <span class="unit-badge">Unit 1</span>
+        <div>
+          <h2 class="unit-name">Unit 1: His First Flight</h2>
+          <div class="author-tag">Author / Theme: Liam O'Flaherty</div>
+        </div>
+      </div>
+    </div>
+    <div class="qa-list">
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why did the young seagull remain alone on the ledge?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: இளம் கடற்காகம் ஏன் பாறை விளிம்பில் தனியாகத் தங்கியது?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">The young seagull was afraid of flying. He felt convinced that his wings would never support him, so he failed to muster up the courage to fly away like his brothers and sister.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> இளம் கடற்காகம் பறப்பதற்கு மிகவும் பயந்தது. தன் இறக்கைகள் தனக்கு ஒத்துழைக்காது என்று நம்பியதால், தன் உடன் பிறந்தவர்களைப் போலப் பறக்கத் துணிச்சல் இல்லாமல் பாறை விளிம்பிலேயே தனியாகத் தங்கியது.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: How did hunger influence the young seagull?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: பசி இளம் கடற்காகத்தை எவ்வாறு பாதித்தது?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">The young seagull had not eaten for twenty-four hours. His mother tempted him with a piece of fish. Maddened by hunger, he dived towards the fish and began his first flight.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> இளம் கடற்காகம் இருபத்து நான்கு மணி நேரமாக எதையும் சாப்பிடாமல் இருந்தது. தாய் தன் அலகில் மீனுடன் அருகில் வந்ததும், பசி மயக்கத்தில் மீனைப் பிடிக்கக் குதித்து, அது தன் முதல் பயணத்தைத் தொடங்கியது.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: How did the family welcome the young seagull after his first flight?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: இளம் கடற்காகத்தின் முதல் பறத்தலுக்குப் பிறகு அதன் குடும்பத்தினர் அதனை எவ்வாறு வரவேற்றனர்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">His parents, brothers, and sister flew around him screaming joyfully, praising his achievement, and offering him scraps of dog-fish when he landed on the green sea.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> அவரது பெற்றோர் மற்றும் உடன் பிறந்தவர்கள் அவனைச் சுற்றிப் பறந்து மகிழ்ச்சிக் கூச்சலிட்டுப் பாராட்டினர்; மேலும் அவன் கடலில் அமர்ந்த போது சுவையான மீன் துண்டுகளை அவனுக்கு உணவாக வழங்கினர்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-5m" data-type="5m">
+        <div class="qa-top">
+          <span class="mark-pill pill-5m">5 Marks Paragraph</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Describe how the young seagull overcame his fear of flying.</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: இளம் கடற்காகம் தன் பறக்கும் பயத்தை எவ்வாறு வென்றது என்பதை விவரிக்கவும்.</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">The young seagull was afraid to fly because he thought his wings would not support him. His brothers and sister had already flown away, but he remained alone on the ledge. His parents scolded and threatened to let him starve, but he could not bring himself to move. Driven by intense hunger for twenty-four hours, he watched his mother tear a piece of fish. She flew towards him with the fish in her beak but halted just out of reach. Maddened by hunger, he dived for the fish and plunged into space. As he fell, terror seized him, but within moments his wings spread outward instinctively. He felt the wind under his wings and realized he was soaring. His family joined him in joyful celebration. Thus, hunger prompted his courage, and he successfully overcame his fear of flying.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> இளம் கடற்காகம் தன் இறக்கைகள் தாங்காது என்று நினைத்துப் பறக்க அஞ்சியது. அதன் உடன் பிறந்தவர்கள் பறந்துவிட்ட போதும், அது பாறை விளிம்பிலேயே நின்றது. பெற்றோரின் எச்சரிக்கையும் பயனுறவில்லை. 24 மணி நேரக் கடும் பசிக்குப்பின், தாய் மீன் துண்டுடன் அருகில் வந்து நிற்காமல் எட்டாத உயரத்தில் நின்றது. பசியின் உந்துதலால் அது மீனை நோக்கிப் பாய்ந்து காற்றில் விழுந்தது. முதலில் பயம் சூழ்ந்தாலும், இறக்கைகள் இயல்பாக விரிந்து பறக்கத் தொடங்கியது. இவ்வாறு பசி அதன் பயத்தை விரட்டி, முதல் வெற்றிகரமான பறத்தலுக்கு வழிவகுத்தது.</div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- Unit 2 Card -->
+  <section id="unit2" class="unit-card">
+    <div class="unit-header">
+      <div class="unit-header-title">
+        <span class="unit-badge">Unit 2</span>
+        <div>
+          <h2 class="unit-name">Unit 2: The Night the Ghost Got In</h2>
+          <div class="author-tag">Author / Theme: James Thurber</div>
+        </div>
+      </div>
+    </div>
+    <div class="qa-list">
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why did the narrator suspect that someone was walking downstairs?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: கீழ்த்தளத்தில் யாரோ நடக்கிறார்கள் என்று ஆசிரியர் ஏன் சந்தேகித்தார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">The narrator heard rhythmic footsteps circling the dining-room table downstairs at about 1:15 a.m. He first suspected his father or brother, and later thought it was a burglar.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> அதிகாலை 1:15 மணியளவில் கீழ்த்தள சாப்பாட்டு மேசையைச் சுற்றி சீரான காலடிச் சத்தம் கேட்டது. முதலில் தன் தந்தை அல்லது சகோதரர் என்று நினைத்த ஆசிரியர், பின்னர் திருடன் நுழைந்துவிட்டதாகச் சந்தேகித்தார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why did the mother throw a shoe through the neighbour's window?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: தாய் பக்கத்து வீட்டு ஜன்னல் வழியே காலணியை (shoe) ஏன் வீசினார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">The mother firmly believed that burglars had broken into the house. Since the telephone was located downstairs where the intruders were suspected to be, she threw a shoe through the neighbour Mr. Bodwell's window to seek help.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> வீட்டிற்குள் திருடர்கள் நுழைந்துவிட்டதாகத் தாய் உறுதியாக நம்பினார். தொலைபேசி கீழ்த்தளத்தில் இருந்ததால், பக்கத்து வீட்டுக்காரர் திரு. போட்வெல்லின் கவனத்தை ஈர்த்து உதவி பெற அவரது ஜன்னல் மீது காலணியை வீசினார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why did the police rush towards the attic?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: காவல்துறையினர் பரண் அறைக்கு (attic) ஏன் விரைந்து சென்றனர்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">While investigating the house, the police heard creaking noises coming from the attic and suspected that the intruder was hiding there, so they rushed upstairs.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> வீட்டைச் சோதனையிட்ட போது, பரண் அறையிலிருந்து விசித்திரமான சத்தம் கேட்டதால், திருடர்கள் அங்குதான் பதுங்கியிருக்கிறார்கள் என்று நினைத்துக் காவல்துறையினர் மேலே விரைந்தனர்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-5m" data-type="5m">
+        <div class="qa-top">
+          <span class="mark-pill pill-5m">5 Marks Paragraph</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Describe the humorous incidents that took place in the house on the night the ghost got in.</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: பேய் நுழைந்ததாகக் கருதப்பட்ட இரவில் வீட்டில் நடந்த நகைச்சுவையான நிகழ்வுகளை விவரிக்கவும்.</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">One night at 1:15 a.m., the narrator heard strange footsteps downstairs and woke his brother Herman. Their mother woke up and concluded that burglars had broken in. Since the telephone was downstairs, she threw a shoe through the neighbour's bedroom window to get them to alert the police. A large squad of policemen arrived, forced open the doors, and searched every corner of the house. Hearing noises in the attic, the police rushed up. The narrator’s grandfather, sleeping in the attic, mistook the policemen for deserters from General Meade’s army. He leaped out of bed, grabbed a revolver, attacked an officer, and shot another in the shoulder. The entire confusion was caused merely by imaginary footsteps, making the night hilariously chaotic.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> அதிகாலை 1:15 மணிக்குக் கேட்ட காலடிச் சத்தத்தால் ஆசிரியர் தன் சகோதரர் ஹெர்மனை எழுப்பினார். தாய் திருடர்கள் வந்துவிட்டதாக நினைத்து, பக்கத்து வீட்டு ஜன்னல் மீது காலணியை எறிந்து காவல்துறையை அழைக்கச் செய்தார். விரைந்து வந்த போலீசார் வீட்டை முழுமையாகச் சோதனையிட்டனர். பரண் அறையில் சத்தம் கேட்டு மேலே சென்ற போது, அங்கு தூங்கிக்கொண்டிருந்த தாத்தா போலீசாரைப் போர்க்களத்திலிருந்து தப்பியோடிய வீரர்கள் எனத் தவறாக நினைத்து, துப்பாக்கியால் சுட்டுத் தாக்கினார். கற்பனையான ஒரு காலடிச் சத்தம் பெரும் குழப்பத்தையும் நகைச்சுவையையும் ஏற்படுத்தியது.</div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- Unit 3 Card -->
+  <section id="unit3" class="unit-card">
+    <div class="unit-header">
+      <div class="unit-header-title">
+        <span class="unit-badge">Unit 3</span>
+        <div>
+          <h2 class="unit-name">Unit 3: Empowered Women Navigating The World</h2>
+          <div class="author-tag">Author / Theme: Indian Navy - Navika Sagar Parikrama</div>
+        </div>
+      </div>
+    </div>
+    <div class="qa-list">
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: What was the main aim of the Navika Sagar Parikrama project?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: நாவிகா சாகர் பரிக்ரமா திட்டத்தின் முக்கிய நோக்கம் என்ன?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">The project aimed to promote women's empowerment, showcase India's indigenous shipbuilding capability under the 'Make in India' initiative, and promote ocean sailing in the Indian Navy.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> பெண்கள் அதிகாரமளித்தல், 'மேக் இன் இந்தியா' திட்டத்தின் கீழ் உள்நாட்டிலேயே கப்பல் கட்டும் இந்தியாவின் திறமையை உலகிற்கு வெளிப்படுத்துதல் மற்றும் கடற்பயணத்தை ஊக்குவித்தல் ஆகியவையே இதன் முக்கிய நோக்கங்களாகும்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why was INSV Tarini special?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: ஐ.என்.எஸ்.வி தாரிணி (INSV Tarini) ஏன் தனித்துவமானது?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">INSV Tarini was an indigenously built 55-foot sailing vessel of the Indian Navy. It was equipped with advanced navigation and communication systems and used green renewable energy.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> ஐ.என்.எஸ்.வி தாரிணி என்பது இந்தியாவில் கோவாவில் கட்டப்பட்ட 55 அடி நீளப் பாய்மரக் கப்பலாகும். இதில் நவீன வழிகாட்டி அமைப்புகளும், புதுப்பிக்கத்தக்க இயற்கை ஆற்றல் பயன்பாடும் இடம்பெற்றிருந்தன.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: How did the women sailors contribute to environmental protection?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: பெண் மாலுமிகள் சுற்றுச்சூழல் பாதுகாப்பிற்கு எவ்வாறு பங்களித்தனர்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">They harnessed wind energy for navigation, recorded oceanographic and weather data, and monitored marine pollution levels across the oceans.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> அவர்கள் காற்றாலை ஆற்றலைப் பயன்படுத்திப் பயணம் செய்தனர்; மேலும் கடல் நீரோட்டங்கள், வானிலை மாறுபாடுகள் மற்றும் கடல் மாசுபடுதல் குறித்த முக்கியத் தகவல்களைச் சேகரித்துப் பங்களித்தனர்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-5m" data-type="5m">
+        <div class="qa-top">
+          <span class="mark-pill pill-5m">5 Marks Paragraph</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Explain the achievements of the six women naval officers in Navika Sagar Parikrama.</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: நாவிகா சாகர் பரிக்ரமாவில் ஆறு பெண் கடற்படை அதிகாரிகளின் சாதனைகளை விளக்குக.</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Navika Sagar Parikrama was a historic circumnavigation expedition undertaken by an all-woman Indian Navy crew led by Lieutenant Commander Vartika Joshi. Sailing aboard the indigenously built INSV Tarini, the crew departed from Goa in September 2017 and completed the voyage in 254 days across 21,600 nautical miles. They navigated through rough seas, treacherous currents, and extreme cold without external assistance. Along the way, they collected critical oceanographic, weather, and marine pollution data. Their voyage proved that women can handle demanding adventures with determination, becoming an inspiring symbol of courage, teamwork, and national pride.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> லெப்டினன்ட் கமாண்டர் வர்திகா ஜோஷி தலைமையில் ஆறு பெண் கடற்படை அதிகாரிகள் ஐ.என்.எஸ்.வி தாரிணி கப்பலில் உலகைச் சுற்றி வரலாற்றுச் சாதனை படைத்தனர். செப்டம்பர் 2017-ல் கோவாவிலிருந்து புறப்பட்டு 254 நாட்களில் 21,600 நாட்டிக்கல் மைல்கள் பயணம் செய்தனர். கடும் புயல், பனி மற்றும் அலைகளைத் துணிவுடன் சமாளித்தனர். கடல் வானிலை மற்றும் கடல் மாசுபாடு குறித்த தகவல்களைத் திரட்டினர். இவர்களின் வெற்றி இந்தியப் பெண்களின் ஆற்றல், துணிச்சல் மற்றும் குழுப்பணிக்கு உலகளாவிய பெருமை சேர்த்தது.</div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- Unit 4 Card -->
+  <section id="unit4" class="unit-card">
+    <div class="unit-header">
+      <div class="unit-header-title">
+        <span class="unit-badge">Unit 4</span>
+        <div>
+          <h2 class="unit-name">Unit 4: The Attic</h2>
+          <div class="author-tag">Author / Theme: Satyajit Ray</div>
+        </div>
+      </div>
+    </div>
+    <div class="qa-list">
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why did Aditya return to his ancestral house?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: ஆதித்யா தனது பூர்வீக வீட்டிற்கு ஏன் மீண்டும் சென்றார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Aditya returned to his ancestral home to visit the attic and recover a silver medal that he had hidden there twenty-nine years earlier.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> இருபத்தொன்பது ஆண்டுகளுக்கு முன்பு வீட்டின் பரண் அறையில் ஒளித்து வைத்திருந்த வெள்ளிப் பதக்கத்தை எடுப்பதற்காக ஆதித்யா தனது பூர்வீக வீட்டிற்குச் சென்றார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why was Sasanka Sanyal angry with Aditya?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: சசாங்க சன்யால் ஆதித்யா மீது ஏன் கோபமாக இருந்தார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Sasanka Sanyal had won a silver medal for reciting Tagore's poem. Aditya borrowed it to show his father, falsely claimed it was lost, and never returned it.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> தாகூரின் கவிதையை ஒப்பித்து சன்யால் வென்ற வெள்ளிப் பதக்கத்தை, தன் தந்தையிடம் காட்ட வாங்கிச் சென்ற ஆதித்யா, அது தொலைந்துவிட்டதாகப் பொய் கூறித் திருப்பித் தரவில்லை என்பதால் சன்யால் கோபமாக இருந்தார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why did Sasanka refuse the money offered by Aditya?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: ஆதித்யா அளித்த பணத்தை சசாங்க சன்யால் ஏன் மறுத்தார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Sasanka Sanyal had high self-respect. He felt that taking cash was like receiving charity. He only wanted his original medal back to restore his dignity and childhood honor.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> சன்யால் சுயமரியாதை மிக்கவர். பணத்தைப் பெறுவது தர்மத்தைப் பெறுவது போன்றது என்று அவர் கருதினார். தனது பால்யகால கௌரவமான அசல் வெள்ளிப் பதக்கத்தை மட்டுமே அவர் திரும்ப விரும்பினார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-5m" data-type="5m">
+        <div class="qa-top">
+          <span class="mark-pill pill-5m">5 Marks Paragraph</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: How did Aditya correct his childhood mistake and restore Sasanka's happiness?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: ஆதித்யா தனது சிறுவயது தவறை எவ்வாறு திருத்திக்கொண்டு சன்யாலின் மகிழ்ச்சியை மீட்டெடுத்தார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Twenty-nine years after leaving his village, Aditya returned with his friend and visited his ancestral home. He went up to the attic and searched until he recovered the silver medal hidden on a wooden beam. In his childhood, Aditya had taken the medal from his classmate Sasanka Sanyal out of jealousy and had lied about losing it. After hearing Sasanka recite the same Tagore poem at a local tea shop, Aditya was overcome with remorse. He visited Sasanka and initially offered him ₹150 as compensation. Sasanka rejected the cash, saying he did not want charity, and asked only for his medal. Aditya promptly returned the original silver medal. Overjoyed and relieved, Sasanka forgave him, allowing Aditya to rectify his childhood misdeed and restore justice.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> 29 ஆண்டுகளுக்குப் பிறகு தன் கிராமத்திற்கு வந்த ஆதித்யா, பூர்வீக வீட்டின் பரண் அறையிலிருந்து பழைய வெள்ளிப் பதக்கத்தை எடுத்தார். சிறுவயதில் பொறாமையினால் சன்யாலின் பதக்கத்தைத் திருடிவிட்டு தொலைந்துவிட்டதாகப் பொய் சொல்லியிருந்தார். தேநீர்க்கடையில் சன்யால் அதே தாகூர் கவிதையைப் பாடியதைக் கேட்டு ஆதித்யா குற்ற உணர்ச்சி அடைந்தார். சன்யாலின் இருப்பிடத்திற்குச் சென்று முதலில் ₹150 பண இழப்பீடு கொடுத்தார். சன்யால் அதை மறுத்தவுடன், அசல் வெள்ளிப் பதக்கத்தை அவரிடம் ஒப்படைத்தார். சன்யால் மகிழ்ந்து அவரை மன்னித்தார். இவ்வாறு ஆதித்யா தன் தவறைச் சரிசெய்தார்.</div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- Unit 5 Card -->
+  <section id="unit5" class="unit-card">
+    <div class="unit-header">
+      <div class="unit-header-title">
+        <span class="unit-badge">Unit 5</span>
+        <div>
+          <h2 class="unit-name">Unit 5: Tech Bloomers</h2>
+          <div class="author-tag">Author / Theme: Empowering Differently-Abled</div>
+        </div>
+      </div>
+    </div>
+    <div class="qa-list">
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: How does Dragon Dictate help Alisha?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: டிராகன் டிக்டேட் (Dragon Dictate) அலிஷாவிற்கு எவ்வாறு உதவுகிறது?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Alisha, who has cerebral palsy, cannot type physically. Dragon Dictate software listens to her voice and instantly converts her speech into written text on the screen, enabling her to study independently.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> பெருமூளை வாதத்தால் பாதிக்கப்பட்ட அலிஷாவால் தட்டச்சு செய்ய முடியாது. டிராகன் டிக்டேட் மென்பொருள் அவள் பேசுவதை உடனுக்குடன் எழுத்துக்களாக மாற்றி, அவள் சுயமாகப் படிக்க உதவுகிறது.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: What is the function of Eye Gaze technology?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: ஐ கேஸ் (Eye Gaze) தொழில்நுட்பத்தின் செயல்பாடு என்ன?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Eye Gaze technology uses optical sensors to track a user's pupil movements, allowing individuals with severe paralysis to navigate and control computer screens using only their eyes.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> ஐ கேஸ் தொழில்நுட்பம் கண்களின் அசைவுகளைக் கண்காணித்து, கை கால்கள் செயல்படாத மாற்றுத்திறனாளிகள் தங்கள் கண்கள் மூலமாகவே கணினியை இயக்க வழிசெய்கிறது.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: How does technology help David communicate?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: தொழில்நுட்பம் டேவிட் மற்றவர்களுடன் தொடர்புகொள்ள எவ்வாறு உதவுகிறது?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">David uses an ECO2 communication device paired with an Eye Gaze system. It allows him to select words, speak synthesized sentences, express ideas, and communicate freely with family and friends.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> டேவிட் ECO2 மற்றும் ஐ கேஸ் அமைப்பைப் பயன்படுத்திச் சொற்களைத் தேர்ந்தெடுத்து, கணினி குரல் மூலம் பேசித் தனது கருத்துக்களைப் பிறருடன் சுதந்திரமாகப் பகிர்ந்துகொள்கிறார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-5m" data-type="5m">
+        <div class="qa-top">
+          <span class="mark-pill pill-5m">5 Marks Paragraph</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Explain how technology has transformed the lives of Alisha and David.</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: தொழில்நுட்பம் அலிஷா மற்றும் டேவிட்டின் வாழ்க்கையை எவ்வாறு மாற்றியமைத்துள்ளது என்பதை விளக்குக.</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Assistive technology has revolutionized the lives of differently-abled individuals by overcoming physical limitations. Alisha, diagnosed with cerebral palsy, struggled with manual typing. Using Dragon Dictate speech-recognition software, she can now dictate essays and complete school assignments effortlessly. Similarly, David, who faces speech and motor challenges, uses an ECO2 Liberator communication device with Eye Gaze technology. This enables him to control computer functions, select words, communicate his desires, and interact actively in social settings. Technology has ended their isolation, given them independence, and empowered them to lead fulfilling, confident lives.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> நவீன உதவித் தொழில்நுட்பம் மாற்றுத்திறனாளிகளின் வாழ்க்கையில் புதிய நம்பிக்கையை ஏற்படுத்தியுள்ளது. பெருமூளை வாதத்தால் பாதிக்கப்பட்ட அலிஷா, 'டிராகன் டிக்டேட்' மென்பொருள் மூலம் பேசி கட்டுரைகளை எழுதி சுயமாகப் படிக்கிறார். பேசவும் இயங்கவும் முடியாத டேவிட், 'ECO2' மற்றும் 'ஐ கேஸ்' சாதனங்கள் மூலம் கணினி திரையைக் கட்டுப்படுத்திப் பிறருடன் பேசுகிறார். தொழில்நுட்பம் இவர்களின் தனிமையைப் போக்கி, தன்னம்பிக்கையையும் சுதந்திரமான வாழ்வையும் வழங்கியுள்ளது.</div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- Unit 6 Card -->
+  <section id="unit6" class="unit-card">
+    <div class="unit-header">
+      <div class="unit-header-title">
+        <span class="unit-badge">Unit 6</span>
+        <div>
+          <h2 class="unit-name">Unit 6: The Last Lesson</h2>
+          <div class="author-tag">Author / Theme: Alphonse Daudet</div>
+        </div>
+      </div>
+    </div>
+    <div class="qa-list">
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why did Franz regret not learning French properly?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: பிரான்ஸ் பிரெஞ்சு மொழியை முறையாகக் கற்காததற்கு ஏன் வருத்தப்பட்டான்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Franz realized that an order from Berlin had banned French, making this his final lesson. He deeply regretted putting off his studies to play, chase bird eggs, and slide on the river Saar.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> பெர்லின் உத்தரவின்படி இனி ஜெர்மன் மட்டுமே கற்பிக்கப்படும் என்றும், இதுவே கடைசி பிரெஞ்சு பாடம் என்றும் அறிந்த பிரான்ஸ், படிப்பைத் தள்ளிப்போட்டுப் பறவை முட்டைகளைத் தேடியும் ஆற்றில் சறுக்கியும் நேரத்தை வீணடித்ததை எண்ணி வருந்தினான்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why did M. Hamel wear his special Sunday clothes?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: திரு. ஹேமல் தனது சிறப்பு ஞாயிற்றுக்கிழமை ஆடைகளை ஏன் அணிந்திருந்தார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">M. Hamel wore his finest green coat, frilled shirt, and embroidered silk cap to honor his last lesson and mark forty years of dedicated service to the school.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> தனது கடைசிப் பாடத்திற்கு மரியாதை செலுத்தவும், நாற்பது ஆண்டுகால அர்ப்பணிப்பான ஆசிரியர் பணியைக் கௌரவிக்கவும் திரு. ஹேமல் தனது சிறப்புப் பச்சை நிற அங்கி மற்றும் தொப்பியை அணிந்திருந்தார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: What message did M. Hamel give about one's mother tongue?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: தாய்மொழி குறித்து திரு. ஹேமல் கூறிய செய்தி என்ன?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">M. Hamel said that French was the most beautiful, clearest, and most logical language in the world. He taught that when an enslaved people hold fast to their language, it is like holding the key to their prison.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> பிரெஞ்சு மொழி உலகின் மிக அழகான, தெளிவான மற்றும் தர்க்கரீதியான மொழி என்றார். ஒரு தேசம் அடிமைப்பட்டாலும், மக்கள் தங்கள் தாய்மொழியை இறுகப் பற்றிக்கொண்டால், அது சிறைச்சாலையின் திறவுகோலைப் போன்றது என்று அவர் கூறினார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-5m" data-type="5m">
+        <div class="qa-top">
+          <span class="mark-pill pill-5m">5 Marks Paragraph</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Describe the last lesson of M. Hamel and the emotions of Franz.</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: திரு. ஹேமலின் கடைசிப் பாடம் மற்றும் பிரான்சின் உணர்வுகளை விவரிக்கவும்.</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Franz went to school expecting scolding, but found an atmosphere of profound solemnity. Village elders sat quietly on the back benches to honor M. Hamel’s forty years of devoted service. M. Hamel announced that an order from Berlin had mandated that only German would be taught in the schools of Alsace and Lorraine. This sudden revelation stunned Franz. His books, once deemed burdensome, suddenly felt like dear friends. M. Hamel spoke movingly about the beauty of the French language and urged everyone to preserve it. He honestly acknowledged that parents, students, and even teachers had neglected learning. As the church bell struck noon and Prussian bugles sounded, M. Hamel was overcome with emotion. He turned to the blackboard, wrote with all his strength 'Vive La France!' (Long Live France!), and dismissed the class with a wave of his hand.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> வழக்கத்திற்கு மாறாக அமைதியாகவும் சோகமாகவும் பள்ளி இருந்தது. ஆசிரியர் ஹேமலின் 40 ஆண்டுகால பணிக்கு நன்றி கூற ஊர் பெரியவர்கள் பின்வரிசையில் அமர்ந்திருந்தனர். பெர்லினிலிருந்து வந்த உத்தரவினால் இதுவே கடைசி பிரெஞ்சு பாடம் என ஆசிரியர் அறிவித்ததும் பிரான்ஸ் பேரதிர்ச்சி அடைந்தான். இதுவரை சுமையாக இருந்த புத்தகங்கள் அவனுக்குப் பிரியமான நண்பர்களாயின. தாய்மொழியின் மேன்மையை உணர்த்திய ஆசிரியர், அனைவரும் அலட்சியமாக இருந்ததைச் சுட்டிக்காட்டினார். மதிய மணி ஒலித்ததும் உணர்ச்சிவசப்பட்ட ஆசிரியர் கரும்பலகையில் 'Vive La France!' (பிரான்ஸ் வாழ்க!) என்று எழுதி வகுப்பை நிறைவு செய்தார்.</div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- Unit 7 Card -->
+  <section id="unit7" class="unit-card">
+    <div class="unit-header">
+      <div class="unit-header-title">
+        <span class="unit-badge">Unit 7</span>
+        <div>
+          <h2 class="unit-name">Unit 7: The Dying Detective</h2>
+          <div class="author-tag">Author / Theme: Sir Arthur Conan Doyle</div>
+        </div>
+      </div>
+    </div>
+    <div class="qa-list">
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why was Mrs. Hudson worried about Sherlock Holmes?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: திருமதி ஹட்சன் ஷெர்லாக் ஹோம்ஸ் குறித்து ஏன் கவலைப்பட்டார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Mrs. Hudson was alarmed because Holmes had been bedridden for three days, refusing all food, medicine, and water, and seemed to be wasting away from a contagious tropical disease.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> ஹோம்ஸ் மூன்று நாட்களாக உணவு, நீர் மற்றும் மருந்துகளை மறுத்துக் கடுமையான தொற்றுநோயால் உயிருக்கு ஆபத்தான நிலையில் படுக்கையில் கிடந்ததால் திருமதி ஹட்சன் மிகுந்த கவலையடைந்தார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Who was Culverton Smith?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: கல்வர்டன் ஸ்மித் என்பவர் யார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Culverton Smith was a wealthy planter from Sumatra with deep knowledge of rare, fatal eastern diseases, who had secretly murdered his nephew Victor Savage for money.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> கல்வர்டன் ஸ்மித் சுமத்ராவைச் சேர்ந்த ஒரு தோட்ட உரிமையாளர்; கிழக்கு நாடுகளின் அரிய கொடிய நோய்களைப் பற்றி நன்கு அறிந்த அவர், சொத்துக்காகத் தனது மருமகன் விக்டர் சாவேஜைக் கொன்ற குற்றவாளி ஆவார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-2m" data-type="2m">
+        <div class="qa-top">
+          <span class="mark-pill pill-2m">2 Marks Short Answer</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: Why did Holmes ask Watson to bring Culverton Smith?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: கல்வர்டன் ஸ்மித்தை அழைத்து வருமாறு வாட்சனிடம் ஹோம்ஸ் ஏன் கூறினார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Holmes knew that Culverton Smith had murdered Victor Savage with a poisoned spring trap. Holmes pretended to be infected with the same illness to trick Smith into confessing in front of a hidden witness.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> ஸ்மித் விஷப் பெட்டி மூலம் கொலை செய்ததை ஹோம்ஸ் அறிந்திருந்தார். தானும் அதே நோயால் பாதிக்கப்பட்டதாக நடித்து, மறைந்திருக்கும் சாட்சியான வாட்சன் முன்னிலையில் ஸ்மித்தைக் குற்றத்தை ஒப்புக்கொள்ள வைக்கவே அவரை அழைத்து வரச் சொன்னார்.</div>
+        </div>
+      </article>
+      <article class="qa-item mark-5m" data-type="5m">
+        <div class="qa-top">
+          <span class="mark-pill pill-5m">5 Marks Paragraph</span>
+          <span class="section-tag">Additional Practice (In-Text)</span>
+        </div>
+        <h3 class="question-text">Q: How did Sherlock Holmes trap Culverton Smith and reveal the truth?</h3>
+        <div class="question-tamil tamil-text">à®µà®¿à®©à®¾: ஷெர்லாக் ஹோம்ஸ் கல்வர்டன் ஸ்மித்தை எவ்வாறு வலையில் வீழ்த்தி உண்மையைக் கண்டறிந்தார்?</div>
+        <div class="answer-box">
+          <span class="answer-label">Answer:</span>
+          <div class="answer-text">Sherlock Holmes devised a brilliant trap for Culverton Smith, who had murdered his nephew Victor Savage. Holmes fasted for three days and applied makeup to appear gaunt and dying. He asked Dr. Watson to bring Culverton Smith, who was an expert in the rare disease. Before Smith arrived, Holmes hid Watson behind the head of the bed to listen secretly. When Smith entered the room, he gloated over Holmes's dying condition and confessed that he had sent Holmes a spring-loaded poisoned needle in an ivory box, identical to the murder weapon used on Savage. Once Smith confessed and turned up the gaslight as a signal, Holmes dropped his pretend illness and spoke in his normal voice. Inspector Morton immediately entered and arrested Culverton Smith for murder, demonstrating Holmes's sheer intellect in bringing a killer to justice.</div>
+          <div class="answer-tamil tamil-text"><b>à®µà®¿à®³à®•à¯à®•à®®à¯:</b> விக்டர் சாவேஜைக் கொன்ற கல்வர்டன் ஸ்மித்தைப் பிடிக்க ஹோம்ஸ் ஓர் உபாயம் செய்தார். மூன்று நாட்கள் உண்ணாநோன்பு இருந்து, நோய்வாய்ப்பட்டது போல வேடமிட்டார். நோய் வல்லுநரான ஸ்மித்தை அழைத்து வர வாட்சனை அனுப்பினார். வாட்சனைப் படுக்கைக்குப் பின்னால் மறைந்திருக்கச் செய்தார். வந்த ஸ்மித், தான் விஷ ஊசி அடங்கிய தந்தப் பெட்டியை அனுப்பியதை மமதையோடு ஒப்புக்கொண்டார். குற்ற ஒப்புதல் கிடைத்தவுடன் ஹோம்ஸ் இயல்பான குரலில் பேசி சைகை செய்ய, இன்ஸ்பெக்டர் மோர்டன் உள்ளே நுழைந்து ஸ்மித்தைக் கைது செய்தார். ஹோம்ஸின் புத்திக்கூர்மை கொலையாளியைச் சிறைப்படுத்தியது.</div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<script>
+  let showTamil = true;
+  function toggleTamil() {
+    showTamil = !showTamil;
+    const elements = document.querySelectorAll('.tamil-text');
+    elements.forEach(el => {
+      el.style.display = showTamil ? '' : 'none';
+    });
+    document.getElementById('toggleLangBtn').innerText = showTamil ? 'ðŸŒ English Only' : 'ðŸŒ Bilingual (Eng + Tamil)';
+  }
+
+  function filterType(type, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const items = document.querySelectorAll('.qa-item');
+    items.forEach(item => {
+      if (type === 'all' || item.getAttribute('data-type') === type) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

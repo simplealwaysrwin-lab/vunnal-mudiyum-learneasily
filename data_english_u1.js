@@ -605,59 +605,7 @@ const ENGLISH_UNIT_1_DATA = {
             ]
           }
         }
-      ,
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng1_add_2m_1",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why did the young seagull remain alone on the ledge?",
-          qTamil: "இளம் கடற்காகம் ஏன் பாறை விளிம்பில் தனியாகத் தங்கியது?",
-          ans: "The young seagull was afraid of flying. He felt convinced that his wings would never support him, so he failed to muster up the courage to fly away like his brothers and sister.",
-          ansTamil: "இளம் கடற்காகம் பறப்பதற்கு மிகவும் பயந்தது. தன் இறக்கைகள் தனக்கு ஒத்துழைக்காது என்று நம்பியதால், தன் உடன் பிறந்தவர்களைப் போலப் பறக்கத் துணிச்சல் இல்லாமல் பாறை விளிம்பிலேயே தனியாகத் தங்கியது."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng1_add_2m_2",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "How did hunger influence the young seagull?",
-          qTamil: "பசி இளம் கடற்காகத்தை எவ்வாறு பாதித்தது?",
-          ans: "The young seagull had not eaten for twenty-four hours. His mother tempted him with a piece of fish. Maddened by hunger, he dived towards the fish and began his first flight.",
-          ansTamil: "இளம் கடற்காகம் இருபத்து நான்கு மணி நேரமாக எதையும் சாப்பிடாமல் இருந்தது. தாய் தன் அலகில் மீனுடன் அருகில் வந்ததும், பசி மயக்கத்தில் மீனைப் பிடிக்கக் குதித்து, அது தன் முதல் பயணத்தைத் தொடங்கியது."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng1_add_2m_3",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "How did the family welcome the young seagull after his first flight?",
-          qTamil: "இளம் கடற்காகத்தின் முதல் பறத்தலுக்குப் பிறகு அதன் குடும்பத்தினர் அதனை எவ்வாறு வரவேற்றனர்?",
-          ans: "His parents, brothers, and sister flew around him screaming joyfully, praising his achievement, and offering him scraps of dog-fish when he landed on the green sea.",
-          ansTamil: "அவரது பெற்றோர் மற்றும் உடன் பிறந்தவர்கள் அவனைச் சுற்றிப் பறந்து மகிழ்ச்சிக் கூச்சலிட்டுப் பாராட்டினர்; மேலும் அவன் கடலில் அமர்ந்த போது சுவையான மீன் துண்டுகளை அவனுக்கு உணவாக வழங்கினர்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng1_add_5m_1",
-          type: "5m",
-          mark: "5 Marks | Additional Practice Paragraph",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Describe how the young seagull overcame his fear of flying.",
-          qTamil: "இளம் கடற்காகம் தன் பறக்கும் பயத்தை எவ்வாறு வென்றது என்பதை விவரிக்கவும்.",
-          ans: "The young seagull was afraid to fly because he thought his wings would not support him. His brothers and sister had already flown away, but he remained alone on the ledge. His parents scolded and threatened to let him starve, but he could not bring himself to move. Driven by intense hunger for twenty-four hours, he watched his mother tear a piece of fish. She flew towards him with the fish in her beak but halted just out of reach. Maddened by hunger, he dived for the fish and plunged into space. As he fell, terror seized him, but within moments his wings spread outward instinctively. He felt the wind under his wings and realized he was soaring. His family joined him in joyful celebration. Thus, hunger prompted his courage, and he successfully overcame his fear of flying.",
-          ansTamil: "இளம் கடற்காகம் தன் இறக்கைகள் தாங்காது என்று நினைத்துப் பறக்க அஞ்சியது. அதன் உடன் பிறந்தவர்கள் பறந்துவிட்ட போதும், அது பாறை விளிம்பிலேயே நின்றது. பெற்றோரின் எச்சரிக்கையும் பயனுறவில்லை. 24 மணி நேரக் கடும் பசிக்குப்பின், தாய் மீன் துண்டுடன் அருகில் வந்து நிற்காமல் எட்டாத உயரத்தில் நின்றது. பசியின் உந்துதலால் அது மீனை நோக்கிப் பாய்ந்து காற்றில் விழுந்தது. முதலில் பயம் சூழ்ந்தாலும், இறக்கைகள் இயல்பாக விரிந்து பறக்கத் தொடங்கியது. இவ்வாறு பசி அதன் பயத்தை விரட்டி, முதல் வெற்றிகரமான பறத்தலுக்கு வழிவகுத்தது."
-        }
+      
       ]
     },
 
@@ -1075,6 +1023,62 @@ const ENGLISH_UNIT_1_DATA = {
           options: ["a) gull (Seagull)", "b) air", "c) light", "d) cloud"],
           ans: "<b>a) gull ➔ Seagull</b> (Noun + Noun = Compound Noun)",
           ansTamil: "Sea + gull = Seagull (கடற்பறவை)."
+        }
+      ]
+    }
+  
+    ,
+    {
+      id: "eng1_add_practice",
+      title: "Part 5: Additional Practice Questions (In-Text)",
+      author: "Liam O'Flaherty",
+      questions: [
+        {
+          id: "eng1_add_2m_1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why did the young seagull remain alone on the ledge?",
+          qTamil: "இளம் கடற்காகம் ஏன் பாறை விளிம்பில் தனியாகத் தங்கியது?",
+          ans: "The young seagull was afraid of flying. He felt convinced that his wings would never support him, so he failed to muster up the courage to fly away like his brothers and sister.",
+          ansTamil: "இளம் கடற்காகம் பறப்பதற்கு மிகவும் பயந்தது. தன் இறக்கைகள் தனக்கு ஒத்துழைக்காது என்று நம்பியதால், தன் உடன் பிறந்தவர்களைப் போலப் பறக்கத் துணிச்சல் இல்லாமல் பாறை விளிம்பிலேயே தனியாகத் தங்கியது."
+        },
+
+        {
+          id: "eng1_add_2m_2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "How did hunger influence the young seagull?",
+          qTamil: "பசி இளம் கடற்காகத்தை எவ்வாறு பாதித்தது?",
+          ans: "The young seagull had not eaten for twenty-four hours. His mother tempted him with a piece of fish. Maddened by hunger, he dived towards the fish and began his first flight.",
+          ansTamil: "இளம் கடற்காகம் இருபத்து நான்கு மணி நேரமாக எதையும் சாப்பிடாமல் இருந்தது. தாய் தன் அலகில் மீனுடன் அருகில் வந்ததும், பசி மயக்கத்தில் மீனைப் பிடிக்கக் குதித்து, அது தன் முதல் பயணத்தைத் தொடங்கியது."
+        },
+
+        {
+          id: "eng1_add_2m_3",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "How did the family welcome the young seagull after his first flight?",
+          qTamil: "இளம் கடற்காகத்தின் முதல் பறத்தலுக்குப் பிறகு அதன் குடும்பத்தினர் அதனை எவ்வாறு வரவேற்றனர்?",
+          ans: "His parents, brothers, and sister flew around him screaming joyfully, praising his achievement, and offering him scraps of dog-fish when he landed on the green sea.",
+          ansTamil: "அவரது பெற்றோர் மற்றும் உடன் பிறந்தவர்கள் அவனைச் சுற்றிப் பறந்து மகிழ்ச்சிக் கூச்சலிட்டுப் பாராட்டினர்; மேலும் அவன் கடலில் அமர்ந்த போது சுவையான மீன் துண்டுகளை அவனுக்கு உணவாக வழங்கினர்."
+        },
+
+        {
+          id: "eng1_add_5m_1",
+          type: "5m",
+          mark: "5 Marks | Additional Practice Paragraph",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Describe how the young seagull overcame his fear of flying.",
+          qTamil: "இளம் கடற்காகம் தன் பறக்கும் பயத்தை எவ்வாறு வென்றது என்பதை விவரிக்கவும்.",
+          ans: "The young seagull was afraid to fly because he thought his wings would not support him. His brothers and sister had already flown away, but he remained alone on the ledge. His parents scolded and threatened to let him starve, but he could not bring himself to move. Driven by intense hunger for twenty-four hours, he watched his mother tear a piece of fish. She flew towards him with the fish in her beak but halted just out of reach. Maddened by hunger, he dived for the fish and plunged into space. As he fell, terror seized him, but within moments his wings spread outward instinctively. He felt the wind under his wings and realized he was soaring. His family joined him in joyful celebration. Thus, hunger prompted his courage, and he successfully overcame his fear of flying.",
+          ansTamil: "இளம் கடற்காகம் தன் இறக்கைகள் தாங்காது என்று நினைத்துப் பறக்க அஞ்சியது. அதன் உடன் பிறந்தவர்கள் பறந்துவிட்ட போதும், அது பாறை விளிம்பிலேயே நின்றது. பெற்றோரின் எச்சரிக்கையும் பயனுறவில்லை. 24 மணி நேரக் கடும் பசிக்குப்பின், தாய் மீன் துண்டுடன் அருகில் வந்து நிற்காமல் எட்டாத உயரத்தில் நின்றது. பசியின் உந்துதலால் அது மீனை நோக்கிப் பாய்ந்து காற்றில் விழுந்தது. முதலில் பயம் சூழ்ந்தாலும், இறக்கைகள் இயல்பாக விரிந்து பறக்கத் தொடங்கியது. இவ்வாறு பசி அதன் பயத்தை விரட்டி, முதல் வெற்றிகரமான பறத்தலுக்கு வழிவகுத்தது."
         }
       ]
     }

@@ -150,59 +150,7 @@ const ENGLISH_UNIT_7_DATA = {
             <b>Conclusion:</b> Through extraordinary sacrifice, patience, and intellect, Holmes proved that crime never pays.
           </div>`
         }
-      ,
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng7_add_2m_1",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why was Mrs. Hudson worried about Sherlock Holmes?",
-          qTamil: "திருமதி ஹட்சன் ஷெர்லாக் ஹோம்ஸ் குறித்து ஏன் கவலைப்பட்டார்?",
-          ans: "Mrs. Hudson was alarmed because Holmes had been bedridden for three days, refusing all food, medicine, and water, and seemed to be wasting away from a contagious tropical disease.",
-          ansTamil: "ஹோம்ஸ் மூன்று நாட்களாக உணவு, நீர் மற்றும் மருந்துகளை மறுத்துக் கடுமையான தொற்றுநோயால் உயிருக்கு ஆபத்தான நிலையில் படுக்கையில் கிடந்ததால் திருமதி ஹட்சன் மிகுந்த கவலையடைந்தார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng7_add_2m_2",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Who was Culverton Smith?",
-          qTamil: "கல்வர்டன் ஸ்மித் என்பவர் யார்?",
-          ans: "Culverton Smith was a wealthy planter from Sumatra with deep knowledge of rare, fatal eastern diseases, who had secretly murdered his nephew Victor Savage for money.",
-          ansTamil: "கல்வர்டன் ஸ்மித் சுமத்ராவைச் சேர்ந்த ஒரு தோட்ட உரிமையாளர்; கிழக்கு நாடுகளின் அரிய கொடிய நோய்களைப் பற்றி நன்கு அறிந்த அவர், சொத்துக்காகத் தனது மருமகன் விக்டர் சாவேஜைக் கொன்ற குற்றவாளி ஆவார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng7_add_2m_3",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why did Holmes ask Watson to bring Culverton Smith?",
-          qTamil: "கல்வர்டன் ஸ்மித்தை அழைத்து வருமாறு வாட்சனிடம் ஹோம்ஸ் ஏன் கூறினார்?",
-          ans: "Holmes knew that Culverton Smith had murdered Victor Savage with a poisoned spring trap. Holmes pretended to be infected with the same illness to trick Smith into confessing in front of a hidden witness.",
-          ansTamil: "ஸ்மித் விஷப் பெட்டி மூலம் கொலை செய்ததை ஹோம்ஸ் அறிந்திருந்தார். தானும் அதே நோயால் பாதிக்கப்பட்டதாக நடித்து, மறைந்திருக்கும் சாட்சியான வாட்சன் முன்னிலையில் ஸ்மித்தைக் குற்றத்தை ஒப்புக்கொள்ள வைக்கவே அவரை அழைத்து வரச் சொன்னார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng7_add_5m_1",
-          type: "5m",
-          mark: "5 Marks | Additional Practice Paragraph",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "How did Sherlock Holmes trap Culverton Smith and reveal the truth?",
-          qTamil: "ஷெர்லாக் ஹோம்ஸ் கல்வர்டன் ஸ்மித்தை எவ்வாறு வலையில் வீழ்த்தி உண்மையைக் கண்டறிந்தார்?",
-          ans: "Sherlock Holmes devised a brilliant trap for Culverton Smith, who had murdered his nephew Victor Savage. Holmes fasted for three days and applied makeup to appear gaunt and dying. He asked Dr. Watson to bring Culverton Smith, who was an expert in the rare disease. Before Smith arrived, Holmes hid Watson behind the head of the bed to listen secretly. When Smith entered the room, he gloated over Holmes's dying condition and confessed that he had sent Holmes a spring-loaded poisoned needle in an ivory box, identical to the murder weapon used on Savage. Once Smith confessed and turned up the gaslight as a signal, Holmes dropped his pretend illness and spoke in his normal voice. Inspector Morton immediately entered and arrested Culverton Smith for murder, demonstrating Holmes's sheer intellect in bringing a killer to justice.",
-          ansTamil: "விக்டர் சாவேஜைக் கொன்ற கல்வர்டன் ஸ்மித்தைப் பிடிக்க ஹோம்ஸ் ஓர் உபாயம் செய்தார். மூன்று நாட்கள் உண்ணாநோன்பு இருந்து, நோய்வாய்ப்பட்டது போல வேடமிட்டார். நோய் வல்லுநரான ஸ்மித்தை அழைத்து வர வாட்சனை அனுப்பினார். வாட்சனைப் படுக்கைக்குப் பின்னால் மறைந்திருக்கச் செய்தார். வந்த ஸ்மித், தான் விஷ ஊசி அடங்கிய தந்தப் பெட்டியை அனுப்பியதை மமதையோடு ஒப்புக்கொண்டார். குற்ற ஒப்புதல் கிடைத்தவுடன் ஹோம்ஸ் இயல்பான குரலில் பேசி சைகை செய்ய, இன்ஸ்பெக்டர் மோர்டன் உள்ளே நுழைந்து ஸ்மித்தைக் கைது செய்தார். ஹோம்ஸின் புத்திக்கூர்மை கொலையாளியைச் சிறைப்படுத்தியது."
-        }
+      
       ]
     },
     {
@@ -329,6 +277,62 @@ const ENGLISH_UNIT_7_DATA = {
           mark: "2 Marks",
           q: "Change the interrogative sentence into Indirect Speech: Holmes said to Smith, 'Did you send me the ivory box?'",
           ans: "<b>Answer:</b> Holmes asked Smith if (or whether) he had sent him the ivory box."
+        }
+      ]
+    }
+  
+    ,
+    {
+      id: "eng7_add_practice",
+      title: "Part 5: Additional Practice Questions (In-Text)",
+      author: "Sir Arthur Conan Doyle",
+      questions: [
+        {
+          id: "eng7_add_2m_1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why was Mrs. Hudson worried about Sherlock Holmes?",
+          qTamil: "திருமதி ஹட்சன் ஷெர்லாக் ஹோம்ஸ் குறித்து ஏன் கவலைப்பட்டார்?",
+          ans: "Mrs. Hudson was alarmed because Holmes had been bedridden for three days, refusing all food, medicine, and water, and seemed to be wasting away from a contagious tropical disease.",
+          ansTamil: "ஹோம்ஸ் மூன்று நாட்களாக உணவு, நீர் மற்றும் மருந்துகளை மறுத்துக் கடுமையான தொற்றுநோயால் உயிருக்கு ஆபத்தான நிலையில் படுக்கையில் கிடந்ததால் திருமதி ஹட்சன் மிகுந்த கவலையடைந்தார்."
+        },
+
+        {
+          id: "eng7_add_2m_2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Who was Culverton Smith?",
+          qTamil: "கல்வர்டன் ஸ்மித் என்பவர் யார்?",
+          ans: "Culverton Smith was a wealthy planter from Sumatra with deep knowledge of rare, fatal eastern diseases, who had secretly murdered his nephew Victor Savage for money.",
+          ansTamil: "கல்வர்டன் ஸ்மித் சுமத்ராவைச் சேர்ந்த ஒரு தோட்ட உரிமையாளர்; கிழக்கு நாடுகளின் அரிய கொடிய நோய்களைப் பற்றி நன்கு அறிந்த அவர், சொத்துக்காகத் தனது மருமகன் விக்டர் சாவேஜைக் கொன்ற குற்றவாளி ஆவார்."
+        },
+
+        {
+          id: "eng7_add_2m_3",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why did Holmes ask Watson to bring Culverton Smith?",
+          qTamil: "கல்வர்டன் ஸ்மித்தை அழைத்து வருமாறு வாட்சனிடம் ஹோம்ஸ் ஏன் கூறினார்?",
+          ans: "Holmes knew that Culverton Smith had murdered Victor Savage with a poisoned spring trap. Holmes pretended to be infected with the same illness to trick Smith into confessing in front of a hidden witness.",
+          ansTamil: "ஸ்மித் விஷப் பெட்டி மூலம் கொலை செய்ததை ஹோம்ஸ் அறிந்திருந்தார். தானும் அதே நோயால் பாதிக்கப்பட்டதாக நடித்து, மறைந்திருக்கும் சாட்சியான வாட்சன் முன்னிலையில் ஸ்மித்தைக் குற்றத்தை ஒப்புக்கொள்ள வைக்கவே அவரை அழைத்து வரச் சொன்னார்."
+        },
+
+        {
+          id: "eng7_add_5m_1",
+          type: "5m",
+          mark: "5 Marks | Additional Practice Paragraph",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "How did Sherlock Holmes trap Culverton Smith and reveal the truth?",
+          qTamil: "ஷெர்லாக் ஹோம்ஸ் கல்வர்டன் ஸ்மித்தை எவ்வாறு வலையில் வீழ்த்தி உண்மையைக் கண்டறிந்தார்?",
+          ans: "Sherlock Holmes devised a brilliant trap for Culverton Smith, who had murdered his nephew Victor Savage. Holmes fasted for three days and applied makeup to appear gaunt and dying. He asked Dr. Watson to bring Culverton Smith, who was an expert in the rare disease. Before Smith arrived, Holmes hid Watson behind the head of the bed to listen secretly. When Smith entered the room, he gloated over Holmes's dying condition and confessed that he had sent Holmes a spring-loaded poisoned needle in an ivory box, identical to the murder weapon used on Savage. Once Smith confessed and turned up the gaslight as a signal, Holmes dropped his pretend illness and spoke in his normal voice. Inspector Morton immediately entered and arrested Culverton Smith for murder, demonstrating Holmes's sheer intellect in bringing a killer to justice.",
+          ansTamil: "விக்டர் சாவேஜைக் கொன்ற கல்வர்டன் ஸ்மித்தைப் பிடிக்க ஹோம்ஸ் ஓர் உபாயம் செய்தார். மூன்று நாட்கள் உண்ணாநோன்பு இருந்து, நோய்வாய்ப்பட்டது போல வேடமிட்டார். நோய் வல்லுநரான ஸ்மித்தை அழைத்து வர வாட்சனை அனுப்பினார். வாட்சனைப் படுக்கைக்குப் பின்னால் மறைந்திருக்கச் செய்தார். வந்த ஸ்மித், தான் விஷ ஊசி அடங்கிய தந்தப் பெட்டியை அனுப்பியதை மமதையோடு ஒப்புக்கொண்டார். குற்ற ஒப்புதல் கிடைத்தவுடன் ஹோம்ஸ் இயல்பான குரலில் பேசி சைகை செய்ய, இன்ஸ்பெக்டர் மோர்டன் உள்ளே நுழைந்து ஸ்மித்தைக் கைது செய்தார். ஹோம்ஸின் புத்திக்கூர்மை கொலையாளியைச் சிறைப்படுத்தியது."
         }
       ]
     }

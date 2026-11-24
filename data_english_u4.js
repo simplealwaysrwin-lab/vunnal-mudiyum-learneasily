@@ -330,59 +330,7 @@ const ENGLISH_UNIT_4_DATA = {
           </div>`,
           ansTamil: "இக்கதை ஒரு மனிதன் தன் பள்ளிப் பருவத் தவறை உணர்ந்து, மனப்பூர்வமாக மன்னிப்புக் கேட்டுப் பரிகாரம் செய்வதன் மாண்பை விளக்குகிறது."
         }
-      ,
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng4_add_2m_1",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why did Aditya return to his ancestral house?",
-          qTamil: "ஆதித்யா தனது பூர்வீக வீட்டிற்கு ஏன் மீண்டும் சென்றார்?",
-          ans: "Aditya returned to his ancestral home to visit the attic and recover a silver medal that he had hidden there twenty-nine years earlier.",
-          ansTamil: "இருபத்தொன்பது ஆண்டுகளுக்கு முன்பு வீட்டின் பரண் அறையில் ஒளித்து வைத்திருந்த வெள்ளிப் பதக்கத்தை எடுப்பதற்காக ஆதித்யா தனது பூர்வீக வீட்டிற்குச் சென்றார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng4_add_2m_2",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why was Sasanka Sanyal angry with Aditya?",
-          qTamil: "சசாங்க சன்யால் ஆதித்யா மீது ஏன் கோபமாக இருந்தார்?",
-          ans: "Sasanka Sanyal had won a silver medal for reciting Tagore's poem. Aditya borrowed it to show his father, falsely claimed it was lost, and never returned it.",
-          ansTamil: "தாகூரின் கவிதையை ஒப்பித்து சன்யால் வென்ற வெள்ளிப் பதக்கத்தை, தன் தந்தையிடம் காட்ட வாங்கிச் சென்ற ஆதித்யா, அது தொலைந்துவிட்டதாகப் பொய் கூறித் திருப்பித் தரவில்லை என்பதால் சன்யால் கோபமாக இருந்தார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng4_add_2m_3",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why did Sasanka refuse the money offered by Aditya?",
-          qTamil: "ஆதித்யா அளித்த பணத்தை சசாங்க சன்யால் ஏன் மறுத்தார்?",
-          ans: "Sasanka Sanyal had high self-respect. He felt that taking cash was like receiving charity. He only wanted his original medal back to restore his dignity and childhood honor.",
-          ansTamil: "சன்யால் சுயமரியாதை மிக்கவர். பணத்தைப் பெறுவது தர்மத்தைப் பெறுவது போன்றது என்று அவர் கருதினார். தனது பால்யகால கௌரவமான அசல் வெள்ளிப் பதக்கத்தை மட்டுமே அவர் திரும்ப விரும்பினார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng4_add_5m_1",
-          type: "5m",
-          mark: "5 Marks | Additional Practice Paragraph",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "How did Aditya correct his childhood mistake and restore Sasanka's happiness?",
-          qTamil: "ஆதித்யா தனது சிறுவயது தவறை எவ்வாறு திருத்திக்கொண்டு சன்யாலின் மகிழ்ச்சியை மீட்டெடுத்தார்?",
-          ans: "Twenty-nine years after leaving his village, Aditya returned with his friend and visited his ancestral home. He went up to the attic and searched until he recovered the silver medal hidden on a wooden beam. In his childhood, Aditya had taken the medal from his classmate Sasanka Sanyal out of jealousy and had lied about losing it. After hearing Sasanka recite the same Tagore poem at a local tea shop, Aditya was overcome with remorse. He visited Sasanka and initially offered him ₹150 as compensation. Sasanka rejected the cash, saying he did not want charity, and asked only for his medal. Aditya promptly returned the original silver medal. Overjoyed and relieved, Sasanka forgave him, allowing Aditya to rectify his childhood misdeed and restore justice.",
-          ansTamil: "29 ஆண்டுகளுக்குப் பிறகு தன் கிராமத்திற்கு வந்த ஆதித்யா, பூர்வீக வீட்டின் பரண் அறையிலிருந்து பழைய வெள்ளிப் பதக்கத்தை எடுத்தார். சிறுவயதில் பொறாமையினால் சன்யாலின் பதக்கத்தைத் திருடிவிட்டு தொலைந்துவிட்டதாகப் பொய் சொல்லியிருந்தார். தேநீர்க்கடையில் சன்யால் அதே தாகூர் கவிதையைப் பாடியதைக் கேட்டு ஆதித்யா குற்ற உணர்ச்சி அடைந்தார். சன்யாலின் இருப்பிடத்திற்குச் சென்று முதலில் ₹150 பண இழப்பீடு கொடுத்தார். சன்யால் அதை மறுத்தவுடன், அசல் வெள்ளிப் பதக்கத்தை அவரிடம் ஒப்படைத்தார். சன்யால் மகிழ்ந்து அவரை மன்னித்தார். இவ்வாறு ஆதித்யா தன் தவறைச் சரிசெய்தார்."
-        }
+      
       ]
     },
 
@@ -1502,6 +1450,62 @@ const ENGLISH_UNIT_4_DATA = {
           options: ["A. Beautiful", "B. Because", "C. Quickly", "D. House"],
           ans: "<b>B. Because</b> (Subordinating conjunction of reason)",
           ansTamil: "'Because' (ஏனெனில்) என்பது இணைப்புச்சொல் ஆகும்."
+        }
+      ]
+    }
+  
+    ,
+    {
+      id: "eng4_add_practice",
+      title: "Part 6: Additional Practice Questions (In-Text)",
+      author: "Satyajit Ray",
+      questions: [
+        {
+          id: "eng4_add_2m_1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why did Aditya return to his ancestral house?",
+          qTamil: "ஆதித்யா தனது பூர்வீக வீட்டிற்கு ஏன் மீண்டும் சென்றார்?",
+          ans: "Aditya returned to his ancestral home to visit the attic and recover a silver medal that he had hidden there twenty-nine years earlier.",
+          ansTamil: "இருபத்தொன்பது ஆண்டுகளுக்கு முன்பு வீட்டின் பரண் அறையில் ஒளித்து வைத்திருந்த வெள்ளிப் பதக்கத்தை எடுப்பதற்காக ஆதித்யா தனது பூர்வீக வீட்டிற்குச் சென்றார்."
+        },
+
+        {
+          id: "eng4_add_2m_2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why was Sasanka Sanyal angry with Aditya?",
+          qTamil: "சசாங்க சன்யால் ஆதித்யா மீது ஏன் கோபமாக இருந்தார்?",
+          ans: "Sasanka Sanyal had won a silver medal for reciting Tagore's poem. Aditya borrowed it to show his father, falsely claimed it was lost, and never returned it.",
+          ansTamil: "தாகூரின் கவிதையை ஒப்பித்து சன்யால் வென்ற வெள்ளிப் பதக்கத்தை, தன் தந்தையிடம் காட்ட வாங்கிச் சென்ற ஆதித்யா, அது தொலைந்துவிட்டதாகப் பொய் கூறித் திருப்பித் தரவில்லை என்பதால் சன்யால் கோபமாக இருந்தார்."
+        },
+
+        {
+          id: "eng4_add_2m_3",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why did Sasanka refuse the money offered by Aditya?",
+          qTamil: "ஆதித்யா அளித்த பணத்தை சசாங்க சன்யால் ஏன் மறுத்தார்?",
+          ans: "Sasanka Sanyal had high self-respect. He felt that taking cash was like receiving charity. He only wanted his original medal back to restore his dignity and childhood honor.",
+          ansTamil: "சன்யால் சுயமரியாதை மிக்கவர். பணத்தைப் பெறுவது தர்மத்தைப் பெறுவது போன்றது என்று அவர் கருதினார். தனது பால்யகால கௌரவமான அசல் வெள்ளிப் பதக்கத்தை மட்டுமே அவர் திரும்ப விரும்பினார்."
+        },
+
+        {
+          id: "eng4_add_5m_1",
+          type: "5m",
+          mark: "5 Marks | Additional Practice Paragraph",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "How did Aditya correct his childhood mistake and restore Sasanka's happiness?",
+          qTamil: "ஆதித்யா தனது சிறுவயது தவறை எவ்வாறு திருத்திக்கொண்டு சன்யாலின் மகிழ்ச்சியை மீட்டெடுத்தார்?",
+          ans: "Twenty-nine years after leaving his village, Aditya returned with his friend and visited his ancestral home. He went up to the attic and searched until he recovered the silver medal hidden on a wooden beam. In his childhood, Aditya had taken the medal from his classmate Sasanka Sanyal out of jealousy and had lied about losing it. After hearing Sasanka recite the same Tagore poem at a local tea shop, Aditya was overcome with remorse. He visited Sasanka and initially offered him ₹150 as compensation. Sasanka rejected the cash, saying he did not want charity, and asked only for his medal. Aditya promptly returned the original silver medal. Overjoyed and relieved, Sasanka forgave him, allowing Aditya to rectify his childhood misdeed and restore justice.",
+          ansTamil: "29 ஆண்டுகளுக்குப் பிறகு தன் கிராமத்திற்கு வந்த ஆதித்யா, பூர்வீக வீட்டின் பரண் அறையிலிருந்து பழைய வெள்ளிப் பதக்கத்தை எடுத்தார். சிறுவயதில் பொறாமையினால் சன்யாலின் பதக்கத்தைத் திருடிவிட்டு தொலைந்துவிட்டதாகப் பொய் சொல்லியிருந்தார். தேநீர்க்கடையில் சன்யால் அதே தாகூர் கவிதையைப் பாடியதைக் கேட்டு ஆதித்யா குற்ற உணர்ச்சி அடைந்தார். சன்யாலின் இருப்பிடத்திற்குச் சென்று முதலில் ₹150 பண இழப்பீடு கொடுத்தார். சன்யால் அதை மறுத்தவுடன், அசல் வெள்ளிப் பதக்கத்தை அவரிடம் ஒப்படைத்தார். சன்யால் மகிழ்ந்து அவரை மன்னித்தார். இவ்வாறு ஆதித்யா தன் தவறைச் சரிசெய்தார்."
         }
       ]
     }

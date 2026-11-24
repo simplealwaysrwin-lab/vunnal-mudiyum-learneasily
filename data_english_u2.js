@@ -218,59 +218,7 @@ const ENGLISH_UNIT_2_DATA = {
           </div>`,
           ansTamil: "இக்கதை மனிதர்களின் அதீத கற்பனையும் அச்சமும் எளிய நிகழ்வை எவ்வாறு கலகலப்பான கலாட்டாவாக மாற்றுகிறது என்பதை விளக்குகிறது."
         }
-      ,
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng2_add_2m_1",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why did the narrator suspect that someone was walking downstairs?",
-          qTamil: "கீழ்த்தளத்தில் யாரோ நடக்கிறார்கள் என்று ஆசிரியர் ஏன் சந்தேகித்தார்?",
-          ans: "The narrator heard rhythmic footsteps circling the dining-room table downstairs at about 1:15 a.m. He first suspected his father or brother, and later thought it was a burglar.",
-          ansTamil: "அதிகாலை 1:15 மணியளவில் கீழ்த்தள சாப்பாட்டு மேசையைச் சுற்றி சீரான காலடிச் சத்தம் கேட்டது. முதலில் தன் தந்தை அல்லது சகோதரர் என்று நினைத்த ஆசிரியர், பின்னர் திருடன் நுழைந்துவிட்டதாகச் சந்தேகித்தார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng2_add_2m_2",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why did the mother throw a shoe through the neighbour's window?",
-          qTamil: "தாய் பக்கத்து வீட்டு ஜன்னல் வழியே காலணியை (shoe) ஏன் வீசினார்?",
-          ans: "The mother firmly believed that burglars had broken into the house. Since the telephone was located downstairs where the intruders were suspected to be, she threw a shoe through the neighbour Mr. Bodwell's window to seek help.",
-          ansTamil: "வீட்டிற்குள் திருடர்கள் நுழைந்துவிட்டதாகத் தாய் உறுதியாக நம்பினார். தொலைபேசி கீழ்த்தளத்தில் இருந்ததால், பக்கத்து வீட்டுக்காரர் திரு. போட்வெல்லின் கவனத்தை ஈர்த்து உதவி பெற அவரது ஜன்னல் மீது காலணியை வீசினார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng2_add_2m_3",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why did the police rush towards the attic?",
-          qTamil: "காவல்துறையினர் பரண் அறைக்கு (attic) ஏன் விரைந்து சென்றனர்?",
-          ans: "While investigating the house, the police heard creaking noises coming from the attic and suspected that the intruder was hiding there, so they rushed upstairs.",
-          ansTamil: "வீட்டைச் சோதனையிட்ட போது, பரண் அறையிலிருந்து விசித்திரமான சத்தம் கேட்டதால், திருடர்கள் அங்குதான் பதுங்கியிருக்கிறார்கள் என்று நினைத்துக் காவல்துறையினர் மேலே விரைந்தனர்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng2_add_5m_1",
-          type: "5m",
-          mark: "5 Marks | Additional Practice Paragraph",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Describe the humorous incidents that took place in the house on the night the ghost got in.",
-          qTamil: "பேய் நுழைந்ததாகக் கருதப்பட்ட இரவில் வீட்டில் நடந்த நகைச்சுவையான நிகழ்வுகளை விவரிக்கவும்.",
-          ans: "One night at 1:15 a.m., the narrator heard strange footsteps downstairs and woke his brother Herman. Their mother woke up and concluded that burglars had broken in. Since the telephone was downstairs, she threw a shoe through the neighbour's bedroom window to get them to alert the police. A large squad of policemen arrived, forced open the doors, and searched every corner of the house. Hearing noises in the attic, the police rushed up. The narrator’s grandfather, sleeping in the attic, mistook the policemen for deserters from General Meade’s army. He leaped out of bed, grabbed a revolver, attacked an officer, and shot another in the shoulder. The entire confusion was caused merely by imaginary footsteps, making the night hilariously chaotic.",
-          ansTamil: "அதிகாலை 1:15 மணிக்குக் கேட்ட காலடிச் சத்தத்தால் ஆசிரியர் தன் சகோதரர் ஹெர்மனை எழுப்பினார். தாய் திருடர்கள் வந்துவிட்டதாக நினைத்து, பக்கத்து வீட்டு ஜன்னல் மீது காலணியை எறிந்து காவல்துறையை அழைக்கச் செய்தார். விரைந்து வந்த போலீசார் வீட்டை முழுமையாகச் சோதனையிட்டனர். பரண் அறையில் சத்தம் கேட்டு மேலே சென்ற போது, அங்கு தூங்கிக்கொண்டிருந்த தாத்தா போலீசாரைப் போர்க்களத்திலிருந்து தப்பியோடிய வீரர்கள் எனத் தவறாக நினைத்து, துப்பாக்கியால் சுட்டுத் தாக்கினார். கற்பனையான ஒரு காலடிச் சத்தம் பெரும் குழப்பத்தையும் நகைச்சுவையையும் ஏற்படுத்தியது."
-        }
+      
       ]
     },
 
@@ -382,6 +330,62 @@ const ENGLISH_UNIT_2_DATA = {
           options: ["a) at", "b) in", "c) on", "d) with"],
           ans: "<b>a) at</b> (shot at)",
           ansTamil: "Shoot at என்பது குறிப்பிட்ட இலக்கை நோக்கிச் சுடுதலைக் குறிக்கும்."
+        }
+      ]
+    }
+  
+    ,
+    {
+      id: "eng2_add_practice",
+      title: "Part 5: Additional Practice Questions (In-Text)",
+      author: "James Thurber",
+      questions: [
+        {
+          id: "eng2_add_2m_1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why did the narrator suspect that someone was walking downstairs?",
+          qTamil: "கீழ்த்தளத்தில் யாரோ நடக்கிறார்கள் என்று ஆசிரியர் ஏன் சந்தேகித்தார்?",
+          ans: "The narrator heard rhythmic footsteps circling the dining-room table downstairs at about 1:15 a.m. He first suspected his father or brother, and later thought it was a burglar.",
+          ansTamil: "அதிகாலை 1:15 மணியளவில் கீழ்த்தள சாப்பாட்டு மேசையைச் சுற்றி சீரான காலடிச் சத்தம் கேட்டது. முதலில் தன் தந்தை அல்லது சகோதரர் என்று நினைத்த ஆசிரியர், பின்னர் திருடன் நுழைந்துவிட்டதாகச் சந்தேகித்தார்."
+        },
+
+        {
+          id: "eng2_add_2m_2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why did the mother throw a shoe through the neighbour's window?",
+          qTamil: "தாய் பக்கத்து வீட்டு ஜன்னல் வழியே காலணியை (shoe) ஏன் வீசினார்?",
+          ans: "The mother firmly believed that burglars had broken into the house. Since the telephone was located downstairs where the intruders were suspected to be, she threw a shoe through the neighbour Mr. Bodwell's window to seek help.",
+          ansTamil: "வீட்டிற்குள் திருடர்கள் நுழைந்துவிட்டதாகத் தாய் உறுதியாக நம்பினார். தொலைபேசி கீழ்த்தளத்தில் இருந்ததால், பக்கத்து வீட்டுக்காரர் திரு. போட்வெல்லின் கவனத்தை ஈர்த்து உதவி பெற அவரது ஜன்னல் மீது காலணியை வீசினார்."
+        },
+
+        {
+          id: "eng2_add_2m_3",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why did the police rush towards the attic?",
+          qTamil: "காவல்துறையினர் பரண் அறைக்கு (attic) ஏன் விரைந்து சென்றனர்?",
+          ans: "While investigating the house, the police heard creaking noises coming from the attic and suspected that the intruder was hiding there, so they rushed upstairs.",
+          ansTamil: "வீட்டைச் சோதனையிட்ட போது, பரண் அறையிலிருந்து விசித்திரமான சத்தம் கேட்டதால், திருடர்கள் அங்குதான் பதுங்கியிருக்கிறார்கள் என்று நினைத்துக் காவல்துறையினர் மேலே விரைந்தனர்."
+        },
+
+        {
+          id: "eng2_add_5m_1",
+          type: "5m",
+          mark: "5 Marks | Additional Practice Paragraph",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Describe the humorous incidents that took place in the house on the night the ghost got in.",
+          qTamil: "பேய் நுழைந்ததாகக் கருதப்பட்ட இரவில் வீட்டில் நடந்த நகைச்சுவையான நிகழ்வுகளை விவரிக்கவும்.",
+          ans: "One night at 1:15 a.m., the narrator heard strange footsteps downstairs and woke his brother Herman. Their mother woke up and concluded that burglars had broken in. Since the telephone was downstairs, she threw a shoe through the neighbour's bedroom window to get them to alert the police. A large squad of policemen arrived, forced open the doors, and searched every corner of the house. Hearing noises in the attic, the police rushed up. The narrator’s grandfather, sleeping in the attic, mistook the policemen for deserters from General Meade’s army. He leaped out of bed, grabbed a revolver, attacked an officer, and shot another in the shoulder. The entire confusion was caused merely by imaginary footsteps, making the night hilariously chaotic.",
+          ansTamil: "அதிகாலை 1:15 மணிக்குக் கேட்ட காலடிச் சத்தத்தால் ஆசிரியர் தன் சகோதரர் ஹெர்மனை எழுப்பினார். தாய் திருடர்கள் வந்துவிட்டதாக நினைத்து, பக்கத்து வீட்டு ஜன்னல் மீது காலணியை எறிந்து காவல்துறையை அழைக்கச் செய்தார். விரைந்து வந்த போலீசார் வீட்டை முழுமையாகச் சோதனையிட்டனர். பரண் அறையில் சத்தம் கேட்டு மேலே சென்ற போது, அங்கு தூங்கிக்கொண்டிருந்த தாத்தா போலீசாரைப் போர்க்களத்திலிருந்து தப்பியோடிய வீரர்கள் எனத் தவறாக நினைத்து, துப்பாக்கியால் சுட்டுத் தாக்கினார். கற்பனையான ஒரு காலடிச் சத்தம் பெரும் குழப்பத்தையும் நகைச்சுவையையும் ஏற்படுத்தியது."
         }
       ]
     }

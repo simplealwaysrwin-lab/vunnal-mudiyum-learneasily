@@ -143,59 +143,7 @@ const ENGLISH_UNIT_6_DATA = {
             The story stands as an unforgettable tribute to maternal language as the soul of a free nation.
           </div>`
         }
-      ,
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng6_add_2m_1",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why did Franz regret not learning French properly?",
-          qTamil: "பிரான்ஸ் பிரெஞ்சு மொழியை முறையாகக் கற்காததற்கு ஏன் வருத்தப்பட்டான்?",
-          ans: "Franz realized that an order from Berlin had banned French, making this his final lesson. He deeply regretted putting off his studies to play, chase bird eggs, and slide on the river Saar.",
-          ansTamil: "பெர்லின் உத்தரவின்படி இனி ஜெர்மன் மட்டுமே கற்பிக்கப்படும் என்றும், இதுவே கடைசி பிரெஞ்சு பாடம் என்றும் அறிந்த பிரான்ஸ், படிப்பைத் தள்ளிப்போட்டுப் பறவை முட்டைகளைத் தேடியும் ஆற்றில் சறுக்கியும் நேரத்தை வீணடித்ததை எண்ணி வருந்தினான்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng6_add_2m_2",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Why did M. Hamel wear his special Sunday clothes?",
-          qTamil: "திரு. ஹேமல் தனது சிறப்பு ஞாயிற்றுக்கிழமை ஆடைகளை ஏன் அணிந்திருந்தார்?",
-          ans: "M. Hamel wore his finest green coat, frilled shirt, and embroidered silk cap to honor his last lesson and mark forty years of dedicated service to the school.",
-          ansTamil: "தனது கடைசிப் பாடத்திற்கு மரியாதை செலுத்தவும், நாற்பது ஆண்டுகால அர்ப்பணிப்பான ஆசிரியர் பணியைக் கௌரவிக்கவும் திரு. ஹேமல் தனது சிறப்புப் பச்சை நிற அங்கி மற்றும் தொப்பியை அணிந்திருந்தார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng6_add_2m_3",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "What message did M. Hamel give about one's mother tongue?",
-          qTamil: "தாய்மொழி குறித்து திரு. ஹேமல் கூறிய செய்தி என்ன?",
-          ans: "M. Hamel said that French was the most beautiful, clearest, and most logical language in the world. He taught that when an enslaved people hold fast to their language, it is like holding the key to their prison.",
-          ansTamil: "பிரெஞ்சு மொழி உலகின் மிக அழகான, தெளிவான மற்றும் தர்க்கரீதியான மொழி என்றார். ஒரு தேசம் அடிமைப்பட்டாலும், மக்கள் தங்கள் தாய்மொழியை இறுகப் பற்றிக்கொண்டால், அது சிறைச்சாலையின் திறவுகோலைப் போன்றது என்று அவர் கூறினார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng6_add_5m_1",
-          type: "5m",
-          mark: "5 Marks | Additional Practice Paragraph",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Describe the last lesson of M. Hamel and the emotions of Franz.",
-          qTamil: "திரு. ஹேமலின் கடைசிப் பாடம் மற்றும் பிரான்சின் உணர்வுகளை விவரிக்கவும்.",
-          ans: "Franz went to school expecting scolding, but found an atmosphere of profound solemnity. Village elders sat quietly on the back benches to honor M. Hamel’s forty years of devoted service. M. Hamel announced that an order from Berlin had mandated that only German would be taught in the schools of Alsace and Lorraine. This sudden revelation stunned Franz. His books, once deemed burdensome, suddenly felt like dear friends. M. Hamel spoke movingly about the beauty of the French language and urged everyone to preserve it. He honestly acknowledged that parents, students, and even teachers had neglected learning. As the church bell struck noon and Prussian bugles sounded, M. Hamel was overcome with emotion. He turned to the blackboard, wrote with all his strength 'Vive La France!' (Long Live France!), and dismissed the class with a wave of his hand.",
-          ansTamil: "வழக்கத்திற்கு மாறாக அமைதியாகவும் சோகமாகவும் பள்ளி இருந்தது. ஆசிரியர் ஹேமலின் 40 ஆண்டுகால பணிக்கு நன்றி கூற ஊர் பெரியவர்கள் பின்வரிசையில் அமர்ந்திருந்தனர். பெர்லினிலிருந்து வந்த உத்தரவினால் இதுவே கடைசி பிரெஞ்சு பாடம் என ஆசிரியர் அறிவித்ததும் பிரான்ஸ் பேரதிர்ச்சி அடைந்தான். இதுவரை சுமையாக இருந்த புத்தகங்கள் அவனுக்குப் பிரியமான நண்பர்களாயின. தாய்மொழியின் மேன்மையை உணர்த்திய ஆசிரியர், அனைவரும் அலட்சியமாக இருந்ததைச் சுட்டிக்காட்டினார். மதிய மணி ஒலித்ததும் உணர்ச்சிவசப்பட்ட ஆசிரியர் கரும்பலகையில் 'Vive La France!' (பிரான்ஸ் வாழ்க!) என்று எழுதி வகுப்பை நிறைவு செய்தார்."
-        }
+      
       ]
     },
     {
@@ -331,6 +279,62 @@ const ENGLISH_UNIT_6_DATA = {
           isImportant: true,
           q: "Change into Passive Voice: Thomas Alva Edison invented the electric bulb.",
           ans: "<b>Passive Voice:</b> The electric bulb was invented by Thomas Alva Edison."
+        }
+      ]
+    }
+  
+    ,
+    {
+      id: "eng6_add_practice",
+      title: "Part 5: Additional Practice Questions (In-Text)",
+      author: "Alphonse Daudet",
+      questions: [
+        {
+          id: "eng6_add_2m_1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why did Franz regret not learning French properly?",
+          qTamil: "பிரான்ஸ் பிரெஞ்சு மொழியை முறையாகக் கற்காததற்கு ஏன் வருத்தப்பட்டான்?",
+          ans: "Franz realized that an order from Berlin had banned French, making this his final lesson. He deeply regretted putting off his studies to play, chase bird eggs, and slide on the river Saar.",
+          ansTamil: "பெர்லின் உத்தரவின்படி இனி ஜெர்மன் மட்டுமே கற்பிக்கப்படும் என்றும், இதுவே கடைசி பிரெஞ்சு பாடம் என்றும் அறிந்த பிரான்ஸ், படிப்பைத் தள்ளிப்போட்டுப் பறவை முட்டைகளைத் தேடியும் ஆற்றில் சறுக்கியும் நேரத்தை வீணடித்ததை எண்ணி வருந்தினான்."
+        },
+
+        {
+          id: "eng6_add_2m_2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Why did M. Hamel wear his special Sunday clothes?",
+          qTamil: "திரு. ஹேமல் தனது சிறப்பு ஞாயிற்றுக்கிழமை ஆடைகளை ஏன் அணிந்திருந்தார்?",
+          ans: "M. Hamel wore his finest green coat, frilled shirt, and embroidered silk cap to honor his last lesson and mark forty years of dedicated service to the school.",
+          ansTamil: "தனது கடைசிப் பாடத்திற்கு மரியாதை செலுத்தவும், நாற்பது ஆண்டுகால அர்ப்பணிப்பான ஆசிரியர் பணியைக் கௌரவிக்கவும் திரு. ஹேமல் தனது சிறப்புப் பச்சை நிற அங்கி மற்றும் தொப்பியை அணிந்திருந்தார்."
+        },
+
+        {
+          id: "eng6_add_2m_3",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "What message did M. Hamel give about one's mother tongue?",
+          qTamil: "தாய்மொழி குறித்து திரு. ஹேமல் கூறிய செய்தி என்ன?",
+          ans: "M. Hamel said that French was the most beautiful, clearest, and most logical language in the world. He taught that when an enslaved people hold fast to their language, it is like holding the key to their prison.",
+          ansTamil: "பிரெஞ்சு மொழி உலகின் மிக அழகான, தெளிவான மற்றும் தர்க்கரீதியான மொழி என்றார். ஒரு தேசம் அடிமைப்பட்டாலும், மக்கள் தங்கள் தாய்மொழியை இறுகப் பற்றிக்கொண்டால், அது சிறைச்சாலையின் திறவுகோலைப் போன்றது என்று அவர் கூறினார்."
+        },
+
+        {
+          id: "eng6_add_5m_1",
+          type: "5m",
+          mark: "5 Marks | Additional Practice Paragraph",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Describe the last lesson of M. Hamel and the emotions of Franz.",
+          qTamil: "திரு. ஹேமலின் கடைசிப் பாடம் மற்றும் பிரான்சின் உணர்வுகளை விவரிக்கவும்.",
+          ans: "Franz went to school expecting scolding, but found an atmosphere of profound solemnity. Village elders sat quietly on the back benches to honor M. Hamel’s forty years of devoted service. M. Hamel announced that an order from Berlin had mandated that only German would be taught in the schools of Alsace and Lorraine. This sudden revelation stunned Franz. His books, once deemed burdensome, suddenly felt like dear friends. M. Hamel spoke movingly about the beauty of the French language and urged everyone to preserve it. He honestly acknowledged that parents, students, and even teachers had neglected learning. As the church bell struck noon and Prussian bugles sounded, M. Hamel was overcome with emotion. He turned to the blackboard, wrote with all his strength 'Vive La France!' (Long Live France!), and dismissed the class with a wave of his hand.",
+          ansTamil: "வழக்கத்திற்கு மாறாக அமைதியாகவும் சோகமாகவும் பள்ளி இருந்தது. ஆசிரியர் ஹேமலின் 40 ஆண்டுகால பணிக்கு நன்றி கூற ஊர் பெரியவர்கள் பின்வரிசையில் அமர்ந்திருந்தனர். பெர்லினிலிருந்து வந்த உத்தரவினால் இதுவே கடைசி பிரெஞ்சு பாடம் என ஆசிரியர் அறிவித்ததும் பிரான்ஸ் பேரதிர்ச்சி அடைந்தான். இதுவரை சுமையாக இருந்த புத்தகங்கள் அவனுக்குப் பிரியமான நண்பர்களாயின. தாய்மொழியின் மேன்மையை உணர்த்திய ஆசிரியர், அனைவரும் அலட்சியமாக இருந்ததைச் சுட்டிக்காட்டினார். மதிய மணி ஒலித்ததும் உணர்ச்சிவசப்பட்ட ஆசிரியர் கரும்பலகையில் 'Vive La France!' (பிரான்ஸ் வாழ்க!) என்று எழுதி வகுப்பை நிறைவு செய்தார்."
         }
       ]
     }

@@ -142,59 +142,7 @@ const ENGLISH_UNIT_5_DATA = {
             Technology does not just make things easier; it makes things possible for differently-abled people, offering them dignity, equal opportunity, and self-confidence.
           </div>`
         }
-      ,
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng5_add_2m_1",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "How does Dragon Dictate help Alisha?",
-          qTamil: "டிராகன் டிக்டேட் (Dragon Dictate) அலிஷாவிற்கு எவ்வாறு உதவுகிறது?",
-          ans: "Alisha, who has cerebral palsy, cannot type physically. Dragon Dictate software listens to her voice and instantly converts her speech into written text on the screen, enabling her to study independently.",
-          ansTamil: "பெருமூளை வாதத்தால் பாதிக்கப்பட்ட அலிஷாவால் தட்டச்சு செய்ய முடியாது. டிராகன் டிக்டேட் மென்பொருள் அவள் பேசுவதை உடனுக்குடன் எழுத்துக்களாக மாற்றி, அவள் சுயமாகப் படிக்க உதவுகிறது."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng5_add_2m_2",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "What is the function of Eye Gaze technology?",
-          qTamil: "ஐ கேஸ் (Eye Gaze) தொழில்நுட்பத்தின் செயல்பாடு என்ன?",
-          ans: "Eye Gaze technology uses optical sensors to track a user's pupil movements, allowing individuals with severe paralysis to navigate and control computer screens using only their eyes.",
-          ansTamil: "ஐ கேஸ் தொழில்நுட்பம் கண்களின் அசைவுகளைக் கண்காணித்து, கை கால்கள் செயல்படாத மாற்றுத்திறனாளிகள் தங்கள் கண்கள் மூலமாகவே கணினியை இயக்க வழிசெய்கிறது."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng5_add_2m_3",
-          type: "2m",
-          mark: "2 Marks | Additional Practice (In-Text)",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "How does technology help David communicate?",
-          qTamil: "தொழில்நுட்பம் டேவிட் மற்றவர்களுடன் தொடர்புகொள்ள எவ்வாறு உதவுகிறது?",
-          ans: "David uses an ECO2 communication device paired with an Eye Gaze system. It allows him to select words, speak synthesized sentences, express ideas, and communicate freely with family and friends.",
-          ansTamil: "டேவிட் ECO2 மற்றும் ஐ கேஸ் அமைப்பைப் பயன்படுத்திச் சொற்களைத் தேர்ந்தெடுத்து, கணினி குரல் மூலம் பேசித் தனது கருத்துக்களைப் பிறருடன் சுதந்திரமாகப் பகிர்ந்துகொள்கிறார்."
-        },
-
-        // Additional Practice Questions (In-Text)
-        {
-          id: "eng5_add_5m_1",
-          type: "5m",
-          mark: "5 Marks | Additional Practice Paragraph",
-          sectionTag: "Additional Practice (In-Text)",
-          isImportant: true,
-          q: "Explain how technology has transformed the lives of Alisha and David.",
-          qTamil: "தொழில்நுட்பம் அலிஷா மற்றும் டேவிட்டின் வாழ்க்கையை எவ்வாறு மாற்றியமைத்துள்ளது என்பதை விளக்குக.",
-          ans: "Assistive technology has revolutionized the lives of differently-abled individuals by overcoming physical limitations. Alisha, diagnosed with cerebral palsy, struggled with manual typing. Using Dragon Dictate speech-recognition software, she can now dictate essays and complete school assignments effortlessly. Similarly, David, who faces speech and motor challenges, uses an ECO2 Liberator communication device with Eye Gaze technology. This enables him to control computer functions, select words, communicate his desires, and interact actively in social settings. Technology has ended their isolation, given them independence, and empowered them to lead fulfilling, confident lives.",
-          ansTamil: "நவீன உதவித் தொழில்நுட்பம் மாற்றுத்திறனாளிகளின் வாழ்க்கையில் புதிய நம்பிக்கையை ஏற்படுத்தியுள்ளது. பெருமூளை வாதத்தால் பாதிக்கப்பட்ட அலிஷா, 'டிராகன் டிக்டேட்' மென்பொருள் மூலம் பேசி கட்டுரைகளை எழுதி சுயமாகப் படிக்கிறார். பேசவும் இயங்கவும் முடியாத டேவிட், 'ECO2' மற்றும் 'ஐ கேஸ்' சாதனங்கள் மூலம் கணினி திரையைக் கட்டுப்படுத்திப் பிறருடன் பேசுகிறார். தொழில்நுட்பம் இவர்களின் தனிமையைப் போக்கி, தன்னம்பிக்கையையும் சுதந்திரமான வாழ்வையும் வழங்கியுள்ளது."
-        }
+      
       ]
     },
     {
@@ -327,6 +275,62 @@ const ENGLISH_UNIT_5_DATA = {
           isImportant: true,
           q: "Change into Indirect Speech: The teacher said to the boys, 'Work hard to secure 450+ marks.'",
           ans: "<b>Indirect Speech:</b> The teacher advised the boys to work hard to secure 450+ marks."
+        }
+      ]
+    }
+  
+    ,
+    {
+      id: "eng5_add_practice",
+      title: "Part 5: Additional Practice Questions (In-Text)",
+      author: "Empowering Differently-Abled",
+      questions: [
+        {
+          id: "eng5_add_2m_1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "How does Dragon Dictate help Alisha?",
+          qTamil: "டிராகன் டிக்டேட் (Dragon Dictate) அலிஷாவிற்கு எவ்வாறு உதவுகிறது?",
+          ans: "Alisha, who has cerebral palsy, cannot type physically. Dragon Dictate software listens to her voice and instantly converts her speech into written text on the screen, enabling her to study independently.",
+          ansTamil: "பெருமூளை வாதத்தால் பாதிக்கப்பட்ட அலிஷாவால் தட்டச்சு செய்ய முடியாது. டிராகன் டிக்டேட் மென்பொருள் அவள் பேசுவதை உடனுக்குடன் எழுத்துக்களாக மாற்றி, அவள் சுயமாகப் படிக்க உதவுகிறது."
+        },
+
+        {
+          id: "eng5_add_2m_2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "What is the function of Eye Gaze technology?",
+          qTamil: "ஐ கேஸ் (Eye Gaze) தொழில்நுட்பத்தின் செயல்பாடு என்ன?",
+          ans: "Eye Gaze technology uses optical sensors to track a user's pupil movements, allowing individuals with severe paralysis to navigate and control computer screens using only their eyes.",
+          ansTamil: "ஐ கேஸ் தொழில்நுட்பம் கண்களின் அசைவுகளைக் கண்காணித்து, கை கால்கள் செயல்படாத மாற்றுத்திறனாளிகள் தங்கள் கண்கள் மூலமாகவே கணினியை இயக்க வழிசெய்கிறது."
+        },
+
+        {
+          id: "eng5_add_2m_3",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "How does technology help David communicate?",
+          qTamil: "தொழில்நுட்பம் டேவிட் மற்றவர்களுடன் தொடர்புகொள்ள எவ்வாறு உதவுகிறது?",
+          ans: "David uses an ECO2 communication device paired with an Eye Gaze system. It allows him to select words, speak synthesized sentences, express ideas, and communicate freely with family and friends.",
+          ansTamil: "டேவிட் ECO2 மற்றும் ஐ கேஸ் அமைப்பைப் பயன்படுத்திச் சொற்களைத் தேர்ந்தெடுத்து, கணினி குரல் மூலம் பேசித் தனது கருத்துக்களைப் பிறருடன் சுதந்திரமாகப் பகிர்ந்துகொள்கிறார்."
+        },
+
+        {
+          id: "eng5_add_5m_1",
+          type: "5m",
+          mark: "5 Marks | Additional Practice Paragraph",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          q: "Explain how technology has transformed the lives of Alisha and David.",
+          qTamil: "தொழில்நுட்பம் அலிஷா மற்றும் டேவிட்டின் வாழ்க்கையை எவ்வாறு மாற்றியமைத்துள்ளது என்பதை விளக்குக.",
+          ans: "Assistive technology has revolutionized the lives of differently-abled individuals by overcoming physical limitations. Alisha, diagnosed with cerebral palsy, struggled with manual typing. Using Dragon Dictate speech-recognition software, she can now dictate essays and complete school assignments effortlessly. Similarly, David, who faces speech and motor challenges, uses an ECO2 Liberator communication device with Eye Gaze technology. This enables him to control computer functions, select words, communicate his desires, and interact actively in social settings. Technology has ended their isolation, given them independence, and empowered them to lead fulfilling, confident lives.",
+          ansTamil: "நவீன உதவித் தொழில்நுட்பம் மாற்றுத்திறனாளிகளின் வாழ்க்கையில் புதிய நம்பிக்கையை ஏற்படுத்தியுள்ளது. பெருமூளை வாதத்தால் பாதிக்கப்பட்ட அலிஷா, 'டிராகன் டிக்டேட்' மென்பொருள் மூலம் பேசி கட்டுரைகளை எழுதி சுயமாகப் படிக்கிறார். பேசவும் இயங்கவும் முடியாத டேவிட், 'ECO2' மற்றும் 'ஐ கேஸ்' சாதனங்கள் மூலம் கணினி திரையைக் கட்டுப்படுத்திப் பிறருடன் பேசுகிறார். தொழில்நுட்பம் இவர்களின் தனிமையைப் போக்கி, தன்னம்பிக்கையையும் சுதந்திரமான வாழ்வையும் வழங்கியுள்ளது."
         }
       ]
     }

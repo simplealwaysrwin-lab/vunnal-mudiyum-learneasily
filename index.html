@@ -8692,7 +8692,6 @@ function resumeLastVisitedLesson() {
     const isScience = currentSubject && currentSubject.id.startsWith('science');
     const isSocial = currentSubject && (currentSubject.id.startsWith('social') || currentSubject.id === 'social_science');
     const countPublic = allQuestions.filter(q => q.examYear || q.examTag || q.isImportant).length;
-    const countAddPractice = allQuestions.filter(q => q.isAdditionalPractice || (q.sectionTag && q.sectionTag.includes('Additional Practice')) || (q.id && q.id.includes('add_practice'))).length;
     const count1M = allQuestions.filter(q => q.type === '1m' || (q.mark && q.mark.includes('1'))).length;
     const twoMarkQuestions = allQuestions.filter(q => q.type === '2m' || (q.mark && q.mark.includes('2')));
     const count2M = twoMarkQuestions.length;
@@ -8902,11 +8901,6 @@ function resumeLastVisitedLesson() {
             <button type="button" class="filter-eq-btn filter-eq-golden ${currentFilter === 'public' || currentFilter === '2025' ? 'active' : ''}" onclick="setFilter('public')">
               <span>⭐ ${isEm ? 'Public Exam' : 'பொதுத்தேர்வு'} <span class="filter-count">(${countPublic})</span></span>
             </button>
-            ${countAddPractice > 0 ? 
-              <button type="button" class="filter-eq-btn ${currentFilter === 'add_practice' ? 'active' : ''}" onclick="setFilter('add_practice')" style="${currentFilter === 'add_practice' ? 'background:linear-gradient(135deg, #1e40af, #2563eb); color:#fff; border:none; box-shadow:0 3px 8px rgba(37,99,235,0.3);' : 'border:1.5px solid #3b82f6; color:#1d4ed8; background:#eff6ff; font-weight:700;'}" title="Additional Practice Questions (In-Text)">
-                <span>ðŸ“˜ ${isEm ? 'Add. Practice' : 'à®•à¯‚à®Ÿà¯à®¤à®²à¯ à®µà®¿à®©à®¾à®•à¯à®•à®³à¯'} <span class="filter-count">(${countAddPractice})</span></span>
-              </button>
-             : ''}
             <button type="button" class="filter-eq-btn filter-eq-green ${currentFilter === '2m_audio' ? 'active' : ''}" onclick="openContinuous2MAudioTab()">
               <span>🎧 ${isEm ? '2M Audio' : '2M தொடர் ஒலி'} <span class="filter-count">(${count2M})</span></span>
             </button>

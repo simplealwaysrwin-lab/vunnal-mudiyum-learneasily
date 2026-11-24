@@ -1089,13 +1089,22 @@
   .filter-group-grid.five-cols {
     grid-template-columns: repeat(5, 1fr);
   }
+  .filter-group-grid.six-cols {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @media (max-width: 900px) {
+    .filter-group-grid.six-cols {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
   @media (max-width: 768px) {
     .filter-group-grid.five-cols {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   @media (max-width: 480px) {
-    .filter-group-grid.five-cols {
+    .filter-group-grid.five-cols,
+    .filter-group-grid.six-cols {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -8643,8 +8652,8 @@ function resumeLastVisitedLesson() {
     // --- OTHERWISE: Render Q&A Bank ---
     let filteredQ = allQuestions;
 
-    // Filter by SubSection
-    if (currentSubSection !== 'all') {
+    // Filter by SubSection (unless viewing extra questions filter batch)
+    if (currentSubSection !== 'all' && currentFilter !== 'extra') {
       const sec = currentLesson.subSections.find(s => s.id === currentSubSection);
       if (sec) {
         const secIds = new Set(sec.questions.map(q => q.id));
@@ -8672,6 +8681,8 @@ function resumeLastVisitedLesson() {
       filteredQ = filteredQ.filter(q => q.diagramSvg || q.diagram || q.diagramImg);
     } else if (currentFilter === 'public' || currentFilter === '2025') {
       filteredQ = filteredQ.filter(q => q.examYear || q.examTag || q.isImportant);
+    } else if (currentFilter === 'extra') {
+      filteredQ = filteredQ.filter(q => q.isAdditionalPractice || (q.sectionTag && (q.sectionTag.includes('Additional Practice') || q.sectionTag.includes('à®•à¯‚à®Ÿà¯à®¤à®²à¯ à®µà®¿à®©à®¾') || q.sectionTag.includes('Extra'))) || (q.subSectionId && q.subSectionId.includes('add_practice')) || (q.id && q.id.includes('_add_')));
     }
 
     // Filter by Search Query
@@ -8700,12 +8711,14 @@ function resumeLastVisitedLesson() {
     const count5M = allQuestions.filter(q => q.type === '5m' || q.type === '4m' || (q.mark && (q.mark.includes('5') || q.mark.includes('4')))).length;
     const count8M = allQuestions.filter(q => q.type === '8m' || (q.mark && q.mark.includes('8')) || q.is8Mark || (q.subSectionId && (q.subSectionId.includes('geo') || q.subSectionId.includes('graph') || q.subSectionId.includes('map') || q.subSectionId.includes('timeline')))).length;
     const countDiag = allQuestions.filter(q => q.diagramSvg || q.diagram || q.diagramImg).length;
+    const countExtra = allQuestions.filter(q => q.isAdditionalPractice || (q.sectionTag && (q.sectionTag.includes('Additional Practice') || q.sectionTag.includes('à®•à¯‚à®Ÿà¯à®¤à®²à¯ à®µà®¿à®©à®¾') || q.sectionTag.includes('Extra'))) || (q.subSectionId && q.subSectionId.includes('add_practice')) || (q.id && q.id.includes('_add_'))).length;
     const countCheckpoints = allQuestions.filter(q => q.checkpoints && q.checkpoints.length > 0).length;
     const hasManapaadam = currentLesson && currentLesson.manapaadam && currentLesson.manapaadam.length > 0;
     const manapaadamCount = hasManapaadam ? currentLesson.manapaadam.length : 0;
 
     // Book-like Pagination Calculations (5 questions per page; 1 question per page for long detailed answers)
     const isCheckpointsView = (currentFilter === 'checkpoints');
+    const isExtraView = (currentFilter === 'extra' || (currentSubSection && currentSubSection.includes('add_practice')));
     const isLongAnswerView = (currentFilter === '5m' || currentFilter === '4m' || currentFilter === '7m' || currentFilter === '8m');
     const is5MView = isLongAnswerView;
     const is7M = (currentFilter === "7m");
@@ -8716,7 +8729,7 @@ function resumeLastVisitedLesson() {
                          is4M ? (isEm || isEnglish ? "4-Mark Question" : "4-\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BA4\u0BC6\u0BA3\u0BCD \u0BB5\u0BBF\u0BA9\u0BBE") :
                          is8M ? (isEm || isEnglish ? "8-Mark Long Question" : "8-\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BA4\u0BC6\u0BA3\u0BCD \u0BA8\u0BC6\u0B9F\u0BC1\u0BB5\u0BBF\u0BA9\u0BBE") :
                          (isEm || isEnglish ? "5-Mark Detailed Question" : "\u0B90\u0BA8\u0BCD\u0BA4\u0BC1 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BA4\u0BC6\u0BA3\u0BCD \u0BB5\u0BBF\u0BB0\u0BBF\u0BB5\u0BBE\u0BA9 \u0BB5\u0BBF\u0BA9\u0BBE (5M)");
-    const effectivePerPage = isLongAnswerView ? 1 : (isCheckpointsView ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE);
+    const effectivePerPage = isLongAnswerView ? 1 : ((isCheckpointsView || isExtraView) ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE);
     const totalQuestions = filteredQ.length;
     const totalPages = Math.ceil(totalQuestions / effectivePerPage) || 1;
     if (currentLessonPage > totalPages) currentLessonPage = totalPages;
@@ -8910,7 +8923,7 @@ function resumeLastVisitedLesson() {
           </div>
 
           <!-- Row 2: Dynamic Question Paper Blueprint Mark Buttons -->
-          <div class="filter-group-grid five-cols">
+          <div class="filter-group-grid six-cols">
             <button type="button" class="filter-eq-btn filter-eq-golden ${currentFilter === '1m' ? 'active' : ''}" onclick="setFilter('1m')">
               <span>🎯 ${isEm ? '1-Mark' : '1-மதிப்பெண்'} <span class="filter-count">(${count1M})</span></span>
             </button>
@@ -8934,6 +8947,9 @@ function resumeLastVisitedLesson() {
             `}
             <button type="button" class="filter-eq-btn filter-eq-green ${currentFilter === 'diagram' ? 'active' : ''}" onclick="setFilter('diagram')">
               <span>🎨 ${isEm ? (isMath ? 'Graph' : (currentSubject && currentSubject.id.startsWith('social') ? 'Map' : 'Diagrams')) : (isMath ? 'வரைபடம்' : (currentSubject && currentSubject.id.startsWith('social') ? 'வரைபடம்' : 'படங்கள்'))} <span class="filter-count">(${countDiag})</span></span>
+            </button>
+            <button type="button" class="filter-eq-btn filter-eq-blue ${currentFilter === 'extra' ? 'active' : ''}" onclick="setFilter('extra')" title="${isEm ? 'Extra Practice Questions Batch' : 'கூடுதல் பயிற்சி வினாக்கள்'}">
+              <span>📘 ${isEm ? 'Extra Qns' : 'கூடுதல் வினா'} <span class="filter-count">(${countExtra})</span></span>
             </button>
           </div>
 
@@ -8982,6 +8998,20 @@ function resumeLastVisitedLesson() {
         </div>
       ` : ''}
 
+      ${currentFilter === 'extra' ? `
+        <div style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border:1px solid #bfdbfe; border-left:5px solid #2563eb; border-radius:12px; padding:14px 18px; margin:14px 0; box-shadow:0 2px 8px rgba(37,99,235,0.12);">
+          <div style="font-size:15px; font-weight:800; color:#1e40af; display:flex; align-items:center; gap:8px;">
+            <span style="font-size:18px;">📘</span>
+            <span>${isEm ? 'Additional Practice Questions Batch (In-Text)' : 'கூடுதல் பயிற்சி வினாக்கள் தொகுப்பு'}</span>
+            <span class="badge" style="background:#bfdbfe; color:#1e40af; font-size:11px; padding:3px 8px; border-radius:12px; font-weight:800;">${countExtra} ${isEm ? 'Questions' : 'வினாக்கள்'}</span>
+          </div>
+          <p style="margin:6px 0 0 0; font-size:13px; color:#1e3a8a; line-height:1.5;">
+            ${isEm
+              ? 'High-probability in-text practice questions for deeper understanding and thorough board exam preparation.'
+              : 'பாடத்தின் உட்பகுதிகளிலிருந்து கூடுதல் பயிற்சி மற்றும் தெளிவான புரிதலுக்காக உருவாக்கப்பட்ட வினா-விடைகள்.'}
+          </p>
+        </div>
+      ` : ''}
       <div id="lessonCheckpointsAnchor"></div>
       <div id="lessonPageTopAnchor"></div>
 
@@ -9666,6 +9696,9 @@ function resumeLastVisitedLesson() {
     if (window.teacherAudioPlayer) teacherAudioPlayer.stop();
     if (window.continuousAudioPlayer && filterType !== '2m' && filterType !== '2m_audio' && filterType !== 'manapaadam') {
       continuousAudioPlayer.stop();
+    }
+    if (filterType === 'extra') {
+      currentSubSection = 'all';
     }
     currentFilter = filterType;
     currentLessonPage = 1;
@@ -14716,7 +14749,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261120_v106')
+        navigator.serviceWorker.register('./sw.js?v=20261124_v127')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

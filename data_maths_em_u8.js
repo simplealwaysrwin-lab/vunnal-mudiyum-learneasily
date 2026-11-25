@@ -1,4 +1,4 @@
-﻿// 10th Standard Mathematics - Unit 8: Statistics and Probability (English Medium)
+// 10th Standard Mathematics - Unit 8: Statistics and Probability (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_8_DATA = {
@@ -46,9 +46,10 @@ const MATHS_EM_UNIT_8_DATA = {
         },
         {
           id: "m_em_8_1_3",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important 2M",
+          examTag: "Public Exam 2023 (2M)",
           isImportant: true,
           q: "Find the range and coefficient of range of the following data: 25, 67, 48, 53, 18, 39, 44.",
           ans: `<div style="line-height:1.8;">
@@ -61,6 +62,9 @@ const MATHS_EM_UNIT_8_DATA = {
         },
         {
           id: "m_em_8_1_4",
+          examYear: "2024, 2022",
+          examTag: "Public Exam (Q.28 Compulsory 2M)",
+          isCompulsory: true,
           type: "2m",
           mark: "2 Marks",
           q: "Find the standard deviation of the first 21 natural numbers.",
@@ -73,9 +77,10 @@ const MATHS_EM_UNIT_8_DATA = {
         },
         {
           id: "m_em_8_1_5",
+          examYear: "2024",
           type: "5m",
           mark: "5 Marks",
-          examTag: "Board Exam Model",
+          examTag: "Public Exam 2024 (5M)",
           isImportant: true,
           q: "The marks scored by two students A and B in 5 tests are given below. Who is more consistent?<br>A: 56, 64, 48, 60, 72<br>B: 68, 72, 70, 64, 76",
           ans: `<div style="line-height:1.8;">
@@ -138,6 +143,8 @@ const MATHS_EM_UNIT_8_DATA = {
         },
         {
           id: "m_em_8_2_2",
+          examYear: "2024",
+          examTag: "Public Exam 2024 (1M)",
           type: "1m",
           mark: "1 Mark",
           q: "A card is drawn from a well-shuffled pack of 52 cards. The probability of getting a red king is:",
@@ -146,6 +153,8 @@ const MATHS_EM_UNIT_8_DATA = {
         },
         {
           id: "m_em_8_2_3",
+          examYear: "2023",
+          examTag: "Public Exam 2023 (2M)",
           type: "2m",
           mark: "2 Marks",
           isImportant: true,
@@ -159,9 +168,10 @@ const MATHS_EM_UNIT_8_DATA = {
         },
         {
           id: "m_em_8_2_4",
+          examYear: "2023, 2022",
           type: "5m",
           mark: "5 Marks",
-          examTag: "Top Addition Theorem Question",
+          examTag: "Public Exam 5M (Exercise 8.4 Q6)",
           isImportant: true,
           q: "Two dice are rolled once. Find the probability of getting an even number on the first die or a total of 8.",
           blackboard: {
@@ -556,6 +566,137 @@ diagramCaption: "Sample Space Matrix (6 × 6 = 36 outcomes) illustrating Event A
               correction: "Always reduce probability fractions to simplest form: 20/36 = (20÷4) / (36÷4) = 5/9."
             }
           ]
+        }
+      ]
+    },
+
+    // -------------------------------------------------------------
+    // Additional Practice Questions (In-Text)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_em_u8_add_practice",
+      title: "Additional Practice Questions (In-Text)",
+      author: "Unit 8: Statistics and Probability - Extra Exam Practice",
+      questions: [
+        {
+          id: "m_em_u8_add_q1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u8_add_practice",
+          q: "A coin is tossed once. Find the probability of getting a head.",
+          ans: `<div style="line-height:1.8;">
+            <b>Step 1: Write the sample space:</b><br>
+            When a fair coin is tossed once:<br>
+            Sample space S = {H, T}<br>
+            Total number of outcomes n(S) = 2<br><br>
+            <b>Step 2: Define favourable event:</b><br>
+            Let E be the event of getting a head.<br>
+            E = {H} ⇒ n(E) = 1<br><br>
+            <b>Step 3: Calculate probability:</b><br>
+            P(E) = n(E) / n(S) = <b>1 / 2</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Probability of getting a head P(E) = 1/2
+            </div>
+          </div>`,
+          audioScript: "Sample space when tossing a coin: S equals set of H and T. Total outcomes n of S equals 2. Event of getting a head E equals set of H, so n of E equals 1. Probability P of E equals n of E over n of S, which equals 1 over 2."
+        },
+        {
+          id: "m_em_u8_add_q2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u8_add_practice",
+          q: "A fair die is rolled once. Find the probability of getting a number greater than 4.",
+          ans: `<div style="line-height:1.8;">
+            <b>Step 1: Write the sample space:</b><br>
+            When a die is rolled once:<br>
+            Sample space S = {1, 2, 3, 4, 5, 6}<br>
+            Total number of outcomes n(S) = 6<br><br>
+            <b>Step 2: Define favourable event:</b><br>
+            Let E be the event of getting a number strictly greater than 4.<br>
+            Numbers greater than 4 are 5 and 6.<br>
+            E = {5, 6} ⇒ n(E) = 2<br><br>
+            <b>Step 3: Calculate probability:</b><br>
+            P(E) = n(E) / n(S) = 2 / 6 = <b>1 / 3</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Probability of getting a number > 4 = 1/3
+            </div>
+          </div>`,
+          audioScript: "When a die is rolled, sample space S equals 1, 2, 3, 4, 5, 6. Total outcomes n of S equals 6. Event E of getting a number greater than 4 equals set of 5 and 6, so n of E equals 2. Probability equals 2 over 6, which simplifies to 1 over 3."
+        },
+        {
+          id: "m_em_u8_add_q3",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u8_add_practice",
+          q: `Find the arithmetic mean of the following frequency distribution:<br>
+            <div style="overflow-x:auto; margin:8px 0;">
+              <table style="border-collapse:collapse; text-align:center; min-width:240px; font-size:13px;">
+                <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
+                  <th style="padding:6px 12px; border:1px solid #cbd5e1;">x</th>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">10</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">20</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">30</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">40</td>
+                </tr>
+                <tr style="background:#e0f2fe; border:1px solid #cbd5e1; font-weight:700;">
+                  <th style="padding:6px 12px; border:1px solid #cbd5e1; color:#0369a1;">f</th>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">2</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">3</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">4</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">1</td>
+                </tr>
+              </table>
+            </div>`,
+          ans: `<div style="line-height:1.8;">
+            <b>Step 1: Construct the calculation table:</b><br>
+            <div style="overflow-x:auto; margin:8px 0;">
+              <table style="width:100%; border-collapse:collapse; text-align:center; font-size:13px;">
+                <tr style="background:#f8fafc; border:1px solid #cbd5e1; font-weight:700;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1;">x</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1;">f</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1;">fx</th>
+                </tr>
+                <tr style="border:1px solid #cbd5e1;">
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">10</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">2</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">10 × 2 = 20</td>
+                </tr>
+                <tr style="border:1px solid #cbd5e1;">
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">20</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">3</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">20 × 3 = 60</td>
+                </tr>
+                <tr style="border:1px solid #cbd5e1;">
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">30</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">4</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">30 × 4 = 120</td>
+                </tr>
+                <tr style="border:1px solid #cbd5e1;">
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">40</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">1</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">40 × 1 = 40</td>
+                </tr>
+                <tr style="background:#f0fdf4; border:1px solid #16a34a; font-weight:700; color:#166534;">
+                  <td style="padding:6px 10px; border:1px solid #16a34a;">Total</td>
+                  <td style="padding:6px 10px; border:1px solid #16a34a;">Σf = 10</td>
+                  <td style="padding:6px 10px; border:1px solid #16a34a;">Σfx = 240</td>
+                </tr>
+              </table>
+            </div><br>
+            <b>Step 2: Apply the formula for Arithmetic Mean:</b><br>
+            x̄ = Σfx / Σf<br>
+            x̄ = 240 / 10 = <b>24</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Arithmetic Mean (x̄) = 24
+            </div>
+          </div>`,
+          audioScript: "Table calculations: For x equals 10, f equals 2, fx equals 20. For x equals 20, f equals 3, fx equals 60. For x equals 30, f equals 4, fx equals 120. For x equals 40, f equals 1, fx equals 40. Total frequency sigma f equals 10. Total sigma fx equals 240. Arithmetic mean equals sigma fx over sigma f, which is 240 over 10, giving 24."
         }
       ]
     }

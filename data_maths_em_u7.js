@@ -1,4 +1,4 @@
-﻿// 10th Standard Mathematics - Unit 7: Mensuration (English Medium)
+// 10th Standard Mathematics - Unit 7: Mensuration (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_7_DATA = {
@@ -45,9 +45,10 @@ const MATHS_EM_UNIT_7_DATA = {
         },
         {
           id: "m_em_7_1_3",
+          examYear: "2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important 2M",
+          examTag: "Public Exam 2022 (2M)",
           isImportant: true,
           q: "A cylindrical drum has a height of 20 cm and base radius of 14 cm. Find its curved surface area and total surface area.",
           ans: `<div style="line-height:1.8;">
@@ -60,6 +61,8 @@ const MATHS_EM_UNIT_7_DATA = {
         },
         {
           id: "m_em_7_1_4",
+          examYear: "2024",
+          examTag: "Public Exam 2024 (2M)",
           type: "2m",
           mark: "2 Marks",
           q: "Find the total surface area of a hemisphere of radius 7 cm.",
@@ -71,9 +74,10 @@ const MATHS_EM_UNIT_7_DATA = {
         },
         {
           id: "m_em_7_1_5",
+          examYear: "2024, 2023",
           type: "5m",
           mark: "5 Marks",
-          examTag: "Top Board Exam Question",
+          examTag: "Public Exam (5M)",
           isImportant: true,
           q: "A solid toy is in the form of a hemisphere surmounted by a right circular cone. The height of the cone is 4 cm and the diameter of the base is 6 cm. Find the volume of the toy. (Take π = 3.14)",
           diagramCaption: "Geometrical shape of the solid toy: Lower hemisphere (r = 3 cm) surmounted by right circular cone (h = 4 cm, r = 3 cm)",
@@ -253,9 +257,10 @@ const MATHS_EM_UNIT_7_DATA = {
         },
         {
           id: "m_em_7_2_3",
+          examYear: "2023",
           type: "5m",
           mark: "5 Marks",
-          examTag: "5 Mark Exam Model",
+          examTag: "Public Exam 2023 (5M)",
           isImportant: true,
           q: "A tent is in the shape of a cylinder surmounted by a conical top. If the height and diameter of the cylindrical part are 2.1 m and 4 m respectively, and the slant height of the top is 2.8 m, find the area of the canvas used for making the tent.",
           diagramCaption: "Structure of the tent: Cylindrical base (h = 2.1 m, r = 2 m) surmounted by conical roof (l = 2.8 m). Open floor base.",
@@ -430,10 +435,12 @@ const MATHS_EM_UNIT_7_DATA = {
         },
         {
           id: "m_em_7_3_2",
+          examYear: "2023, 2022",
           videoUrl: "https://youtu.be/vVKlLCox73o",
           type: "5m",
           mark: "5 Marks",
-          examTag: "Board Exam Model (Example 7.29)",
+          examTag: "Public Exam 5M (Q.42 Compulsory)",
+          isCompulsory: true,
           isImportant: true,
           q: "A metallic sphere of radius 16 cm is melted and recast into small spheres each of radius 2 cm. How many small spheres can be obtained?",
                     blackboard: {
@@ -649,6 +656,93 @@ diagramCaption: "Recasting of Solid Metallic Sphere: Large Sphere (R = 16 cm) me
               correction: "Box the final answer as: 'Number of small spheres = 512'."
             }
           ]
+        }
+      ]
+    },
+
+    // -------------------------------------------------------------
+    // Additional Practice Questions (In-Text)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_em_u7_add_practice",
+      title: "Additional Practice Questions (In-Text)",
+      author: "Unit 7: Mensuration - Extra Exam Practice",
+      questions: [
+        {
+          id: "m_em_u7_add_q1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u7_add_practice",
+          q: "Find the curved surface area (CSA) of a right circular cylinder whose radius is 7 cm and height is 10 cm. (Take π = 22/7)",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b><br>
+            • Radius r = 7 cm<br>
+            • Height h = 10 cm<br><br>
+            <b>Formula for Curved Surface Area of Cylinder:</b><br>
+            CSA = 2πrh<br><br>
+            <b>Substitute values:</b><br>
+            CSA = 2 × (22 / 7) × 7 × 10<br>
+            CSA = 2 × 22 × 10<br>
+            <b>CSA = 440 cm²</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Curved Surface Area (CSA) = 440 cm²
+            </div>
+          </div>`,
+          audioScript: "Given radius r equals 7 cm, height h equals 10 cm. Formula for curved surface area of cylinder is 2 pi r h. Substituting gives 2 times 22 over 7 times 7 times 10, which equals 2 times 22 times 10, giving 440 square centimeters."
+        },
+        {
+          id: "m_em_u7_add_q2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u7_add_practice",
+          q: "Find the volume of a right circular cone whose radius is 3 cm and height is 7 cm. (Take π = 22/7)",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b><br>
+            • Radius r = 3 cm<br>
+            • Height h = 7 cm<br><br>
+            <b>Formula for Volume of Cone:</b><br>
+            V = (1 / 3) π r² h<br><br>
+            <b>Substitute values:</b><br>
+            V = (1 / 3) × (22 / 7) × 3² × 7<br>
+            V = (1 / 3) × 22 × 9<br>
+            V = 22 × 3 = <b>66 cm³</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Volume of Cone = 66 cm³
+            </div>
+          </div>`,
+          audioScript: "Given radius r equals 3 cm, height h equals 7 cm. Volume of cone equals 1 over 3 pi r squared h. Substituting gives 1 over 3 times 22 over 7 times 9 times 7, which simplifies to 22 times 3, giving 66 cubic centimeters."
+        },
+        {
+          id: "m_em_u7_add_q3",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u7_add_practice",
+          q: "A solid sphere has a radius of 6 cm. Find its: (i) Total Surface Area, and (ii) Volume. (Take π = 22/7)",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b> Radius of solid sphere r = 6 cm<br><br>
+            <b>(i) Total Surface Area (TSA) of Sphere:</b><br>
+            Formula: TSA = 4πr²<br>
+            TSA = 4 × (22 / 7) × 6²<br>
+            TSA = 4 × (22 / 7) × 36<br>
+            TSA = 3168 / 7 ≈ <b>452.57 cm²</b><br><br>
+            <b>(ii) Volume (V) of Sphere:</b><br>
+            Formula: V = (4 / 3) π r³<br>
+            V = (4 / 3) × (22 / 7) × 6³<br>
+            V = (4 / 3) × (22 / 7) × 216<br>
+            V = 4 × (22 / 7) × 72<br>
+            V = 6336 / 7 ≈ <b>905.14 cm³</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              (i) Total Surface Area = 452.57 cm² (approx.)<br>
+              (ii) Volume = 905.14 cm³ (approx.)
+            </div>
+          </div>`,
+          audioScript: "Radius of sphere r equals 6 cm. Part 1: Total surface area equals 4 pi r squared. 4 times 22 over 7 times 36 equals 3168 over 7, approximately 452.57 square centimeters. Part 2: Volume equals 4 over 3 pi r cubed. 4 over 3 times 22 over 7 times 216 equals 6336 over 7, approximately 905.14 cubic centimeters."
         }
       ]
     }

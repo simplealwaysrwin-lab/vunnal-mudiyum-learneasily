@@ -1,4 +1,4 @@
-﻿// 10th Standard Mathematics - Unit 4: Geometry (English Medium)
+// 10th Standard Mathematics - Unit 4: Geometry (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_4_DATA = {
@@ -1581,6 +1581,121 @@ const MATHS_EM_UNIT_4_DATA = {
             </div>
           </div>`,
           explanation: "Constructed pair of tangents PA and PB from external point P = 5 cm to 3 cm radius circle. Tangent length = 4 cm."
+        }
+      ]
+    },
+
+    // -------------------------------------------------------------
+    // Additional Practice Questions (In-Text)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_em_u4_add_practice",
+      title: "Additional Practice Questions (In-Text)",
+      author: "Unit 4: Geometry - Extra Exam Practice",
+      questions: [
+        {
+          id: "m_em_u4_add_q1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u4_add_practice",
+          q: "Two similar triangles have corresponding sides in the ratio 3 : 5. Find the ratio of their areas.",
+          ans: `<div style="line-height:1.8;">
+            <b>Theorem on Similar Triangles:</b><br>
+            The ratio of the areas of two similar triangles is equal to the ratio of the squares of their corresponding sides.<br><br>
+            <b>Given:</b><br>
+            Ratio of corresponding sides = s₁ : s₂ = 3 : 5<br><br>
+            <b>Calculation:</b><br>
+            Area(Δ₁) / Area(Δ₂) = (s₁ / s₂)²<br>
+            Area(Δ₁) / Area(Δ₂) = (3 / 5)² = <b>9 / 25</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Ratio of their areas = 9 : 25
+            </div>
+          </div>`,
+          audioScript: "Theorem: The ratio of the areas of two similar triangles equals the ratio of the squares of their corresponding sides. Given sides ratio is 3 to 5. Therefore, area ratio equals 3 over 5 squared, which equals 9 over 25. The ratio of their areas is 9 to 25."
+        },
+        {
+          id: "m_em_u4_add_q2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u4_add_practice",
+          q: "A tangent is drawn to a circle at point P. The radius OP is 7 cm. Find the angle between OP and the tangent line PT.",
+          ans: `<div style="line-height:1.8;">
+            <div style="text-align:center; margin:10px 0;">
+              <svg width="240" height="150" viewBox="0 0 240 150" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px;">
+                <!-- Circle -->
+                <circle cx="80" cy="75" r="50" fill="none" stroke="#2563eb" stroke-width="2.5" />
+                <!-- Center O -->
+                <circle cx="80" cy="75" r="3.5" fill="#1e40af" />
+                <text x="65" y="70" font-size="13" font-weight="700" fill="#1e40af">O</text>
+                <!-- Radius OP -->
+                <line x1="80" y1="75" x2="130" y2="75" stroke="#16a34a" stroke-width="2.5" />
+                <text x="94" y="68" font-size="11" font-weight="700" fill="#166534">r = 7 cm</text>
+                <!-- Point P -->
+                <circle cx="130" cy="75" r="3.5" fill="#dc2626" />
+                <text x="135" y="70" font-size="13" font-weight="700" fill="#dc2626">P</text>
+                <!-- Tangent PT -->
+                <line x1="130" y1="20" x2="130" y2="130" stroke="#7c3aed" stroke-width="2.5" />
+                <text x="138" y="30" font-size="13" font-weight="700" fill="#7c3aed">T</text>
+                <!-- Right angle symbol at P -->
+                <rect x="120" y="65" width="10" height="10" fill="none" stroke="#dc2626" stroke-width="1.5" />
+                <text x="145" y="100" font-size="12" font-weight="700" fill="#dc2626">90°</text>
+              </svg>
+            </div>
+            <b>Theorem:</b><br>
+            The tangent at any point of a circle is perpendicular to the radius drawn through the point of contact.<br><br>
+            <b>Conclusion:</b><br>
+            Radius OP ⊥ Tangent PT<br>
+            Therefore, ∠OPT = <b>90°</b>.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Angle between OP and the tangent line = 90°
+            </div>
+          </div>`,
+          audioScript: "Theorem: The tangent at any point of a circle is perpendicular to the radius through the point of contact. Therefore, OP is perpendicular to PT. The angle between OP and the tangent is 90 degrees."
+        },
+        {
+          id: "m_em_u4_add_q3",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u4_add_practice",
+          q: "In a right-angled triangle ABC, ∠B = 90°, AB = 6 cm and BC = 8 cm. Find AC and the area of the triangle.",
+          ans: `<div style="line-height:1.8;">
+            <div style="text-align:center; margin:10px 0;">
+              <svg width="220" height="150" viewBox="0 0 220 150" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px;">
+                <!-- Triangle ABC: B=(40,120), C=(180,120), A=(40,30) -->
+                <polygon points="40,120 180,120 40,30" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" />
+                <!-- Right angle symbol at B -->
+                <rect x="40" y="106" width="14" height="14" fill="none" stroke="#dc2626" stroke-width="1.5" />
+                <!-- Labels -->
+                <text x="25" y="25" font-size="13" font-weight="700" fill="#1e40af">A</text>
+                <text x="20" y="132" font-size="13" font-weight="700" fill="#dc2626">B (90°)</text>
+                <text x="185" y="132" font-size="13" font-weight="700" fill="#1e40af">C</text>
+                <!-- Dimensions -->
+                <text x="10" y="80" font-size="11" font-weight="700" fill="#1e40af">AB = 6 cm</text>
+                <text x="95" y="138" font-size="11" font-weight="700" fill="#1e40af">BC = 8 cm</text>
+                <text x="115" y="65" font-size="12" font-weight="800" fill="#15803d">AC = ?</text>
+              </svg>
+            </div>
+            <b>Part 1: Find hypotenuse AC using Pythagoras Theorem:</b><br>
+            In right ΔABC with ∠B = 90°:<br>
+            AC² = AB² + BC²<br>
+            AC² = 6² + 8²<br>
+            AC² = 36 + 64 = 100<br>
+            AC = √100 = <b>10 cm</b><br><br>
+            <b>Part 2: Find the Area of the Triangle:</b><br>
+            Area = (1 / 2) × base × height<br>
+            Area = (1 / 2) × BC × AB<br>
+            Area = (1 / 2) × 8 × 6 = 4 × 6 = <b>24 cm²</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Hypotenuse AC = 10 cm &nbsp;|&nbsp; Area of ΔABC = 24 cm²
+            </div>
+          </div>`,
+          audioScript: "Right angled triangle ABC with angle B equals 90 degrees, AB equals 6 cm, BC equals 8 cm. Part 1: By Pythagoras theorem, AC squared equals AB squared plus BC squared, which equals 6 squared plus 8 squared, giving 36 plus 64 equals 100. Thus AC equals square root of 100, which is 10 cm. Part 2: Area equals half base times height, which is half times 8 times 6, giving 24 square centimeters."
         }
       ]
     }

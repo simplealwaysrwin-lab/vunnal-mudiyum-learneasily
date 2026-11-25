@@ -1,4 +1,4 @@
-﻿// Class 10 Mathematics - Unit 2: Numbers and Sequences
+// Class 10 Mathematics - Unit 2: Numbers and Sequences
 // Tamil Nadu State Board Samacheer Kalvi Digital Guide (English Medium)
 // Standard Public Exam Model Solutions, Blackboard Steps & Formulas
 
@@ -1035,6 +1035,91 @@ const MATHS_EM_UNIT_2_DATA = {
             <b>Answer: The sum is 8215.</b>
           </div>`,
           explanation: "Calculate sum of first 30 squares minus sum of first 15 squares using Σn² = n(n+1)(2n+1)/6."
+        }
+      ]
+    },
+
+    // -------------------------------------------------------------
+    // Additional Practice Questions (In-Text)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_em_u2_add_practice",
+      title: "Additional Practice Questions (In-Text)",
+      author: "Unit 2: Numbers and Sequences - Extra Exam Practice",
+      questions: [
+        {
+          id: "m_em_u2_add_q1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u2_add_practice",
+          q: "Find the HCF of 96 and 144 using the Euclidean Division Algorithm.",
+          ans: `<div style="line-height:1.8;">
+            <b>Euclid's Division Lemma:</b> a = bq + r, where 0 ≤ r < b.<br><br>
+            <b>Step 1:</b> Divide the larger number 144 by 96:<br>
+            144 = 96 × 1 + 48 &nbsp;(Remainder r = 48 ≠ 0)<br><br>
+            <b>Step 2:</b> Apply the lemma to divisor 96 and remainder 48:<br>
+            96 = 48 × 2 + 0 &nbsp;(Remainder r = 0)<br><br>
+            Since the remainder is 0, the divisor at this step is the HCF.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              HCF(96, 144) = 48
+            </div>
+          </div>`,
+          audioScript: "Euclidean Division Algorithm: a equals bq plus r. Step 1: Divide 144 by 96. 144 equals 96 times 1 plus 48. Step 2: Divide 96 by 48. 96 equals 48 times 2 plus 0. Since the remainder is 0, the HCF is 48."
+        },
+        {
+          id: "m_em_u2_add_q2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u2_add_practice",
+          q: "Find the 15th term of the Arithmetic Progression (A.P.): 7, 11, 15, 19, ...",
+          ans: `<div style="line-height:1.8;">
+            <b>Given A.P.:</b> 7, 11, 15, 19, ...<br><br>
+            <b>Step 1: Identify terms:</b><br>
+            • First term a = 7<br>
+            • Common difference d = 11 - 7 = 4<br>
+            • Term number n = 15<br><br>
+            <b>Step 2: Formula:</b><br>
+            t<sub>n</sub> = a + (n - 1)d<br><br>
+            <b>Step 3: Substitute:</b><br>
+            t<sub>15</sub> = 7 + (15 - 1) × 4<br>
+            t<sub>15</sub> = 7 + 14 × 4<br>
+            t<sub>15</sub> = 7 + 56 = <b>63</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              15th term (t₁₅) = 63
+            </div>
+          </div>`,
+          audioScript: "Given arithmetic progression 7, 11, 15, 19. First term a equals 7, common difference d equals 4. Formula t sub n equals a plus n minus 1 times d. For n equals 15: t sub 15 equals 7 plus 14 times 4, which is 7 plus 56, giving 63."
+        },
+        {
+          id: "m_em_u2_add_q3",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u2_add_practice",
+          q: "Find the sum of the first 20 terms of the Arithmetic Progression: 3, 7, 11, 15, ...",
+          ans: `<div style="line-height:1.8;">
+            <b>Given A.P.:</b> 3, 7, 11, 15, ...<br><br>
+            <b>Step 1: Identify values:</b><br>
+            • First term a = 3<br>
+            • Common difference d = 7 - 3 = 4<br>
+            • Number of terms n = 20<br><br>
+            <b>Step 2: Sum Formula:</b><br>
+            S<sub>n</sub> = (n / 2) [2a + (n - 1)d]<br><br>
+            <b>Step 3: Substitute:</b><br>
+            S<sub>20</sub> = (20 / 2) [2(3) + (20 - 1) × 4]<br>
+            S<sub>20</sub> = 10 [6 + 19 × 4]<br>
+            S<sub>20</sub> = 10 [6 + 76]<br>
+            S<sub>20</sub> = 10 × 82 = <b>820</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Sum of first 20 terms (S₂₀) = 820
+            </div>
+          </div>`,
+          audioScript: "Given arithmetic progression 3, 7, 11, 15. First term a equals 3, common difference d equals 4, n equals 20. Sum formula S sub n equals n over 2 times bracket 2a plus n minus 1 times d bracket. S sub 20 equals 10 times bracket 6 plus 76 bracket, which is 10 times 82, giving 820."
         }
       ]
     }

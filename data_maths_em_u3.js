@@ -1,4 +1,4 @@
-﻿// 10th Standard Mathematics - Unit 3: Algebra (English Medium)
+// 10th Standard Mathematics - Unit 3: Algebra (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_3_DATA = {
@@ -665,6 +665,99 @@ const MATHS_EM_UNIT_3_DATA = {
             </div>
           </div>`,
           explanation: "Parabola y = x² + 3x - 4 intersects the line y = 0 at x = -4 and x = 1."
+        }
+      ]
+    },
+
+    // -------------------------------------------------------------
+    // Additional Practice Questions (In-Text)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_em_u3_add_practice",
+      title: "Additional Practice Questions (In-Text)",
+      author: "Unit 3: Algebra - Extra Exam Practice",
+      questions: [
+        {
+          id: "m_em_u3_add_q1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u3_add_practice",
+          q: "Find the roots of the equation: x² - 9 = 0.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given equation:</b> x² - 9 = 0<br><br>
+            <b>Method: Difference of Two Squares:</b><br>
+            Formula: a² - b² = (a - b)(a + b)<br><br>
+            x² - 3² = 0<br>
+            (x - 3)(x + 3) = 0<br><br>
+            <b>Equate each factor to zero:</b><br>
+            • x - 3 = 0 &nbsp;⇒&nbsp; <b>x = 3</b><br>
+            • x + 3 = 0 &nbsp;⇒&nbsp; <b>x = -3</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Roots of the equation: x = ±3 &nbsp;(x = 3, -3)
+            </div>
+          </div>`,
+          audioScript: "Given equation x squared minus 9 equals 0. Using difference of squares formula, x squared minus 3 squared equals 0, giving x minus 3 times x plus 3 equals 0. Either x minus 3 equals 0 which gives x equals 3, or x plus 3 equals 0 which gives x equals minus 3. Final answer: x equals plus or minus 3."
+        },
+        {
+          id: "m_em_u3_add_q2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u3_add_practice",
+          q: "Solve the quadratic equation: 2x² - 7x + 3 = 0.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given equation:</b> 2x² - 7x + 3 = 0<br><br>
+            <b>Step 1: Factorise by splitting the middle term:</b><br>
+            • Product = a × c = 2 × 3 = 6<br>
+            • Sum = b = -7<br>
+            • Suitable factors are -6 and -1<br><br>
+            2x² - 6x - x + 3 = 0<br>
+            2x(x - 3) - 1(x - 3) = 0<br>
+            (2x - 1)(x - 3) = 0<br><br>
+            <b>Step 2: Solve for x:</b><br>
+            • 2x - 1 = 0 &nbsp;⇒&nbsp; 2x = 1 &nbsp;⇒&nbsp; <b>x = 1/2</b><br>
+            • x - 3 = 0 &nbsp;⇒&nbsp; <b>x = 3</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Roots of the quadratic equation: x = 1/2, 3
+            </div>
+          </div>`,
+          audioScript: "Quadratic equation: 2x squared minus 7x plus 3 equals 0. Splitting the middle term: 2x squared minus 6x minus x plus 3 equals 0. Factoring gives 2x minus 1 times x minus 3 equals 0. Therefore, x equals 1 over 2, or x equals 3. Solution set is x equals half and 3."
+        },
+        {
+          id: "m_em_u3_add_q3",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u3_add_practice",
+          q: "The sum of two numbers is 15 and their product is 54. Find the numbers.",
+          ans: `<div style="line-height:1.8;">
+            <b>Step 1: Assign variables:</b><br>
+            Let the two numbers be x and y.<br><br>
+            <b>Step 2: Form equations from given conditions:</b><br>
+            1. x + y = 15 &nbsp;⇒&nbsp; y = 15 - x<br>
+            2. x · y = 54<br><br>
+            <b>Step 3: Substitute equation (1) into (2):</b><br>
+            x(15 - x) = 54<br>
+            15x - x² = 54<br>
+            x² - 15x + 54 = 0<br><br>
+            <b>Step 4: Factorise the quadratic equation:</b><br>
+            • Product = 54, Sum = -15 ⇒ Factors are -6 and -9<br>
+            x² - 6x - 9x + 54 = 0<br>
+            x(x - 6) - 9(x - 6) = 0<br>
+            (x - 6)(x - 9) = 0<br>
+            x = 6 &nbsp;or&nbsp; x = 9<br><br>
+            <b>Step 5: Find the numbers:</b><br>
+            • If x = 6, y = 15 - 6 = 9<br>
+            • If x = 9, y = 15 - 9 = 6<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              The required two numbers are 6 and 9.
+            </div>
+          </div>`,
+          audioScript: "Let the two numbers be x and y. Condition 1: x plus y equals 15, so y equals 15 minus x. Condition 2: x times y equals 54. Substituting y gives x times 15 minus x equals 54, resulting in quadratic equation x squared minus 15x plus 54 equals 0. Factorising gives x minus 6 times x minus 9 equals 0. Thus x equals 6 or 9. The two numbers are 6 and 9."
         }
       ]
     }

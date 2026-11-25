@@ -1,4 +1,4 @@
-﻿// 10-ஆம் வகுப்பு கணிதம் - அலகு 4: வடிவியல் (Geometry)
+// 10-ஆம் வகுப்பு கணிதம் - அலகு 4: வடிவியல் (Geometry)
 // தமிழ்நாடு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const MATHS_TM_UNIT_4_DATA = {
@@ -844,6 +844,120 @@ const MATHS_TM_UNIT_4_DATA = {
             </div>
           </div>`,
           ansTamil: "மையத்திலிருந்து 5 செ.மீ தொலைவில் உள்ள புள்ளியிலிருந்து வரையப்பட்ட இரு தொடுகோடுகளின் நீளம் PA = PB = 4 செ.மீ."
+        }
+      ]
+    },
+
+    // -------------------------------------------------------------
+    // கூடுதல் பயிற்சி வினாக்கள் (பாடப்பகுதி உள்வினாக்கள்)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_tm_u4_add_practice",
+      title: "கூடுதல் பயிற்சி வினாக்கள் (பாடப்பகுதி உள்வினாக்கள்)",
+      author: "அலகு 4: வடிவியல் - கூடுதல் தேர்வுப் பயிற்சி",
+      questions: [
+        {
+          id: "m_tm_u4_add_q1",
+          type: "2m",
+          mark: "2 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
+          sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_tm_u4_add_practice",
+          q: "இரு வடிவொத்த முக்கோணங்களின் ஒத்த பக்கங்களின் விகிதம் 3 : 5 எனில், அவற்றின் பரப்பளவுகளின் விகிதத்தைக் காண்க.",
+          ans: `<div style="line-height:1.8;">
+            <b>வடிவொத்த முக்கோணங்களின் தேற்றம்:</b><br>
+            இரு வடிவொத்த முக்கோணங்களின் பரப்பளவுகளின் விகிதமானது, அவற்றின் ஒத்த பக்கங்களின் வர்க்கங்களின் விகிதத்திற்குச் சமம்.<br><br>
+            <b>கொடுக்கப்பட்டவை:</b><br>
+            ஒத்த பக்கங்களின் விகிதம் = s₁ : s₂ = 3 : 5<br><br>
+            <b>கணக்கீடு:</b><br>
+            பரப்பளவு(Δ₁) / பரப்பளவு(Δ₂) = (s₁ / s₂)²<br>
+            பரப்பளவு(Δ₁) / பரப்பளவு(Δ₂) = (3 / 5)² = <b>9 / 25</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              அவற்றின் பரப்பளவுகளின் விகிதம் = 9 : 25
+            </div>
+          </div>`,
+          audioScript: "தேற்றம்: இரு வடிவொத்த முக்கோணங்களின் பரப்பளவுகளின் விகிதம் அவற்றின் ஒத்த பக்கங்களின் வர்க்கங்களின் விகிதத்திற்கு சமம். பக்கங்களின் விகிதம் 3 : 5. எனவே பரப்பளவுகளின் விகிதம் 3 கீழ் 5 முழுவதின் வர்க்கம், அதாவது 9 கீழ் 25. பரப்பளவுகளின் விகிதம் 9 : 25 ஆகும்."
+        },
+        {
+          id: "m_tm_u4_add_q2",
+          type: "2m",
+          mark: "2 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
+          sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_tm_u4_add_practice",
+          q: "வட்டத்தின் பரிதியிலுள்ள புள்ளி P-ல் ஒரு தொடுகோடு PT வரையப்படுகிறது. வட்டத்தின் ஆரம் OP = 7 செ.மீ எனில், ஆரம் OP மற்றும் தொடுகோடு PT ஆகியவற்றிற்கு இடைப்பட்ட கோணத்தைக் காண்க.",
+          ans: `<div style="line-height:1.8;">
+            <div style="text-align:center; margin:10px 0;">
+              <svg width="240" height="150" viewBox="0 0 240 150" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px;">
+                <!-- Circle -->
+                <circle cx="80" cy="75" r="50" fill="none" stroke="#2563eb" stroke-width="2.5" />
+                <!-- Center O -->
+                <circle cx="80" cy="75" r="3.5" fill="#1e40af" />
+                <text x="65" y="70" font-size="13" font-weight="700" fill="#1e40af">O</text>
+                <!-- Radius OP -->
+                <line x1="80" y1="75" x2="130" y2="75" stroke="#16a34a" stroke-width="2.5" />
+                <text x="94" y="68" font-size="11" font-weight="700" fill="#166534">ஆரம் = 7 செ.மீ</text>
+                <!-- Point P -->
+                <circle cx="130" cy="75" r="3.5" fill="#dc2626" />
+                <text x="135" y="70" font-size="13" font-weight="700" fill="#dc2626">P</text>
+                <!-- Tangent PT -->
+                <line x1="130" y1="20" x2="130" y2="130" stroke="#7c3aed" stroke-width="2.5" />
+                <text x="138" y="30" font-size="13" font-weight="700" fill="#7c3aed">T</text>
+                <!-- Right angle symbol at P -->
+                <rect x="120" y="65" width="10" height="10" fill="none" stroke="#dc2626" stroke-width="1.5" />
+                <text x="145" y="100" font-size="12" font-weight="700" fill="#dc2626">90°</text>
+              </svg>
+            </div>
+            <b>தொடுகோடு தேற்றம்:</b><br>
+            வட்டத்தின் தொடுபுள்ளியில் வரையப்படும் ஆரமானது தொடுகோட்டிற்குச் செங்குத்தாக அமையும்.<br><br>
+            <b>முடிவு:</b><br>
+            ஆரம் OP ⊥ தொடுகோடு PT<br>
+            எனவே, ∠OPT = <b>90°</b>.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              OP மற்றும் தொடுகோட்டிற்கு இடைப்பட்ட கோணம் = 90°
+            </div>
+          </div>`,
+          audioScript: "தேற்றம்: வட்டத்தின் தொடுபுள்ளியில் வரையப்படும் ஆரம் தொடுகோட்டிற்குச் செங்குத்தாகும். எனவே ஆரம் OP செங்குத்து தொடுகோடு PT. OP மற்றும் தொடுகோட்டிற்கு இடைப்பட்ட கோணம் 90 டிகிரி ஆகும்."
+        },
+        {
+          id: "m_tm_u4_add_q3",
+          type: "5m",
+          mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
+          sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_tm_u4_add_practice",
+          q: "செங்கோண முக்கோணம் ABC-ல் ∠B = 90°, AB = 6 செ.மீ மற்றும் BC = 8 செ.மீ எனில், கர்ணம் AC-ன் நீளம் மற்றும் முக்கோணத்தின் பரப்பளவைக் காண்க.",
+          ans: `<div style="line-height:1.8;">
+            <div style="text-align:center; margin:10px 0;">
+              <svg width="220" height="150" viewBox="0 0 220 150" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px;">
+                <!-- Triangle ABC -->
+                <polygon points="40,120 180,120 40,30" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" />
+                <!-- Right angle at B -->
+                <rect x="40" y="106" width="14" height="14" fill="none" stroke="#dc2626" stroke-width="1.5" />
+                <!-- Labels -->
+                <text x="25" y="25" font-size="13" font-weight="700" fill="#1e40af">A</text>
+                <text x="20" y="132" font-size="13" font-weight="700" fill="#dc2626">B (90°)</text>
+                <text x="185" y="132" font-size="13" font-weight="700" fill="#1e40af">C</text>
+                <text x="6" y="80" font-size="11" font-weight="700" fill="#1e40af">6 செ.மீ</text>
+                <text x="95" y="138" font-size="11" font-weight="700" fill="#1e40af">8 செ.மீ</text>
+                <text x="115" y="65" font-size="12" font-weight="800" fill="#15803d">AC = ?</text>
+              </svg>
+            </div>
+            <b>படி 1: பிதாகரஸ் தேற்றத்தைப் பயன்படுத்திக் கர்ணம் AC-ஐக் காண்க:</b><br>
+            செங்கோண ΔABC-ல் ∠B = 90°:<br>
+            AC² = AB² + BC²<br>
+            AC² = 6² + 8²<br>
+            AC² = 36 + 64 = 100<br>
+            AC = √100 = <b>10 செ.மீ</b><br><br>
+            <b>படி 2: முக்கோணத்தின் பரப்பளவைக் காண்க:</b><br>
+            பரப்பளவு = (1 / 2) × அடிப்பக்கம் × உயரம்<br>
+            பரப்பளவு = (1 / 2) × BC × AB<br>
+            பரப்பளவு = (1 / 2) × 8 × 6 = 4 × 6 = <b>24 செ.மீ²</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              கர்ணம் AC = 10 செ.மீ &nbsp;|&nbsp; முக்கோணத்தின் பரப்பளவு = 24 செ.மீ²
+            </div>
+          </div>`,
+          audioScript: "செங்கோண முக்கோணம் ABC-ல் கோணம் B சமம் 90 டிகிரி, AB சமம் 6 சென்டிமீட்டர், BC சமம் 8 சென்டிமீட்டர். படி 1: பிதாகரஸ் தேற்றப்படி AC squared சமம் AB squared plus BC squared. 6 squared கூட்டல் 8 squared சமம் 36 கூட்டல் 64 சமம் 100. எனவே கர்ணம் AC சமம் 10 சென்டிமீட்டர். படி 2: பரப்பளவு சமம் அரை பெருக்கல் அடிப்பக்கம் பெருக்கல் உயரம், அதாவது அரை பெருக்கல் 8 பெருக்கல் 6 சமம் 24 சதுர சென்டிமீட்டர்."
         }
       ]
     }

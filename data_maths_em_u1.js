@@ -1,4 +1,4 @@
-﻿// Class 10 Mathematics - Unit 1: Relations and Functions
+// Class 10 Mathematics - Unit 1: Relations and Functions
 // Tamil Nadu State Board Samacheer Kalvi Digital Guide (English Medium)
 // Note: English Medium is strictly in pure English without any Tamil words.
 
@@ -1959,6 +1959,120 @@ const MATHS_EM_UNIT_1_DATA = {
           options: ["(A) a linear function", "(B) a cubic function", "(C) a reciprocal function", "(D) a quadratic function"],
           ans: "<b>(D) a quadratic function</b><br><b>Explanation:</b> (x + 1)³ = x³ + 3x² + 3x + 1<br>(x - 1)³ = x³ - 3x² + 3x - 1<br>Subtracting gives: f(x) = 6x² + 2. Since the highest degree is 2, it is a quadratic function.",
           explanation: "The cubic terms cancel out leaving degree 2."
+        }
+      ]
+    },
+
+    // -------------------------------------------------------------
+    // Additional Practice Questions (In-Text)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_em_u1_add_practice",
+      title: "Additional Practice Questions (In-Text)",
+      author: "Unit 1: Relations and Functions - Extra Exam Practice",
+      questions: [
+        {
+          id: "m_em_u1_add_q1",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u1_add_practice",
+          q: "If f(x) = 3x - 5, find the values of f(4) and f(-2).",
+          ans: `<div style="line-height:1.8;">
+            <b>Given function:</b> f(x) = 3x - 5<br><br>
+            <b>Step 1: Substitute x = 4:</b><br>
+            f(4) = 3(4) - 5<br>
+            f(4) = 12 - 5 = <b>7</b><br><br>
+            <b>Step 2: Substitute x = -2:</b><br>
+            f(-2) = 3(-2) - 5<br>
+            f(-2) = -6 - 5 = <b>-11</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Final Answer: f(4) = 7 &nbsp;and&nbsp; f(-2) = -11
+            </div>
+          </div>`,
+          audioScript: "Given function f of x equals 3x minus 5. Step 1: Substitute x equals 4. f of 4 equals 3 times 4 minus 5, which equals 12 minus 5, giving 7. Step 2: Substitute x equals minus 2. f of minus 2 equals 3 times minus 2 minus 5, which equals minus 6 minus 5, giving minus 11. Final answer: f of 4 is 7 and f of minus 2 is minus 11."
+        },
+        {
+          id: "m_em_u1_add_q2",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u1_add_practice",
+          q: "If A = {1, 2, 3, 4} and B = {2, 4, 6, 8}, and the function f: A → B is defined by f(x) = 2x, find the range of f.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b><br>
+            • Domain A = {1, 2, 3, 4}<br>
+            • Co-domain B = {2, 4, 6, 8}<br>
+            • Rule: f(x) = 2x<br><br>
+            <b>Step 1: Find the images of each element in domain A:</b><br>
+            • f(1) = 2(1) = 2<br>
+            • f(2) = 2(2) = 4<br>
+            • f(3) = 2(3) = 6<br>
+            • f(4) = 2(4) = 8<br><br>
+            <b>Step 2: Write the Range:</b><br>
+            The range is the set of all images.<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Range of f = {2, 4, 6, 8}
+            </div>
+          </div>`,
+          audioScript: "Domain A equals set of 1, 2, 3, 4. Co-domain B equals set of 2, 4, 6, 8. Rule is f of x equals 2x. Step 1: Find the images. f of 1 equals 2, f of 2 equals 4, f of 3 equals 6, and f of 4 equals 8. Step 2: The range is the set of all images. Therefore, Range of f equals set of 2, 4, 6, 8."
+        },
+        {
+          id: "m_em_u1_add_q3",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u1_add_practice",
+          q: "If f(x) = x² + 2x - 3, find the values of x for which f(x) = 0.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b> f(x) = x² + 2x - 3<br><br>
+            <b>Step 1: Set f(x) = 0:</b><br>
+            x² + 2x - 3 = 0<br><br>
+            <b>Step 2: Factorise the quadratic expression:</b><br>
+            Product = -3, Sum = +2 ⇒ Factors are +3 and -1<br>
+            x² + 3x - x - 3 = 0<br>
+            x(x + 3) - 1(x + 3) = 0<br>
+            (x + 3)(x - 1) = 0<br><br>
+            <b>Step 3: Solve for x:</b><br>
+            x + 3 = 0 &nbsp;⇒&nbsp; x = -3<br>
+            x - 1 = 0 &nbsp;⇒&nbsp; x = 1<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Values of x = {-3, 1}
+            </div>
+          </div>`,
+          audioScript: "Given f of x equals x squared plus 2x minus 3. Step 1: Set f of x equals 0. x squared plus 2x minus 3 equals 0. Step 2: Factorise to get x plus 3 times x minus 1 equals 0. Step 3: Either x plus 3 equals 0 giving x equals minus 3, or x minus 1 equals 0 giving x equals 1. Final answer: x equals minus 3 and 1."
+        },
+        {
+          id: "m_em_u1_add_q4",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u1_add_practice",
+          q: "Let A = {1, 2, 3} and B = {2, 4}. Find:<br>(i) A × B<br>(ii) B × A<br>(iii) n(A × B)",
+          ans: `<div style="line-height:1.8;">
+            <b>Given sets:</b><br>
+            A = {1, 2, 3} &nbsp;⇒&nbsp; n(A) = 3<br>
+            B = {2, 4} &nbsp;⇒&nbsp; n(B) = 2<br><br>
+            <b>(i) Cartesian Product A × B:</b><br>
+            Form all ordered pairs (a, b) where a ∈ A and b ∈ B:<br>
+            <b>A × B = {(1, 2), (1, 4), (2, 2), (2, 4), (3, 2), (3, 4)}</b><br><br>
+            <b>(ii) Cartesian Product B × A:</b><br>
+            Form all ordered pairs (b, a) where b ∈ B and a ∈ A:<br>
+            <b>B × A = {(2, 1), (2, 2), (2, 3), (4, 1), (4, 2), (4, 3)}</b><br><br>
+            <b>(iii) Number of elements n(A × B):</b><br>
+            Formula: n(A × B) = n(A) × n(B)<br>
+            n(A × B) = 3 × 2 = <b>6</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              (i) A × B = {(1, 2), (1, 4), (2, 2), (2, 4), (3, 2), (3, 4)}<br>
+              (ii) B × A = {(2, 1), (2, 2), (2, 3), (4, 1), (4, 2), (4, 3)}<br>
+              (iii) n(A × B) = 6
+            </div>
+          </div>`,
+          audioScript: "Given set A equals 1, 2, 3 and set B equals 2, 4. Part 1: Cartesian product A cross B equals set of ordered pairs (1, 2), (1, 4), (2, 2), (2, 4), (3, 2), and (3, 4). Part 2: B cross A equals set of ordered pairs (2, 1), (2, 2), (2, 3), (4, 1), (4, 2), and (4, 3). Part 3: Number of elements n of A cross B equals n of A multiplied by n of B, which is 3 times 2, giving 6."
         }
       ]
     }

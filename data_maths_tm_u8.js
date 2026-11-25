@@ -1,4 +1,4 @@
-﻿// 10-ஆம் வகுப்பு கணிதம் - அலகு 8: புள்ளியியலும் நிகழ்தகவும் (Statistics and Probability)
+// 10-ஆம் வகுப்பு கணிதம் - அலகு 8: புள்ளியியலும் நிகழ்தகவும் (Statistics and Probability)
 // தமிழ்நாடு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const MATHS_TM_UNIT_8_DATA = {
@@ -46,9 +46,10 @@ const MATHS_TM_UNIT_8_DATA = {
         },
         {
           id: "m_tm_8_1_3",
+          examYear: "2023",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "முக்கிய வினா",
+          examTag: "அரசு பொதுத்தேர்வு 2023 (2M)",
           isImportant: true,
           diagramImg: (typeof window !== "undefined" && window.IMG_DICE_PART1_TM_B64) ? window.IMG_DICE_PART1_TM_B64 : "images/maths_two_dice_board_part1_tm.jpg",
           diagramCaption: "இரு பகடைகள் — நிகழ்தகவு கரும்பலகை விளக்கம் (Chalkboard Solution)",
@@ -63,6 +64,9 @@ const MATHS_TM_UNIT_8_DATA = {
         },
         {
           id: "m_tm_8_1_4",
+          examYear: "2024, 2022",
+          examTag: "அரசு பொதுத்தேர்வு (Q.28 கட்டாய வினா 2M)",
+          isCompulsory: true,
           type: "2m",
           mark: "2 மதிப்பெண்",
           q: "முதல் 21 இயல் எண்களின் திட்டவிலக்கத்தைக் காண்க.",
@@ -75,9 +79,10 @@ const MATHS_TM_UNIT_8_DATA = {
         },
         {
           id: "m_tm_8_1_5",
+          examYear: "2024",
           type: "5m",
           mark: "5 மதிப்பெண்",
-          examTag: "அரசு மாதிரி 5M",
+          examTag: "அரசு பொதுத்தேர்வு 2024 (5M)",
           isImportant: true,
           diagramImg: (typeof window !== "undefined" && window.IMG_DICE_PART1_TM_B64) ? window.IMG_DICE_PART1_TM_B64 : "images/maths_two_dice_board_part1_tm.jpg",
           diagramCaption: "இரு பகடைகள் — நிகழ்தகவு கரும்பலகை விளக்கம் (Chalkboard Solution)",
@@ -142,6 +147,8 @@ const MATHS_TM_UNIT_8_DATA = {
         },
         {
           id: "m_tm_8_2_2",
+          examYear: "2024",
+          examTag: "அரசு பொதுத்தேர்வு 2024 (1M)",
           type: "1m",
           mark: "1 மதிப்பெண்",
           q: "நன்கு கலைக்கப்பட்ட 52 சீட்டுகள் கொண்ட கட்டிலிருந்து ஒரு சீட்டு எடுக்கப்படும்போது அது சிவப்பு நிற ராஜாவாக இருப்பதற்கான நிகழ்தகவு:",
@@ -150,6 +157,8 @@ const MATHS_TM_UNIT_8_DATA = {
         },
         {
           id: "m_tm_8_2_3",
+          examYear: "2023",
+          examTag: "அரசு பொதுத்தேர்வு 2023 (2M)",
           type: "2m",
           mark: "2 மதிப்பெண்",
           isImportant: true,
@@ -165,9 +174,10 @@ const MATHS_TM_UNIT_8_DATA = {
         },
         {
           id: "m_tm_8_2_4",
+          examYear: "2023, 2022",
           type: "5m",
           mark: "5 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா (பயிற்சி 8.4 வினா 6)",
+          examTag: "அரசு பொதுத்தேர்வு 5M (பயிற்சி 8.4 வினா 6)",
           isImportant: true,
           diagramImg: (typeof window !== "undefined" && window.IMG_DICE_PART1_TM_B64) ? window.IMG_DICE_PART1_TM_B64 : "images/maths_two_dice_board_part1_tm.jpg",
           diagramCaption: "இரு பகடைகள் — நிகழ்தகவு கரும்பலகை விளக்கம் (Chalkboard Solution)",
@@ -563,6 +573,135 @@ diagramCaption: "கூறுவெளி கட்ட வரைபடம் (6 
               correction: "எப்போதுமே இறுதிப் பின்னத்தை எளிய வடிவில் சுருக்கவும்: 20/36 = 5/9."
             }
           ]
+        }
+      ]
+    },
+
+    // -------------------------------------------------------------
+    // கூடுதல் பயிற்சி வினாக்கள் (பாடப்பகுதி உள்வினாக்கள்)
+    // -------------------------------------------------------------
+    {
+      id: "sec_math_tm_u8_add_practice",
+      title: "கூடுதல் பயிற்சி வினாக்கள் (பாடப்பகுதி உள்வினாக்கள்)",
+      author: "அலகு 8: புள்ளியியலும் நிகழ்தகவும் - கூடுதல் தேர்வுப் பயிற்சி",
+      questions: [
+        {
+          id: "m_tm_u8_add_q1",
+          type: "2m",
+          mark: "2 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
+          sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_tm_u8_add_practice",
+          q: "ஒரு சீரான நாணயம் ஒரு முறை சுண்டப்படுகிறது. ஒரு தலை (Head) கிடைப்பதற்கான நிகழ்தகவைக் காண்க.",
+          ans: `<div style="line-height:1.8;">
+            <b>படி 1: கூறுவெளி எழுதுக:</b><br>
+            ஒரு நாணயம் சுண்டப்படும்போது கூறுவெளி S = {H, T}<br>
+            கூறுவெளியின் உறுப்புகளின் எண்ணிக்கை n(S) = 2<br><br>
+            <b>படி 2: சாதகமான நிகழ்ச்சியைக் குறிக்க:</b><br>
+            E என்பது தலை கிடைப்பதற்கான நிகழ்ச்சி என்க.<br>
+            E = {H} ⇒ n(E) = 1<br><br>
+            <b>படி 3: நிகழ்தகவைக் காண்க:</b><br>
+            P(E) = n(E) / n(S) = <b>1 / 2</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              தலை கிடைப்பதற்கான நிகழ்தகவு P(E) = 1/2
+            </div>
+          </div>`,
+          audioScript: "நாணயம் சுண்டப்படும்போது கூறுவெளி S சமம் H, T. n of S சமம் 2. தலை கிடைப்பதற்கான நிகழ்ச்சி E சமம் H, எனவே n of E சமம் 1. நிகழ்தகவு P of E சமம் n of E கீழ் n of S, அதாவது 1 கீழ் 2."
+        },
+        {
+          id: "m_tm_u8_add_q2",
+          type: "2m",
+          mark: "2 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
+          sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_tm_u8_add_practice",
+          q: "ஒரு பொதுவான பகடை உருட்டப்படுகிறது. 4-ஐ விடப் பெரிய எண் கிடைப்பதற்கான நிகழ்தகவைக் காண்க.",
+          ans: `<div style="line-height:1.8;">
+            <b>படி 1: கூறுவெளி எழுதுக:</b><br>
+            ஒரு பகடை உருட்டப்படும்போது கூறுவெளி S = {1, 2, 3, 4, 5, 6}<br>
+            மொத்த விளைவுகளின் எண்ணிக்கை n(S) = 6<br><br>
+            <b>படி 2: சாதகமான நிகழ்ச்சியைக் குறிக்க:</b><br>
+            E என்பது 4-ஐ விடப் பெரிய எண் கிடைப்பதற்கான நிகழ்ச்சி என்க.<br>
+            4-ஐ விடப் பெரிய எண்கள் 5 மற்றும் 6 ஆகும்.<br>
+            E = {5, 6} ⇒ n(E) = 2<br><br>
+            <b>படி 3: நிகழ்தகவைக் கணக்கிடுக:</b><br>
+            P(E) = n(E) / n(S) = 2 / 6 = <b>1 / 3</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              4-ஐ விடப் பெரிய எண் கிடைப்பதற்கான நிகழ்தகவு = 1/3
+            </div>
+          </div>`,
+          audioScript: "பகடை உருட்டப்படும்போது கூறுவெளி S சமம் 1, 2, 3, 4, 5, 6. n of S சமம் 6. 4-ஐ விடப் பெரிய எண் கிடைப்பதற்கான நிகழ்ச்சி E சமம் 5, 6. எனவே n of E சமம் 2. நிகழ்தகவு சமம் 2 கீழ் 6, சுருக்கினால் 1 கீழ் 3 ஆகும்."
+        },
+        {
+          id: "m_tm_u8_add_q3",
+          type: "5m",
+          mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
+          sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_tm_u8_add_practice",
+          q: `பின்வரும் நிகழ்வெண் பரவலுக்குக் கூட்டுச் சராசரி (Arithmetic Mean) காண்க:<br>
+            <div style="overflow-x:auto; margin:8px 0;">
+              <table style="border-collapse:collapse; text-align:center; min-width:240px; font-size:13px;">
+                <tr style="background:#f1f5f9; border:1px solid #cbd5e1;">
+                  <th style="padding:6px 12px; border:1px solid #cbd5e1;">x</th>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">10</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">20</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">30</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">40</td>
+                </tr>
+                <tr style="background:#e0f2fe; border:1px solid #cbd5e1; font-weight:700;">
+                  <th style="padding:6px 12px; border:1px solid #cbd5e1; color:#0369a1;">f</th>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">2</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">3</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">4</td>
+                  <td style="padding:6px 12px; border:1px solid #cbd5e1;">1</td>
+                </tr>
+              </table>
+            </div>`,
+          ans: `<div style="line-height:1.8;">
+            <b>படி 1: கணக்கீட்டு அட்டவணை அமைக்க:</b><br>
+            <div style="overflow-x:auto; margin:8px 0;">
+              <table style="width:100%; border-collapse:collapse; text-align:center; font-size:13px;">
+                <tr style="background:#f8fafc; border:1px solid #cbd5e1; font-weight:700;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1;">x</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1;">f</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1;">fx</th>
+                </tr>
+                <tr style="border:1px solid #cbd5e1;">
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">10</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">2</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">10 × 2 = 20</td>
+                </tr>
+                <tr style="border:1px solid #cbd5e1;">
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">20</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">3</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">20 × 3 = 60</td>
+                </tr>
+                <tr style="border:1px solid #cbd5e1;">
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">30</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">4</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">30 × 4 = 120</td>
+                </tr>
+                <tr style="border:1px solid #cbd5e1;">
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">40</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">1</td>
+                  <td style="padding:6px 10px; border:1px solid #cbd5e1;">40 × 1 = 40</td>
+                </tr>
+                <tr style="background:#f0fdf4; border:1px solid #16a34a; font-weight:700; color:#166534;">
+                  <td style="padding:6px 10px; border:1px solid #16a34a;">மொத்தம்</td>
+                  <td style="padding:6px 10px; border:1px solid #16a34a;">Σf = 10</td>
+                  <td style="padding:6px 10px; border:1px solid #16a34a;">Σfx = 240</td>
+                </tr>
+              </table>
+            </div><br>
+            <b>படி 2: கூட்டுச் சராசரிக்கான சூத்திரத்தைப் பயன்படுத்துக:</b><br>
+            கூட்டுச் சராசரி (x̄) = Σfx / Σf<br>
+            x̄ = 240 / 10 = <b>24</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              கூட்டுச் சராசரி (x̄) = 24
+            </div>
+          </div>`,
+          audioScript: "அட்டவணை கணக்கீடு: x சமம் 10 எனில் fx சமம் 20. x சமம் 20 எனில் fx சமம் 60. x சமம் 30 எனில் fx சமம் 120. x சமம் 40 எனில் fx சமம் 40. மொத்த நிகழ்வெண் சிக்மா f சமம் 10. மொத்த சிக்மா fx சமம் 240. கூட்டுச் சராசரி சமம் சிக்மா fx கீழ் சிக்மா f, அதாவது 240 கீழ் 10 சமம் 24."
         }
       ]
     }

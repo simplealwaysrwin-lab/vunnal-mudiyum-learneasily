@@ -1,4 +1,4 @@
-// 10th Standard Mathematics - Unit 3: Algebra (English Medium)
+﻿// 10th Standard Mathematics - Unit 3: Algebra (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_3_DATA = {
@@ -758,7 +758,149 @@ const MATHS_EM_UNIT_3_DATA = {
             </div>
           </div>`,
           audioScript: "Let the two numbers be x and y. Condition 1: x plus y equals 15, so y equals 15 minus x. Condition 2: x times y equals 54. Substituting y gives x times 15 minus x equals 54, resulting in quadratic equation x squared minus 15x plus 54 equals 0. Factorising gives x minus 6 times x minus 9 equals 0. Thus x equals 6 or 9. The two numbers are 6 and 9."
+        }        ,
+        {
+          id: "m_em_u3_add_q4",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u3_add_practice",
+          q: "Draw the table of values and describe the graphical representation of the linear equation: x + y = 5. Find the points where it intersects the axes.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given Linear Equation:</b><br>
+            x + y = 5 &nbsp;⇒&nbsp; <b>y = 5 - x</b><br><br>
+            <b>Step 1: Table of Values:</b><br>
+            <table style="width:100%; max-width:400px; border-collapse:collapse; margin:10px 0; text-align:center;" border="1">
+              <tr style="background:#e0f2fe; color:#0369a1; font-weight:700;">
+                <th style="padding:6px;">x</th>
+                <td style="padding:6px;">0</td>
+                <td style="padding:6px;">1</td>
+                <td style="padding:6px;">2</td>
+                <td style="padding:6px;">3</td>
+                <td style="padding:6px;">5</td>
+              </tr>
+              <tr>
+                <th style="padding:6px; background:#f0f9ff; color:#0284c7;">y = 5 - x</th>
+                <td style="padding:6px; font-weight:700;">5</td>
+                <td style="padding:6px; font-weight:700;">4</td>
+                <td style="padding:6px; font-weight:700;">3</td>
+                <td style="padding:6px; font-weight:700;">2</td>
+                <td style="padding:6px; font-weight:700;">0</td>
+              </tr>
+            </table>
+            <b>Step 2: Points to Plot:</b><br>
+            (0, 5), (1, 4), (2, 3), (3, 2), (5, 0)<br><br>
+            <b>Step 3: Nature of Graph:</b><br>
+            Plotting and joining these points with a straight edge yields a <b>Straight Line</b>.<br><br>
+            <b>Step 4: Intercepts:</b><br>
+            • X-axis intersection (put y = 0): <b>(5, 0)</b><br>
+            • Y-axis intersection (put x = 0): <b>(0, 5)</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Graph is a Straight Line &nbsp;|&nbsp; Intercepts: (5, 0) and (0, 5)
+            </div>
+          </div>`,
+          audioScript: "Given linear equation x plus y equals 5, which gives y equals 5 minus x. Taking values for x as 0, 1, 2, 3, and 5, corresponding y values are 5, 4, 3, 2, and 0. Plotting points (0, 5), (1, 4), (2, 3), (3, 2), and (5, 0) and joining them forms a straight line. X-intercept is (5, 0) and Y-intercept is (0, 5)."
+        },
+        {
+          id: "m_em_u3_add_q5",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u3_add_practice",
+          q: "Find the graphical solution of the system of linear equations: x + y = 6 and x - y = 2 by constructing their tables of values and determining their point of intersection.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given System of Equations:</b><br>
+            1) x + y = 6 &nbsp;⇒&nbsp; <b>y = 6 - x</b><br>
+            2) x - y = 2 &nbsp;⇒&nbsp; <b>y = x - 2</b><br><br>
+            <b>Table 1: for Line 1 (x + y = 6):</b><br>
+            <table style="width:100%; max-width:360px; border-collapse:collapse; margin:8px 0; text-align:center;" border="1">
+              <tr style="background:#e0f2fe; color:#0369a1; font-weight:700;">
+                <th style="padding:5px;">x</th><td>0</td><td>2</td><td>4</td><td>6</td>
+              </tr>
+              <tr>
+                <th style="padding:5px; background:#f0f9ff;">y = 6 - x</th>
+                <td style="padding:5px; font-weight:700;">6</td>
+                <td style="padding:5px; font-weight:700;">4</td>
+                <td style="padding:5px; font-weight:700; color:#dc2626; background:#fef2f2;">2</td>
+                <td style="padding:5px; font-weight:700;">0</td>
+              </tr>
+            </table>
+            Points: (0, 6), (2, 4), (4, 2), (6, 0)<br><br>
+            <b>Table 2: for Line 2 (x - y = 2):</b><br>
+            <table style="width:100%; max-width:360px; border-collapse:collapse; margin:8px 0; text-align:center;" border="1">
+              <tr style="background:#fef3c7; color:#92400e; font-weight:700;">
+                <th style="padding:5px;">x</th><td>0</td><td>2</td><td>4</td><td>6</td>
+              </tr>
+              <tr>
+                <th style="padding:5px; background:#fffbeb;">y = x - 2</th>
+                <td style="padding:5px; font-weight:700;">-2</td>
+                <td style="padding:5px; font-weight:700;">0</td>
+                <td style="padding:5px; font-weight:700; color:#dc2626; background:#fef2f2;">2</td>
+                <td style="padding:5px; font-weight:700;">4</td>
+              </tr>
+            </table>
+            Points: (0, -2), (2, 0), (4, 2), (6, 4)<br><br>
+            <b>Point of Intersection:</b><br>
+            The two lines intersect at <b>(4, 2)</b>.<br><br>
+            <b>Verification:</b><br>
+            4 + 2 = 6 (Satisfied) &nbsp;|&nbsp; 4 - 2 = 2 (Satisfied)<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Graphical Solution: x = 4, y = 2
+            </div>
+          </div>`,
+          audioScript: "Solving system of linear equations graphically: First equation gives y equals 6 minus x, with points (0, 6), (2, 4), (4, 2), and (6, 0). Second equation gives y equals x minus 2, with points (0, minus 2), (2, 0), (4, 2), and (6, 4). The two straight lines intersect at point (4, 2). Hence the graphical solution is x equals 4 and y equals 2. Verification shows both equations are satisfied."
+        },
+        {
+          id: "m_em_u3_add_q6",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u3_add_practice",
+          q: "Construct a table of values for the quadratic function y = x² - 4. State the nature of its graph, the coordinates of the turning point (vertex), and the roots of the equation x² - 4 = 0.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given Quadratic Function:</b><br>
+            y = x² - 4<br><br>
+            <b>Step 1: Value Table (-3 ≤ x ≤ 3):</b><br>
+            <table style="width:100%; max-width:440px; border-collapse:collapse; margin:10px 0; text-align:center;" border="1">
+              <tr style="background:#f1f5f9; color:#334155; font-weight:700;">
+                <th style="padding:5px;">x</th><td>-3</td><td>-2</td><td>-1</td><td>0</td><td>1</td><td>2</td><td>3</td>
+              </tr>
+              <tr>
+                <th style="padding:5px; background:#f8fafc;">x²</th><td>9</td><td>4</td><td>1</td><td>0</td><td>1</td><td>4</td><td>9</td>
+              </tr>
+              <tr>
+                <th style="padding:5px; background:#f8fafc;">-4</th><td>-4</td><td>-4</td><td>-4</td><td>-4</td><td>-4</td><td>-4</td><td>-4</td>
+              </tr>
+              <tr style="background:#e0f2fe; color:#0369a1; font-weight:700;">
+                <th style="padding:5px;">y</th>
+                <td>5</td>
+                <td style="color:#dc2626; background:#fef2f2;">0</td>
+                <td>-3</td>
+                <td style="color:#7c3aed; background:#f5f3ff;">-4</td>
+                <td>-3</td>
+                <td style="color:#dc2626; background:#fef2f2;">0</td>
+                <td>5</td>
+              </tr>
+            </table>
+            <b>Step 2: Points to Plot:</b><br>
+            (-3, 5), (-2, 0), (-1, -3), (0, -4), (1, -3), (2, 0), (3, 5)<br><br>
+            <b>Step 3: Nature of Graph:</b><br>
+            Joining the points with a smooth continuous curve gives a <b>Parabola opening upwards</b>.<br><br>
+            <b>Step 4: Vertex (Turning Point):</b><br>
+            Minimum point of the parabola is at <b>(0, -4)</b>.<br><br>
+            <b>Step 5: Roots of x² - 4 = 0:</b><br>
+            The curve intersects the X-axis (y = 0) at (-2, 0) and (2, 0).<br>
+            Therefore, the roots are <b>x = -2 and x = 2</b> (Real and unequal roots).<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Graph: Upward Parabola &nbsp;|&nbsp; Vertex: (0, -4) &nbsp;|&nbsp; Roots: x = -2, 2
+            </div>
+          </div>`,
+          audioScript: "For quadratic function y equals x squared minus 4, prepare table for x from minus 3 to plus 3. The points are (-3, 5), (-2, 0), (-1, -3), (0, -4), (1, -3), (2, 0), and (3, 5). Joining these points with a smooth curve gives an upward parabola. The turning point or vertex is (0, -4). The curve intersects the x-axis at x equals minus 2 and x equals 2, which are the real roots of the equation."
         }
+
       ]
     }
   ]

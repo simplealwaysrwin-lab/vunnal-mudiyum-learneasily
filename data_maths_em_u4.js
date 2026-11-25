@@ -1,4 +1,4 @@
-// 10th Standard Mathematics - Unit 4: Geometry (English Medium)
+﻿// 10th Standard Mathematics - Unit 4: Geometry (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_4_DATA = {
@@ -1696,7 +1696,160 @@ const MATHS_EM_UNIT_4_DATA = {
             </div>
           </div>`,
           audioScript: "Right angled triangle ABC with angle B equals 90 degrees, AB equals 6 cm, BC equals 8 cm. Part 1: By Pythagoras theorem, AC squared equals AB squared plus BC squared, which equals 6 squared plus 8 squared, giving 36 plus 64 equals 100. Thus AC equals square root of 100, which is 10 cm. Part 2: Area equals half base times height, which is half times 8 times 6, giving 24 square centimeters."
+        }        ,
+        {
+          id: "m_em_u4_add_q4",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u4_add_practice",
+          q: "Two similar triangles have corresponding sides in the ratio 4 : 7. Find the ratio of their areas.",
+          ans: `<div style="line-height:1.8;">
+            <b>Theorem on Similar Triangles:</b><br>
+            The ratio of the areas of two similar triangles is equal to the ratio of the squares of their corresponding sides.<br><br>
+            <b>Given:</b><br>
+            Ratio of corresponding sides = s₁ : s₂ = 4 : 7<br><br>
+            <b>Calculation:</b><br>
+            Area(Δ₁) / Area(Δ₂) = (s₁ / s₂)²<br>
+            Area(Δ₁) / Area(Δ₂) = (4 / 7)² = <b>16 / 49</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Ratio of their areas = 16 : 49
+            </div>
+          </div>`,
+          audioScript: "Theorem: The ratio of the areas of two similar triangles equals the ratio of the squares of their corresponding sides. Given sides ratio is 4 is to 7. Therefore, area ratio equals 4 over 7 squared, which equals 16 over 49. The ratio of their areas is 16 is to 49."
+        },
+        {
+          id: "m_em_u4_add_q5",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u4_add_practice",
+          q: "A right-angled triangle has perpendicular sides 9 cm and 12 cm. Find its hypotenuse.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b><br>
+            Let the perpendicular sides be a = 9 cm and b = 12 cm.<br>
+            Hypotenuse = c<br><br>
+            <b>Pythagoras Theorem:</b><br>
+            c² = a² + b²<br>
+            c² = 9² + 12²<br>
+            c² = 81 + 144 = 225<br>
+            c = √225 = <b>15 cm</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Hypotenuse = 15 cm
+            </div>
+          </div>`,
+          audioScript: "Given perpendicular sides a equals 9 cm and b equals 12 cm. By Pythagoras theorem, hypotenuse c squared equals a squared plus b squared. That is 9 squared plus 12 squared, equals 81 plus 144, which is 225. Therefore, hypotenuse c equals square root of 225, which is 15 cm."
+        },
+        {
+          id: "m_em_u4_add_q6",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u4_add_practice",
+          q: "In triangle ABC, D lies on AB and E lies on AC. If DE is parallel to BC, AB = 8 cm, AD = 4 cm and AC = 10 cm, find AE.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b><br>
+            In ΔABC, DE ∥ BC.<br>
+            AB = 8 cm, AD = 4 cm, AC = 10 cm<br><br>
+            <b>By Thales Theorem (Basic Proportionality Theorem):</b><br>
+            AD / AB = AE / AC<br><br>
+            <b>Substitute values:</b><br>
+            4 / 8 = AE / 10<br>
+            1 / 2 = AE / 10<br><br>
+            <b>Cross multiplication:</b><br>
+            2 × AE = 10<br>
+            AE = 10 / 2 = <b>5 cm</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Length of AE = 5 cm
+            </div>
+          </div>`,
+          audioScript: "In triangle ABC, DE is parallel to BC. Given AB equals 8 cm, AD equals 4 cm, AC equals 10 cm. By Thales theorem or Basic Proportionality Theorem, AD over AB equals AE over AC. Substituting values, 4 over 8 equals AE over 10. That is 1 over 2 equals AE over 10. Therefore, AE equals 10 over 2, which gives 5 cm."
+        },
+        {
+          id: "m_em_u4_add_q7",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u4_add_practice",
+          q: "From an external point P, two tangents PA and PB are drawn to a circle. If PA = 8 cm, find the length of PB. State the theorem used.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b><br>
+            PA and PB are tangents drawn from external point P to a circle.<br>
+            PA = 8 cm<br><br>
+            <b>Theorem on Tangents from External Point:</b><br>
+            The lengths of the two tangents drawn from an external point to a circle are equal.<br>
+            <b>PA = PB</b><br><br>
+            <b>Result:</b><br>
+            PB = <b>8 cm</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Length of tangent PB = 8 cm
+            </div>
+          </div>`,
+          audioScript: "Theorem: The lengths of the two tangents drawn from an external point to a circle are equal. Given tangent PA equals 8 cm. Therefore, PB equals PA, which is 8 cm. Length of tangent PB is 8 cm."
+        },
+        {
+          id: "m_em_u4_add_q8",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u4_add_practice",
+          q: "A vertical pole of height 6 m casts a shadow of 4 m on the ground. At the same time, a tree casts a shadow of 10 m. Find the height of the tree.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b><br>
+            • Height of pole = 6 m<br>
+            • Shadow of pole = 4 m<br>
+            • Shadow of tree = 10 m<br>
+            • Let height of the tree = h m<br><br>
+            <b>Concept of Similar Triangles:</b><br>
+            At any given time, the sun casts shadows at the same angle of inclination. Thus, the two right-angled triangles formed by the objects and their shadows are similar (Δ₁ ~ Δ₂).<br><br>
+            <b>Ratio of corresponding sides:</b><br>
+            (Height of tree) / (Height of pole) = (Shadow of tree) / (Shadow of pole)<br>
+            h / 6 = 10 / 4<br><br>
+            <b>Cross multiplication:</b><br>
+            4h = 6 × 10<br>
+            4h = 60<br>
+            h = 60 / 4 = <b>15 m</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Height of the tree = 15 m
+            </div>
+          </div>`,
+          audioScript: "Let the height of the tree be h. Since the sun's angle of elevation is the same, the triangles formed by the objects and their shadows are similar. Height of tree over height of pole equals shadow of tree over shadow of pole. That is h over 6 equals 10 over 4. Multiplying gives 4h equals 60, so h equals 60 over 4, which is 15 meters. The height of the tree is 15 meters."
+        },
+        {
+          id: "m_em_u4_add_q9",
+          type: "5m",
+          mark: "5 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u4_add_practice",
+          q: "A tangent PT touches a circle with centre O at point P. If the radius OP = 5 cm and the distance from the centre to point T is OT = 13 cm, find the length of the tangent PT.",
+          ans: `<div style="line-height:1.8;">
+            <b>Given:</b><br>
+            • Circle centre O, radius OP = 5 cm<br>
+            • Tangent PT touching circle at P<br>
+            • Distance from centre OT = 13 cm<br><br>
+            <b>Property of Tangent and Radius:</b><br>
+            The radius is perpendicular to the tangent at the point of contact.<br>
+            Therefore, ∠OPT = 90° (right angle at P).<br><br>
+            <b>Pythagoras Theorem in right ΔOPT:</b><br>
+            OT² = OP² + PT²<br>
+            13² = 5² + PT²<br>
+            169 = 25 + PT²<br>
+            PT² = 169 - 25<br>
+            PT² = 144<br>
+            PT = √144 = <b>12 cm</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              Length of tangent PT = 12 cm
+            </div>
+          </div>`,
+          audioScript: "Circle with centre O, radius OP equals 5 cm, distance OT equals 13 cm. Since radius is perpendicular to the tangent at point of contact, angle OPT equals 90 degrees. In right triangle OPT, by Pythagoras theorem, OT squared equals OP squared plus PT squared. 13 squared equals 5 squared plus PT squared. 169 equals 25 plus PT squared. PT squared equals 144, so PT equals square root of 144, which is 12 cm. Tangent PT length is 12 cm."
         }
+
       ]
     }
   ]

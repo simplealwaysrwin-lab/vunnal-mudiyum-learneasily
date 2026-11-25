@@ -1,4 +1,4 @@
-// 10-ஆம் வகுப்பு கணிதம் - அலகு 3: இயற்கணிதம் (Algebra)
+﻿// 10-ஆம் வகுப்பு கணிதம் - அலகு 3: இயற்கணிதம் (Algebra)
 // தமிழ்நாடு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const MATHS_TM_UNIT_3_DATA = {
@@ -760,7 +760,149 @@ const MATHS_TM_UNIT_3_DATA = {
             </div>
           </div>`,
           audioScript: "தேவையான இரு எண்கள் x மற்றும் y என்க. நிபந்தனை 1: x கூட்டல் y சமம் 15, எனவே y சமம் 15 கழித்தல் x. நிபந்தனை 2: x பெருக்கல் y சமம் 54. y-ன் மதிப்பை பிரதியிட x squared minus 15x plus 54 சமம் 0 என்ற இருபடிச் சமன்பாடு கிடைக்கிறது. காரணிப்படுத்த x minus 6 பெருக்கல் x minus 9 சமம் 0. எனவே x சமம் 6 அல்லது 9. தேவையான இரு எண்கள் 6 மற்றும் 9 ஆகும்."
+        }        ,
+        {
+          id: "m_tm_u3_add_q4",
+          type: "5m",
+          mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
+          sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_tm_u3_add_practice",
+          q: "x + y = 5 என்ற நேரியல் சமன்பாட்டிற்கு மதிப்புகளின் அட்டவணையை அமைத்து வரைபடத் தன்மையை விவரிக்க. மேலும் அச்சுகளை வெட்டும் புள்ளிகளைக் காண்க.",
+          ans: `<div style="line-height:1.8;">
+            <b>கொடுக்கப்பட்ட நேரியல் சமன்பாடு:</b><br>
+            x + y = 5 &nbsp;⇒&nbsp; <b>y = 5 - x</b><br><br>
+            <b>படி 1: மதிப்புகளின் அட்டவணை:</b><br>
+            <table style="width:100%; max-width:400px; border-collapse:collapse; margin:10px 0; text-align:center;" border="1">
+              <tr style="background:#e0f2fe; color:#0369a1; font-weight:700;">
+                <th style="padding:6px;">x</th>
+                <td style="padding:6px;">0</td>
+                <td style="padding:6px;">1</td>
+                <td style="padding:6px;">2</td>
+                <td style="padding:6px;">3</td>
+                <td style="padding:6px;">5</td>
+              </tr>
+              <tr>
+                <th style="padding:6px; background:#f0f9ff; color:#0284c7;">y = 5 - x</th>
+                <td style="padding:6px; font-weight:700;">5</td>
+                <td style="padding:6px; font-weight:700;">4</td>
+                <td style="padding:6px; font-weight:700;">3</td>
+                <td style="padding:6px; font-weight:700;">2</td>
+                <td style="padding:6px; font-weight:700;">0</td>
+              </tr>
+            </table>
+            <b>படி 2: குறிக்க வேண்டிய புள்ளிகள்:</b><br>
+            (0, 5), (1, 4), (2, 3), (3, 2), (5, 0)<br><br>
+            <b>படி 3: வரைபடத்தின் தன்மை:</b><br>
+            இப்புள்ளிகளைக் குறித்து நேர் அளவுகோலால் இணைக்கும் போது ஒரு <b>நேர்கோடு</b> பெறப்படுகிறது.<br><br>
+            <b>படி 4: அச்சுகளை வெட்டும் புள்ளிகள்:</b><br>
+            • X-அச்சு வெட்டுப்புள்ளி (y = 0 எனில்): <b>(5, 0)</b><br>
+            • Y-அச்சு வெட்டுப்புள்ளி (x = 0 எனில்): <b>(0, 5)</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              வரைபடம் ஒரு நேர்கோடாகும் &nbsp;|&nbsp; வெட்டுப்புள்ளிகள்: (5, 0) மற்றும் (0, 5)
+            </div>
+          </div>`,
+          audioScript: "நேரியல் சமன்பாடு எக்ஸ் கூட்டல் ஒய் சமம் 5, எனவே ஒய் சமம் 5 மைனஸ் எக்ஸ். எக்ஸ்-க்கு 0, 1, 2, 3, 5 என பிரதியிட்டால் ஒய்-ன் மதிப்புகள் முறையே 5, 4, 3, 2, 0 என கிடைக்கும். (0, 5), (1, 4), (2, 3), (3, 2), (5, 0) ஆகிய புள்ளிகளைக் குறித்து இணைக்க நேர்கோடு கிடைக்கிறது. எக்ஸ் அச்சை வெட்டும் புள்ளி (5, 0) மற்றும் ஒய் அச்சை வெட்டும் புள்ளி (0, 5) ஆகும்."
+        },
+        {
+          id: "m_tm_u3_add_q5",
+          type: "5m",
+          mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
+          sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_tm_u3_add_practice",
+          q: "மதிப்புகளின் அட்டவணைகளை அமைத்து x + y = 6 மற்றும் x - y = 2 என்ற நேரியல் சமன்பாட்டுத் தொகுப்பின் வரைபடத் தீர்வைக் காண்க.",
+          ans: `<div style="line-height:1.8;">
+            <b>கொடுக்கப்பட்ட நேரியல் சமன்பாடுகள்:</b><br>
+            1) x + y = 6 &nbsp;⇒&nbsp; <b>y = 6 - x</b><br>
+            2) x - y = 2 &nbsp;⇒&nbsp; <b>y = x - 2</b><br><br>
+            <b>அட்டவணை 1: கோடு 1 (x + y = 6):</b><br>
+            <table style="width:100%; max-width:360px; border-collapse:collapse; margin:8px 0; text-align:center;" border="1">
+              <tr style="background:#e0f2fe; color:#0369a1; font-weight:700;">
+                <th style="padding:5px;">x</th><td>0</td><td>2</td><td>4</td><td>6</td>
+              </tr>
+              <tr>
+                <th style="padding:5px; background:#f0f9ff;">y = 6 - x</th>
+                <td style="padding:5px; font-weight:700;">6</td>
+                <td style="padding:5px; font-weight:700;">4</td>
+                <td style="padding:5px; font-weight:700; color:#dc2626; background:#fef2f2;">2</td>
+                <td style="padding:5px; font-weight:700;">0</td>
+              </tr>
+            </table>
+            புள்ளிகள்: (0, 6), (2, 4), (4, 2), (6, 0)<br><br>
+            <b>அட்டவணை 2: கோடு 2 (x - y = 2):</b><br>
+            <table style="width:100%; max-width:360px; border-collapse:collapse; margin:8px 0; text-align:center;" border="1">
+              <tr style="background:#fef3c7; color:#92400e; font-weight:700;">
+                <th style="padding:5px;">x</th><td>0</td><td>2</td><td>4</td><td>6</td>
+              </tr>
+              <tr>
+                <th style="padding:5px; background:#fffbeb;">y = x - 2</th>
+                <td style="padding:5px; font-weight:700;">-2</td>
+                <td style="padding:5px; font-weight:700;">0</td>
+                <td style="padding:5px; font-weight:700; color:#dc2626; background:#fef2f2;">2</td>
+                <td style="padding:5px; font-weight:700;">4</td>
+              </tr>
+            </table>
+            புள்ளிகள்: (0, -2), (2, 0), (4, 2), (6, 4)<br><br>
+            <b>வெட்டும் புள்ளி:</b><br>
+            இரு நேர்கோடுகளும் வரைபடத்தில் வெட்டும் புள்ளி <b>(4, 2)</b> ஆகும்.<br><br>
+            <b>சரிபார்த்தல்:</b><br>
+            4 + 2 = 6 (சரி) &nbsp;|&nbsp; 4 - 2 = 2 (சரி)<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              வரைபடத் தீர்வு: x = 4, y = 2
+            </div>
+          </div>`,
+          audioScript: "வரைபட முறையில் நேரியல் சமன்பாடுகளைத் தீர்த்தல்: முதல் சமன்பாடு ஒய் சமம் 6 மைனஸ் எக்ஸ், இதன் புள்ளிகள் (0, 6), (2, 4), (4, 2), (6, 0). இரண்டாம் சமன்பாடு ஒய் சமம் எக்ஸ் மைனஸ் 2, இதன் புள்ளிகள் (0, மைனஸ் 2), (2, 0), (4, 2), (6, 4). இவ்விரு நேர்கோடுகளும் வெட்டும் புள்ளி (4, 2). எனவே வரைபடத் தீர்வு எக்ஸ் சமம் 4, ஒய் சமம் 2 ஆகும். சரிபார்த்தலில் இரு சமன்பாடுகளும் சரியாக உள்ளன."
+        },
+        {
+          id: "m_tm_u3_add_q6",
+          type: "5m",
+          mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
+          sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_tm_u3_add_practice",
+          q: "y = x² - 4 என்ற இருபடி சார்பிற்கு மதிப்புகளின் அட்டவணையை அமைத்து, வரைபடத்தின் தன்மை, உச்சப் புள்ளி (திருப்பப் புள்ளி) மற்றும் x² - 4 = 0 என்ற சமன்பாட்டின் மூலங்களைக் காண்க.",
+          ans: `<div style="line-height:1.8;">
+            <b>கொடுக்கப்பட்ட இருபடிச் சார்பு:</b><br>
+            y = x² - 4<br><br>
+            <b>படி 1: மதிப்புகளின் அட்டவணை (-3 ≤ x ≤ 3):</b><br>
+            <table style="width:100%; max-width:440px; border-collapse:collapse; margin:10px 0; text-align:center;" border="1">
+              <tr style="background:#f1f5f9; color:#334155; font-weight:700;">
+                <th style="padding:5px;">x</th><td>-3</td><td>-2</td><td>-1</td><td>0</td><td>1</td><td>2</td><td>3</td>
+              </tr>
+              <tr>
+                <th style="padding:5px; background:#f8fafc;">x²</th><td>9</td><td>4</td><td>1</td><td>0</td><td>1</td><td>4</td><td>9</td>
+              </tr>
+              <tr>
+                <th style="padding:5px; background:#f8fafc;">-4</th><td>-4</td><td>-4</td><td>-4</td><td>-4</td><td>-4</td><td>-4</td><td>-4</td>
+              </tr>
+              <tr style="background:#e0f2fe; color:#0369a1; font-weight:700;">
+                <th style="padding:5px;">y</th>
+                <td>5</td>
+                <td style="color:#dc2626; background:#fef2f2;">0</td>
+                <td>-3</td>
+                <td style="color:#7c3aed; background:#f5f3ff;">-4</td>
+                <td>-3</td>
+                <td style="color:#dc2626; background:#fef2f2;">0</td>
+                <td>5</td>
+              </tr>
+            </table>
+            <b>படி 2: குறிக்க வேண்டிய புள்ளிகள்:</b><br>
+            (-3, 5), (-2, 0), (-1, -3), (0, -4), (1, -3), (2, 0), (3, 5)<br><br>
+            <b>படி 3: வரைபடத்தின் தன்மை:</b><br>
+            இப்புள்ளிகளை சீரான வளைவரையாக இணைக்க <b>மேல்நோக்கித் திறந்த பரவளையம் (Parabola)</b> பெறப்படுகிறது.<br><br>
+            <b>படி 4: திருப்பப் புள்ளி (Vertex):</b><br>
+            பரவளையத்தின் சிறுமப் புள்ளி <b>(0, -4)</b> ஆகும்.<br><br>
+            <b>படி 5: x² - 4 = 0-ன் மூலங்கள்:</b><br>
+            வளைவரை X-அச்சை வெட்டும் புள்ளிகள் (-2, 0) மற்றும் (2, 0) ஆகும்.<br>
+            எனவே மூலங்கள் <b>x = -2, 2</b> ஆகும் (மெய் மற்றும் சமமற்ற மூலங்கள்).<br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              வரைபடம்: மேல்நோக்கிய பரவளையம் &nbsp;|&nbsp; திருப்பப் புள்ளி: (0, -4) &nbsp;|&nbsp; மூலங்கள்: x = -2, 2
+            </div>
+          </div>`,
+          audioScript: "இருபடிச் சார்பு ஒய் சமம் எக்ஸ் ஸ்கொயர் மைனஸ் 4. எக்ஸ்-ன் மதிப்பு மைனஸ் 3 முதல் பிளஸ் 3 வரை அட்டவணை அமைத்தால் புள்ளிகள் (-3, 5), (-2, 0), (-1, -3), (0, -4), (1, -3), (2, 0), (3, 5) கிடைக்கும். இப்புள்ளிகளை சீரான வளைவரையாக இணைக்க மேல்நோக்கித் திறந்த பரவளையம் கிடைக்கும். திருப்பப் புள்ளி (0, -4) ஆகும். பரவளையம் எக்ஸ் அச்சை வெட்டும் புள்ளிகள் மைனஸ் 2 மற்றும் 2, எனவே மூலங்கள் எக்ஸ் சமம் மைனஸ் 2, 2 ஆகும்."
         }
+
       ]
     }
   ]

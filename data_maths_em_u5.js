@@ -1,4 +1,4 @@
-// 10th Standard Mathematics - Unit 5: Coordinate Geometry (English Medium)
+﻿// 10th Standard Mathematics - Unit 5: Coordinate Geometry (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_5_DATA = {
@@ -244,7 +244,33 @@ const MATHS_EM_UNIT_5_DATA = {
             </div>
           </div>`,
           audioScript: "Given vertices A(1, 2), B(5, 2), C(3, 6). Formula for area of triangle is half of absolute value of (x1 y2 plus x2 y3 plus x3 y1) minus (x2 y1 plus x3 y2 plus x1 y3). First product sum equals 2 plus 30 plus 6, which is 38. Second product sum equals 10 plus 6 plus 6, which is 22. Area equals half of (38 minus 22), which is half of 16, giving 8 square units."
+        }        ,
+        {
+          id: "m_em_u5_add_q4",
+          type: "2m",
+          mark: "2 Marks | Additional Practice (In-Text)",
+          sectionTag: "Additional Practice (In-Text)",
+          isAdditionalPractice: true,
+          subSectionId: "sec_math_em_u5_add_practice",
+          q: "Identify the quadrants in which the following points lie on the Cartesian plane: A(2, 3), B(-2, 3), C(-2, -3) and D(2, -3). State the sign rule for each quadrant.",
+          ans: `<div style="line-height:1.8;">
+            <b>Cartesian Plane Quadrant Sign Rules:</b><br>
+            • Quadrant I: x > 0, y > 0 &nbsp;(+ , +)<br>
+            • Quadrant II: x < 0, y > 0 &nbsp;(- , +)<br>
+            • Quadrant III: x < 0, y < 0 &nbsp;(- , -)<br>
+            • Quadrant IV: x > 0, y < 0 &nbsp;(+ , -)<br><br>
+            <b>Position of Given Points:</b><br>
+            • <b>A(2, 3):</b> Both x and y are positive (+, +) &nbsp;⇒&nbsp; <b>Quadrant I (First Quadrant)</b><br>
+            • <b>B(-2, 3):</b> x is negative, y is positive (-, +) &nbsp;⇒&nbsp; <b>Quadrant II (Second Quadrant)</b><br>
+            • <b>C(-2, -3):</b> Both x and y are negative (-, -) &nbsp;⇒&nbsp; <b>Quadrant III (Third Quadrant)</b><br>
+            • <b>D(2, -3):</b> x is positive, y is negative (+, -) &nbsp;⇒&nbsp; <b>Quadrant IV (Fourth Quadrant)</b><br><br>
+            <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
+              A(2, 3) ∈ Quad I &nbsp;|&nbsp; B(-2, 3) ∈ Quad II &nbsp;|&nbsp; C(-2, -3) ∈ Quad III &nbsp;|&nbsp; D(2, -3) ∈ Quad IV
+            </div>
+          </div>`,
+          audioScript: "In a Cartesian plane: Point A(2, 3) has both positive coordinates, so it lies in Quadrant 1. Point B(-2, 3) has negative x and positive y, so it lies in Quadrant 2. Point C(-2, -3) has both negative coordinates, so it lies in Quadrant 3. Point D(2, -3) has positive x and negative y, so it lies in Quadrant 4."
         }
+
       ]
     }
   ]

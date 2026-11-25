@@ -259,6 +259,59 @@ const MATHS_EM_UNIT_5_DATA = {
             • Quadrant II: x < 0, y > 0 &nbsp;(- , +)<br>
             • Quadrant III: x < 0, y < 0 &nbsp;(- , -)<br>
             • Quadrant IV: x > 0, y < 0 &nbsp;(+ , -)<br><br>
+            <b>Cartesian Plane Diagram:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="280" viewBox="0 0 340 280" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <defs>
+                  <pattern id="grid_u5_q4" width="25" height="25" patternUnits="userSpaceOnUse">
+                    <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="340" height="280" fill="url(#grid_u5_q4)" />
+                <!-- Quadrant labels -->
+                <text x="210" y="35" font-size="11" font-weight="700" fill="#0369a1">Quadrant I (+, +)</text>
+                <text x="25" y="35" font-size="11" font-weight="700" fill="#0369a1">Quadrant II (-, +)</text>
+                <text x="25" y="260" font-size="11" font-weight="700" fill="#0369a1">Quadrant III (-, -)</text>
+                <text x="205" y="260" font-size="11" font-weight="700" fill="#0369a1">Quadrant IV (+, -)</text>
+                <!-- Axes -->
+                <line x1="15" y1="140" x2="325" y2="140" stroke="#334155" stroke-width="2" />
+                <polygon points="325,140 317,136 317,144" fill="#334155" />
+                <polygon points="15,140 23,136 23,144" fill="#334155" />
+                <text x="325" y="135" font-size="12" font-weight="800" fill="#0f172a">X</text>
+                <text x="5" y="135" font-size="12" font-weight="800" fill="#0f172a">X'</text>
+                <line x1="170" y1="265" x2="170" y2="15" stroke="#334155" stroke-width="2" />
+                <polygon points="170,15 166,23 174,23" fill="#334155" />
+                <polygon points="170,265 166,257 174,257" fill="#334155" />
+                <text x="176" y="22" font-size="12" font-weight="800" fill="#0f172a">Y</text>
+                <text x="176" y="275" font-size="12" font-weight="800" fill="#0f172a">Y'</text>
+                <text x="156" y="154" font-size="11" font-weight="700" fill="#64748b">O</text>
+                <!-- Projections & Point A(2, 3) -->
+                <line x1="226" y1="140" x2="226" y2="56" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+                <line x1="170" y1="56" x2="226" y2="56" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+                <circle cx="226" cy="56" r="4.5" fill="#16a34a" />
+                <text x="233" y="54" font-size="12" font-weight="800" fill="#15803d">A(2, 3)</text>
+                <!-- Projections & Point B(-2, 3) -->
+                <line x1="114" y1="140" x2="114" y2="56" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+                <line x1="170" y1="56" x2="114" y2="56" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+                <circle cx="114" cy="56" r="4.5" fill="#2563eb" />
+                <text x="56" y="54" font-size="12" font-weight="800" fill="#1d4ed8">B(-2, 3)</text>
+                <!-- Projections & Point C(-2, -3) -->
+                <line x1="114" y1="140" x2="114" y2="224" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+                <line x1="170" y1="224" x2="114" y2="224" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+                <circle cx="114" cy="224" r="4.5" fill="#dc2626" />
+                <text x="48" y="235" font-size="12" font-weight="800" fill="#b91c1c">C(-2, -3)</text>
+                <!-- Projections & Point D(2, -3) -->
+                <line x1="226" y1="140" x2="226" y2="224" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+                <line x1="170" y1="224" x2="226" y2="224" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+                <circle cx="226" cy="224" r="4.5" fill="#9333ea" />
+                <text x="233" y="235" font-size="12" font-weight="800" fill="#7e22ce">D(2, -3)</text>
+                <!-- Axis numbers -->
+                <text x="222" y="153" font-size="10" font-weight="600" fill="#475569">2</text>
+                <text x="110" y="153" font-size="10" font-weight="600" fill="#475569">-2</text>
+                <text x="156" y="60" font-size="10" font-weight="600" fill="#475569">3</text>
+                <text x="154" y="228" font-size="10" font-weight="600" fill="#475569">-3</text>
+              </svg>
+            </div>
             <b>Position of Given Points:</b><br>
             • <b>A(2, 3):</b> Both x and y are positive (+, +) &nbsp;⇒&nbsp; <b>Quadrant I (First Quadrant)</b><br>
             • <b>B(-2, 3):</b> x is negative, y is positive (-, +) &nbsp;⇒&nbsp; <b>Quadrant II (Second Quadrant)</b><br>

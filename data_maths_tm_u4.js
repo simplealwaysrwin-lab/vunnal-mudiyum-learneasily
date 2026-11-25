@@ -1016,6 +1016,34 @@ const MATHS_TM_UNIT_4_DATA = {
             <b>கொடுக்கப்பட்டவை:</b><br>
             ΔABC-யில், DE ∥ BC.<br>
             AB = 8 செ.மீ, AD = 4 செ.மீ, AC = 10 செ.மீ<br><br>
+            <b>வடிவியல் வரைபடம்:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="220" viewBox="0 0 340 220" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <!-- Triangle ABC: A=(170, 20), B=(50, 190), C=(290, 190) -->
+                <polygon points="170,20 50,190 290,190" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" />
+                <!-- Line DE parallel to BC -->
+                <line x1="110" y1="105" x2="230" y2="105" stroke="#dc2626" stroke-width="2.5" />
+                <polygon points="175,105 165,100 168,105 165,110" fill="#dc2626" />
+                <polygon points="175,190 165,185 168,190 165,195" fill="#2563eb" />
+                <!-- Vertices -->
+                <circle cx="170" cy="20" r="4" fill="#1e40af" />
+                <text x="165" y="14" font-size="13" font-weight="800" fill="#1e40af">A</text>
+                <circle cx="50" cy="190" r="4" fill="#1e40af" />
+                <text x="35" y="205" font-size="13" font-weight="800" fill="#1e40af">B</text>
+                <circle cx="290" cy="190" r="4" fill="#1e40af" />
+                <text x="295" y="205" font-size="13" font-weight="800" fill="#1e40af">C</text>
+                <circle cx="110" cy="105" r="4" fill="#dc2626" />
+                <text x="90" y="108" font-size="13" font-weight="800" fill="#dc2626">D</text>
+                <circle cx="230" cy="105" r="4" fill="#dc2626" />
+                <text x="240" y="108" font-size="13" font-weight="800" fill="#dc2626">E</text>
+                <!-- Length Labels -->
+                <text x="110" y="60" font-size="11" font-weight="700" fill="#1d4ed8">AD = 4 செ.மீ</text>
+                <text x="50" y="150" font-size="11" font-weight="700" fill="#1d4ed8">AB = 8 செ.மீ</text>
+                <text x="200" y="60" font-size="11" font-weight="800" fill="#15803d">AE = 5 செ.மீ</text>
+                <text x="250" y="150" font-size="11" font-weight="700" fill="#1d4ed8">AC = 10 செ.மீ</text>
+                <text x="145" y="125" font-size="11" font-weight="700" fill="#b91c1c">DE ∥ BC</text>
+              </svg>
+            </div>
             <b>தேல்ஸ் தேற்றப்படி (அடிப்படை விகிதசமத் தேற்றம்):</b><br>
             AD / AB = AE / AC<br><br>
             <b>மதிப்புகளைப் பிரதியிட:</b><br>
@@ -1028,7 +1056,7 @@ const MATHS_TM_UNIT_4_DATA = {
               AE-யின் நீளம் = 5 செ.மீ
             </div>
           </div>`,
-          audioScript: "முக்கோணம் ஏ பி சி யில், டி இ இணை பி சி. கொடுக்கப்பட்டவை ஏ பி சமம் 8 சென்டிமீட்டர், ஏ டி சமம் 4 சென்டிமீட்டர், ஏ சி சமம் 10 சென்டிமீட்டர். அடிப்படை விகிதசமத் தேற்றம் அல்லது தேல்ஸ் தேற்றப்படி, ஏ டி கீழ் ஏ பி சமம் ஏ இ கீழ் ஏ சி. மதிப்புகளை பிரதியிட 4 கீழ் 8 சமம் ஏ இ கீழ் 10. சுருக்கினால் 1 கீழ் 2 சமம் ஏ இ கீழ் 10. எனவே ஏ இ சமம் 10 கீழ் 2 சமம் 5 சென்டிமீட்டர். ஏ இ யின் நீளம் 5 சென்டிமீட்டர் ஆகும்."
+          audioScript: "முக்கோணம் ஏ பி சி யில், டி இ இணை பி சி. கொடுக்கப்பட்டவை ஏ பி சமம் 8 சென்டிமீட்டர், ஏ டி சமம் 4 சென்டிமீட்டர், ஏ சி சமம் 10 சென்டிமீட்டர். படத்தில் காட்டியுள்ளபடி அடிப்படை விகிதசமத் தேற்றம் அல்லது தேல்ஸ் தேற்றப்படி, ஏ டி கீழ் ஏ பி சமம் ஏ இ கீழ் ஏ சி. மதிப்புகளை பிரதியிட 4 கீழ் 8 சமம் ஏ இ கீழ் 10. சுருக்கினால் 1 கீழ் 2 சமம் ஏ இ கீழ் 10. எனவே ஏ இ சமம் 10 கீழ் 2 சமம் 5 சென்டிமீட்டர். ஏ இ யின் நீளம் 5 சென்டிமீட்டர் ஆகும்."
         },
         {
           id: "m_tm_u4_add_q7",
@@ -1042,6 +1070,37 @@ const MATHS_TM_UNIT_4_DATA = {
             <b>கொடுக்கப்பட்டவை:</b><br>
             வெளிப்புள்ளி P-யிலிருந்து வட்டத்திற்கு வரையப்பட்ட தொடுகோடுகள் PA, PB.<br>
             PA = 8 செ.மீ<br><br>
+            <b>வடிவியல் வரைபடம்:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="220" viewBox="0 0 340 220" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <!-- Circle: centre O=(110, 110), radius r=55 -->
+                <circle cx="110" cy="110" r="55" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5" />
+                <circle cx="110" cy="110" r="3.5" fill="#1e40af" />
+                <text x="95" y="115" font-size="13" font-weight="800" fill="#1e40af">O</text>
+                <!-- External Point P=(280, 110) -->
+                <circle cx="280" cy="110" r="4.5" fill="#dc2626" />
+                <text x="290" y="115" font-size="14" font-weight="800" fill="#dc2626">P</text>
+                <!-- Contact points A and B -->
+                <circle cx="145" cy="68" r="4" fill="#16a34a" />
+                <text x="140" y="60" font-size="13" font-weight="800" fill="#16a34a">A</text>
+                <circle cx="145" cy="152" r="4" fill="#16a34a" />
+                <text x="140" y="170" font-size="13" font-weight="800" fill="#16a34a">B</text>
+                <!-- Radii OA and OB -->
+                <line x1="110" y1="110" x2="145" y2="68" stroke="#64748b" stroke-width="1.8" stroke-dasharray="3,3" />
+                <line x1="110" y1="110" x2="145" y2="152" stroke="#64748b" stroke-width="1.8" stroke-dasharray="3,3" />
+                <!-- Tangents PA and PB -->
+                <line x1="280" y1="110" x2="145" y2="68" stroke="#dc2626" stroke-width="2.5" />
+                <line x1="280" y1="110" x2="145" y2="152" stroke="#dc2626" stroke-width="2.5" />
+                <!-- Center line OP -->
+                <line x1="110" y1="110" x2="280" y2="110" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="2,2" />
+                <!-- Tangent Lengths -->
+                <text x="200" y="80" font-size="11" font-weight="800" fill="#b91c1c">PA = 8 செ.மீ</text>
+                <text x="200" y="145" font-size="11" font-weight="800" fill="#b91c1c">PB = 8 செ.மீ</text>
+                <!-- Theorem badge -->
+                <rect x="25" y="15" width="135" height="28" rx="6" fill="#f0fdf4" stroke="#16a34a" />
+                <text x="35" y="34" font-size="11" font-weight="800" fill="#15803d">தேற்றம்: PA = PB</text>
+              </svg>
+            </div>
             <b>வெளிப்புள்ளியிலிருந்து தொடுகோடுகள் தேற்றம்:</b><br>
             வட்டத்திற்கு வெளியே உள்ள ஒரு புள்ளியிலிருந்து வட்டத்திற்கு வரையப்படும் இரு தொடுகோடுகளின் நீளங்கள் சமம் ஆகும்.<br>
             <b>PA = PB</b><br><br>
@@ -1051,7 +1110,7 @@ const MATHS_TM_UNIT_4_DATA = {
               தொடுகோடு PB-யின் நீளம் = 8 செ.மீ
             </div>
           </div>`,
-          audioScript: "தேற்றம்: வட்டத்திற்கு வெளியே உள்ள ஒரு புள்ளியிலிருந்து வட்டத்திற்கு வரையப்படும் இரு தொடுகோடுகளின் நீளங்கள் சமம். கொடுக்கப்பட்ட தொடுகோடு பி ஏ சமம் 8 சென்டிமீட்டர். எனவே பி பி சமம் பி ஏ சமம் 8 சென்டிமீட்டர். தொடுகோடு பி பி யின் நீளம் 8 சென்டிமீட்டர் ஆகும்."
+          audioScript: "தேற்றம்: வட்டத்திற்கு வெளியே உள்ள ஒரு புள்ளியிலிருந்து வட்டத்திற்கு வரையப்படும் இரு தொடுகோடுகளின் நீளங்கள் சமம். படத்தில் உள்ளபடி தொடுகோடு பி ஏ சமம் 8 சென்டிமீட்டர். எனவே பி பி சமம் பி ஏ சமம் 8 சென்டிமீட்டர். தொடுகோடு பி பி யின் நீளம் 8 சென்டிமீட்டர் ஆகும்."
         },
         {
           id: "m_tm_u4_add_q8",
@@ -1067,6 +1126,34 @@ const MATHS_TM_UNIT_4_DATA = {
             • கம்பத்தின் நிழலின் நீளம் = 4 மீ<br>
             • மரத்தின் நிழலின் நீளம் = 10 மீ<br>
             • மரத்தின் உயரம் h மீ என்க.<br><br>
+            <b>வடிவொத்த முக்கோண வரைபடம்:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="230" viewBox="0 0 340 230" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <!-- Ground line -->
+                <line x1="15" y1="190" x2="325" y2="190" stroke="#475569" stroke-width="2" />
+                <text x="25" y="208" font-size="10" font-weight="600" fill="#64748b">தரைப்பகுதி</text>
+                <!-- Sun -->
+                <circle cx="35" cy="30" r="12" fill="#fbbf24" stroke="#f59e0b" stroke-width="2" />
+                <line x1="35" y1="10" x2="35" y2="5" stroke="#f59e0b" stroke-width="2" />
+                <line x1="35" y1="50" x2="35" y2="55" stroke="#f59e0b" stroke-width="2" />
+                <line x1="15" y1="30" x2="10" y2="30" stroke="#f59e0b" stroke-width="2" />
+                <line x1="55" y1="30" x2="60" y2="30" stroke="#f59e0b" stroke-width="2" />
+                <text x="55" y="25" font-size="10" font-weight="700" fill="#d97706">சூரியனின் கதிர்கள் (ஏற்றக்கோணம் θ)</text>
+                <!-- Pole (left) -->
+                <line x1="70" y1="190" x2="70" y2="125" stroke="#2563eb" stroke-width="3.5" />
+                <line x1="70" y1="190" x2="120" y2="190" stroke="#1d4ed8" stroke-width="3" />
+                <line x1="70" y1="125" x2="120" y2="190" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="3,3" />
+                <text x="20" y="155" font-size="11" font-weight="700" fill="#1d4ed8">கம்பம்: 6 மீ</text>
+                <text x="65" y="205" font-size="10" font-weight="700" fill="#1e40af">நிழல்: 4 மீ</text>
+                <!-- Tree (right) -->
+                <line x1="195" y1="190" x2="195" y2="25" stroke="#16a34a" stroke-width="4" />
+                <circle cx="195" cy="25" r="12" fill="#22c55e" stroke="#15803d" stroke-width="2" />
+                <line x1="195" y1="190" x2="320" y2="190" stroke="#15803d" stroke-width="3" />
+                <line x1="195" y1="25" x2="320" y2="190" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="3,3" />
+                <text x="135" y="85" font-size="12" font-weight="800" fill="#15803d">மரம்: h = 15 மீ</text>
+                <text x="235" y="205" font-size="10" font-weight="700" fill="#166534">நிழல்: 10 மீ</text>
+              </svg>
+            </div>
             <b>வடிவொத்த முக்கோணக் கொள்கை:</b><br>
             ஒரே நேரத்தில் சூரியனின் கதிர்கள் ஒரே கோணத்தை ஏற்படுத்துவதால், கம்பம் மற்றும் மரம் அவற்றின் நிழல்களுடன் அமைக்கும் முக்கோணங்கள் வடிவொத்தவை (Δ₁ ~ Δ₂).<br><br>
             <b>ஒத்த பக்கங்களின் விகிதம்:</b><br>
@@ -1080,7 +1167,7 @@ const MATHS_TM_UNIT_4_DATA = {
               மரத்தின் உயரம் = 15 மீ
             </div>
           </div>`,
-          audioScript: "மரத்தின் உயரம் h என்க. ஒரே நேரத்தில் சூரியனின் ஏற்றக்கோணம் சமமாக இருப்பதால், இவ்விரு முக்கோணங்களும் வடிவொத்தவை. ஒத்த பக்கங்களின் விகிதப்படி, மரத்தின் உயரம் கீழ் கம்பத்தின் உயரம் சமம் மரத்தின் நிழல் கீழ் கம்பத்தின் நிழல். h கீழ் 6 சமம் 10 கீழ் 4. குறுக்குப் பெருக்க, 4h சமம் 60. h சமம் 60 கீழ் 4 சமம் 15 மீட்டர். எனவே மரத்தின் உயரம் 15 மீட்டர் ஆகும்."
+          audioScript: "மரத்தின் உயரம் h என்க. ஒரே நேரத்தில் சூரியனின் ஏற்றக்கோணம் சமமாக இருப்பதால், இவ்விரு முக்கோணங்களும் வடிவொத்தவை. வரைபடத்தில் காட்டியுள்ளவாறு ஒத்த பக்கங்களின் விகிதப்படி, மரத்தின் உயரம் கீழ் கம்பத்தின் உயரம் சமம் மரத்தின் நிழல் கீழ் கம்பத்தின் நிழல். h கீழ் 6 சமம் 10 கீழ் 4. குறுக்குப் பெருக்க, 4h சமம் 60. h சமம் 60 கீழ் 4 சமம் 15 மீட்டர். எனவே மரத்தின் உயரம் 15 மீட்டர் ஆகும்."
         },
         {
           id: "m_tm_u4_add_q9",
@@ -1095,6 +1182,36 @@ const MATHS_TM_UNIT_4_DATA = {
             • வட்டம் மையம் O, ஆரம் OP = 5 செ.மீ<br>
             • தொடுகோடு PT தொடும் புள்ளி P<br>
             • மையத்திலிருந்து தூரம் OT = 13 செ.மீ<br><br>
+            <b>வடிவியல் வரைபடம்:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="230" viewBox="0 0 340 230" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <!-- Circle centre O=(100, 85), radius r=48 -->
+                <circle cx="100" cy="85" r="48" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5" />
+                <circle cx="100" cy="85" r="3.5" fill="#1e40af" />
+                <text x="85" y="90" font-size="13" font-weight="800" fill="#1e40af">O</text>
+                <!-- Point of contact P=(148, 85) -->
+                <circle cx="148" cy="85" r="4" fill="#dc2626" />
+                <text x="156" y="80" font-size="13" font-weight="800" fill="#dc2626">P</text>
+                <!-- Radius OP -->
+                <line x1="100" y1="85" x2="148" y2="85" stroke="#16a34a" stroke-width="2.5" />
+                <text x="105" y="76" font-size="11" font-weight="800" fill="#15803d">OP = 5 செ.மீ</text>
+                <!-- Tangent PT: vertical down to T=(148, 205) -->
+                <line x1="148" y1="85" x2="148" y2="205" stroke="#7c3aed" stroke-width="3" />
+                <circle cx="148" cy="205" r="4.5" fill="#7c3aed" />
+                <text x="156" y="210" font-size="13" font-weight="800" fill="#7c3aed">T</text>
+                <text x="156" y="150" font-size="11" font-weight="800" fill="#6d28d9">PT = 12 செ.மீ</text>
+                <!-- Right angle at P -->
+                <rect x="136" y="85" width="12" height="12" fill="none" stroke="#dc2626" stroke-width="1.5" />
+                <text x="124" y="106" font-size="10" font-weight="700" fill="#dc2626">90°</text>
+                <!-- Hypotenuse OT -->
+                <line x1="100" y1="85" x2="148" y2="205" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="3,3" />
+                <text x="90" y="165" font-size="11" font-weight="800" fill="#b91c1c">OT = 13 செ.மீ</text>
+                <!-- Formula banner -->
+                <rect x="175" y="20" width="155" height="36" rx="6" fill="#fef2f2" stroke="#dc2626" />
+                <text x="183" y="37" font-size="11" font-weight="800" fill="#b91c1c">PT² = OT² - OP²</text>
+                <text x="183" y="50" font-size="10" font-weight="700" fill="#dc2626">PT = √144 = 12 செ.மீ</text>
+              </svg>
+            </div>
             <b>தொடுகோடு - ஆரத்தின் பண்பு:</b><br>
             தொடுபுள்ளியில் வரையப்படும் ஆரம் தொடுகோட்டிற்குச் செங்குத்தாகும்.<br>
             எனவே, ∠OPT = 90° (செங்கோண முக்கோணம்).<br><br>
@@ -1109,7 +1226,7 @@ const MATHS_TM_UNIT_4_DATA = {
               தொடுகோடு PT-யின் நீளம் = 12 செ.மீ
             </div>
           </div>`,
-          audioScript: "கொடுக்கப்பட்டவை வட்ட மையம் O, ஆரம் OP சமம் 5 சென்டிமீட்டர், தூரம் OT சமம் 13 சென்டிமீட்டர். தொடுபுள்ளியில் ஆரம் தொடுகோட்டிற்கு செங்குத்தாக இருக்கும். எனவே கோணம் OPT சமம் 90 டிகிரி. செங்கோண முக்கோணம் OPT யில் பிதாகரஸ் தேற்றப்படி, OT ஸ்கொயர் சமம் OP ஸ்கொயர் கூட்டல் PT ஸ்கொயர். 13 ஸ்கொயர் சமம் 5 ஸ்கொயர் கூட்டல் PT ஸ்கொயர். 169 சமம் 25 கூட்டல் PT ஸ்கொயர். PT ஸ்கொயர் சமம் 144. எனவே PT சமம் ரூட் 144 சமம் 12 சென்டிமீட்டர். தொடுகோடு PT யின் நீளம் 12 சென்டிமீட்டர் ஆகும்."
+          audioScript: "கொடுக்கப்பட்டவை வட்ட மையம் O, ஆரம் OP சமம் 5 சென்டிமீட்டர், தூரம் OT சமம் 13 சென்டிமீட்டர். தொடுபுள்ளியில் ஆரம் தொடுகோட்டிற்கு செங்குத்தாக இருக்கும் என்பதால் கோணம் OPT சமம் 90 டிகிரி. செங்கோண முக்கோணம் OPT யில் பிதாகரஸ் தேற்றப்படி, OT ஸ்கொயர் சமம் OP ஸ்கொயர் கூட்டல் PT ஸ்கொயர். 13 ஸ்கொயர் சமம் 5 ஸ்கொயர் கூட்டல் PT ஸ்கொயர். 169 சமம் 25 கூட்டல் PT ஸ்கொயர். PT ஸ்கொயர் சமம் 144. எனவே PT சமம் ரூட் 144 சமம் 12 சென்டிமீட்டர். தொடுகோடு PT யின் நீளம் 12 சென்டிமீட்டர் ஆகும்."
         }
 
       ]

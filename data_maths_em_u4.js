@@ -1754,6 +1754,34 @@ const MATHS_EM_UNIT_4_DATA = {
             <b>Given:</b><br>
             In ΔABC, DE ∥ BC.<br>
             AB = 8 cm, AD = 4 cm, AC = 10 cm<br><br>
+            <b>Geometric Diagram:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="220" viewBox="0 0 340 220" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <!-- Triangle ABC: A=(170, 20), B=(50, 190), C=(290, 190) -->
+                <polygon points="170,20 50,190 290,190" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" />
+                <!-- Line DE parallel to BC -->
+                <line x1="110" y1="105" x2="230" y2="105" stroke="#dc2626" stroke-width="2.5" />
+                <polygon points="175,105 165,100 168,105 165,110" fill="#dc2626" />
+                <polygon points="175,190 165,185 168,190 165,195" fill="#2563eb" />
+                <!-- Vertices -->
+                <circle cx="170" cy="20" r="4" fill="#1e40af" />
+                <text x="165" y="14" font-size="13" font-weight="800" fill="#1e40af">A</text>
+                <circle cx="50" cy="190" r="4" fill="#1e40af" />
+                <text x="35" y="205" font-size="13" font-weight="800" fill="#1e40af">B</text>
+                <circle cx="290" cy="190" r="4" fill="#1e40af" />
+                <text x="295" y="205" font-size="13" font-weight="800" fill="#1e40af">C</text>
+                <circle cx="110" cy="105" r="4" fill="#dc2626" />
+                <text x="90" y="108" font-size="13" font-weight="800" fill="#dc2626">D</text>
+                <circle cx="230" cy="105" r="4" fill="#dc2626" />
+                <text x="240" y="108" font-size="13" font-weight="800" fill="#dc2626">E</text>
+                <!-- Length Labels -->
+                <text x="120" y="60" font-size="11" font-weight="700" fill="#1d4ed8">AD = 4 cm</text>
+                <text x="55" y="150" font-size="11" font-weight="700" fill="#1d4ed8">AB = 8 cm</text>
+                <text x="205" y="60" font-size="11" font-weight="800" fill="#15803d">AE = 5 cm</text>
+                <text x="260" y="150" font-size="11" font-weight="700" fill="#1d4ed8">AC = 10 cm</text>
+                <text x="145" y="125" font-size="11" font-weight="700" fill="#b91c1c">DE ∥ BC</text>
+              </svg>
+            </div>
             <b>By Thales Theorem (Basic Proportionality Theorem):</b><br>
             AD / AB = AE / AC<br><br>
             <b>Substitute values:</b><br>
@@ -1766,7 +1794,7 @@ const MATHS_EM_UNIT_4_DATA = {
               Length of AE = 5 cm
             </div>
           </div>`,
-          audioScript: "In triangle ABC, DE is parallel to BC. Given AB equals 8 cm, AD equals 4 cm, AC equals 10 cm. By Thales theorem or Basic Proportionality Theorem, AD over AB equals AE over AC. Substituting values, 4 over 8 equals AE over 10. That is 1 over 2 equals AE over 10. Therefore, AE equals 10 over 2, which gives 5 cm."
+          audioScript: "In triangle ABC, DE is parallel to BC. Given AB equals 8 cm, AD equals 4 cm, AC equals 10 cm. As shown in the triangle diagram, by Thales theorem or Basic Proportionality Theorem, AD over AB equals AE over AC. Substituting values, 4 over 8 equals AE over 10. That is 1 over 2 equals AE over 10. Therefore, AE equals 10 over 2, which gives 5 cm."
         },
         {
           id: "m_em_u4_add_q7",
@@ -1780,6 +1808,37 @@ const MATHS_EM_UNIT_4_DATA = {
             <b>Given:</b><br>
             PA and PB are tangents drawn from external point P to a circle.<br>
             PA = 8 cm<br><br>
+            <b>Geometric Diagram:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="220" viewBox="0 0 340 220" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <!-- Circle: centre O=(110, 110), radius r=55 -->
+                <circle cx="110" cy="110" r="55" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5" />
+                <circle cx="110" cy="110" r="3.5" fill="#1e40af" />
+                <text x="95" y="115" font-size="13" font-weight="800" fill="#1e40af">O</text>
+                <!-- External Point P=(280, 110) -->
+                <circle cx="280" cy="110" r="4.5" fill="#dc2626" />
+                <text x="290" y="115" font-size="14" font-weight="800" fill="#dc2626">P</text>
+                <!-- Contact points A and B -->
+                <circle cx="145" cy="68" r="4" fill="#16a34a" />
+                <text x="140" y="60" font-size="13" font-weight="800" fill="#16a34a">A</text>
+                <circle cx="145" cy="152" r="4" fill="#16a34a" />
+                <text x="140" y="170" font-size="13" font-weight="800" fill="#16a34a">B</text>
+                <!-- Radii OA and OB -->
+                <line x1="110" y1="110" x2="145" y2="68" stroke="#64748b" stroke-width="1.8" stroke-dasharray="3,3" />
+                <line x1="110" y1="110" x2="145" y2="152" stroke="#64748b" stroke-width="1.8" stroke-dasharray="3,3" />
+                <!-- Tangents PA and PB -->
+                <line x1="280" y1="110" x2="145" y2="68" stroke="#dc2626" stroke-width="2.5" />
+                <line x1="280" y1="110" x2="145" y2="152" stroke="#dc2626" stroke-width="2.5" />
+                <!-- Center line OP -->
+                <line x1="110" y1="110" x2="280" y2="110" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="2,2" />
+                <!-- Tangent Lengths -->
+                <text x="210" y="80" font-size="11" font-weight="800" fill="#b91c1c">PA = 8 cm</text>
+                <text x="210" y="145" font-size="11" font-weight="800" fill="#b91c1c">PB = 8 cm</text>
+                <!-- Theorem badge -->
+                <rect x="25" y="15" width="125" height="28" rx="6" fill="#f0fdf4" stroke="#16a34a" />
+                <text x="35" y="34" font-size="11" font-weight="800" fill="#15803d">Theorem: PA = PB</text>
+              </svg>
+            </div>
             <b>Theorem on Tangents from External Point:</b><br>
             The lengths of the two tangents drawn from an external point to a circle are equal.<br>
             <b>PA = PB</b><br><br>
@@ -1789,7 +1848,7 @@ const MATHS_EM_UNIT_4_DATA = {
               Length of tangent PB = 8 cm
             </div>
           </div>`,
-          audioScript: "Theorem: The lengths of the two tangents drawn from an external point to a circle are equal. Given tangent PA equals 8 cm. Therefore, PB equals PA, which is 8 cm. Length of tangent PB is 8 cm."
+          audioScript: "Theorem: The lengths of the two tangents drawn from an external point to a circle are equal. As shown in the circle diagram, tangent PA equals 8 cm. Therefore, PB equals PA, which is 8 cm. Length of tangent PB is 8 cm."
         },
         {
           id: "m_em_u4_add_q8",
@@ -1805,6 +1864,34 @@ const MATHS_EM_UNIT_4_DATA = {
             • Shadow of pole = 4 m<br>
             • Shadow of tree = 10 m<br>
             • Let height of the tree = h m<br><br>
+            <b>Similar Triangles Diagram:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="230" viewBox="0 0 340 230" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <!-- Ground line -->
+                <line x1="15" y1="190" x2="325" y2="190" stroke="#475569" stroke-width="2" />
+                <text x="25" y="208" font-size="10" font-weight="600" fill="#64748b">Ground Line</text>
+                <!-- Sun -->
+                <circle cx="35" cy="30" r="12" fill="#fbbf24" stroke="#f59e0b" stroke-width="2" />
+                <line x1="35" y1="10" x2="35" y2="5" stroke="#f59e0b" stroke-width="2" />
+                <line x1="35" y1="50" x2="35" y2="55" stroke="#f59e0b" stroke-width="2" />
+                <line x1="15" y1="30" x2="10" y2="30" stroke="#f59e0b" stroke-width="2" />
+                <line x1="55" y1="30" x2="60" y2="30" stroke="#f59e0b" stroke-width="2" />
+                <text x="55" y="25" font-size="10" font-weight="700" fill="#d97706">Sun rays (Angle θ)</text>
+                <!-- Pole (left) -->
+                <line x1="70" y1="190" x2="70" y2="125" stroke="#2563eb" stroke-width="3.5" />
+                <line x1="70" y1="190" x2="120" y2="190" stroke="#1d4ed8" stroke-width="3" />
+                <line x1="70" y1="125" x2="120" y2="190" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="3,3" />
+                <text x="25" y="155" font-size="11" font-weight="700" fill="#1d4ed8">Pole: 6 m</text>
+                <text x="65" y="205" font-size="10" font-weight="700" fill="#1e40af">Shadow: 4 m</text>
+                <!-- Tree (right) -->
+                <line x1="195" y1="190" x2="195" y2="25" stroke="#16a34a" stroke-width="4" />
+                <circle cx="195" cy="25" r="12" fill="#22c55e" stroke="#15803d" stroke-width="2" />
+                <line x1="195" y1="190" x2="320" y2="190" stroke="#15803d" stroke-width="3" />
+                <line x1="195" y1="25" x2="320" y2="190" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="3,3" />
+                <text x="140" y="85" font-size="12" font-weight="800" fill="#15803d">Tree: h = 15 m</text>
+                <text x="235" y="205" font-size="10" font-weight="700" fill="#166534">Shadow: 10 m</text>
+              </svg>
+            </div>
             <b>Concept of Similar Triangles:</b><br>
             At any given time, the sun casts shadows at the same angle of inclination. Thus, the two right-angled triangles formed by the objects and their shadows are similar (Δ₁ ~ Δ₂).<br><br>
             <b>Ratio of corresponding sides:</b><br>
@@ -1818,7 +1905,7 @@ const MATHS_EM_UNIT_4_DATA = {
               Height of the tree = 15 m
             </div>
           </div>`,
-          audioScript: "Let the height of the tree be h. Since the sun's angle of elevation is the same, the triangles formed by the objects and their shadows are similar. Height of tree over height of pole equals shadow of tree over shadow of pole. That is h over 6 equals 10 over 4. Multiplying gives 4h equals 60, so h equals 60 over 4, which is 15 meters. The height of the tree is 15 meters."
+          audioScript: "Let the height of the tree be h. Since the sun's angle of elevation is the same, the triangles formed by the objects and their shadows are similar as shown in the diagram. Height of tree over height of pole equals shadow of tree over shadow of pole. That is h over 6 equals 10 over 4. Multiplying gives 4h equals 60, so h equals 60 over 4, which is 15 meters. The height of the tree is 15 meters."
         },
         {
           id: "m_em_u4_add_q9",
@@ -1833,6 +1920,36 @@ const MATHS_EM_UNIT_4_DATA = {
             • Circle centre O, radius OP = 5 cm<br>
             • Tangent PT touching circle at P<br>
             • Distance from centre OT = 13 cm<br><br>
+            <b>Geometric Diagram:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="230" viewBox="0 0 340 230" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <!-- Circle centre O=(100, 85), radius r=48 -->
+                <circle cx="100" cy="85" r="48" fill="#f8fafc" stroke="#2563eb" stroke-width="2.5" />
+                <circle cx="100" cy="85" r="3.5" fill="#1e40af" />
+                <text x="85" y="90" font-size="13" font-weight="800" fill="#1e40af">O</text>
+                <!-- Point of contact P=(148, 85) -->
+                <circle cx="148" cy="85" r="4" fill="#dc2626" />
+                <text x="156" y="80" font-size="13" font-weight="800" fill="#dc2626">P</text>
+                <!-- Radius OP -->
+                <line x1="100" y1="85" x2="148" y2="85" stroke="#16a34a" stroke-width="2.5" />
+                <text x="108" y="76" font-size="11" font-weight="800" fill="#15803d">OP = 5 cm</text>
+                <!-- Tangent PT: vertical down to T=(148, 205) -->
+                <line x1="148" y1="85" x2="148" y2="205" stroke="#7c3aed" stroke-width="3" />
+                <circle cx="148" cy="205" r="4.5" fill="#7c3aed" />
+                <text x="156" y="210" font-size="13" font-weight="800" fill="#7c3aed">T</text>
+                <text x="156" y="150" font-size="11" font-weight="800" fill="#6d28d9">PT = 12 cm</text>
+                <!-- Right angle at P -->
+                <rect x="136" y="85" width="12" height="12" fill="none" stroke="#dc2626" stroke-width="1.5" />
+                <text x="124" y="106" font-size="10" font-weight="700" fill="#dc2626">90°</text>
+                <!-- Hypotenuse OT -->
+                <line x1="100" y1="85" x2="148" y2="205" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="3,3" />
+                <text x="95" y="165" font-size="11" font-weight="800" fill="#b91c1c">OT = 13 cm</text>
+                <!-- Formula banner -->
+                <rect x="180" y="20" width="145" height="36" rx="6" fill="#fef2f2" stroke="#dc2626" />
+                <text x="188" y="37" font-size="11" font-weight="800" fill="#b91c1c">PT² = OT² - OP²</text>
+                <text x="188" y="50" font-size="10" font-weight="700" fill="#dc2626">PT = √144 = 12 cm</text>
+              </svg>
+            </div>
             <b>Property of Tangent and Radius:</b><br>
             The radius is perpendicular to the tangent at the point of contact.<br>
             Therefore, ∠OPT = 90° (right angle at P).<br><br>
@@ -1847,7 +1964,7 @@ const MATHS_EM_UNIT_4_DATA = {
               Length of tangent PT = 12 cm
             </div>
           </div>`,
-          audioScript: "Circle with centre O, radius OP equals 5 cm, distance OT equals 13 cm. Since radius is perpendicular to the tangent at point of contact, angle OPT equals 90 degrees. In right triangle OPT, by Pythagoras theorem, OT squared equals OP squared plus PT squared. 13 squared equals 5 squared plus PT squared. 169 equals 25 plus PT squared. PT squared equals 144, so PT equals square root of 144, which is 12 cm. Tangent PT length is 12 cm."
+          audioScript: "Circle with centre O, radius OP equals 5 cm, distance OT equals 13 cm. Since radius is perpendicular to the tangent at point of contact, angle OPT equals 90 degrees as shown in the diagram. In right triangle OPT, by Pythagoras theorem, OT squared equals OP squared plus PT squared. 13 squared equals 5 squared plus PT squared. 169 equals 25 plus PT squared. PT squared equals 144, so PT equals square root of 144, which is 12 cm. Tangent PT length is 12 cm."
         }
 
       ]

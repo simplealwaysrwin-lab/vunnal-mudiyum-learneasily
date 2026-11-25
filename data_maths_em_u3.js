@@ -789,18 +789,57 @@ const MATHS_EM_UNIT_3_DATA = {
                 <td style="padding:6px; font-weight:700;">0</td>
               </tr>
             </table>
-            <b>Step 2: Points to Plot:</b><br>
+            <b>Step 2: Plotted Points:</b><br>
             (0, 5), (1, 4), (2, 3), (3, 2), (5, 0)<br><br>
-            <b>Step 3: Nature of Graph:</b><br>
-            Plotting and joining these points with a straight edge yields a <b>Straight Line</b>.<br><br>
-            <b>Step 4: Intercepts:</b><br>
+            <b>Step 3: Graph Diagram:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="280" viewBox="0 0 340 280" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <defs>
+                  <pattern id="grid_u3_q4" width="28" height="28" patternUnits="userSpaceOnUse">
+                    <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="340" height="280" fill="url(#grid_u3_q4)" />
+                <!-- Axes -->
+                <line x1="30" y1="230" x2="310" y2="230" stroke="#334155" stroke-width="2" />
+                <polygon points="310,230 302,226 302,234" fill="#334155" />
+                <text x="312" y="234" font-size="12" font-weight="800" fill="#0f172a">X</text>
+                <line x1="60" y1="260" x2="60" y2="20" stroke="#334155" stroke-width="2" />
+                <polygon points="60,20 56,28 64,28" fill="#334155" />
+                <text x="56" y="14" font-size="12" font-weight="800" fill="#0f172a">Y</text>
+                <text x="46" y="244" font-size="11" font-weight="700" fill="#64748b">O</text>
+                <!-- Ticks -->
+                <text x="216" y="244" font-size="10" font-weight="700" fill="#475569">5</text>
+                <text x="48" y="74" font-size="10" font-weight="700" fill="#475569">5</text>
+                <!-- Straight Line -->
+                <line x1="44" y1="54" x2="242" y2="252" stroke="#2563eb" stroke-width="3" stroke-linecap="round" />
+                <!-- Points -->
+                <circle cx="60" cy="70" r="4.5" fill="#dc2626" />
+                <text x="70" y="68" font-size="11" font-weight="800" fill="#b91c1c">(0, 5)</text>
+                <circle cx="92" cy="102" r="4" fill="#dc2626" />
+                <text x="100" y="100" font-size="10" font-weight="700" fill="#b91c1c">(1, 4)</text>
+                <circle cx="124" cy="134" r="4" fill="#dc2626" />
+                <text x="132" y="132" font-size="10" font-weight="700" fill="#b91c1c">(2, 3)</text>
+                <circle cx="156" cy="166" r="4" fill="#dc2626" />
+                <text x="164" y="164" font-size="10" font-weight="700" fill="#b91c1c">(3, 2)</text>
+                <circle cx="220" cy="230" r="4.5" fill="#dc2626" />
+                <text x="205" y="222" font-size="11" font-weight="800" fill="#b91c1c">(5, 0)</text>
+                <!-- Info banner -->
+                <rect x="175" y="25" width="145" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6" />
+                <text x="183" y="42" font-size="11" font-weight="800" fill="#1d4ed8">Line: x + y = 5</text>
+                <text x="183" y="55" font-size="10" fill="#1e40af">Straight Line Graph</text>
+              </svg>
+            </div>
+            <b>Step 4: Nature of Graph:</b><br>
+            Joining these points with a straight edge yields a <b>Straight Line</b>.<br><br>
+            <b>Step 5: Intercepts:</b><br>
             • X-axis intersection (put y = 0): <b>(5, 0)</b><br>
             • Y-axis intersection (put x = 0): <b>(0, 5)</b><br><br>
             <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
               Graph is a Straight Line &nbsp;|&nbsp; Intercepts: (5, 0) and (0, 5)
             </div>
           </div>`,
-          audioScript: "Given linear equation x plus y equals 5, which gives y equals 5 minus x. Taking values for x as 0, 1, 2, 3, and 5, corresponding y values are 5, 4, 3, 2, and 0. Plotting points (0, 5), (1, 4), (2, 3), (3, 2), and (5, 0) and joining them forms a straight line. X-intercept is (5, 0) and Y-intercept is (0, 5)."
+          audioScript: "Given linear equation x plus y equals 5, which gives y equals 5 minus x. Taking values for x as 0, 1, 2, 3, and 5, corresponding y values are 5, 4, 3, 2, and 0. Plotting points (0, 5), (1, 4), (2, 3), (3, 2), and (5, 0) on the graph and joining them forms a straight line. X-intercept is (5, 0) and Y-intercept is (0, 5)."
         },
         {
           id: "m_em_u3_add_q5",
@@ -842,15 +881,48 @@ const MATHS_EM_UNIT_3_DATA = {
               </tr>
             </table>
             Points: (0, -2), (2, 0), (4, 2), (6, 4)<br><br>
+            <b>Graphical Representation:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="280" viewBox="0 0 340 280" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <defs>
+                  <pattern id="grid_u3_q5" width="25" height="25" patternUnits="userSpaceOnUse">
+                    <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="340" height="280" fill="url(#grid_u3_q5)" />
+                <!-- Axes -->
+                <line x1="25" y1="200" x2="315" y2="200" stroke="#334155" stroke-width="2" />
+                <polygon points="315,200 307,196 307,204" fill="#334155" />
+                <text x="318" y="204" font-size="12" font-weight="800" fill="#0f172a">X</text>
+                <line x1="60" y1="265" x2="60" y2="15" stroke="#334155" stroke-width="2" />
+                <polygon points="60,15 56,23 64,23" fill="#334155" />
+                <text x="56" y="12" font-size="12" font-weight="800" fill="#0f172a">Y</text>
+                <text x="46" y="214" font-size="11" font-weight="700" fill="#64748b">O</text>
+                <!-- Line 1: y = 6 - x (Blue) -->
+                <line x1="47" y1="31" x2="235" y2="219" stroke="#2563eb" stroke-width="2.5" />
+                <text x="75" y="40" font-size="11" font-weight="800" fill="#2563eb">x + y = 6</text>
+                <!-- Line 2: y = x - 2 (Orange) -->
+                <line x1="47" y1="265" x2="235" y2="77" stroke="#ea580c" stroke-width="2.5" />
+                <text x="210" y="70" font-size="11" font-weight="800" fill="#ea580c">x - y = 2</text>
+                <!-- Intersection at (4, 2) -->
+                <circle cx="164" cy="148" r="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2" />
+                <circle cx="164" cy="148" r="4.5" fill="#dc2626" />
+                <!-- Solution Tag -->
+                <rect x="180" y="115" width="145" height="36" rx="6" fill="#fef2f2" stroke="#dc2626" />
+                <text x="188" y="130" font-size="11" font-weight="800" fill="#b91c1c">Intersection: (4, 2)</text>
+                <text x="188" y="144" font-size="11" font-weight="700" fill="#dc2626">Solution: x = 4, y = 2</text>
+              </svg>
+            </div>
             <b>Point of Intersection:</b><br>
-            The two lines intersect at <b>(4, 2)</b>.<br><br>
+            The two straight lines intersect at <b>(4, 2)</b>.<br><br>
             <b>Verification:</b><br>
-            4 + 2 = 6 (Satisfied) &nbsp;|&nbsp; 4 - 2 = 2 (Satisfied)<br><br>
+            • 4 + 2 = 6 (Satisfied)<br>
+            • 4 - 2 = 2 (Satisfied)<br><br>
             <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
               Graphical Solution: x = 4, y = 2
             </div>
           </div>`,
-          audioScript: "Solving system of linear equations graphically: First equation gives y equals 6 minus x, with points (0, 6), (2, 4), (4, 2), and (6, 0). Second equation gives y equals x minus 2, with points (0, minus 2), (2, 0), (4, 2), and (6, 4). The two straight lines intersect at point (4, 2). Hence the graphical solution is x equals 4 and y equals 2. Verification shows both equations are satisfied."
+          audioScript: "Solving system of linear equations graphically: First equation gives y equals 6 minus x, with points (0, 6), (2, 4), (4, 2), and (6, 0). Second equation gives y equals x minus 2, with points (0, minus 2), (2, 0), (4, 2), and (6, 4). Drawing both lines on the graph reveals they intersect at point (4, 2). Hence the graphical solution is x equals 4 and y equals 2. Verification shows both equations are satisfied."
         },
         {
           id: "m_em_u3_add_q6",
@@ -887,18 +959,51 @@ const MATHS_EM_UNIT_3_DATA = {
             </table>
             <b>Step 2: Points to Plot:</b><br>
             (-3, 5), (-2, 0), (-1, -3), (0, -4), (1, -3), (2, 0), (3, 5)<br><br>
-            <b>Step 3: Nature of Graph:</b><br>
+            <b>Step 3: Parabola Graph Diagram:</b><br>
+            <div style="text-align:center; margin:12px 0;">
+              <svg width="340" height="280" viewBox="0 0 340 280" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <defs>
+                  <pattern id="grid_u3_q6" width="25" height="25" patternUnits="userSpaceOnUse">
+                    <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="340" height="280" fill="url(#grid_u3_q6)" />
+                <!-- Axes -->
+                <line x1="20" y1="150" x2="320" y2="150" stroke="#334155" stroke-width="2" />
+                <polygon points="320,150 312,146 312,154" fill="#334155" />
+                <text x="322" y="154" font-size="12" font-weight="800" fill="#0f172a">X</text>
+                <line x1="170" y1="265" x2="170" y2="15" stroke="#334155" stroke-width="2" />
+                <polygon points="170,15 166,23 174,23" fill="#334155" />
+                <text x="166" y="12" font-size="12" font-weight="800" fill="#0f172a">Y</text>
+                <text x="156" y="164" font-size="11" font-weight="700" fill="#64748b">O</text>
+                <!-- Parabola curve -->
+                <path d="M 74 70 C 95 140 130 214 170 214 C 210 214 245 140 266 70" fill="none" stroke="#7c3aed" stroke-width="3" />
+                <!-- Roots -->
+                <circle cx="106" cy="150" r="4.5" fill="#dc2626" />
+                <text x="76" y="142" font-size="11" font-weight="800" fill="#b91c1c">(-2, 0)</text>
+                <circle cx="234" cy="150" r="4.5" fill="#dc2626" />
+                <text x="238" y="142" font-size="11" font-weight="800" fill="#b91c1c">(2, 0)</text>
+                <!-- Vertex -->
+                <circle cx="170" cy="214" r="4.5" fill="#7c3aed" />
+                <text x="125" y="235" font-size="11" font-weight="800" fill="#6d28d9">Vertex (0, -4)</text>
+                <!-- Equation label box -->
+                <rect x="25" y="25" width="125" height="38" rx="6" fill="#f5f3ff" stroke="#8b5cf6" />
+                <text x="33" y="42" font-size="11" font-weight="800" fill="#6d28d9">y = x² - 4</text>
+                <text x="33" y="55" font-size="10" font-weight="700" fill="#7c3aed">Roots: x = -2, 2</text>
+              </svg>
+            </div>
+            <b>Step 4: Nature of Graph:</b><br>
             Joining the points with a smooth continuous curve gives a <b>Parabola opening upwards</b>.<br><br>
-            <b>Step 4: Vertex (Turning Point):</b><br>
+            <b>Step 5: Vertex (Turning Point):</b><br>
             Minimum point of the parabola is at <b>(0, -4)</b>.<br><br>
-            <b>Step 5: Roots of x² - 4 = 0:</b><br>
+            <b>Step 6: Roots of x² - 4 = 0:</b><br>
             The curve intersects the X-axis (y = 0) at (-2, 0) and (2, 0).<br>
             Therefore, the roots are <b>x = -2 and x = 2</b> (Real and unequal roots).<br><br>
             <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
               Graph: Upward Parabola &nbsp;|&nbsp; Vertex: (0, -4) &nbsp;|&nbsp; Roots: x = -2, 2
             </div>
           </div>`,
-          audioScript: "For quadratic function y equals x squared minus 4, prepare table for x from minus 3 to plus 3. The points are (-3, 5), (-2, 0), (-1, -3), (0, -4), (1, -3), (2, 0), and (3, 5). Joining these points with a smooth curve gives an upward parabola. The turning point or vertex is (0, -4). The curve intersects the x-axis at x equals minus 2 and x equals 2, which are the real roots of the equation."
+          audioScript: "For quadratic function y equals x squared minus 4, prepare table for x from minus 3 to plus 3. The points are (-3, 5), (-2, 0), (-1, -3), (0, -4), (1, -3), (2, 0), and (3, 5). Plotting these points and joining them with a smooth curve yields an upward parabola shown on the graph. The turning point or vertex is (0, -4). The curve intersects the x-axis at x equals minus 2 and x equals 2, which are the real roots of the equation."
         }
 
       ]

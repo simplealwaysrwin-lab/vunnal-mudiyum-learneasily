@@ -1617,6 +1617,8 @@ const MATHS_EM_UNIT_4_DATA = {
         },
         {
           id: "m_em_u4_add_q2",
+          diagramSvg: true,
+          diagram: true,
           type: "2m",
           mark: "2 Marks | Additional Practice (In-Text)",
           sectionTag: "Additional Practice (In-Text)",
@@ -1658,6 +1660,8 @@ const MATHS_EM_UNIT_4_DATA = {
         },
         {
           id: "m_em_u4_add_q3",
+          diagramSvg: true,
+          diagram: true,
           type: "5m",
           mark: "5 Marks | Additional Practice (In-Text)",
           sectionTag: "Additional Practice (In-Text)",
@@ -1744,6 +1748,8 @@ const MATHS_EM_UNIT_4_DATA = {
         },
         {
           id: "m_em_u4_add_q6",
+          diagramSvg: true,
+          diagram: true,
           type: "5m",
           mark: "5 Marks | Additional Practice (In-Text)",
           sectionTag: "Additional Practice (In-Text)",
@@ -1798,6 +1804,8 @@ const MATHS_EM_UNIT_4_DATA = {
         },
         {
           id: "m_em_u4_add_q7",
+          diagramSvg: true,
+          diagram: true,
           type: "2m",
           mark: "2 Marks | Additional Practice (In-Text)",
           sectionTag: "Additional Practice (In-Text)",
@@ -1852,6 +1860,8 @@ const MATHS_EM_UNIT_4_DATA = {
         },
         {
           id: "m_em_u4_add_q8",
+          diagramSvg: true,
+          diagram: true,
           type: "5m",
           mark: "5 Marks | Additional Practice (In-Text)",
           sectionTag: "Additional Practice (In-Text)",
@@ -1909,6 +1919,8 @@ const MATHS_EM_UNIT_4_DATA = {
         },
         {
           id: "m_em_u4_add_q9",
+          diagramSvg: true,
+          diagram: true,
           type: "5m",
           mark: "5 Marks | Additional Practice (In-Text)",
           sectionTag: "Additional Practice (In-Text)",

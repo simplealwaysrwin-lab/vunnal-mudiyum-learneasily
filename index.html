@@ -165,22 +165,22 @@
 <script src="data_english_u6.js?v=20261124_v125"></script>
 <script src="data_english_u7.js?v=20261124_v125"></script>
 <script src="data_english_writing.js?v=20261116_v84"></script>
-  <script src="data_maths_tm_u1.js?v=20261120_v104"></script>
-<script src="data_maths_tm_u2.js?v=20261103_v50"></script>
-<script src="data_maths_tm_u3.js?v=20261031_v31"></script>
-<script src="data_maths_tm_u4.js?v=20261105_v56"></script>
-<script src="data_maths_tm_u5.js?v=20261104_v51"></script>
-<script src="data_maths_tm_u6.js?v=20261105_v56"></script>
-<script src="data_maths_tm_u7.js?v=20261120_v105"></script>
-<script src="data_maths_tm_u8.js?v=20261120_v108"></script>
-  <script src="data_maths_em_u1.js?v=20261120_v104"></script>
-<script src="data_maths_em_u2.js?v=20261103_v50"></script>
-<script src="data_maths_em_u3.js?v=20261031_v31"></script>
-<script src="data_maths_em_u4.js?v=20261105_v56"></script>
-<script src="data_maths_em_u5.js?v=20261104_v51"></script>
-<script src="data_maths_em_u6.js?v=20261105_v56"></script>
-<script src="data_maths_em_u7.js?v=20261120_v105"></script>
-<script src="data_maths_em_u8.js?v=20261120_v105"></script>
+  <script src="data_maths_tm_u1.js?v=20261125_v133"></script>
+<script src="data_maths_tm_u2.js?v=20261125_v133"></script>
+<script src="data_maths_tm_u3.js?v=20261125_v133"></script>
+<script src="data_maths_tm_u4.js?v=20261125_v133"></script>
+<script src="data_maths_tm_u5.js?v=20261125_v133"></script>
+<script src="data_maths_tm_u6.js?v=20261125_v133"></script>
+<script src="data_maths_tm_u7.js?v=20261125_v133"></script>
+<script src="data_maths_tm_u8.js?v=20261125_v133"></script>
+  <script src="data_maths_em_u1.js?v=20261125_v133"></script>
+<script src="data_maths_em_u2.js?v=20261125_v133"></script>
+<script src="data_maths_em_u3.js?v=20261125_v133"></script>
+<script src="data_maths_em_u4.js?v=20261125_v133"></script>
+<script src="data_maths_em_u5.js?v=20261125_v133"></script>
+<script src="data_maths_em_u6.js?v=20261125_v133"></script>
+<script src="data_maths_em_u7.js?v=20261125_v133"></script>
+<script src="data_maths_em_u8.js?v=20261125_v133"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
 <script src="data_science_u3.js?v=20261031_v31"></script>
@@ -8653,7 +8653,7 @@ function resumeLastVisitedLesson() {
     let filteredQ = allQuestions;
 
     // Filter by SubSection (unless viewing extra questions filter batch)
-    if (currentSubSection !== 'all' && currentFilter !== 'extra') {
+    if (currentSubSection !== 'all' && currentFilter !== 'extra' && currentFilter !== 'diagram') {
       const sec = currentLesson.subSections.find(s => s.id === currentSubSection);
       if (sec) {
         const secIds = new Set(sec.questions.map(q => q.id));
@@ -8678,7 +8678,7 @@ function resumeLastVisitedLesson() {
     } else if (currentFilter === 'checkpoints') {
       filteredQ = filteredQ.filter(q => q.checkpoints && q.checkpoints.length > 0);
     } else if (currentFilter === 'diagram') {
-      filteredQ = filteredQ.filter(q => q.diagramSvg || q.diagram || q.diagramImg);
+      filteredQ = filteredQ.filter(q => q.diagramSvg || q.diagram || q.diagramImg || q.isGraph || (isMath && q.subSectionId && q.subSectionId.includes('graph')) || (q.ans && (q.ans.includes('<svg') || q.ans.includes('ai-svg-diagram-wrapper'))));
     } else if (currentFilter === 'public' || currentFilter === '2025') {
       filteredQ = filteredQ.filter(q => q.examYear || q.examTag || q.isImportant);
     } else if (currentFilter === 'extra') {
@@ -8710,7 +8710,7 @@ function resumeLastVisitedLesson() {
     const count7M = allQuestions.filter(q => q.type === '7m' || q.type === '5m' || (q.mark && (q.mark.includes('7') || q.mark.includes('4 / 7') || q.mark.includes('5')))).length;
     const count5M = allQuestions.filter(q => q.type === '5m' || q.type === '4m' || (q.mark && (q.mark.includes('5') || q.mark.includes('4')))).length;
     const count8M = allQuestions.filter(q => q.type === '8m' || (q.mark && q.mark.includes('8')) || q.is8Mark || (q.subSectionId && (q.subSectionId.includes('geo') || q.subSectionId.includes('graph') || q.subSectionId.includes('map') || q.subSectionId.includes('timeline')))).length;
-    const countDiag = allQuestions.filter(q => q.diagramSvg || q.diagram || q.diagramImg).length;
+    const countDiag = allQuestions.filter(q => q.diagramSvg || q.diagram || q.diagramImg || q.isGraph || (isMath && q.subSectionId && q.subSectionId.includes('graph')) || (q.ans && (q.ans.includes('<svg') || q.ans.includes('ai-svg-diagram-wrapper')))).length;
     const countExtra = allQuestions.filter(q => q.isAdditionalPractice || (q.sectionTag && (q.sectionTag.includes('Additional Practice') || q.sectionTag.includes('à®•à¯‚à®Ÿà¯à®¤à®²à¯ à®µà®¿à®©à®¾') || q.sectionTag.includes('Extra'))) || (q.subSectionId && q.subSectionId.includes('add_practice')) || (q.id && q.id.includes('_add_'))).length;
     const countCheckpoints = allQuestions.filter(q => q.checkpoints && q.checkpoints.length > 0).length;
     const hasManapaadam = currentLesson && currentLesson.manapaadam && currentLesson.manapaadam.length > 0;
@@ -8719,6 +8719,7 @@ function resumeLastVisitedLesson() {
     // Book-like Pagination Calculations (5 questions per page; 1 question per page for long detailed answers)
     const isCheckpointsView = (currentFilter === 'checkpoints');
     const isExtraView = (currentFilter === 'extra' || (currentSubSection && currentSubSection.includes('add_practice')));
+    const isDiagramView = (currentFilter === 'diagram');
     const isLongAnswerView = (currentFilter === '5m' || currentFilter === '4m' || currentFilter === '7m' || currentFilter === '8m');
     const is5MView = isLongAnswerView;
     const is7M = (currentFilter === "7m");
@@ -8729,7 +8730,7 @@ function resumeLastVisitedLesson() {
                          is4M ? (isEm || isEnglish ? "4-Mark Question" : "4-\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BA4\u0BC6\u0BA3\u0BCD \u0BB5\u0BBF\u0BA9\u0BBE") :
                          is8M ? (isEm || isEnglish ? "8-Mark Long Question" : "8-\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BA4\u0BC6\u0BA3\u0BCD \u0BA8\u0BC6\u0B9F\u0BC1\u0BB5\u0BBF\u0BA9\u0BBE") :
                          (isEm || isEnglish ? "5-Mark Detailed Question" : "\u0B90\u0BA8\u0BCD\u0BA4\u0BC1 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BA4\u0BC6\u0BA3\u0BCD \u0BB5\u0BBF\u0BB0\u0BBF\u0BB5\u0BBE\u0BA9 \u0BB5\u0BBF\u0BA9\u0BBE (5M)");
-    const effectivePerPage = isLongAnswerView ? 1 : ((isCheckpointsView || isExtraView) ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE);
+    const effectivePerPage = isLongAnswerView ? 1 : ((isCheckpointsView || isExtraView || isDiagramView) ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE);
     const totalQuestions = filteredQ.length;
     const totalPages = Math.ceil(totalQuestions / effectivePerPage) || 1;
     if (currentLessonPage > totalPages) currentLessonPage = totalPages;
@@ -9706,7 +9707,7 @@ function resumeLastVisitedLesson() {
       continuousAudioPlayer.stop();
     }
     if (typeof stopStudentTipVoice === 'function') stopStudentTipVoice();
-    if (filterType === 'extra') {
+    if (filterType === 'extra' || filterType === 'diagram') {
       currentSubSection = 'all';
     }
     currentFilter = filterType;
@@ -14015,6 +14016,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
               currentLessonPage = Math.floor(targetIndex / QUESTIONS_PER_PAGE) + 1;
             }
           } else if (target) {
+            currentLessonViewMode = 'qa';
             const isSci = subId && subId.startsWith("science"); if (isSci && target === "5m") { currentFilter = "7m"; } else { currentFilter = target; }
           } else {
             currentLessonViewMode = 'qa';
@@ -14845,7 +14847,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261125_v132')
+        navigator.serviceWorker.register('./sw.js?v=20261125_v133')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

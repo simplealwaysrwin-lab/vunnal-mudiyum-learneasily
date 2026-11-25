@@ -247,6 +247,9 @@ const MATHS_TM_UNIT_5_DATA = {
         }        ,
         {
           id: "m_tm_u5_add_q4",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           type: "2m",
           mark: "2 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
           sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",

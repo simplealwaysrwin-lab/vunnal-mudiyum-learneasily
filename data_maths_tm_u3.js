@@ -62,12 +62,12 @@ const MATHS_TM_UNIT_3_DATA = {
           type: "5m",
           mark: "5 மதிப்பெண்",
           isImportant: true,
-          diagramImg: "images/math_bb_ch3_linear_eqn.jpg",
+          // diagramImg removed: no file on disk
           diagramCaption: "கரும்பலகைத் தீர்வு: மூன்று மாறிகளில் அமைந்த நேரியல் சமன்பாட்டுத் தொகுப்பு (Tap to Zoom)",
           blackboard: {
             title: "மூன்று மாறிகளில் அமைந்த நேரியல் சமன்பாட்டுத் தொகுப்பைத் தீர்த்தல்",
             engTitle: "Solving System of Linear Equations in Three Variables",
-            fullBoardImg: "images/math_bb_ch3_linear_eqn.jpg"
+            // fullBoardImg removed
           },
           q: "பின்வரும் மூன்று மாறிகளில் அமைந்த நேரியல் சமன்பாட்டுத் தொகுப்பைத் தீர்க்க:<br>x + y + z = 5<br>2x - y + z = 9<br>x - 2y + 3z = 16",
           ans: `<div style="line-height:1.8;">
@@ -461,6 +461,9 @@ const MATHS_TM_UNIT_3_DATA = {
       questions: [
         {
           id: "m_tm_3_4_1",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           type: "8m",
           mark: "8 மதிப்பெண்",
           is8Mark: true,
@@ -527,6 +530,69 @@ const MATHS_TM_UNIT_3_DATA = {
             <b>படி 4: அளவுத் திட்டம் (Scale):</b><br>
             • X-அச்சு: 1 செ.மீ = 1 அலகு<br>
             • Y-அச்சு: 1 செ.மீ = 2 அலகுகள்<br><br>
+            <div class="ai-svg-diagram-wrapper" style="margin:16px 0; padding:12px; background:#f8fafc; border:1.5px solid #0284c7; border-radius:10px; text-align:center;">
+              <div style="font-size:12.5px; font-weight:800; color:#0369a1; margin-bottom:8px; display:flex; align-items:center; justify-content:center; gap:6px;">
+                <span>📊 இருபடி சார்பின் வரைபடம்: y = x² - 9</span>
+              </div>
+              <svg width="360" height="300" viewBox="0 0 360 300" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <defs>
+                  <pattern id="grid_u3_8m_1_tm" width="28" height="24" patternUnits="userSpaceOnUse">
+                    <path d="M 28 0 L 0 0 0 24" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+                  </pattern>
+                  <marker id="arrow_u3_1_tm" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#334155" />
+                  </marker>
+                </defs>
+                <rect width="360" height="300" fill="url(#grid_u3_8m_1_tm)" />
+                <line x1="20" y1="150" x2="340" y2="150" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_1_tm)" />
+                <line x1="340" y1="150" x2="20" y2="150" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_1_tm)" />
+                <line x1="180" y1="285" x2="180" y2="15" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_1_tm)" />
+                <line x1="180" y1="15" x2="180" y2="285" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_1_tm)" />
+                <text x="345" y="145" font-size="12" font-weight="bold" fill="#334155">X</text>
+                <text x="12" y="145" font-size="12" font-weight="bold" fill="#334155">X'</text>
+                <text x="186" y="22" font-size="12" font-weight="bold" fill="#334155">Y</text>
+                <text x="186" y="295" font-size="12" font-weight="bold" fill="#334155">Y'</text>
+                <text x="166" y="165" font-size="11" font-weight="bold" fill="#64748b">O(0,0)</text>
+                <text x="68" y="165" font-size="10" text-anchor="middle" fill="#64748b">-4</text>
+                <text x="96" y="168" font-size="10" font-weight="bold" text-anchor="middle" fill="#dc2626">-3</text>
+                <text x="124" y="165" font-size="10" text-anchor="middle" fill="#64748b">-2</text>
+                <text x="152" y="165" font-size="10" text-anchor="middle" fill="#64748b">-1</text>
+                <text x="208" y="165" font-size="10" text-anchor="middle" fill="#64748b">1</text>
+                <text x="236" y="165" font-size="10" text-anchor="middle" fill="#64748b">2</text>
+                <text x="264" y="168" font-size="10" font-weight="bold" text-anchor="middle" fill="#dc2626">3</text>
+                <text x="292" y="165" font-size="10" text-anchor="middle" fill="#64748b">4</text>
+                <text x="172" y="69" font-size="9" text-anchor="end" fill="#64748b">6</text>
+                <text x="172" y="105" font-size="9" text-anchor="end" fill="#64748b">4</text>
+                <text x="172" y="195" font-size="9" text-anchor="end" fill="#64748b">-4</text>
+                <text x="172" y="243" font-size="9" text-anchor="end" fill="#64748b">-8</text>
+                <path d="M 58,26 Q 110,180 180,258 Q 250,180 302,26" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" />
+                <circle cx="68" cy="66" r="3.5" fill="#2563eb" />
+                <circle cx="124" cy="210" r="3.5" fill="#2563eb" />
+                <circle cx="152" cy="246" r="3.5" fill="#2563eb" />
+                <circle cx="180" cy="258" r="4.5" fill="#7c3aed" />
+                <text x="180" y="274" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#7c3aed">உச்சப்புள்ளி (0, -9)</text>
+                <circle cx="208" cy="246" r="3.5" fill="#2563eb" />
+                <circle cx="236" cy="210" r="3.5" fill="#2563eb" />
+                <circle cx="292" cy="66" r="3.5" fill="#2563eb" />
+                <circle cx="96" cy="150" r="6" fill="#dc2626" />
+                <circle cx="96" cy="150" r="9" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="2,2" />
+                <rect x="36" y="118" width="80" height="20" rx="4" fill="#fee2e2" stroke="#ef4444" stroke-width="1" />
+                <text x="76" y="132" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">மூலம்: (-3, 0)</text>
+                <circle cx="264" cy="150" r="6" fill="#16a34a" />
+                <circle cx="264" cy="150" r="9" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="2,2" />
+                <rect x="244" y="118" width="76" height="20" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1" />
+                <text x="282" y="132" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">மூலம்: (3, 0)</text>
+                <rect x="220" y="28" width="128" height="38" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" />
+                <text x="226" y="42" font-size="8.5" font-weight="bold" fill="#334155">அளவுத் திட்டம்:</text>
+                <text x="226" y="52" font-size="8" fill="#475569">X-அச்சு: 1 செ.மீ = 1 அலகு</text>
+                <text x="226" y="62" font-size="8" fill="#475569">Y-அச்சு: 1 செ.மீ = 2 அலகுகள்</text>
+                <rect x="30" y="28" width="96" height="24" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1" />
+                <text x="78" y="44" font-size="11" font-weight="bold" fill="#1d4ed8" text-anchor="middle">y = x² - 9</text>
+              </svg>
+              <div style="font-size:11.5px; color:#166534; font-weight:700; margin-top:6px; background:#dcfce7; padding:6px 10px; border-radius:6px;">
+                ✔ பரவளையம் X-அச்சை (-3, 0) மற்றும் (3, 0) என்ற இரு வெவ்வேறு புள்ளிகளில் வெட்டுவதால் மெய் மற்றும் சமமற்ற மூலங்கள் உண்டு. தீர்வு: {-3, 3}
+              </div>
+            </div>
             <b>படி 5: வரைபடம் & தீர்வுகளின் தன்மை:</b><br>
             இப்புள்ளிகளை வரைபடத்தாளில் குறித்து ஒரு சீரான பரவளையம் (Smooth Parabola) வரைக.<br>
             இப்பரவளையமானது X-அச்சை <b>(-3, 0)</b> மற்றும் <b>(3, 0)</b> ஆகிய இரு வேறுபட்ட புள்ளிகளில் வெட்டுகிறது.<br><br>
@@ -539,6 +605,9 @@ const MATHS_TM_UNIT_3_DATA = {
         },
         {
           id: "m_tm_3_4_2",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           type: "8m",
           mark: "8 மதிப்பெண்",
           is8Mark: true,
@@ -607,6 +676,63 @@ const MATHS_TM_UNIT_3_DATA = {
             <b>படி 4: அளவுத் திட்டம்:</b><br>
             • X-அச்சு: 1 செ.மீ = 1 அலகு<br>
             • Y-அச்சு: 1 செ.மீ = 1 அலகு<br><br>
+            <div class="ai-svg-diagram-wrapper" style="margin:16px 0; padding:12px; background:#f8fafc; border:1.5px solid #0284c7; border-radius:10px; text-align:center;">
+              <div style="font-size:12.5px; font-weight:800; color:#0369a1; margin-bottom:8px; display:flex; align-items:center; justify-content:center; gap:6px;">
+                <span>📊 இருபடி சார்பின் வரைபடம்: y = x² - 4x + 4</span>
+              </div>
+              <svg width="360" height="300" viewBox="0 0 360 300" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <defs>
+                  <pattern id="grid_u3_8m_2_tm" width="36" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M 36 0 L 0 0 0 20" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+                  </pattern>
+                  <marker id="arrow_u3_2_tm" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#334155" />
+                  </marker>
+                </defs>
+                <rect width="360" height="300" fill="url(#grid_u3_8m_2_tm)" />
+                <line x1="20" y1="230" x2="340" y2="230" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_2_tm)" />
+                <line x1="340" y1="230" x2="20" y2="230" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_2_tm)" />
+                <line x1="90" y1="285" x2="90" y2="15" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_2_tm)" />
+                <line x1="90" y1="15" x2="90" y2="285" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_2_tm)" />
+                <text x="345" y="225" font-size="12" font-weight="bold" fill="#334155">X</text>
+                <text x="12" y="225" font-size="12" font-weight="bold" fill="#334155">X'</text>
+                <text x="96" y="22" font-size="12" font-weight="bold" fill="#334155">Y</text>
+                <text x="96" y="295" font-size="12" font-weight="bold" fill="#334155">Y'</text>
+                <text x="76" y="244" font-size="11" font-weight="bold" fill="#64748b">O(0,0)</text>
+                <text x="54" y="245" font-size="10" text-anchor="middle" fill="#64748b">-1</text>
+                <text x="126" y="245" font-size="10" text-anchor="middle" fill="#64748b">1</text>
+                <text x="162" y="252" font-size="11" font-weight="bold" text-anchor="middle" fill="#15803d">2</text>
+                <text x="198" y="245" font-size="10" text-anchor="middle" fill="#64748b">3</text>
+                <text x="234" y="245" font-size="10" text-anchor="middle" fill="#64748b">4</text>
+                <text x="270" y="245" font-size="10" text-anchor="middle" fill="#64748b">5</text>
+                <text x="82" y="162" font-size="9.5" text-anchor="end" fill="#64748b">4</text>
+                <text x="82" y="72" font-size="9.5" text-anchor="end" fill="#64748b">9</text>
+                <path d="M 44,48 Q 110,230 162,230 Q 214,230 280,48" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" />
+                <circle cx="54" cy="68" r="3.5" fill="#2563eb" />
+                <text x="44" y="64" font-size="9" fill="#1e3a8a">(-1, 9)</text>
+                <circle cx="90" cy="158" r="3.5" fill="#2563eb" />
+                <text x="100" y="156" font-size="9" fill="#1e3a8a">(0, 4)</text>
+                <circle cx="126" cy="212" r="3.5" fill="#2563eb" />
+                <circle cx="198" cy="212" r="3.5" fill="#2563eb" />
+                <circle cx="234" cy="158" r="3.5" fill="#2563eb" />
+                <text x="244" y="156" font-size="9" fill="#1e3a8a">(4, 4)</text>
+                <circle cx="270" cy="68" r="3.5" fill="#2563eb" />
+                <text x="278" y="64" font-size="9" fill="#1e3a8a">(5, 9)</text>
+                <circle cx="162" cy="230" r="6" fill="#16a34a" />
+                <circle cx="162" cy="230" r="10" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="2,2" />
+                <rect x="96" y="180" width="132" height="24" rx="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2" />
+                <text x="162" y="196" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">தொடும் புள்ளி: (2, 0) [ஒரே மூலம்]</text>
+                <rect x="220" y="18" width="128" height="38" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" />
+                <text x="226" y="32" font-size="8.5" font-weight="bold" fill="#334155">அளவுத் திட்டம்:</text>
+                <text x="226" y="42" font-size="8" fill="#475569">X-அச்சு: 1 செ.மீ = 1 அலகு</text>
+                <text x="226" y="52" font-size="8" fill="#475569">Y-அச்சு: 1 செ.மீ = 2 அலகுகள்</text>
+                <rect x="110" y="24" width="116" height="24" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1" />
+                <text x="168" y="40" font-size="11" font-weight="bold" fill="#1d4ed8" text-anchor="middle">y = (x - 2)²</text>
+              </svg>
+              <div style="font-size:11.5px; color:#15803d; font-weight:700; margin-top:6px; background:#dcfce7; padding:6px 10px; border-radius:6px;">
+                ✔ பரவளையம் X-அச்சை ஒரே ஒரு புள்ளியில் (2, 0) தொட்டுச் செல்வதால் மூலங்கள் மெய் மற்றும் சமம். தீர்வு கணம்: {2}
+              </div>
+            </div>
             <b>படி 5: வரைபடம் & தீர்வுகளின் தன்மை:</b><br>
             இப்பரவளையமானது X-அச்சை <b>(2, 0)</b> என்ற ஒரே ஒரு புள்ளியில் மட்டுமே தொட்டுச் செல்கிறது.<br><br>
             <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
@@ -618,6 +744,9 @@ const MATHS_TM_UNIT_3_DATA = {
         },
         {
           id: "m_tm_3_4_3",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           type: "8m",
           mark: "8 மதிப்பெண்",
           is8Mark: true,
@@ -659,6 +788,67 @@ const MATHS_TM_UNIT_3_DATA = {
             <b>படி 3: அளவுத் திட்டம்:</b><br>
             • X-அச்சு: 1 செ.மீ = 1 அலகு<br>
             • Y-அச்சு: 1 செ.மீ = 1 அலகு<br><br>
+            <div class="ai-svg-diagram-wrapper" style="margin:16px 0; padding:12px; background:#f8fafc; border:1.5px solid #0284c7; border-radius:10px; text-align:center;">
+              <div style="font-size:12.5px; font-weight:800; color:#0369a1; margin-bottom:8px; display:flex; align-items:center; justify-content:center; gap:6px;">
+                <span>📊 வரைபட முறைத் தீர்வு: y = x² + 3x - 4</span>
+              </div>
+              <svg width="360" height="300" viewBox="0 0 360 300" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+                <defs>
+                  <pattern id="grid_u3_8m_3_tm" width="28" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M 28 0 L 0 0 0 20" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+                  </pattern>
+                  <marker id="arrow_u3_3_tm" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#334155" />
+                  </marker>
+                </defs>
+                <rect width="360" height="300" fill="url(#grid_u3_8m_3_tm)" />
+                <line x1="20" y1="170" x2="340" y2="170" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_3_tm)" />
+                <line x1="340" y1="170" x2="20" y2="170" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_3_tm)" />
+                <line x1="210" y1="285" x2="210" y2="15" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_3_tm)" />
+                <line x1="210" y1="15" x2="210" y2="285" stroke="#334155" stroke-width="2" marker-end="url(#arrow_u3_3_tm)" />
+                <text x="345" y="165" font-size="12" font-weight="bold" fill="#334155">X</text>
+                <text x="12" y="165" font-size="12" font-weight="bold" fill="#334155">X'</text>
+                <text x="216" y="22" font-size="12" font-weight="bold" fill="#334155">Y</text>
+                <text x="216" y="295" font-size="12" font-weight="bold" fill="#334155">Y'</text>
+                <text x="216" y="185" font-size="11" font-weight="bold" fill="#64748b">O(0,0)</text>
+                <text x="70" y="185" font-size="10" text-anchor="middle" fill="#64748b">-5</text>
+                <text x="98" y="188" font-size="10" font-weight="bold" text-anchor="middle" fill="#dc2626">-4</text>
+                <text x="126" y="185" font-size="10" text-anchor="middle" fill="#64748b">-3</text>
+                <text x="154" y="185" font-size="10" text-anchor="middle" fill="#64748b">-2</text>
+                <text x="182" y="185" font-size="10" text-anchor="middle" fill="#64748b">-1</text>
+                <text x="238" y="188" font-size="10" font-weight="bold" text-anchor="middle" fill="#15803d">1</text>
+                <text x="266" y="185" font-size="10" text-anchor="middle" fill="#64748b">2</text>
+                <text x="204" y="88" font-size="9" text-anchor="end" fill="#64748b">6</text>
+                <text x="204" y="228" font-size="9" text-anchor="end" fill="#64748b">-4</text>
+                <text x="204" y="256" font-size="9" text-anchor="end" fill="#64748b">-6</text>
+                <path d="M 60,50 Q 120,257 168,257 Q 216,257 276,50" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" />
+                <circle cx="70" cy="86" r="3.5" fill="#2563eb" />
+                <circle cx="126" cy="226" r="3.5" fill="#2563eb" />
+                <circle cx="154" cy="254" r="3.5" fill="#2563eb" />
+                <circle cx="168" cy="257.5" r="4.5" fill="#7c3aed" />
+                <text x="168" y="274" font-size="9" font-weight="bold" text-anchor="middle" fill="#7c3aed">திருப்பப் புள்ளி (-1.5, -6.25)</text>
+                <circle cx="182" cy="254" r="3.5" fill="#2563eb" />
+                <circle cx="210" cy="226" r="3.5" fill="#2563eb" />
+                <circle cx="266" cy="86" r="3.5" fill="#2563eb" />
+                <circle cx="98" cy="170" r="6" fill="#dc2626" />
+                <circle cx="98" cy="170" r="9" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="2,2" />
+                <rect x="42" y="138" width="76" height="20" rx="4" fill="#fee2e2" stroke="#ef4444" stroke-width="1" />
+                <text x="80" y="152" font-size="10" font-weight="bold" fill="#b91c1c" text-anchor="middle">மூலம்: (-4, 0)</text>
+                <circle cx="238" cy="170" r="6" fill="#16a34a" />
+                <circle cx="238" cy="170" r="9" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="2,2" />
+                <rect x="222" y="138" width="72" height="20" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1" />
+                <text x="258" y="152" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">மூலம்: (1, 0)</text>
+                <rect x="220" y="22" width="128" height="38" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1" />
+                <text x="226" y="36" font-size="8.5" font-weight="bold" fill="#334155">அளவுத் திட்டம்:</text>
+                <text x="226" y="46" font-size="8" fill="#475569">X-அச்சு: 1 செ.மீ = 1 அலகு</text>
+                <text x="226" y="56" font-size="8" fill="#475569">Y-அச்சு: 1 செ.மீ = 2 அலகுகள்</text>
+                <rect x="26" y="24" width="116" height="24" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1" />
+                <text x="84" y="40" font-size="10.5" font-weight="bold" fill="#1d4ed8" text-anchor="middle">y = x² + 3x - 4</text>
+              </svg>
+              <div style="font-size:11.5px; color:#166534; font-weight:700; margin-top:6px; background:#dcfce7; padding:6px 10px; border-radius:6px;">
+                ✔ பரவளையம் X-அச்சை (-4, 0) மற்றும் (1, 0) என்ற புள்ளிகளில் வெட்டுவதால் x² + 3x - 4 = 0-ன் தீர்வுகள் x = -4, 1 ஆகும்.
+              </div>
+            </div>
             <b>படி 4: தீர்வு:</b><br>
             y = 0 என்ற நேர்க்கோடு (X-அச்சு) பரவளையத்தை <b>(-4, 0)</b> மற்றும் <b>(1, 0)</b> ஆகிய புள்ளிகளில் வெட்டுகிறது.<br>
             இப்புள்ளிகளின் X-ஆயத்தொலைவுகளே தேவையான தீர்வுகள் ஆகும்.<br><br>
@@ -763,7 +953,13 @@ const MATHS_TM_UNIT_3_DATA = {
         }        ,
         {
           id: "m_tm_u3_add_q4",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           type: "5m",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
           sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
           isAdditionalPractice: true,
@@ -845,7 +1041,13 @@ const MATHS_TM_UNIT_3_DATA = {
         },
         {
           id: "m_tm_u3_add_q5",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           type: "5m",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
           sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
           isAdditionalPractice: true,
@@ -928,7 +1130,13 @@ const MATHS_TM_UNIT_3_DATA = {
         },
         {
           id: "m_tm_u3_add_q6",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           type: "5m",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
           sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
           isAdditionalPractice: true,

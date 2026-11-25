@@ -880,6 +880,8 @@ const MATHS_TM_UNIT_4_DATA = {
         },
         {
           id: "m_tm_u4_add_q2",
+          diagramSvg: true,
+          diagram: true,
           type: "2m",
           mark: "2 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
           sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
@@ -921,6 +923,8 @@ const MATHS_TM_UNIT_4_DATA = {
         },
         {
           id: "m_tm_u4_add_q3",
+          diagramSvg: true,
+          diagram: true,
           type: "5m",
           mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
           sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
@@ -1006,6 +1010,8 @@ const MATHS_TM_UNIT_4_DATA = {
         },
         {
           id: "m_tm_u4_add_q6",
+          diagramSvg: true,
+          diagram: true,
           type: "5m",
           mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
           sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
@@ -1060,6 +1066,8 @@ const MATHS_TM_UNIT_4_DATA = {
         },
         {
           id: "m_tm_u4_add_q7",
+          diagramSvg: true,
+          diagram: true,
           type: "2m",
           mark: "2 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
           sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
@@ -1114,6 +1122,8 @@ const MATHS_TM_UNIT_4_DATA = {
         },
         {
           id: "m_tm_u4_add_q8",
+          diagramSvg: true,
+          diagram: true,
           type: "5m",
           mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
           sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",
@@ -1171,6 +1181,8 @@ const MATHS_TM_UNIT_4_DATA = {
         },
         {
           id: "m_tm_u4_add_q9",
+          diagramSvg: true,
+          diagram: true,
           type: "5m",
           mark: "5 மதிப்பெண் | கூடுதல் பயிற்சி வினா",
           sectionTag: "கூடுதல் பயிற்சி வினாக்கள் (In-Text)",

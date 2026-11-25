@@ -247,6 +247,9 @@ const MATHS_EM_UNIT_5_DATA = {
         }        ,
         {
           id: "m_em_u5_add_q4",
+          diagramSvg: true,
+          diagram: true,
+          isGraph: true,
           type: "2m",
           mark: "2 Marks | Additional Practice (In-Text)",
           sectionTag: "Additional Practice (In-Text)",

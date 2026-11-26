@@ -80,7 +80,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "Explain the structure of a multipolar neuron with a neat labeled diagram and state the functions of its parts.",
           diagramCaption: "Figure: Structure of a Multipolar Neuron (Nerve Cell)",
-          diagramSvg: `<svg viewBox="0 0 760 360" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 360" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="cytonGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
               <linearGradient id="myelinGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#eab308"/></linearGradient>
@@ -167,7 +167,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "Describe the internal structure of the human heart with a neat labeled diagram and explain the circulation of blood through it.",
           diagramCaption: "Figure: Internal Structure of Human Heart (Double Circulation)",
-          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 410" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="deoxGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0369a1"/></linearGradient>
               <linearGradient id="oxGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f43f5e"/><stop offset="100%" stop-color="#be123c"/></linearGradient>
@@ -279,7 +279,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "With a neat labeled sagittal diagram, explain the structure and functions of the human brain (Forebrain, Midbrain, Hindbrain).",
           diagramCaption: "Figure: Sagittal Section of Human Brain (Major Regions)",
-          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 410" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="cerebrumGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
               <linearGradient id="cerebellumGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient>
@@ -375,7 +375,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "Explain the structure of a nephron with a neat labeled diagram and describe how urine is formed.",
           diagramCaption: "Figure: Structural & Functional Unit of Kidney (Nephron)",
-          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 410" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="bowmanGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#eab308"/></linearGradient>
             </defs>
@@ -469,7 +469,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "Explain the events of double fertilization and triple fusion in flowering plants with a neat labeled diagram.",
           diagramCaption: "Figure: Process of Double Fertilization in Angiosperms",
-          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 410" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="ovaryGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#16a34a"/></linearGradient>
               <linearGradient id="sacGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#fde047"/></linearGradient>
@@ -562,7 +562,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "Describe the structure of a human sperm and ovum with neat labeled diagrams.",
           diagramCaption: "Figure: Structure of Human Sperm (Spermatozoon) and Ovum (Egg Cell)",
-          diagramSvg: `<svg viewBox="0 0 760 400" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 400" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Structure of Human Sperm and Mature Ovum</text>
             <!-- Dividing Line -->
             <line x1="380" y1="50" x2="380" y2="380" stroke="#334155" stroke-dasharray="6,4" stroke-width="2"/>
@@ -663,7 +663,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "Differentiate the eye defects Myopia and Hypermetropia. Explain their causes and correction with neat ray diagrams.",
           diagramCaption: "Figure: Ray Optics Correction of Myopia (Concave Lens) and Hypermetropia (Convex Lens)",
-          diagramSvg: `<svg viewBox="0 0 760 420" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 420" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <text x="380" y="26" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Ray Diagrams: Myopia vs Hypermetropia Eye Defects & Correction</text>
             <line x1="380" y1="40" x2="380" y2="400" stroke="#334155" stroke-dasharray="6,4" stroke-width="2"/>
             <text x="190" y="52" font-size="14" font-weight="bold" fill="#38bdf8" text-anchor="middle">A. Myopia (Short-sightedness)</text>
@@ -762,7 +762,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "Explain the dispersion of white light through a triangular glass prism with a neat ray diagram and explain the formation of rainbow.",
           diagramCaption: "Figure: Dispersion of White Light through a Triangular Glass Prism (VIBGYOR)",
-          diagramSvg: `<svg viewBox="0 0 760 380" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 380" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="prismGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/><stop offset="100%" stop-color="#0284c7" stop-opacity="0.45"/></linearGradient>
             </defs>
@@ -831,7 +831,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "Explain the extraction of iron from haematite ore in a blast furnace with chemical equations and a neat labeled diagram.",
           diagramCaption: "Figure: Blast Furnace for Smelting Iron (Zones & Reactions)",
-          diagramSvg: `<svg viewBox="0 0 760 430" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 430" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="furnaceGradEm" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#475569"/><stop offset="50%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#334155"/></linearGradient>
               <linearGradient id="fireGradEm" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#ef4444"/><stop offset="50%" stop-color="#f97316"/><stop offset="100%" stop-color="#fde047"/></linearGradient>
@@ -905,7 +905,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "Explain the experiment to determine the real and apparent expansion of a liquid with a neat labeled diagram.",
           diagramCaption: "Figure: Apparatus to Measure Real and Apparent Liquid Expansion",
-          diagramSvg: `<svg viewBox="0 0 760 400" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 400" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Experiment: Real vs Apparent Expansion of a Liquid</text>
             <!-- Water Bath Beaker -->
             <rect x="310" y="150" width="140" height="150" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
@@ -981,7 +981,7 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "What is a nuclear reactor? Explain the essential parts of a nuclear reactor and their functions with a neat labeled schematic diagram.",
           diagramCaption: "Figure: Schematic Working Diagram of a Nuclear Reactor (Fission Power Plant)",
-          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 410" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Schematic Diagram of a Nuclear Fission Reactor</text>
             <!-- Concrete Shield Container -->
             <rect x="230" y="70" width="160" height="270" rx="12" fill="#334155" stroke="#94a3b8" stroke-width="8"/>
@@ -1136,7 +1136,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "பலமுனை நியூரானின் (நரம்புச் செல்) அமைப்பைத் தெளிவான படத்துடன் விளக்கி, அதன் முக்கியப் பாகங்களின் பணிகளைக் குறிப்பிடுக.",
           diagramCaption: "படம்: பலமுனை நரம்புச் செல்லின் (நியூரான்) அமைப்பு",
-          diagramSvg: `<svg viewBox="0 0 760 360" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 360" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="cytonGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
               <linearGradient id="myelinGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#eab308"/></linearGradient>
@@ -1222,7 +1222,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "மனித இதயத்தின் உள்ளமைப்பைத் தெளிவான படத்துடன் விளக்கி, இரட்டை இரத்த ஓட்ட முறையை விவரிக்கவும்.",
           diagramCaption: "படம்: மனித இதயத்தின் உள்ளமைப்பு மற்றும் இரத்த ஓட்டம்",
-          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 410" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="deoxGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0369a1"/></linearGradient>
               <linearGradient id="oxGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f43f5e"/><stop offset="100%" stop-color="#be123c"/></linearGradient>
@@ -1319,7 +1319,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "மனித மூளையின் நீள்வெட்டுத் தோற்ற அமைப்பைத் தெளிவான படத்துடன் விளக்கி, முன்மூளை, நடுமூளை, பின்மூளையின் பணிகளைக் குறிப்பிடுக.",
           diagramCaption: "படம்: மனித மூளையின் நீள்வெட்டுத் தோற்றம்",
-          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 410" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="cerebrumGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
               <linearGradient id="cerebellumGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient>
@@ -1404,7 +1404,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "நெஃப்ரானின் (சிறுநீரக நுண்குழல்) அமைப்பைத் தெளிவான வரைபடத்துடன் விளக்கி, சிறுநீர் உருவாகும் படிநிலைகளை விவரிக்கவும்.",
           diagramCaption: "படம்: சிறுநீரக நுண்குழலின் (நெஃப்ரான்) அமைப்பு",
-          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 410" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="bowmanGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#eab308"/></linearGradient>
             </defs>
@@ -1491,7 +1491,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "ஆஞ்சியோஸ்பெர்ம்களில் நடைபெறும் இரட்டைக் கருவுறுதல் மற்றும் மூவிணைவு நிகழ்வுகளைத் தெளிவான படத்துடன் விளக்குக.",
           diagramCaption: "படம்: ஆஞ்சியோஸ்பெர்ம்களின் இரட்டைக் கருவுறுதல் மற்றும் மூவிணைவு",
-          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 410" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="ovaryGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#16a34a"/></linearGradient>
               <linearGradient id="sacGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#fde047"/></linearGradient>
@@ -1575,7 +1575,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "மனித விந்தணு மற்றும் அண்டத்தின் அமைப்பைத் தெளிவான படத்துடன் விவரிக்கவும்.",
           diagramCaption: "படம்: மனித விந்தணு மற்றும் முதிர்ந்த அண்டத்தின் அமைப்பு",
-          diagramSvg: `<svg viewBox="0 0 760 400" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 400" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">மனித விந்தணு மற்றும் முதிர்ந்த அண்டத்தின் அமைப்பு</text>
             <line x1="380" y1="50" x2="380" y2="380" stroke="#334155" stroke-dasharray="6,4" stroke-width="2"/>
             <text x="210" y="55" font-size="14" font-weight="bold" fill="#38bdf8" text-anchor="middle">A. மனித விந்தணு</text>
@@ -1667,7 +1667,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "கிட்டப்பார்வை மற்றும் தூரப்பார்வை குறைபாடுகளை ஒப்பிட்டு, அவற்றிற்கான காரணங்கள் மற்றும் லென்ஸ்கள் மூலம் சரிசெய்யும் முறையைக் கதிர் வரைபடங்களுடன் விளக்குக.",
           diagramCaption: "படம்: கிட்டப்பார்வை மற்றும் தூரப்பார்வை கதிர் வரைபடங்கள் & நிவர்த்தி",
-          diagramSvg: `<svg viewBox="0 0 760 420" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 420" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <text x="380" y="26" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">கண் குறைபாடுகள்: கிட்டப்பார்வை vs தூரப்பார்வை & நிவர்த்தி</text>
             <line x1="380" y1="40" x2="380" y2="400" stroke="#334155" stroke-dasharray="6,4" stroke-width="2"/>
             <text x="190" y="52" font-size="14" font-weight="bold" fill="#38bdf8" text-anchor="middle">A. கிட்டப்பார்வை (மயோபியா)</text>
@@ -1763,7 +1763,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "முப்பட்டகத்தின் வழியே வெள்ளொளி செல்லும் போது ஏற்படும் நிறப்பிரிகை நிகழ்வைக் கதிர் வரைபடத்துடன் விளக்குக.",
           diagramCaption: "படம்: கண்ணாடி முப்பட்டகத்தில் வெள்ளொளி நிறப்பிரிகை (VIBGYOR)",
-          diagramSvg: `<svg viewBox="0 0 760 380" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 380" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="prismGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/><stop offset="100%" stop-color="#0284c7" stop-opacity="0.45"/></linearGradient>
             </defs>
@@ -1825,7 +1825,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "ஹேமடைட் தாதுவிலிருந்து ஊது உலையின் மூலம் இரும்பு பிரித்தெடுக்கப்படும் உருக்கிப் பிரித்தல் முறையைச் சமன்பாடுகளுடன் படத்துடன் விளக்குக.",
           diagramCaption: "படம்: இரும்பு பிரித்தெடுக்கும் ஊது உலை அமைப்பு மற்றும் வேதி மண்டலங்கள்",
-          diagramSvg: `<svg viewBox="0 0 760 430" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 430" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
               <linearGradient id="furnaceGradTm" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#475569"/><stop offset="50%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#334155"/></linearGradient>
               <linearGradient id="fireGradTm" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#ef4444"/><stop offset="50%" stop-color="#f97316"/><stop offset="100%" stop-color="#fde047"/></linearGradient>
@@ -1892,7 +1892,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "திரவங்களின் உண்மை விரிவு மற்றும் தோற்ற விரிவை அளவிடும் சோதனையைத் தெளிவான படத்துடன் விளக்குக.",
           diagramCaption: "படம்: திரவங்களின் உண்மை மற்றும் தோற்ற விரிவு காணும் ஆய்வு அமைப்பு",
-          diagramSvg: `<svg viewBox="0 0 760 400" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 400" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">திரவங்களின் உண்மை விரிவு மற்றும் தோற்ற விரிவு பரிசோதனை</text>
             <rect x="310" y="150" width="140" height="150" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
             <rect x="312" y="165" width="136" height="132" fill="#0284c7" opacity="0.25"/>
@@ -1961,7 +1961,7 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "அணுக்கரு உலை என்றால் என்ன? அணுக்கரு உலையின் முக்கியப் பாகங்கள் மற்றும் அவற்றின் பணிகளைத் தெளிவான வரைபடத்துடன் விளக்குக.",
           diagramCaption: "படம்: அணுக்கரு மின் உற்பத்தி உலையின் மாதிரி வரைபடம்",
-          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+          diagramSvg: `<svg viewBox="-240 0 1240 410" style="width:100%; max-width:880px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">அணுக்கரு மின் உற்பத்தி உலையின் மாதிரி வரைபடம்</text>
             <rect x="230" y="70" width="160" height="270" rx="12" fill="#334155" stroke="#94a3b8" stroke-width="8"/>
             <rect x="250" y="90" width="120" height="230" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
@@ -1999,10 +1999,10 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
             <text x="560" y="65" font-size="13.5" fill="#ef4444" font-weight="bold">சூடான குளிர்விப்பான் (திரவ சோடியம்)</text>
             <line x1="500" y1="210" x2="550" y2="185" stroke="#94a3b8" stroke-width="1.5"/><circle cx="500" cy="210" r="3.5" fill="#f59e0b"/>
             <text x="560" y="190" font-size="13.5" fill="#fde047" font-weight="bold">நீராவி உருவாக்கி (வெப்பப் பரிமாற்றி)</text>
-            <line x1="600" y1="110" x2="650" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="600" cy="110" r="3.5" fill="#eab308"/>
-            <text x="660" y="115" font-size="13.5" fill="#38bdf8" font-weight="bold">விசையாழி & மின்னாக்கி (Turbine)</text>
-            <line x1="620" y1="270" x2="650" y2="270" stroke="#94a3b8" stroke-width="1.5"/><circle cx="620" cy="270" r="3.5" fill="#06b6d4"/>
-            <text x="660" y="275" font-size="13.5" fill="#22d3ee" font-weight="bold">குளிர்விக்கும் நீர் சுழற்சி (Condenser)</text>
+            <line x1="600" y1="110" x2="615" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="600" cy="110" r="3.5" fill="#eab308"/>
+            <text x="625" y="115" font-size="13" fill="#38bdf8" font-weight="bold">விசையாழி & மின்னாக்கி (Turbine)</text>
+            <line x1="620" y1="270" x2="600" y2="270" stroke="#94a3b8" stroke-width="1.5"/><circle cx="620" cy="270" r="3.5" fill="#06b6d4"/>
+            <text x="610" y="275" font-size="13" fill="#22d3ee" font-weight="bold">குளிர்விக்கும் நீர் சுழற்சி (Condenser)</text>
           </svg>`,
           ans: `<div style="line-height:1.8;">
             <b>அணுக்கரு உலை அமைப்பு மற்றும் செயல்படும் விதம்:</b><br><br>

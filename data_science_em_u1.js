@@ -1045,3 +1045,36 @@ if (typeof SCIENCE_EM_UNIT_1_DATA !== 'undefined') {
     ]
   });
 }
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_EM_UNIT_1_DATA !== 'undefined' && SCIENCE_EM_UNIT_1_DATA.subSections && SCIENCE_EM_UNIT_1_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_EM_UNIT_1_DATA.subSections[SCIENCE_EM_UNIT_1_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_em_u1_7m_grav',
+        type: '7m',
+        mark: '7 Marks',
+        examTag: 'Public Exam 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "State Newton's Universal Law of Gravitation, derive its mathematical expression, and list its important applications in astrophysics and space science.",
+        ans: `<div style="line-height:1.8;">
+          <b>Newton's Universal Law of Gravitation:</b><br><br>
+          <b>1. Statement:</b><br>
+          Every particle of matter in this universe attracts every other particle with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers.<br><br>
+          <b>2. Mathematical Derivation:</b><br>
+          • Let two bodies A and B have masses <b>m₁</b> and <b>m₂</b>, separated by a distance <b>r</b>.<br>
+          • Force is directly proportional to product of masses: <b>F ∝ m₁ · m₂</b><br>
+          • Force is inversely proportional to square of distance: <b>F ∝ 1 / r²</b><br>
+          • Combining both:<br>
+          <div style="text-align:center; font-size:16px; font-weight:bold; color:#0369a1; padding:8px; background:#f0f9ff; border-radius:8px;">F = G · (m₁ · m₂) / r²</div><br>
+          • Where <b>G</b> is the <b>Universal Gravitational Constant</b> (G = <b>6.674 × 10⁻¹¹ N m² kg⁻²</b>).<br><br>
+          <b>3. Important Applications of Gravitation Law:</b><br>
+          1. <i>Mass and Radius of Celestial Bodies:</i> Helps accurately calculate the mass of the Earth, Sun, Moon, and other planets.<br>
+          2. <i>Discovery of New Heavenly Bodies:</i> Anomalies in orbital motions of planets led directly to discovering new planets (e.g., Neptune) and stars.<br>
+          3. <i>Explaining Tides:</i> Accurately explains high and low ocean tides produced by gravitational pulls of the Moon and Sun.<br>
+          4. <i>Satellite Trajectories:</i> Essential for predicting satellite orbits, escape velocities, and rocket launch trajectories.</div>`
+      });
+  }
+})();

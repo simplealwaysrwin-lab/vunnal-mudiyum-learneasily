@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -181,7 +181,7 @@
 <script src="data_maths_em_u6.js?v=20261126_v135"></script>
 <script src="data_maths_em_u7.js?v=20261126_v135"></script>
 <script src="data_maths_em_u8.js?v=20261126_v135"></script>
-<script src="data_science_diagram_tips.js?v=20261126_v135"></script>
+<script src="data_science_diagram_tips.js?v=20261126_v136"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
 <script src="data_science_u3.js?v=20261031_v31"></script>
@@ -7626,13 +7626,13 @@ function resumeLastVisitedLesson() {
     const lesId = (lesson.id === 'math_u1' || lesson.id === 'maths_u1') ? 'math_tm_u1' : lesson.id;
     if (lesId === 'sci_em_diag_tips' && typeof SCIENCE_DIAGRAM_TIPS_EM !== 'undefined' && SCIENCE_DIAGRAM_TIPS_EM.subSections) {
       lesson.subSections = SCIENCE_DIAGRAM_TIPS_EM.subSections;
-      lesson.questions = SCIENCE_DIAGRAM_TIPS_EM.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = SCIENCE_DIAGRAM_TIPS_EM.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: q.sectionTitle || s.title, author: q.author || s.author })));
       lesson.formulas = SCIENCE_DIAGRAM_TIPS_EM.formulas || [];
       lesson.qCount = lesson.questions.length;
       return;
     } else if (lesId === 'sci_diag_tips' && typeof SCIENCE_DIAGRAM_TIPS_TM !== 'undefined' && SCIENCE_DIAGRAM_TIPS_TM.subSections) {
       lesson.subSections = SCIENCE_DIAGRAM_TIPS_TM.subSections;
-      lesson.questions = SCIENCE_DIAGRAM_TIPS_TM.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = SCIENCE_DIAGRAM_TIPS_TM.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: q.sectionTitle || s.title, author: q.author || s.author })));
       lesson.formulas = SCIENCE_DIAGRAM_TIPS_TM.formulas || [];
       lesson.qCount = lesson.questions.length;
       return;
@@ -8357,6 +8357,10 @@ function resumeLastVisitedLesson() {
       lesson.formulas = MATHS_EM_UNIT_8_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     }
+    if (lesson && lesson.subSections && Array.isArray(lesson.subSections)) {
+      lesson.questions = lesson.subSections.flatMap(s => (s.questions || []).map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: q.sectionTitle || s.title, author: q.author || s.author })));
+      lesson.qCount = lesson.questions.length;
+    }
   }
 
   function selectLesson(lesId, defaultFilter = 'all') {
@@ -8717,6 +8721,22 @@ function resumeLastVisitedLesson() {
       return false;
     };
 
+    const isExtraQuestion = (q) => {
+      if (!q) return false;
+      if (q.isAdditionalPractice) return true;
+      const id = (q.id || '').toLowerCase();
+      if (id.includes('_add_') || id.includes('_out_') || id.includes('_extra_')) return true;
+      const secId = (q.subSectionId || '').toLowerCase();
+      if (secId.includes('outside') || secId.includes('add_practice') || secId.includes('extra')) return true;
+      const examTag = (q.examTag || '').toLowerCase();
+      if (examTag.includes('à®•à¯‚à®Ÿà¯à®¤à®²à¯') || examTag.includes('\u0B95\u0BC2\u0B9F\u0BC1\u0BA4\u0BB2\u0BCD') || examTag.includes('outside') || examTag.includes('extra') || examTag.includes('additional')) return true;
+      const secTitle = (q.sectionTitle || '').toLowerCase();
+      if (secTitle.includes('à®•à¯‚à®Ÿà¯à®¤à®²à¯') || secTitle.includes('\u0B95\u0BC2\u0B9F\u0BC1\u0BA4\u0BB2\u0BCD') || secTitle.includes('outside') || secTitle.includes('extra') || secTitle.includes('additional')) return true;
+      const secTag = (q.sectionTag || '').toLowerCase();
+      if (secTag.includes('à®•à¯‚à®Ÿà¯à®¤à®²à¯') || secTag.includes('\u0B95\u0BC2\u0B9F\u0BC1\u0BA4\u0BB2\u0BCD') || secTag.includes('outside') || secTag.includes('extra') || secTag.includes('additional')) return true;
+      return false;
+    };
+
     let filteredQ = allQuestions;
 
     // Filter by SubSection (unless viewing extra questions filter batch)
@@ -8749,7 +8769,7 @@ function resumeLastVisitedLesson() {
     } else if (currentFilter === 'public' || currentFilter === '2025') {
       filteredQ = filteredQ.filter(q => q.examYear || q.examTag || q.isImportant);
     } else if (currentFilter === 'extra') {
-      filteredQ = filteredQ.filter(q => q.isAdditionalPractice || (q.sectionTag && (q.sectionTag.includes('Additional Practice') || q.sectionTag.includes('\u0B95\u0BC2\u0B9F\u0BC1\u0BA4\u0BB2\u0BCD \u0BB5\u0BBF\u0BA9\u0BBE') || q.sectionTag.includes('Extra'))) || (q.subSectionId && q.subSectionId.includes('add_practice')) || (q.id && q.id.includes('_add_')));
+      filteredQ = filteredQ.filter(isExtraQuestion);
     }
 
     // Filter by Search Query
@@ -8772,14 +8792,14 @@ function resumeLastVisitedLesson() {
     const count5M = allQuestions.filter(q => q.type === '5m' || q.type === '4m' || (q.mark && (q.mark.includes('5') || q.mark.includes('4')))).length;
     const count8M = allQuestions.filter(q => q.type === '8m' || (q.mark && q.mark.includes('8')) || q.is8Mark || (q.subSectionId && (q.subSectionId.includes('geo') || q.subSectionId.includes('graph') || q.subSectionId.includes('map') || q.subSectionId.includes('timeline')))).length;
     const countDiag = allQuestions.filter(isGraphOrDiagramQuestion).length;
-    const countExtra = allQuestions.filter(q => q.isAdditionalPractice || (q.sectionTag && (q.sectionTag.includes('Additional Practice') || q.sectionTag.includes('\u0B95\u0BC2\u0B9F\u0BC1\u0BA4\u0BB2\u0BCD \u0BB5\u0BBF\u0BA9\u0BBE') || q.sectionTag.includes('Extra'))) || (q.subSectionId && q.subSectionId.includes('add_practice')) || (q.id && q.id.includes('_add_'))).length;
+    const countExtra = allQuestions.filter(isExtraQuestion).length;
     const countCheckpoints = allQuestions.filter(q => q.checkpoints && q.checkpoints.length > 0).length;
     const hasManapaadam = currentLesson && currentLesson.manapaadam && currentLesson.manapaadam.length > 0;
     const manapaadamCount = hasManapaadam ? currentLesson.manapaadam.length : 0;
 
     // Book-like Pagination Calculations (5 questions per page; 1 question per page for long detailed answers)
     const isCheckpointsView = (currentFilter === 'checkpoints');
-    const isExtraView = (currentFilter === 'extra' || (currentSubSection && currentSubSection.includes('add_practice')));
+    const isExtraView = (currentFilter === 'extra' || (currentSubSection && (currentSubSection.includes('add_practice') || currentSubSection.includes('outside') || currentSubSection.includes('extra'))));
     const isDiagramView = (currentFilter === 'diagram');
     const isLongAnswerView = (currentFilter === '5m' || currentFilter === '4m' || currentFilter === '7m' || currentFilter === '8m');
     const is5MView = isLongAnswerView;
@@ -9246,6 +9266,35 @@ function resumeLastVisitedLesson() {
                   ? `Part IV comprehensive 8-mark questions are available in the major essay sections as prescribed by the Tamil Nadu state board blueprint.`
                   : `இப்பாடத்திற்கான 8-மதிப்பெண் பெருவினாக்கள் அரசுப் பொதுத்தேர்வு வினாத்தாள் புளூபிரிண்ட்டின் படி முக்கிய அலகுகளில் விரிவாகத் தொகுக்கப்பட்டுள்ளன.`}
               </p>
+            </div>
+          ` : (currentFilter === 'extra') ? `
+            <div class="student-tip-card" style="background:linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border:1.5px solid #bfdbfe; border-left:6px solid #2563eb; border-radius:14px; padding:20px; margin:16px 0; box-shadow:0 4px 14px rgba(37,99,235,0.1);">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <span style="font-size:26px;">📘</span>
+                <div>
+                  <h3 style="margin:0; font-size:16px; font-weight:800; color:#1e40af;">
+                    ${isEm ? 'Additional Practice & Board Exam Preparation' : 'கூடுதல் பயிற்சி வினாக்கள் & அரசுத் தேர்வு வழிகாட்டல்'}
+                  </h3>
+                  <div style="font-size:12px; font-weight:700; color:#2563eb; margin-top:2px;">
+                    ${isEm ? 'Comprehensive Question Bank Coverage' : 'முழுமையான வினாத் தொகுப்பு வழிகாட்டல்'}
+                  </div>
+                </div>
+              </div>
+              <p style="font-size:13.5px; color:#1e3a8a; line-height:1.7; margin:0 0 14px 0;">
+                ${isEm 
+                  ? `All core syllabus questions for <b>${currentLesson.title}</b> are directly available in the <b>All, 1M, 2M, 4M, and 7M</b> tabs. For high-scoring diagrams and special additional exam practice, check out the dedicated <b>🎨 Diagram Master</b> topic!`
+                  : `<b>${currentLesson.title}</b> பாடத்தின் அனைத்து முக்கியமான அரசுத் தேர்வு வினாக்களும் <b>அனைத்தும், 1M, 2M, 4M மற்றும் 7M</b> பிரிவுகளில் முழுமையாகத் தொகுக்கப்பட்டுள்ளன. சிறப்பு வரைபடங்கள் மற்றும் மாதிரிப் பயிற்சிகளுக்கு <b>🎨 வரைபடங்கள் (Diagrams)</b> தலைப்பைக் காண்க.`}
+              </p>
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <button type="button" class="tab-btn" onclick="setFilter('all')" style="background:#2563eb; color:#fff; font-weight:700; font-size:13px; padding:8px 18px; border-radius:10px; border:none; cursor:pointer;">
+                  ${isEm ? '📖 View All Lesson Questions' : '📖 அனைத்து வினாக்களையும் காண்க'}
+                </button>
+                ${isScience ? `
+                  <button type="button" class="tab-btn" onclick="selectLesson('${isEm ? 'sci_em_diag_tips' : 'sci_diag_tips'}')" style="background:linear-gradient(135deg, #059669, #10b981); color:#fff; font-weight:700; font-size:13px; padding:8px 18px; border-radius:10px; border:none; cursor:pointer;">
+                    ${isEm ? '🎨 Open Diagram Master ➔' : '🎨 வரைபடக் குறிப்புகள் & படங்கள் ➔'}
+                  </button>
+                ` : ''}
+              </div>
             </div>
           ` : `
             <div class="empty-state">

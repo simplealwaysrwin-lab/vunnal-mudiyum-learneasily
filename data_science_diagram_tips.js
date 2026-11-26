@@ -1,4 +1,9 @@
-﻿const SCIENCE_DIAGRAM_TIPS_EM = {
+﻿/**
+ * 10th Standard Science - Board Exam Diagram Master Tips & High-Scoring Diagrams
+ * English Medium & Tamil Medium
+ * Fully Responsive Diagrams with Labeled Parts & Functions Key
+ */
+const SCIENCE_DIAGRAM_TIPS_EM = {
   unitId: "sci_em_diag_tips",
   unitName: "Science Diagram Master Tips & High-Scoring Diagrams",
   subject: "Science (English Medium)",
@@ -24,11 +29,12 @@
           id: "sci_em_dt_1",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Exam Golden Rules",
+          examTag: "Outside Book / Extra Practice Diagram",
           isImportant: true,
           isAdditionalPractice: true,
+          diagram: true,
           q: "What are the essential golden rules, labeling techniques, and presentation guidelines to score full marks in Class 10 Science diagrams?",
-          ans: `<div style=\"line-height:1.8;\">
+          ans: `<div style="line-height:1.8;">
             <b>Class 10 Science Public Examination: Diagram Presentation Master Guide</b><br><br>
             According to the Tamil Nadu State Board (Samacheer Kalvi) evaluation scheme, science diagrams carry high weightage in 4-mark and 7-mark questions (Part IV: Q.No. 33, 34, 35). Follow these 7 golden rules to guarantee 100% marks in every diagram question:<br><br>
             <b>1. The Sharp HB Pencil Only Rule:</b><br>
@@ -68,568 +74,986 @@
           id: "sci_em_dt_2",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Public Exam 7M",
+          examTag: "Outside Book / Extra Practice Diagram",
           isImportant: true,
           isAdditionalPractice: true,
+          diagram: true,
           q: "Explain the structure of a multipolar neuron with a neat labeled diagram and state the functions of its parts.",
           diagramCaption: "Figure: Structure of a Multipolar Neuron (Nerve Cell)",
-          diagramSvg: `<svg viewBox=\"0 0 540 280\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
+          diagramSvg: `<svg viewBox="0 0 760 360" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
-              <linearGradient id=\"cytonGradEm\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#38bdf8\" /><stop offset=\"100%\" stop-color=\"#0284c7\" /></linearGradient>
-              <linearGradient id=\"myelinGradEm\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#fef08a\" /><stop offset=\"100%\" stop-color=\"#eab308\" /></linearGradient>
+              <linearGradient id="cytonGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
+              <linearGradient id="myelinGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#eab308"/></linearGradient>
             </defs>
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Structure of a Multipolar Neuron</text>
-            <g transform=\"translate(40, 50)\">
-              <path d=\"M 60 70 L 10 30 M 60 70 L 25 10 M 70 60 L 50 10 M 80 50 L 80 5 M 95 60 L 120 15 M 100 80 L 140 40 M 60 90 L 15 110 M 70 100 L 40 140\" stroke=\"#38bdf8\" stroke-width=\"2.5\" fill=\"none\" stroke-linecap=\"round\"/>
-              <polygon points=\"60,70 70,55 90,50 105,65 110,85 95,105 75,105 60,90\" fill=\"url(#cytonGradEm)\" stroke=\"#0284c7\" stroke-width=\"2\"/>
-              <circle cx=\"85\" cy=\"80\" r=\"14\" fill=\"#1e293b\" stroke=\"#f8fafc\" stroke-width=\"1.5\"/>
-              <circle cx=\"85\" cy=\"80\" r=\"5\" fill=\"#f8fafc\"/>
-              <circle cx=\"73\" cy=\"70\" r=\"1.5\" fill=\"#bae6fd\"/><circle cx=\"97\" cy=\"70\" r=\"1.5\" fill=\"#bae6fd\"/>
-              <circle cx=\"75\" cy=\"95\" r=\"1.5\" fill=\"#bae6fd\"/><circle cx=\"95\" cy=\"95\" r=\"1.5\" fill=\"#bae6fd\"/>
+            <text x="380" y="30" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Structure of a Multipolar Neuron (Nerve Cell)</text>
+            <g transform="translate(180, 80)">
+              <path d="M 60 70 L 10 25 M 60 70 L 25 5 M 70 60 L 50 5 M 80 50 L 80 0 M 95 60 L 120 10 M 100 80 L 140 35 M 60 90 L 15 115 M 70 100 L 35 145" stroke="#38bdf8" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <polygon points="60,70 70,55 90,50 105,65 110,85 95,105 75,105 60,90" fill="url(#cytonGradEm)" stroke="#0284c7" stroke-width="2.5"/>
+              <circle cx="85" cy="80" r="16" fill="#1e293b" stroke="#f8fafc" stroke-width="2"/>
+              <circle cx="85" cy="80" r="6" fill="#f8fafc"/>
+              <circle cx="73" cy="70" r="2" fill="#bae6fd"/><circle cx="97" cy="70" r="2" fill="#bae6fd"/>
+              <circle cx="75" cy="95" r="2" fill="#bae6fd"/><circle cx="95" cy="95" r="2" fill="#bae6fd"/>
             </g>
-            <line x1=\"150\" y1=\"130\" x2=\"420\" y2=\"130\" stroke=\"#38bdf8\" stroke-width=\"4\"/>
-            <rect x=\"165\" y=\"116\" width=\"50\" height=\"28\" rx=\"6\" fill=\"url(#myelinGradEm)\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><circle cx=\"190\" cy=\"122\" r=\"3\" fill=\"#713f12\"/>
-            <rect x=\"225\" y=\"116\" width=\"50\" height=\"28\" rx=\"6\" fill=\"url(#myelinGradEm)\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><circle cx=\"250\" cy=\"122\" r=\"3\" fill=\"#713f12\"/>
-            <rect x=\"285\" y=\"116\" width=\"50\" height=\"28\" rx=\"6\" fill=\"url(#myelinGradEm)\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><circle cx=\"310\" cy=\"122\" r=\"3\" fill=\"#713f12\"/>
-            <rect x=\"345\" y=\"116\" width=\"50\" height=\"28\" rx=\"6\" fill=\"url(#myelinGradEm)\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><circle cx=\"370\" cy=\"122\" r=\"3\" fill=\"#713f12\"/>
-            <g transform=\"translate(415, 130)\">
-              <path d=\"M 0 0 L 30 -25 M 30 -25 L 50 -35 M 30 -25 L 50 -15 M 0 0 L 35 0 M 35 0 L 55 0 M 0 0 L 30 25 M 30 25 L 50 15 M 30 25 L 50 35\" stroke=\"#38bdf8\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/>
-              <circle cx=\"50\" cy=\"-35\" r=\"4\" fill=\"#ec4899\"/><circle cx=\"50\" cy=\"-15\" r=\"4\" fill=\"#ec4899\"/>
-              <circle cx=\"55\" cy=\"0\" r=\"4\" fill=\"#ec4899\"/><circle cx=\"50\" cy=\"15\" r=\"4\" fill=\"#ec4899\"/><circle cx=\"50\" cy=\"35\" r=\"4\" fill=\"#ec4899\"/>
+            <line x1="285" y1="160" x2="540" y2="160" stroke="#38bdf8" stroke-width="5"/>
+            <rect x="300" y="144" width="48" height="32" rx="6" fill="url(#myelinGradEm)" stroke="#ca8a04" stroke-width="1.8"/><circle cx="324" cy="152" r="3.5" fill="#713f12"/>
+            <rect x="360" y="144" width="48" height="32" rx="6" fill="url(#myelinGradEm)" stroke="#ca8a04" stroke-width="1.8"/><circle cx="384" cy="152" r="3.5" fill="#713f12"/>
+            <rect x="420" y="144" width="48" height="32" rx="6" fill="url(#myelinGradEm)" stroke="#ca8a04" stroke-width="1.8"/><circle cx="444" cy="152" r="3.5" fill="#713f12"/>
+            <rect x="480" y="144" width="48" height="32" rx="6" fill="url(#myelinGradEm)" stroke="#ca8a04" stroke-width="1.8"/><circle cx="504" cy="152" r="3.5" fill="#713f12"/>
+            <g transform="translate(540, 160)">
+              <path d="M 0 0 L 30 -25 M 30 -25 L 50 -35 M 30 -25 L 50 -15 M 0 0 L 35 0 M 35 0 L 55 0 M 0 0 L 30 25 M 30 25 L 50 15 M 30 25 L 50 35" stroke="#38bdf8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="50" cy="-35" r="5" fill="#ec4899"/><circle cx="50" cy="-15" r="5" fill="#ec4899"/>
+              <circle cx="55" cy="0" r="5" fill="#ec4899"/><circle cx="50" cy="15" r="5" fill="#ec4899"/><circle cx="50" cy="35" r="5" fill="#ec4899"/>
             </g>
-            <line x1=\"50\" y1=\"65\" x2=\"15\" y2=\"65\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"10\" y=\"68\" font-size=\"11\" fill=\"#e2e8f0\" font-weight=\"bold\" text-anchor=\"end\">Dendrites</text>
-            <line x1=\"125\" y1=\"110\" x2=\"125\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"125\" y1=\"185\" x2=\"50\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"188\" font-size=\"11\" fill=\"#e2e8f0\" font-weight=\"bold\" text-anchor=\"end\">Cyton (Cell body)</text>
-            <line x1=\"125\" y1=\"130\" x2=\"125\" y2=\"215\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"125\" y1=\"215\" x2=\"50\" y2=\"215\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"218\" font-size=\"11\" fill=\"#e2e8f0\" font-weight=\"bold\" text-anchor=\"end\">Nucleus</text>
-            <line x1=\"218\" y1=\"130\" x2=\"218\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"218\" y1=\"185\" x2=\"260\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"265\" y=\"188\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\">Node of Ranvier</text>
-            <line x1=\"310\" y1=\"116\" x2=\"310\" y2=\"75\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"310\" y1=\"75\" x2=\"350\" y2=\"75\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"355\" y=\"78\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\">Myelin Sheath</text>
-            <line x1=\"270\" y1=\"130\" x2=\"270\" y2=\"225\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"270\" y1=\"225\" x2=\"320\" y2=\"225\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"325\" y=\"228\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\">Axon (Nerve fiber)</text>
-            <line x1=\"465\" y1=\"130\" x2=\"495\" y2=\"130\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"500\" y=\"133\" font-size=\"11\" fill=\"#f472b6\" font-weight=\"bold\">Synaptic Knob</text>
+            <line x1="220" y1="110" x2="200" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="220" cy="110" r="3.5" fill="#38bdf8"/>
+            <text x="190" y="115" font-size="13.5" fill="#ffffff" font-weight="bold" text-anchor="end">Dendrites (Receptors)</text>
+            <line x1="265" y1="160" x2="200" y2="175" stroke="#94a3b8" stroke-width="1.5"/><circle cx="265" cy="160" r="3.5" fill="#38bdf8"/>
+            <text x="190" y="180" font-size="13.5" fill="#ffffff" font-weight="bold" text-anchor="end">Cyton / Cell Body</text>
+            <line x1="265" y1="160" x2="200" y2="235" stroke="#94a3b8" stroke-width="1.5"/><circle cx="265" cy="160" r="3.5" fill="#f8fafc"/>
+            <text x="190" y="240" font-size="13.5" fill="#ffffff" font-weight="bold" text-anchor="end">Nucleus & Nissl's Granules</text>
+            <line x1="444" y1="144" x2="444" y2="95" stroke="#94a3b8" stroke-width="1.5"/><circle cx="444" cy="144" r="3.5" fill="#eab308"/>
+            <text x="444" y="85" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="middle">Myelin Sheath (Insulation)</text>
+            <line x1="410" y1="160" x2="410" y2="225" stroke="#94a3b8" stroke-width="1.5"/><circle cx="410" cy="160" r="3.5" fill="#eab308"/>
+            <text x="410" y="245" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="middle">Node of Ranvier (Gap)</text>
+            <line x1="450" y1="160" x2="570" y2="195" stroke="#94a3b8" stroke-width="1.5"/><circle cx="450" cy="160" r="3.5" fill="#38bdf8"/>
+            <text x="580" y="200" font-size="13.5" fill="#38bdf8" font-weight="bold">Axon (Nerve Fiber)</text>
+            <line x1="595" y1="160" x2="605" y2="160" stroke="#94a3b8" stroke-width="1.5"/><circle cx="595" cy="160" r="3.5" fill="#ec4899"/>
+            <text x="615" y="165" font-size="13.5" fill="#f472b6" font-weight="bold">Synaptic Knobs (Bulbs)</text>
+            <text x="420" y="310" font-size="13" font-weight="bold" fill="#4ade80" text-anchor="middle">───➔ Direction of Nerve Impulse (Conduction) ───➔</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>Structure of a Neuron (Nerve Cell):</b><br><br>
-            A neuron is the structural and functional unit of the nervous system. It consists of three primary parts:<br><br>
+          ans: `<div style="line-height:1.8;">
+            <b>Structure of a Multipolar Neuron (Nerve Cell):</b><br><br>
+            A neuron is the basic structural and functional unit of the nervous system. It consists of three primary parts:<br><br>
             <b>1. Cyton (Cell Body / Perikaryon / Soma):</b><br>
             • Contains a central, prominent spherical <b>nucleus</b> and granular cytoplasm called <b>neuroplasm</b>.<br>
-            • Contains specialized basophilic granular bodies called <b>Nissl's granules</b> (rough ER for protein synthesis) and mitochondria.<br><br>
+            • Contains specialized granular bodies called <b>Nissl's granules</b> (rough ER for protein synthesis) and mitochondria.<br><br>
             <b>2. Dendrites (Receptive Processes):</b><br>
             • Multiple, short, highly branched cytoplasmic extensions projecting from the cyton.<br>
-            • <i>Function:</i> Pick up electrical/chemical impulses from sensory receptors or neighboring neurons and conduct them <b>cell-ward (towards the cyton)</b>.<br><br>
+            • <i>Function:</i> Pick up impulses from sensory receptors or adjacent neurons and conduct them <b>cell-ward (towards the cyton)</b>.<br><br>
             <b>3. Axon (Effector Fiber):</b><br>
-            • A single, elongated, slender cylindrical process originating from a conical elevation on the cyton called the <b>axon hillock</b>.<br>
+            • A single, elongated cylindrical process originating from the conical <b>axon hillock</b> on the cyton.<br>
             • Axoplasm is surrounded by the axonal membrane called the <b>axolemma</b>.<br>
-            • <i>Function:</i> Transmits nerve impulses <b>away from the cyton</b> to target organs or adjacent neurons.<br><br>
+            • <i>Function:</i> Transmits nerve impulses <b>away from the cyton</b> to target muscles, glands, or adjacent neurons.<br><br>
             <b>4. Myelin Sheath & Nodes of Ranvier:</b><br>
             • The axon is insulated by concentric lipid-rich layers of <b>myelin sheath</b> produced by Schwann cells.<br>
             • Periodic gaps where myelin is absent are called <b>Nodes of Ranvier</b>, enabling rapid <b>saltatory conduction (jumping of action potentials up to 120 m/s)</b>.<br><br>
-            <b>5. Synaptic Knobs (Terminal Arborization):</b><br>
-            • The axon terminates into fine twigs ending in bulbous swellings called <b>synaptic knobs</b> packed with neurotransmitter vesicles (<b>Acetylcholine</b>).<br>
-            • The junction between the axon terminal of one neuron and dendrite of another is called the <b>Synapse</b>.</div>`
+            <b>5. Synaptic Knobs:</b><br>
+            • Terminal bulbous swellings containing neurotransmitter vesicles (<b>Acetylcholine</b>) to transmit impulses across synapses.<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ Labeled Parts & Functions Key (Public Exam Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">No</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Part Name</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Key Physiological Function</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">1</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">Cyton (Cell Body)</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Main metabolic center containing nucleus and Nissl's granules.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">2</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">Dendrites</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Receive incoming electrical/chemical signals and conduct toward cyton.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">3</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">Axon</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Long transmitting nerve fiber; conducts impulses away from cyton.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">4</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">Myelin Sheath</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Lipid-rich insulating cover preventing signal dissipation.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">5</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">Node of Ranvier</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Unmyelinated gaps enabling high-speed saltatory impulse jumping.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">6</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#db2777;">Synaptic Knobs</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Releases neurotransmitters (Acetylcholine) across the synaptic cleft.</td></tr>
+              </table>
+            </div>
+          </div>`
         },
         {
           id: "sci_em_dt_3",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Public Exam 7M",
+          examTag: "Outside Book / Extra Practice Diagram",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "Describe the internal structure of the human heart with a labeled diagram and explain the mechanism of double circulation.",
-          diagramCaption: "Figure: Internal Structure of Human Heart & Valve Positions",
-          diagramSvg: `<svg viewBox=\"0 0 540 320\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Internal Structure of Human Heart</text>
-            <g transform=\"translate(160, 45)\">
-              <path d=\"M 110 240 C 20 200, 10 100, 60 40 C 110 -10, 130 30, 110 50 C 90 30, 110 -10, 160 40 C 210 100, 200 200, 110 240 Z\" fill=\"#be123c\" stroke=\"#fda4af\" stroke-width=\"3.5\" fill-opacity=\"0.25\"/>
-              <path d=\"M 110 50 L 110 236\" stroke=\"#f43f5e\" stroke-width=\"5\" stroke-linecap=\"round\"/>
-              <line x1=\"25\" y1=\"105\" x2=\"195\" y2=\"105\" stroke=\"#94a3b8\" stroke-width=\"2.5\" stroke-dasharray=\"4 3\"/>
-              <rect x=\"35\" y=\"50\" width=\"65\" height=\"50\" fill=\"#38bdf8\" fill-opacity=\"0.3\" rx=\"6\"/>
-              <text x=\"68\" y=\"80\" font-size=\"11\" fill=\"#bae6fd\" font-weight=\"bold\" text-anchor=\"middle\">RA</text>
-              <rect x=\"120\" y=\"50\" width=\"65\" height=\"50\" fill=\"#f43f5e\" fill-opacity=\"0.3\" rx=\"6\"/>
-              <text x=\"152\" y=\"80\" font-size=\"11\" fill=\"#fecdd3\" font-weight=\"bold\" text-anchor=\"middle\">LA</text>
-              <rect x=\"30\" y=\"115\" width=\"72\" height=\"95\" fill=\"#0284c7\" fill-opacity=\"0.3\" rx=\"8\"/>
-              <text x=\"66\" y=\"165\" font-size=\"12\" fill=\"#7dd3fc\" font-weight=\"bold\" text-anchor=\"middle\">RV</text>
-              <rect x=\"118\" y=\"115\" width=\"72\" height=\"95\" fill=\"#e11d48\" fill-opacity=\"0.35\" rx=\"8\"/>
-              <text x=\"154\" y=\"165\" font-size=\"12\" fill=\"#fda4af\" font-weight=\"bold\" text-anchor=\"middle\">LV</text>
-              <path d=\"M 55 105 L 75 105\" stroke=\"#facc15\" stroke-width=\"4\" stroke-linecap=\"round\"/>
-              <path d=\"M 140 105 L 160 105\" stroke=\"#facc15\" stroke-width=\"4\" stroke-linecap=\"round\"/>
-              <path d=\"M 130 50 C 130 15, 170 10, 180 -15\" stroke=\"#e11d48\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\"/>
-              <path d=\"M 90 50 C 90 15, 60 10, 40 -15\" stroke=\"#0284c7\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\"/>
-            </g>
-            <line x1=\"195\" y1=\"30\" x2=\"50\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"33\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">Superior Vena Cava</text>
-            <line x1=\"195\" y1=\"95\" x2=\"50\" y2=\"95\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"98\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">Right Atrium (RA)</text>
-            <line x1=\"225\" y1=\"150\" x2=\"50\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"153\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">Tricuspid Valve</text>
-            <line x1=\"220\" y1=\"210\" x2=\"50\" y2=\"210\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"213\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">Right Ventricle (RV)</text>
-            <line x1=\"270\" y1=\"260\" x2=\"50\" y2=\"260\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"263\" font-size=\"11\" fill=\"#f43f5e\" font-weight=\"bold\" text-anchor=\"end\">Interventricular Septum</text>
-            <line x1=\"340\" y1=\"30\" x2=\"430\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"33\" font-size=\"11\" fill=\"#f43f5e\" font-weight=\"bold\">Aorta (Systemic Artery)</text>
-            <line x1=\"320\" y1=\"42\" x2=\"430\" y2=\"65\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"68\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\">Pulmonary Artery</text>
-            <line x1=\"315\" y1=\"95\" x2=\"430\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"103\" font-size=\"11\" fill=\"#f43f5e\" font-weight=\"bold\">Left Atrium (LA)</text>
-            <line x1=\"310\" y1=\"150\" x2=\"430\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"153\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\">Bicuspid (Mitral) Valve</text>
-            <line x1=\"320\" y1=\"210\" x2=\"430\" y2=\"210\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"213\" font-size=\"11\" fill=\"#f43f5e\" font-weight=\"bold\">Left Ventricle (Thick Wall)</text>
+          diagram: true,
+          q: "Describe the internal structure of the human heart with a neat labeled diagram and explain the circulation of blood through it.",
+          diagramCaption: "Figure: Internal Structure of Human Heart (Double Circulation)",
+          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="deoxGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0369a1"/></linearGradient>
+              <linearGradient id="oxGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f43f5e"/><stop offset="100%" stop-color="#be123c"/></linearGradient>
+            </defs>
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Internal Structure of Human Heart</text>
+            <!-- Superior Vena Cava -->
+            <rect x="290" y="45" width="28" height="55" rx="5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+            <!-- Aorta Arch -->
+            <path d="M 390 120 C 390 50 440 40 440 90" fill="none" stroke="#e11d48" stroke-width="26" stroke-linecap="round"/>
+            <line x1="405" y1="52" x2="405" y2="35" stroke="#f43f5e" stroke-width="8"/>
+            <line x1="422" y1="46" x2="422" y2="32" stroke="#f43f5e" stroke-width="8"/>
+            <line x1="438" y1="52" x2="438" y2="35" stroke="#f43f5e" stroke-width="8"/>
+            <!-- Pulmonary Artery Arch -->
+            <path d="M 360 140 C 360 80 320 70 320 85" fill="none" stroke="#0284c7" stroke-width="20" stroke-linecap="round"/>
+            <!-- Heart Body -->
+            <path d="M 280 110 C 260 180 280 300 375 350 C 470 300 490 180 470 110 Z" fill="#1e293b" stroke="#64748b" stroke-width="3"/>
+            <!-- Right Atrium -->
+            <rect x="285" y="115" width="75" height="65" rx="10" fill="url(#deoxGradEm)" stroke="#0284c7" stroke-width="2"/>
+            <text x="322" y="152" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">RA</text>
+            <!-- Left Atrium -->
+            <rect x="390" y="115" width="75" height="65" rx="10" fill="url(#oxGradEm)" stroke="#be123c" stroke-width="2"/>
+            <text x="427" y="152" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">LA</text>
+            <!-- Right Ventricle -->
+            <path d="M 285 190 L 365 190 L 365 310 C 320 295 285 245 285 190 Z" fill="url(#deoxGradEm)" stroke="#0284c7" stroke-width="2"/>
+            <text x="325" y="250" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">RV</text>
+            <!-- Left Ventricle (Thick Wall) -->
+            <path d="M 385 190 L 465 190 C 465 245 430 295 385 320 Z" fill="url(#oxGradEm)" stroke="#be123c" stroke-width="2"/>
+            <path d="M 465 190 C 465 260 425 315 375 345 L 385 320 C 430 295 465 245 465 190 Z" fill="#9f1239"/>
+            <text x="425" y="250" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">LV</text>
+            <!-- Septum -->
+            <rect x="365" y="190" width="20" height="135" fill="#475569" stroke="#334155"/>
+            <!-- Valves -->
+            <line x1="305" y1="185" x2="345" y2="185" stroke="#fde047" stroke-width="4"/><polygon points="325,183 320,188 330,188" fill="#fde047"/>
+            <line x1="405" y1="185" x2="445" y2="185" stroke="#fde047" stroke-width="4"/><polygon points="425,183 420,188 430,188" fill="#fde047"/>
+            <!-- Pulmonary Veins entering LA -->
+            <rect x="465" y="125" width="24" height="14" rx="3" fill="#e11d48"/>
+            <rect x="465" y="145" width="24" height="14" rx="3" fill="#e11d48"/>
+            <!-- Inferior Vena Cava -->
+            <rect x="290" y="300" width="26" height="40" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+
+            <!-- LEFT LABELS (Plenty of room from 0 to 220) -->
+            <line x1="290" y1="65" x2="220" y2="65" stroke="#94a3b8" stroke-width="1.5"/><circle cx="290" cy="65" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="70" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">Superior Vena Cava</text>
+            <line x1="300" y1="140" x2="220" y2="140" stroke="#94a3b8" stroke-width="1.5"/><circle cx="300" cy="140" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="145" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">Right Atrium (RA)</text>
+            <line x1="325" y1="185" x2="220" y2="190" stroke="#94a3b8" stroke-width="1.5"/><circle cx="325" cy="185" r="3.5" fill="#fde047"/>
+            <text x="210" y="195" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="end">Tricuspid Valve</text>
+            <line x1="310" y1="250" x2="220" y2="250" stroke="#94a3b8" stroke-width="1.5"/><circle cx="310" cy="250" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="255" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">Right Ventricle (RV)</text>
+            <line x1="290" y1="320" x2="220" y2="320" stroke="#94a3b8" stroke-width="1.5"/><circle cx="290" cy="320" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="325" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">Inferior Vena Cava</text>
+            <line x1="375" y1="280" x2="220" y2="370" stroke="#94a3b8" stroke-width="1.5"/><circle cx="375" cy="280" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="375" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">Interventricular Septum</text>
+
+            <!-- RIGHT LABELS (Plenty of room from 540 to 760) -->
+            <line x1="420" y1="40" x2="540" y2="60" stroke="#94a3b8" stroke-width="1.5"/><circle cx="420" cy="40" r="3.5" fill="#f43f5e"/>
+            <text x="550" y="65" font-size="13.5" fill="#f43f5e" font-weight="bold">Aorta (Systemic Artery)</text>
+            <line x1="340" y1="75" x2="540" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="340" cy="75" r="3.5" fill="#38bdf8"/>
+            <text x="550" y="115" font-size="13.5" fill="#38bdf8" font-weight="bold">Pulmonary Artery</text>
+            <line x1="480" y1="135" x2="540" y2="160" stroke="#94a3b8" stroke-width="1.5"/><circle cx="480" cy="135" r="3.5" fill="#f43f5e"/>
+            <text x="550" y="165" font-size="13.5" fill="#f43f5e" font-weight="bold">Pulmonary Veins (Oxygenated)</text>
+            <line x1="450" y1="150" x2="540" y2="210" stroke="#94a3b8" stroke-width="1.5"/><circle cx="450" cy="150" r="3.5" fill="#f43f5e"/>
+            <text x="550" y="215" font-size="13.5" fill="#f43f5e" font-weight="bold">Left Atrium (LA)</text>
+            <line x1="425" y1="185" x2="540" y2="260" stroke="#94a3b8" stroke-width="1.5"/><circle cx="425" cy="185" r="3.5" fill="#fde047"/>
+            <text x="550" y="265" font-size="13.5" fill="#fde047" font-weight="bold">Bicuspid / Mitral Valve</text>
+            <line x1="450" y1="260" x2="540" y2="320" stroke="#94a3b8" stroke-width="1.5"/><circle cx="450" cy="260" r="3.5" fill="#f43f5e"/>
+            <text x="550" y="325" font-size="13.5" fill="#f43f5e" font-weight="bold">Left Ventricle (Thick Myocardium)</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>Internal Structure of Human Heart & Double Circulation:</b><br><br>
-            The human heart is a hollow, muscular, four-chambered organ protected by a double-layered <b>pericardium</b> filled with pericardial fluid.<br><br>
+          ans: `<div style="line-height:1.8;">
+            <b>Internal Structure of Human Heart and Circulation of Blood:</b><br><br>
+            The human heart is a hollow, muscular, 4-chambered pumping organ enclosed in a double-layered membrane called the <b>pericardium</b> filled with pericardial fluid.<br><br>
             <b>1. Four Chambers:</b><br>
-            • <b>Right Atrium (RA):</b> Thin-walled upper chamber receiving deoxygenated blood from the upper body via Superior Vena Cava and lower body via Inferior Vena Cava.<br>
-            • <b>Right Ventricle (RV):</b> Receives deoxygenated blood from RA and pumps it into the Pulmonary Artery leading to lungs.<br>
-            • <b>Left Atrium (LA):</b> Receives oxygenated blood from lungs through four pulmonary veins.<br>
-            • <b>Left Ventricle (LV):</b> The thickest muscular chamber; pumps oxygenated blood under high pressure through the Aorta to the whole body.<br><br>
-            <b>2. Cardiac Valves (Prevent Backflow):</b><br>
-            • <b>Tricuspid Valve:</b> Located between Right Atrium and Right Ventricle.<br>
-            • <b>Bicuspid (Mitral) Valve:</b> Located between Left Atrium and Left Ventricle.<br>
-            • <b>Semilunar Valves:</b> Guard the exits of Pulmonary Artery and Aorta.<br><br>
+            • <b>Right Atrium (RA) & Left Atrium (LA):</b> Thin-walled receiving chambers separated by the interatrial septum.<br>
+            • <b>Right Ventricle (RV) & Left Ventricle (LV):</b> Thick-walled distributing chambers separated by the interventricular septum.<br>
+            • The <b>Left Ventricle wall is 3 times thicker than the RV</b> because it must pump oxygenated blood with immense pressure through the aorta to the entire body.<br><br>
+            <b>2. Heart Valves:</b><br>
+            • <b>Tricuspid Valve:</b> Located between RA and RV (3 muscular cusps; prevents backflow of deoxygenated blood into RA).<br>
+            • <b>Bicuspid (Mitral) Valve:</b> Located between LA and LV (2 cusps; prevents backflow of oxygenated blood into LA).<br>
+            • <b>Semilunar Valves:</b> Guard the base of the pulmonary artery and systemic aorta.<br><br>
             <b>3. Mechanism of Double Circulation:</b><br>
-            Blood travels through the heart twice during one complete cardiac cycle:<br>
-            1. <b>Pulmonary Circulation:</b> RV ➔ Pulmonary Artery ➔ Lungs (Oxygenation) ➔ Pulmonary Veins ➔ LA.<br>
-            2. <b>Systemic Circulation:</b> LV ➔ Aorta ➔ Body Tissues (O₂ delivery & CO₂ pickup) ➔ Vena Cava ➔ RA.<br>
-            • <i>Advantage:</i> Prevents mixing of oxygenated and deoxygenated blood, ensuring highly efficient oxygen delivery to sustain homeothermy (warm-blooded metabolism).</div>`
+            • <b>Pulmonary Circulation:</b> Deoxygenated blood from body tissues returns via Superior & Inferior Vena Cava into RA ➔ Tricuspid Valve ➔ RV ➔ Pulmonary Artery ➔ Lungs (oxygenation).<br>
+            • <b>Systemic Circulation:</b> Oxygenated blood from lungs enters LA via 4 Pulmonary Veins ➔ Bicuspid Valve ➔ LV ➔ Aorta ➔ All body tissues and organs.<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ Labeled Parts & Functions Key (Public Exam Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">No</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Part Name</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Blood Type & Function</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">1</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">Vena Cava (Sup & Inf)</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Brings deoxygenated blood from body to Right Atrium.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">2</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">Right Atrium / Ventricle</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Receives and pumps deoxygenated blood to lungs via Pulmonary Artery.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">3</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">Tricuspid & Bicuspid Valves</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Prevent retrograde backflow from ventricles into atria during systole.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">4</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#e11d48;">Pulmonary Veins</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Carries freshly oxygenated blood from lungs into Left Atrium.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">5</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#e11d48;">Left Ventricle & Aorta</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Pumps oxygenated blood under high systemic pressure to entire body.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">6</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#e11d48;">Interventricular Septum</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Thick muscular wall preventing mixing of oxygenated & deoxygenated blood.</td></tr>
+              </table>
+            </div>
+          </div>`
         },
         {
           id: "sci_em_dt_4",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Public Exam 7M",
+          examTag: "Outside Book / Extra Practice Diagram",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "Explain the structure of the human brain with a labeled diagram, detailing the functions of the Forebrain, Midbrain, and Hindbrain.",
-          diagramCaption: "Figure: Sagittal Section of Human Brain",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Sagittal Section of the Human Brain</text>
-            <g transform=\"translate(130, 45)\">
-              <path d=\"M 40 140 C 20 80, 50 20, 140 15 C 230 15, 270 70, 260 130 C 230 140, 200 130, 180 145 C 160 160, 120 150, 40 140 Z\" fill=\"#38bdf8\" fill-opacity=\"0.35\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <path d=\"M 60 70 Q 100 40 140 60 Q 180 40 220 70\" stroke=\"#0284c7\" stroke-width=\"1.5\" fill=\"none\"/>
-              <path d=\"M 70 100 Q 120 80 170 100 Q 210 80 240 110\" stroke=\"#0284c7\" stroke-width=\"1.5\" fill=\"none\"/>
-              <path d=\"M 100 120 Q 150 90 200 120\" stroke=\"#f8fafc\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\"/>
-              <ellipse cx=\"150\" cy=\"135\" rx=\"16\" ry=\"12\" fill=\"#ca8a04\" stroke=\"#fef08a\"/>
-              <path d=\"M 140 145 Q 140 160 130 165\" stroke=\"#eab308\" stroke-width=\"3\" fill=\"none\"/>
-              <circle cx=\"128\" cy=\"170\" r=\"5\" fill=\"#f43f5e\"/>
-              <circle cx=\"170\" cy=\"155\" r=\"9\" fill=\"#8b5cf6\" stroke=\"#c4b5fd\"/>
-              <rect x=\"155\" y=\"170\" width=\"22\" height=\"20\" rx=\"4\" fill=\"#10b981\" stroke=\"#6ee7b7\"/>
-              <path d=\"M 195 145 C 235 145, 260 170, 245 210 C 215 220, 185 200, 195 145 Z\" fill=\"#f59e0b\" fill-opacity=\"0.85\" stroke=\"#d97706\" stroke-width=\"2\"/>
-              <path d=\"M 220 160 L 220 195 M 220 175 L 205 165 M 220 175 L 235 165 M 220 185 L 210 195 M 220 185 L 230 195\" stroke=\"#fef3c7\" stroke-width=\"1.5\" fill=\"none\"/>
-              <rect x=\"158\" y=\"195\" width=\"16\" height=\"24\" rx=\"2\" fill=\"#06b6d4\" stroke=\"#67e8f9\"/>
-              <rect x=\"160\" y=\"222\" width=\"12\" height=\"30\" fill=\"#64748b\" stroke=\"#94a3b8\"/>
-            </g>
-            <line x1=\"170\" y1=\"85\" x2=\"45\" y2=\"85\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"88\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">Cerebrum (Forebrain)</text>
-            <line x1=\"230\" y1=\"155\" x2=\"45\" y2=\"155\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"158\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">Corpus Callosum</text>
-            <line x1=\"280\" y1=\"180\" x2=\"45\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"183\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">Thalamus / Hypothalamus</text>
-            <line x1=\"258\" y1=\"215\" x2=\"45\" y2=\"215\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"218\" font-size=\"11\" fill=\"#fb7185\" font-weight=\"bold\" text-anchor=\"end\">Pituitary Gland</text>
-            <line x1=\"300\" y1=\"200\" x2=\"430\" y2=\"170\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"173\" font-size=\"11\" fill=\"#c4b5fd\" font-weight=\"bold\">Midbrain</text>
-            <line x1=\"375\" y1=\"200\" x2=\"430\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"203\" font-size=\"11\" fill=\"#fbbf24\" font-weight=\"bold\">Cerebellum (Hindbrain)</text>
-            <line x1=\"307\" y1=\"230\" x2=\"430\" y2=\"230\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"233\" font-size=\"11\" fill=\"#34d399\" font-weight=\"bold\">Pons Varolii</text>
-            <line x1=\"304\" y1=\"250\" x2=\"430\" y2=\"255\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"258\" font-size=\"11\" fill=\"#22d3ee\" font-weight=\"bold\">Medulla Oblongata</text>
-            <line x1=\"302\" y1=\"280\" x2=\"430\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"283\" font-size=\"11\" fill=\"#94a3b8\" font-weight=\"bold\">Spinal Cord</text>
+          diagram: true,
+          q: "With a neat labeled sagittal diagram, explain the structure and functions of the human brain (Forebrain, Midbrain, Hindbrain).",
+          diagramCaption: "Figure: Sagittal Section of Human Brain (Major Regions)",
+          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="cerebrumGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
+              <linearGradient id="cerebellumGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient>
+            </defs>
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Sagittal Section of the Human Brain</text>
+            <!-- Cranium Skull Outline -->
+            <path d="M 260 260 C 240 120 330 65 430 65 C 500 65 520 160 520 250 C 520 300 480 320 440 310" fill="none" stroke="#475569" stroke-width="4"/>
+            <!-- Cerebrum with Sulci & Gyri convolutions -->
+            <path d="M 275 250 C 265 135 340 85 425 85 C 485 85 505 155 505 235 C 475 240 435 220 395 210 C 345 200 305 230 275 250 Z" fill="url(#cerebrumGradEm)" stroke="#0284c7" stroke-width="2"/>
+            <path d="M 310 115 Q 340 140 375 110 Q 410 135 440 105 M 300 155 Q 345 170 380 145 Q 430 170 475 135 M 345 190 Q 395 195 445 175" stroke="#bae6fd" stroke-width="2" fill="none"/>
+            <!-- Corpus Callosum C-shaped band -->
+            <path d="M 330 200 C 350 170 420 170 440 200 C 420 190 350 190 330 200 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+            <!-- Thalamus & Hypothalamus -->
+            <ellipse cx="385" cy="210" rx="24" ry="14" fill="#fb923c" stroke="#c2410c" stroke-width="1.5"/>
+            <path d="M 365 215 L 360 240 L 375 240 L 380 220 Z" fill="#f43f5e"/>
+            <!-- Pituitary Gland -->
+            <circle cx="358" cy="252" r="7" fill="#fb7185" stroke="#e11d48" stroke-width="1.5"/>
+            <!-- Midbrain -->
+            <rect x="390" y="222" width="22" height="22" rx="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+            <!-- Pons -->
+            <path d="M 375 245 C 360 260 360 280 375 290 L 400 290 L 400 245 Z" fill="#67e8f9" stroke="#0891b2" stroke-width="1.5"/>
+            <!-- Cerebellum (Arbor Vitae) -->
+            <path d="M 430 235 C 490 235 500 295 450 315 C 415 315 410 280 430 235 Z" fill="url(#cerebellumGradEm)" stroke="#b45309" stroke-width="2"/>
+            <path d="M 445 250 Q 470 270 455 295 M 435 270 Q 460 280 475 275" stroke="#fef3c7" stroke-width="1.5" fill="none"/>
+            <!-- Medulla Oblongata -->
+            <rect x="375" y="290" width="25" height="35" fill="#a7f3d0" stroke="#059669" stroke-width="1.5"/>
+            <!-- Spinal Cord -->
+            <rect x="377" y="325" width="21" height="40" fill="#cbd5e1" stroke="#64748b" stroke-width="1.5"/>
+
+            <!-- LEFT LABELS (Safe margin 0 to 220) -->
+            <line x1="300" y1="120" x2="220" y2="120" stroke="#94a3b8" stroke-width="1.5"/><circle cx="300" cy="120" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="125" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">Cerebrum (Forebrain)</text>
+            <line x1="340" y1="180" x2="220" y2="175" stroke="#94a3b8" stroke-width="1.5"/><circle cx="340" cy="180" r="3.5" fill="#fde047"/>
+            <text x="210" y="180" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="end">Corpus Callosum</text>
+            <line x1="370" y1="210" x2="220" y2="215" stroke="#94a3b8" stroke-width="1.5"/><circle cx="370" cy="210" r="3.5" fill="#fb923c"/>
+            <text x="210" y="220" font-size="13.5" fill="#fb923c" font-weight="bold" text-anchor="end">Thalamus & Hypothalamus</text>
+            <line x1="358" y1="252" x2="220" y2="260" stroke="#94a3b8" stroke-width="1.5"/><circle cx="358" cy="252" r="3.5" fill="#fb7185"/>
+            <text x="210" y="265" font-size="13.5" fill="#fb7185" font-weight="bold" text-anchor="end">Pituitary Gland</text>
+
+            <!-- RIGHT LABELS (Safe margin 540 to 760) -->
+            <line x1="412" y1="233" x2="540" y2="220" stroke="#94a3b8" stroke-width="1.5"/><circle cx="412" cy="233" r="3.5" fill="#c4b5fd"/>
+            <text x="550" y="225" font-size="13.5" fill="#c4b5fd" font-weight="bold">Midbrain (Optic & Auditory)</text>
+            <line x1="395" y1="265" x2="540" y2="255" stroke="#94a3b8" stroke-width="1.5"/><circle cx="395" cy="265" r="3.5" fill="#67e8f9"/>
+            <text x="550" y="260" font-size="13.5" fill="#67e8f9" font-weight="bold">Pons (Pneumotaxic Centre)</text>
+            <line x1="470" y1="270" x2="540" y2="295" stroke="#94a3b8" stroke-width="1.5"/><circle cx="470" cy="270" r="3.5" fill="#fbbf24"/>
+            <text x="550" y="300" font-size="13.5" fill="#fbbf24" font-weight="bold">Cerebellum (Posture / Balance)</text>
+            <line x1="400" y1="310" x2="540" y2="335" stroke="#94a3b8" stroke-width="1.5"/><circle cx="400" cy="310" r="3.5" fill="#a7f3d0"/>
+            <text x="550" y="340" font-size="13.5" fill="#a7f3d0" font-weight="bold">Medulla Oblongata (Vital Centre)</text>
+            <line x1="398" y1="350" x2="540" y2="375" stroke="#94a3b8" stroke-width="1.5"/><circle cx="398" cy="350" r="3.5" fill="#cbd5e1"/>
+            <text x="550" y="380" font-size="13.5" fill="#cbd5e1" font-weight="bold">Spinal Cord (Reflexes)</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
+          ans: `<div style="line-height:1.8;">
             <b>Structure and Functions of the Human Brain:</b><br><br>
-            The human brain is protected inside the cranial cavity of the skull and enveloped by three meningeal layers: <b>Dura mater, Arachnoid membrane, and Pia mater</b>. It is divided into three major regions:<br><br>
-            <b>I. Forebrain (Prosencephalon):</b><br>
-            1. <b>Cerebrum:</b> Largest part (85% of brain). Divided into right and left cerebral hemispheres connected by a thick transverse nerve band called the <b>Corpus Callosum</b>.<br>
-            • The outer grey cortex is folded into ridges (<b>Gyri</b>) and depressions (<b>Sulci</b>) to increase surface area.<br>
-            • <i>Functions:</i> Seat of memory, intelligence, reasoning, conscious thought, will-power, imagination, speech, and perception of pain, touch, temperature, sight, and hearing.<br>
-            2. <b>Thalamus:</b> Acts as the major relay station transmitting sensory and motor signals between the spinal cord/brainstem and cerebral cortex.<br>
-            3. <b>Hypothalamus:</b> Master center regulating homeostasis, body temperature, thirst, hunger, sleep cycle, emotions, and controlling pituitary hormone secretions.<br><br>
-            <b>II. Midbrain (Mesencephalon):</b><br>
-            • Located between thalamus and pons. Contains four rounded dorsal swellings called <b>Corpora Quadrigemina</b>.<br>
-            • <i>Functions:</i> Controls visual and auditory reflex centers and coordinates eye movements.<br><br>
-            <b>III. Hindbrain (Rhombencephalon):</b><br>
-            1. <b>Cerebellum:</b> Second largest part, featuring tree-like branching white matter (Arbor vitae). Coordinates voluntary muscular movements and maintains <b>equilibrium, posture, and balance of the body</b>.<br>
-            2. <b>Pons:</b> Bridge of nerve fibers linking cerebellum lobes with medulla. Houses the <b>pneumotaxic respiratory center</b> regulating respiration rate.<br>
-            3. <b>Medulla Oblongata:</b> Posterior-most cone connecting to the spinal cord. Houses vital involuntary reflex centers: <b>Cardiac center (heart rate), Respiratory center (breathing rate), and Vasomotor center (blood pressure)</b>, plus non-vital reflexes (swallowing, coughing, sneezing, vomiting).</div>`
+            The brain is housed within the bony cranium and covered by three protective meninges: <b>Dura mater, Arachnoid membrane, and Pia mater</b>. The space is filled with <b>Cerebrospinal Fluid (CSF)</b> which acts as a shock absorber.<br><br>
+            <b>1. Forebrain (Prosencephalon):</b><br>
+            • <b>Cerebrum:</b> Largest part, divided into two cerebral hemispheres by a median cleft and connected by a thick transverse nerve tract called the <b>Corpus Callosum</b>. Cortex consists of folds (<b>gyri</b>) and grooves (<b>sulci</b>).<br>
+            • <i>Functions:</i> Seat of memory, intelligence, conscious thought, willpower, speech, and voluntary motor activities.<br>
+            • <b>Thalamus:</b> Major relay station for sensory and motor impulses.<br>
+            • <b>Hypothalamus:</b> Regulates autonomic functions (body temperature, hunger, thirst, sleep, emotion) and controls the pituitary gland.<br><br>
+            <b>2. Midbrain (Mesencephalon):</b><br>
+            • Located between thalamus and pons. Contains 4 rounded swellings called <b>corpora quadrigemina</b>.<br>
+            • <i>Functions:</i> Controls visual and auditory reflex actions.<br><br>
+            <b>3. Hindbrain (Rhombencephalon):</b><br>
+            • <b>Cerebellum:</b> Second largest part; coordinates voluntary muscular movements and maintains <b>body equilibrium / posture</b>.<br>
+            • <b>Pons:</b> Bridge of nerve fibers linking cerebellum hemispheres; regulates respiration with the pneumotaxic centre.<br>
+            • <b>Medulla Oblongata:</b> Posterior brainstem connecting to spinal cord. Controls involuntary vital centres: <b>cardiac centre (heart rate), respiratory centre (breathing), vasomotor centre (blood pressure), swallowing, and vomiting</b>.<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ Labeled Parts & Functions Key (Public Exam Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">No</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Part Name</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Key Exam Function</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">1</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">Cerebrum</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Thinking, conscious sensations, memory, reasoning, speech.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">2</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">Corpus Callosum</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Nerve tract connecting left and right cerebral hemispheres.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">3</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ea580c;">Hypothalamus</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Thermostat (body temp), hunger, thirst, endocrine control.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">4</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#7c3aed;">Midbrain</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Coordinates visual reflexes (pupil dilation) and auditory reflexes.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">5</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#d97706;">Cerebellum</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Maintenance of posture, body equilibrium, precise muscular coordination.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">6</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#059669;">Medulla Oblongata</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Autonomic control of heartbeat, respiration, blood pressure, vomiting.</td></tr>
+              </table>
+            </div>
+          </div>`
         },
         {
           id: "sci_em_dt_5",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Public Exam Hot",
+          examTag: "Outside Book / Extra Practice Diagram",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "Draw and label the structural parts of a Nephron and explain the mechanism of urine formation in humans.",
-          diagramCaption: "Figure: Structure of a Nephron (Kidney Functional Unit)",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Structure of a Nephron</text>
-            <g transform=\"translate(130, 40)\">
-              <path d=\"M 60 70 C 40 70, 20 85, 20 110 C 20 135, 40 150, 60 150 C 65 150, 75 140, 75 130 C 75 125, 45 125, 45 110 C 45 95, 75 95, 75 90 C 75 80, 65 70, 60 70 Z\" fill=\"#38bdf8\" fill-opacity=\"0.25\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <circle cx=\"35\" cy=\"110\" r=\"14\" fill=\"#ef4444\" fill-opacity=\"0.8\" stroke=\"#f87171\"/>
-              <path d=\"M 30 50 L 30 96\" stroke=\"#ef4444\" stroke-width=\"3.5\"/>
-              <path d=\"M 42 50 L 42 96\" stroke=\"#f87171\" stroke-width=\"2\"/>
-              <path d=\"M 60 150 Q 80 160 90 140 Q 100 120 120 135 Q 135 150 140 170\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"4\" stroke-linecap=\"round\"/>
-              <path d=\"M 140 170 L 140 230 Q 150 250 160 230 L 160 170\" fill=\"none\" stroke=\"#fbbf24\" stroke-width=\"3.5\" stroke-linecap=\"round\"/>
-              <path d=\"M 160 170 Q 170 145 190 155 Q 210 165 220 140 L 240 140\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"4\" stroke-linecap=\"round\"/>
-              <line x1=\"240\" y1=\"70\" x2=\"240\" y2=\"245\" stroke=\"#34d399\" stroke-width=\"5\" stroke-linecap=\"round\"/>
-            </g>
-            <line x1=\"160\" y1=\"90\" x2=\"45\" y2=\"90\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"93\" font-size=\"11\" fill=\"#f87171\" font-weight=\"bold\" text-anchor=\"end\">Afferent / Efferent Arterioles</text>
-            <line x1=\"165\" y1=\"150\" x2=\"45\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"153\" font-size=\"11\" fill=\"#ef4444\" font-weight=\"bold\" text-anchor=\"end\">Glomerulus (Capillary Tuft)</text>
-            <line x1=\"180\" y1=\"170\" x2=\"45\" y2=\"190\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"193\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">Bowman\'s Capsule</text>
-            <line x1=\"235\" y1=\"175\" x2=\"45\" y2=\"235\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"238\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">Proximal Convoluted Tubule (PCT)</text>
-            <line x1=\"290\" y1=\"270\" x2=\"430\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"273\" font-size=\"11\" fill=\"#fbbf24\" font-weight=\"bold\">Loop of Henle (Hairpin Loop)</text>
-            <line x1=\"330\" y1=\"185\" x2=\"430\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"188\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\">Distal Convoluted Tubule (DCT)</text>
-            <line x1=\"370\" y1=\"120\" x2=\"430\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"123\" font-size=\"11\" fill=\"#34d399\" font-weight=\"bold\">Collecting Duct (To Renal Pelvis)</text>
+          diagram: true,
+          q: "Explain the structure of a nephron with a neat labeled diagram and describe how urine is formed.",
+          diagramCaption: "Figure: Structural & Functional Unit of Kidney (Nephron)",
+          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="bowmanGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#eab308"/></linearGradient>
+            </defs>
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Structure of a Nephron (Renal Tubule)</text>
+            <!-- Afferent Arteriole (Wide) & Efferent (Narrow) -->
+            <path d="M 270 50 L 305 90" stroke="#f43f5e" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M 320 85 L 345 55" stroke="#f43f5e" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Bowman's Capsule Double-walled cup -->
+            <path d="M 290 80 C 275 105 285 140 315 140 C 345 140 355 105 340 80 L 332 86 C 342 105 335 130 315 130 C 295 130 288 105 298 86 Z" fill="url(#bowmanGradEm)" stroke="#ca8a04" stroke-width="1.5"/>
+            <!-- Glomerulus Capillary Tuft -->
+            <circle cx="315" cy="105" r="14" fill="#991b1b" stroke="#f43f5e" stroke-width="2"/>
+            <path d="M 307 100 Q 315 110 323 100 Q 315 92 307 100" stroke="#fecdd3" stroke-width="1.8" fill="none"/>
+            <!-- Proximal Convoluted Tubule (PCT) -->
+            <path d="M 315 135 C 325 155 350 155 355 140 C 360 125 380 125 385 145 C 390 165 410 165 410 185" stroke="#eab308" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <!-- Loop of Henle Descending & Ascending limbs -->
+            <path d="M 410 185 L 410 330 C 410 350 435 350 435 330 L 435 185" stroke="#facc15" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <!-- Distal Convoluted Tubule (DCT) -->
+            <path d="M 435 185 C 440 160 460 155 470 170 C 480 185 500 175 510 160" stroke="#fb923c" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <!-- Collecting Duct (Trunk) -->
+            <line x1="510" y1="160" x2="525" y2="160" stroke="#fb923c" stroke-width="5"/>
+            <rect x="525" y="70" width="16" height="300" rx="4" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+            <path d="M 515 95 L 525 95 M 515 220 L 525 220 M 515 290 L 525 290" stroke="#0284c7" stroke-width="4"/>
+
+            <!-- LEFT LABELS (0 to 220 safe margin) -->
+            <line x1="280" y1="65" x2="220" y2="65" stroke="#94a3b8" stroke-width="1.5"/><circle cx="280" cy="65" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="70" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">Afferent Arteriole (Wide)</text>
+            <line x1="315" y1="105" x2="220" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="315" cy="105" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="115" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">Glomerulus (Filtration)</text>
+            <line x1="290" y1="125" x2="220" y2="155" stroke="#94a3b8" stroke-width="1.5"/><circle cx="290" cy="125" r="3.5" fill="#fde047"/>
+            <text x="210" y="160" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="end">Bowman's Capsule</text>
+            <line x1="335" y1="65" x2="220" y2="200" stroke="#94a3b8" stroke-width="1.5"/><circle cx="335" cy="65" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="205" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">Efferent Arteriole (Narrow)</text>
+            <line x1="410" y1="260" x2="220" y2="260" stroke="#94a3b8" stroke-width="1.5"/><circle cx="410" cy="260" r="3.5" fill="#facc15"/>
+            <text x="210" y="265" font-size="13.5" fill="#facc15" font-weight="bold" text-anchor="end">Descending Limb of Henle</text>
+            <line x1="422" y1="345" x2="220" y2="345" stroke="#94a3b8" stroke-width="1.5"/><circle cx="422" cy="345" r="3.5" fill="#facc15"/>
+            <text x="210" y="350" font-size="13.5" fill="#facc15" font-weight="bold" text-anchor="end">Loop of Henle (Hairpin)</text>
+
+            <!-- RIGHT LABELS (540 to 760 safe margin) -->
+            <line x1="370" y1="140" x2="540" y2="105" stroke="#94a3b8" stroke-width="1.5"/><circle cx="370" cy="140" r="3.5" fill="#eab308"/>
+            <text x="550" y="110" font-size="13.5" fill="#eab308" font-weight="bold">Proximal Tubule (PCT)</text>
+            <line x1="435" y1="260" x2="540" y2="165" stroke="#94a3b8" stroke-width="1.5"/><circle cx="435" cy="260" r="3.5" fill="#facc15"/>
+            <text x="550" y="170" font-size="13.5" fill="#facc15" font-weight="bold">Ascending Limb of Henle</text>
+            <line x1="490" y1="165" x2="540" y2="225" stroke="#94a3b8" stroke-width="1.5"/><circle cx="490" cy="165" r="3.5" fill="#fb923c"/>
+            <text x="550" y="230" font-size="13.5" fill="#fb923c" font-weight="bold">Distal Tubule (DCT)</text>
+            <line x1="535" y1="200" x2="550" y2="285" stroke="#94a3b8" stroke-width="1.5"/><circle cx="535" cy="200" r="3.5" fill="#38bdf8"/>
+            <text x="555" y="290" font-size="13.5" fill="#38bdf8" font-weight="bold">Collecting Duct</text>
+            <line x1="533" y1="365" x2="550" y2="365" stroke="#94a3b8" stroke-width="1.5"/><circle cx="533" cy="365" r="3.5" fill="#38bdf8"/>
+            <text x="555" y="370" font-size="13.5" fill="#4ade80" font-weight="bold">To Renal Pelvis ➔ Ureter</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>Structure of Nephron and Urine Formation Mechanism:</b><br><br>
-            Nephrons are the microscopic structural and functional units of each kidney (approx. 1 million per kidney).<br><br>
+          ans: `<div style="line-height:1.8;">
+            <b>Structure of Nephron and Physiology of Urine Formation:</b><br><br>
+            Each human kidney contains approximately <b>1 to 1.2 million microscopic functional filtration units called Nephrons</b>.<br><br>
             <b>1. Malpighian Corpuscle (Renal Corpuscle):</b><br>
-            • <b>Glomerulus:</b> High-pressure capillary knot supplied by a wider Afferent arteriole and drained by a narrower Efferent arteriole.<br>
-            • <b>Bowman's Capsule:</b> Double-walled cup enclosing glomerulus lined with specialized podocyte epithelial cells with filtration slits.<br><br>
+            • Consists of a knot of capillaries called the <b>Glomerulus</b> enclosed within a double-walled cup-shaped <b>Bowman's Capsule</b>.<br>
+            • Blood enters via a wide <b>Afferent Arteriole</b> and leaves via a narrower <b>Efferent Arteriole</b>. The diameter difference generates high hydrostatic pressure (<b>55 mm Hg</b>) driving filtration.<br><br>
             <b>2. Renal Tubule:</b><br>
-            • <b>Proximal Convoluted Tubule (PCT):</b> Lined with brush-border microvilli for maximum surface absorption.<br>
-            • <b>Loop of Henle:</b> U-shaped hairpin loop dipping into renal medulla (descending limb permeable to water, ascending limb permeable to electrolytes).<br>
-            • <b>Distal Convoluted Tubule (DCT):</b> Coiled segment opening into the Collecting Duct.<br><br>
-            <b>3. Three Steps of Urine Formation:</b><br>
-            1. <b>Glomerular Ultrafiltration:</b> Hydrostatic pressure forces water, glucose, amino acids, urea, and electrolytes across podocyte slits into Bowman's space, forming primary urine (~180 L/day). Blood cells and plasma proteins are retained.<br>
-            2. <b>Selective Tubular Reabsorption:</b> PCT reabsorbs 100% glucose, 100% amino acids, and 85% water and NaCl back into peritubular capillaries.<br>
-            3. <b>Tubular Secretion:</b> Excess K⁺, H⁺, and creatinine are actively secreted from peritubular blood into DCT and collecting duct, regulating blood pH and electrolyte balance, yielding hypertonic urine (~1.5 L/day).</div>`
+            • <b>Proximal Convoluted Tubule (PCT):</b> Lined with simple cuboidal brush-border epithelium with microvilli maximizing surface area for reabsorption.<br>
+            • <b>Loop of Henle:</b> U-shaped hairpin loop in the renal medulla (thin descending limb permeable to water; thick ascending limb impermeable to water but active in salt reabsorption).<br>
+            • <b>Distal Convoluted Tubule (DCT):</b> Regulates electrolyte and pH homeostasis under aldosterone/ADH control.<br>
+            • <b>Collecting Duct:</b> Collects processed urine from multiple nephrons and drains into the renal pelvis.<br><br>
+            <b>3. Three Stages of Urine Formation:</b><br>
+            1. <b>Glomerular Ultrafiltration:</b> Water, glucose, amino acids, urea, and salts pass into Bowman's capsule forming <i>primary urine (180 L/day)</i>.<br>
+            2. <b>Selective Tubular Reabsorption:</b> 99% of filtrate (all glucose, amino acids, essential ions, and water) is reabsorbed into peritubular capillaries along PCT and Loop of Henle.<br>
+            3. <b>Tubular Secretion:</b> Excess $K^+$, $H^+$, and creatinine are actively secreted from capillaries into DCT, concentrating final urine (approx. 1.5 L/day).<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ Labeled Parts & Functions Key (Public Exam Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">No</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Nephron Region</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Filtration / Reabsorption Role</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">1</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#e11d48;">Glomerulus</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Ultrafiltration under 55 mm Hg pressure; filters primary urine.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">2</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">Bowman's Capsule</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Cup-shaped podocyte chamber collecting initial glomerular filtrate.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">3</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#eab308;">PCT (Proximal Tubule)</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Reabsorbs 100% glucose & amino acids + 70% water & electrolytes.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">4</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">Loop of Henle</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Countercurrent multiplier concentrating urine and conserving water.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">5</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ea580c;">DCT (Distal Tubule)</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Facultative water reabsorption under ADH and active K+/H+ secretion.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">6</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">Collecting Duct</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Transports final concentrated urine into renal pelvis.</td></tr>
+              </table>
+            </div>
+          </div>`
         },
         {
-          id: "sci_em_dt_9",
+          id: "sci_em_dt_6",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Public Exam 7M",
+          examTag: "Outside Book / Extra Practice Diagram",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "Explain the process of fertilization in flowering plants (Angiosperms) with a neat diagram of the L.S. of a carpel. Define double fertilization and triple fusion.",
-          diagramCaption: "Figure: L.S. of Carpel / Pistil showing Pollen Tube Growth & Fertilization",
-          diagramSvg: `<svg viewBox=\"0 0 540 320\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Fertilization in Angiosperms (Pistil L.S.)</text>
-            <g transform=\"translate(180, 35)\">
-              <path d=\"M 70 30 C 50 30, 45 45, 75 45 L 75 110 C 40 140, 20 180, 20 220 C 20 260, 60 270, 90 270 C 120 270, 160 260, 160 220 C 160 180, 140 140, 105 110 L 105 45 C 135 45, 130 30, 110 30 Z\" fill=\"#065f46\" fill-opacity=\"0.3\" stroke=\"#10b981\" stroke-width=\"2.5\"/>
-              <circle cx=\"85\" cy=\"25\" r=\"7\" fill=\"#facc15\" stroke=\"#ca8a04\"/>
-              <path d=\"M 85 32 L 85 115 Q 85 140 60 180 Q 45 210 70 235\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-linecap=\"round\"/>
-              <circle cx=\"68\" cy=\"235\" r=\"3\" fill=\"#ef4444\"/>
-              <ellipse cx=\"90\" cy=\"205\" rx=\"42\" ry=\"48\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <circle cx=\"90\" cy=\"175\" r=\"4\" fill=\"#cbd5e1\"/><circle cx=\"78\" cy=\"175\" r=\"4\" fill=\"#cbd5e1\"/><circle cx=\"102\" cy=\"175\" r=\"4\" fill=\"#cbd5e1\"/>
-              <circle cx=\"86\" cy=\"205\" r=\"4.5\" fill=\"#fde047\"/><circle cx=\"94\" cy=\"205\" r=\"4.5\" fill=\"#fde047\"/>
-              <circle cx=\"90\" cy=\"235\" r=\"6\" fill=\"#ec4899\"/><circle cx=\"76\" cy=\"238\" r=\"4.5\" fill=\"#6ee7b7\"/><circle cx=\"104\" cy=\"238\" r=\"4.5\" fill=\"#6ee7b7\"/>
-            </g>
-            <line x1=\"265\" y1=\"60\" x2=\"50\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"63\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">Pollen Grain on Stigma</text>
-            <line x1=\"265\" y1=\"115\" x2=\"50\" y2=\"115\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"118\" font-size=\"11\" fill=\"#f59e0b\" font-weight=\"bold\" text-anchor=\"end\">Pollen Tube in Style</text>
-            <line x1=\"245\" y1=\"265\" x2=\"50\" y2=\"265\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"268\" font-size=\"11\" fill=\"#10b981\" font-weight=\"bold\" text-anchor=\"end\">Ovary Wall</text>
-            <line x1=\"275\" y1=\"210\" x2=\"430\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"183\" font-size=\"11\" fill=\"#cbd5e1\" font-weight=\"bold\">3 Antipodal Cells (Chalaza)</text>
-            <line x1=\"278\" y1=\"240\" x2=\"430\" y2=\"220\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"223\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\">Secondary Polar Nuclei (2n)</text>
-            <line x1=\"270\" y1=\"270\" x2=\"430\" y2=\"260\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"263\" font-size=\"11\" fill=\"#ec4899\" font-weight=\"bold\">Egg Cell (Female Gamete)</text>
-            <line x1=\"250\" y1=\"280\" x2=\"430\" y2=\"290\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"293\" font-size=\"11\" fill=\"#6ee7b7\" font-weight=\"bold\">Micropyle Entrance</text>
+          diagram: true,
+          q: "Explain the events of double fertilization and triple fusion in flowering plants with a neat labeled diagram.",
+          diagramCaption: "Figure: Process of Double Fertilization in Angiosperms",
+          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="ovaryGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#16a34a"/></linearGradient>
+              <linearGradient id="sacGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#fde047"/></linearGradient>
+            </defs>
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Double Fertilization & Triple Fusion in Angiosperms</text>
+            <!-- Stigma & Style -->
+            <path d="M 360 45 C 340 45 340 70 370 70 L 370 160 C 320 180 300 240 300 310 C 300 375 460 375 460 310 C 460 240 440 180 390 160 L 390 70 C 420 70 420 45 400 45 Z" fill="#14532d" stroke="#22c55e" stroke-width="2"/>
+            <!-- Pollen grain germinating -->
+            <circle cx="370" cy="52" r="6" fill="#facc15" stroke="#ca8a04"/>
+            <!-- Pollen Tube growing down style -->
+            <path d="M 370 58 L 376 160 C 376 220 340 280 360 325 L 370 325" fill="none" stroke="#facc15" stroke-width="3" stroke-dasharray="4,2"/>
+            <!-- 2 Male gametes inside tube -->
+            <circle cx="363" cy="270" r="3.5" fill="#f43f5e"/>
+            <circle cx="366" cy="285" r="3.5" fill="#f43f5e"/>
+            <!-- Ovule & Embryo Sac -->
+            <path d="M 345 230 C 315 250 315 330 355 350 C 395 365 445 335 440 270 C 435 220 375 210 345 230 Z" fill="#1e293b" stroke="#86efac" stroke-width="2"/>
+            <ellipse cx="385" cy="285" rx="36" ry="50" fill="url(#sacGradEm)" stroke="#ca8a04" stroke-width="1.5"/>
+            <!-- Antipodal cells (3 at chalazal end) -->
+            <circle cx="373" cy="250" r="5" fill="#9333ea"/><circle cx="385" cy="245" r="5" fill="#9333ea"/><circle cx="397" cy="250" r="5" fill="#9333ea"/>
+            <!-- 2 Polar Nuclei (Center) -->
+            <circle cx="380" cy="285" r="5" fill="#2563eb"/><circle cx="390" cy="285" r="5" fill="#2563eb"/>
+            <!-- Egg Cell & 2 Synergids (Micropylar end) -->
+            <circle cx="372" cy="320" r="5.5" fill="#059669"/><circle cx="385" cy="324" r="7" fill="#dc2626"/><circle cx="398" cy="320" r="5.5" fill="#059669"/>
+
+            <!-- LEFT LABELS (Safe margin 0 to 220) -->
+            <line x1="365" y1="52" x2="220" y2="52" stroke="#94a3b8" stroke-width="1.5"/><circle cx="365" cy="52" r="3.5" fill="#facc15"/>
+            <text x="210" y="57" font-size="13.5" fill="#facc15" font-weight="bold" text-anchor="end">Stigma & Pollen Grain</text>
+            <line x1="375" y1="120" x2="220" y2="120" stroke="#94a3b8" stroke-width="1.5"/><circle cx="375" cy="120" r="3.5" fill="#22c55e"/>
+            <text x="210" y="125" font-size="13.5" fill="#22c55e" font-weight="bold" text-anchor="end">Style (Slender Neck)</text>
+            <line x1="370" y1="180" x2="220" y2="180" stroke="#94a3b8" stroke-width="1.5"/><circle cx="370" cy="180" r="3.5" fill="#facc15"/>
+            <text x="210" y="185" font-size="13.5" fill="#facc15" font-weight="bold" text-anchor="end">Pollen Tube Growth</text>
+            <line x1="364" y1="275" x2="220" y2="250" stroke="#94a3b8" stroke-width="1.5"/><circle cx="364" cy="275" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="255" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">2 Male Gametes (Sperm Nuclei)</text>
+            <line x1="310" y1="310" x2="220" y2="330" stroke="#94a3b8" stroke-width="1.5"/><circle cx="310" cy="310" r="3.5" fill="#86efac"/>
+            <text x="210" y="335" font-size="13.5" fill="#86efac" font-weight="bold" text-anchor="end">Ovary Wall (Forms Fruit)</text>
+
+            <!-- RIGHT LABELS (Safe margin 540 to 760) -->
+            <line x1="397" y1="250" x2="540" y2="210" stroke="#94a3b8" stroke-width="1.5"/><circle cx="397" cy="250" r="3.5" fill="#9333ea"/>
+            <text x="550" y="215" font-size="13.5" fill="#c084fc" font-weight="bold">Antipodal Cells (3 at Chalaza)</text>
+            <line x1="392" y1="285" x2="540" y2="265" stroke="#94a3b8" stroke-width="1.5"/><circle cx="392" cy="285" r="3.5" fill="#2563eb"/>
+            <text x="550" y="270" font-size="13.5" fill="#60a5fa" font-weight="bold">Polar Nuclei (Triple Fusion ➔ 3n)</text>
+            <line x1="385" y1="324" x2="540" y2="315" stroke="#94a3b8" stroke-width="1.5"/><circle cx="385" cy="324" r="3.5" fill="#dc2626"/>
+            <text x="550" y="320" font-size="13.5" fill="#f87171" font-weight="bold">Egg Cell (Syngamy ➔ Zygote 2n)</text>
+            <line x1="398" y1="320" x2="540" y2="360" stroke="#94a3b8" stroke-width="1.5"/><circle cx="398" cy="320" r="3.5" fill="#059669"/>
+            <text x="550" y="365" font-size="13.5" fill="#4ade80" font-weight="bold">Synergids (Guiding Cells)</text>
+            <line x1="370" y1="345" x2="540" y2="395" stroke="#94a3b8" stroke-width="1.5"/><circle cx="370" cy="345" r="3.5" fill="#facc15"/>
+            <text x="550" y="400" font-size="13.5" fill="#fde047" font-weight="bold">Micropyle (Pollen Tube Entry)</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>Events of Fertilization in Angiosperms:</b><br><br>
-            <b>1. Pollen Germination:</b><br>
-            • Pollen grain lands on receptive stigma, absorbs sugary secretion, and germinates producing a <b>pollen tube</b> through the germ pore.<br>
-            • The tube nucleus and generative nucleus enter the tube; generative cell divides mitotically into <b>two non-motile male gametes</b>.<br><br>
-            <b>2. Entry of Pollen Tube into Ovule:</b><br>
-            • The pollen tube grows down the style guided by chemotropic signals and enters the ovule through the <b>Micropyle (Porogamy)</b>.<br>
-            • It penetrates one of the degenerating synergids in the embryo sac and discharges its two male gametes.<br><br>
-            <b>3. Double Fertilization & Triple Fusion:</b><br>
-            Angiosperms exhibit a unique phenomenon involving two separate nuclear fusions:<br>
-            • <b>Syngamy (Generative Fertilization):</b> First male gamete (n) fuses with egg nucleus (n) to form a <b>diploid Zygote (2n)</b>, which develops into the embryo.<br>
-            • <b>Triple Fusion (Vegetative Fertilization):</b> Second male gamete (n) fuses with diploid secondary polar nucleus (2n) to produce a <b>triploid Primary Endosperm Nucleus (PEN, 3n)</b>, which forms nutritive endosperm tissue.<br>
-            • Because two fertilizations take place inside one embryo sac, it is called <b>Double Fertilization</b>.</div>`
+          ans: `<div style="line-height:1.8;">
+            <b>Process of Double Fertilization and Triple Fusion in Angiosperms:</b><br><br>
+            Double fertilization is a unique diagnostic hallmark of angiosperms (flowering plants) first discovered by <b>S.G. Nawaschin (1898)</b>.<br><br>
+            <b>1. Pollen Germination & Tube Entry:</b><br>
+            • Pollen grain lands on receptive stigma, absorbs stigmatic exudate, and germinates into a <b>pollen tube</b>.<br>
+            • Generative cell divides mitotically producing <b>two non-motile male gametes (sperm nuclei)</b>.<br>
+            • Pollen tube enters the ovule through the <b>micropyle</b> (porogamy) directed chemotropically by synergid secretions.<br><br>
+            <b>2. Syngamy (First Fertilization):</b><br>
+            • One male gamete ($n$) fuses with the haploid <b>egg cell</b> ($n$) to form a diploid <b>zygote ($2n$)</b>.<br>
+            • $\text{Male Gamete } (n) + \text{ Egg Cell } (n) \longrightarrow \text{ Zygote } (2n) \longrightarrow \text{Embryo}$.<br><br>
+            <b>3. Triple Fusion (Second Fertilization):</b><br>
+            • The second male gamete ($n$) moves to central cell and fuses with the <b>two polar nuclei ($n + n$)</b>.<br>
+            • Since three haploid nuclei fuse together, it is termed <b>Triple Fusion</b>.<br>
+            • $\text{Male Gamete } (n) + \text{ 2 Polar Nuclei } (2n) \longrightarrow \text{ Primary Endosperm Nucleus / PEN } (3n)$.<br>
+            • Develops into nutrient-rich <b>Endosperm ($3n$)</b> providing food for developing embryo.<br><br>
+            <b>Significance:</b> Zygote develops into the seed embryo, ovule matures into the <b>seed</b>, and ovary ripens into the <b>fruit</b>.<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ Labeled Parts & Functions Key (Public Exam Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">No</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Flower/Embryo Sac Part</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Ploidy & Post-Fertilization Role</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">1</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#dc2626;">Egg Cell + Male Gamete</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Fuses (Syngamy) ➔ Forms Diploid Zygote (2n) ➔ Seed Embryo.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">2</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#2563eb;">2 Polar Nuclei + Male Gamete</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Triple Fusion (n+n+n) ➔ Triploid Endosperm (3n) nutrition.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">3</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#059669;">Synergids (2)</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Chemotropic guidance of pollen tube entry; degenerate after entry.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">4</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#9333ea;">Antipodal Cells (3)</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Nutritive cells at chalazal pole; degenerate during embryo growth.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">5</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#16a34a;">Ovule & Ovary</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Fertilized Ovule ➔ Seed; Ripened Ovary ➔ Fruit.</td></tr>
+              </table>
+            </div>
+          </div>`
         },
         {
-          id: "sci_em_dt_10",
+          id: "sci_em_dt_7",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Public Exam 7M",
+          examTag: "Outside Book / Extra Practice Diagram",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "Describe the structure of a human sperm and a mature human ovum with neat labeled diagrams.",
-          diagramCaption: "Figure: Structural Comparison of Human Sperm and Mature Ovum",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"22\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Human Sperm &amp; Ovum Structure</text>
-            <!-- Panel Left: Sperm -->
-            <g transform=\"translate(20, 35)\">
-              <rect x=\"0\" y=\"0\" width=\"240\" height=\"245\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>
-              <text x=\"120\" y=\"20\" font-size=\"12\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"middle\">Human Sperm (Spermatozoon)</text>
-              <path d=\"M 45 100 Q 55 80 85 80 Q 115 80 115 100 Q 115 120 85 120 Q 55 120 45 100 Z\" fill=\"#0284c7\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <path d=\"M 45 100 Q 50 85 70 85 L 70 115 Q 50 115 45 100 Z\" fill=\"#facc15\"/>
-              <circle cx=\"90\" cy=\"100\" r=\"10\" fill=\"#1e293b\" stroke=\"#bae6fd\"/>
-              <rect x=\"115\" y=\"94\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#64748b\" stroke=\"#cbd5e1\"/>
-              <rect x=\"127\" y=\"92\" width=\"35\" height=\"16\" rx=\"4\" fill=\"#ea580c\" stroke=\"#fb923c\"/>
-              <path d=\"M 162 100 Q 190 90 205 105 Q 220 120 230 100\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"3\" stroke-linecap=\"round\"/>
-              <text x=\"55\" y=\"145\" font-size=\"9.5\" fill=\"#fde047\">• Acrosome (Enzymes)</text>
-              <text x=\"55\" y=\"165\" font-size=\"9.5\" fill=\"#38bdf8\">• Head (Haploid DNA)</text>
-              <text x=\"55\" y=\"185\" font-size=\"9.5\" fill=\"#cbd5e1\">• Neck (Centrioles)</text>
-              <text x=\"55\" y=\"205\" font-size=\"9.5\" fill=\"#fb923c\">• Middle Piece (Mitochondria)</text>
-              <text x=\"55\" y=\"225\" font-size=\"9.5\" fill=\"#38bdf8\">• Tail (Axoneme / Motility)</text>
-            </g>
-            <!-- Panel Right: Ovum -->
-            <g transform=\"translate(280, 35)\">
-              <rect x=\"0\" y=\"0\" width=\"240\" height=\"245\" rx=\"8\" fill=\"#1e293b\" stroke=\"#ec4899\" stroke-width=\"1.5\"/>
-              <text x=\"120\" y=\"20\" font-size=\"12\" fill=\"#f472b6\" font-weight=\"bold\" text-anchor=\"middle\">Mature Human Ovum</text>
-              <circle cx=\"120\" cy=\"85\" r=\"50\" fill=\"#be185d\" fill-opacity=\"0.3\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-dasharray=\"4 2\"/>
-              <circle cx=\"120\" cy=\"85\" r=\"38\" fill=\"none\" stroke=\"#fde047\" stroke-width=\"3\"/>
-              <circle cx=\"120\" cy=\"85\" r=\"33\" fill=\"#831843\" fill-opacity=\"0.5\" stroke=\"#fb7185\" stroke-width=\"1.5\"/>
-              <circle cx=\"120\" cy=\"85\" r=\"12\" fill=\"#1e293b\" stroke=\"#fecdd3\" stroke-width=\"1.5\"/>
-              <circle cx=\"120\" cy=\"85\" r=\"4\" fill=\"#f8fafc\"/>
-              <text x=\"25\" y=\"155\" font-size=\"9.5\" fill=\"#f43f5e\">• Corona Radiata (Outer Follicle Cells)</text>
-              <text x=\"25\" y=\"175\" font-size=\"9.5\" fill=\"#fde047\">• Zona Pellucida (Glycoprotein Coat)</text>
-              <text x=\"25\" y=\"195\" font-size=\"9.5\" fill=\"#fb7185\">• Vitelline Membrane (Plasma Membrane)</text>
-              <text x=\"25\" y=\"215\" font-size=\"9.5\" fill=\"#f472b6\">• Ooplasm (Yolk-rich Cytoplasm)</text>
-              <text x=\"25\" y=\"235\" font-size=\"9.5\" fill=\"#cbd5e1\">• Nucleus (Germinal Vesicle, n)</text>
-            </g>
+          diagram: true,
+          q: "Describe the structure of a human sperm and ovum with neat labeled diagrams.",
+          diagramCaption: "Figure: Structure of Human Sperm (Spermatozoon) and Ovum (Egg Cell)",
+          diagramSvg: `<svg viewBox="0 0 760 400" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Structure of Human Sperm and Mature Ovum</text>
+            <!-- Dividing Line -->
+            <line x1="380" y1="50" x2="380" y2="380" stroke="#334155" stroke-dasharray="6,4" stroke-width="2"/>
+            <text x="210" y="55" font-size="14" font-weight="bold" fill="#38bdf8" text-anchor="middle">A. Human Sperm</text>
+            <text x="560" y="55" font-size="14" font-weight="bold" fill="#f43f5e" text-anchor="middle">B. Human Ovum</text>
+
+            <!-- SPERM (Left Side) -->
+            <!-- Head & Acrosome -->
+            <path d="M 190 75 C 175 75 160 90 160 115 C 160 135 170 145 190 145 C 210 145 220 135 220 115 C 220 90 205 75 190 75 Z" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+            <path d="M 175 77 C 185 70 195 70 205 77 L 213 95 L 167 95 Z" fill="#ec4899"/>
+            <ellipse cx="190" cy="120" rx="18" ry="16" fill="#1e293b" stroke="#f8fafc" stroke-width="1.5"/>
+            <!-- Neck & Centriole -->
+            <rect x="184" y="145" width="12" height="12" fill="#eab308"/>
+            <circle cx="190" cy="151" r="2.5" fill="#fef08a"/>
+            <!-- Middle Piece (Mitochondrial Spiral) -->
+            <rect x="180" y="157" width="20" height="60" rx="4" fill="#1e293b" stroke="#f97316" stroke-width="2"/>
+            <path d="M 180 165 L 200 173 M 180 180 L 200 188 M 180 195 L 200 203 M 180 210 L 200 218" stroke="#fb923c" stroke-width="2.5"/>
+            <!-- Tail (Flagellum) -->
+            <path d="M 190 217 Q 170 270 200 310 T 185 375" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round"/>
+
+            <!-- SPERM LABELS (Left margin safe 0 to 150) -->
+            <line x1="180" y1="82" x2="110" y2="82" stroke="#94a3b8" stroke-width="1.5"/><circle cx="180" cy="82" r="3.5" fill="#ec4899"/>
+            <text x="100" y="87" font-size="13" fill="#ec4899" font-weight="bold" text-anchor="end">Acrosome (Enzyme Cap)</text>
+            <line x1="170" y1="120" x2="110" y2="120" stroke="#94a3b8" stroke-width="1.5"/><circle cx="170" cy="120" r="3.5" fill="#38bdf8"/>
+            <text x="100" y="125" font-size="13" fill="#38bdf8" font-weight="bold" text-anchor="end">Head (Nucleus - 23n)</text>
+            <line x1="184" y1="151" x2="110" y2="151" stroke="#94a3b8" stroke-width="1.5"/><circle cx="184" cy="151" r="3.5" fill="#eab308"/>
+            <text x="100" y="156" font-size="13" fill="#eab308" font-weight="bold" text-anchor="end">Neck & Centriole</text>
+            <line x1="180" y1="185" x2="110" y2="185" stroke="#94a3b8" stroke-width="1.5"/><circle cx="180" cy="185" r="3.5" fill="#f97316"/>
+            <text x="100" y="190" font-size="13" fill="#f97316" font-weight="bold" text-anchor="end">Middle Piece (Mitochondria)</text>
+            <line x1="185" y1="300" x2="110" y2="300" stroke="#94a3b8" stroke-width="1.5"/><circle cx="185" cy="300" r="3.5" fill="#38bdf8"/>
+            <text x="100" y="305" font-size="13" fill="#38bdf8" font-weight="bold" text-anchor="end">Tail (Flagellum ➔ Motility)</text>
+
+            <!-- OVUM (Right Side) -->
+            <!-- Corona Radiata outer cells -->
+            <circle cx="560" cy="220" r="95" fill="none" stroke="#f472b6" stroke-width="12" stroke-dasharray="14,8"/>
+            <!-- Zona Pellucida thick glycoprotein coat -->
+            <circle cx="560" cy="220" r="76" fill="#1e293b" stroke="#38bdf8" stroke-width="6"/>
+            <!-- Vitelline Membrane & Ooplasm -->
+            <circle cx="560" cy="220" r="66" fill="#fda4af" stroke="#f43f5e" stroke-width="2"/>
+            <!-- Germinal Vesicle / Nucleus -->
+            <circle cx="550" cy="205" r="22" fill="#be123c" stroke="#f8fafc" stroke-width="2"/>
+            <circle cx="545" cy="200" r="6" fill="#f8fafc"/>
+
+            <!-- OVUM LABELS (Right margin safe 660 to 760) -->
+            <line x1="645" y1="160" x2="670" y2="130" stroke="#94a3b8" stroke-width="1.5"/><circle cx="645" cy="160" r="3.5" fill="#f472b6"/>
+            <text x="675" y="135" font-size="13" fill="#f472b6" font-weight="bold">Corona Radiata</text>
+            <line x1="630" y1="190" x2="670" y2="185" stroke="#94a3b8" stroke-width="1.5"/><circle cx="630" cy="190" r="3.5" fill="#38bdf8"/>
+            <text x="675" y="190" font-size="13" fill="#38bdf8" font-weight="bold">Zona Pellucida</text>
+            <line x1="610" y1="240" x2="670" y2="240" stroke="#94a3b8" stroke-width="1.5"/><circle cx="610" cy="240" r="3.5" fill="#fda4af"/>
+            <text x="675" y="245" font-size="13" fill="#fda4af" font-weight="bold">Ooplasm (Cytoplasm)</text>
+            <line x1="570" y1="205" x2="670" y2="295" stroke="#94a3b8" stroke-width="1.5"/><circle cx="570" cy="205" r="3.5" fill="#f8fafc"/>
+            <text x="675" y="300" font-size="13" fill="#ffffff" font-weight="bold">Nucleus (23n Maternal)</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
+          ans: `<div style="line-height:1.8;">
             <b>Structure of Human Sperm and Ovum:</b><br><br>
-            <b>I. Human Sperm (Microscopic, Flagellated, Motile):</b><br>
-            • <b>Head:</b> Oval structure containing a haploid nucleus capped by the <b>Acrosome</b>. Acrosome secretes <i>Hyaluronidase</i> (sperm lysin) to penetrate egg coats.<br>
-            • <b>Neck:</b> Short constriction connecting head and middle piece, containing proximal centriole (initiates zygote cleavage) and distal centriole (gives rise to axial filament).<br>
-            • <b>Middle Piece:</b> Contains mitochondria spirally coiled (<b>Nebenkern</b>) around the axial filament, producing ATP energy for vigorous motility.<br>
-            • <b>Tail:</b> Longest slender flagellum executing lashing movements to propel sperm towards the ovum in the fallopian tube.<br><br>
-            <b>II. Human Ovum (Non-motile, Alecithal):</b><br>
-            • <b>Membranes:</b><br>
-              1. <i>Corona Radiata:</i> Thick outer mantle of radially arranged granulosa follicle cells.<br>
-              2. <i>Zona Pellucida:</i> Thick, non-cellular transparent glycoprotein coat beneath corona radiata.<br>
-              3. <i>Vitelline Membrane:</i> Innermost plasma membrane enclosing ooplasm.<br>
-            • <b>Ooplasm & Nucleus:</b> Rich cytoplasm containing cortical granules and a large eccentric nucleus termed the <b>Germinal Vesicle</b>.</div>`
+            <b>A. Structure of Human Spermatozoon:</b><br>
+            • <b>Head:</b> Elongated oval body containing a haploid nucleus (23 chromosomes). The anterior tip is covered by a cap-like <b>Acrosome</b> derived from Golgi complex containing proteolytic enzyme <b>Hyaluronidase</b> to penetrate ovum coats.<br>
+            • <b>Neck:</b> Short constricted region containing proximal centriole (initiates cleavage) and distal centriole.<br>
+            • <b>Middle Piece:</b> Contains tightly spiraled <b>mitochondria (nebenkern)</b> that generate ATP energy for flagellar propulsion.<br>
+            • <b>Tail:</b> Long slender whip-like flagellum providing lashing movement through female reproductive tract at 1.5–3 mm/min.<br><br>
+            <b>B. Structure of Mature Human Ovum:</b><br>
+            • Non-motile, alecithal (yolk-free) spherical female gamete (~100–120 µm).<br>
+            • <b>Corona Radiata:</b> Outer radial cellular coat made of granulosa/follicle cells.<br>
+            • <b>Zona Pellucida:</b> Thick, translucent glycoprotein middle membrane preventing polyspermy.<br>
+            • <b>Vitelline Membrane:</b> Inner transparent plasma membrane directly enclosing the ooplasm.<br>
+            • <b>Ooplasm & Nucleus:</b> Abundant cytoplasm containing yolk granules and large central spherical eccentric nucleus (<b>germinal vesicle</b>) with haploid maternal genetic code (23 chromosomes).<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ Labeled Parts & Functions Key (Public Exam Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Gamete</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Part Name</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">Key Biological Role</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">Sperm</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ec4899;">Acrosome</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Releases hyaluronidase enzyme to dissolve corona radiata during fertilization.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">Sperm</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#f97316;">Middle Piece</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Mitochondrial power plant synthesizing ATP for rapid swimming motility.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">Ovum</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#f472b6;">Corona Radiata</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Outer cellular protective mantle nourishing ovum during ovulation.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">Ovum</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">Zona Pellucida</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">Species-specific sperm binding barrier; blocks entry of multiple sperm (polyspermy).</td></tr>
+              </table>
+            </div>
+          </div>`
         }
       ]
     },
     {
       id: "sec_sci_em_dt_3",
       title: "Section 3: High-Scoring Physics & Chemistry Diagrams (Q.No. 33 & 34 Special)",
-      author: "Physics & Chemistry Diagrams Master Checklist",
+      author: "Physical Sciences Diagrams Master Checklist",
       questions: [
-        {
-          id: "sci_em_dt_6",
-          type: "7m",
-          mark: "7 Marks",
-          examTag: "Public Exam 7M",
-          isImportant: true,
-          isAdditionalPractice: true,
-          q: "Differentiate between the eye defects Myopia and Hypermetropia. Explain their causes and optical correction with neat ray diagrams.",
-          diagramCaption: "Figure: Myopia & Hypermetropia - Defects and Concave / Convex Lens Corrections",
-          diagramSvg: `<svg viewBox=\"0 0 540 320\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Eye Defects &amp; Lens Corrections (Ray Optics)</text>
-            <!-- Panel 1: Myopia -->
-            <g transform=\"translate(15, 40)\">
-              <rect x=\"0\" y=\"0\" width=\"245\" height=\"260\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>
-              <text x=\"122\" y=\"20\" font-size=\"12\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"middle\">1. Myopia (Short-Sightedness)</text>
-              <text x=\"20\" y=\"42\" font-size=\"9.5\" fill=\"#fca5a5\" font-weight=\"bold\">(a) Image in front of retina:</text>
-              <ellipse cx=\"160\" cy=\"75\" rx=\"55\" ry=\"32\" fill=\"#0f172a\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>
-              <path d=\"M 120 55 Q 128 75 120 95 Q 112 75 120 55 Z\" fill=\"#bae6fd\" stroke=\"#0284c7\"/>
-              <line x1=\"20\" y1=\"68\" x2=\"118\" y2=\"68\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"20\" y1=\"82\" x2=\"118\" y2=\"82\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"122\" y1=\"68\" x2=\"185\" y2=\"75\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"122\" y1=\"82\" x2=\"185\" y2=\"75\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <circle cx=\"185\" cy=\"75\" r=\"3.5\" fill=\"#ef4444\"/><text x=\"185\" y=\"65\" font-size=\"8\" fill=\"#f87171\" text-anchor=\"middle\">Focus</text>
-              <text x=\"20\" y=\"145\" font-size=\"9.5\" fill=\"#86efac\" font-weight=\"bold\">(b) Corrected using Concave Lens:</text>
-              <ellipse cx=\"160\" cy=\"195\" rx=\"55\" ry=\"32\" fill=\"#0f172a\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>
-              <path d=\"M 120 175 Q 128 195 120 215 Q 112 195 120 175 Z\" fill=\"#bae6fd\" stroke=\"#0284c7\"/>
-              <path d=\"M 60 175 Q 65 195 60 215 L 70 215 Q 65 195 70 175 Z\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"1.2\"/><text x=\"65\" y=\"168\" font-size=\"8\" fill=\"#fde047\" text-anchor=\"middle\">Concave</text>
-              <line x1=\"15\" y1=\"188\" x2=\"58\" y2=\"188\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"15\" y1=\"202\" x2=\"58\" y2=\"202\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"72\" y1=\"187\" x2=\"118\" y2=\"183\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"72\" y1=\"203\" x2=\"118\" y2=\"207\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"122\" y1=\"183\" x2=\"215\" y2=\"195\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"122\" y1=\"207\" x2=\"215\" y2=\"195\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <circle cx=\"215\" cy=\"195\" r=\"3.5\" fill=\"#22c55e\"/><text x=\"215\" y=\"185\" font-size=\"8\" fill=\"#4ade80\" text-anchor=\"middle\">Retina</text>
-              <text x=\"122\" y=\"248\" font-size=\"9\" fill=\"#94a3b8\" text-anchor=\"middle\">Focal length: f = - (x · y) / (y - x)</text>
-            </g>
-            <!-- Panel 2: Hypermetropia -->
-            <g transform=\"translate(280, 40)\">
-              <rect x=\"0\" y=\"0\" width=\"245\" height=\"260\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>
-              <text x=\"122\" y=\"20\" font-size=\"12\" fill=\"#fbbf24\" font-weight=\"bold\" text-anchor=\"middle\">2. Hypermetropia (Long-Sightedness)</text>
-              <text x=\"20\" y=\"42\" font-size=\"9.5\" fill=\"#fca5a5\" font-weight=\"bold\">(a) Image behind retina:</text>
-              <ellipse cx=\"140\" cy=\"75\" rx=\"55\" ry=\"32\" fill=\"#0f172a\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>
-              <path d=\"M 100 55 Q 108 75 100 95 Q 92 75 100 55 Z\" fill=\"#bae6fd\" stroke=\"#0284c7\"/>
-              <line x1=\"20\" y1=\"75\" x2=\"98\" y2=\"68\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"20\" y1=\"75\" x2=\"98\" y2=\"82\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"102\" y1=\"68\" x2=\"215\" y2=\"75\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"102\" y1=\"82\" x2=\"215\" y2=\"75\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <circle cx=\"215\" cy=\"75\" r=\"3.5\" fill=\"#ef4444\"/><text x=\"215\" y=\"65\" font-size=\"8\" fill=\"#f87171\" text-anchor=\"middle\">Behind</text>
-              <text x=\"20\" y=\"145\" font-size=\"9.5\" fill=\"#86efac\" font-weight=\"bold\">(b) Corrected using Convex Lens:</text>
-              <ellipse cx=\"140\" cy=\"195\" rx=\"55\" ry=\"32\" fill=\"#0f172a\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>
-              <path d=\"M 100 175 Q 108 195 100 215 Q 92 195 100 175 Z\" fill=\"#bae6fd\" stroke=\"#0284c7\"/>
-              <path d=\"M 55 175 Q 63 195 55 215 Q 47 195 55 175 Z\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"1.2\"/><text x=\"55\" y=\"168\" font-size=\"8\" fill=\"#fde047\" text-anchor=\"middle\">Convex</text>
-              <line x1=\"10\" y1=\"195\" x2=\"50\" y2=\"188\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"10\" y1=\"195\" x2=\"50\" y2=\"202\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"60\" y1=\"188\" x2=\"98\" y2=\"185\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"60\" y1=\"202\" x2=\"98\" y2=\"205\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"102\" y1=\"185\" x2=\"195\" y2=\"195\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"102\" y1=\"205\" x2=\"195\" y2=\"195\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <circle cx=\"195\" cy=\"195\" r=\"3.5\" fill=\"#22c55e\"/><text x=\"195\" y=\"185\" font-size=\"8\" fill=\"#4ade80\" text-anchor=\"middle\">Retina</text>
-              <text x=\"122\" y=\"248\" font-size=\"9\" fill=\"#94a3b8\" text-anchor=\"middle\">Focal length: f = (d · D) / (d - D)</text>
-            </g>
-          </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>Comparison and Optical Correction of Myopia vs Hypermetropia:</b><br><br>
-            <table style=\"width:100%; border-collapse:collapse;\" border=\"1\" cellpadding=\"6\">
-              <tr style=\"background:#1e293b; color:#38bdf8;\"><th>Feature</th><th>Myopia (Short-Sightedness)</th><th>Hypermetropia (Long-Sightedness)</th></tr>
-              <tr><td><b>1. Visual Defect</b></td><td>Nearby objects are seen clearly, but distant objects cannot be seen distinctly.</td><td>Distant objects are seen clearly, but nearby objects cannot be seen distinctly.</td></tr>
-              <tr><td><b>2. Focus Point</b></td><td>Image of distant objects is focused <b>IN FRONT of the retina</b>.</td><td>Image of nearby objects is focused <b>BEHIND the retina</b>.</td></tr>
-              <tr><td><b>3. Causes</b></td><td>• Elongation of the eyeball.<br>• Excessive curvature of the eye lens (short focal length).</td><td>• Shortening of the eyeball.<br>• Insufficient curvature of the eye lens (excessive focal length).</td></tr>
-              <tr><td><b>4. Far/Near Point Shift</b></td><td>Far point shifts inward closer than infinity.</td><td>Near point shifts outward farther than 25 cm.</td></tr>
-              <tr><td><b>5. Corrective Lens</b></td><td><b>Concave lens (diverging lens)</b> of suitable focal length:<br><b>f = -xy / (y - x)</b></td><td><b>Convex lens (converging lens)</b> of suitable focal length:<br><b>f = dD / (d - D)</b></td></tr>
-            </table></div>`
-        },
-        {
-          id: "sci_em_dt_7",
-          type: "7m",
-          mark: "7 Marks",
-          examTag: "Public Exam 7M",
-          isImportant: true,
-          isAdditionalPractice: true,
-          q: "Explain the refraction of light through a glass triangular prism and dispersion of white light with a labeled ray diagram.",
-          diagramCaption: "Figure: Refraction & Dispersion of Light through Triangular Glass Prism",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Refraction &amp; Dispersion of Light Through Prism</text>
-            <polygon points=\"240,50 140,240 340,240\" fill=\"#0284c7\" fill-opacity=\"0.25\" stroke=\"#38bdf8\" stroke-width=\"2.5\"/>
-            <text x=\"240\" y=\"42\" font-size=\"12\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"middle\">A (Angle of Prism)</text>
-            <line x1=\"40\" y1=\"170\" x2=\"185\" y2=\"155\" stroke=\"#f8fafc\" stroke-width=\"2.5\"/>
-            <polygon points=\"115,160 125,162 118,168\" fill=\"#f8fafc\"/>
-            <line x1=\"185\" y1=\"155\" x2=\"275\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"2\"/>
-            <line x1=\"185\" y1=\"155\" x2=\"278\" y2=\"190\" stroke=\"#a855f7\" stroke-width=\"2\"/>
-            <line x1=\"275\" y1=\"175\" x2=\"460\" y2=\"200\" stroke=\"#ef4444\" stroke-width=\"2\"/>
-            <line x1=\"278\" y1=\"190\" x2=\"460\" y2=\"250\" stroke=\"#a855f7\" stroke-width=\"2\"/>
-            <rect x=\"460\" y=\"180\" width=\"12\" height=\"85\" fill=\"#334155\" stroke=\"#94a3b8\"/>
-            <text x=\"485\" y=\"204\" font-size=\"10\" fill=\"#f87171\" font-weight=\"bold\">Red (Least Deviated)</text>
-            <text x=\"485\" y=\"254\" font-size=\"10\" fill=\"#c084fc\" font-weight=\"bold\">Violet (Most Deviated)</text>
-            <line x1=\"185\" y1=\"155\" x2=\"300\" y2=\"143\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/>
-            <line x1=\"275\" y1=\"175\" x2=\"210\" y2=\"167\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/>
-            <line x1=\"110\" y1=\"120\" x2=\"40\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"35\" y=\"103\" font-size=\"11\" fill=\"#f8fafc\" font-weight=\"bold\" text-anchor=\"end\">Incident Beam (White Light)</text>
-          </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>Refraction of Light through a Triangular Prism & Dispersion:</b><br><br>
-            <b>1. Refraction through Prism:</b><br>
-            • A prism has two triangular bases and three rectangular lateral faces inclined at an angle called the <b>Angle of the Prism (A)</b>.<br>
-            • When a ray enters the first surface (air to glass), it bends <b>towards the normal</b>.<br>
-            • When it leaves the second surface (glass to air), it bends <b>away from the normal</b>.<br>
-            • The angle between the incident ray produced forward and emergent ray produced backward is the <b>Angle of Deviation (d or D)</b>.<br><br>
-            <b>2. Phenomenon of Dispersion:</b><br>
-            • Splitting of white light into its seven constituent colors (<b>VIBGYOR</b>) upon passing through a dispersive medium is called <b>Dispersion</b>.<br>
-            • <i>Reason:</i> Different wavelengths travel with different speeds in glass (refractive index μ depends on wavelength: μ ∝ 1/λ).<br>
-            • <b>Violet light</b> has the shortest wavelength, travels slowest, and suffers the <b>maximum deviation</b>.<br>
-            • <b>Red light</b> has the longest wavelength, travels fastest, and suffers the <b>minimum deviation</b>.</div>`
-        },
         {
           id: "sci_em_dt_8",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Public Exam 7M",
+          examTag: "Outside Book / Extra Practice Diagram",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "Explain the smelting process in the extraction of iron from haematite ore in a blast furnace with chemical equations and a neat diagram.",
-          diagramCaption: "Figure: Blast Furnace for Smelting of Iron",
-          diagramSvg: `<svg viewBox=\"0 0 540 320\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Blast Furnace for Iron Extraction (Smelting)</text>
-            <g transform=\"translate(170, 35)\">
-              <path d=\"M 60 25 L 140 25 L 155 120 L 175 190 L 150 250 L 50 250 L 25 190 L 45 120 Z\" fill=\"#1e293b\" stroke=\"#cbd5e1\" stroke-width=\"2.5\"/>
-              <polygon points=\"80,10 120,10 100,28\" fill=\"#f59e0b\"/><text x=\"100\" y=\"8\" font-size=\"9\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"middle\">Charge (Ore+Coke+Limestone)</text>
-              <rect x=\"52\" y=\"45\" width=\"96\" height=\"55\" fill=\"#3b82f6\" fill-opacity=\"0.25\"/>
-              <text x=\"100\" y=\"70\" font-size=\"10\" fill=\"#93c5fd\" font-weight=\"bold\" text-anchor=\"middle\">Reduction Zone (400°C - 700°C)</text>
-              <rect x=\"38\" y=\"105\" width=\"124\" height=\"65\" fill=\"#f59e0b\" fill-opacity=\"0.25\"/>
-              <text x=\"100\" y=\"135\" font-size=\"10\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"middle\">Slag Zone (800°C - 1000°C)</text>
-              <rect x=\"35\" y=\"175\" width=\"130\" height=\"45\" fill=\"#ef4444\" fill-opacity=\"0.35\"/>
-              <text x=\"100\" y=\"195\" font-size=\"10\" fill=\"#fca5a5\" font-weight=\"bold\" text-anchor=\"middle\">Combustion Zone (1500°C - 1600°C)</text>
-              <rect x=\"5\" y=\"210\" width=\"30\" height=\"12\" fill=\"#ef4444\" rx=\"3\"/>
-              <rect x=\"165\" y=\"210\" width=\"30\" height=\"12\" fill=\"#ef4444\" rx=\"3\"/>
-              <rect x=\"50\" y=\"228\" width=\"100\" height=\"12\" fill=\"#94a3b8\"/><text x=\"100\" y=\"238\" font-size=\"8\" fill=\"#fff\" text-anchor=\"middle\">Molten Slag</text>
-              <rect x=\"50\" y=\"240\" width=\"100\" height=\"12\" fill=\"#dc2626\"/><text x=\"100\" y=\"249\" font-size=\"8\" fill=\"#fff\" text-anchor=\"middle\">Molten Pig Iron</text>
-            </g>
-            <line x1=\"220\" y1=\"100\" x2=\"45\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"98\" font-size=\"10\" fill=\"#93c5fd\" font-weight=\"bold\" text-anchor=\"end\">Fe₂O₃ + 3CO ➔ 2Fe + 3CO₂</text>
-            <line x1=\"205\" y1=\"175\" x2=\"45\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"173\" font-size=\"10\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">CaO + SiO₂ ➔ CaSiO₃</text>
-            <line x1=\"200\" y1=\"230\" x2=\"45\" y2=\"230\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"228\" font-size=\"10\" fill=\"#f87171\" font-weight=\"bold\" text-anchor=\"end\">C + O₂ ➔ CO₂ + Heat</text>
-            <line x1=\"375\" y1=\"245\" x2=\"445\" y2=\"225\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"450\" y=\"228\" font-size=\"11\" fill=\"#f87171\" font-weight=\"bold\">Tuyere (Hot Air Blast)</text>
-            <line x1=\"320\" y1=\"265\" x2=\"445\" y2=\"255\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"450\" y=\"258\" font-size=\"11\" fill=\"#94a3b8\" font-weight=\"bold\">Slag Hole (Lower Density)</text>
-            <line x1=\"320\" y1=\"280\" x2=\"445\" y2=\"285\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"450\" y=\"288\" font-size=\"11\" fill=\"#ef4444\" font-weight=\"bold\">Molten Pig Iron Tap Hole</text>
+          diagram: true,
+          q: "Differentiate the eye defects Myopia and Hypermetropia. Explain their causes and correction with neat ray diagrams.",
+          diagramCaption: "Figure: Ray Optics Correction of Myopia (Concave Lens) and Hypermetropia (Convex Lens)",
+          diagramSvg: `<svg viewBox="0 0 760 420" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <text x="380" y="26" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Ray Diagrams: Myopia vs Hypermetropia Eye Defects & Correction</text>
+            <line x1="380" y1="40" x2="380" y2="400" stroke="#334155" stroke-dasharray="6,4" stroke-width="2"/>
+            <text x="190" y="52" font-size="14" font-weight="bold" fill="#38bdf8" text-anchor="middle">A. Myopia (Short-sightedness)</text>
+            <text x="570" y="52" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">B. Hypermetropia (Long-sightedness)</text>
+
+            <!-- MYOPIC EYE (TOP LEFT) -->
+            <ellipse cx="230" cy="120" rx="50" ry="40" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+            <ellipse cx="185" cy="120" rx="6" ry="24" fill="#38bdf8"/>
+            <path d="M 60 100 L 185 110 L 250 120" stroke="#facc15" stroke-width="2" fill="none"/>
+            <path d="M 60 140 L 185 130 L 250 120" stroke="#facc15" stroke-width="2" fill="none"/>
+            <polygon points="120,103 128,105 120,107" fill="#facc15"/>
+            <polygon points="120,137 128,135 120,133" fill="#facc15"/>
+            <circle cx="250" cy="120" r="4" fill="#ef4444"/><circle cx="280" cy="120" r="3" fill="#4ade80"/>
+            <text x="190" y="175" font-size="12" fill="#ef4444" font-weight="bold" text-anchor="middle">Focus in front of Retina</text>
+
+            <!-- MYOPIA CORRECTION (BOTTOM LEFT) -->
+            <ellipse cx="230" cy="290" rx="50" ry="40" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+            <ellipse cx="185" cy="290" rx="6" ry="24" fill="#38bdf8"/>
+            <!-- Concave Lens -->
+            <path d="M 125 265 C 130 290 130 290 125 315 L 135 315 C 130 290 130 290 135 265 Z" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+            <path d="M 50 275 L 128 275 L 185 282 L 280 290" stroke="#facc15" stroke-width="2" fill="none"/>
+            <path d="M 50 305 L 128 305 L 185 298 L 280 290" stroke="#facc15" stroke-width="2" fill="none"/>
+            <polygon points="85,273 95,275 85,277" fill="#facc15"/><polygon points="85,303 95,305 85,307" fill="#facc15"/>
+            <circle cx="280" cy="290" r="4.5" fill="#22c55e"/>
+            <text x="190" y="345" font-size="12" fill="#4ade80" font-weight="bold" text-anchor="middle">Corrected with Concave Lens (Focus ON Retina)</text>
+
+            <!-- HYPERMETROPIC EYE (TOP RIGHT) -->
+            <ellipse cx="610" cy="120" rx="42" ry="40" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+            <ellipse cx="572" cy="120" rx="6" ry="24" fill="#38bdf8"/>
+            <path d="M 460 100 L 572 110 L 675 120" stroke="#facc15" stroke-width="2" fill="none"/>
+            <path d="M 460 140 L 572 130 L 675 120" stroke="#facc15" stroke-width="2" fill="none"/>
+            <polygon points="510,103 520,105 510,107" fill="#facc15"/><polygon points="510,137 520,135 510,133" fill="#facc15"/>
+            <circle cx="675" cy="120" r="4" fill="#ef4444"/><circle cx="652" cy="120" r="3" fill="#4ade80"/>
+            <text x="570" y="175" font-size="12" fill="#ef4444" font-weight="bold" text-anchor="middle">Focus behind Retina</text>
+
+            <!-- HYPERMETROPIA CORRECTION (BOTTOM RIGHT) -->
+            <ellipse cx="610" cy="290" rx="42" ry="40" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+            <ellipse cx="572" cy="290" rx="6" ry="24" fill="#38bdf8"/>
+            <!-- Convex Lens -->
+            <path d="M 520 290 C 520 268 532 268 532 290 C 532 312 520 312 520 290 Z" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+            <path d="M 450 270 L 526 277 L 572 284 L 652 290" stroke="#facc15" stroke-width="2" fill="none"/>
+            <path d="M 450 310 L 526 303 L 572 296 L 652 290" stroke="#facc15" stroke-width="2" fill="none"/>
+            <polygon points="480,272 490,274 480,276" fill="#facc15"/><polygon points="480,308 490,306 480,304" fill="#facc15"/>
+            <circle cx="652" cy="290" r="4.5" fill="#22c55e"/>
+            <text x="570" y="345" font-size="12" fill="#4ade80" font-weight="bold" text-anchor="middle">Corrected with Convex Lens (Focus ON Retina)</text>
+
+            <!-- Bottom Note -->
+            <text x="380" y="395" font-size="12.5" fill="#fde047" font-weight="bold" text-anchor="middle">Mandatory Board Rule: Rays MUST have directional arrow heads indicating direction of light!</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>Extraction of Iron from Haematite Ore (Smelting in Blast Furnace):</b><br><br>
-            • <b>Principle:</b> Roasted haematite ore (<b>Fe₂O₃</b>) is mixed with Coke (fuel & reducing agent) and Limestone (flux) in a <b>8 : 4 : 1</b> ratio and charged into a Blast Furnace.<br><br>
-            <b>1. Lower Combustion Zone (1500°C – 1600°C):</b><br>
-            • <b>C + O₂ ➔ CO₂ + Heat (ΔH = -394 kJ)</b><br>
-            • <b>CO₂ + C ➔ 2CO - Heat</b><br><br>
-            <b>2. Middle Slag Formation Zone (800°C – 1000°C):</b><br>
-            • <b>CaCO₃ ➔ CaO + CO₂</b><br>
-            • <b>CaO + SiO₂ (gangue) ➔ CaSiO₃ (Calcium silicate - Slag)</b><br>
-            Molten slag floats over molten iron due to lower density and is tapped off, protecting iron from oxidation.<br><br>
-            <b>3. Upper Reduction Zone (400°C – 700°C):</b><br>
-            • <b>Fe₂O₃ + 3CO ➔ 2Fe + 3CO₂ ↑</b><br>
-            The spongy iron melts and collects at the bottom as <b>Pig Iron (Cast Iron)</b> containing ~4% carbon.</div>`
+          ans: `<div style="line-height:1.8;">
+            <b>Comparative Study of Myopia and Hypermetropia:</b><br><br>
+            <table style="width:100%; border-collapse:collapse; font-size:13.5px; line-height:1.6;">
+              <tr style="background:#e0f2fe; color:#0369a1;">
+                <th style="padding:8px; border:1px solid #cbd5e1; text-align:left;">Feature</th>
+                <th style="padding:8px; border:1px solid #cbd5e1; text-align:left;">Myopia (Short-Sightedness)</th>
+                <th style="padding:8px; border:1px solid #cbd5e1; text-align:left;">Hypermetropia (Long-Sightedness)</th>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1; font-weight:700;">1. Vision Ability</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Nearby objects seen clearly; distant objects appear blurred.</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Distant objects seen clearly; nearby objects appear blurred.</td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1; font-weight:700;">2. Anatomical Cause</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;"><b>Elongation of eyeball</b> or excessive curvature (short focal length) of eye lens.</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;"><b>Shortening of eyeball</b> or flattened cornea (too long focal length) of eye lens.</td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1; font-weight:700;">3. Image Position</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Rays converge <b>in front of the retina</b>.</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Rays converge <b>behind the retina</b>.</td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1; font-weight:700;">4. Far / Near Point</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Far point shifts closer than infinity ($d < \infty$).</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Near point shifts farther than 25 cm ($d > 25\text{ cm}$).</td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1; font-weight:700;">5. Corrective Lens</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Corrected using a suitable <b>Concave Lens (Diverging lens)</b>.<br>Formula: $f = \frac{xy}{x - y} = -d$</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">Corrected using a suitable <b>Convex Lens (Converging lens)</b>.<br>Formula: $f = \frac{d \cdot D}{d - D}$</td>
+              </tr>
+            </table><br>
+            <b>Ray Diagram Drawing Tips:</b><br>
+            • In defective eye: show rays intersecting in front of retina (Myopia) or behind retina (Hypermetropia).<br>
+            • In corrected eye: show the corrective lens placed in front; rays must sharply meet exactly ON the retina surface.<br>
+            • <b>Never forget arrow heads on all light rays!</b> Missing arrows costs full marks.</div>`
+        },
+        {
+          id: "sci_em_dt_9",
+          type: "7m",
+          mark: "7 Marks",
+          examTag: "Outside Book / Extra Practice Diagram",
+          isImportant: true,
+          isAdditionalPractice: true,
+          diagram: true,
+          q: "Explain the dispersion of white light through a triangular glass prism with a neat ray diagram and explain the formation of rainbow.",
+          diagramCaption: "Figure: Dispersion of White Light through a Triangular Glass Prism (VIBGYOR)",
+          diagramSvg: `<svg viewBox="0 0 760 380" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="prismGradEm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/><stop offset="100%" stop-color="#0284c7" stop-opacity="0.45"/></linearGradient>
+            </defs>
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Dispersion of White Light through a Glass Prism (VIBGYOR)</text>
+            <!-- Triangular Glass Prism ABC -->
+            <polygon points="380,75 280,270 480,270" fill="url(#prismGradEm)" stroke="#38bdf8" stroke-width="2.5"/>
+            <text x="380" y="68" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">A</text>
+            <text x="270" y="285" font-size="14" font-weight="bold" fill="#ffffff">B</text>
+            <text x="490" y="285" font-size="14" font-weight="bold" fill="#ffffff">C</text>
+            <!-- White Light Beam -->
+            <line x1="120" y1="210" x2="310" y2="175" stroke="#f8fafc" stroke-width="4.5"/>
+            <polygon points="210,192 225,190 215,200" fill="#f8fafc"/>
+            <!-- Refraction inside prism -->
+            <line x1="310" y1="175" x2="435" y2="178" stroke="#ef4444" stroke-width="2.5"/>
+            <line x1="310" y1="175" x2="445" y2="215" stroke="#8b5cf6" stroke-width="2.5"/>
+            <!-- Emergent Spectrum Rays -->
+            <line x1="435" y1="178" x2="620" y2="135" stroke="#ef4444" stroke-width="3"/>
+            <line x1="437" y1="184" x2="620" y2="155" stroke="#f97316" stroke-width="2.5"/>
+            <line x1="439" y1="190" x2="620" y2="175" stroke="#eab308" stroke-width="2.5"/>
+            <line x1="441" y1="196" x2="620" y2="195" stroke="#22c55e" stroke-width="2.5"/>
+            <line x1="443" y1="202" x2="620" y2="215" stroke="#06b6d4" stroke-width="2.5"/>
+            <line x1="444" y1="208" x2="620" y2="235" stroke="#3b82f6" stroke-width="2.5"/>
+            <line x1="445" y1="215" x2="620" y2="255" stroke="#8b5cf6" stroke-width="3"/>
+            <!-- Arrowheads on emergent rays -->
+            <polygon points="520,154 532,152 524,160" fill="#ef4444"/><polygon points="520,230 532,234 522,238" fill="#8b5cf6"/>
+            <!-- White Screen -->
+            <rect x="620" y="115" width="10" height="160" rx="3" fill="#f8fafc" stroke="#94a3b8"/>
+
+            <!-- LEFT LABELS (Safe margin 0 to 220) -->
+            <line x1="180" y1="200" x2="190" y2="200" stroke="#94a3b8" stroke-width="1.5"/><circle cx="180" cy="200" r="3.5" fill="#f8fafc"/>
+            <text x="170" y="205" font-size="13.5" fill="#ffffff" font-weight="bold" text-anchor="end">Incident White Light Beam</text>
+            <line x1="310" y1="175" x2="200" y2="140" stroke="#94a3b8" stroke-width="1.5"/><circle cx="310" cy="175" r="3.5" fill="#38bdf8"/>
+            <text x="190" y="145" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">Refracting Face AB</text>
+
+            <!-- RIGHT LABELS (Safe margin 640 to 760) -->
+            <line x1="620" y1="135" x2="645" y2="135" stroke="#94a3b8" stroke-width="1.5"/><circle cx="620" cy="135" r="3.5" fill="#ef4444"/>
+            <text x="655" y="140" font-size="13.5" fill="#ef4444" font-weight="bold">Red (Least Deviated / Max λ)</text>
+            <text x="655" y="195" font-size="13.5" fill="#fde047" font-weight="bold">V I B G Y O R Spectrum</text>
+            <line x1="620" y1="255" x2="645" y2="255" stroke="#94a3b8" stroke-width="1.5"/><circle cx="620" cy="255" r="3.5" fill="#8b5cf6"/>
+            <text x="655" y="260" font-size="13.5" fill="#c084fc" font-weight="bold">Violet (Most Deviated / Min λ)</text>
+            <text x="635" y="305" font-size="13" fill="#cbd5e1" font-weight="bold">Screen</text>
+
+            <text x="380" y="340" font-size="13" font-weight="bold" fill="#4ade80" text-anchor="middle">Cauchy's Principle: Refractive Index μ ∝ 1 / λ (Shorter wavelength bends more)</text>
+          </svg>`,
+          ans: `<div style="line-height:1.8;">
+            <b>Dispersion of White Light and Color Spectrum:</b><br><br>
+            <b>1. Definition:</b><br>
+            The phenomenon of splitting of a composite beam of white light into its constituent seven colors when passing through a transparent refracting medium (such as a glass prism) is called <b>Dispersion of Light</b>.<br><br>
+            <b>2. Cause of Dispersion (Cauchy's Relation):</b><br>
+            • Different colors of light have different wavelengths ($\lambda$).<br>
+            • According to Snell's Law and Cauchy's equation ($\mu = A + \frac{B}{\lambda^2}$), the <b>refractive index ($\mu$) of glass is inversely proportional to wavelength ($\lambda$)</b>.<br>
+            • <b>Red light</b> has the longest wavelength ($\lambda \approx 700\text{ nm}$), travels fastest in glass, has the smallest refractive index, and suffers the <b>least angle of deviation ($d_R$)</b>.<br>
+            • <b>Violet light</b> has the shortest wavelength ($\lambda \approx 400\text{ nm}$), travels slowest in glass, has the largest refractive index, and suffers the <b>maximum angle of deviation ($d_V$)</b>.<br><br>
+            <b>3. Formation of Rainbow (Natural Dispersion):</b><br>
+            • Tiny spherical raindrops suspended in atmosphere act as miniature glass prisms.<br>
+            • Sunlight undergoes <b>Refraction + Dispersion at entry ➔ Total Internal Reflection (TIR) at inner rear surface ➔ Refraction at exit</b>.<br>
+            • An observer standing with sun behind their back perceives a brilliant curved spectral rainbow (Red on top at $42^\circ$, Violet at bottom at $40^\circ$).</div>`
+        },
+        {
+          id: "sci_em_dt_10",
+          type: "7m",
+          mark: "7 Marks",
+          examTag: "Outside Book / Extra Practice Diagram",
+          isImportant: true,
+          isAdditionalPractice: true,
+          diagram: true,
+          q: "Explain the extraction of iron from haematite ore in a blast furnace with chemical equations and a neat labeled diagram.",
+          diagramCaption: "Figure: Blast Furnace for Smelting Iron (Zones & Reactions)",
+          diagramSvg: `<svg viewBox="0 0 760 430" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="furnaceGradEm" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#475569"/><stop offset="50%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#334155"/></linearGradient>
+              <linearGradient id="fireGradEm" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#ef4444"/><stop offset="50%" stop-color="#f97316"/><stop offset="100%" stop-color="#fde047"/></linearGradient>
+            </defs>
+            <text x="380" y="26" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Blast Furnace for Smelting Iron Ore (Haematite)</text>
+            <!-- Hopper at Top -->
+            <polygon points="340,42 420,42 400,65 360,65" fill="#64748b" stroke="#cbd5e1"/>
+            <polygon points="370,65 390,65 380,78" fill="#fbbf24"/>
+            <!-- Blast Furnace Body -->
+            <path d="M 360 65 L 340 130 L 320 270 L 335 370 L 425 370 L 440 270 L 420 130 L 400 65 Z" fill="url(#furnaceGradEm)" stroke="#cbd5e1" stroke-width="2.5"/>
+            <!-- Interior Fire & Molten Layers -->
+            <path d="M 324 260 L 336 360 L 424 360 L 436 260 Z" fill="url(#fireGradEm)" opacity="0.3"/>
+            <!-- Slag layer -->
+            <rect x="336" y="340" width="88" height="14" fill="#ca8a04"/>
+            <!-- Molten Iron layer -->
+            <rect x="338" y="354" width="84" height="14" fill="#dc2626"/>
+            <!-- Tuyeres (Hot Air pipes) -->
+            <rect x="295" y="315" width="35" height="14" rx="3" fill="#ea580c"/>
+            <rect x="430" y="315" width="35" height="14" rx="3" fill="#ea580c"/>
+            <!-- Downcomer Gas Pipe -->
+            <path d="M 405 85 L 450 85 L 450 140" fill="none" stroke="#64748b" stroke-width="8"/>
+            <!-- Slag & Iron Tapholes -->
+            <line x1="424" y1="345" x2="455" y2="345" stroke="#ca8a04" stroke-width="5"/>
+            <line x1="422" y1="362" x2="465" y2="362" stroke="#dc2626" stroke-width="6"/>
+
+            <!-- LEFT LABELS (Safe margin 0 to 220) -->
+            <line x1="350" y1="52" x2="220" y2="52" stroke="#94a3b8" stroke-width="1.5"/><circle cx="350" cy="52" r="3.5" fill="#fde047"/>
+            <text x="210" y="57" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="end">Charge (Ore + Coke + CaCO₃)</text>
+            <line x1="340" y1="130" x2="220" y2="130" stroke="#94a3b8" stroke-width="1.5"/><circle cx="340" cy="130" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="135" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">Reduction Zone (400°C–700°C)</text>
+            <line x1="325" y1="210" x2="220" y2="210" stroke="#94a3b8" stroke-width="1.5"/><circle cx="325" cy="210" r="3.5" fill="#fb923c"/>
+            <text x="210" y="215" font-size="13.5" fill="#fb923c" font-weight="bold" text-anchor="end">Slag Zone (800°C–1000°C)</text>
+            <line x1="330" y1="300" x2="220" y2="290" stroke="#94a3b8" stroke-width="1.5"/><circle cx="330" cy="300" r="3.5" fill="#ef4444"/>
+            <text x="210" y="295" font-size="13.5" fill="#ef4444" font-weight="bold" text-anchor="end">Combustion Zone (1500°C)</text>
+
+            <!-- RIGHT LABELS (Safe margin 540 to 760) -->
+            <line x1="450" y1="110" x2="540" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="450" cy="110" r="3.5" fill="#cbd5e1"/>
+            <text x="550" y="115" font-size="13.5" fill="#cbd5e1" font-weight="bold">Waste Gases (CO, CO₂, N₂)</text>
+            <line x1="410" y1="160" x2="540" y2="160" stroke="#94a3b8" stroke-width="1.5"/><circle cx="410" cy="160" r="3.5" fill="#38bdf8"/>
+            <text x="550" y="165" font-size="13.5" fill="#38bdf8" font-weight="bold">Fe₂O₃ + 3CO ➔ 2Fe + 3CO₂</text>
+            <line x1="430" y1="230" x2="540" y2="220" stroke="#94a3b8" stroke-width="1.5"/><circle cx="430" cy="230" r="3.5" fill="#fb923c"/>
+            <text x="550" y="225" font-size="13.5" fill="#fb923c" font-weight="bold">CaO + SiO₂ ➔ CaSiO₃ (Slag)</text>
+            <line x1="465" y1="322" x2="540" y2="280" stroke="#94a3b8" stroke-width="1.5"/><circle cx="465" cy="322" r="3.5" fill="#ea580c"/>
+            <text x="550" y="285" font-size="13.5" fill="#ea580c" font-weight="bold">Tuyeres (Hot Air Blast)</text>
+            <line x1="455" y1="345" x2="540" y2="340" stroke="#94a3b8" stroke-width="1.5"/><circle cx="455" cy="345" r="3.5" fill="#ca8a04"/>
+            <text x="550" y="345" font-size="13.5" fill="#fde047" font-weight="bold">Slag Taphole (Lighter CaSiO₃)</text>
+            <line x1="465" y1="362" x2="540" y2="380" stroke="#94a3b8" stroke-width="1.5"/><circle cx="465" cy="362" r="3.5" fill="#dc2626"/>
+            <text x="550" y="385" font-size="13.5" fill="#f87171" font-weight="bold">Molten Pig Iron Taphole (Denser)</text>
+          </svg>`,
+          ans: `<div style="line-height:1.8;">
+            <b>Extraction of Iron from Haematite Ore ($\text{Fe}_2\text{O}_3$) in Blast Furnace:</b><br><br>
+            <b>1. Charge Materials:</b> Concentrated Haematite ore (8 parts) + Coke (4 parts) + Limestone flux (1 part) introduced via top cup-and-cone hopper.<br><br>
+            <b>2. Chemical Reaction Zones in Blast Furnace:</b><br>
+            • <b>Combustion Zone (1500°C–1600°C at bottom):</b> Coke burns in hot air blast from tuyeres producing intense heat and $\text{CO}_2$:<br>
+            $$\text{C} + \text{O}_2 \longrightarrow \text{CO}_2 + \text{Heat}$$<br>
+            • <b>Reduction Zone (400°C–700°C at upper region):</b> As $\text{CO}_2$ rises, it is reduced by coke to carbon monoxide ($\text{CO}$), which reduces haematite to spongy iron:<br>
+            $$\text{CO}_2 + \text{C} \longrightarrow 2\text{CO}$$<br>
+            $$\text{Fe}_2\text{O}_3 + 3\text{CO} \longrightarrow 2\text{Fe} + 3\text{CO}_2\\uparrow$$<br>
+            • <b>Slag Formation Zone (800°C–1000°C in middle):</b> Limestone decomposes into calcium oxide which reacts with silica gangue forming molten slag:<br>
+            $$\text{CaCO}_3 \longrightarrow \text{CaO} + \text{CO}_2\\uparrow$$<br>
+            $$\text{CaO (Flux)} + \text{SiO}_2\text{ (Gangue)} \longrightarrow \text{CaSiO}_3\text{ (Molten Calcium Silicate Slag)}$$<br><br>
+            <b>3. Collection:</b> Molten iron collects at bottom hearth. Molten slag, being lighter, floats on top protecting iron from re-oxidation. Both are tapped through separate tapholes. Resulting iron contains ~4% carbon and is called <b>Pig Iron (Cast Iron)</b>.</div>`
         },
         {
           id: "sci_em_dt_11",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Public Exam 7M",
+          examTag: "Outside Book / Extra Practice Diagram",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "Explain the experiment to determine the real and apparent expansion of a liquid with a neat diagram.",
-          diagramCaption: "Figure: Experiment to Measure Real & Apparent Expansion of Liquid",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Real &amp; Apparent Expansion of Liquid</text>
-            <g transform=\"translate(190, 40)\">
-              <ellipse cx=\"80\" cy=\"190\" rx=\"60\" ry=\"45\" fill=\"#0284c7\" fill-opacity=\"0.3\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <rect x=\"70\" y=\"20\" width=\"20\" height=\"135\" fill=\"#0f172a\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <line x1=\"70\" y1=\"80\" x2=\"90\" y2=\"80\" stroke=\"#fde047\" stroke-width=\"2.5\"/><text x=\"65\" y=\"84\" font-size=\"10\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">L₁</text>
-              <line x1=\"70\" y1=\"100\" x2=\"90\" y2=\"100\" stroke=\"#f87171\" stroke-width=\"2.5\"/><text x=\"65\" y=\"104\" font-size=\"10\" fill=\"#f87171\" font-weight=\"bold\" text-anchor=\"end\">L₂</text>
-              <line x1=\"70\" y1=\"45\" x2=\"90\" y2=\"45\" stroke=\"#4ade80\" stroke-width=\"2.5\"/><text x=\"65\" y=\"49\" font-size=\"10\" fill=\"#4ade80\" font-weight=\"bold\" text-anchor=\"end\">L₃</text>
-              <path d=\"M 70 240 Q 80 220 80 235 Q 90 220 90 240 Z\" fill=\"#f97316\"/>
-            </g>
-            <line x1=\"250\" y1=\"85\" x2=\"380\" y2=\"85\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"385\" y=\"88\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\">L₁ = Initial Liquid Level</text>
-            <line x1=\"250\" y1=\"140\" x2=\"380\" y2=\"140\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"385\" y=\"143\" font-size=\"11\" fill=\"#f87171\" font-weight=\"bold\">L₂ = Level after Container Expands</text>
-            <line x1=\"250\" y1=\"195\" x2=\"380\" y2=\"195\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"385\" y=\"198\" font-size=\"11\" fill=\"#4ade80\" font-weight=\"bold\">L₃ = Final Level after Liquid Expands</text>
-            <text x=\"270\" y=\"270\" font-size=\"11.5\" fill=\"#e2e8f0\" text-anchor=\"middle\">Apparent Expansion = L₃ - L₁ | Real Expansion = L₃ - L₂ (Real &gt; Apparent)</text>
+          diagram: true,
+          q: "Explain the experiment to determine the real and apparent expansion of a liquid with a neat labeled diagram.",
+          diagramCaption: "Figure: Apparatus to Measure Real and Apparent Liquid Expansion",
+          diagramSvg: `<svg viewBox="0 0 760 400" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Experiment: Real vs Apparent Expansion of a Liquid</text>
+            <!-- Water Bath Beaker -->
+            <rect x="310" y="150" width="140" height="150" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+            <rect x="312" y="165" width="136" height="132" fill="#0284c7" opacity="0.25"/>
+            <!-- Round Bottom Flask inside bath -->
+            <circle cx="380" cy="225" r="45" fill="#f43f5e" opacity="0.35" stroke="#f43f5e" stroke-width="2"/>
+            <rect x="372" y="130" width="16" height="55" fill="#f43f5e" opacity="0.35" stroke="#f43f5e" stroke-width="2"/>
+            <!-- Rubber Cork -->
+            <polygon points="370,130 390,130 388,115 372,115" fill="#78350f"/>
+            <!-- Capillary Tube with Scale -->
+            <rect x="377" y="55" width="6" height="60" fill="#f8fafc" stroke="#94a3b8"/>
+            <!-- Liquid column inside capillary -->
+            <rect x="378" y="70" width="4" height="45" fill="#ef4444"/>
+            <!-- Levels L1, L2, L3 -->
+            <line x1="365" y1="92" x2="395" y2="92" stroke="#fde047" stroke-width="2"/>
+            <line x1="365" y1="102" x2="395" y2="102" stroke="#38bdf8" stroke-width="2"/>
+            <line x1="365" y1="70" x2="395" y2="70" stroke="#4ade80" stroke-width="2"/>
+            <!-- Burner & Flame beneath bath -->
+            <rect x="360" y="325" width="40" height="25" rx="4" fill="#64748b"/>
+            <polygon points="370,325 390,325 380,305" fill="#f97316"/>
+            <polygon points="375,325 385,325 380,312" fill="#fde047"/>
+
+            <!-- LEFT LABELS (Safe margin 0 to 220) -->
+            <line x1="375" y1="65" x2="220" y2="65" stroke="#94a3b8" stroke-width="1.5"/><circle cx="375" cy="65" r="3.5" fill="#f8fafc"/>
+            <text x="210" y="70" font-size="13.5" fill="#ffffff" font-weight="bold" text-anchor="end">Capillary Tube with mm Scale</text>
+            <line x1="370" y1="120" x2="220" y2="120" stroke="#94a3b8" stroke-width="1.5"/><circle cx="370" cy="120" r="3.5" fill="#78350f"/>
+            <text x="210" y="125" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="end">One-holed Rubber Stopper</text>
+            <line x1="340" y1="210" x2="220" y2="190" stroke="#94a3b8" stroke-width="1.5"/><circle cx="340" cy="210" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="195" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">Flask filled with Colored Liquid</text>
+            <line x1="310" y1="250" x2="220" y2="250" stroke="#94a3b8" stroke-width="1.5"/><circle cx="310" cy="250" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="255" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">Water Bath (Uniform Heat)</text>
+            <line x1="360" y1="330" x2="220" y2="330" stroke="#94a3b8" stroke-width="1.5"/><circle cx="360" cy="330" r="3.5" fill="#f97316"/>
+            <text x="210" y="335" font-size="13.5" fill="#f97316" font-weight="bold" text-anchor="end">Bunsen Burner Flame</text>
+
+            <!-- RIGHT LABELS (Safe margin 540 to 760) -->
+            <line x1="395" y1="70" x2="540" y2="70" stroke="#94a3b8" stroke-width="1.5"/><circle cx="395" cy="70" r="3.5" fill="#4ade80"/>
+            <text x="550" y="75" font-size="13.5" fill="#4ade80" font-weight="bold">Level L₃: Final Level (Liquid Expands)</text>
+            <line x1="395" y1="92" x2="540" y2="115" stroke="#94a3b8" stroke-width="1.5"/><circle cx="395" cy="92" r="3.5" fill="#fde047"/>
+            <text x="550" y="120" font-size="13.5" fill="#fde047" font-weight="bold">Level L₁: Initial Liquid Level</text>
+            <line x1="395" y1="102" x2="540" y2="160" stroke="#94a3b8" stroke-width="1.5"/><circle cx="395" cy="102" r="3.5" fill="#38bdf8"/>
+            <text x="550" y="165" font-size="13.5" fill="#38bdf8" font-weight="bold">Level L₂: Glass Container Expands</text>
+            <text x="550" y="230" font-size="13.5" fill="#ffffff" font-weight="bold">Apparent Expansion = L₃ - L₁</text>
+            <text x="550" y="260" font-size="13.5" fill="#38bdf8" font-weight="bold">Flask Volume Expansion = L₁ - L₂</text>
+            <text x="550" y="290" font-size="13.5" fill="#4ade80" font-weight="bold">Real Expansion = L₃ - L₂</text>
+            <text x="550" y="325" font-size="13.5" fill="#fde047" font-weight="bold">Golden Rule: Real > Apparent</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>Determination of Real and Apparent Expansion of a Liquid:</b><br><br>
+          ans: `<div style="line-height:1.8;">
+            <b>Experiment to Measure Real and Apparent Expansion of a Liquid:</b><br><br>
+            When a liquid in a glass container is heated, heat flows first to the glass container before reaching the liquid. Hence both container and liquid expand simultaneously.<br><br>
             <b>1. Experimental Setup:</b><br>
-            • A clean glass container with a narrow graduated stem is filled with the experimental liquid up to level <b>L₁</b>.<br>
-            • The flask is heated using a burner.<br><br>
-            <b>2. Observations:</b><br>
-            • Initially, heat reaches the glass container first; the container expands, causing the liquid level to drop from <b>L₁ to L₂</b>.<br>
-            • On continued heating, the liquid absorbs heat and expands rapidly (liquids expand much more than solids), rising sharply from <b>L₂ to L₃</b>.<br><br>
-            <b>3. Formulas & Results:</b><br>
-            • <b>Apparent Expansion</b> = L₃ - L₁ (Expansion observed without considering container expansion).<br>
-            • <b>Real Expansion</b> = L₃ - L₂ (Actual expansion of liquid taking container expansion into account).<br>
-            • <i>Conclusion:</i> <b>Real Expansion = Apparent Expansion + Container Expansion (L₃ - L₂ = L₃ - L₁ + L₁ - L₂)</b>. Real expansion is always greater than apparent expansion.</div>`
+            • A round-bottom flask is completely filled with a colored liquid up to a mark on a narrow graduated capillary stem fitted through a cork.<br>
+            • Note the initial level of the liquid as <b>$L_1$</b> at room temperature.<br>
+            • Place the flask in a heated water bath.<br><br>
+            <b>2. Step-by-Step Observations:</b><br>
+            • <b>Stage 1 (Initial Fall to $L_2$):</b> Initially, the glass flask receives heat first and expands, increasing its internal capacity. Consequently, the liquid level temporarily <b>falls from $L_1$ to $L_2$</b>.<br>
+            • <b>Stage 2 (Subsequent Rise to $L_3$):</b> As heat conducts into the liquid, the liquid expands much more rapidly than the solid glass (liquids have much higher cubical expansion coefficients). The liquid level rapidly <b>rises past $L_1$ up to $L_3$</b>.<br><br>
+            <b>3. Mathematical Calculations:</b><br>
+            • <b>Apparent Expansion:</b> The observable rise without considering container expansion = <b>$L_3 - L_1$</b>.<br>
+            • <b>Real Expansion:</b> The actual total expansion of the liquid = <b>$L_3 - L_2$</b>.<br>
+            • <b>Expansion of Flask:</b> $L_1 - L_2$.<br>
+            • <b>Fundamental Relationship:</b><br>
+            $$\text{Real Expansion} = \text{Apparent Expansion} + \text{Expansion of Glass Container}$$<br>
+            $$(L_3 - L_2) = (L_3 - L_1) + (L_1 - L_2)$$<br>
+            • <i>Conclusion:</i> <b>Real expansion is always strictly greater than apparent expansion</b>.</div>`
         },
         {
           id: "sci_em_dt_12",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Public Exam 7M",
+          examTag: "Outside Book / Extra Practice Diagram",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "What is a nuclear reactor? Explain the essential components of a nuclear reactor and their specific functions with a neat diagram.",
-          diagramCaption: "Figure: Schematic Diagram of a Nuclear Power Reactor",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">Nuclear Power Reactor Schematic</text>
-            <g transform=\"translate(60, 40)\">
-              <rect x=\"10\" y=\"20\" width=\"160\" height=\"190\" rx=\"8\" fill=\"#334155\" stroke=\"#94a3b8\" stroke-width=\"4\"/>
-              <rect x=\"35\" y=\"50\" width=\"110\" height=\"140\" rx=\"4\" fill=\"#0284c7\" fill-opacity=\"0.3\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <rect x=\"50\" y=\"70\" width=\"12\" height=\"100\" fill=\"#ef4444\" stroke=\"#f87171\"/>
-              <rect x=\"85\" y=\"70\" width=\"12\" height=\"100\" fill=\"#ef4444\" stroke=\"#f87171\"/>
-              <rect x=\"120\" y=\"70\" width=\"12\" height=\"100\" fill=\"#ef4444\" stroke=\"#f87171\"/>
-              <rect x=\"68\" y=\"30\" width=\"10\" height=\"90\" fill=\"#64748b\" stroke=\"#cbd5e1\"/>
-              <rect x=\"103\" y=\"30\" width=\"10\" height=\"90\" fill=\"#64748b\" stroke=\"#cbd5e1\"/>
-              <rect x=\"230\" y=\"40\" width=\"80\" height=\"150\" rx=\"6\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\"/>
-              <path d=\"M 145 75 L 230 75\" stroke=\"#ef4444\" stroke-width=\"4\"/>
-              <path d=\"M 230 160 L 145 160\" stroke=\"#38bdf8\" stroke-width=\"4\"/>
-              <path d=\"M 270 40 L 270 20 L 370 20 L 370 60\" stroke=\"#fde047\" stroke-width=\"3\" fill=\"none\"/>
-              <polygon points=\"360,60 380,60 375,90 365,90\" fill=\"#10b981\" stroke=\"#34d399\"/>
-              <rect x=\"395\" y=\"65\" width=\"35\" height=\"25\" fill=\"#facc15\" rx=\"3\"/>
-            </g>
-            <line x1=\"145\" y1=\"100\" x2=\"20\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"15\" y=\"103\" font-size=\"10\" fill=\"#cbd5e1\" font-weight=\"bold\" text-anchor=\"end\">Control Rods (Boron/Cd)</text>
-            <line x1=\"130\" y1=\"150\" x2=\"20\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"15\" y=\"153\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\" text-anchor=\"end\">Fuel Rods (U-235 / Pu-239)</text>
-            <line x1=\"150\" y1=\"200\" x2=\"20\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"15\" y=\"203\" font-size=\"10\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">Moderator (Heavy Water/Graphite)</text>
-            <line x1=\"370\" y1=\"120\" x2=\"460\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"465\" y=\"123\" font-size=\"10\" fill=\"#f59e0b\" font-weight=\"bold\">Steam Generator</text>
-            <line x1=\"435\" y1=\"90\" x2=\"460\" y2=\"90\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"465\" y=\"93\" font-size=\"10\" fill=\"#10b981\" font-weight=\"bold\">Turbine &amp; Generator</text>
-            <line x1=\"180\" y1=\"240\" x2=\"460\" y2=\"240\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"465\" y=\"243\" font-size=\"10\" fill=\"#94a3b8\" font-weight=\"bold\">Shielding (Lead / Concrete)</text>
+          diagram: true,
+          q: "What is a nuclear reactor? Explain the essential parts of a nuclear reactor and their functions with a neat labeled schematic diagram.",
+          diagramCaption: "Figure: Schematic Working Diagram of a Nuclear Reactor (Fission Power Plant)",
+          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">Schematic Diagram of a Nuclear Fission Reactor</text>
+            <!-- Concrete Shield Container -->
+            <rect x="230" y="70" width="160" height="270" rx="12" fill="#334155" stroke="#94a3b8" stroke-width="8"/>
+            <!-- Reactor Core Tank -->
+            <rect x="250" y="90" width="120" height="230" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+            <!-- Moderator liquid in core -->
+            <rect x="252" y="130" width="116" height="186" fill="#0284c7" opacity="0.3"/>
+            <!-- Fuel Rods (Uranium-235) -->
+            <rect x="270" y="140" width="14" height="150" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+            <rect x="303" y="140" width="14" height="150" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+            <rect x="336" y="140" width="14" height="150" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+            <!-- Control Rods (Cadmium/Boron) inserted from top -->
+            <rect x="286" y="95" width="14" height="120" fill="#f43f5e" stroke="#b91c1c" stroke-width="1.5"/>
+            <rect x="320" y="95" width="14" height="120" fill="#f43f5e" stroke="#b91c1c" stroke-width="1.5"/>
+            <!-- Arrows on control rods -->
+            <polygon points="293,75 289,85 297,85" fill="#f43f5e"/><polygon points="293,92 289,82 297,82" fill="#f43f5e"/>
+            <polygon points="327,75 323,85 331,85" fill="#f43f5e"/><polygon points="327,92 323,82 331,82" fill="#f43f5e"/>
+            <!-- Coolant Pipes to Steam Generator -->
+            <path d="M 370 120 L 450 120 L 450 160" fill="none" stroke="#ef4444" stroke-width="8"/>
+            <path d="M 450 280 L 370 280" fill="none" stroke="#38bdf8" stroke-width="8"/>
+            <!-- Heat Exchanger / Steam Generator -->
+            <rect x="430" y="150" width="70" height="160" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+            <path d="M 445 170 Q 465 190 445 210 Q 465 230 445 250" fill="none" stroke="#ef4444" stroke-width="4"/>
+            <!-- Steam Pipe to Turbine -->
+            <path d="M 465 150 L 465 110 L 560 110" fill="none" stroke="#f8fafc" stroke-width="6"/>
+            <!-- Turbine -->
+            <polygon points="560,90 600,110 560,130" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+            <!-- Generator -->
+            <rect x="605" y="95" width="35" height="30" rx="4" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+            <text x="622" y="115" font-size="11" fill="#ffffff" font-weight="bold" text-anchor="middle">GEN</text>
+            <!-- Condenser below -->
+            <rect x="540" y="240" width="80" height="60" rx="6" fill="#1e293b" stroke="#06b6d4" stroke-width="2"/>
+            <path d="M 580 130 L 580 240" fill="none" stroke="#cbd5e1" stroke-width="4"/>
+
+            <!-- LEFT LABELS (Safe margin 0 to 220) -->
+            <line x1="290" y1="80" x2="210" y2="80" stroke="#94a3b8" stroke-width="1.5"/><circle cx="290" cy="80" r="3.5" fill="#f43f5e"/>
+            <text x="200" y="85" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">Control Rods (Cadmium / Boron)</text>
+            <line x1="270" y1="180" x2="210" y2="140" stroke="#94a3b8" stroke-width="1.5"/><circle cx="270" cy="180" r="3.5" fill="#22c55e"/>
+            <text x="200" y="145" font-size="13.5" fill="#4ade80" font-weight="bold" text-anchor="end">Fuel Rods (U-235 / Pu-239)</text>
+            <line x1="260" y1="240" x2="210" y2="210" stroke="#94a3b8" stroke-width="1.5"/><circle cx="260" cy="240" r="3.5" fill="#38bdf8"/>
+            <text x="200" y="215" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">Moderator (D₂O / Graphite)</text>
+            <line x1="230" y1="300" x2="210" y2="290" stroke="#94a3b8" stroke-width="1.5"/><circle cx="230" cy="300" r="3.5" fill="#94a3b8"/>
+            <text x="200" y="295" font-size="13.5" fill="#cbd5e1" font-weight="bold" text-anchor="end">Concrete Radiation Shield (2.5m)</text>
+
+            <!-- RIGHT LABELS (Safe margin 540 to 760) -->
+            <line x1="450" y1="120" x2="550" y2="60" stroke="#94a3b8" stroke-width="1.5"/><circle cx="450" cy="120" r="3.5" fill="#ef4444"/>
+            <text x="560" y="65" font-size="13.5" fill="#ef4444" font-weight="bold">Hot Coolant Loop (Molten Na / Water)</text>
+            <line x1="500" y1="210" x2="550" y2="185" stroke="#94a3b8" stroke-width="1.5"/><circle cx="500" cy="210" r="3.5" fill="#f59e0b"/>
+            <text x="560" y="190" font-size="13.5" fill="#fde047" font-weight="bold">Steam Generator (Heat Exchanger)</text>
+            <line x1="600" y1="110" x2="650" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="600" cy="110" r="3.5" fill="#eab308"/>
+            <text x="660" y="115" font-size="13.5" fill="#38bdf8" font-weight="bold">Turbine & Generator (Power)</text>
+            <line x1="620" y1="270" x2="650" y2="270" stroke="#94a3b8" stroke-width="1.5"/><circle cx="620" cy="270" r="3.5" fill="#06b6d4"/>
+            <text x="660" y="275" font-size="13.5" fill="#22d3ee" font-weight="bold">Cold Water Condenser Loop</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>Essential Components of a Nuclear Reactor and Their Functions:</b><br><br>
-            A nuclear reactor is a device in which a self-sustaining controlled nuclear fission chain reaction is carried out to generate electrical power.<br><br>
+          ans: `<div style="line-height:1.8;">
+            <b>Structure and Working of a Nuclear Reactor:</b><br><br>
+            A nuclear reactor is a specialized device in which a nuclear fission chain reaction is initiated, sustained, and controlled at a steady, constant rate to generate electrical power.<br><br>
+            <b>Essential Components and Functions:</b><br><br>
             <b>1. Nuclear Fuel:</b><br>
-            • Fissionable material like Uranium-235 (<b>U-235</b>) or Plutonium-239 (<b>Pu-239</b>) fabricated into cylindrical fuel rods.<br><br>
+            • Fissionable material such as <b>Uranium-235 ($^{235}\text{U}$) or Plutonium-239 ($^{239}\text{Pu}$)</b> enclosed in zirconium alloy tubes.<br>
+            • Sustains chain fission releasing approx. 200 MeV per nucleus.<br><br>
             <b>2. Moderator:</b><br>
-            • Substance used to slow down energetic fast neutrons to thermal speeds (~0.025 eV) necessary to induce further fission.<br>
-            • <i>Common Moderators:</i> Heavy water (<b>D₂O</b>) and high-purity <b>Graphite</b>.<br><br>
+            • High-speed fast neutrons ($2\text{ MeV}$) produced in fission must be slowed down to thermal energies ($0.025\text{ eV}$) to efficiently trigger further $^{235}\text{U}$ fission.<br>
+            • Light elements with low neutron absorption like <b>Heavy Water ($\text{D}_2\text{O}$) and high-purity Graphite</b> are used.<br><br>
             <b>3. Control Rods:</b><br>
-            • Rods made of high neutron-absorbing materials such as <b>Boron or Cadmium</b> inserted into the reactor core.<br>
-            • <i>Function:</i> Lowered into the core to absorb excess neutrons and shut down or slow reaction; withdrawn to increase fission rate.<br><br>
+            • Materials with extremely high neutron absorption cross-section such as <b>Cadmium ($\text{Cd}$) or Boron ($\text{B}$)</b>.<br>
+            • Inserted or withdrawn into core to maintain multiplication factor $k = 1$ (critical state). If pushed in completely, the reactor shuts down instantly.<br><br>
             <b>4. Coolant:</b><br>
-            • Fluid circulated through the reactor core to remove the enormous heat produced by fission.<br>
-            • <i>Common Coolants:</i> Ordinary water, heavy water, and liquid sodium. Coolant carries heat to a steam generator driving turbine dynamos.<br><br>
-            <b>5. Radiation Shielding:</b><br>
-            • Thick lead and heavy concrete containment walls (2 to 2.5 meters thick) shielding personnel from hazardous gamma radiation and leaking neutrons.</div>`
+            • Liquid circulating through the reactor core to absorb immense heat and transfer it to a heat exchanger.<br>
+            • <b>Ordinary water, heavy water, liquid sodium, or helium gas</b> are used.<br><br>
+            <b>5. Radiation Shield (Biological Shield):</b><br>
+            • A massive containment dome of <b>lead and 2 to 2.5 meter thick reinforced concrete</b> enclosing the reactor to prevent hazardous $\alpha, \beta, \gamma$ radiations and neutrons from escaping into the environment.</div>`
         }
       ]
     }
@@ -637,635 +1061,975 @@
 };
 
 
-// =======================================================================
-// அறிவியல் வரைபடங்கள் வழிகாட்டி & அரசுப் பொதுத்தேர்வு முழு மதிப்பெண் குறிப்புகள் (தமிழ் வழி)
-// Focus: High-weightage diagrams, proper labeling techniques & presentation tips
-// =======================================================================
-
 const SCIENCE_DIAGRAM_TIPS_TM = {
   unitId: "sci_diag_tips",
-  unitName: "அறிவியல் வரைபடக் குறிப்புகள் & முக்கியப் படங்கள்",
-  subject: "அறிவியல் (தமிழ் வழி)",
-  syllabus: "தமிழ்நாடு அரசுப் பொதுத்தேர்வு புளூபிரிண்ட் 2026 - அறிவியல் வரைபட வழிகாட்டி",
+  unitName: "அறிவியல் வரைபடக் குறிப்புகள் & முக்கியப் படங்கள் (Science Diagram Tips)",
+  subject: "Science (Tamil Medium)",
+  syllabus: "தமிழ்நாடு சமச்சீர் கல்வி 10-ஆம் வகுப்பு அறிவியல் பொதுத்தேர்வு 2026",
 
   formulas: [
-    { title: "விதி 1: HB பென்சில் விதி", rule: "வரைபடங்கள் மற்றும் பெயர்களைக் கூர்மையான HB பென்சிலால் மட்டுமே வரைய வேண்டும்; பேனாவைப் பயன்படுத்தக் கூடாது." },
-    { title: "விதி 2: நேர்கோட்டுக் குறிப்பான்", rule: "சுட்டுக்கோடுகளை (Pointer Lines) அளவுகோலால் (Scale) நேராக, ஒன்றையொன்று வெட்டாதவாறு வரைய வேண்டும்." },
-    { title: "விதி 3: வலதுபுற ஒழுங்கமைப்பு", rule: "அனைத்துப் பாகங்களின் பெயர்களையும் வரைபடத்தின் வலதுபுறத்தில் நேராகக் கிடைமட்டமாக எழுத வேண்டும்." },
-    { title: "விதி 4: சரியான அளவு (1/2 பக்கம்)", rule: "வரைபடம் விடைத்தாளில் பாதிப் பக்கத்தை (1/2 பக்கம்) அடைக்குமாறு தாராளமான அளவில் வரைய வேண்டும்." },
-    { title: "விதி 5: திசைக் குறியீட்டு அம்புக்குறி", rule: "ஒளியியல் கதிர்கள், மின்சுற்று மின்னோட்டம் மற்றும் இரத்த ஓட்டத்தில் அம்புக்குறி இடுவது கட்டாயமாகும்." },
-    { title: "விதி 6: அடிக்கோடிட்ட தலைப்பு", rule: "வரைபடத்தின் கீழே மையத்தில் படத்திற்குரிய தலைப்பை எழுதி அடிக்கோடிட வேண்டும் (எ.கா: படம்: நியூரான் அமைப்பு)." },
-    { title: "விதி 7: 7-மதிப்பெண் பங்கீடு", rule: "7 மதிப்பெண் வினாவில் வரைபடம் & பாகங்களுக்கு 4 மதிப்பெண்கள் + விளக்கத்திற்கு 3 மதிப்பெண்கள் வழங்கப்படுகிறது." }
+    { title: "விதி 1: HB பென்சில் மட்டுமே", rule: "படங்கள் மற்றும் பாகங்கள் குறிக்க கூர்மையான HB பென்சிலை மட்டுமே பயன்படுத்த வேண்டும். பேனாவை உபயோகிக்கக் கூடாது." },
+    { title: "விதி 2: இணையான வழிகோடுகள்", rule: "30 செ.மீ ஒளிபுகும் அளவுகோலைப் பயன்படுத்தி ஒன்றையொன்று வெட்டாத நேரான கிடைமட்டக் கோடுகளாக வரைக." },
+    { title: "விதி 3: வலதுபக்க ஒருமுகப்படுத்தல்", rule: "அனைத்துப் பாகங்களின் பெயர்களையும் படத்தின் வலது பக்கத்தில் ஒரே நேர்க்கோட்டில் தெளிவாக எழுதவும்." },
+    { title: "விதி 4: சரியான அளவு விகிதம்", rule: "விடைத்தாளில் மூன்றில் ஒரு பங்கு முதல் அரைப் பக்க அளவிற்குத் தாராளமான அளவில் படம் வரைக." },
+    { title: "விதி 5: கட்டாயத் திசைக் குறியீடுகள்", rule: "ஒளிக்கதிர்கள், மின்சுற்று, இரத்த ஓட்டம் ஆகியவற்றில் திசைக் காட்டும் அம்புக்குறிகளைத் தவறாமல் குறிக்கவும்." },
+    { title: "விதி 6: அடிக்கோடிட்ட தலைப்பு", rule: "வரைபடத்தின் மையப்பகுதியில் கீழ் 'படம்: நரம்புச் செல்லின் அமைப்பு' எனப் படத்தின் தலைப்பை அடிக்கோடிட்டு எழுதவும்." },
+    { title: "விதி 7: 7-மதிப்பெண் பங்கீடு", rule: "7 மதிப்பெண் வினாவில் 4 மதிப்பெண் படத்திற்கும், 3 மதிப்பெண் அதன் விளக்கம் மற்றும் பணிகளுக்கும் ஒதுக்கப்பட்டுள்ளது." }
   ],
 
   subSections: [
     {
       id: "sec_sci_tm_dt_1",
       title: "பகுதி 1: அரசுப் பொதுத்தேர்வு வரைபட வழிகாட்டல் & 100% மதிப்பெண் விதிகள்",
-      author: "அரசுப் பொதுத்தேர்வு 2026 சிறப்பு வழிகாட்டி",
+      author: "அரசுத் தேர்வு ஆசிரியர் குழு வழிகாட்டல்",
       questions: [
         {
           id: "sci_tm_dt_1",
           type: "7m",
           mark: "7 மதிப்பெண்",
-          examTag: "பொதுத்தேர்வு பொன்விதிகள்",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "10-ஆம் வகுப்பு அறிவியல் பொதுத்தேர்வில் வரைபடங்களில் முழு மதிப்பெண் (100%) பெறுவதற்கான 7 பொன்விதிகள் மற்றும் வழிமுறைகள் யாவை?",
-          ans: `<div style=\"line-height:1.8;\">
-            <b>10-ஆம் வகுப்பு அறிவியல் பொதுத்தேர்வு: வரைபட வழிகாட்டல் நெறிமுறைகள்</b><br><br>
-            தமிழ்நாடு அரசுப் பொதுத்தேர்வு விடைத்தாள் திருத்தும் முறைப்படி (Part IV: வினா எண் 33, 34, 35 - 7 மதிப்பெண் வினாக்கள்), வரைபடங்கள் அதிக மதிப்பெண்களைத் தீர்மானிக்கின்றன. கீழ்க்கண்ட 7 பொன்விதிகளைக் கடைப்பிடித்தால் வரைபட வினாக்களில் முழு மதிப்பெண் பெறுவது உறுதி:<br><br>
-            <b>1. கூர்மையான HB பென்சில் மட்டுமே பயன்படுத்தும் விதி:</b><br>
-            • வரைபடத்தின் வெளிக்கோடு, உட்பாகங்கள் மற்றும் சுட்டுக்கோடுகள் அனைத்தையும் <b>கூர்மையான HB அல்லது 2B பென்சிலால் மட்டுமே வரைய வேண்டும்</b>.<br>
-            • வரைபடப் பகுதியில் <b>கருப்பு அல்லது நீல நிற பேனாக்களை ஒருபோதும் பயன்படுத்தக் கூடாது</b>.<br>
-            • அளவுக்கு அதிகமாகத் தேய்த்து நிழலிடுவதைத் (Shading) தவிர்க்கவும்; ஒற்றைக் கோட்டில் தூய்மையாக வரையும் வரைபடமே அதிக மதிப்பெண்களைப் பெறும்.<br><br>
-            <b>2. வெட்டாத நேரான சுட்டுக்கோடுகள் (Scale Rule):</b><br>
-            • பாகங்களைக் குறிக்கும் சுட்டுக்கோடுகளை எப்போதும் 30 செ.மீ அளவுகோலைப் (Ruler) பயன்படுத்தி நேர்கோடாக வரைய வேண்டும்.<br>
-            • <b>மிக முக்கிய விதி: சுட்டுக்கோடுகள் ஒன்றையொன்று குறுக்காக வெட்டவே கூடாது (Never cross pointer lines).</b> கோடுகள் ஒன்றையொன்று வெட்டினால் மதிப்பெண் குறைக்கப்படும்.<br>
-            • கோடுகள் கிடைமட்டமாகவோ அல்லது சீரான 45° சாய்வுக் கோணத்திலோ அமைய வேண்டும்.<br><br>
-            <b>3. வலதுபுற ஒழுங்கமைப்பு (Unilateral Alignment):</b><br>
-            • முடிந்தவரை அனைத்துப் பாகங்களின் பெயர்களையும் வரைபடத்தின் <b>வலதுபுறத்தில் ஒரே நேர்க்கோட்டில்</b> வரிசையாக எழுத வேண்டும்.<br>
-            • பெயர்களைச் சாய்வாகவோ, தலைகீழாகவோ எழுதாமல், எப்போதும் நேராகக் கிடைமட்டமாக (Horizontal) எழுத வேண்டும்.<br><br>
-            <b>4. சரியான விகிதாச்சாரம் மற்றும் அளவு (1/2 பக்கம்):</b><br>
-            • வரைபடத்தைத் தபால் தலை அளவு போன்ற மிகச் சிறியதாக வரையக் கூடாது. விடைத்தாளின் பக்கத்தில் <b>பாதிப் பக்கத்தை (10 முதல் 12 செ.மீ உயரம்)</b> அடைக்குமாறு தாராளமான அளவில் வரைய வேண்டும்.<br>
-            • அப்போதுதான் இரத்த நாளங்கள், நுண்குழல்கள், வால்வுகள் போன்ற உட்பாகங்களைத் தெளிவாகக் குறிக்க முடியும்.<br><br>
-            <b>5. கட்டாய திசை அம்புக்குறிகள் (Direction Arrows):</b><br>
-            • <b>இயற்பியல் ஒளியியல் கதிர்கள்</b> (குவி லென்ஸ், முப்பட்டகம், மையோபியா/ஹைப்பர்மெட்ரோபியா): படுகதிர், விலகுகதிர், வெளிப்படு கதிர்களில் அம்புக்குறியிடுவது <b>கட்டாயமாகும்</b>. அம்புக்குறி இல்லாவிட்டால் வரைபடத்திற்கு 0 மதிப்பெண் மட்டுமே வழங்கப்படும்.<br>
-            • <b>இரத்த ஓட்டம் & நரம்புத் தூண்டல்:</b> இரத்தம் பாயும் திசை (ஆரிக்கிள் ➔ வெண்ட்ரிக்கிள் ➔ பெருந்தமனி) மற்றும் நரம்புத் தூண்டல் திசைக்கு அம்புக்குறி அவசியம்.<br><br>
-            <b>6. மையத்தில் அடிக்கோடிட்ட தலைப்பு:</b><br>
-            • வரைபடத்தின் கீழே நடுப்பகுதியில் படத்திற்குரிய தலைப்பை எழுதி அடிக்கோடிட வேண்டும் (எ.கா: <u>படம்: மனித இதயத்தின் உள்ளமைப்பு</u>).<br><br>
-            <b>7. 7-மதிப்பெண் வினாக்களில் மதிப்பெண் பங்கீடு:</b><br>
-            • பகுதி IV வினாக்களில், வரைபடம் மற்றும் பாகங்களைக் குறிப்பதற்கு <b>4 மதிப்பெண்கள் (குறைந்தது 4 முதல் 6 பாகங்கள்)</b> வழங்கப்படுகிறது.<br>
-            • மீதமுள்ள <b>3 மதிப்பெண்கள் விளக்க உரை, தத்துவம் அல்லது பணிகளுக்கு</b> ஒதுக்கப்படுகிறது.<br>
-            • நேரக் குறைபாடு ஏற்பட்டாலும், சரியான வரைபடத்தை வரைந்து 4 பாகங்களைக் குறித்தால் உடனே 4 மதிப்பெண்கள் உறுதியாகக் கிடைக்கும்!</div>`
+          diagram: true,
+          q: "அறிவியல் பொதுத்தேர்வில் வரைபட வினாக்களில் முழு மதிப்பெண் பெறுவதற்கான 7 தங்க விதிகள் மற்றும் பாகங்கள் குறிக்கும் முறைகளை விளக்குக.",
+          ans: `<div style="line-height:1.8;">
+            <b>10-ஆம் வகுப்பு அறிவியல் பொதுத்தேர்வு: வரைபட வழிகாட்டல் சிறப்புத் தொகுப்பு</b><br><br>
+            அரசுப் பொதுத்தேர்வு வினாத்தாள் பகுதி IV-ல் (வினா எண் 33, 34, 35) கேட்கப்படும் 7 மதிப்பெண் வினாக்களில் வரைபடங்கள் மிக முக்கியமான இடத்தைப் பெறுகின்றன. முழு மதிப்பெண் (100%) பெற பின்வரும் 7 தங்க விதிகளைப் பின்பற்றுங்கள்:<br><br>
+            <b>1. கூர்மையான HB பென்சில் மட்டுமே:</b><br>
+            • வரைபடத்தின் வெளிக்கோடு, உட்கட்டமைப்பு மற்றும் பாகங்களைக் குறிக்கும் கோடுகள் அனைத்தையும் <b>கூர்மையான HB பென்சிலால் மட்டுமே வரைய வேண்டும்</b>.<br>
+            • <b>எக்காரணம் கொண்டும் கருப்பு அல்லது நீல நிற பேனாக்களைப் பயன்படுத்தக் கூடாது</b>.<br>
+            • பென்சிலால் வரையும் போது அழுத்திப் பதிக்காமல், மென்மையான ஒற்றைக் கோடுகளாக வரைந்தால் அழித்துத் திருத்த எளிதாக இருக்கும்.<br><br>
+            <b>2. ஒன்றையொன்று வெட்டாத நேரான வழிகாட்டுக் கோடுகள்:</b><br>
+            • பாகங்களைக் குறிக்க எப்போதும் 30 செ.மீ ஒளிபுகும் அளவுகோலைப் (Transparent Scale) பயன்படுத்த வேண்டும்.<br>
+            • <b>மிக முக்கியமான விதி: வழிகாட்டுக் கோடுகள் ஒன்றையொன்று வெட்டவே கூடாது (Non-crossing lines).</b> கோடுகள் வெட்டினால் மதிப்பெண் குறைக்கப்படும்.<br>
+            • கோடுகள் கிடைமட்டமாகவோ அல்லது 45° கோணத்தில் தொடங்கி கிடைமட்டமாக முடியும் வகையிலோ அமைய வேண்டும்.<br><br>
+            <b>3. வலதுபக்க ஒருமுகப்படுத்தல் (Right-Side Alignment):</b><br>
+            • முடிந்தவரை அனைத்துப் பாகங்களின் பெயர்களையும் வரைபடத்தின் <b>வலது பக்கத்தில் ஒரே நேர்க்கோட்டில்</b> வருமாறு எழுத வேண்டும்.<br>
+            • தெளிவான அச்சு எழுத்துகளில் பிழையின்றி எழுதவும்.<br>
+            • பெயர்களைக் குறுக்காகவோ, செங்குத்தாகவோ அல்லது தலைகீழாகவோ எழுதக் கூடாது; நேராக மட்டுமே எழுத வேண்டும்.<br><br>
+            <b>4. தாராளமான அளவு (அரை பக்க அளவு):</b><br>
+            • விடைத்தாளில் படம் சிறிதாக (அஞ்சல் தலை அளவில்) இருக்கக் கூடாது; குறைந்தது <b>10 முதல் 12 செ.மீ உயரத்திற்குத் தாராளமாக (அரை பக்க அளவு)</b> வரைய வேண்டும்.<br>
+            • அப்போதுதான் கிளாமருலஸ், வால்வுகள் போன்ற நுண்ணிய பாகங்களை ஆசிரியர்கள் தெளிவாகப் பார்த்து முழு மதிப்பெண் வழங்குவர்.<br><br>
+            <b>5. கட்டாயத் திசைக் குறியீடுகள் (அம்புக்குறிகள்):</b><br>
+            • <b>இயற்பியல் கதிர் வரைபடங்கள்:</b> படுகதிர், விலகுகதிர், வெளியேறுகதிர் ஆகியவற்றில் அம்புக்குறிகள் இடுவது <b>கட்டாயம்</b>. அம்புக்குறி இல்லாவிடில் வரைபடம் சரியானதாக இருந்தாலும் மதிப்பெண் வழங்கப்படாது.<br>
+            • <b>உயிரியல் இரத்த ஓட்டம் & நரம்புத் தூண்டல்:</b> இரத்தம் பாயும் திசை, நரம்புத் தூண்டல் கடத்தப்படும் திசைக்கு அம்புக்குறி இடுவது அவசியம்.<br><br>
+            <b>6. மையப்படுத்தப்பட்ட அடிக்கோடிட்ட தலைப்பு:</b><br>
+            • வரைபடத்தின் கீழ்ப் பகுதியில் மையமாக <u>படம்: மனித இதயத்தின் உள்ளமைப்பு</u> எனப் படத்தின் பெயரைத் தெளிவாக எழுதி அடிக்கோடிட வேண்டும்.<br><br>
+            <b>7. பகுதி IV மதிப்பெண் பங்கீடு (4M படம் + 3M விளக்கம்):</b><br>
+            • 7 மதிப்பெண் வினாவில் வரைபடத்திற்கு <b>4 மதிப்பெண்களும் (படம் + குறைந்தபட்சம் 4 சரியான பாகங்கள்)</b>, விளக்கத்திற்கு <b>3 மதிப்பெண்களும்</b> வழக்கமாகப் பிரிக்கப்படுகின்றன.<br>
+            • நேரம் குறைவாக இருந்தாலும், படத்தை வரைந்து 4 பாகங்களைக் குறித்தாலே உடனடியாக 4 மதிப்பெண்களை உறுதி செய்துவிடலாம்!</div>`
         }
       ]
     },
     {
       id: "sec_sci_tm_dt_2",
-      title: "பகுதி 2: உயிரியல் முக்கிய வரைபடங்கள் & விளக்கங்கள் (வினா எண் 35)",
-      author: "உயிரியல் வரைபட வழிகாட்டி",
+      title: "பகுதி 2: உயிரியல் முக்கிய வரைபடங்கள் (வினா எண் 35 சிறப்பு)",
+      author: "உயிரியல் வரைபட வழிகாட்டல்",
       questions: [
         {
           id: "sci_tm_dt_2",
           type: "7m",
           mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 35",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "பலமுனை நியூரான் (நரம்பு செல்) அமைப்பைத் தெளிவான படத்துடன் விளக்கி, அதன் முக்கியப் பாகங்களின் பணிகளைக் குறிப்பிடுக.",
-          diagramCaption: "படம்: நரம்பு செல் (நியூரான்) அமைப்பு & பாகங்கள்",
-          diagramSvg: `<svg viewBox=\"0 0 540 280\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
+          diagram: true,
+          q: "பலமுனை நியூரானின் (நரம்புச் செல்) அமைப்பைத் தெளிவான படத்துடன் விளக்கி, அதன் முக்கியப் பாகங்களின் பணிகளைக் குறிப்பிடுக.",
+          diagramCaption: "படம்: பலமுனை நரம்புச் செல்லின் (நியூரான்) அமைப்பு",
+          diagramSvg: `<svg viewBox="0 0 760 360" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
             <defs>
-              <linearGradient id=\"cytonGradTm\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#38bdf8\" /><stop offset=\"100%\" stop-color=\"#0284c7\" /></linearGradient>
-              <linearGradient id=\"myelinGradTm\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#fef08a\" /><stop offset=\"100%\" stop-color=\"#eab308\" /></linearGradient>
+              <linearGradient id="cytonGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
+              <linearGradient id="myelinGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#eab308"/></linearGradient>
             </defs>
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">நரம்பு செல் (நியூரான்) அமைப்பு</text>
-            <g transform=\"translate(40, 50)\">
-              <path d=\"M 60 70 L 10 30 M 60 70 L 25 10 M 70 60 L 50 10 M 80 50 L 80 5 M 95 60 L 120 15 M 100 80 L 140 40 M 60 90 L 15 110 M 70 100 L 40 140\" stroke=\"#38bdf8\" stroke-width=\"2.5\" fill=\"none\" stroke-linecap=\"round\"/>
-              <polygon points=\"60,70 70,55 90,50 105,65 110,85 95,105 75,105 60,90\" fill=\"url(#cytonGradTm)\" stroke=\"#0284c7\" stroke-width=\"2\"/>
-              <circle cx=\"85\" cy=\"80\" r=\"14\" fill=\"#1e293b\" stroke=\"#f8fafc\" stroke-width=\"1.5\"/>
-              <circle cx=\"85\" cy=\"80\" r=\"5\" fill=\"#f8fafc\"/>
-              <circle cx=\"73\" cy=\"70\" r=\"1.5\" fill=\"#bae6fd\"/><circle cx=\"97\" cy=\"70\" r=\"1.5\" fill=\"#bae6fd\"/>
-              <circle cx=\"75\" cy=\"95\" r=\"1.5\" fill=\"#bae6fd\"/><circle cx=\"95\" cy=\"95\" r=\"1.5\" fill=\"#bae6fd\"/>
+            <text x="380" y="30" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">பலமுனை நியூரானின் (நரம்புச் செல்) அமைப்பு</text>
+            <g transform="translate(180, 80)">
+              <path d="M 60 70 L 10 25 M 60 70 L 25 5 M 70 60 L 50 5 M 80 50 L 80 0 M 95 60 L 120 10 M 100 80 L 140 35 M 60 90 L 15 115 M 70 100 L 35 145" stroke="#38bdf8" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <polygon points="60,70 70,55 90,50 105,65 110,85 95,105 75,105 60,90" fill="url(#cytonGradTm)" stroke="#0284c7" stroke-width="2.5"/>
+              <circle cx="85" cy="80" r="16" fill="#1e293b" stroke="#f8fafc" stroke-width="2"/>
+              <circle cx="85" cy="80" r="6" fill="#f8fafc"/>
+              <circle cx="73" cy="70" r="2" fill="#bae6fd"/><circle cx="97" cy="70" r="2" fill="#bae6fd"/>
+              <circle cx="75" cy="95" r="2" fill="#bae6fd"/><circle cx="95" cy="95" r="2" fill="#bae6fd"/>
             </g>
-            <line x1=\"150\" y1=\"130\" x2=\"420\" y2=\"130\" stroke=\"#38bdf8\" stroke-width=\"4\"/>
-            <rect x=\"165\" y=\"116\" width=\"50\" height=\"28\" rx=\"6\" fill=\"url(#myelinGradTm)\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><circle cx=\"190\" cy=\"122\" r=\"3\" fill=\"#713f12\"/>
-            <rect x=\"225\" y=\"116\" width=\"50\" height=\"28\" rx=\"6\" fill=\"url(#myelinGradTm)\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><circle cx=\"250\" cy=\"122\" r=\"3\" fill=\"#713f12\"/>
-            <rect x=\"285\" y=\"116\" width=\"50\" height=\"28\" rx=\"6\" fill=\"url(#myelinGradTm)\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><circle cx=\"310\" cy=\"122\" r=\"3\" fill=\"#713f12\"/>
-            <rect x=\"345\" y=\"116\" width=\"50\" height=\"28\" rx=\"6\" fill=\"url(#myelinGradTm)\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/><circle cx=\"370\" cy=\"122\" r=\"3\" fill=\"#713f12\"/>
-            <g transform=\"translate(415, 130)\">
-              <path d=\"M 0 0 L 30 -25 M 30 -25 L 50 -35 M 30 -25 L 50 -15 M 0 0 L 35 0 M 35 0 L 55 0 M 0 0 L 30 25 M 30 25 L 50 15 M 30 25 L 50 35\" stroke=\"#38bdf8\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/>
-              <circle cx=\"50\" cy=\"-35\" r=\"4\" fill=\"#ec4899\"/><circle cx=\"50\" cy=\"-15\" r=\"4\" fill=\"#ec4899\"/>
-              <circle cx=\"55\" cy=\"0\" r=\"4\" fill=\"#ec4899\"/><circle cx=\"50\" cy=\"15\" r=\"4\" fill=\"#ec4899\"/><circle cx=\"50\" cy=\"35\" r=\"4\" fill=\"#ec4899\"/>
+            <line x1="285" y1="160" x2="540" y2="160" stroke="#38bdf8" stroke-width="5"/>
+            <rect x="300" y="144" width="48" height="32" rx="6" fill="url(#myelinGradTm)" stroke="#ca8a04" stroke-width="1.8"/><circle cx="324" cy="152" r="3.5" fill="#713f12"/>
+            <rect x="360" y="144" width="48" height="32" rx="6" fill="url(#myelinGradTm)" stroke="#ca8a04" stroke-width="1.8"/><circle cx="384" cy="152" r="3.5" fill="#713f12"/>
+            <rect x="420" y="144" width="48" height="32" rx="6" fill="url(#myelinGradTm)" stroke="#ca8a04" stroke-width="1.8"/><circle cx="444" cy="152" r="3.5" fill="#713f12"/>
+            <rect x="480" y="144" width="48" height="32" rx="6" fill="url(#myelinGradTm)" stroke="#ca8a04" stroke-width="1.8"/><circle cx="504" cy="152" r="3.5" fill="#713f12"/>
+            <g transform="translate(540, 160)">
+              <path d="M 0 0 L 30 -25 M 30 -25 L 50 -35 M 30 -25 L 50 -15 M 0 0 L 35 0 M 35 0 L 55 0 M 0 0 L 30 25 M 30 25 L 50 15 M 30 25 L 50 35" stroke="#38bdf8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="50" cy="-35" r="5" fill="#ec4899"/><circle cx="50" cy="-15" r="5" fill="#ec4899"/>
+              <circle cx="55" cy="0" r="5" fill="#ec4899"/><circle cx="50" cy="15" r="5" fill="#ec4899"/><circle cx="50" cy="35" r="5" fill="#ec4899"/>
             </g>
-            <line x1=\"50\" y1=\"65\" x2=\"15\" y2=\"65\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"10\" y=\"68\" font-size=\"11\" fill=\"#e2e8f0\" font-weight=\"bold\" text-anchor=\"end\">டென்ட்ரைட்டுகள்</text>
-            <line x1=\"125\" y1=\"110\" x2=\"125\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"125\" y1=\"185\" x2=\"50\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"188\" font-size=\"11\" fill=\"#e2e8f0\" font-weight=\"bold\" text-anchor=\"end\">சைட்டான் (செல் உடலம்)</text>
-            <line x1=\"125\" y1=\"130\" x2=\"125\" y2=\"215\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"125\" y1=\"215\" x2=\"50\" y2=\"215\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"218\" font-size=\"11\" fill=\"#e2e8f0\" font-weight=\"bold\" text-anchor=\"end\">உட்கரு</text>
-            <line x1=\"218\" y1=\"130\" x2=\"218\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"218\" y1=\"185\" x2=\"260\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"265\" y=\"188\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\">ரேன்வியரின் கணு</text>
-            <line x1=\"310\" y1=\"116\" x2=\"310\" y2=\"75\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"310\" y1=\"75\" x2=\"350\" y2=\"75\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"355\" y=\"78\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\">மயலின் உறை</text>
-            <line x1=\"270\" y1=\"130\" x2=\"270\" y2=\"225\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><line x1=\"270\" y1=\"225\" x2=\"320\" y2=\"225\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"325\" y=\"228\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\">ஆக்ஸான் (நரம்பு நாரிழை)</text>
-            <line x1=\"465\" y1=\"130\" x2=\"495\" y2=\"130\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"500\" y=\"133\" font-size=\"11\" fill=\"#f472b6\" font-weight=\"bold\">சினாப்டிக் குமிழ்</text>
+            <line x1="220" y1="110" x2="200" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="220" cy="110" r="3.5" fill="#38bdf8"/>
+            <text x="190" y="115" font-size="13.5" fill="#ffffff" font-weight="bold" text-anchor="end">டென்ட்ரைட்டுகள் (Dendrites)</text>
+            <line x1="265" y1="160" x2="200" y2="175" stroke="#94a3b8" stroke-width="1.5"/><circle cx="265" cy="160" r="3.5" fill="#38bdf8"/>
+            <text x="190" y="180" font-size="13.5" fill="#ffffff" font-weight="bold" text-anchor="end">செல்லுடலம் / சைட்டான் (Cyton)</text>
+            <line x1="265" y1="160" x2="200" y2="235" stroke="#94a3b8" stroke-width="1.5"/><circle cx="265" cy="160" r="3.5" fill="#f8fafc"/>
+            <text x="190" y="240" font-size="13.5" fill="#ffffff" font-weight="bold" text-anchor="end">உட்கரு & நிஸ்லின் துகள்கள்</text>
+            <line x1="444" y1="144" x2="444" y2="95" stroke="#94a3b8" stroke-width="1.5"/><circle cx="444" cy="144" r="3.5" fill="#eab308"/>
+            <text x="444" y="85" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="middle">மயலின் உறை (Myelin Sheath)</text>
+            <line x1="410" y1="160" x2="410" y2="225" stroke="#94a3b8" stroke-width="1.5"/><circle cx="410" cy="160" r="3.5" fill="#eab308"/>
+            <text x="410" y="245" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="middle">ரான்வியரின் கணு (Node of Ranvier)</text>
+            <line x1="450" y1="160" x2="570" y2="195" stroke="#94a3b8" stroke-width="1.5"/><circle cx="450" cy="160" r="3.5" fill="#38bdf8"/>
+            <text x="580" y="200" font-size="13.5" fill="#38bdf8" font-weight="bold">ஆக்சான் (Axon)</text>
+            <line x1="595" y1="160" x2="605" y2="160" stroke="#94a3b8" stroke-width="1.5"/><circle cx="595" cy="160" r="3.5" fill="#ec4899"/>
+            <text x="615" y="165" font-size="13.5" fill="#f472b6" font-weight="bold">சினாப்டிக் குமிழ் (Synaptic Knob)</text>
+            <text x="420" y="310" font-size="13" font-weight="bold" fill="#4ade80" text-anchor="middle">───➔ நரம்புத் தூண்டல் கடத்தும் திசை (120 மீ/வி) ───➔</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>நியூரான் (நரம்பு செல்) அமைப்பு மற்றும் பணிகள்:</b><br><br>
-            நரம்பு மண்டலத்தின் அமைப்பு மற்றும் செயல் அலகு நியூரான் ஆகும். இதன் முக்கிய மூன்று பகுதிகள்:<br><br>
-            <b>1. சைட்டான் (செல் உடலம் / பெரிகேரியான்):</b><br>
-            • மையத்தில் பெரிய கோள வடிவ <b>உட்கருவையும்</b>, நுண் துகள்கள் கொண்ட <b>நியூரோபிளாசத்தையும்</b> கொண்டுள்ளது.<br>
-            • புரதச் சேர்க்கைக்கு உதவும் <b>நிசில் துகள்கள்</b> மற்றும் மைட்டோகாண்ட்ரியாக்கள் இதில் காணப்படுகின்றன.<br><br>
+          ans: `<div style="line-height:1.8;">
+            <b>நியூரானின் (நரம்புச் செல்) அமைப்பு மற்றும் பணிகள்:</b><br><br>
+            நியூரான் நரம்பு மண்டலத்தின் அடிப்படை அமைப்பு மற்றும் செயல் அலகு ஆகும். இதன் முக்கிய மூன்று பகுதிகள்:<br><br>
+            <b>1. செல்லுடலம் (சைட்டான் / பெரிகேரியான்):</b><br>
+            • மையத்தில் பெரிய கோள வடிவ <b>உட்கருவையும்</b>, அதனைச் சுற்றி நியூரோபிளாசம் எனப்படும் சைட்டோபிளாசத்தையும் கொண்டுள்ளது.<br>
+            • புரதச் சேர்க்கைக்குத் தேவையான <b>நிஸ்லின் துகள்கள் (Nissl's granules)</b> மற்றும் மைட்டோகாண்ட்ரியாக்கள் இதில் நிறைந்துள்ளன.<br><br>
             <b>2. டென்ட்ரைட்டுகள்:</b><br>
-            • சைட்டானிலிருந்து வெளிப்படும் குறுகிய, பல கிளைகளைக் கொண்ட நரம்பு நீட்சிகள்.<br>
-            • <i>பணி:</i> உணர்வு உறுப்புகள் அல்லது பிற நியூரான்களிலிருந்து தூண்டல்களைப் பெற்று <b>சைட்டானை நோக்கி</b> கடத்துகின்றன.<br><br>
-            <b>3. ஆக்ஸான்:</b><br>
-            • சைட்டானிலிருந்து தொடங்கும் மிக நீளமான, ஒற்றை உருளை வடிவ நரம்பு நாரிழை.<br>
-            • <i>பணி:</i> நரம்புத் தூண்டல்களைச் சைட்டானிலிருந்து <b>வெளிநோக்கிக் கடத்தி</b> அடுத்த நியூரானுக்கோ அல்லது இலக்கு உறுப்புக்கோ கொண்டு செல்கிறது.<br><br>
-            <b>4. மயலின் உறை மற்றும் ரேன்வியரின் கணுக்கள்:</b><br>
-            • ஆக்ஸானைச் சுற்றி ஸ்வான் செல்களாலான வெண்மையான கொழுப்பு அடுக்கு <b>மயலின் உறை</b> உள்ளது. இது மின் கடத்தா உறையாகச் செயல்படுகிறது.<br>
-            • மயலின் உறை குறிப்பிட்ட இடைவெளியில் விட்டுவிட்டுக் காணப்படும் இடைவெளிகள் <b>ரேன்வியரின் கணுக்கள்</b> எனப்படும். இது தூண்டல்களை வினாடிக்கு 120 மீ வேகத்தில் தாவிக் கடத்த (Saltatory conduction) உதவுகிறது.<br><br>
-            <b>5. சினாப்டிக் குமிழ்:</b><br>
-            • ஆக்ஸானின் நுனிக் கிளைகள் சிறு குமிழ் போன்ற முடிவடைகின்றன. இதில் <b>அசிட்டைல்கோலின்</b> என்ற நரம்புணர்வு கடத்தி வேதிப்பொருள் உள்ளது.</div>`
+            • செல்லுடலத்திலிருந்து வெளிப்படும் பல குறுகிய, கிளைத்த சைட்டோபிளாச நீட்சிகள்.<br>
+            • <i>பணி:</i> உணர்வு உறுப்புகள் அல்லது பிற செல்களிலிருந்து தூண்டல்களைப் பெற்று <b>செல்லுடலத்தை நோக்கி (Cell-ward)</b> கடத்துகின்றன.<br><br>
+            <b>3. ஆக்சான்:</b><br>
+            • செல்லுடலத்திலிருந்து ஆக்சான் மேடு என்ற பகுதியிலிருந்து தொடங்கும் ஒற்றை, நீண்ட உருளை வடிவ இழை.<br>
+            • <i>பணி:</i> நரம்புத் தூண்டல்களை <b>செல்லுடலத்திலிருந்து வெளியே (Away from cyton)</b> அடுத்த நியூரான் அல்லது தசைகளுக்குக் கடத்துகிறது.<br><br>
+            <b>4. மயலின் உறை & ரான்வியர் கணுக்கள்:</b><br>
+            • ஆக்சானைச் சுற்றி ஸ்வான் செல்களாலான கொழுப்பு நிறைந்த <b>மயலின் உறை</b> பாதுகாப்புக் கவசமாக அமைந்துள்ளது.<br>
+            • மயலின் உறை இல்லாத இடைவெளிகள் <b>ரான்வியரின் கணுக்கள்</b> எனப்படும். இவை தூண்டல்கள் தாவித் தாவி மிக வேகமாக (விநாடிக்கு 120 மீட்டர் வரை) பாய உதவுகின்றன.<br><br>
+            <b>5. சினாப்டிக் குமிழ் (முனை முடிச்சுகள்):</b><br>
+            • ஆக்சானின் நுனிக் கிளைகள் குமிழ் போன்ற அமைப்பில் முடிவடைகின்றன. இவற்றில் <b>அசிட்டைல்கோலின்</b> போன்ற நரம்பு உணர்வு கடத்தி வேதிப்பொருட்கள் உள்ளன.<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ வரைபடப் பாகங்கள் & முக்கியத் தேர்வுப் பணிகள் (Key Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">எண்</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">பாகத்தின் பெயர்</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">முக்கியப் பணி / விளக்கம்</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">1</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">செல்லுடலம் (Cyton)</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">உட்கரு மற்றும் நிஸ்லின் துகள்களைக் கொண்ட வளர்ச்சி மற்றும் மையப் பகுதி.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">2</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">டென்ட்ரைட்டுகள்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">தூண்டல்களைப் பெற்று செல்லுடலத்தை நோக்கிக் கொண்டு செல்கிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">3</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">ஆக்சான்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">நீண்ட நரம்பிழை; தூண்டல்களை செல்லுடலத்திலிருந்து வெளியே கடத்துகிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">4</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">மயலின் உறை</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">ஆக்சானைச் சுற்றியுள்ள கொழுப்புப் பாதுகாப்பு உறை.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">5</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">ரான்வியர் கணு</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">மயலின் உறையற்ற இடைவெளி; தாவுதல் முறையில் விரைவாகத் தூண்டல் பாய்கிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">6</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#db2777;">சினாப்டிக் குமிழ்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">அசிட்டைல்கோலின் வேதிப்பொருள் மூலம் தூண்டலை அடுத்த செல்லுக்கு அனுப்புகிறது.</td></tr>
+              </table>
+            </div>
+          </div>`
         },
         {
           id: "sci_tm_dt_3",
           type: "7m",
           mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 35",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "மனித இதயத்தின் உள்ளமைப்பை படம் வரைந்து பாகங்களைக் குறித்து, இரத்த ஓட்டத்தின் படிநிலைகளை விளக்குக.",
-          diagramCaption: "படம்: மனித இதயத்தின் உள்ளமைப்பு & இரட்டை இரத்த ஓட்டம்",
-          diagramSvg: `<svg viewBox=\"0 0 540 320\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">மனித இதயத்தின் உள்ளமைப்பு</text>
-            <g transform=\"translate(160, 45)\">
-              <path d=\"M 110 240 C 20 200, 10 100, 60 40 C 110 -10, 130 30, 110 50 C 90 30, 110 -10, 160 40 C 210 100, 200 200, 110 240 Z\" fill=\"#be123c\" stroke=\"#fda4af\" stroke-width=\"3.5\" fill-opacity=\"0.25\"/>
-              <path d=\"M 110 50 L 110 236\" stroke=\"#f43f5e\" stroke-width=\"5\" stroke-linecap=\"round\"/>
-              <line x1=\"25\" y1=\"105\" x2=\"195\" y2=\"105\" stroke=\"#94a3b8\" stroke-width=\"2.5\" stroke-dasharray=\"4 3\"/>
-              <rect x=\"35\" y=\"50\" width=\"65\" height=\"50\" fill=\"#38bdf8\" fill-opacity=\"0.3\" rx=\"6\"/>
-              <text x=\"68\" y=\"80\" font-size=\"10\" fill=\"#bae6fd\" font-weight=\"bold\" text-anchor=\"middle\">வலது ஆரிக்கிள்</text>
-              <rect x=\"120\" y=\"50\" width=\"65\" height=\"50\" fill=\"#f43f5e\" fill-opacity=\"0.3\" rx=\"6\"/>
-              <text x=\"152\" y=\"80\" font-size=\"10\" fill=\"#fecdd3\" font-weight=\"bold\" text-anchor=\"middle\">இடது ஆரிக்கிள்</text>
-              <rect x=\"30\" y=\"115\" width=\"72\" height=\"95\" fill=\"#0284c7\" fill-opacity=\"0.3\" rx=\"8\"/>
-              <text x=\"66\" y=\"165\" font-size=\"10\" fill=\"#7dd3fc\" font-weight=\"bold\" text-anchor=\"middle\">வலது வெண்ட்</text>
-              <rect x=\"118\" y=\"115\" width=\"72\" height=\"95\" fill=\"#e11d48\" fill-opacity=\"0.35\" rx=\"8\"/>
-              <text x=\"154\" y=\"165\" font-size=\"10\" fill=\"#fda4af\" font-weight=\"bold\" text-anchor=\"middle\">இடது வெண்ட்</text>
-              <path d=\"M 55 105 L 75 105\" stroke=\"#facc15\" stroke-width=\"4\" stroke-linecap=\"round\"/>
-              <path d=\"M 140 105 L 160 105\" stroke=\"#facc15\" stroke-width=\"4\" stroke-linecap=\"round\"/>
-              <path d=\"M 130 50 C 130 15, 170 10, 180 -15\" stroke=\"#e11d48\" stroke-width=\"8\" fill=\"none\" stroke-linecap=\"round\"/>
-              <path d=\"M 90 50 C 90 15, 60 10, 40 -15\" stroke=\"#0284c7\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\"/>
-            </g>
-            <line x1=\"195\" y1=\"30\" x2=\"50\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"33\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">மேற்பெருஞ்சிரை</text>
-            <line x1=\"195\" y1=\"95\" x2=\"50\" y2=\"95\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"98\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">வலது ஆரிக்கிள் (ஏட்ரியம்)</text>
-            <line x1=\"225\" y1=\"150\" x2=\"50\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"153\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">மூவிதழ் வால்வு</text>
-            <line x1=\"220\" y1=\"210\" x2=\"50\" y2=\"210\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"213\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">வலது வெண்ட்ரிக்கிள்</text>
-            <line x1=\"270\" y1=\"260\" x2=\"50\" y2=\"260\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"263\" font-size=\"11\" fill=\"#f43f5e\" font-weight=\"bold\" text-anchor=\"end\">வெண்ட்ரிக்கிள் இடைத்தடுப்புச்சுவர்</text>
-            <line x1=\"340\" y1=\"30\" x2=\"430\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"33\" font-size=\"11\" fill=\"#f43f5e\" font-weight=\"bold\">பெருந்தமனி (Aorta)</text>
-            <line x1=\"320\" y1=\"42\" x2=\"430\" y2=\"65\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"68\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\">நுரையீரல் தமனி</text>
-            <line x1=\"315\" y1=\"95\" x2=\"430\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"103\" font-size=\"11\" fill=\"#f43f5e\" font-weight=\"bold\">இடது ஆரிக்கிள் (ஏட்ரியம்)</text>
-            <line x1=\"310\" y1=\"150\" x2=\"430\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"153\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\">ஈரிதழ் (மிட்ரல்) வால்வு</text>
-            <line x1=\"320\" y1=\"210\" x2=\"430\" y2=\"210\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"213\" font-size=\"11\" fill=\"#f43f5e\" font-weight=\"bold\">இடது வெண்ட்ரிக்கிள் (தடித்த சுவர்)</text>
+          diagram: true,
+          q: "மனித இதயத்தின் உள்ளமைப்பைத் தெளிவான படத்துடன் விளக்கி, இரட்டை இரத்த ஓட்ட முறையை விவரிக்கவும்.",
+          diagramCaption: "படம்: மனித இதயத்தின் உள்ளமைப்பு மற்றும் இரத்த ஓட்டம்",
+          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="deoxGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0369a1"/></linearGradient>
+              <linearGradient id="oxGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f43f5e"/><stop offset="100%" stop-color="#be123c"/></linearGradient>
+            </defs>
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">மனித இதயத்தின் உள்ளமைப்பு மற்றும் இரத்த ஓட்டம்</text>
+            <rect x="290" y="45" width="28" height="55" rx="5" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+            <path d="M 390 120 C 390 50 440 40 440 90" fill="none" stroke="#e11d48" stroke-width="26" stroke-linecap="round"/>
+            <line x1="405" y1="52" x2="405" y2="35" stroke="#f43f5e" stroke-width="8"/><line x1="422" y1="46" x2="422" y2="32" stroke="#f43f5e" stroke-width="8"/><line x1="438" y1="52" x2="438" y2="35" stroke="#f43f5e" stroke-width="8"/>
+            <path d="M 360 140 C 360 80 320 70 320 85" fill="none" stroke="#0284c7" stroke-width="20" stroke-linecap="round"/>
+            <path d="M 280 110 C 260 180 280 300 375 350 C 470 300 490 180 470 110 Z" fill="#1e293b" stroke="#64748b" stroke-width="3"/>
+            <rect x="285" y="115" width="75" height="65" rx="10" fill="url(#deoxGradTm)" stroke="#0284c7" stroke-width="2"/>
+            <text x="322" y="152" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">RA</text>
+            <rect x="390" y="115" width="75" height="65" rx="10" fill="url(#oxGradTm)" stroke="#be123c" stroke-width="2"/>
+            <text x="427" y="152" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">LA</text>
+            <path d="M 285 190 L 365 190 L 365 310 C 320 295 285 245 285 190 Z" fill="url(#deoxGradTm)" stroke="#0284c7" stroke-width="2"/>
+            <text x="325" y="250" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">RV</text>
+            <path d="M 385 190 L 465 190 C 465 245 430 295 385 320 Z" fill="url(#oxGradTm)" stroke="#be123c" stroke-width="2"/>
+            <path d="M 465 190 C 465 260 425 315 375 345 L 385 320 C 430 295 465 245 465 190 Z" fill="#9f1239"/>
+            <text x="425" y="250" font-size="13" fill="#ffffff" font-weight="bold" text-anchor="middle">LV</text>
+            <rect x="365" y="190" width="20" height="135" fill="#475569" stroke="#334155"/>
+            <line x1="305" y1="185" x2="345" y2="185" stroke="#fde047" stroke-width="4"/><polygon points="325,183 320,188 330,188" fill="#fde047"/>
+            <line x1="405" y1="185" x2="445" y2="185" stroke="#fde047" stroke-width="4"/><polygon points="425,183 420,188 430,188" fill="#fde047"/>
+            <rect x="465" y="125" width="24" height="14" rx="3" fill="#e11d48"/><rect x="465" y="145" width="24" height="14" rx="3" fill="#e11d48"/>
+            <rect x="290" y="300" width="26" height="40" rx="4" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+
+            <!-- LEFT LABELS (0 to 220 safe margin) -->
+            <line x1="290" y1="65" x2="220" y2="65" stroke="#94a3b8" stroke-width="1.5"/><circle cx="290" cy="65" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="70" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">மேல் பெருஞ்சிரை (Vena Cava)</text>
+            <line x1="300" y1="140" x2="220" y2="140" stroke="#94a3b8" stroke-width="1.5"/><circle cx="300" cy="140" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="145" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">வலது ஏட்ரியம் (RA)</text>
+            <line x1="325" y1="185" x2="220" y2="190" stroke="#94a3b8" stroke-width="1.5"/><circle cx="325" cy="185" r="3.5" fill="#fde047"/>
+            <text x="210" y="195" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="end">மூவிதழ் வால்வு (Tricuspid)</text>
+            <line x1="310" y1="250" x2="220" y2="250" stroke="#94a3b8" stroke-width="1.5"/><circle cx="310" cy="250" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="255" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">வலது வென்ட்ரிக்கிள் (RV)</text>
+            <line x1="290" y1="320" x2="220" y2="320" stroke="#94a3b8" stroke-width="1.5"/><circle cx="290" cy="320" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="325" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">கீழ் பெருஞ்சிரை</text>
+            <line x1="375" y1="280" x2="220" y2="370" stroke="#94a3b8" stroke-width="1.5"/><circle cx="375" cy="280" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="375" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">இடைத்தடுப்புச் சுவர் (Septum)</text>
+
+            <!-- RIGHT LABELS (540 to 760 safe margin) -->
+            <line x1="420" y1="40" x2="540" y2="60" stroke="#94a3b8" stroke-width="1.5"/><circle cx="420" cy="40" r="3.5" fill="#f43f5e"/>
+            <text x="550" y="65" font-size="13.5" fill="#f43f5e" font-weight="bold">மகா தமனி (Aorta)</text>
+            <line x1="340" y1="75" x2="540" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="340" cy="75" r="3.5" fill="#38bdf8"/>
+            <text x="550" y="115" font-size="13.5" fill="#38bdf8" font-weight="bold">நுரையீரல் தமனி</text>
+            <line x1="480" y1="135" x2="540" y2="160" stroke="#94a3b8" stroke-width="1.5"/><circle cx="480" cy="135" r="3.5" fill="#f43f5e"/>
+            <text x="550" y="165" font-size="13.5" fill="#f43f5e" font-weight="bold">நுரையீரல் சிரைகள் (தூய இரத்தம்)</text>
+            <line x1="450" y1="150" x2="540" y2="210" stroke="#94a3b8" stroke-width="1.5"/><circle cx="450" cy="150" r="3.5" fill="#f43f5e"/>
+            <text x="550" y="215" font-size="13.5" fill="#f43f5e" font-weight="bold">இடது ஏட்ரியம் (LA)</text>
+            <line x1="425" y1="185" x2="540" y2="260" stroke="#94a3b8" stroke-width="1.5"/><circle cx="425" cy="185" r="3.5" fill="#fde047"/>
+            <text x="550" y="265" font-size="13.5" fill="#fde047" font-weight="bold">ஈரிதழ் / மிட்ரல் வால்வு</text>
+            <line x1="450" y1="260" x2="540" y2="320" stroke="#94a3b8" stroke-width="1.5"/><circle cx="450" cy="260" r="3.5" fill="#f43f5e"/>
+            <text x="550" y="325" font-size="13.5" fill="#f43f5e" font-weight="bold">இடது வென்ட்ரிக்கிள் (தடித்த தசைச்சுவர்)</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>மனித இதயத்தின் உள்ளமைப்பு & இரட்டை இரத்த ஓட்டம்:</b><br><br>
-            மனித இதயம் இரட்டை அடுக்கு பெரிகார்டியல் உறையால் சூழப்பட்ட நான்கு அறைகளைக் கொண்ட தசை உறுப்பாகும்.<br><br>
+          ans: `<div style="line-height:1.8;">
+            <b>மனித இதயத்தின் உள்ளமைப்பு மற்றும் இரட்டை இரத்த ஓட்டம்:</b><br><br>
+            மனித இதயம் <b>பெரிகார்டியம்</b> என்ற இரட்டைச் சவ்வினால் சூழப்பட்ட நான்கு அறைகளைக் கொண்ட தசைப் பம்பி ஆகும்.<br><br>
             <b>1. நான்கு அறைகள்:</b><br>
-            • <b>வலது ஆரிக்கிள் (ஏட்ரியம்):</b> மேற்பெருஞ்சிரை மற்றும் கீழ்ப்பெருஞ்சிரை மூலம் உடலின் பல்வேறு பாகங்களிலிருந்து ஆக்ஸிஜன் குறைந்த அசுத்த இரத்தத்தைப் பெறுகிறது.<br>
-            • <b>வலது வெண்ட்ரிக்கிள்:</b> வலது ஆரிக்கிளிலிருந்து இரத்தத்தைப் பெற்று நுரையீரல் தமனி வழியாக நுரையீரலுக்குச் செலுத்துகிறது.<br>
-            • <b>இடது ஆரிக்கிள்:</b> நுரையீரலிலிருந்து 4 நுரையீரல் சிரைகள் வழியாக ஆக்ஸிஜன் மிகுந்த சுத்த இரத்தத்தைப் பெறுகிறது.<br>
-            • <b>இடது வெண்ட்ரிக்கிள்:</b> மிகத் தடித்த தசைச்சுவர் கொண்டது; அதிக அழுத்தத்துடன் சுத்த இரத்தத்தைப் பெருந்தமனி (Aorta) வழியாக உடலின் அனைத்துப் பாகங்களுக்கும் செலுத்துகிறது.<br><br>
+            • <b>மேல் அறைகள்:</b> மெல்லிய சுவருடைய வலது ஏட்ரியம் மற்றும் இடது ஏட்ரியம்.<br>
+            • <b>கீழ் அறைகள்:</b> தடித்த சுவருடைய வலது வென்ட்ரிக்கிள் மற்றும் இடது வென்ட்ரிக்கிள்.<br>
+            • உடலின் அனைத்துப் பாகங்களுக்கும் இரத்தத்தை அதிக அழுத்தத்துடன் உந்தித் தள்ள வேண்டியுள்ளதால் <b>இடது வென்ட்ரிக்கிளின் தசைச்சுவர் வலது வென்ட்ரிக்கிளை விட 3 மடங்கு தடிமனாக</b> உள்ளது.<br><br>
             <b>2. இதய வால்வுகள்:</b><br>
-            • <b>மூவிதழ் வால்வு:</b> வலது ஆரிக்கிளுக்கும் வலது வெண்ட்ரிக்கிளுக்கும் இடையே அமைந்துள்ளது.<br>
-            • <b>ஈரிதழ் (மிட்ரல்) வால்வு:</b> இடது ஆரிக்கிளுக்கும் இடது வெண்ட்ரிக்கிளுக்கும் இடையே அமைந்துள்ளது.<br>
-            • <b>பிறைச்சந்திர வால்வுகள்:</b> நுரையீரல் தமனி மற்றும் பெருந்தமனியின் தொடக்கத்தில் இரத்தம் பின்னோக்கி வருவதைத் தடுக்கின்றன.<br><br>
-            <b>3. இரட்டை இரத்த ஓட்டம் (Double Circulation):</b><br>
-            1. <b>நுரையீரல் இரத்த ஓட்டம்:</b> வலது வெண்ட்ரிக்கிள் ➔ நுரையீரல் தமனி ➔ நுரையீரல் ➔ நுரையீரல் சிரை ➔ இடது ஆரிக்கிள்.<br>
-            2. <b>உடற்பெருமுறை இரத்த ஓட்டம்:</b> இடது வெண்ட்ரிக்கிள் ➔ பெருந்தமனி ➔ உடல் திசுக்கள் ➔ பெருஞ்சிரைகள் ➔ வலது ஆரிக்கிள்.<br>
-            • <i>முக்கியத்துவம்:</i> சுத்த இரத்தமும் அசுத்த இரத்தமும் ஒன்றுடன் ஒன்று கலப்பதைத் தடுத்து, உடலுக்குத் திறம்பட அதிக ஆக்ஸிஜன் கிடைப்பதை உறுதி செய்கிறது.</div>`
+            • <b>மூவிதழ் வால்வு:</b> வலது ஏட்ரியத்திற்கும் வலது வென்ட்ரிக்கிளுக்கும் இடையில் உள்ளது (3 இதழ்கள்; அசுத்த இரத்தம் பின்னோக்கிச் செல்வதைத் தடுக்கிறது).<br>
+            • <b>ஈரிதழ் (மிட்ரல்) வால்வு:</b> இடது ஏட்ரியத்திற்கும் இடது வென்ட்ரிக்கிளுக்கும் இடையில் உள்ளது (2 இதழ்கள்; தூய இரத்தம் பின்னோக்கிப் பாய்வதைத் தடுக்கிறது).<br>
+            • <b>பிறைச்சந்திர வால்வுகள்:</b> நுரையீரல் தமனி மற்றும் மகா தமனியின் தொடக்கத்தில் அமைந்துள்ளன.<br><br>
+            <b>3. இரட்டை இரத்த ஓட்டத்தின் வழிமுறை:</b><br>
+            • <b>நுரையீரல் சுற்றோட்டம்:</b> உடலின் அசுத்த இரத்தம் மேல் & கீழ் பெருஞ்சிரை வழியாக வலது ஏட்ரியம் ➔ வலது வென்ட்ரிக்கிள் ➔ நுரையீரல் தமனி வழியாக நுரையீரலுக்குச் சென்று சுத்திகரிக்கப்படுகிறது.<br>
+            • <b>உடல் சுற்றோட்டம்:</b> நுரையீரலில் இருந்து தூய ஆக்சிஜன் இரத்தம் 4 நுரையீரல் சிரைகள் வழியாக இடது ஏட்ரியம் ➔ இடது வென்ட்ரிக்கிள் ➔ மகா தமனி (Aorta) வழியாக உடலின் பிற பாகங்களுக்குச் செல்கிறது.<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ வரைபடப் பாகங்கள் & முக்கியத் தேர்வுப் பணிகள் (Key Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">எண்</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">பாகத்தின் பெயர்</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">இரத்த வகை & பணி</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">1</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">மேல் & கீழ் பெருஞ்சிரை</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">உடலின் அசுத்த இரத்தத்தை வலது ஏட்ரியத்திற்கு கொண்டு வருகிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">2</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">வலது வென்ட்ரிக்கிள்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">அசுத்த இரத்தத்தை நுரையீரல் தமனி வழியாக நுரையீரலுக்கு அனுப்புகிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">3</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">மூவிதழ் & ஈரிதழ் வால்வுகள்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">வென்ட்ரிக்கிள்களில் இருந்து ஏட்ரியத்திற்கு இரத்தம் பின்னோக்கிப் பாய்வதைத் தடுக்கின்றன.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">4</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#e11d48;">நுரையீரல் சிரைகள்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">நுரையீரலில் இருந்து தூய ஆக்சிஜன் இரத்தத்தை இடது ஏட்ரியத்திற்குக் கொண்டு வருகின்றன.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">5</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#e11d48;">இடது வென்ட்ரிக்கிள் & மகா தமனி</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">அதிக அழுத்தத்தில் உடலின் அனைத்துப் பாகங்களுக்கும் தூய இரத்தத்தை விநியோகிக்கிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">6</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#e11d48;">இடைத்தடுப்புச் சுவர் (Septum)</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">சுத்த இரத்தமும் அசுத்த இரத்தமும் ஒன்றோடு ஒன்று கலப்பதைத் தடுக்கிறது.</td></tr>
+              </table>
+            </div>
+          </div>`
         },
         {
           id: "sci_tm_dt_4",
           type: "7m",
           mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 35",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "மனித மூளையின் அமைப்பை படம் வரைந்து விளக்கி, முன்மூளை, நடுமூளை மற்றும் பின்மூளையின் பணிகளைக் குறிப்பிடுக.",
-          diagramCaption: "படம்: மனித மூளையின் நீள்வெட்டுத் தோற்றம் & பாகங்கள்",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">மனித மூளையின் நீள்வெட்டுத் தோற்றம்</text>
-            <g transform=\"translate(130, 45)\">
-              <path d=\"M 40 140 C 20 80, 50 20, 140 15 C 230 15, 270 70, 260 130 C 230 140, 200 130, 180 145 C 160 160, 120 150, 40 140 Z\" fill=\"#38bdf8\" fill-opacity=\"0.35\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <path d=\"M 60 70 Q 100 40 140 60 Q 180 40 220 70\" stroke=\"#0284c7\" stroke-width=\"1.5\" fill=\"none\"/>
-              <path d=\"M 70 100 Q 120 80 170 100 Q 210 80 240 110\" stroke=\"#0284c7\" stroke-width=\"1.5\" fill=\"none\"/>
-              <path d=\"M 100 120 Q 150 90 200 120\" stroke=\"#f8fafc\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\"/>
-              <ellipse cx=\"150\" cy=\"135\" rx=\"16\" ry=\"12\" fill=\"#ca8a04\" stroke=\"#fef08a\"/>
-              <path d=\"M 140 145 Q 140 160 130 165\" stroke=\"#eab308\" stroke-width=\"3\" fill=\"none\"/>
-              <circle cx=\"128\" cy=\"170\" r=\"5\" fill=\"#f43f5e\"/>
-              <circle cx=\"170\" cy=\"155\" r=\"9\" fill=\"#8b5cf6\" stroke=\"#c4b5fd\"/>
-              <rect x=\"155\" y=\"170\" width=\"22\" height=\"20\" rx=\"4\" fill=\"#10b981\" stroke=\"#6ee7b7\"/>
-              <path d=\"M 195 145 C 235 145, 260 170, 245 210 C 215 220, 185 200, 195 145 Z\" fill=\"#f59e0b\" fill-opacity=\"0.85\" stroke=\"#d97706\" stroke-width=\"2\"/>
-              <path d=\"M 220 160 L 220 195 M 220 175 L 205 165 M 220 175 L 235 165 M 220 185 L 210 195 M 220 185 L 230 195\" stroke=\"#fef3c7\" stroke-width=\"1.5\" fill=\"none\"/>
-              <rect x=\"158\" y=\"195\" width=\"16\" height=\"24\" rx=\"2\" fill=\"#06b6d4\" stroke=\"#67e8f9\"/>
-              <rect x=\"160\" y=\"222\" width=\"12\" height=\"30\" fill=\"#64748b\" stroke=\"#94a3b8\"/>
-            </g>
-            <line x1=\"170\" y1=\"85\" x2=\"45\" y2=\"85\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"88\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">பெருமூளை (முன்மூளை)</text>
-            <line x1=\"230\" y1=\"155\" x2=\"45\" y2=\"155\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"158\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">கார்பஸ் கலோசம்</text>
-            <line x1=\"280\" y1=\"180\" x2=\"45\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"183\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">தலாமஸ் / ஹைப்போதலாமஸ்</text>
-            <line x1=\"258\" y1=\"215\" x2=\"45\" y2=\"215\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"218\" font-size=\"11\" fill=\"#fb7185\" font-weight=\"bold\" text-anchor=\"end\">பிட்யூட்டரி சுரப்பி</text>
-            <line x1=\"300\" y1=\"200\" x2=\"430\" y2=\"170\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"173\" font-size=\"11\" fill=\"#c4b5fd\" font-weight=\"bold\">நடுமூளை</text>
-            <line x1=\"375\" y1=\"200\" x2=\"430\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"203\" font-size=\"11\" fill=\"#fbbf24\" font-weight=\"bold\">சிறுமூளை (பின்மூளை)</text>
-            <line x1=\"307\" y1=\"230\" x2=\"430\" y2=\"230\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"233\" font-size=\"11\" fill=\"#34d399\" font-weight=\"bold\">பான்ஸ் (இணைப்பு மேடு)</text>
-            <line x1=\"304\" y1=\"250\" x2=\"430\" y2=\"255\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"258\" font-size=\"11\" fill=\"#22d3ee\" font-weight=\"bold\">முகுளம் (Medulla)</text>
-            <line x1=\"302\" y1=\"280\" x2=\"430\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"283\" font-size=\"11\" fill=\"#94a3b8\" font-weight=\"bold\">தண்டுவடம்</text>
+          diagram: true,
+          q: "மனித மூளையின் நீள்வெட்டுத் தோற்ற அமைப்பைத் தெளிவான படத்துடன் விளக்கி, முன்மூளை, நடுமூளை, பின்மூளையின் பணிகளைக் குறிப்பிடுக.",
+          diagramCaption: "படம்: மனித மூளையின் நீள்வெட்டுத் தோற்றம்",
+          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="cerebrumGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#0284c7"/></linearGradient>
+              <linearGradient id="cerebellumGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></linearGradient>
+            </defs>
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">மனித மூளையின் நீள்வெட்டுத் தோற்றம்</text>
+            <path d="M 260 260 C 240 120 330 65 430 65 C 500 65 520 160 520 250 C 520 300 480 320 440 310" fill="none" stroke="#475569" stroke-width="4"/>
+            <path d="M 275 250 C 265 135 340 85 425 85 C 485 85 505 155 505 235 C 475 240 435 220 395 210 C 345 200 305 230 275 250 Z" fill="url(#cerebrumGradTm)" stroke="#0284c7" stroke-width="2"/>
+            <path d="M 310 115 Q 340 140 375 110 Q 410 135 440 105 M 300 155 Q 345 170 380 145 Q 430 170 475 135 M 345 190 Q 395 195 445 175" stroke="#bae6fd" stroke-width="2" fill="none"/>
+            <path d="M 330 200 C 350 170 420 170 440 200 C 420 190 350 190 330 200 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+            <ellipse cx="385" cy="210" rx="24" ry="14" fill="#fb923c" stroke="#c2410c" stroke-width="1.5"/>
+            <path d="M 365 215 L 360 240 L 375 240 L 380 220 Z" fill="#f43f5e"/>
+            <circle cx="358" cy="252" r="7" fill="#fb7185" stroke="#e11d48" stroke-width="1.5"/>
+            <rect x="390" y="222" width="22" height="22" rx="4" fill="#c4b5fd" stroke="#7c3aed" stroke-width="1.5"/>
+            <path d="M 375 245 C 360 260 360 280 375 290 L 400 290 L 400 245 Z" fill="#67e8f9" stroke="#0891b2" stroke-width="1.5"/>
+            <path d="M 430 235 C 490 235 500 295 450 315 C 415 315 410 280 430 235 Z" fill="url(#cerebellumGradTm)" stroke="#b45309" stroke-width="2"/>
+            <path d="M 445 250 Q 470 270 455 295 M 435 270 Q 460 280 475 275" stroke="#fef3c7" stroke-width="1.5" fill="none"/>
+            <rect x="375" y="290" width="25" height="35" fill="#a7f3d0" stroke="#059669" stroke-width="1.5"/>
+            <rect x="377" y="325" width="21" height="40" fill="#cbd5e1" stroke="#64748b" stroke-width="1.5"/>
+
+            <!-- LEFT LABELS (0 to 220 safe margin) -->
+            <line x1="300" y1="120" x2="220" y2="120" stroke="#94a3b8" stroke-width="1.5"/><circle cx="300" cy="120" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="125" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">பெருமூளை (Cerebrum)</text>
+            <line x1="340" y1="180" x2="220" y2="175" stroke="#94a3b8" stroke-width="1.5"/><circle cx="340" cy="180" r="3.5" fill="#fde047"/>
+            <text x="210" y="180" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="end">கார்பஸ் கலோசம்</text>
+            <line x1="370" y1="210" x2="220" y2="215" stroke="#94a3b8" stroke-width="1.5"/><circle cx="370" cy="210" r="3.5" fill="#fb923c"/>
+            <text x="210" y="220" font-size="13.5" fill="#fb923c" font-weight="bold" text-anchor="end">தலாமஸ் & ஹைபோதலாமஸ்</text>
+            <line x1="358" y1="252" x2="220" y2="260" stroke="#94a3b8" stroke-width="1.5"/><circle cx="358" cy="252" r="3.5" fill="#fb7185"/>
+            <text x="210" y="265" font-size="13.5" fill="#fb7185" font-weight="bold" text-anchor="end">பிட்யூட்டரி சுரப்பி</text>
+
+            <!-- RIGHT LABELS (540 to 760 safe margin) -->
+            <line x1="412" y1="233" x2="540" y2="220" stroke="#94a3b8" stroke-width="1.5"/><circle cx="412" cy="233" r="3.5" fill="#c4b5fd"/>
+            <text x="550" y="225" font-size="13.5" fill="#c4b5fd" font-weight="bold">நடுமூளை (பார்வை & கேட்கும் அனிச்சை)</text>
+            <line x1="395" y1="265" x2="540" y2="255" stroke="#94a3b8" stroke-width="1.5"/><circle cx="395" cy="265" r="3.5" fill="#67e8f9"/>
+            <text x="550" y="260" font-size="13.5" fill="#67e8f9" font-weight="bold">பான்ஸ் (சுவாச ஒழுங்குபடுத்தி)</text>
+            <line x1="470" y1="270" x2="540" y2="295" stroke="#94a3b8" stroke-width="1.5"/><circle cx="470" cy="270" r="3.5" fill="#fbbf24"/>
+            <text x="550" y="300" font-size="13.5" fill="#fbbf24" font-weight="bold">சிறுமூளை (உடல் சமநிலை & தோரணை)</text>
+            <line x1="400" y1="310" x2="540" y2="335" stroke="#94a3b8" stroke-width="1.5"/><circle cx="400" cy="310" r="3.5" fill="#a7f3d0"/>
+            <text x="550" y="340" font-size="13.5" fill="#a7f3d0" font-weight="bold">முகுளம் (சுவாசம், இதயத் துடிப்பு)</text>
+            <line x1="398" y1="350" x2="540" y2="375" stroke="#94a3b8" stroke-width="1.5"/><circle cx="398" cy="350" r="3.5" fill="#cbd5e1"/>
+            <text x="550" y="380" font-size="13.5" fill="#cbd5e1" font-weight="bold">தண்டுவடம் (அனிச்சைச் செயல்கள்)</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
+          ans: `<div style="line-height:1.8;">
             <b>மனித மூளையின் அமைப்பு மற்றும் பணிகள்:</b><br><br>
-            மனித மூளை மண்டையோட்டின் மண்டை ஓட்டுக்குழியில் (Cranium) பாதுகாக்கப்பட்டுள்ளது. இது டியூராமேட்டர், அரக்னாய்டு சவ்வு, பயாமேட்டர் ஆகிய மூன்று மூளைச் சவ்வுகளால் (Meninges) சூழப்பட்டுள்ளது.<br><br>
-            <b>I. முன்மூளை:</b><br>
-            1. <b>பெருமூளை:</b> மூளையின் மிகப்பெரிய பகுதி (85%). வலது, இடது அரைக்கோளங்களாகப் பிரிக்கப்பட்டு <b>கார்பஸ் கலோசம்</b> என்ற நரம்புப் பட்டையால் இணைக்கப்பட்டுள்ளது.<br>
-            • இதன் மேற்பகுதி கைரி (மேடுகள்), சல்சி (பள்ளங்கள்) என்ற மடிப்புகளைக் கொண்டது.<br>
-            • <i>பணிகள்:</i> நினைவுத்திறன், அறிவுக்கூர்மை, சிந்தனை, கற்பனை, பேச்சு, வலி, தொடுதல், பார்வை, கேட்டல் ஆகியவற்றின் மையம்.<br>
-            2. <b>தலாமஸ்:</b> உணர்வு மற்றும் இயக்கத் தூண்டல்களைக் கடத்தும் முதன்மை அஞ்சல் நிலையமாகச் (Relay center) செயல்படுகிறது.<br>
-            3. <b>ஹைப்போதலாமஸ்:</b> உடல் வெப்பநிலை, தாகம், பசி, தூக்கம், இரத்த அழுத்தம் மற்றும் பிட்யூட்டரி சுரப்பியின் ஹார்மோன் சுரப்பை ஒழுங்குபடுத்துகிறது.<br><br>
-            <b>II. நடுமூளை:</b><br>
-            • தலாமஸிற்கும் பான்ஸிற்கும் இடையில் அமைந்துள்ளது. இதன் பின்புறத்தில் நான்கு கோள வடிவப் பகுதிகள் (<b>கார்ப்போரா குவாட்ரிஜெமினா</b>) உள்ளன.<br>
-            • <i>பணிகள்:</i> பார்வை மற்றும் கேட்டலின் அனிச்சைச் செயல்களைக் கட்டுப்படுத்துகிறது.<br><br>
-            <b>III. பின்மூளை:</b><br>
-            1. <b>சிறுமூளை:</b> மூளையின் இரண்டாவது பெரிய பகுதி. இயக்குத் தசைகளின் இயக்கங்களை ஒருங்கிணைத்து, <b>உடலின் சமநிலை மற்றும் நிலையை (Posture & Balance)</b> பராமரிக்கிறது.<br>
-            2. <b>பான்ஸ்:</b> சிறுமூளையின் கதுப்புகளை முகுளத்துடன் இணைக்கும் நரம்புப் பாலம். சுவாச வீதத்தை ஒழுங்குபடுத்துகிறது.<br>
-            3. <b>முகுளம்:</b> மூளையின் பின்பகுதி; தண்டுவடத்துடன் இணைகிறது. இதயத் துடிப்பு, சுவாசம், இரத்த அழுத்தத்தைக் கட்டுப்படுத்தும் இன்றியமையாத <b>உயிர்காக்கும் மையங்களை (Vital centers)</b> கொண்டுள்ளது. மேலும் வாந்தி எடுத்தல், இருமுதல், தும்முதல் போன்ற அனிச்சைச் செயல்களையும் கட்டுப்படுத்துகிறது.</div>`
+            மனித மூளை மண்டையோட்டின் மண்டை ஓட்டுக் குழிக்குள் (Cranium) அமைந்துள்ளது. இது <b>டியூரா மேட்டர், அராக்னாய்டு உறை, பையா மேட்டர்</b> ஆகிய மூன்று பாதுகாப்பு உறைகளால் சூழப்பட்டுள்ளது. இடைவெளியில் மூளைத் தண்டுவடத் திரவம் உள்ளது.<br><br>
+            <b>1. முன்மூளை:</b><br>
+            • <b>பெருமூளை:</b> மூளையின் மிகப்பெரிய பகுதி; வலது மற்றும் இடது பெருமூளை அரைக்கோளங்களாகப் பிரிக்கப்பட்டுள்ளது. இவை <b>கார்பஸ் கலோசம்</b> என்ற நரம்பிழைக் கற்றையால் இணைக்கப்பட்டுள்ளன. இதன் மேற்புறத்தில் மடிப்புகள் (<b>கைரிகள்</b>) மற்றும் பள்ளங்கள் (<b>சல்கிகள்</b>) உள்ளன.<br>
+            • <i>பணிகள்:</i> நினைவுத்திறன், சிந்தனை, நுண்ணறிவு, பேச்சு, கற்பனை மற்றும் உணர்வு அறிதலின் மையம்.<br>
+            • <b>தலாமஸ்:</b> உணர்வு மற்றும் இயக்கத் தூண்டல்களின் முதன்மை அஞ்சல் மையம் (Relay centre).<br>
+            • <b>ஹைபோதலாமஸ்:</b> உடல் வெப்பநிலை, தாகம், பசி, தூக்கம், பாலியல் உணர்வுகள் மற்றும் பிட்யூட்டரி சுரப்பியை ஒழுங்குபடுத்துகிறது.<br><br>
+            <b>2. நடுமூளை:</b><br>
+            • பார்வை மற்றும் கேட்கும் உணர்வின் அனிச்சைச் செயல்களை ஒருங்கிணைக்கிறது.<br><br>
+            <b>3. பின்மூளை:</b><br>
+            • <b>சிறுமூளை:</b> மூளையின் இரண்டாவது பெரிய பகுதி. தன்னிச்சையான தசை இயக்கங்களை ஒருங்கிணைத்து <b>உடல் சமநிலை மற்றும் தோரணையை (Equilibrium)</b> பராமரிக்கிறது.<br>
+            • <b>பான்ஸ்:</b> சிறுமூளையின் பக்கவாட்டுப் பகுதிகளை இணைக்கிறது; சுவாசம் மற்றும் தூக்க-விழிப்பு சுழற்சியை ஒழுங்குபடுத்துகிறது.<br>
+            • <b>முகுளம்:</b> தண்டுவடத்துடன் இணையும் இறுதிப் பகுதி. இதயத் துடிப்பு, சுவாசம், இரத்த அழுத்தத்தைக் கட்டுப்படுத்தும் முக்கிய மையங்கள் மற்றும் வாந்தி, தும்மல் ஆகிய அனிச்சைச் செயல்களின் கட்டுப்பாட்டு மையமாகும்.<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ வரைபடப் பாகங்கள் & முக்கியத் தேர்வுப் பணிகள் (Key Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">எண்</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">மூளையின் பகுதி</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">முக்கியப் பணி</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">1</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">பெருமூளை</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">சிந்தனை, அறிவுத்திறன், நினைவு, உணர்வுகளின் முதன்மை மையம்.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">2</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">கார்பஸ் கலோசம்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">இரு பெருமூளை அரைக்கோளங்களை இணைக்கும் தடித்த நரம்பிழைக் கற்றை.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">3</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ea580c;">ஹைபோதலாமஸ்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">உடல் வெப்பநிலை, தாகம், பசி, நாளமில்லாச் சுரப்பிக் கட்டுப்பாடு.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">4</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#7c3aed;">நடுமூளை</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">பார்வை மற்றும் கேட்கும் உணர்வுகளின் அனிச்சைச் செயல்களை வழிநடத்துகிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">5</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#d97706;">சிறுமூளை</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">உடலின் சமநிலை மற்றும் தசை இயக்கங்களை ஒருங்கிணைக்கிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">6</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#059669;">முகுளம்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">சுவாசம், இதயத் துடிப்பு, இரத்த அழுத்தம், வாந்தி ஆகியவற்றை ஒழுங்குபடுத்துகிறது.</td></tr>
+              </table>
+            </div>
+          </div>`
         },
         {
           id: "sci_tm_dt_5",
           type: "7m",
           mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 35",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "நெப்ரானின் அமைப்பை படம் வரைந்து பாகங்களைக் குறித்து, மனிதனில் சிறுநீர் உருவாகும் படிநிலைகளை விளக்குக.",
-          diagramCaption: "படம்: நெப்ரானின் அமைப்பு (சிறுநீரகத்தின் செயல் அலகு)",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">நெப்ரானின் அமைப்பு</text>
-            <g transform=\"translate(130, 40)\">
-              <path d=\"M 60 70 C 40 70, 20 85, 20 110 C 20 135, 40 150, 60 150 C 65 150, 75 140, 75 130 C 75 125, 45 125, 45 110 C 45 95, 75 95, 75 90 C 75 80, 65 70, 60 70 Z\" fill=\"#38bdf8\" fill-opacity=\"0.25\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <circle cx=\"35\" cy=\"110\" r=\"14\" fill=\"#ef4444\" fill-opacity=\"0.8\" stroke=\"#f87171\"/>
-              <path d=\"M 30 50 L 30 96\" stroke=\"#ef4444\" stroke-width=\"3.5\"/>
-              <path d=\"M 42 50 L 42 96\" stroke=\"#f87171\" stroke-width=\"2\"/>
-              <path d=\"M 60 150 Q 80 160 90 140 Q 100 120 120 135 Q 135 150 140 170\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"4\" stroke-linecap=\"round\"/>
-              <path d=\"M 140 170 L 140 230 Q 150 250 160 230 L 160 170\" fill=\"none\" stroke=\"#fbbf24\" stroke-width=\"3.5\" stroke-linecap=\"round\"/>
-              <path d=\"M 160 170 Q 170 145 190 155 Q 210 165 220 140 L 240 140\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"4\" stroke-linecap=\"round\"/>
-              <line x1=\"240\" y1=\"70\" x2=\"240\" y2=\"245\" stroke=\"#34d399\" stroke-width=\"5\" stroke-linecap=\"round\"/>
-            </g>
-            <line x1=\"160\" y1=\"90\" x2=\"45\" y2=\"90\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"93\" font-size=\"11\" fill=\"#f87171\" font-weight=\"bold\" text-anchor=\"end\">உட்செல் / வெளிச்செல் தமனி</text>
-            <line x1=\"165\" y1=\"150\" x2=\"45\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"153\" font-size=\"11\" fill=\"#ef4444\" font-weight=\"bold\" text-anchor=\"end\">கிளாமருலஸ் (இரத்தக் தந்துகி முடிச்சு)</text>
-            <line x1=\"180\" y1=\"170\" x2=\"45\" y2=\"190\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"193\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">பௌமானின் கிண்ணம்</text>
-            <line x1=\"235\" y1=\"175\" x2=\"45\" y2=\"235\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"238\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">அண்மை சுருள் நுண்குழல் (PCT)</text>
-            <line x1=\"290\" y1=\"270\" x2=\"430\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"273\" font-size=\"11\" fill=\"#fbbf24\" font-weight=\"bold\">ஹென்லேயின் வளைவு</text>
-            <line x1=\"330\" y1=\"185\" x2=\"430\" y2=\"185\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"188\" font-size=\"11\" fill=\"#38bdf8\" font-weight=\"bold\">சேய்மை சுருள் நுண்குழல் (DCT)</text>
-            <line x1=\"370\" y1=\"120\" x2=\"430\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"123\" font-size=\"11\" fill=\"#34d399\" font-weight=\"bold\">சேகரிக்கும் நாளம் (சிறுநீரக இடுப்புக்கு)</text>
+          diagram: true,
+          q: "நெஃப்ரானின் (சிறுநீரக நுண்குழல்) அமைப்பைத் தெளிவான வரைபடத்துடன் விளக்கி, சிறுநீர் உருவாகும் படிநிலைகளை விவரிக்கவும்.",
+          diagramCaption: "படம்: சிறுநீரக நுண்குழலின் (நெஃப்ரான்) அமைப்பு",
+          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="bowmanGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#eab308"/></linearGradient>
+            </defs>
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">நெஃப்ரானின் (சிறுநீரக நுண்குழல்) அமைப்பு</text>
+            <path d="M 270 50 L 305 90" stroke="#f43f5e" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M 320 85 L 345 55" stroke="#f43f5e" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 290 80 C 275 105 285 140 315 140 C 345 140 355 105 340 80 L 332 86 C 342 105 335 130 315 130 C 295 130 288 105 298 86 Z" fill="url(#bowmanGradTm)" stroke="#ca8a04" stroke-width="1.5"/>
+            <circle cx="315" cy="105" r="14" fill="#991b1b" stroke="#f43f5e" stroke-width="2"/>
+            <path d="M 307 100 Q 315 110 323 100 Q 315 92 307 100" stroke="#fecdd3" stroke-width="1.8" fill="none"/>
+            <path d="M 315 135 C 325 155 350 155 355 140 C 360 125 380 125 385 145 C 390 165 410 165 410 185" stroke="#eab308" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M 410 185 L 410 330 C 410 350 435 350 435 330 L 435 185" stroke="#facc15" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M 435 185 C 440 160 460 155 470 170 C 480 185 500 175 510 160" stroke="#fb923c" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <line x1="510" y1="160" x2="525" y2="160" stroke="#fb923c" stroke-width="5"/>
+            <rect x="525" y="70" width="16" height="300" rx="4" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+            <path d="M 515 95 L 525 95 M 515 220 L 525 220 M 515 290 L 525 290" stroke="#0284c7" stroke-width="4"/>
+
+            <!-- LEFT LABELS (0 to 220 safe margin) -->
+            <line x1="280" y1="65" x2="220" y2="65" stroke="#94a3b8" stroke-width="1.5"/><circle cx="280" cy="65" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="70" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">உட்கொணர் தமனி (அகன்றது)</text>
+            <line x1="315" y1="105" x2="220" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="315" cy="105" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="115" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">கிளாமருலஸ் (நுண்வடிகட்டி)</text>
+            <line x1="290" y1="125" x2="220" y2="155" stroke="#94a3b8" stroke-width="1.5"/><circle cx="290" cy="125" r="3.5" fill="#fde047"/>
+            <text x="210" y="160" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="end">பௌமானின் கிண்ணம்</text>
+            <line x1="335" y1="65" x2="220" y2="200" stroke="#94a3b8" stroke-width="1.5"/><circle cx="335" cy="65" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="205" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">வெளிக்கொணர் தமனி (குறுகியது)</text>
+            <line x1="410" y1="260" x2="220" y2="260" stroke="#94a3b8" stroke-width="1.5"/><circle cx="410" cy="260" r="3.5" fill="#facc15"/>
+            <text x="210" y="265" font-size="13.5" fill="#facc15" font-weight="bold" text-anchor="end">இறங்கு குழல் (நீர் ஊடுருவும்)</text>
+            <line x1="422" y1="345" x2="220" y2="345" stroke="#94a3b8" stroke-width="1.5"/><circle cx="422" cy="345" r="3.5" fill="#facc15"/>
+            <text x="210" y="350" font-size="13.5" fill="#facc15" font-weight="bold" text-anchor="end">ஹென்லே வளைவு (U-வடிவம்)</text>
+
+            <!-- RIGHT LABELS (540 to 760 safe margin) -->
+            <line x1="370" y1="140" x2="540" y2="105" stroke="#94a3b8" stroke-width="1.5"/><circle cx="370" cy="140" r="3.5" fill="#eab308"/>
+            <text x="550" y="110" font-size="13.5" fill="#eab308" font-weight="bold">அண்மை சுருண்ட நுண்குழல் (PCT)</text>
+            <line x1="435" y1="260" x2="540" y2="165" stroke="#94a3b8" stroke-width="1.5"/><circle cx="435" cy="260" r="3.5" fill="#facc15"/>
+            <text x="550" y="170" font-size="13.5" fill="#facc15" font-weight="bold">ஏறு குழல் (உப்பு உறிஞ்சும்)</text>
+            <line x1="490" y1="165" x2="540" y2="225" stroke="#94a3b8" stroke-width="1.5"/><circle cx="490" cy="165" r="3.5" fill="#fb923c"/>
+            <text x="550" y="230" font-size="13.5" fill="#fb923c" font-weight="bold">சேய்மை சுருண்ட நுண்குழல் (DCT)</text>
+            <line x1="535" y1="200" x2="550" y2="285" stroke="#94a3b8" stroke-width="1.5"/><circle cx="535" cy="200" r="3.5" fill="#38bdf8"/>
+            <text x="555" y="290" font-size="13.5" fill="#38bdf8" font-weight="bold">சேகரிக்கும் நாளம்</text>
+            <line x1="533" y1="365" x2="550" y2="365" stroke="#94a3b8" stroke-width="1.5"/><circle cx="533" cy="365" r="3.5" fill="#38bdf8"/>
+            <text x="555" y="370" font-size="13.5" fill="#4ade80" font-weight="bold">சிறுநீரக இடுப்புக்கு ➔ சிறுநீர்க்குழாய்</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>நெப்ரானின் அமைப்பு மற்றும் சிறுநீர் உருவாக்கம்:</b><br><br>
-            ஒவ்வொரு சிறுநீரகமும் சுமார் 1 மில்லியன் நுட்பமான நெப்ரான்களால் ஆனது.<br><br>
+          ans: `<div style="line-height:1.8;">
+            <b>நெஃப்ரானின் அமைப்பு மற்றும் சிறுநீர் உருவாதல் படிநிலைகள்:</b><br><br>
+            ஒவ்வொரு சிறுநீரகத்திலும் சுமார் <b>10 முதல் 12 லட்சம் நெஃப்ரான்கள்</b> அமைந்துள்ளன.<br><br>
             <b>1. மால்பிஜியன் உறுப்பு:</b><br>
-            • <b>கிளாமருலஸ்:</b> அகன்ற உட்செல் தமனி மற்றும் குறுகிய வெளிச்செல் தமனியால் உருவான தந்துகி வலை முடிச்சு.<br>
-            • <b>பௌமானின் கிண்ணம்:</b> கிளாமருலஸைச் சூழ்ந்துள்ள இரட்டைச் சுவர் கொண்ட கோப்பை வடிவ அமைப்பு. இதில் பொடோசைட்டுகள் என்ற நுண் வடிகட்டு துளை செல்கள் உள்ளன.<br><br>
+            • இரட்டைச் சுவருடைய கோப்பை வடிவ <b>பௌமானின் கிண்ணத்தையும்</b>, அதனுள் அமைந்த இரத்த நுண்நாளக் கொத்தான <b>கிளாமருலஸையும்</b> கொண்டுள்ளது.<br>
+            • அகன்ற <b>உட்கொணர் தமனி</b> வழியாக இரத்தம் உள்ளே வந்து, குறுகிய <b>வெளிக்கொணர் தமனி</b> வழியாக வெளியேறுவதால் அதிக அளவு நீர்ம அழுத்தம் (55 மி.மீ பாதரசம்) உருவாகி வடிகட்டுதல் நடைபெறுகிறது.<br><br>
             <b>2. சிறுநீரக நுண்குழல்:</b><br>
-            • <b>அண்மை சுருள் நுண்குழல் (PCT):</b> உறிஞ்சும் பரப்பை அதிகரிக்கும் நுண் உறிஞ்சிகளைக் கொண்டது.<br>
-            • <b>ஹென்லேயின் வளைவு:</b> U-வடிவ வளைவு (இறங்கு பகுதி நீரை உறிஞ்சும், ஏறு பகுதி உப்புக்களை உறிஞ்சும்).<br>
-            • <b>சேய்மை சுருள் நுண்குழல் (DCT):</b> சேகரிக்கும் நாளத்தில் திறக்கிறது.<br><br>
-            <b>3. சிறுநீர் உருவாதலின் மூன்று படிநிலைகள்:</b><br>
-            1. <b>கிளாமருலார் நுண்வடிகட்டுதல்:</b> இரத்த அழுத்தத்தால் நீர், குளுக்கோஸ், அமினோ அமிலங்கள், யூரியா வடிகட்டப்பட்டு பௌமானின் கிண்ணத்தில் ஆரம்ப சிறுநீராக சேகரமாகிறது (180 லிட்டர்/நாள்). இரத்த செல்கள் வடிகட்டப்படுவதில்லை.<br>
-            2. <b>தேர்ந்தெடுத்து மீள உறிஞ்சப்படுதல்:</b> அண்மை சுருள் நுண்குழலில் குளுக்கோஸ், அமினோ அமிலங்கள், வைட்டமின்கள் மற்றும் 85% நீர் மற்றும் சோடியம் குளோரைடு மீண்டும் இரத்த தந்துகிகளால் உறிஞ்சப்படுகின்றன.<br>
-            3. <b>குழல்களில் சுரத்தல்:</b> பொட்டாசியம், ஹைட்ரஜன் அயனிகள் மற்றும் மருந்துக் கழிவுகள் இரத்தத்திலிருந்து சேய்மை நுண்குழலுக்குள் சுரக்கப்பட்டு, அடர் சிறுநீராக (சுமார் 1.5 லிட்டர்/நாள்) சிறுநீர்ப் பைக்கு அனுப்பப்படுகிறது.</div>`
+            • <b>அண்மை சுருண்ட நுண்குழல் (PCT):</b> அதிக அளவில் உறிஞ்சும் பரப்புடைய மைக்ரோவில்லிகளைக் கொண்டது.<br>
+            • <b>ஹென்லே வளைவு:</b> U-வடிவக் குழல் (இறங்கு பகுதி நீரில் புகும் தன்மை கொண்டது; ஏறு பகுதி சோடியம் குளோரைடை உறிஞ்சுகிறது).<br>
+            • <b>சேய்மை சுருண்ட நுண்குழல் (DCT):</b> ஹார்மோன்களின் கட்டுப்பாட்டில் நீர் மற்றும் அயனி சமநிலையைப் பேணுகிறது.<br>
+            • <b>சேகரிக்கும் நாளம்:</b> பல நெஃப்ரான்களில் இருந்து சிறுநீரைச் சேகரித்து சிறுநீரக இடுப்புக்கு (Pelvis) அனுப்புகிறது.<br><br>
+            <b>3. சிறுநீர் உருவாகும் படிநிலைகள்:</b><br>
+            1. <b>கிளாமருலார் நுண்வடிகட்டுதல்:</b> இரத்தத்திலிருந்து நீர், குளுக்கோஸ், அமினோ அமிலம், யூரியா ஆகியவை பௌமானின் கிண்ணத்திற்குள் வடிகட்டப்படுகின்றன (ஆரம்ப வடிதிரவம் - 180 லிட்டர்/நாள்).<br>
+            2. <b>மீண்டும் உறிஞ்சப்படுதல்:</b> உடலுக்குத் தேவையான 99% பயனுள்ள பொருட்கள் (அனைத்து குளுக்கோஸ், நீர், தாது உப்புக்கள்) இரத்த நுண்நாளங்களால் மீண்டும் உறிஞ்சப்படுகின்றன.<br>
+            3. <b>குழல்களில் சுரத்தல்:</b> பொட்டாசியம், ஹைட்ரஜன் அயனிகள், யூரிக் அமிலம் போன்றவை குழலின் திரவத்தினுள் சுரக்கப்பட்டு அடர் சிறுநீராக (1.5 லிட்டர்/நாள்) மாற்றப்படுகிறது.<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ வரைபடப் பாகங்கள் & முக்கியத் தேர்வுப் பணிகள் (Key Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">எண்</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">நெப்ரான் பகுதி</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">முக்கியப் பணி</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">1</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#e11d48;">கிளாமருலஸ்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">அதிக அழுத்தத்தில் ஆரம்ப சிறுநீரை நுண்வடிகட்டுதல் செய்தல்.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">2</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">பௌமானின் கிண்ணம்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">கிளாமருலார் வடிதிரவத்தைச் சேகரிக்கும் இரட்டைச் சுவர் கோப்பை.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">3</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#eab308;">அண்மை சுருண்ட நுண்குழல்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">குளுக்கோஸ், அமினோ அமிலம், 70% நீர் மற்றும் உப்புகளை மீண்டும் உறிஞ்சுதல்.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">4</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ca8a04;">ஹென்லே வளைவு</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">நீரைச் சேமித்து சிறுநீரை அடர்த்தியாக்கும் எதிர் மின்னோட்ட முறை.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">5</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ea580c;">சேய்மை சுருண்ட நுண்குழல்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">ADH ஹார்மோன் மூலம் தேவைக்கேற்ப நீரை உறிஞ்சுதல் மற்றும் அயனி சுரத்தல்.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">6</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">சேகரிக்கும் நாளம்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">உருவான இறுதி சிறுநீரை சிறுநீரக இடுப்புக்குக் கொண்டு செல்லுதல்.</td></tr>
+              </table>
+            </div>
+          </div>`
         },
-        {
-          id: "sci_tm_dt_9",
-          type: "7m",
-          mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 35",
-          isImportant: true,
-          isAdditionalPractice: true,
-          q: "ஆஞ்சியோஸ்பெர்ம் தாவரங்களில் நடைபெறும் கருவுறுதல் நிகழ்வுகளை படத்துடன் விளக்குக. இரட்டைக் கருவுறுதல் மற்றும் மூவிணைவு என்றால் என்ன?",
-          diagramCaption: "படம்: பூவின் சூலகத்தின் நீள்வெட்டுத் தோற்றம் & இரட்டைக் கருவுறுதல்",
-          diagramSvg: `<svg viewBox=\"0 0 540 320\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">ஆஞ்சியோஸ்பெர்ம்களில் கருவுறுதல் (சூலக நீள்வெட்டுத் தோற்றம்)</text>
-            <g transform=\"translate(180, 35)\">
-              <path d=\"M 70 30 C 50 30, 45 45, 75 45 L 75 110 C 40 140, 20 180, 20 220 C 20 260, 60 270, 90 270 C 120 270, 160 260, 160 220 C 160 180, 140 140, 105 110 L 105 45 C 135 45, 130 30, 110 30 Z\" fill=\"#065f46\" fill-opacity=\"0.3\" stroke=\"#10b981\" stroke-width=\"2.5\"/>
-              <circle cx=\"85\" cy=\"25\" r=\"7\" fill=\"#facc15\" stroke=\"#ca8a04\"/>
-              <path d=\"M 85 32 L 85 115 Q 85 140 60 180 Q 45 210 70 235\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\" stroke-linecap=\"round\"/>
-              <circle cx=\"68\" cy=\"235\" r=\"3\" fill=\"#ef4444\"/>
-              <ellipse cx=\"90\" cy=\"205\" rx=\"42\" ry=\"48\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <circle cx=\"90\" cy=\"175\" r=\"4\" fill=\"#cbd5e1\"/><circle cx=\"78\" cy=\"175\" r=\"4\" fill=\"#cbd5e1\"/><circle cx=\"102\" cy=\"175\" r=\"4\" fill=\"#cbd5e1\"/>
-              <circle cx=\"86\" cy=\"205\" r=\"4.5\" fill=\"#fde047\"/><circle cx=\"94\" cy=\"205\" r=\"4.5\" fill=\"#fde047\"/>
-              <circle cx=\"90\" cy=\"235\" r=\"6\" fill=\"#ec4899\"/><circle cx=\"76\" cy=\"238\" r=\"4.5\" fill=\"#6ee7b7\"/><circle cx=\"104\" cy=\"238\" r=\"4.5\" fill=\"#6ee7b7\"/>
-            </g>
-            <line x1=\"265\" y1=\"60\" x2=\"50\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"63\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">சூலகமுடியில் மகரந்தத்தூள்</text>
-            <line x1=\"265\" y1=\"115\" x2=\"50\" y2=\"115\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"118\" font-size=\"11\" fill=\"#f59e0b\" font-weight=\"bold\" text-anchor=\"end\">சூலகத் தண்டில் மகரந்தக் குழாய்</text>
-            <line x1=\"245\" y1=\"265\" x2=\"50\" y2=\"265\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"45\" y=\"268\" font-size=\"11\" fill=\"#10b981\" font-weight=\"bold\" text-anchor=\"end\">சூற்பை சுவர்</text>
-            <line x1=\"275\" y1=\"210\" x2=\"430\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"183\" font-size=\"11\" fill=\"#cbd5e1\" font-weight=\"bold\">3 எதிர்ப்பக்க செல்கள் (கலாசா)</text>
-            <line x1=\"278\" y1=\"240\" x2=\"430\" y2=\"220\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"223\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\">இரண்டாம் நிலை உட்கரு (2n)</text>
-            <line x1=\"270\" y1=\"270\" x2=\"430\" y2=\"260\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"263\" font-size=\"11\" fill=\"#ec4899\" font-weight=\"bold\">முட்டை செல் (பெண் கேமீட்)</text>
-            <line x1=\"250\" y1=\"280\" x2=\"430\" y2=\"290\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"435\" y=\"293\" font-size=\"11\" fill=\"#6ee7b7\" font-weight=\"bold\">சூழ்துளை நுழைவு</text>
-          </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>ஆஞ்சியோஸ்பெர்ம்களில் கருவுறுதல் படிநிலைகள்:</b><br><br>
-            <b>1. மகரந்தத்தூள் முளைத்தல்:</b><br>
-            • சூலகமுடியை அடையும் மகரந்தத்தூள், அங்கிருக்கும் சர்க்கரைச் சுரப்பை உறிஞ்சி <b>மகரந்தக் குழாயை</b> உருவாக்குகிறது.<br>
-            • மகரந்தக் குழாயில் உடல் உட்கருவும் உற்பத்தி உட்கருவும் நுழைகின்றன. உற்பத்தி உட்கரு மைட்டாசிஸ் மூலம் பிரிந்து <b>இரு நகராத ஆண் கேமீட்டுகளை</b> உருவாக்குகிறது.<br><br>
-            <b>2. மகரந்தக் குழாய் சூழினுள் நுழைதல்:</b><br>
-            • மகரந்தக் குழாய் சூலகத்தண்டு வழியாக வளர்ந்து <b>சூழ்துளை (Micropyle)</b> வழியாகச் சூழினுள் நுழைந்து கருப்பையை அடைகிறது.<br><br>
-            <b>3. இரட்டைக் கருவுறுதல் மற்றும் மூவிணைவு:</b><br>
-            • <b>உண்மையான கருவுறுதல் (Syngamy):</b> ஒரு ஆண் கேமீட் (n) முட்டை செல்லுடன் (n) இணைந்து <b>இரட்டைமய சைகோட்டை (2n)</b> உருவாக்குகிறது. இது எதிர்கால கருவாக வளர்கிறது.<br>
-            • <b>மூவிணைவு (Triple Fusion):</b> இரண்டாவது ஆண் கேமீட் (n) மையத்திலுள்ள இரட்டைமய இரண்டாம் நிலை உட்கருவுடன் (2n) இணைந்து <b>மும்மய முதன்மை கருவூண் உட்கருவை (PEN, 3n)</b> உருவாக்குகிறது. இது வளரும் கருவிற்கு உணவளிக்கும் கருவூணாக வளர்கிறது.<br>
-            • இவ்வாறு ஒரே கருப்பையில் இரு கருவுறுதல்கள் நிகழ்வதால் இது <b>இரட்டைக் கருவுறுதல்</b> எனப்படும்.</div>`
-        },
-        {
-          id: "sci_tm_dt_10",
-          type: "7m",
-          mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 35",
-          isImportant: true,
-          isAdditionalPractice: true,
-          q: "மனித விந்து செல் மற்றும் முதிர்ந்த அண்ட செல்லின் அமைப்பைப் படத்துடன் விவரிக்க.",
-          diagramCaption: "படம்: மனித விந்து செல் மற்றும் அண்ட அணுவின் அமைப்பு",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"22\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">விந்து செல் &amp; அண்ட அணு அமைப்பு</text>
-            <g transform=\"translate(20, 35)\">
-              <rect x=\"0\" y=\"0\" width=\"240\" height=\"245\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>
-              <text x=\"120\" y=\"20\" font-size=\"12\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"middle\">விந்து செல் (ஆண் கேமீட்)</text>
-              <path d=\"M 45 100 Q 55 80 85 80 Q 115 80 115 100 Q 115 120 85 120 Q 55 120 45 100 Z\" fill=\"#0284c7\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <path d=\"M 45 100 Q 50 85 70 85 L 70 115 Q 50 115 45 100 Z\" fill=\"#facc15\"/>
-              <circle cx=\"90\" cy=\"100\" r=\"10\" fill=\"#1e293b\" stroke=\"#bae6fd\"/>
-              <rect x=\"115\" y=\"94\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#64748b\" stroke=\"#cbd5e1\"/>
-              <rect x=\"127\" y=\"92\" width=\"35\" height=\"16\" rx=\"4\" fill=\"#ea580c\" stroke=\"#fb923c\"/>
-              <path d=\"M 162 100 Q 190 90 205 105 Q 220 120 230 100\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"3\" stroke-linecap=\"round\"/>
-              <text x=\"55\" y=\"145\" font-size=\"9.5\" fill=\"#fde047\">• அக்ரோசோம் (நொதிகள்)</text>
-              <text x=\"55\" y=\"165\" font-size=\"9.5\" fill=\"#38bdf8\">• தலை (ஒற்றைமய DNA)</text>
-              <text x=\"55\" y=\"185\" font-size=\"9.5\" fill=\"#cbd5e1\">• கழுத்து (சென்ட்ரியோல்)</text>
-              <text x=\"55\" y=\"205\" font-size=\"9.5\" fill=\"#fb923c\">• நடுப்பகுதி (மைட்டோகாண்ட்ரியா)</text>
-              <text x=\"55\" y=\"225\" font-size=\"9.5\" fill=\"#38bdf8\">• வால் (நீந்திச் செல்லுதல்)</text>
-            </g>
-            <g transform=\"translate(280, 35)\">
-              <rect x=\"0\" y=\"0\" width=\"240\" height=\"245\" rx=\"8\" fill=\"#1e293b\" stroke=\"#ec4899\" stroke-width=\"1.5\"/>
-              <text x=\"120\" y=\"20\" font-size=\"12\" fill=\"#f472b6\" font-weight=\"bold\" text-anchor=\"middle\">அண்ட செல் (பெண் கேமீட்)</text>
-              <circle cx=\"120\" cy=\"85\" r=\"50\" fill=\"#be185d\" fill-opacity=\"0.3\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-dasharray=\"4 2\"/>
-              <circle cx=\"120\" cy=\"85\" r=\"38\" fill=\"none\" stroke=\"#fde047\" stroke-width=\"3\"/>
-              <circle cx=\"120\" cy=\"85\" r=\"33\" fill=\"#831843\" fill-opacity=\"0.5\" stroke=\"#fb7185\" stroke-width=\"1.5\"/>
-              <circle cx=\"120\" cy=\"85\" r=\"12\" fill=\"#1e293b\" stroke=\"#fecdd3\" stroke-width=\"1.5\"/>
-              <circle cx=\"120\" cy=\"85\" r=\"4\" fill=\"#f8fafc\"/>
-              <text x=\"25\" y=\"155\" font-size=\"9.5\" fill=\"#f43f5e\">• கரோனா ரேடியேட்டா (வெளி அடுக்கு)</text>
-              <text x=\"25\" y=\"175\" font-size=\"9.5\" fill=\"#fde047\">• சோனா பெலுசிடா (தடித்த உறை)</text>
-              <text x=\"25\" y=\"195\" font-size=\"9.5\" fill=\"#fb7185\">• வைட்டலின் சவ்வு (பிளாஸ்மா சவ்வு)</text>
-              <text x=\"25\" y=\"215\" font-size=\"9.5\" fill=\"#f472b6\">• ஊபிளாசம் (சைட்டோபிளாசம்)</text>
-              <text x=\"25\" y=\"235\" font-size=\"9.5\" fill=\"#cbd5e1\">• உட்கரு (ஜெர்மினல் வெசிக்கிள்)</text>
-            </g>
-          </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>மனித விந்து மற்றும் அண்ட அணுவின் அமைப்பு:</b><br><br>
-            <b>I. விந்து செல் (நகரும் தன்மையுடையது):</b><br>
-            • <b>தலை:</b> ஒற்றைமய உட்கருவையும் அதன் தொப்பி போன்ற <b>அக்ரோசோம்</b> பகுதியையும் கொண்டது. அக்ரோசோம் அண்ட உறையைக் கரைக்கும் <i>ஹயலூரோனிடேஸ்</i> நொதியைச் சுரக்கிறது.<br>
-            • <b>கழுத்து:</b> அண்மை மற்றும் சேய்மை சென்ட்ரியோல்களைக் கொண்டுள்ளது.<br>
-            • <b>நடுப்பகுதி:</b> விந்து நீந்துவதற்குத் தேவையான ATP ஆற்றலை வழங்கும் சுருள்வடிவ <b>மைட்டோகாண்ட்ரியாக்களைக் (Nebenkern)</b> கொண்டுள்ளது.<br>
-            • <b>வால்:</b> கசையிழை போன்ற நீண்ட பகுதி; அண்டத்தை நோக்கி நீந்திச் செல்ல உதவுகிறது.<br><br>
-            <b>II. அண்ட செல் (நகரும் தன்மையற்றது):</b><br>
-            • <b>சவ்வுகள்:</b> வெளிப்பகுதியில் <i>கரோனா ரேடியேட்டா</i>, நடுவில் தடித்த கிளைக்கோபுரதத்தால் ஆன <i>சோனா பெலுசிடா</i>, உட்பகுதியில் <i>வைட்டலின் சவ்வு</i> ஆகிய உறைகள் உள்ளன.<br>
-            • <b>ஊபிளாசம் & உட்கரு:</b> அதிக உணவுத் துகள்கள் கொண்ட சைட்டோபிளாசம் மற்றும் ஒரு பெரிய ஒற்றைமய உட்கரு (ஜெர்மினல் வெசிக்கிள்) உள்ளது.</div>`
-        }
-      ]
-    },
-    {
-      id: "sec_sci_tm_dt_3",
-      title: "பகுதி 3: இயற்பியல் & வேதியியல் முக்கிய வரைபடங்கள் (வினா எண் 33 & 34)",
-      author: "இயற்பியல் மற்றும் வேதியியல் வரைபட வழிகாட்டி",
-      questions: [
         {
           id: "sci_tm_dt_6",
           type: "7m",
           mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 33",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "கிட்டப்பார்வை (மையோபியா) மற்றும் தூரப்பார்வை (ஹைப்பர்மெட்ரோபியா) குறைபாடுகளை வேறுபடுத்துக. அவற்றின் காரணங்கள் மற்றும் லென்ஸ்கள் மூலம் சரிசெய்யும் முறையைக் கதிர் வரைபடங்களுடன் விளக்குக.",
-          diagramCaption: "படம்: கிட்டப்பார்வை & தூரப்பார்வை குறைபாடுகள் மற்றும் சரிசெய்தல்",
-          diagramSvg: `<svg viewBox=\"0 0 540 320\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">பார்வைக் குறைபாடுகள் &amp; லென்ஸ் மூலம் சரிசெய்தல்</text>
-            <g transform=\"translate(15, 40)\">
-              <rect x=\"0\" y=\"0\" width=\"245\" height=\"260\" rx=\"8\" fill=\"#1e293b\" stroke=\"#38bdf8\" stroke-width=\"1.5\"/>
-              <text x=\"122\" y=\"20\" font-size=\"12\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"middle\">1. கிட்டப்பார்வை (மையோபியா)</text>
-              <text x=\"20\" y=\"42\" font-size=\"9.5\" fill=\"#fca5a5\" font-weight=\"bold\">(அ) விழித்திரைக்கு முன்பாக பிம்பம்:</text>
-              <ellipse cx=\"160\" cy=\"75\" rx=\"55\" ry=\"32\" fill=\"#0f172a\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>
-              <path d=\"M 120 55 Q 128 75 120 95 Q 112 75 120 55 Z\" fill=\"#bae6fd\" stroke=\"#0284c7\"/>
-              <line x1=\"20\" y1=\"68\" x2=\"118\" y2=\"68\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"20\" y1=\"82\" x2=\"118\" y2=\"82\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"122\" y1=\"68\" x2=\"185\" y2=\"75\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"122\" y1=\"82\" x2=\"185\" y2=\"75\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <circle cx=\"185\" cy=\"75\" r=\"3.5\" fill=\"#ef4444\"/><text x=\"185\" y=\"65\" font-size=\"8\" fill=\"#f87171\" text-anchor=\"middle\">குவி புள்ளி</text>
-              <text x=\"20\" y=\"145\" font-size=\"9.5\" fill=\"#86efac\" font-weight=\"bold\">(ஆ) குழிலென்ஸ் மூலம் சரிசெய்தல்:</text>
-              <ellipse cx=\"160\" cy=\"195\" rx=\"55\" ry=\"32\" fill=\"#0f172a\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>
-              <path d=\"M 120 175 Q 128 195 120 215 Q 112 195 120 175 Z\" fill=\"#bae6fd\" stroke=\"#0284c7\"/>
-              <path d=\"M 60 175 Q 65 195 60 215 L 70 215 Q 65 195 70 175 Z\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"1.2\"/><text x=\"65\" y=\"168\" font-size=\"8\" fill=\"#fde047\" text-anchor=\"middle\">குழி லென்ஸ்</text>
-              <line x1=\"15\" y1=\"188\" x2=\"58\" y2=\"188\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"15\" y1=\"202\" x2=\"58\" y2=\"202\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"72\" y1=\"187\" x2=\"118\" y2=\"183\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"72\" y1=\"203\" x2=\"118\" y2=\"207\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"122\" y1=\"183\" x2=\"215\" y2=\"195\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"122\" y1=\"207\" x2=\"215\" y2=\"195\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <circle cx=\"215\" cy=\"195\" r=\"3.5\" fill=\"#22c55e\"/><text x=\"215\" y=\"185\" font-size=\"8\" fill=\"#4ade80\" text-anchor=\"middle\">விழித்திரை</text>
-              <text x=\"122\" y=\"248\" font-size=\"9\" fill=\"#94a3b8\" text-anchor=\"middle\">குவியத் தொலைவு: f = - (x · y) / (y - x)</text>
-            </g>
-            <g transform=\"translate(280, 40)\">
-              <rect x=\"0\" y=\"0\" width=\"245\" height=\"260\" rx=\"8\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>
-              <text x=\"122\" y=\"20\" font-size=\"12\" fill=\"#fbbf24\" font-weight=\"bold\" text-anchor=\"middle\">2. தூரப்பார்வை (ஹைப்பர்மெட்ரோபியா)</text>
-              <text x=\"20\" y=\"42\" font-size=\"9.5\" fill=\"#fca5a5\" font-weight=\"bold\">(அ) விழித்திரைக்குப் பின்புறம் பிம்பம்:</text>
-              <ellipse cx=\"140\" cy=\"75\" rx=\"55\" ry=\"32\" fill=\"#0f172a\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>
-              <path d=\"M 100 55 Q 108 75 100 95 Q 92 75 100 55 Z\" fill=\"#bae6fd\" stroke=\"#0284c7\"/>
-              <line x1=\"20\" y1=\"75\" x2=\"98\" y2=\"68\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"20\" y1=\"75\" x2=\"98\" y2=\"82\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"102\" y1=\"68\" x2=\"215\" y2=\"75\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <line x1=\"102\" y1=\"82\" x2=\"215\" y2=\"75\" stroke=\"#f87171\" stroke-width=\"1.5\"/>
-              <circle cx=\"215\" cy=\"75\" r=\"3.5\" fill=\"#ef4444\"/><text x=\"215\" y=\"65\" font-size=\"8\" fill=\"#f87171\" text-anchor=\"middle\">பின்புறம்</text>
-              <text x=\"20\" y=\"145\" font-size=\"9.5\" fill=\"#86efac\" font-weight=\"bold\">(ஆ) குவிலென்ஸ் மூலம் சரிசெய்தல்:</text>
-              <ellipse cx=\"140\" cy=\"195\" rx=\"55\" ry=\"32\" fill=\"#0f172a\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>
-              <path d=\"M 100 175 Q 108 195 100 215 Q 92 195 100 175 Z\" fill=\"#bae6fd\" stroke=\"#0284c7\"/>
-              <path d=\"M 55 175 Q 63 195 55 215 Q 47 195 55 175 Z\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"1.2\"/><text x=\"55\" y=\"168\" font-size=\"8\" fill=\"#fde047\" text-anchor=\"middle\">குவி லென்ஸ்</text>
-              <line x1=\"10\" y1=\"195\" x2=\"50\" y2=\"188\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"10\" y1=\"195\" x2=\"50\" y2=\"202\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"60\" y1=\"188\" x2=\"98\" y2=\"185\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"60\" y1=\"202\" x2=\"98\" y2=\"205\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"102\" y1=\"185\" x2=\"195\" y2=\"195\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <line x1=\"102\" y1=\"205\" x2=\"195\" y2=\"195\" stroke=\"#4ade80\" stroke-width=\"1.5\"/>
-              <circle cx=\"195\" cy=\"195\" r=\"3.5\" fill=\"#22c55e\"/><text x=\"195\" y=\"185\" font-size=\"8\" fill=\"#4ade80\" text-anchor=\"middle\">விழித்திரை</text>
-              <text x=\"122\" y=\"248\" font-size=\"9\" fill=\"#94a3b8\" text-anchor=\"middle\">குவியத் தொலைவு: f = (d · D) / (d - D)</text>
-            </g>
+          diagram: true,
+          q: "ஆஞ்சியோஸ்பெர்ம்களில் நடைபெறும் இரட்டைக் கருவுறுதல் மற்றும் மூவிணைவு நிகழ்வுகளைத் தெளிவான படத்துடன் விளக்குக.",
+          diagramCaption: "படம்: ஆஞ்சியோஸ்பெர்ம்களின் இரட்டைக் கருவுறுதல் மற்றும் மூவிணைவு",
+          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="ovaryGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#16a34a"/></linearGradient>
+              <linearGradient id="sacGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fef08a"/><stop offset="100%" stop-color="#fde047"/></linearGradient>
+            </defs>
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">ஆஞ்சியோஸ்பெர்ம்களின் இரட்டைக் கருவுறுதல் & மூவிணைவு</text>
+            <path d="M 360 45 C 340 45 340 70 370 70 L 370 160 C 320 180 300 240 300 310 C 300 375 460 375 460 310 C 460 240 440 180 390 160 L 390 70 C 420 70 420 45 400 45 Z" fill="#14532d" stroke="#22c55e" stroke-width="2"/>
+            <circle cx="370" cy="52" r="6" fill="#facc15" stroke="#ca8a04"/>
+            <path d="M 370 58 L 376 160 C 376 220 340 280 360 325 L 370 325" fill="none" stroke="#facc15" stroke-width="3" stroke-dasharray="4,2"/>
+            <circle cx="363" cy="270" r="3.5" fill="#f43f5e"/><circle cx="366" cy="285" r="3.5" fill="#f43f5e"/>
+            <path d="M 345 230 C 315 250 315 330 355 350 C 395 365 445 335 440 270 C 435 220 375 210 345 230 Z" fill="#1e293b" stroke="#86efac" stroke-width="2"/>
+            <ellipse cx="385" cy="285" rx="36" ry="50" fill="url(#sacGradTm)" stroke="#ca8a04" stroke-width="1.5"/>
+            <circle cx="373" cy="250" r="5" fill="#9333ea"/><circle cx="385" cy="245" r="5" fill="#9333ea"/><circle cx="397" cy="250" r="5" fill="#9333ea"/>
+            <circle cx="380" cy="285" r="5" fill="#2563eb"/><circle cx="390" cy="285" r="5" fill="#2563eb"/>
+            <circle cx="372" cy="320" r="5.5" fill="#059669"/><circle cx="385" cy="324" r="7" fill="#dc2626"/><circle cx="398" cy="320" r="5.5" fill="#059669"/>
+
+            <!-- LEFT LABELS (0 to 220 safe margin) -->
+            <line x1="365" y1="52" x2="220" y2="52" stroke="#94a3b8" stroke-width="1.5"/><circle cx="365" cy="52" r="3.5" fill="#facc15"/>
+            <text x="210" y="57" font-size="13.5" fill="#facc15" font-weight="bold" text-anchor="end">சூலகமுடி & மகரந்தத்தூள்</text>
+            <line x1="375" y1="120" x2="220" y2="120" stroke="#94a3b8" stroke-width="1.5"/><circle cx="375" cy="120" r="3.5" fill="#22c55e"/>
+            <text x="210" y="125" font-size="13.5" fill="#22c55e" font-weight="bold" text-anchor="end">சூலகத்தண்டு (Style)</text>
+            <line x1="370" y1="180" x2="220" y2="180" stroke="#94a3b8" stroke-width="1.5"/><circle cx="370" cy="180" r="3.5" fill="#facc15"/>
+            <text x="210" y="185" font-size="13.5" fill="#facc15" font-weight="bold" text-anchor="end">மகரந்தக் குழாய் வளர்ச்சி</text>
+            <line x1="364" y1="275" x2="220" y2="250" stroke="#94a3b8" stroke-width="1.5"/><circle cx="364" cy="275" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="255" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">2 ஆண் கேமீட்டுகள் (விந்தணு)</text>
+            <line x1="310" y1="310" x2="220" y2="330" stroke="#94a3b8" stroke-width="1.5"/><circle cx="310" cy="310" r="3.5" fill="#86efac"/>
+            <text x="210" y="335" font-size="13.5" fill="#86efac" font-weight="bold" text-anchor="end">சூற்பை சுவர் (கனியாக மாறும்)</text>
+
+            <!-- RIGHT LABELS (540 to 760 safe margin) -->
+            <line x1="397" y1="250" x2="540" y2="210" stroke="#94a3b8" stroke-width="1.5"/><circle cx="397" cy="250" r="3.5" fill="#9333ea"/>
+            <text x="550" y="215" font-size="13.5" fill="#c084fc" font-weight="bold">எதிர்ப்பக்க செல்கள் (Antipodals - 3)</text>
+            <line x1="392" y1="285" x2="540" y2="265" stroke="#94a3b8" stroke-width="1.5"/><circle cx="392" cy="285" r="3.5" fill="#2563eb"/>
+            <text x="550" y="270" font-size="13.5" fill="#60a5fa" font-weight="bold">துருவ உட்கருக்கள் (மூவிணைவு ➔ 3n)</text>
+            <line x1="385" y1="324" x2="540" y2="315" stroke="#94a3b8" stroke-width="1.5"/><circle cx="385" cy="324" r="3.5" fill="#dc2626"/>
+            <text x="550" y="320" font-size="13.5" fill="#f87171" font-weight="bold">அண்டம் (மெய்க்கருவுறுதல் ➔ 2n)</text>
+            <line x1="398" y1="320" x2="540" y2="360" stroke="#94a3b8" stroke-width="1.5"/><circle cx="398" cy="320" r="3.5" fill="#059669"/>
+            <text x="550" y="365" font-size="13.5" fill="#4ade80" font-weight="bold">சினெர்ஜிடுகள் (வழிகாட்டி செல்கள்)</text>
+            <line x1="370" y1="345" x2="540" y2="395" stroke="#94a3b8" stroke-width="1.5"/><circle cx="370" cy="345" r="3.5" fill="#facc15"/>
+            <text x="550" y="400" font-size="13.5" fill="#fde047" font-weight="bold">சூல் துளை (Micropyle)</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>கிட்டப்பார்வை மற்றும் தூரப்பார்வை ஒப்பீடு:</b><br><br>
-            <table style=\"width:100%; border-collapse:collapse;\" border=\"1\" cellpadding=\"6\">
-              <tr style=\"background:#1e293b; color:#38bdf8;\"><th>அம்சம்</th><th>கிட்டப்பார்வை (மையோபியா)</th><th>தூரப்பார்வை (ஹைப்பர்மெட்ரோபியா)</th></tr>
-              <tr><td><b>1. பார்வைத் குறைபாடு</b></td><td>அருகில் உள்ள பொருட்களைத் தெளிவாகக் காண முடியும்; தொலைவில் உள்ளவற்றைக் காண முடியாது.</td><td>தொலைவில் உள்ள பொருட்களைத் தெளிவாகக் காண முடியும்; அருகில் உள்ளவற்றைக் காண முடியாது.</td></tr>
-              <tr><td><b>2. பிம்பம் குவியும் இடம்</b></td><td>தொலைவுப் பொருட்களின் பிம்பம் <b>விழித்திரைக்கு முன்பாகக்</b> குவிகிறது.</td><td>அண்மைப் பொருட்களின் பிம்பம் <b>விழித்திரைக்குப் பின்புறமாகக்</b> குவிகிறது.</td></tr>
-              <tr><td><b>3. காரணங்கள்</b></td><td>• விழிக்குமிழ் நீண்டு போதல்.<br>• விழி லென்சின் வளைவுத்தன்மை அதிகரித்தல் (குவியத் தொலைவு குறைதல்).</td><td>• விழிக்குமிழ் சுருங்கிப் போதல்.<br>• விழி லென்சின் வளைவுத்தன்மை குறைதல் (குவியத் தொலைவு அதிகரித்தல்).</td></tr>
-              <tr><td><b>4. புள்ளி மாற்றம்</b></td><td>ஈறிலாத் தொலைவில் உள்ள சேய்மைப் புள்ளி உள்நோக்கி நகர்கிறது.</td><td>25 செ.மீ தொலைவில் உள்ள அண்மைப் புள்ளி வெளிநோக்கித் தள்ளப்படுகிறது.</td></tr>
-              <tr><td><b>5. சரிசெய்யும் லென்ஸ்</b></td><td>தகுந்த குவியத் தொலைவு கொண்ட <b>குழி லென்ஸ் (விரிக்கும் லென்ஸ்)</b>:<br><b>f = -xy / (y - x)</b></td><td>தகுந்த குவியத் தொலைவு கொண்ட <b>குவி லென்ஸ் (குவிக்கும் லென்ஸ்)</b>:<br><b>f = dD / (d - D)</b></td></tr>
-            </table></div>`
+          ans: `<div style="line-height:1.8;">
+            <b>ஆஞ்சியோஸ்பெர்ம்களின் இரட்டைக் கருவுறுதல் மற்றும் மூவிணைவு:</b><br><br>
+            பூக்கும் தாவரங்களில் (ஆஞ்சியோஸ்பெர்ம்கள்) மட்டுமே நடைபெறும் தனித்துவமான நிகழ்வு <b>இரட்டைக் கருவுறுதல் (Double Fertilization)</b> ஆகும். இதனை நவாஷின் (Nawaschin) கண்டறிந்தார்.<br><br>
+            <b>1. மகரந்தக்குழாய் வளர்ச்சி & நுழைதல்:</b><br>
+            • மகரந்தத்தூள் சூலகமுடியை அடைந்து முளைத்து மகரந்தக் குழாயை உருவாக்குகிறது.<br>
+            • உற்பத்தி செல் பிளவுற்று <b>இரண்டு நகரும் ஆண் கேமீட்டுகளை</b> உருவாக்குகிறது.<br>
+            • மகரந்தக் குழாய் சூலகத்தண்டு வழியாக வளர்ந்து, <b>சூல் துளை (Micropyle)</b> வழியாகக் கருப்பையினுள் நுழைகிறது.<br><br>
+            <b>2. மெய்க்கருவுறுதல் (முதல் கருவுறுதல்):</b><br>
+            • ஒரு ஆண் கேமீட் ($n$) பெண் கேமீட்டான <b>அண்டத்துடன் ($n$)</b> இணைந்து இரட்டைமய <b>கருமுட்டையை / சைகோட்டை ($2n$)</b> உருவாக்குகிறது.<br>
+            • $\text{ஆண் கேமீட் } (n) + \text{ அண்ட செல் } (n) \longrightarrow \text{ சைகோட் } (2n) \longrightarrow \text{ கரு (Embryo)}$.<br><br>
+            <b>3. மூவிணைவு (இரண்டாம் கருவுறுதல்):</b><br>
+            • இரண்டாவது ஆண் கேமீட் ($n$) மையத்திலுள்ள <b>இரண்டு துருவ உட்கருக்களுடன் ($n + n$)</b> இணைகிறது.<br>
+            • மூன்று ஒற்றைமய உட்கருக்கள் இணைவதால் இது <b>மூவிணைவு (Triple Fusion)</b> எனப்படும்.<br>
+            • $\text{ஆண் கேமீட் } (n) + \text{ 2 துருவ உட்கருக்கள் } (2n) \longrightarrow \text{ முதன்மை கருவூண் உட்கரு } (3n)$.<br>
+            • இது மும்மய <b>கருவூணாக ($3n$)</b> வளர்ந்து வளரும் கருவிற்குத் தேவையான ஊட்டச்சத்தை அளிக்கிறது.<br><br>
+            <b>கருவுறுதலுக்குப் பின் ஏற்படும் மாற்றங்கள்:</b> சூல் விதையாகவும், சூற்பை கனியாகவும் மாறுகிறது.<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ வரைபடப் பாகங்கள் & முக்கியத் தேர்வுப் பணிகள் (Key Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">எண்</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">கருப்பைப் பகுதி</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">கருவுறுதலுக்குப் பின் நிலை</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">1</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#dc2626;">அண்டம் + ஆண் கேமீட்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">கருமுட்டை (2n) உருவாகிறது; விதையின் கருவாக வளர்கிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">2</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#2563eb;">துருவ உட்கருக்கள் + ஆண் கேமீட்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">மூவிணைவு ➔ கருவூண் (3n) ஊட்டச்சத்துத் திசுவாக மாறுகிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">3</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#059669;">சினெர்ஜிடுகள் (2)</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">மகரந்தக் குழாய் நுழைய வழிகாட்டுகிறது; பின் அழிகிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">4</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#9333ea;">எதிர்ப்பக்க செல்கள் (3)</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">சலசா முனையில் உள்ள ஊட்ட செல்கள்; பின் நலிவுற்று அழிகிறது.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">5</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#16a34a;">சூல் & சூற்பை</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">கருவுற்ற சூல் விதையாகவும்; சூற்பை சுவையான கனியாகவும் மாறும்.</td></tr>
+              </table>
+            </div>
+          </div>`
         },
         {
           id: "sci_tm_dt_7",
           type: "7m",
           mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 33",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "கண்ணாடி முப்பட்டகம் வழியே ஒளிவிலகல் அடைதல் மற்றும் வெள்ளை ஒளியின் நிறப்பிரிகையை கதிர் வரைபடத்துடன் விளக்குக.",
-          diagramCaption: "படம்: முப்பட்டகம் வழியே ஒளிவிலகல் மற்றும் நிறப்பிரிகை",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">முப்பட்டகத்தில் ஒளிவிலகல் &amp; நிறப்பிரிகை</text>
-            <polygon points=\"240,50 140,240 340,240\" fill=\"#0284c7\" fill-opacity=\"0.25\" stroke=\"#38bdf8\" stroke-width=\"2.5\"/>
-            <text x=\"240\" y=\"42\" font-size=\"12\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"middle\">A (முப்பட்டகக் கோணம்)</text>
-            <line x1=\"40\" y1=\"170\" x2=\"185\" y2=\"155\" stroke=\"#f8fafc\" stroke-width=\"2.5\"/>
-            <polygon points=\"115,160 125,162 118,168\" fill=\"#f8fafc\"/>
-            <line x1=\"185\" y1=\"155\" x2=\"275\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"2\"/>
-            <line x1=\"185\" y1=\"155\" x2=\"278\" y2=\"190\" stroke=\"#a855f7\" stroke-width=\"2\"/>
-            <line x1=\"275\" y1=\"175\" x2=\"460\" y2=\"200\" stroke=\"#ef4444\" stroke-width=\"2\"/>
-            <line x1=\"278\" y1=\"190\" x2=\"460\" y2=\"250\" stroke=\"#a855f7\" stroke-width=\"2\"/>
-            <rect x=\"460\" y=\"180\" width=\"12\" height=\"85\" fill=\"#334155\" stroke=\"#94a3b8\"/>
-            <text x=\"485\" y=\"204\" font-size=\"10\" fill=\"#f87171\" font-weight=\"bold\">சிவப்பு (குறைந்த விலகல்)</text>
-            <text x=\"485\" y=\"254\" font-size=\"10\" fill=\"#c084fc\" font-weight=\"bold\">ஊதா (அதிக விலகல்)</text>
-            <line x1=\"185\" y1=\"155\" x2=\"300\" y2=\"143\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/>
-            <line x1=\"275\" y1=\"175\" x2=\"210\" y2=\"167\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"3 3\"/>
-            <line x1=\"110\" y1=\"120\" x2=\"40\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"35\" y=\"103\" font-size=\"11\" fill=\"#f8fafc\" font-weight=\"bold\" text-anchor=\"end\">படுகதிர் (வெள்ளை ஒளி)</text>
+          diagram: true,
+          q: "மனித விந்தணு மற்றும் அண்டத்தின் அமைப்பைத் தெளிவான படத்துடன் விவரிக்கவும்.",
+          diagramCaption: "படம்: மனித விந்தணு மற்றும் முதிர்ந்த அண்டத்தின் அமைப்பு",
+          diagramSvg: `<svg viewBox="0 0 760 400" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">மனித விந்தணு மற்றும் முதிர்ந்த அண்டத்தின் அமைப்பு</text>
+            <line x1="380" y1="50" x2="380" y2="380" stroke="#334155" stroke-dasharray="6,4" stroke-width="2"/>
+            <text x="210" y="55" font-size="14" font-weight="bold" fill="#38bdf8" text-anchor="middle">A. மனித விந்தணு</text>
+            <text x="560" y="55" font-size="14" font-weight="bold" fill="#f43f5e" text-anchor="middle">B. மனித அண்டம்</text>
+
+            <!-- விந்தணு -->
+            <path d="M 190 75 C 175 75 160 90 160 115 C 160 135 170 145 190 145 C 210 145 220 135 220 115 C 220 90 205 75 190 75 Z" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+            <path d="M 175 77 C 185 70 195 70 205 77 L 213 95 L 167 95 Z" fill="#ec4899"/>
+            <ellipse cx="190" cy="120" rx="18" ry="16" fill="#1e293b" stroke="#f8fafc" stroke-width="1.5"/>
+            <rect x="184" y="145" width="12" height="12" fill="#eab308"/>
+            <circle cx="190" cy="151" r="2.5" fill="#fef08a"/>
+            <rect x="180" y="157" width="20" height="60" rx="4" fill="#1e293b" stroke="#f97316" stroke-width="2"/>
+            <path d="M 180 165 L 200 173 M 180 180 L 200 188 M 180 195 L 200 203 M 180 210 L 200 218" stroke="#fb923c" stroke-width="2.5"/>
+            <path d="M 190 217 Q 170 270 200 310 T 185 375" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round"/>
+
+            <!-- விந்தணு பாகங்கள் -->
+            <line x1="180" y1="82" x2="110" y2="82" stroke="#94a3b8" stroke-width="1.5"/><circle cx="180" cy="82" r="3.5" fill="#ec4899"/>
+            <text x="100" y="87" font-size="13" fill="#ec4899" font-weight="bold" text-anchor="end">அக்ரோசோம் (நொதித் தொப்பி)</text>
+            <line x1="170" y1="120" x2="110" y2="120" stroke="#94a3b8" stroke-width="1.5"/><circle cx="170" cy="120" r="3.5" fill="#38bdf8"/>
+            <text x="100" y="125" font-size="13" fill="#38bdf8" font-weight="bold" text-anchor="end">தலை (உட்கரு - 23n)</text>
+            <line x1="184" y1="151" x2="110" y2="151" stroke="#94a3b8" stroke-width="1.5"/><circle cx="184" cy="151" r="3.5" fill="#eab308"/>
+            <text x="100" y="156" font-size="13" fill="#eab308" font-weight="bold" text-anchor="end">கழுத்து & சென்ட்ரியோல்</text>
+            <line x1="180" y1="185" x2="110" y2="185" stroke="#94a3b8" stroke-width="1.5"/><circle cx="180" cy="185" r="3.5" fill="#f97316"/>
+            <text x="100" y="190" font-size="13" fill="#f97316" font-weight="bold" text-anchor="end">நடுப்பகுதி (மைட்டோகாண்ட்ரியா)</text>
+            <line x1="185" y1="300" x2="110" y2="300" stroke="#94a3b8" stroke-width="1.5"/><circle cx="185" cy="300" r="3.5" fill="#38bdf8"/>
+            <text x="100" y="305" font-size="13" fill="#38bdf8" font-weight="bold" text-anchor="end">வால் (நகரும் சாட்டை)</text>
+
+            <!-- அண்டம் -->
+            <circle cx="560" cy="220" r="95" fill="none" stroke="#f472b6" stroke-width="12" stroke-dasharray="14,8"/>
+            <circle cx="560" cy="220" r="76" fill="#1e293b" stroke="#38bdf8" stroke-width="6"/>
+            <circle cx="560" cy="220" r="66" fill="#fda4af" stroke="#f43f5e" stroke-width="2"/>
+            <circle cx="550" cy="205" r="22" fill="#be123c" stroke="#f8fafc" stroke-width="2"/>
+            <circle cx="545" cy="200" r="6" fill="#f8fafc"/>
+
+            <!-- அண்டம் பாகங்கள் -->
+            <line x1="645" y1="160" x2="670" y2="130" stroke="#94a3b8" stroke-width="1.5"/><circle cx="645" cy="160" r="3.5" fill="#f472b6"/>
+            <text x="675" y="135" font-size="13" fill="#f472b6" font-weight="bold">கரோனா ரேடியேட்டா</text>
+            <line x1="630" y1="190" x2="670" y2="185" stroke="#94a3b8" stroke-width="1.5"/><circle cx="630" cy="190" r="3.5" fill="#38bdf8"/>
+            <text x="675" y="190" font-size="13" fill="#38bdf8" font-weight="bold">சோனா பெல்லூசிடா</text>
+            <line x1="610" y1="240" x2="670" y2="240" stroke="#94a3b8" stroke-width="1.5"/><circle cx="610" cy="240" r="3.5" fill="#fda4af"/>
+            <text x="675" y="245" font-size="13" fill="#fda4af" font-weight="bold">அண்ட பிளாஸ்மா</text>
+            <line x1="570" y1="205" x2="670" y2="295" stroke="#94a3b8" stroke-width="1.5"/><circle cx="570" cy="205" r="3.5" fill="#f8fafc"/>
+            <text x="675" y="300" font-size="13" fill="#ffffff" font-weight="bold">உட்கரு (23n தாய்வழி)</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>முப்பட்டகத்தில் ஒளிவிலகல் மற்றும் நிறப்பிரிகை:</b><br><br>
-            <b>1. ஒளிவிலகல்:</b><br>
-            • ஒரு ஒளிக்கதிர் காற்றிலிருந்து முப்பட்டகத்தினுள் (அடர்வு குறைந்த ஊடகத்திலிருந்து அடர்மிகு ஊடகம்) செல்லும்போது <b>செங்குத்துக் கோட்டை நோக்கி</b> விலகுகிறது.<br>
-            • முப்பட்டகத்திலிருந்து வெளியேறும்போது (கண்ணாடியிலிருந்து காற்று) <b>செங்குத்துக் கோட்டை விட்டு விலகிச்</b> செல்கிறது.<br>
-            • நீட்டப்பட்ட படுகதிருக்கும் வெளிப்படு கதிருக்கும் இடைப்பட்ட கோணம் <b>திசைமாறு கோணம் (d)</b> எனப்படும்.<br><br>
-            <b>2. நிறப்பிரிகை:</b><br>
-            • வெள்ளை ஒளி முப்பட்டகத்தின் வழியே செல்லும்போது அதன் ஏழு அடிப்படை வண்ணங்களாகப் (<b>VIBGYOR</b>) பிரியும் நிகழ்வு <b>நிறப்பிரிகை</b> எனப்படும்.<br>
-            • <i>காரணம்:</i> கண்ணாடியில் வெவ்வேறு நிறங்கள் வெவ்வேறு வேகத்தில் பயணிக்கின்றன (அலைநீள மாறுபாடு).<br>
-            • <b>ஊதா நிறம்</b> குறைந்த அலைநீளம் கொண்டுள்ளதால் <b>அதிக திசைமாறு கோணத்துடன்</b> விலகலடைகிறது.<br>
-            • <b>சிவப்பு நிறம்</b> அதிக அலைநீளம் கொண்டுள்ளதால் <b>குறைந்த திசைமாறு கோணத்துடன்</b> விலகலடைகிறது.</div>`
-        },
+          ans: `<div style="line-height:1.8;">
+            <b>மனித விந்தணு மற்றும் அண்டத்தின் அமைப்பு:</b><br><br>
+            <b>A. மனித விந்தணுவின் அமைப்பு:</b><br>
+            • <b>தலைப்பகுதி:</b> தந்தைவழி மரபுப் பொருளான 23 குரோமோசோம்களைக் கொண்ட நீள்வட்ட உட்கருவைக் கொண்டுள்ளது. தலைமுனையில் <b>அக்ரோசோம்</b> என்ற தொப்பி போன்ற அமைப்பு உள்ளது. இதில் உள்ள <b>ஹையலூரோனிடேஸ்</b> என்ற புரோட்டியோலைடிக் நொதி அண்டத்தின் உறைகளைத் துளைக்க உதவுகிறது.<br>
+            • <b>கழுத்துப் பகுதி:</b> சிறிய குறுகிய பகுதி; இதில் அண்மை சென்ட்ரியோலும் சேய்மை சென்ட்ரியோலும் அமைந்துள்ளன.<br>
+            • <b>நடுப்பகுதி:</b> சுருள் வடிவில் அமைந்த <b>மைட்டோகாண்ட்ரியாக்களைக் (Mitochondria)</b> கொண்டுள்ளது. இது விந்தணு நீந்திச் செல்லத் தேவையான ஏடிபி (ATP) ஆற்றலை உருவாக்குகிறது.<br>
+            • <b>வால்:</b> மெல்லிய நீண்ட சாட்டை போன்ற அமைப்பு; பெண் இனப்பெருக்கப் பாதையில் நிமிடத்திற்கு 1.5–3 மி.மீ வேகத்தில் நீந்திச் செல்ல உதவுகிறது.<br><br>
+            <b>B. முதிர்ந்த மனித அண்டத்தின் அமைப்பு:</b><br>
+            • நகரும் தன்மையற்ற, கருவுணவற்ற (Alecithal) பெரிய கோள வடிவ பெண் கேமீட் ஆகும்.<br>
+            • <b>கரோனா ரேடியேட்டா:</b> வெளிப்புறத்தில் பாலிக்கிள் செல்களாலான அடுக்கு.<br>
+            • <b>சோனா பெல்லூசிடா:</b> அண்ட பிளாஸ்மா சவ்வைச் சுற்றியுள்ள தடித்த ஒளிபுகும் கிளைக்கோபுரத உறை (பல்விந்தணு நுழைவைத் தடுக்கிறது).<br>
+            • <b>விட்டலின் சவ்வு:</b> அண்டத்தின் உட்புற பிளாஸ்மா சவ்வு.<br>
+            • <b>அண்ட பிளாஸ்மா & உட்கரு:</b> அதிக சைட்டோபிளாசம் மற்றும் தாய்வழி 23 குரோமோசோம்களைக் கொண்ட பெரிய உட்கருவைக் கொண்டுள்ளது.<br><br>
+
+            <div style="margin:14px 0; background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:12px; padding:14px;">
+              <b style="color:#0369a1; font-size:14px;">🏷️ வரைபடப் பாகங்கள் & முக்கியத் தேர்வுப் பணிகள் (Key Table):</b>
+              <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px; line-height:1.6;">
+                <tr style="background:#e0f2fe; color:#0369a1;">
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">இனச்செல்</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">பாகத்தின் பெயர்</th>
+                  <th style="padding:6px 10px; border:1px solid #cbd5e1; text-align:left;">முக்கியப் பணி</th>
+                </tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">விந்தணு</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#ec4899;">அக்ரோசோம்</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">ஹையலூரோனிடேஸ் நொதி மூலம் அண்ட உறையைத் துளைத்தல்.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">விந்தணு</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#f97316;">நடுப்பகுதி</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">மைட்டோகாண்ட்ரியாக்கள் மூலம் விந்தணு நீந்த ATP ஆற்றலை அளித்தல்.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">அண்டம்</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#f472b6;">கரோனா ரேடியேட்டா</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">வெளிப்புற பாலிக்கிள் செல்களாலான பாதுகாப்பு அடுக்கு.</td></tr>
+                <tr><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700;">அண்டம்</td><td style="padding:6px 10px; border:1px solid #e2e8f0; font-weight:700; color:#0284c7;">சோனா பெல்லூசிடா</td><td style="padding:6px 10px; border:1px solid #e2e8f0;">ஒன்றுக்கும் மேற்பட்ட விந்தணுக்கள் நுழைவதைத் தடுக்கும் உறை.</td></tr>
+              </table>
+            </div>
+          </div>`
+        }
+      ]
+    },
+    {
+      id: "sec_sci_tm_dt_3",
+      title: "பகுதி 3: இயற்பியல் & வேதியியல் முக்கிய வரைபடங்கள் (வினா எண் 33 & 34 சிறப்பு)",
+      author: "இயற்பியல் & வேதியியல் வரைபட வழிகாட்டல்",
+      questions: [
         {
           id: "sci_tm_dt_8",
           type: "7m",
           mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 34",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "ஹேமடைட் தாதுவிலிருந்து ஊது உலையில் இரும்பு உருக்கிப் பிரித்தெடுக்கும் முறையை வேதிச் சமன்பாடுகள் மற்றும் படத்துடன் விளக்குக.",
-          diagramCaption: "படம்: ஊது உலை - இரும்பு பிரித்தெடுத்தல்",
-          diagramSvg: `<svg viewBox=\"0 0 540 320\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">ஊது உலை (இரும்பு உருக்கிப் பிரித்தல்)</text>
-            <g transform=\"translate(170, 35)\">
-              <path d=\"M 60 25 L 140 25 L 155 120 L 175 190 L 150 250 L 50 250 L 25 190 L 45 120 Z\" fill=\"#1e293b\" stroke=\"#cbd5e1\" stroke-width=\"2.5\"/>
-              <polygon points=\"80,10 120,10 100,28\" fill=\"#f59e0b\"/><text x=\"100\" y=\"8\" font-size=\"9\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"middle\">உலையிலிடு பொருள் (தாது+கரி+சுண்ணாம்பு)</text>
-              <rect x=\"52\" y=\"45\" width=\"96\" height=\"55\" fill=\"#3b82f6\" fill-opacity=\"0.25\"/>
-              <text x=\"100\" y=\"70\" font-size=\"10\" fill=\"#93c5fd\" font-weight=\"bold\" text-anchor=\"middle\">ஒடுக்கப் பகுதி (400°C - 700°C)</text>
-              <rect x=\"38\" y=\"105\" width=\"124\" height=\"65\" fill=\"#f59e0b\" fill-opacity=\"0.25\"/>
-              <text x=\"100\" y=\"135\" font-size=\"10\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"middle\">கசடு பகுதி (800°C - 1000°C)</text>
-              <rect x=\"35\" y=\"175\" width=\"130\" height=\"45\" fill=\"#ef4444\" fill-opacity=\"0.35\"/>
-              <text x=\"100\" y=\"195\" font-size=\"10\" fill=\"#fca5a5\" font-weight=\"bold\" text-anchor=\"middle\">எரிதல் பகுதி (1500°C - 1600°C)</text>
-              <rect x=\"5\" y=\"210\" width=\"30\" height=\"12\" fill=\"#ef4444\" rx=\"3\"/>
-              <rect x=\"165\" y=\"210\" width=\"30\" height=\"12\" fill=\"#ef4444\" rx=\"3\"/>
-              <rect x=\"50\" y=\"228\" width=\"100\" height=\"12\" fill=\"#94a3b8\"/><text x=\"100\" y=\"238\" font-size=\"8\" fill=\"#fff\" text-anchor=\"middle\">உருகிய கசடு</text>
-              <rect x=\"50\" y=\"240\" width=\"100\" height=\"12\" fill=\"#dc2626\"/><text x=\"100\" y=\"249\" font-size=\"8\" fill=\"#fff\" text-anchor=\"middle\">உருகிய வார்ப்பிரும்பு</text>
-            </g>
-            <line x1=\"220\" y1=\"100\" x2=\"45\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"98\" font-size=\"10\" fill=\"#93c5fd\" font-weight=\"bold\" text-anchor=\"end\">Fe₂O₃ + 3CO ➔ 2Fe + 3CO₂</text>
-            <line x1=\"205\" y1=\"175\" x2=\"45\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"173\" font-size=\"10\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">CaO + SiO₂ ➔ CaSiO₃ (கசடு)</text>
-            <line x1=\"200\" y1=\"230\" x2=\"45\" y2=\"230\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"40\" y=\"228\" font-size=\"10\" fill=\"#f87171\" font-weight=\"bold\" text-anchor=\"end\">C + O₂ ➔ CO₂ + வெப்பம்</text>
-            <line x1=\"375\" y1=\"245\" x2=\"445\" y2=\"225\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"450\" y=\"228\" font-size=\"11\" fill=\"#f87171\" font-weight=\"bold\">துவாரங்கள் (சூடான காற்று)</text>
-            <line x1=\"320\" y1=\"265\" x2=\"445\" y2=\"255\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"450\" y=\"258\" font-size=\"11\" fill=\"#94a3b8\" font-weight=\"bold\">கசடு வெளியேறும் துவாரம்</text>
-            <line x1=\"320\" y1=\"280\" x2=\"445\" y2=\"285\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"450\" y=\"288\" font-size=\"11\" fill=\"#ef4444\" font-weight=\"bold\">வார்ப்பிரும்பு வெளியேறும் துவாரம்</text>
+          diagram: true,
+          q: "கிட்டப்பார்வை மற்றும் தூரப்பார்வை குறைபாடுகளை ஒப்பிட்டு, அவற்றிற்கான காரணங்கள் மற்றும் லென்ஸ்கள் மூலம் சரிசெய்யும் முறையைக் கதிர் வரைபடங்களுடன் விளக்குக.",
+          diagramCaption: "படம்: கிட்டப்பார்வை மற்றும் தூரப்பார்வை கதிர் வரைபடங்கள் & நிவர்த்தி",
+          diagramSvg: `<svg viewBox="0 0 760 420" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <text x="380" y="26" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">கண் குறைபாடுகள்: கிட்டப்பார்வை vs தூரப்பார்வை & நிவர்த்தி</text>
+            <line x1="380" y1="40" x2="380" y2="400" stroke="#334155" stroke-dasharray="6,4" stroke-width="2"/>
+            <text x="190" y="52" font-size="14" font-weight="bold" fill="#38bdf8" text-anchor="middle">A. கிட்டப்பார்வை (மயோபியா)</text>
+            <text x="570" y="52" font-size="14" font-weight="bold" fill="#f59e0b" text-anchor="middle">B. தூரப்பார்வை (ஹைப்பர்மெட்ரோபியா)</text>
+
+            <!-- கிட்டப்பார்வை குறைபாடு -->
+            <ellipse cx="230" cy="120" rx="50" ry="40" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+            <ellipse cx="185" cy="120" rx="6" ry="24" fill="#38bdf8"/>
+            <path d="M 60 100 L 185 110 L 250 120" stroke="#facc15" stroke-width="2" fill="none"/>
+            <path d="M 60 140 L 185 130 L 250 120" stroke="#facc15" stroke-width="2" fill="none"/>
+            <polygon points="120,103 128,105 120,107" fill="#facc15"/><polygon points="120,137 128,135 120,133" fill="#facc15"/>
+            <circle cx="250" cy="120" r="4" fill="#ef4444"/><circle cx="280" cy="120" r="3" fill="#4ade80"/>
+            <text x="190" y="175" font-size="12" fill="#ef4444" font-weight="bold" text-anchor="middle">விழித்திரைக்கு முன்பாகக் குவிதல்</text>
+
+            <!-- கிட்டப்பார்வை நிவர்த்தி -->
+            <ellipse cx="230" cy="290" rx="50" ry="40" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+            <ellipse cx="185" cy="290" rx="6" ry="24" fill="#38bdf8"/>
+            <path d="M 125 265 C 130 290 130 290 125 315 L 135 315 C 130 290 130 290 135 265 Z" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+            <path d="M 50 275 L 128 275 L 185 282 L 280 290" stroke="#facc15" stroke-width="2" fill="none"/>
+            <path d="M 50 305 L 128 305 L 185 298 L 280 290" stroke="#facc15" stroke-width="2" fill="none"/>
+            <polygon points="85,273 95,275 85,277" fill="#facc15"/><polygon points="85,303 95,305 85,307" fill="#facc15"/>
+            <circle cx="280" cy="290" r="4.5" fill="#22c55e"/>
+            <text x="190" y="345" font-size="12" fill="#4ade80" font-weight="bold" text-anchor="middle">குழி லென்ஸ் நிவர்த்தி (விழித்திரையில் குவிதல்)</text>
+
+            <!-- தூரப்பார்வை குறைபாடு -->
+            <ellipse cx="610" cy="120" rx="42" ry="40" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+            <ellipse cx="572" cy="120" rx="6" ry="24" fill="#38bdf8"/>
+            <path d="M 460 100 L 572 110 L 675 120" stroke="#facc15" stroke-width="2" fill="none"/>
+            <path d="M 460 140 L 572 130 L 675 120" stroke="#facc15" stroke-width="2" fill="none"/>
+            <polygon points="510,103 520,105 510,107" fill="#facc15"/><polygon points="510,137 520,135 510,133" fill="#facc15"/>
+            <circle cx="675" cy="120" r="4" fill="#ef4444"/><circle cx="652" cy="120" r="3" fill="#4ade80"/>
+            <text x="570" y="175" font-size="12" fill="#ef4444" font-weight="bold" text-anchor="middle">விழித்திரைக்குப் பின்புறம் குவிதல்</text>
+
+            <!-- தூரப்பார்வை நிவர்த்தி -->
+            <ellipse cx="610" cy="290" rx="42" ry="40" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+            <ellipse cx="572" cy="290" rx="6" ry="24" fill="#38bdf8"/>
+            <path d="M 520 290 C 520 268 532 268 532 290 C 532 312 520 312 520 290 Z" fill="#93c5fd" stroke="#2563eb" stroke-width="1.5"/>
+            <path d="M 450 270 L 526 277 L 572 284 L 652 290" stroke="#facc15" stroke-width="2" fill="none"/>
+            <path d="M 450 310 L 526 303 L 572 296 L 652 290" stroke="#facc15" stroke-width="2" fill="none"/>
+            <polygon points="480,272 490,274 480,276" fill="#facc15"/><polygon points="480,308 490,306 480,304" fill="#facc15"/>
+            <circle cx="652" cy="290" r="4.5" fill="#22c55e"/>
+            <text x="570" y="345" font-size="12" fill="#4ade80" font-weight="bold" text-anchor="middle">குவி லென்ஸ் நிவர்த்தி (விழித்திரையில் குவிதல்)</text>
+
+            <text x="380" y="395" font-size="12.5" fill="#fde047" font-weight="bold" text-anchor="middle">அரசுத் தேர்வு விதி: கதிர்களில் அம்புக்குறிகளைத் தவறாமல் குறிக்க வேண்டும்!</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>ஹேமடைட் தாதுவிலிருந்து இரும்பு பிரித்தெடுத்தல் (ஊது உலை):</b><br><br>
-            வறுத்தெடுக்கப்பட்ட ஹேமடைட் தாது (<b>Fe₂O₃</b>), கல்கரி (ஒடுக்கி) மற்றும் சுண்ணாம்புக்கல் (இளக்கி) ஆகியவை <b>8 : 4 : 1</b> என்ற விகிதத்தில் ஊது உலையினுள் இடப்படுகின்றன.<br><br>
-            <b>1. கீழ் எரிதல் பகுதி (1500°C – 1600°C):</b><br>
-            துவாரங்கள் வழியே செலுத்தப்படும் சூடான காற்றில் கல்கரி எரிந்து அதிக வெப்பத்தை வெளியிடுகிறது:<br>
-            • <b>C + O₂ ➔ CO₂ + வெப்பம்</b><br>
-            உலையினுள் மேலேறும் CO₂, செஞ்சூடான கரியுடன் வினைபுரிந்து கார்பன் மோனாக்சைடாக மாறுகிறது:<br>
-            • <b>CO₂ + C ➔ 2CO</b><br><br>
-            <b>2. நடு கசடு உருவாதல் பகுதி (800°C – 1000°C):</b><br>
-            சுண்ணாம்புக்கல் சிதைந்து கால்சியம் ஆக்சைடாக மாறி சிலிக்கா கனிமக் கழிவுடன் இணைந்து கசடாக மிதக்கிறது:<br>
-            • <b>CaCO₃ ➔ CaO + CO₂</b><br>
-            • <b>CaO + SiO₂ (கழிவு) ➔ CaSiO₃ (கால்சியம் சிலிகேட் - கசடு)</b><br>
-            அடர்த்தி குறைவான கசடு உருகிய இரும்பின் மேல் மிதந்து, இரும்பு மீண்டும் ஆக்சிஜனேற்றம் அடைவதைத் தடுக்கிறது.<br><br>
-            <b>3. மேல் ஒடுக்கப் பகுதி (400°C – 700°C):</b><br>
-            மேலேறும் கார்பன் மோனாக்சைடு இரும்பு ஆக்சைடை இரும்பாக ஒடுக்குகிறது:<br>
-            • <b>Fe₂O₃ + 3CO ➔ 2Fe + 3CO₂ ↑</b><br>
-            உருகிய இரும்பு கீழே வடிந்து <b>வார்ப்பிரும்பாக (Cast Iron)</b> சேகரிக்கப்படுகிறது.</div>`
+          ans: `<div style="line-height:1.8;">
+            <b>கிட்டப்பார்வை மற்றும் தூரப்பார்வை ஒப்பீடு & சரிசெய்தல்:</b><br><br>
+            <table style="width:100%; border-collapse:collapse; font-size:13.5px; line-height:1.6;">
+              <tr style="background:#e0f2fe; color:#0369a1;">
+                <th style="padding:8px; border:1px solid #cbd5e1; text-align:left;">அம்சம்</th>
+                <th style="padding:8px; border:1px solid #cbd5e1; text-align:left;">கிட்டப்பார்வை (மயோபியா)</th>
+                <th style="padding:8px; border:1px solid #cbd5e1; text-align:left;">தூரப்பார்வை (ஹைப்பர்மெட்ரோபியா)</th>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1; font-weight:700;">1. பார்வைத்திறன்</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">அருகிலுள்ள பொருட்களைத் தெளிவாகக் காண முடியும்; தொலைவிலுள்ள பொருட்கள் மங்கலாகத் தெரியும்.</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">தொலைவிலுள்ள பொருட்களைத் தெளிவாகக் காண முடியும்; அருகிலுள்ள பொருட்கள் மங்கலாகத் தெரியும்.</td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1; font-weight:700;">2. கண் குறைபாட்டுக் காரணம்</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;"><b>விழிக்கோளம் நீள்வது</b> அல்லது கண் லென்ஸின் குவியத்தூரம் குறைவது.</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;"><b>விழிக்கோளம் சுருங்குவது</b> அல்லது கண் லென்ஸின் குவியத்தூரம் அதிகரிப்பது.</td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1; font-weight:700;">3. பிம்பம் தோன்றும் இடம்</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">ஒளிக்கதிர்கள் <b>விழித்திரைக்கு முன்பாகவே</b> குவிக்கப்படுகின்றன.</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">ஒளிக்கதிர்கள் <b>விழித்திரைக்குப் பின்புறத்தில்</b> குவிகின்றன.</td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1; font-weight:700;">4. தொலை / அண்மைப் புள்ளி</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">ஈறிலாத் தொலைவிலிருந்து அண்மைப் புள்ளியை நோக்கி நகர்கிறது ($d < \infty$).</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">அண்மைப் புள்ளி 25 செ.மீ தொலைவைத் தாண்டி விலகிச் செல்கிறது ($d > 25\text{ cm}$).</td>
+              </tr>
+              <tr>
+                <td style="padding:6px; border:1px solid #cbd5e1; font-weight:700;">5. சரிசெய்யும் லென்ஸ்</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">தகுந்த குவியத் தொலைவு கொண்ட <b>குழி லென்ஸ் (Concave Lens)</b>.<br>சூத்திரம்: $f = \frac{xy}{x - y} = -d$</td>
+                <td style="padding:6px; border:1px solid #cbd5e1;">தகுந்த குவியத் தொலைவு கொண்ட <b>குவி லென்ஸ் (Convex Lens)</b>.<br>சூத்திரம்: $f = \frac{d \cdot D}{d - D}$</td>
+              </tr>
+            </table><br>
+            <b>கதிர் வரைபடம் வரையும் குறிப்புகள்:</b><br>
+            • குறைபாடுள்ள கண்ணில் விழித்திரைக்கு முன்னால் குவியும் புள்ளியைக் காட்ட வேண்டும் (மயோபியா).<br>
+            • தூரப்பார்வையில் விழித்திரைக்கு அப்பால் குவியும் புள்ளியைக் காட்ட வேண்டும்.<br>
+            • சரிசெய்யப்பட்ட கண்ணில் லென்ஸை முன்னால் வரைந்து, ஒளிக்கதிர்கள் சரியாக விழித்திரையின் மீது குவியுமாறு வரைய வேண்டும்.<br>
+            • <b>அம்புக்குறிகளைத் தவறாமல் அனைத்துக் கதிர்களிலும் இட வேண்டும்!</b></div>`
+        },
+        {
+          id: "sci_tm_dt_9",
+          type: "7m",
+          mark: "7 மதிப்பெண்",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          diagram: true,
+          q: "முப்பட்டகத்தின் வழியே வெள்ளொளி செல்லும் போது ஏற்படும் நிறப்பிரிகை நிகழ்வைக் கதிர் வரைபடத்துடன் விளக்குக.",
+          diagramCaption: "படம்: கண்ணாடி முப்பட்டகத்தில் வெள்ளொளி நிறப்பிரிகை (VIBGYOR)",
+          diagramSvg: `<svg viewBox="0 0 760 380" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="prismGradTm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/><stop offset="100%" stop-color="#0284c7" stop-opacity="0.45"/></linearGradient>
+            </defs>
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">முப்பட்டகத்தின் வழியே வெள்ளொளி நிறப்பிரிகை (VIBGYOR)</text>
+            <polygon points="380,75 280,270 480,270" fill="url(#prismGradTm)" stroke="#38bdf8" stroke-width="2.5"/>
+            <text x="380" y="68" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">A</text>
+            <text x="270" y="285" font-size="14" font-weight="bold" fill="#ffffff">B</text>
+            <text x="490" y="285" font-size="14" font-weight="bold" fill="#ffffff">C</text>
+            <line x1="120" y1="210" x2="310" y2="175" stroke="#f8fafc" stroke-width="4.5"/>
+            <polygon points="210,192 225,190 215,200" fill="#f8fafc"/>
+            <line x1="310" y1="175" x2="435" y2="178" stroke="#ef4444" stroke-width="2.5"/>
+            <line x1="310" y1="175" x2="445" y2="215" stroke="#8b5cf6" stroke-width="2.5"/>
+            <line x1="435" y1="178" x2="620" y2="135" stroke="#ef4444" stroke-width="3"/>
+            <line x1="437" y1="184" x2="620" y2="155" stroke="#f97316" stroke-width="2.5"/>
+            <line x1="439" y1="190" x2="620" y2="175" stroke="#eab308" stroke-width="2.5"/>
+            <line x1="441" y1="196" x2="620" y2="195" stroke="#22c55e" stroke-width="2.5"/>
+            <line x1="443" y1="202" x2="620" y2="215" stroke="#06b6d4" stroke-width="2.5"/>
+            <line x1="444" y1="208" x2="620" y2="235" stroke="#3b82f6" stroke-width="2.5"/>
+            <line x1="445" y1="215" x2="620" y2="255" stroke="#8b5cf6" stroke-width="3"/>
+            <polygon points="520,154 532,152 524,160" fill="#ef4444"/><polygon points="520,230 532,234 522,238" fill="#8b5cf6"/>
+            <rect x="620" y="115" width="10" height="160" rx="3" fill="#f8fafc" stroke="#94a3b8"/>
+
+            <!-- இடதுபக்க பெயர்கள் -->
+            <line x1="180" y1="200" x2="190" y2="200" stroke="#94a3b8" stroke-width="1.5"/><circle cx="180" cy="200" r="3.5" fill="#f8fafc"/>
+            <text x="170" y="205" font-size="13.5" fill="#ffffff" font-weight="bold" text-anchor="end">படுகதிர் (வெள்ளொளிக் கற்றை)</text>
+            <line x1="310" y1="175" x2="200" y2="140" stroke="#94a3b8" stroke-width="1.5"/><circle cx="310" cy="175" r="3.5" fill="#38bdf8"/>
+            <text x="190" y="145" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">ஒளிவிலகல் தளம் AB</text>
+
+            <!-- வலதுபக்க பெயர்கள் -->
+            <line x1="620" y1="135" x2="645" y2="135" stroke="#94a3b8" stroke-width="1.5"/><circle cx="620" cy="135" r="3.5" fill="#ef4444"/>
+            <text x="655" y="140" font-size="13.5" fill="#ef4444" font-weight="bold">சிவப்பு (குறைந்த விலகல் / அதிக λ)</text>
+            <text x="655" y="195" font-size="13.5" fill="#fde047" font-weight="bold">V I B G Y O R நிறமாலை</text>
+            <line x1="620" y1="255" x2="645" y2="255" stroke="#94a3b8" stroke-width="1.5"/><circle cx="620" cy="255" r="3.5" fill="#8b5cf6"/>
+            <text x="655" y="260" font-size="13.5" fill="#c084fc" font-weight="bold">ஊதா (அதிக விலகல் / குறைந்த λ)</text>
+            <text x="635" y="305" font-size="13" fill="#cbd5e1" font-weight="bold">திரை</text>
+
+            <text x="380" y="340" font-size="13" font-weight="bold" fill="#4ade80" text-anchor="middle">காசியின் விதி: விலகு எண் μ ∝ 1 / λ (குறைந்த அலைநீளம் அதிகம் விலகும்)</text>
+          </svg>`,
+          ans: `<div style="line-height:1.8;">
+            <b>வெள்ளொளி நிறப்பிரிகை மற்றும் நிறமாலை உருவாதல்:</b><br><br>
+            <b>1. வரையறை:</b><br>
+            வெள்ளொளிக் கற்றை ஒன்று கண்ணாடி முப்பட்டகம் போன்ற ஒளிபுகும் ஊடகத்தின் வழியே செல்லும்போது, அதன் கூறுகளான ஏழு வண்ணங்களாகப் பிரியும் நிகழ்வு <b>நிறப்பிரிகை (Dispersion of Light)</b> எனப்படும்.<br><br>
+            <b>2. நிறப்பிரிகைக்கான காரணம் (காசியின் சமன்பாடு):</b><br>
+            • வெள்ளொளியில் உள்ள ஒவ்வொரு வண்ணத்திற்கும் வெவ்வேறு அலைநீளம் ($\lambda$) உள்ளது.<br>
+            • கண்ணாடியின் <b>விலகு எண் அலைநீளத்திற்கு எதிர்த்தகவில்</b> அமையும் ($\mu \propto \frac{1}{\lambda}$).<br>
+            • <b>சிவப்பு நிற ஒளி</b> மிக அதிக அலைநீளம் ($\lambda \approx 700\text{ nm}$) கொண்டுள்ளதால், குறைந்த விலகு எண்ணைப் பெற்று <b>மிகக் குறைந்த அளவு விலகல் ($d_R$)</b> அடைகிறது.<br>
+            • <b>ஊதா நிற ஒளி</b> மிகக் குறைந்த அலைநீளம் ($\lambda \approx 400\text{ nm}$) கொண்டுள்ளதால், அதிக விலகு எண்ணைப் பெற்று <b>மிக அதிக அளவு விலகல் ($d_V$)</b> அடைகிறது.<br><br>
+            <b>3. வானவில் உருவாதல் (இயற்கை நிறப்பிரிகை):</b><br>
+            • மழைக் காலங்களில் காற்றில் மிதக்கும் நீர்த்துளிகள் சிறிய கண்ணாடி முப்பட்டகங்கள் போல் செயல்படுகின்றன.<br>
+            • சூரிய ஒளி நீர்த்துளிக்குள் நுழையும் போது <b>ஒளிவிலகல் + நிறப்பிரிகை ➔ உட்புற முழு அக எதிரொளிப்பு (TIR) ➔ வெளியேறும் போது ஒளிவிலகல்</b> அடைந்து வட்ட வடிவ வண்ண நிறமாலையாகத் தோன்றும்.</div>`
+        },
+        {
+          id: "sci_tm_dt_10",
+          type: "7m",
+          mark: "7 மதிப்பெண்",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          diagram: true,
+          q: "ஹேமடைட் தாதுவிலிருந்து ஊது உலையின் மூலம் இரும்பு பிரித்தெடுக்கப்படும் உருக்கிப் பிரித்தல் முறையைச் சமன்பாடுகளுடன் படத்துடன் விளக்குக.",
+          diagramCaption: "படம்: இரும்பு பிரித்தெடுக்கும் ஊது உலை அமைப்பு மற்றும் வேதி மண்டலங்கள்",
+          diagramSvg: `<svg viewBox="0 0 760 430" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <defs>
+              <linearGradient id="furnaceGradTm" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#475569"/><stop offset="50%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#334155"/></linearGradient>
+              <linearGradient id="fireGradTm" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#ef4444"/><stop offset="50%" stop-color="#f97316"/><stop offset="100%" stop-color="#fde047"/></linearGradient>
+            </defs>
+            <text x="380" y="26" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">இரும்பு பிரித்தெடுக்கும் ஊது உலை அமைப்பு</text>
+            <polygon points="340,42 420,42 400,65 360,65" fill="#64748b" stroke="#cbd5e1"/>
+            <polygon points="370,65 390,65 380,78" fill="#fbbf24"/>
+            <path d="M 360 65 L 340 130 L 320 270 L 335 370 L 425 370 L 440 270 L 420 130 L 400 65 Z" fill="url(#furnaceGradTm)" stroke="#cbd5e1" stroke-width="2.5"/>
+            <path d="M 324 260 L 336 360 L 424 360 L 436 260 Z" fill="url(#fireGradTm)" opacity="0.3"/>
+            <rect x="336" y="340" width="88" height="14" fill="#ca8a04"/>
+            <rect x="338" y="354" width="84" height="14" fill="#dc2626"/>
+            <rect x="295" y="315" width="35" height="14" rx="3" fill="#ea580c"/>
+            <rect x="430" y="315" width="35" height="14" rx="3" fill="#ea580c"/>
+            <path d="M 405 85 L 450 85 L 450 140" fill="none" stroke="#64748b" stroke-width="8"/>
+            <line x1="424" y1="345" x2="455" y2="345" stroke="#ca8a04" stroke-width="5"/>
+            <line x1="422" y1="362" x2="465" y2="362" stroke="#dc2626" stroke-width="6"/>
+
+            <!-- LEFT LABELS (0 to 220 safe margin) -->
+            <line x1="350" y1="52" x2="220" y2="52" stroke="#94a3b8" stroke-width="1.5"/><circle cx="350" cy="52" r="3.5" fill="#fde047"/>
+            <text x="210" y="57" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="end">மூலப்பொருட்கள் (தாது + கல்கரி + CaCO₃)</text>
+            <line x1="340" y1="130" x2="220" y2="130" stroke="#94a3b8" stroke-width="1.5"/><circle cx="340" cy="130" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="135" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">ஒடுக்க மண்டலம் (400°C–700°C)</text>
+            <line x1="325" y1="210" x2="220" y2="210" stroke="#94a3b8" stroke-width="1.5"/><circle cx="325" cy="210" r="3.5" fill="#fb923c"/>
+            <text x="210" y="215" font-size="13.5" fill="#fb923c" font-weight="bold" text-anchor="end">கசடு மண்டலம் (800°C–1000°C)</text>
+            <line x1="330" y1="300" x2="220" y2="290" stroke="#94a3b8" stroke-width="1.5"/><circle cx="330" cy="300" r="3.5" fill="#ef4444"/>
+            <text x="210" y="295" font-size="13.5" fill="#ef4444" font-weight="bold" text-anchor="end">எரிதல் மண்டலம் (1500°C)</text>
+
+            <!-- RIGHT LABELS (540 to 760 safe margin) -->
+            <line x1="450" y1="110" x2="540" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="450" cy="110" r="3.5" fill="#cbd5e1"/>
+            <text x="550" y="115" font-size="13.5" fill="#cbd5e1" font-weight="bold">உலை வாயுக்கள் (CO, CO₂, N₂)</text>
+            <line x1="410" y1="160" x2="540" y2="160" stroke="#94a3b8" stroke-width="1.5"/><circle cx="410" cy="160" r="3.5" fill="#38bdf8"/>
+            <text x="550" y="165" font-size="13.5" fill="#38bdf8" font-weight="bold">Fe₂O₃ + 3CO ➔ 2Fe + 3CO₂</text>
+            <line x1="430" y1="230" x2="540" y2="220" stroke="#94a3b8" stroke-width="1.5"/><circle cx="430" cy="230" r="3.5" fill="#fb923c"/>
+            <text x="550" y="225" font-size="13.5" fill="#fb923c" font-weight="bold">CaO + SiO₂ ➔ CaSiO₃ (கசடு)</text>
+            <line x1="465" y1="322" x2="540" y2="280" stroke="#94a3b8" stroke-width="1.5"/><circle cx="465" cy="322" r="3.5" fill="#ea580c"/>
+            <text x="550" y="285" font-size="13.5" fill="#ea580c" font-weight="bold">சூடான காற்று பீச்சு முனை (Tuyeres)</text>
+            <line x1="455" y1="345" x2="540" y2="340" stroke="#94a3b8" stroke-width="1.5"/><circle cx="455" cy="345" r="3.5" fill="#ca8a04"/>
+            <text x="550" y="345" font-size="13.5" fill="#fde047" font-weight="bold">உருகிய கசடு வெளியேற்றம்</text>
+            <line x1="465" y1="362" x2="540" y2="380" stroke="#94a3b8" stroke-width="1.5"/><circle cx="465" cy="362" r="3.5" fill="#dc2626"/>
+            <text x="550" y="385" font-size="13.5" fill="#f87171" font-weight="bold">உருகிய வார்த்திரும்பு வெளியேற்றம்</text>
+          </svg>`,
+          ans: `<div style="line-height:1.8;">
+            <b>ஊது உலையில் ஹேமடைட் தாதுவிலிருந்து இரும்பு பிரித்தெடுத்தல்:</b><br><br>
+            <b>1. உலைக்குள் செலுத்தப்படும் மூலப்பொருட்கள் (Charge):</b><br>
+            அடர்ப்பிக்கப்பட்ட ஹேமடைட் தாது ($\text{Fe}_2\text{O}_3$), கல்கரி (C) மற்றும் சுண்ணாம்புக்கல் ($\text{CaCO}_3$) ஆகியவை 8 : 4 : 1 என்ற விகிதத்தில் உலையின் மேற்புறக் கிண்ணம் வழியாகச் செலுத்தப்படுகின்றன.<br><br>
+            <b>2. உலைக்குள் நடைபெறும் முக்கிய வேதிவினைகள்:</b><br>
+            • <b>எரிதல் மண்டலம் (அடிப்புறம்: 1500°C–1600°C):</b> கீழிருந்து செலுத்தப்படும் சூடான காற்றில் கல்கரி எரிந்து வெப்பத்தையும் $\text{CO}_2$-ஐயும் தருகிறது:<br>
+            $$\text{C} + \text{O}_2 \longrightarrow \text{CO}_2 + \text{வெப்பம்}$$<br>
+            • <b>ஒடுக்க மண்டலம் (மேற்புறம்: 400°C–700°C):</b> மேலே எழும் $\text{CO}_2$ கல்கரியுடன் வினைபுரிந்து கார்பன் மோனாக்சைடாக ($\text{CO}$) மாறுகிறது. இது இரும்பு ஆக்சைடை இரும்பாக ஒடுக்குகிறது:<br>
+            $$\text{CO}_2 + \text{C} \longrightarrow 2\text{CO}$$<br>
+            $$\text{Fe}_2\text{O}_3 + 3\text{CO} \longrightarrow 2\text{Fe} + 3\text{CO}_2\\uparrow$$<br>
+            • <b>கசடு உருவாக்கும் மண்டலம் (நடுப்பகுதி: 800°C–1000°C):</b> சுண்ணாம்புக்கல் சிதைந்து கால்சியம் ஆக்சைடு உருவாகி, தாதுவில் உள்ள சிலிக்கா மணலுடன் இணைந்து உருகிய கசடாக மாறுகிறது:<br>
+            $$\text{CaCO}_3 \longrightarrow \text{CaO} + \text{CO}_2\\uparrow$$<br>
+            $$\text{CaO (இளக்கி)} + \text{SiO}_2\text{ (கழிவு)} \longrightarrow \text{CaSiO}_3\text{ (உருகிய கால்சியம் சிலிகேட் கசடு)}$$<br><br>
+            <b>3. இரும்பு சேகரிப்பு:</b> உருகிய இரும்பு அடர்த்தி அதிகம் என்பதால் உலையின் அடிப்பகுதியில் படிகிறது. எடை குறைந்த உருகிய கசடு இரும்பின் மேல் மிதந்து, இரும்பு மீண்டும் ஆக்சிஜனேற்றம் அடையாமல் பாதுகாக்கிறது. இரண்டும் தனித்தனி துவாரங்கள் மூலம் வெளியேற்றப்படுகின்றன. இது <b>வார்த்திரும்பு (Pig iron)</b> எனப்படும்.</div>`
         },
         {
           id: "sci_tm_dt_11",
           type: "7m",
           mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 33",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "திரவத்தின் உண்மை விரிவு மற்றும் தோற்ற விரிவைக் கண்டறியும் சோதனையை படத்துடன் விளக்குக.",
-          diagramCaption: "படம்: திரவத்தின் உண்மை மற்றும் தோற்ற விரிவு காணும் ஆய்வு",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">திரவத்தின் உண்மை &amp; தோற்ற விரிவு</text>
-            <g transform=\"translate(190, 40)\">
-              <ellipse cx=\"80\" cy=\"190\" rx=\"60\" ry=\"45\" fill=\"#0284c7\" fill-opacity=\"0.3\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <rect x=\"70\" y=\"20\" width=\"20\" height=\"135\" fill=\"#0f172a\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <line x1=\"70\" y1=\"80\" x2=\"90\" y2=\"80\" stroke=\"#fde047\" stroke-width=\"2.5\"/><text x=\"65\" y=\"84\" font-size=\"10\" fill=\"#fde047\" font-weight=\"bold\" text-anchor=\"end\">L₁</text>
-              <line x1=\"70\" y1=\"100\" x2=\"90\" y2=\"100\" stroke=\"#f87171\" stroke-width=\"2.5\"/><text x=\"65\" y=\"104\" font-size=\"10\" fill=\"#f87171\" font-weight=\"bold\" text-anchor=\"end\">L₂</text>
-              <line x1=\"70\" y1=\"45\" x2=\"90\" y2=\"45\" stroke=\"#4ade80\" stroke-width=\"2.5\"/><text x=\"65\" y=\"49\" font-size=\"10\" fill=\"#4ade80\" font-weight=\"bold\" text-anchor=\"end\">L₃</text>
-              <path d=\"M 70 240 Q 80 220 80 235 Q 90 220 90 240 Z\" fill=\"#f97316\"/>
-            </g>
-            <line x1=\"250\" y1=\"85\" x2=\"380\" y2=\"85\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"385\" y=\"88\" font-size=\"11\" fill=\"#fde047\" font-weight=\"bold\">L₁ = திரவத்தின் தொடக்க நிலை</text>
-            <line x1=\"250\" y1=\"140\" x2=\"380\" y2=\"140\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"385\" y=\"143\" font-size=\"11\" fill=\"#f87171\" font-weight=\"bold\">L₂ = பாத்திரம் விரிவடைந்த பின் நிலை</text>
-            <line x1=\"250\" y1=\"195\" x2=\"380\" y2=\"195\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"385\" y=\"198\" font-size=\"11\" fill=\"#4ade80\" font-weight=\"bold\">L₃ = திரவம் விரிவடைந்த இறுதி நிலை</text>
-            <text x=\"270\" y=\"270\" font-size=\"11.5\" fill=\"#e2e8f0\" text-anchor=\"middle\">தோற்ற விரிவு = L₃ - L₁ | உண்மை விரிவு = L₃ - L₂ (உண்மை விரிவு &gt; தோற்ற விரிவு)</text>
+          diagram: true,
+          q: "திரவங்களின் உண்மை விரிவு மற்றும் தோற்ற விரிவை அளவிடும் சோதனையைத் தெளிவான படத்துடன் விளக்குக.",
+          diagramCaption: "படம்: திரவங்களின் உண்மை மற்றும் தோற்ற விரிவு காணும் ஆய்வு அமைப்பு",
+          diagramSvg: `<svg viewBox="0 0 760 400" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">திரவங்களின் உண்மை விரிவு மற்றும் தோற்ற விரிவு பரிசோதனை</text>
+            <rect x="310" y="150" width="140" height="150" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+            <rect x="312" y="165" width="136" height="132" fill="#0284c7" opacity="0.25"/>
+            <circle cx="380" cy="225" r="45" fill="#f43f5e" opacity="0.35" stroke="#f43f5e" stroke-width="2"/>
+            <rect x="372" y="130" width="16" height="55" fill="#f43f5e" opacity="0.35" stroke="#f43f5e" stroke-width="2"/>
+            <polygon points="370,130 390,130 388,115 372,115" fill="#78350f"/>
+            <rect x="377" y="55" width="6" height="60" fill="#f8fafc" stroke="#94a3b8"/>
+            <rect x="378" y="70" width="4" height="45" fill="#ef4444"/>
+            <line x1="365" y1="92" x2="395" y2="92" stroke="#fde047" stroke-width="2"/>
+            <line x1="365" y1="102" x2="395" y2="102" stroke="#38bdf8" stroke-width="2"/>
+            <line x1="365" y1="70" x2="395" y2="70" stroke="#4ade80" stroke-width="2"/>
+            <rect x="360" y="325" width="40" height="25" rx="4" fill="#64748b"/>
+            <polygon points="370,325 390,325 380,305" fill="#f97316"/>
+            <polygon points="375,325 385,325 380,312" fill="#fde047"/>
+
+            <!-- இடதுபக்க பெயர்கள் -->
+            <line x1="375" y1="65" x2="220" y2="65" stroke="#94a3b8" stroke-width="1.5"/><circle cx="375" cy="65" r="3.5" fill="#f8fafc"/>
+            <text x="210" y="70" font-size="13.5" fill="#ffffff" font-weight="bold" text-anchor="end">அளவுகோல் கொண்ட நுண்குழாய்</text>
+            <line x1="370" y1="120" x2="220" y2="120" stroke="#94a3b8" stroke-width="1.5"/><circle cx="370" cy="120" r="3.5" fill="#78350f"/>
+            <text x="210" y="125" font-size="13.5" fill="#fde047" font-weight="bold" text-anchor="end">ரப்பர் அடைப்பான்</text>
+            <line x1="340" y1="210" x2="220" y2="190" stroke="#94a3b8" stroke-width="1.5"/><circle cx="340" cy="210" r="3.5" fill="#f43f5e"/>
+            <text x="210" y="195" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">வண்ணத் திரவம் நிரம்பிய குடுவை</text>
+            <line x1="310" y1="250" x2="220" y2="250" stroke="#94a3b8" stroke-width="1.5"/><circle cx="310" cy="250" r="3.5" fill="#38bdf8"/>
+            <text x="210" y="255" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">நீர்த் தொட்டி (சீரான வெப்பம்)</text>
+            <line x1="360" y1="330" x2="220" y2="330" stroke="#94a3b8" stroke-width="1.5"/><circle cx="360" cy="330" r="3.5" fill="#f97316"/>
+            <text x="210" y="335" font-size="13.5" fill="#f97316" font-weight="bold" text-anchor="end">சுடரடுப்பு (பன்சன் சுடர்)</text>
+
+            <!-- வலதுபக்க பெயர்கள் -->
+            <line x1="395" y1="70" x2="540" y2="70" stroke="#94a3b8" stroke-width="1.5"/><circle cx="395" cy="70" r="3.5" fill="#4ade80"/>
+            <text x="550" y="75" font-size="13.5" fill="#4ade80" font-weight="bold">நிலை L₃: இறுதி மட்டம் (திரவம் விரிவடைதல்)</text>
+            <line x1="395" y1="92" x2="540" y2="115" stroke="#94a3b8" stroke-width="1.5"/><circle cx="395" cy="92" r="3.5" fill="#fde047"/>
+            <text x="550" y="120" font-size="13.5" fill="#fde047" font-weight="bold">நிலை L₁: ஆரம்பத் திரவ மட்டம்</text>
+            <line x1="395" y1="102" x2="540" y2="160" stroke="#94a3b8" stroke-width="1.5"/><circle cx="395" cy="102" r="3.5" fill="#38bdf8"/>
+            <text x="550" y="165" font-size="13.5" fill="#38bdf8" font-weight="bold">நிலை L₂: கண்ணாடி விரிவடைவதால் குறையும் மட்டம்</text>
+            <text x="550" y="230" font-size="13.5" fill="#ffffff" font-weight="bold">தோற்ற விரிவு = L₃ - L₁</text>
+            <text x="550" y="260" font-size="13.5" fill="#38bdf8" font-weight="bold">குடுவையின் விரிவு = L₁ - L₂</text>
+            <text x="550" y="290" font-size="13.5" fill="#4ade80" font-weight="bold">உண்மை விரிவு = L₃ - L₂</text>
+            <text x="550" y="325" font-size="13.5" fill="#fde047" font-weight="bold">தங்க விதி: உண்மை விரிவு > தோற்ற விரிவு</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>திரவத்தின் உண்மை விரிவு மற்றும் தோற்ற விரிவு ஆய்வு:</b><br><br>
+          ans: `<div style="line-height:1.8;">
+            <b>திரவங்களின் உண்மை விரிவு மற்றும் தோற்ற விரிவு ஆய்வு:</b><br><br>
+            திரவத்தை நேரடியாக வெப்பப்படுத்த முடியாது; ஏதேனும் ஒரு கொள்கலனில் வைத்தே வெப்பப்படுத்த முடியும். வெப்ப ஆற்றல் கொள்கலனின் வழியே பாய்வதால் கொள்கலனும் திரவமும் ஒரே நேரத்தில் விரிவடைகின்றன.<br><br>
             <b>1. ஆய்வு அமைப்பு:</b><br>
-            • ஒரு கண்ணாடிக் குடுவையில் குறுகிய தண்டுப்பகுதி வரை வண்ணத் திரவம் நிரப்பப்பட்டு தொடக்க நிலை <b>L₁</b> எனக் குறிக்கப்படுகிறது.<br>
-            • குடுவைக்கு வெப்பம் அளிக்கப்படுகிறது.<br><br>
-            <b>2. நிகழ்வுகள்:</b><br>
-            • வெப்பம் முதலில் கண்ணாடிக் கலனை அடைவதால், கலன் விரிவடைந்து திரவத்தின் மட்டம் <b>L₁ இலிருந்து L₂ ஆகக் குறைகிறது</b>.<br>
-            • தொடர்ந்து வெப்பப்படுத்தும்போது திரவம் வெப்பத்தைப் பெற்று திண்மத்தை விட வேகமாக விரிவடைந்து மட்டம் <b>L₂ இலிருந்து L₃ ஆக உயர்கிறது</b>.<br><br>
-            <b>3. சூத்திரங்கள் & முடிவு:</b><br>
-            • <b>தோற்ற விரிவு</b> = L₃ - L₁ (பாத்திரத்தின் விரிவைக் கணக்கில் கொள்ளாமல் கணக்கிடப்படும் விரிவு).<br>
-            • <b>உண்மை விரிவு</b> = L₃ - L₂ (பாத்திரத்தின் விரிவையும் சேர்த்து கணக்கிடப்படும் உண்மையான திரவ விரிவு).<br>
-            • <i>முடிவு:</i> <b>உண்மை விரிவு = தோற்ற விரிவு + பாத்திரத்தின் விரிவு</b>. உண்மை விரிவு எப்போதும் தோற்ற விரிவை விட அதிகமாக இருக்கும்.</div>`
+            • ஒரு வட்ட வடிவ கண்ணாடிக் குடுவையில் வண்ணத் திரவத்தை நிரப்பி, அதன் வாயில் அளவுகோல் குறிக்கப்பட்ட நுண்குழாய் பொருத்தப்படுகிறது.<br>
+            • தொடக்கத்தில் திரவத்தின் மட்டத்தை <b>$L_1$</b> எனக் குறித்துக் கொள்ளவும்.<br>
+            • குடுவையை ஒரு நீர்த் தொட்டியினுள் வைத்து வெப்பப்படுத்தவும்.<br><br>
+            <b>2. உற்றுநோக்குதல்:</b><br>
+            • <b>படி 1 (மட்டம் $L_2$-க்குக் குறைதல்):</b> தொடக்கத்தில் கண்ணாடிக் குடுவை வெப்பத்தைப் பெற்று விரிவடைகிறது. குடுவையின் கொள்ளளவு அதிகரிப்பதால் திரவ மட்டம் தற்காலிகமாக <b>$L_1$-லிருந்து $L_2$-க்குக் குறைகிறது</b>.<br>
+            • <b>படி 2 (மட்டம் $L_3$-க்கு உயருதல்):</b> வெப்பம் திரவத்திற்குப் பரவியதும், திடப்பொருளை விட திரவத்தின் பரும விரிவுக் குணகம் அதிகம் என்பதால் திரவம் மிக வேகமாக விரிவடைந்து மட்டம் <b>$L_2$-லிருந்து $L_3$-க்கு உயர்கிறது</b>.<br><br>
+            <b>3. கணக்கீடு:</b><br>
+            • <b>தோற்ற விரிவு:</b> கொள்கலனின் விரிவைக் கணக்கில் கொள்ளாமல் காணும் விரிவு = <b>$L_3 - L_1$</b>.<br>
+            • <b>உண்மை விரிவு:</b> திரவத்தின் உண்மையான மொத்த விரிவு = <b>$L_3 - L_2$</b>.<br>
+            • <b>குடுவையின் விரிவு:</b> $L_1 - L_2$.<br>
+            • <b>முக்கியத் தொடர்பு:</b><br>
+            $$\text{உண்மை விரிவு} = \text{தோற்ற விரிவு} + \text{கண்ணாடிக் குடுவையின் விரிவு}$$<br>
+            $$(L_3 - L_2) = (L_3 - L_1) + (L_1 - L_2)$$<br>
+            • <i>முடிவு:</i> <b>உண்மை விரிவு எப்போதும் தோற்ற விரிவை விட அதிகமாகவே இருக்கும்</b>.</div>`
         },
         {
           id: "sci_tm_dt_12",
           type: "7m",
           mark: "7 மதிப்பெண்",
-          examTag: "அரசுத் தேர்வு வினா 33",
+          examTag: "பாடநூலுக்கு வெளியே உள்ள கூடுதல் வினா (வரைபடம்)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "அணுக்கரு உலை என்றால் என்ன? அணுக்கரு உலையின் முதன்மைப் பாகங்கள் மற்றும் அவற்றின் பணிகளைப் படத்துடன் விளக்குக.",
-          diagramCaption: "படம்: அணுக்கரு உலை அமைப்பு & முதன்மைப் பாகங்கள்",
-          diagramSvg: `<svg viewBox=\"0 0 540 300\" style=\"width:100%; max-width:540px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;\">
-            <text x=\"270\" y=\"24\" font-size=\"14\" font-weight=\"bold\" fill=\"#38bdf8\" text-anchor=\"middle\">அணுக்கரு உலை அமைப்பு</text>
-            <g transform=\"translate(60, 40)\">
-              <rect x=\"10\" y=\"20\" width=\"160\" height=\"190\" rx=\"8\" fill=\"#334155\" stroke=\"#94a3b8\" stroke-width=\"4\"/>
-              <rect x=\"35\" y=\"50\" width=\"110\" height=\"140\" rx=\"4\" fill=\"#0284c7\" fill-opacity=\"0.3\" stroke=\"#38bdf8\" stroke-width=\"2\"/>
-              <rect x=\"50\" y=\"70\" width=\"12\" height=\"100\" fill=\"#ef4444\" stroke=\"#f87171\"/>
-              <rect x=\"85\" y=\"70\" width=\"12\" height=\"100\" fill=\"#ef4444\" stroke=\"#f87171\"/>
-              <rect x=\"120\" y=\"70\" width=\"12\" height=\"100\" fill=\"#ef4444\" stroke=\"#f87171\"/>
-              <rect x=\"68\" y=\"30\" width=\"10\" height=\"90\" fill=\"#64748b\" stroke=\"#cbd5e1\"/>
-              <rect x=\"103\" y=\"30\" width=\"10\" height=\"90\" fill=\"#64748b\" stroke=\"#cbd5e1\"/>
-              <rect x=\"230\" y=\"40\" width=\"80\" height=\"150\" rx=\"6\" fill=\"#1e293b\" stroke=\"#f59e0b\" stroke-width=\"2\"/>
-              <path d=\"M 145 75 L 230 75\" stroke=\"#ef4444\" stroke-width=\"4\"/>
-              <path d=\"M 230 160 L 145 160\" stroke=\"#38bdf8\" stroke-width=\"4\"/>
-              <path d=\"M 270 40 L 270 20 L 370 20 L 370 60\" stroke=\"#fde047\" stroke-width=\"3\" fill=\"none\"/>
-              <polygon points=\"360,60 380,60 375,90 365,90\" fill=\"#10b981\" stroke=\"#34d399\"/>
-              <rect x=\"395\" y=\"65\" width=\"35\" height=\"25\" fill=\"#facc15\" rx=\"3\"/>
-            </g>
-            <line x1=\"145\" y1=\"100\" x2=\"20\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"15\" y=\"103\" font-size=\"10\" fill=\"#cbd5e1\" font-weight=\"bold\" text-anchor=\"end\">கட்டுப்படுத்தும் தண்டுகள் (போரான்/காட்மியம்)</text>
-            <line x1=\"130\" y1=\"150\" x2=\"20\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"15\" y=\"153\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\" text-anchor=\"end\">எரிபொருள் (U-235 / Pu-239)</text>
-            <line x1=\"150\" y1=\"200\" x2=\"20\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"15\" y=\"203\" font-size=\"10\" fill=\"#38bdf8\" font-weight=\"bold\" text-anchor=\"end\">தணிப்பான் (கனநீர்/கிராபைட்)</text>
-            <line x1=\"370\" y1=\"120\" x2=\"460\" y2=\"120\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"465\" y=\"123\" font-size=\"10\" fill=\"#f59e0b\" font-weight=\"bold\">நீராவி இயற்றி</text>
-            <line x1=\"435\" y1=\"90\" x2=\"460\" y2=\"90\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"465\" y=\"93\" font-size=\"10\" fill=\"#10b981\" font-weight=\"bold\">டர்பைன் &amp; ஜெனரேட்டர்</text>
-            <line x1=\"180\" y1=\"240\" x2=\"460\" y2=\"240\" stroke=\"#94a3b8\" stroke-width=\"1.2\"/><text x=\"465\" y=\"243\" font-size=\"10\" fill=\"#94a3b8\" font-weight=\"bold\">தடுப்புச் சுவர் (ஈயம்/கான்கிரீட்)</text>
+          diagram: true,
+          q: "அணுக்கரு உலை என்றால் என்ன? அணுக்கரு உலையின் முக்கியப் பாகங்கள் மற்றும் அவற்றின் பணிகளைத் தெளிவான வரைபடத்துடன் விளக்குக.",
+          diagramCaption: "படம்: அணுக்கரு மின் உற்பத்தி உலையின் மாதிரி வரைபடம்",
+          diagramSvg: `<svg viewBox="0 0 760 410" style="width:100%; max-width:760px; height:auto; margin:10px auto; display:block; background:#0f172a; border-radius:12px; border:1px solid #334155;">
+            <text x="380" y="28" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">அணுக்கரு மின் உற்பத்தி உலையின் மாதிரி வரைபடம்</text>
+            <rect x="230" y="70" width="160" height="270" rx="12" fill="#334155" stroke="#94a3b8" stroke-width="8"/>
+            <rect x="250" y="90" width="120" height="230" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+            <rect x="252" y="130" width="116" height="186" fill="#0284c7" opacity="0.3"/>
+            <rect x="270" y="140" width="14" height="150" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+            <rect x="303" y="140" width="14" height="150" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+            <rect x="336" y="140" width="14" height="150" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
+            <rect x="286" y="95" width="14" height="120" fill="#f43f5e" stroke="#b91c1c" stroke-width="1.5"/>
+            <rect x="320" y="95" width="14" height="120" fill="#f43f5e" stroke="#b91c1c" stroke-width="1.5"/>
+            <polygon points="293,75 289,85 297,85" fill="#f43f5e"/><polygon points="293,92 289,82 297,82" fill="#f43f5e"/>
+            <polygon points="327,75 323,85 331,85" fill="#f43f5e"/><polygon points="327,92 323,82 331,82" fill="#f43f5e"/>
+            <path d="M 370 120 L 450 120 L 450 160" fill="none" stroke="#ef4444" stroke-width="8"/>
+            <path d="M 450 280 L 370 280" fill="none" stroke="#38bdf8" stroke-width="8"/>
+            <rect x="430" y="150" width="70" height="160" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+            <path d="M 445 170 Q 465 190 445 210 Q 465 230 445 250" fill="none" stroke="#ef4444" stroke-width="4"/>
+            <path d="M 465 150 L 465 110 L 560 110" fill="none" stroke="#f8fafc" stroke-width="6"/>
+            <polygon points="560,90 600,110 560,130" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+            <rect x="605" y="95" width="35" height="30" rx="4" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+            <text x="622" y="115" font-size="11" fill="#ffffff" font-weight="bold" text-anchor="middle">GEN</text>
+            <rect x="540" y="240" width="80" height="60" rx="6" fill="#1e293b" stroke="#06b6d4" stroke-width="2"/>
+            <path d="M 580 130 L 580 240" fill="none" stroke="#cbd5e1" stroke-width="4"/>
+
+            <!-- இடதுபக்க பெயர்கள் -->
+            <line x1="290" y1="80" x2="210" y2="80" stroke="#94a3b8" stroke-width="1.5"/><circle cx="290" cy="80" r="3.5" fill="#f43f5e"/>
+            <text x="200" y="85" font-size="13.5" fill="#f43f5e" font-weight="bold" text-anchor="end">கட்டுப்படுத்தும் தண்டுகள் (காட்மியம்/போரான்)</text>
+            <line x1="270" y1="180" x2="210" y2="140" stroke="#94a3b8" stroke-width="1.5"/><circle cx="270" cy="180" r="3.5" fill="#22c55e"/>
+            <text x="200" y="145" font-size="13.5" fill="#4ade80" font-weight="bold" text-anchor="end">எரிபொருள் தண்டுகள் (U-235 / Pu-239)</text>
+            <line x1="260" y1="240" x2="210" y2="210" stroke="#94a3b8" stroke-width="1.5"/><circle cx="260" cy="240" r="3.5" fill="#38bdf8"/>
+            <text x="200" y="215" font-size="13.5" fill="#38bdf8" font-weight="bold" text-anchor="end">தணிப்பான் (கனநீர் / கிராபைட்)</text>
+            <line x1="230" y1="300" x2="210" y2="290" stroke="#94a3b8" stroke-width="1.5"/><circle cx="230" cy="300" r="3.5" fill="#94a3b8"/>
+            <text x="200" y="295" font-size="13.5" fill="#cbd5e1" font-weight="bold" text-anchor="end">பாதுகாப்புக் கவசம் (2.5 மீ காரைச் சுவர்)</text>
+
+            <!-- வலதுபக்க பெயர்கள் -->
+            <line x1="450" y1="120" x2="550" y2="60" stroke="#94a3b8" stroke-width="1.5"/><circle cx="450" cy="120" r="3.5" fill="#ef4444"/>
+            <text x="560" y="65" font-size="13.5" fill="#ef4444" font-weight="bold">சூடான குளிர்விப்பான் (திரவ சோடியம்)</text>
+            <line x1="500" y1="210" x2="550" y2="185" stroke="#94a3b8" stroke-width="1.5"/><circle cx="500" cy="210" r="3.5" fill="#f59e0b"/>
+            <text x="560" y="190" font-size="13.5" fill="#fde047" font-weight="bold">நீராவி உருவாக்கி (வெப்பப் பரிமாற்றி)</text>
+            <line x1="600" y1="110" x2="650" y2="110" stroke="#94a3b8" stroke-width="1.5"/><circle cx="600" cy="110" r="3.5" fill="#eab308"/>
+            <text x="660" y="115" font-size="13.5" fill="#38bdf8" font-weight="bold">விசையாழி & மின்னாக்கி (Turbine)</text>
+            <line x1="620" y1="270" x2="650" y2="270" stroke="#94a3b8" stroke-width="1.5"/><circle cx="620" cy="270" r="3.5" fill="#06b6d4"/>
+            <text x="660" y="275" font-size="13.5" fill="#22d3ee" font-weight="bold">குளிர்விக்கும் நீர் சுழற்சி (Condenser)</text>
           </svg>`,
-          ans: `<div style=\"line-height:1.8;\">
-            <b>அணுக்கரு உலை அமைப்பு மற்றும் அதன் முதன்மைப் பாகங்கள்:</b><br><br>
-            கட்டுப்படுத்தப்பட்ட தன்னிச்சையான அணுக்கரு பிளவு தொடர்வினை மூலம் மின்னாற்றலை உற்பத்தி செய்யும் சாதனம் அணுக்கரு உலை ஆகும்.<br><br>
-            <b>1. அணு எரிபொருள்:</b><br>
-            • பிளவுக்கு உட்படக்கூடிய யுரேனியம்-235 (<b>U-235</b>) அல்லது புளூட்டோனியம்-239 (<b>Pu-239</b>) எரிபொருள் தண்டுகளாகப் பயன்படுத்தப்படுகிறது.<br><br>
+          ans: `<div style="line-height:1.8;">
+            <b>அணுக்கரு உலை அமைப்பு மற்றும் செயல்படும் விதம்:</b><br><br>
+            அணுக்கரு உலை என்பது கட்டுப்படுத்தப்பட்ட தன்னிச்சையான தொடர்வினை மூலம் அணுக்கரு பிளவு நிகழ்ந்து பெருமளவு மின்னாற்றலை உற்பத்தி செய்யும் சாதனமாகும்.<br><br>
+            <b>முக்கியப் பாகங்கள் மற்றும் அவற்றின் பணிகள்:</b><br><br>
+            <b>1. அணுக்கரு எரிபொருள்:</b><br>
+            • பிளவுக்குட்படும் பொருட்களான <b>யுரேனியம்-235 ($^{235}\text{U}$) அல்லது புளூட்டோனியம்-239 ($^{239}\text{Pu}$)</b> துகள்கள் சிர்கோனியம் குழாய்களில் அடைக்கப்பட்டுப் பயன்படுகின்றன.<br><br>
             <b>2. தணிப்பான் (Moderator):</b><br>
-            • பிளவின் போது உருவாகும் அதிவேக நியூட்ரான்களின் வேகத்தைக் குறைத்து மந்த நியூட்ரான்களாக மாற்றப் பயன்படுகிறது.<br>
-            • <i>எடுத்துக்காட்டு:</i> <b>கனநீர் (D₂O)</b> மற்றும் <b>கிராபைட்</b>.<br><br>
-            <b>3. கட்டுப்படுத்தும் தண்டுகள்:</b><br>
-            • பிளவுத் தொடர்வினையை சீரான வேகத்தில் வைக்க அதிகப்படியான நியூட்ரான்களை உறிஞ்சப் பயன்படுகிறது.<br>
-            • <i>எடுத்துக்காட்டு:</i> <b>போரான் அல்லது காட்மியம் தண்டுகள்</b>. இவற்றை உலையினுள் இறக்கி வினையின் வேகத்தைக் குறைக்கலாம்; வெளியே இழுத்து வேகத்தை அதிகரிக்கலாம்.<br><br>
+            • அணுக்கரு பிளவின் போது உருவாகும் அதிவேக நியூட்ரான்களின் (2 MeV) ஆற்றலைக் குறைத்து, வெப்ப நியூட்ரான்களாக (0.025 eV) மாற்றப் பயன்படுகிறது.<br>
+            • <b>கனநீர் ($\text{D}_2\text{O}$) மற்றும் கிராபைட்</b> தணிப்பான்களாகப் பயன்படுகின்றன.<br><br>
+            <b>3. கட்டுப்படுத்தும் தண்டுகள் (Control Rods):</b><br>
+            • நியூட்ரான்களை மிக அதிக அளவில் உறிஞ்சும் திறன் கொண்ட <b>காட்மியம் ($\text{Cd}$) அல்லது போரான் ($\text{B}$)</b> தண்டுகள் பயன்படுகின்றன.<br>
+            • தொடர்வினையை ஒரு குறிப்பிட்ட வேகத்தில் நிலைநிறுத்த ($k = 1$) இவை உலைக்குள் இறக்கவோ அல்லது வெளியேற்றவோ படுகின்றன.<br><br>
             <b>4. குளிர்விப்பான் (Coolant):</b><br>
-            • உலையின் உள்ளகத்தில் உருவாகும் அபரிமிதமான வெப்பத்தை நீக்கி நீராவி இயற்றிக்குக் கடத்தப் பயன்படுகிறது.<br>
-            • <i>எடுத்துக்காட்டு:</i> சாதாரண நீர், கனநீர் மற்றும் திரவ சோடியம்.<br><br>
-            <b>5. தடுப்புச் சுவர்:</b><br>
-            • அபாயகரமான கதிர்வீச்சுகள் (காமா கதிர்கள் மற்றும் நியூட்ரான்கள்) சுற்றுச்சூழலில் பரவாமல் தடுக்க 2 முதல் 2.5 மீட்டர் தடிமனுள்ள <b>ஈயம் மற்றும் தடித்த கான்கிரீட் சுவர்</b> உலையைச் சுற்றி அமைக்கப்படுகிறது.</div>`
+            • உலையின் உள்ளே உருவாகும் மிக அதிக வெப்பத்தை வெளியேற்றி, வெப்பப் பரிமாற்றிக்குக் கொண்டு செல்லப் பயன்படுகிறது.<br>
+            • <b>நீர், கனநீர், உருகிய சோடியம் அல்லது ஹீலியம் வாயு</b> குளிர்விப்பானாகப் பயன்படுகிறது.<br><br>
+            <b>5. தடுப்புக் கவசம் (Biological Shield):</b><br>
+            • உலையிலிருந்து ஆபத்தான $\alpha, \beta, \gamma$ கதிர்வீச்சுகள் வெளியே கசிந்து சூழ்நிலையை மாசுபடுத்தாமல் காக்க, உலையைச் சுற்றி <b>ஈயம் மற்றும் 2 முதல் 2.5 மீட்டர் தடிமனுள்ள வலுவூட்டப்பட்ட காரைச் சுவர் (Concrete wall)</b> அமைக்கப்பட்டுள்ளது.</div>`
         }
       ]
     }
   ]
 };
 
+
+// Global Window Attachments
+if (typeof window !== 'undefined') {
+  window.SCIENCE_DIAGRAM_TIPS_EM = SCIENCE_DIAGRAM_TIPS_EM;
+  window.SCIENCE_DIAGRAM_TIPS_TM = SCIENCE_DIAGRAM_TIPS_TM;
+}

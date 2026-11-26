@@ -1,4 +1,4 @@
-﻿// 10th Standard Mathematics - Unit 3: Algebra (English Medium)
+// 10th Standard Mathematics - Unit 3: Algebra (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Step-by-Step Solutions
 
 const MATHS_EM_UNIT_3_DATA = {
@@ -533,7 +533,7 @@ const MATHS_EM_UNIT_3_DATA = {
             • Y-axis: 1 cm = 2 units<br><br>
                         <div class="ai-svg-diagram-wrapper" style="margin:16px 0; padding:12px; background:#f8fafc; border:1.5px solid #0284c7; border-radius:10px; text-align:center;">
               <div style="font-size:12.5px; font-weight:800; color:#0369a1; margin-bottom:8px; display:flex; align-items:center; justify-content:center; gap:6px;">
-                <span>ðŸ“Š Graphical Parabola: y = xÂ² - 9</span>
+                <span>📊 Graphical Parabola: y = x² - 9</span>
               </div>
               <svg width="360" height="300" viewBox="0 0 360 300" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
                 <defs>
@@ -588,10 +588,10 @@ const MATHS_EM_UNIT_3_DATA = {
                 <text x="242" y="52" font-size="8.5" fill="#475569">X-axis: 1 cm = 1 unit</text>
                 <text x="242" y="62" font-size="8.5" fill="#475569">Y-axis: 1 cm = 2 units</text>
                 <rect x="30" y="28" width="96" height="24" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1" />
-                <text x="78" y="44" font-size="11" font-weight="bold" fill="#1d4ed8" text-anchor="middle">y = xÂ² - 9</text>
+                <text x="78" y="44" font-size="11" font-weight="bold" fill="#1d4ed8" text-anchor="middle">y = x² - 9</text>
               </svg>
               <div style="font-size:11.5px; color:#166534; font-weight:700; margin-top:6px; background:#dcfce7; padding:6px 10px; border-radius:6px;">
-                âœ” Parabola cuts X-axis at two distinct points (-3, 0) and (3, 0) â‡’ Real and Unequal Roots. Solution: {-3, 3}
+                ✔ Parabola cuts X-axis at two distinct points (-3, 0) and (3, 0) ⇒ Real and Unequal Roots. Solution: {-3, 3}
               </div>
             </div>
             <b>Step 5: Nature of Solutions:</b><br>
@@ -679,7 +679,7 @@ const MATHS_EM_UNIT_3_DATA = {
             • Y-axis: 1 cm = 1 unit<br><br>
                         <div class="ai-svg-diagram-wrapper" style="margin:16px 0; padding:12px; background:#f8fafc; border:1.5px solid #0284c7; border-radius:10px; text-align:center;">
               <div style="font-size:12.5px; font-weight:800; color:#0369a1; margin-bottom:8px; display:flex; align-items:center; justify-content:center; gap:6px;">
-                <span>ðŸ“Š Graphical Parabola: y = xÂ² - 4x + 4</span>
+                <span>📊 Graphical Parabola: y = x² - 4x + 4</span>
               </div>
               <svg width="360" height="300" viewBox="0 0 360 300" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
                 <defs>
@@ -728,10 +728,10 @@ const MATHS_EM_UNIT_3_DATA = {
                 <text x="242" y="42" font-size="8.5" fill="#475569">X-axis: 1 cm = 1 unit</text>
                 <text x="242" y="52" font-size="8.5" fill="#475569">Y-axis: 1 cm = 2 units</text>
                 <rect x="110" y="24" width="116" height="24" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1" />
-                <text x="168" y="40" font-size="11" font-weight="bold" fill="#1d4ed8" text-anchor="middle">y = (x - 2)Â²</text>
+                <text x="168" y="40" font-size="11" font-weight="bold" fill="#1d4ed8" text-anchor="middle">y = (x - 2)²</text>
               </svg>
               <div style="font-size:11.5px; color:#15803d; font-weight:700; margin-top:6px; background:#dcfce7; padding:6px 10px; border-radius:6px;">
-                âœ” Parabola touches X-axis at only one point (2, 0) â‡’ Real and Equal Roots. Solution Set: {2}
+                ✔ Parabola touches X-axis at only one point (2, 0) ⇒ Real and Equal Roots. Solution Set: {2}
               </div>
             </div>
             <b>Step 5: Nature of Solutions:</b><br>
@@ -788,7 +788,7 @@ const MATHS_EM_UNIT_3_DATA = {
             <b>y = 0</b> (the X-axis itself)<br><br>
                         <div class="ai-svg-diagram-wrapper" style="margin:16px 0; padding:12px; background:#f8fafc; border:1.5px solid #0284c7; border-radius:10px; text-align:center;">
               <div style="font-size:12.5px; font-weight:800; color:#0369a1; margin-bottom:8px; display:flex; align-items:center; justify-content:center; gap:6px;">
-                <span>ðŸ“Š Graphical Solution: y = xÂ² + 3x - 4</span>
+                <span>📊 Graphical Solution: y = x² + 3x - 4</span>
               </div>
               <svg width="360" height="300" viewBox="0 0 360 300" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
                 <defs>
@@ -841,10 +841,10 @@ const MATHS_EM_UNIT_3_DATA = {
                 <text x="242" y="46" font-size="8.5" fill="#475569">X-axis: 1 cm = 1 unit</text>
                 <text x="242" y="56" font-size="8.5" fill="#475569">Y-axis: 1 cm = 2 units</text>
                 <rect x="26" y="24" width="116" height="24" rx="5" fill="#eff6ff" stroke="#3b82f6" stroke-width="1" />
-                <text x="84" y="40" font-size="10.5" font-weight="bold" fill="#1d4ed8" text-anchor="middle">y = xÂ² + 3x - 4</text>
+                <text x="84" y="40" font-size="10.5" font-weight="bold" fill="#1d4ed8" text-anchor="middle">y = x² + 3x - 4</text>
               </svg>
               <div style="font-size:11.5px; color:#166534; font-weight:700; margin-top:6px; background:#dcfce7; padding:6px 10px; border-radius:6px;">
-                âœ” Parabola intersects X-axis at (-4, 0) and (1, 0) â‡’ Solutions of xÂ² + 3x - 4 = 0 are x = -4, 1
+                ✔ Parabola intersects X-axis at (-4, 0) and (1, 0) ⇒ Solutions of x² + 3x - 4 = 0 are x = -4, 1
               </div>
             </div>
             <b>Step 3: Points of Intersection:</b><br>

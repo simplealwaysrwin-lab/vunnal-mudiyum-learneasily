@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -169,19 +169,19 @@
 <script src="data_maths_tm_u2.js?v=20261126_v135"></script>
 <script src="data_maths_tm_u3.js?v=20261126_v135"></script>
 <script src="data_maths_tm_u4.js?v=20261126_v135"></script>
-<script src="data_maths_tm_u5.js?v=20261126_v135"></script>
+<script src="data_maths_tm_u5.js?v=20261126_v137"></script>
 <script src="data_maths_tm_u6.js?v=20261126_v135"></script>
 <script src="data_maths_tm_u7.js?v=20261126_v135"></script>
 <script src="data_maths_tm_u8.js?v=20261126_v135"></script>
   <script src="data_maths_em_u1.js?v=20261126_v135"></script>
 <script src="data_maths_em_u2.js?v=20261126_v135"></script>
-<script src="data_maths_em_u3.js?v=20261126_v135"></script>
+<script src="data_maths_em_u3.js?v=20261126_v137"></script>
 <script src="data_maths_em_u4.js?v=20261126_v135"></script>
-<script src="data_maths_em_u5.js?v=20261126_v135"></script>
+<script src="data_maths_em_u5.js?v=20261126_v137"></script>
 <script src="data_maths_em_u6.js?v=20261126_v135"></script>
 <script src="data_maths_em_u7.js?v=20261126_v135"></script>
 <script src="data_maths_em_u8.js?v=20261126_v135"></script>
-<script src="data_science_diagram_tips.js?v=20261126_v136"></script>
+<script src="data_science_diagram_tips.js?v=20261126_v138"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
 <script src="data_science_u3.js?v=20261031_v31"></script>
@@ -4307,6 +4307,7 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       </div>
       <div class="modal-body" id="modalBody">
         <img id="modalImg" src="" alt="வரைபடம்" onerror="handleDiagramImgError(this)" onclick="handleModalImgClick(event)" title="விரலால் தொட்டு பெரிதாக்கலாம் (Tap to Zoom) / நகர்த்தலாம்">
+        <div id="modalSvgWrap" style="display:none; width:100%; text-align:center; overflow:auto; -webkit-overflow-scrolling:touch;" onclick="handleModalImgClick(event)" title="விரலால் தொட்டு பெரிதாக்கலாம் (Tap to Zoom) / நகர்த்தலாம்"></div>
       </div>
       <div class="modal-footer">
         <span>👆 படத்தில் தட்டவும் (Tap to 1.8x / 2.6x) / 🖐️ விரலால் நகர்த்தலாம் (Pan & Zoom)</span>
@@ -6291,6 +6292,19 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       .replace(/â€œ/g, '"')
       .replace(/â€/g, '"')
       .replace(/âˆ’/g, '−')
+      .replace(/ðŸ“Š/g, '📊')
+      .replace(/âœ”/g, '✔')
+      .replace(/â‡’/g, '⇒')
+      .replace(/âž”/g, '➔')
+      .replace(/Ã·/g, '÷')
+      .replace(/Sâ‚„â‚ƒ/g, 'S₄₃')
+      .replace(/Sâ‚™/g, 'Sₙ')
+      .replace(/râ ¿/g, 'rⁿ')
+      .replace(/10â ¿/g, '10ⁿ')
+      .replace(/Î£/g, 'Σ')
+      .replace(/âœ\s*ï¸/g, '✍️')
+      .replace(/â‘ /g, '①')
+      .replace(/â‘¡/g, '②')
       .replace(/10\?11/g, '10⁻¹¹')
       .replace(/I"p/g, 'Δp')
       .replace(/I\?/g, 'λ')
@@ -8365,7 +8379,7 @@ function resumeLastVisitedLesson() {
 
   function selectLesson(lesId, defaultFilter = 'all') {
     if (lesId === 'math_u1' || lesId === 'maths_u1') lesId = 'math_tm_u1';
-    if (!currentSubject) {
+    if (!currentSubject || !currentSubject.lessons || !currentSubject.lessons.some(l => l.id === lesId)) {
       currentSubject = APP_DATA.subjects.find(s => s.lessons && s.lessons.some(l => l.id === lesId));
     }
     if (!currentSubject) {
@@ -8802,6 +8816,10 @@ function resumeLastVisitedLesson() {
     const isExtraView = (currentFilter === 'extra' || (currentSubSection && (currentSubSection.includes('add_practice') || currentSubSection.includes('outside') || currentSubSection.includes('extra'))));
     const isDiagramView = (currentFilter === 'diagram');
     const isLongAnswerView = (currentFilter === '5m' || currentFilter === '4m' || currentFilter === '7m' || currentFilter === '8m');
+    const isMathLesson = Boolean((currentSubject && (currentSubject.id.includes('maths') || currentSubject.id.includes('math'))) || (currentLesson && currentLesson.id && currentLesson.id.startsWith('math_')));
+    const isScienceLesson = Boolean((currentSubject && currentSubject.id.startsWith('science')) || (currentLesson && currentLesson.id && currentLesson.id.startsWith('sci_')));
+    const isScienceDiagramTips = Boolean(currentLesson && currentLesson.id && (currentLesson.id.includes('diag_tips') || currentLesson.id.includes('sci_diag')));
+    const isScienceExtraOrDiag = isScienceLesson && (isExtraView || isScienceDiagramTips || isDiagramView || isLongAnswerView);
     const is5MView = isLongAnswerView;
     const is7M = (currentFilter === "7m");
     const is4M = (currentFilter === "4m");
@@ -8811,7 +8829,7 @@ function resumeLastVisitedLesson() {
                          is4M ? (isEm || isEnglish ? "4-Mark Question" : "4-\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BA4\u0BC6\u0BA3\u0BCD \u0BB5\u0BBF\u0BA9\u0BBE") :
                          is8M ? (isEm || isEnglish ? "8-Mark Long Question" : "8-\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BA4\u0BC6\u0BA3\u0BCD \u0BA8\u0BC6\u0B9F\u0BC1\u0BB5\u0BBF\u0BA9\u0BBE") :
                          (isEm || isEnglish ? "5-Mark Detailed Question" : "\u0B90\u0BA8\u0BCD\u0BA4\u0BC1 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BA4\u0BC6\u0BA3\u0BCD \u0BB5\u0BBF\u0BB0\u0BBF\u0BB5\u0BBE\u0BA9 \u0BB5\u0BBF\u0BA9\u0BBE (5M)");
-    const effectivePerPage = isLongAnswerView ? 1 : ((isCheckpointsView || isExtraView || isDiagramView) ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE);
+    const effectivePerPage = isScienceExtraOrDiag ? 1 : (isExtraView ? 2 : (isLongAnswerView ? 1 : ((isCheckpointsView || isDiagramView) ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE)));
     const totalQuestions = filteredQ.length;
     const totalPages = Math.ceil(totalQuestions / effectivePerPage) || 1;
     if (currentLessonPage > totalPages) currentLessonPage = totalPages;
@@ -8825,16 +8843,21 @@ function resumeLastVisitedLesson() {
       if (currentFilter === 'manapaadam' || currentFilter === 'checkpoints' || totalPages <= 1) return '';
       const prevDisabled = currentLessonPage <= 1 ? 'disabled' : '';
       const nextDisabled = currentLessonPage >= totalPages ? 'disabled' : '';
-      const prevText = is5MView 
-        ? (isEm || isEnglish ? `\u25C0 Prev ${markLabel} Q` : `\u25C0 \u0BAE\u0BC1\u0BA8\u0BCD\u0BA4\u0BC8\u0BAF ${markLabel} \u0BB5\u0BBF\u0BA9\u0BBE`)
-        : (isEm ? '◀ Previous Page' : '◀ முந்தைய பக்கம்');
-      const nextText = is5MView 
-        ? (isEm || isEnglish ? `Next ${markLabel} Q \u25B6` : `\u0B85\u0B9F\u0BC1\u0BA4\u0BCD\u0BA4 ${markLabel} \u0BB5\u0BBF\u0BA9\u0BBE \u25B6`)
-        : (isEm ? 'Next Page ▶' : 'அடுத்த பக்கம் ▶');
-      const pageInfo = is5MView
+      const isSingleQ = (effectivePerPage === 1);
+      const prevText = isSingleQ
+        ? (isEm || isEnglish ? `◀ Prev Question` : `◀ முந்தைய வினா`)
+        : (is5MView 
+            ? (isEm || isEnglish ? `\u25C0 Prev ${markLabel} Q` : `\u25C0 \u0BAE\u0BC1\u0BA8\u0BCD\u0BA4\u0BC8\u0BAF ${markLabel} \u0BB5\u0BBF\u0BA9\u0BBE`)
+            : (isEm ? '◀ Previous Page' : '◀ முந்தைய பக்கம்'));
+      const nextText = isSingleQ
+        ? (isEm || isEnglish ? `Next Question ▶` : `அடுத்த வினா ▶`)
+        : (is5MView 
+            ? (isEm || isEnglish ? `Next ${markLabel} Q \u25B6` : `\u0B85\u0B9F\u0BC1\u0BA4\u0BCD\u0BA4 ${markLabel} \u0BB5\u0BBF\u0BA9\u0BBE \u25B6`)
+            : (isEm ? 'Next Page ▶' : 'அடுத்த பக்கம் ▶'));
+      const pageInfo = isSingleQ
         ? (isEm || isEnglish 
-            ? `📑 ${markLabel} Question <b>${currentLessonPage}</b> of <b>${totalPages}</b>`
-            : `📑 ${markLabel} \u0BB5\u0BBF\u0BB0\u0BBF\u0BB5\u0BBE\u0BA9 \u0BB5\u0BBF\u0BA9\u0BBE <b>${currentLessonPage}</b> / <b>${totalPages}</b>`)
+            ? `📑 Question <b>${currentLessonPage}</b> of <b>${totalPages}</b>`
+            : `📑 வினா <b>${currentLessonPage}</b> / <b>${totalPages}</b>`)
         : (isEm 
             ? `📖 Page <b>${currentLessonPage}</b> of <b>${totalPages}</b> <span style="font-weight:600; color:var(--text-muted); font-size:12px;">(Questions ${startIndex + 1}–${endIndex} of ${totalQuestions})</span>`
             : `📖 பக்கம் <b>${currentLessonPage}</b> / <b>${totalPages}</b> <span style="font-weight:600; color:var(--text-muted); font-size:12px;">(வினாக்கள் ${startIndex + 1}–${endIndex} / மொத்தம் ${totalQuestions})</span>`);
@@ -8842,7 +8865,7 @@ function resumeLastVisitedLesson() {
       let pills = '';
       for (let p = 1; p <= totalPages; p++) {
         pills += `
-          <button type="button" class="page-num-pill ${p === currentLessonPage ? 'active' : ''}" onclick="goToLessonPage(${p})" title="${is5MView ? (isEm ? 'Question ' + p : 'வினா ' + p) : (isEm ? 'Page ' + p : 'பக்கம் ' + p)}">
+          <button type="button" class="page-num-pill ${p === currentLessonPage ? 'active' : ''}" onclick="goToLessonPage(${p})" title="${isSingleQ ? (isEm ? 'Question ' + p : 'வினா ' + p) : (is5MView ? (isEm ? 'Question ' + p : 'வினா ' + p) : (isEm ? 'Page ' + p : 'பக்கம் ' + p))}">
             ${p}
           </button>
         `;
@@ -9487,9 +9510,17 @@ function resumeLastVisitedLesson() {
                       ` : (item.diagramSvg && typeof item.diagramSvg === 'string') ? `
                         <div class="diagram-box">
                           <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
-                            <span style="display:inline-flex; align-items:center; gap:6px;">🎨 ${isEm || isEnglish ? 'Textbook Geometric Illustration' : (isTm ? 'பாட விளக்க வரைபடம்' : 'பாட விளக்க வரைபடம் (Textbook Illustration)')}</span>
+                            <span style="display:inline-flex; align-items:center; gap:6px;">🎨 ${isScience ? (isEm || isEnglish ? 'Science Textbook Diagram' : (isTm ? 'அறிவியல் பாட விளக்க வரைபடம்' : 'அறிவியல் பாட விளக்க வரைபடம் (Science Diagram)')) : (isEm || isEnglish ? 'Textbook Geometric Illustration' : (isTm ? 'பாட விளக்க வரைபடம்' : 'பாட விளக்க வரைபடம் (Textbook Illustration)'))}</span>
+                            <button type="button" class="zoom-btn" onclick="openImageModalFromWrap(this.closest('.diagram-box').querySelector('.diagram-img-wrap'))" style="padding:4px 12px; font-size:11.5px; font-weight:800; background:rgba(2,132,199,0.12); color:#0284c7; border:1px solid #0284c7; border-radius:12px; cursor:pointer;" title="${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'முழுத்திரையில் பெரிதாக்குக'}">
+                              🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாக்குக (Zoom)'}
+                            </button>
                           </div>
-                          ${item.diagramSvg}
+                          <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
+                            ${item.diagramSvg}
+                            <div class="diagram-zoom-hint" onclick="openImageModalFromWrap(this)">
+                              <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
+                            </div>
+                          </div>
                           <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
                         </div>
                       ` : ''}
@@ -9641,13 +9672,21 @@ function resumeLastVisitedLesson() {
                     })()}
                   ` : (item.diagramSvg && typeof item.diagramSvg === 'string') ? `
 
-                    <div class="diagram-box">
-                      <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
-                        <span style="display:inline-flex; align-items:center; gap:6px;">🎨 ${isEm || isEnglish ? 'Textbook Geometric Illustration' : (isTm ? 'பாட விளக்க வரைபடம்' : 'பாட விளக்க வரைபடம் (Textbook Illustration)')}</span>
-                      </div>
-                      ${item.diagramSvg}
-                      <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
-                    </div>
+                        <div class="diagram-box">
+                          <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
+                            <span style="display:inline-flex; align-items:center; gap:6px;">🎨 ${isScience ? (isEm || isEnglish ? 'Science Textbook Diagram' : (isTm ? 'அறிவியல் பாட விளக்க வரைபடம்' : 'அறிவியல் பாட விளக்க வரைபடம் (Science Diagram)')) : (isEm || isEnglish ? 'Textbook Geometric Illustration' : (isTm ? 'பாட விளக்க வரைபடம்' : 'பாட விளக்க வரைபடம் (Textbook Illustration)'))}</span>
+                            <button type="button" class="zoom-btn" onclick="openImageModalFromWrap(this.closest('.diagram-box').querySelector('.diagram-img-wrap'))" style="padding:4px 12px; font-size:11.5px; font-weight:800; background:rgba(2,132,199,0.12); color:#0284c7; border:1px solid #0284c7; border-radius:12px; cursor:pointer;" title="${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'முழுத்திரையில் பெரிதாக்குக'}">
+                              🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாக்குக (Zoom)'}
+                            </button>
+                          </div>
+                          <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
+                            ${item.diagramSvg}
+                            <div class="diagram-zoom-hint" onclick="openImageModalFromWrap(this)">
+                              <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
+                            </div>
+                          </div>
+                          <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
+                        </div>
                   ` : ''}
 
                   ${item.checkpoints && item.checkpoints.length > 0 ? `
@@ -10183,7 +10222,60 @@ function resumeLastVisitedLesson() {
     const img = (wrapEl.tagName === 'IMG') ? wrapEl : (wrapEl.querySelector('img') || wrapEl.closest('.diagram-box')?.querySelector('img'));
     if (img) {
       openImageModal(img.currentSrc || img.getAttribute('src') || img.src, img.alt);
+      return;
     }
+    const svg = (wrapEl.tagName === 'svg' || wrapEl.tagName === 'SVG') ? wrapEl : (wrapEl.querySelector('svg') || wrapEl.closest('.diagram-box')?.querySelector('svg') || wrapEl.closest('.ai-svg-diagram-wrapper')?.querySelector('svg'));
+    if (svg) {
+      const caption = wrapEl.closest('.diagram-box')?.querySelector('.diagram-caption')?.textContent ||
+                      wrapEl.closest('.ai-svg-diagram-wrapper')?.querySelector('span')?.textContent ||
+                      'வரைபடம் (Diagram)';
+      openSvgModal(svg.outerHTML, caption);
+    }
+  }
+
+  function openSvgModal(svgHtml, title, cardId) {
+    lastImageScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+    if (cardId) {
+      lastViewedQuestionCardId = cardId;
+    } else if (window.event && window.event.target) {
+      try {
+        const card = window.event.target.closest('.qa-card') || window.event.target.closest('[id^="card_"]');
+        if (card) lastViewedQuestionCardId = card.id;
+      } catch(e) {}
+    }
+
+    const modal = document.getElementById('imageModal');
+    const img = document.getElementById('modalImg');
+    const svgWrap = document.getElementById('modalSvgWrap');
+    const titleEl = document.getElementById('modalTitle');
+
+    let decodedTitle = title || 'வரைபடம்';
+    if (title) {
+      try { decodedTitle = decodeURIComponent(title); } catch(e) { decodedTitle = title; }
+    }
+    if (titleEl) titleEl.textContent = decodedTitle;
+
+    if (img) img.style.display = 'none';
+    if (svgWrap) {
+      svgWrap.style.display = 'block';
+      svgWrap.innerHTML = svgHtml;
+      const innerSvg = svgWrap.querySelector('svg');
+      if (innerSvg) {
+        innerSvg.style.maxWidth = '100%';
+        innerSvg.style.height = 'auto';
+        innerSvg.style.display = 'inline-block';
+        innerSvg.style.margin = '0 auto';
+        innerSvg.style.borderRadius = '8px';
+        innerSvg.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+      }
+    }
+
+    resetModalZoom();
+    modal.classList.add('open');
+    initModalPan();
+    try {
+      history.pushState({ modalOpen: true }, '', window.location.href);
+    } catch(e) {}
   }
 
   function openImageModal(imgSrc, title, cardId) {
@@ -10202,9 +10294,18 @@ function resumeLastVisitedLesson() {
 
     const modal = document.getElementById('imageModal');
     const img = document.getElementById('modalImg');
+    const svgWrap = document.getElementById('modalSvgWrap');
     const titleEl = document.getElementById('modalTitle');
+
+    if (svgWrap) {
+      svgWrap.innerHTML = '';
+      svgWrap.style.display = 'none';
+    }
+    if (img) {
+      img.style.display = 'block';
+    }
     
-    let decodedTitle = title || '\u0bb5\u0bb0\u0bc8\u0baa\u0b9f\u0bae\u0bcd';
+    let decodedTitle = title || 'வரைபடம்';
     if (title) {
       try {
         decodedTitle = decodeURIComponent(title);
@@ -10261,6 +10362,7 @@ function resumeLastVisitedLesson() {
     modalZoomLevel = 1.0;
     if (typeof window !== 'undefined') window.modalZoomLevel = modalZoomLevel;
     const img = document.getElementById('modalImg');
+    const svgWrap = document.getElementById('modalSvgWrap');
     const resetBtn = document.getElementById('modalZoomResetBtn');
     const body = document.getElementById('modalBody');
     if (body) {
@@ -10268,7 +10370,10 @@ function resumeLastVisitedLesson() {
       body.scrollLeft = 0;
       body.scrollTop = 0;
     }
-    if (img) {
+    const isSvg = svgWrap && svgWrap.style.display !== 'none';
+    const targetEl = isSvg ? svgWrap.querySelector('svg') : img;
+
+    if (img && !isSvg) {
       img.style.maxWidth = '100%';
       img.style.maxHeight = '72vh';
       img.style.width = 'auto';
@@ -10277,6 +10382,18 @@ function resumeLastVisitedLesson() {
       setTimeout(() => {
         if (modalZoomLevel === 1.0 && img.clientWidth > 0) {
           baseFitWidth = img.clientWidth;
+        }
+      }, 50);
+    }
+    if (isSvg && targetEl) {
+      targetEl.style.maxWidth = '100%';
+      targetEl.style.maxHeight = '72vh';
+      targetEl.style.width = 'auto';
+      targetEl.style.height = 'auto';
+      targetEl.style.cursor = 'zoom-in';
+      setTimeout(() => {
+        if (modalZoomLevel === 1.0 && targetEl.clientWidth > 0) {
+          baseFitWidth = targetEl.clientWidth;
         }
       }, 50);
     }
@@ -10289,21 +10406,25 @@ function resumeLastVisitedLesson() {
     modalZoomLevel = Math.max(0.6, Math.min(3.8, Math.round(newZoom * 100) / 100));
     if (typeof window !== 'undefined') window.modalZoomLevel = modalZoomLevel;
     const img = document.getElementById('modalImg');
+    const svgWrap = document.getElementById('modalSvgWrap');
     const resetBtn = document.getElementById('modalZoomResetBtn');
     const body = document.getElementById('modalBody');
     
-    if (img) {
-      if (modalZoomLevel <= 1.02 && modalZoomLevel >= 0.98) {
-        resetModalZoom();
-        return;
-      }
-      
-      const referenceWidth = baseFitWidth || img.clientWidth || 360;
-      img.style.maxWidth = 'none';
-      img.style.maxHeight = 'none';
-      img.style.width = Math.round(referenceWidth * modalZoomLevel) + 'px';
-      img.style.height = 'auto';
-      img.style.cursor = modalZoomLevel > 1.05 ? 'zoom-out' : 'zoom-in';
+    if (modalZoomLevel <= 1.02 && modalZoomLevel >= 0.98) {
+      resetModalZoom();
+      return;
+    }
+    
+    const isSvg = svgWrap && svgWrap.style.display !== 'none';
+    const targetEl = isSvg ? svgWrap.querySelector('svg') : img;
+
+    if (targetEl) {
+      const referenceWidth = baseFitWidth || (isSvg ? svgWrap.clientWidth : img.clientWidth) || 360;
+      targetEl.style.maxWidth = 'none';
+      targetEl.style.maxHeight = 'none';
+      targetEl.style.width = Math.round(referenceWidth * modalZoomLevel) + 'px';
+      targetEl.style.height = 'auto';
+      targetEl.style.cursor = modalZoomLevel > 1.05 ? 'zoom-out' : 'zoom-in';
       if (body) {
         body.style.cursor = modalZoomLevel > 1.05 ? 'grab' : 'default';
       }
@@ -10316,8 +10437,11 @@ function resumeLastVisitedLesson() {
 
   function zoomModalImage(factor) {
     const img = document.getElementById('modalImg');
-    if (!baseFitWidth && img && img.clientWidth > 0) {
-      baseFitWidth = img.clientWidth;
+    const svgWrap = document.getElementById('modalSvgWrap');
+    const isSvg = svgWrap && svgWrap.style.display !== 'none';
+    const targetEl = isSvg ? svgWrap.querySelector('svg') : img;
+    if (!baseFitWidth && targetEl && targetEl.clientWidth > 0) {
+      baseFitWidth = targetEl.clientWidth;
     }
     setModalZoom(modalZoomLevel * factor);
   }
@@ -10329,8 +10453,11 @@ function resumeLastVisitedLesson() {
       return;
     }
     const img = document.getElementById('modalImg');
-    if (!baseFitWidth && img && img.clientWidth > 0) {
-      baseFitWidth = img.clientWidth;
+    const svgWrap = document.getElementById('modalSvgWrap');
+    const isSvg = svgWrap && svgWrap.style.display !== 'none';
+    const targetEl = isSvg ? svgWrap.querySelector('svg') : img;
+    if (!baseFitWidth && targetEl && targetEl.clientWidth > 0) {
+      baseFitWidth = targetEl.clientWidth;
     }
     if (modalZoomLevel < 1.35) {
       setModalZoom(1.8);
@@ -10347,6 +10474,11 @@ function resumeLastVisitedLesson() {
     if (!modal.classList.contains('open')) return;
     
     modal.classList.remove('open');
+    const svgWrap = document.getElementById('modalSvgWrap');
+    if (svgWrap) {
+      svgWrap.innerHTML = '';
+      svgWrap.style.display = 'none';
+    }
     resetModalZoom();
 
     // Preserve exact question card view & scroll position
@@ -13395,20 +13527,52 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
                 <div class="chalk-content" style="font-size:16.5px; line-height:2;">
                   ${ansHtml}
                 </div>
-                ${this.currentQ.diagramSvg ? `
-                  <div class="diagram-box" style="margin: 16px 0; background: rgba(255,255,255,0.98); border-radius: 12px; padding: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-                    <div style="font-size:13px; font-weight:800; color:#0369a1; margin-bottom:8px; text-align:center;">
-                      🎨 ${isEm ? 'Geometrical Diagram Illustration' : 'பாட விளக்க வரைபடம்'}
-                    </div>
-                    ${this.currentQ.diagramSvg}
-                    <div class="diagram-caption" style="color: #0f172a; font-weight: 700; margin-top: 8px; font-size:13px; text-align:center;">${this.currentQ.diagramCaption || (isEm ? 'Diagram' : 'வரைபடம்')}</div>
-                  </div>
-                ` : (this.currentQ.diagramImg ? `
-                  <div class="diagram-box" style="margin: 16px 0; background: rgba(255,255,255,0.98); border-radius: 12px; padding: 14px; text-align:center; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-                    <img src="${(isEm && this.currentQ.diagramImg === 'images/math_bb_ex1_4.png') ? 'images/math_bb_ex1_4_en.png' : this.currentQ.diagramImg}" alt="${(this.currentQ.diagramCaption || (isEm ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" style="max-width:100%; max-height:55vh; border-radius:8px;" onerror="handleDiagramImgError(this)" />
-                    <div class="diagram-caption" style="color: #0f172a; font-weight: 700; margin-top: 8px; font-size:13px; text-align:center;">${this.currentQ.diagramCaption || (isEm ? 'Diagram' : 'வரைபடம்')}</div>
-                  </div>
-                ` : '')}
+                ${(() => {
+                  const svgContent = (typeof this.currentQ.diagramSvg === 'string') 
+                    ? this.currentQ.diagramSvg 
+                    : ((typeof this.currentQ.ans === 'string' && this.currentQ.ans.includes('<svg')) 
+                        ? this.currentQ.ans.match(/<svg[\s\S]*?<\/svg>/i)?.[0] 
+                        : null);
+                  if (svgContent) {
+                    return `
+                      <div class="diagram-box" style="margin: 16px 0; background: rgba(255,255,255,0.98); border-radius: 12px; padding: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); text-align:center;">
+                        <div style="font-size:13px; font-weight:800; color:#0369a1; margin-bottom:8px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
+                          <span>🎨 ${isEm ? 'Geometrical Diagram Illustration' : 'பாட விளக்க வரைபடம்'}</span>
+                          <button type="button" class="zoom-btn" onclick="openImageModalFromWrap(this.closest('.diagram-box').querySelector('.diagram-img-wrap'))" style="padding:4px 12px; font-size:11.5px; font-weight:800; background:rgba(2,132,199,0.12); color:#0284c7; border:1px solid #0284c7; border-radius:12px; cursor:pointer;" title="${isEm ? 'Tap to Zoom Fullscreen' : 'முழுத்திரையில் பெரிதாக்குக'}">
+                            🔍 ${isEm ? 'Tap to Zoom' : 'தொட்டுப் பெரிதாக்குக'}
+                          </button>
+                        </div>
+                        <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
+                          ${svgContent}
+                          <div class="diagram-zoom-hint" onclick="openImageModalFromWrap(this)">
+                            <span>🔍 ${isEm ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
+                          </div>
+                        </div>
+                        <div class="diagram-caption" style="color: #0f172a; font-weight: 700; margin-top: 8px; font-size:13px; text-align:center;">${this.currentQ.diagramCaption || (isEm ? 'Diagram' : 'வரைபடம்')}</div>
+                      </div>
+                    `;
+                  }
+                  if (this.currentQ.diagramImg) {
+                    return `
+                      <div class="diagram-box" style="margin: 16px 0; background: rgba(255,255,255,0.98); border-radius: 12px; padding: 14px; text-align:center; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                        <div style="font-size:13px; font-weight:800; color:#0369a1; margin-bottom:8px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
+                          <span>🎨 ${isEm ? 'Geometrical Diagram Illustration' : 'பாட விளக்க வரைபடம்'}</span>
+                          <button type="button" class="zoom-btn" onclick="openImageModalFromWrap(this.closest('.diagram-box').querySelector('.diagram-img-wrap'))" style="padding:4px 12px; font-size:11.5px; font-weight:800; background:rgba(2,132,199,0.12); color:#0284c7; border:1px solid #0284c7; border-radius:12px; cursor:pointer;" title="${isEm ? 'Tap to Zoom Fullscreen' : 'முழுத்திரையில் பெரிதாக்குக'}">
+                            🔍 ${isEm ? 'Tap to Zoom' : 'தொட்டுப் பெரிதாக்குக'}
+                          </button>
+                        </div>
+                        <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
+                          <img src="${(isEm && this.currentQ.diagramImg === 'images/math_bb_ex1_4.png') ? 'images/math_bb_ex1_4_en.png' : this.currentQ.diagramImg}" alt="${(this.currentQ.diagramCaption || (isEm ? 'Diagram' : 'வரைபடம்')).replace(/"/g, '&quot;')}" style="max-width:100%; max-height:55vh; border-radius:8px;" onerror="handleDiagramImgError(this)" />
+                          <div class="diagram-zoom-hint" onclick="openImageModalFromWrap(this)">
+                            <span>🔍 ${isEm ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
+                          </div>
+                        </div>
+                        <div class="diagram-caption" style="color: #0f172a; font-weight: 700; margin-top: 8px; font-size:13px; text-align:center;">${this.currentQ.diagramCaption || (isEm ? 'Diagram' : 'வரைபடம்')}</div>
+                      </div>
+                    `;
+                  }
+                  return '';
+                })()}
                 ${keyConcept ? `
                   <div class="chalk-concept-wrap" style="margin-top:16px;">
                     <div class="chalk-concept-badge">\uD83D\uDCA1 ${isEm ? 'Key Concept / Scoring Note:' : '\u0BAE\u0BC1\u0B95\u0BCD\u0B95\u0BBF\u0BAF\u0B95\u0BCD \u0B95\u0BB0\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1 (Key Concept):'}</div>
@@ -14957,7 +15121,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261126_v135')
+        navigator.serviceWorker.register('./sw.js?v=20261126_v138')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

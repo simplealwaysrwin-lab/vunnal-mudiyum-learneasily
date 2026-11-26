@@ -57,6 +57,49 @@ const MATHS_TM_UNIT_5_DATA = {
         },
         {
           id: "m_tm_5_1_4",
+          diagram: true,
+          diagramCaption: "நாற்கரத்தின் தோராயப் படம் - கடிகார எதிர் வரிசை (Rough Sketch)",
+          diagramSvg: `<svg width="340" height="260" viewBox="0 0 340 260" style="background:#ffffff; border:1.5px solid #cbd5e1; border-radius:10px; max-width:100%; height:auto; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <defs>
+    <pattern id="grid_u5_quad_tm" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow_tm" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7" />
+    </marker>
+  </defs>
+  <rect width="340" height="260" fill="url(#grid_u5_quad_tm)" rx="10" />
+  <rect x="12" y="10" width="195" height="24" rx="12" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1"/>
+  <text x="22" y="26" font-size="11" font-weight="700" fill="#0369a1">&#x1F4D0; தோராய படம் (கடிகார எதிர் வரிசை)</text>
+  <rect x="215" y="10" width="115" height="24" rx="12" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+  <text x="223" y="26" font-size="11" font-weight="700" fill="#15803d">&#x0BAA;&#x0BB0;&#x0BAA;&#x0BCD;&#x0BAA;&#x0BC1; = 35 &#x0B9A;.&#x0B85;&#x0BB2;&#x0B95;&#x0BC1;&#x0B95;&#x0BB3;&#x0BCD;</text>
+  <line x1="15" y1="110" x2="325" y2="110" stroke="#64748b" stroke-width="1.8" />
+  <polygon points="325,110 317,106 317,114" fill="#64748b" />
+  <polygon points="15,110 23,106 23,114" fill="#64748b" />
+  <text x="323" y="105" font-size="11" font-weight="800" fill="#475569">X</text>
+  <text x="5" y="105" font-size="11" font-weight="800" fill="#475569">X'</text>
+  <line x1="230" y1="245" x2="230" y2="25" stroke="#64748b" stroke-width="1.8" />
+  <polygon points="230,25 226,33 234,33" fill="#64748b" />
+  <polygon points="230,245 226,237 234,237" fill="#64748b" />
+  <text x="236" y="32" font-size="11" font-weight="800" fill="#475569">Y</text>
+  <text x="236" y="252" font-size="11" font-weight="800" fill="#475569">Y'</text>
+  <text x="218" y="124" font-size="10" font-weight="700" fill="#94a3b8">O(0,0)</text>
+  <polygon points="68,150 86,190 248,170 266,70" fill="rgba(2, 132, 199, 0.15)" stroke="#0284c7" stroke-width="2.5" />
+  <path d="M 68 150 L 78 172" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow_tm)" fill="none" />
+  <path d="M 86 190 L 175 179" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow_tm)" fill="none" />
+  <path d="M 248 170 L 258 115" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow_tm)" fill="none" />
+  <path d="M 266 70 L 157 114" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow_tm)" fill="none" />
+  <circle cx="68" cy="150" r="5" fill="#ef4444" stroke="#ffffff" stroke-width="1.5" />
+  <text x="12" y="148" font-size="11.5" font-weight="800" fill="#b91c1c">A(-9, -2)</text>
+  <circle cx="86" cy="190" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5" />
+  <text x="28" y="212" font-size="11.5" font-weight="800" fill="#b45309">B(-8, -4)</text>
+  <circle cx="248" cy="170" r="5" fill="#10b981" stroke="#ffffff" stroke-width="1.5" />
+  <text x="256" y="185" font-size="11.5" font-weight="800" fill="#047857">C(1, -3)</text>
+  <circle cx="266" cy="70" r="5" fill="#8b5cf6" stroke="#ffffff" stroke-width="1.5" />
+  <text x="272" y="65" font-size="11.5" font-weight="800" fill="#6d28d9">D(2, 2)</text>
+  <path d="M 155 130 A 20 20 0 1 0 180 145" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,2" marker-end="url(#arrow_tm)" />
+  <text x="145" y="158" font-size="10" font-weight="700" fill="#b45309">&#x21BA; &#x0B95;&#x0B9F;&#x0BBF;&#x0B95;&#x0BBE;&#x0BB0; &#x0B8E;&#x0BA4;&#x0BBF;&#x0BB0;&#x0BCD; &#x0BB5;&#x0BB0;&#x0BBF;&#x0B9A;&#x0BC8;</text>
+</svg>`,
           examYear: "2024, 2022",
           type: "5m",
           mark: "5 மதிப்பெண்",
@@ -247,7 +290,50 @@ const MATHS_TM_UNIT_5_DATA = {
         }        ,
         {
           id: "m_tm_u5_add_q4",
-          diagramSvg: true,
+          diagramCaption: "கார்ட்டீசியன் தளத்தில் புள்ளிகள் A, B, C, D (Cartesian Plane)",
+          diagramSvg: `<svg width="340" height="280" viewBox="0 0 340 280" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
+  <defs>
+    <pattern id="grid_u5_tm_q4" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#f1f5f9" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="340" height="280" fill="url(#grid_u5_tm_q4)" />
+  <text x="200" y="35" font-size="11" font-weight="700" fill="#0369a1">முதல் காற்பகுதி (I) (+,+)</text>
+  <text x="20" y="35" font-size="11" font-weight="700" fill="#0369a1">இரண்டாம் காற்பகுதி (II) (-,+)</text>
+  <text x="20" y="260" font-size="11" font-weight="700" fill="#0369a1">மூன்றாம் காற்பகுதி (III) (-,-)</text>
+  <text x="195" y="260" font-size="11" font-weight="700" fill="#0369a1">நான்காம் காற்பகுதி (IV) (+,-)</text>
+  <line x1="15" y1="140" x2="325" y2="140" stroke="#334155" stroke-width="2" />
+  <polygon points="325,140 317,136 317,144" fill="#334155" />
+  <polygon points="15,140 23,136 23,144" fill="#334155" />
+  <text x="325" y="135" font-size="12" font-weight="800" fill="#0f172a">X</text>
+  <text x="5" y="135" font-size="12" font-weight="800" fill="#0f172a">X'</text>
+  <line x1="170" y1="265" x2="170" y2="15" stroke="#334155" stroke-width="2" />
+  <polygon points="170,15 166,23 174,23" fill="#334155" />
+  <polygon points="170,265 166,257 174,257" fill="#334155" />
+  <text x="176" y="22" font-size="12" font-weight="800" fill="#0f172a">Y</text>
+  <text x="176" y="275" font-size="12" font-weight="800" fill="#0f172a">Y'</text>
+  <text x="156" y="154" font-size="11" font-weight="700" fill="#64748b">O</text>
+  <line x1="226" y1="140" x2="226" y2="56" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+  <line x1="170" y1="56" x2="226" y2="56" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+  <circle cx="226" cy="56" r="4.5" fill="#16a34a" />
+  <text x="233" y="54" font-size="12" font-weight="800" fill="#15803d">A(2, 3)</text>
+  <line x1="114" y1="140" x2="114" y2="56" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+  <line x1="170" y1="56" x2="114" y2="56" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+  <circle cx="114" cy="56" r="4.5" fill="#2563eb" />
+  <text x="56" y="54" font-size="12" font-weight="800" fill="#1d4ed8">B(-2, 3)</text>
+  <line x1="114" y1="140" x2="114" y2="224" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+  <line x1="170" y1="224" x2="114" y2="224" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+  <circle cx="114" cy="224" r="4.5" fill="#dc2626" />
+  <text x="48" y="235" font-size="12" font-weight="800" fill="#b91c1c">C(-2, -3)</text>
+  <line x1="226" y1="140" x2="226" y2="224" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+  <line x1="170" y1="224" x2="226" y2="224" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3,3" />
+  <circle cx="226" cy="224" r="4.5" fill="#9333ea" />
+  <text x="233" y="235" font-size="12" font-weight="800" fill="#7e22ce">D(2, -3)</text>
+  <text x="222" y="153" font-size="10" font-weight="600" fill="#475569">2</text>
+  <text x="110" y="153" font-size="10" font-weight="600" fill="#475569">-2</text>
+  <text x="156" y="60" font-size="10" font-weight="600" fill="#475569">3</text>
+  <text x="154" y="228" font-size="10" font-weight="600" fill="#475569">-3</text>
+</svg>`,
           diagram: true,
           isGraph: true,
           type: "2m",
@@ -263,7 +349,8 @@ const MATHS_TM_UNIT_5_DATA = {
             • மூன்றாம் காற்பகுதி (III): x < 0, y < 0 &nbsp;(- , -)<br>
             • நான்காம் காற்பகுதி (IV): x > 0, y < 0 &nbsp;(+ , -)<br><br>
             <b>கார்ட்டீசியன் தள வரைபடம்:</b><br>
-            <div style="text-align:center; margin:12px 0;">
+            <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in; text-align:center; margin:12px 0; display:block;">
+              <div class="diagram-zoom-hint" style="margin-bottom:6px;"><span>🔍 தொட்டுப் பெரிதாகக் காண்க</span></div>
               <svg width="340" height="280" viewBox="0 0 340 280" style="background:#ffffff; border:1px solid #cbd5e1; border-radius:8px; max-width:100%; height:auto;">
                 <defs>
                   <pattern id="grid_u5_tm_q4" width="25" height="25" patternUnits="userSpaceOnUse">

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -169,7 +169,7 @@
 <script src="data_maths_tm_u2.js?v=20261126_v135"></script>
 <script src="data_maths_tm_u3.js?v=20261126_v135"></script>
 <script src="data_maths_tm_u4.js?v=20261126_v135"></script>
-<script src="data_maths_tm_u5.js?v=20261126_v137"></script>
+<script src="data_maths_tm_u5.js?v=20261126_v139"></script>
 <script src="data_maths_tm_u6.js?v=20261126_v135"></script>
 <script src="data_maths_tm_u7.js?v=20261126_v135"></script>
 <script src="data_maths_tm_u8.js?v=20261126_v135"></script>
@@ -177,11 +177,11 @@
 <script src="data_maths_em_u2.js?v=20261126_v135"></script>
 <script src="data_maths_em_u3.js?v=20261126_v137"></script>
 <script src="data_maths_em_u4.js?v=20261126_v135"></script>
-<script src="data_maths_em_u5.js?v=20261126_v137"></script>
+<script src="data_maths_em_u5.js?v=20261126_v139"></script>
 <script src="data_maths_em_u6.js?v=20261126_v135"></script>
 <script src="data_maths_em_u7.js?v=20261126_v135"></script>
 <script src="data_maths_em_u8.js?v=20261126_v135"></script>
-<script src="data_science_diagram_tips.js?v=20261126_v138"></script>
+<script src="data_science_diagram_tips.js?v=20261126_v139"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
 <script src="data_science_u3.js?v=20261031_v31"></script>
@@ -9796,7 +9796,7 @@ function resumeLastVisitedLesson() {
                       <span>${(item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்'))) || (item.id && item.id.includes('map')) ? (isEm || isEnglish ? 'Practice & Evaluate Map' : 'வரைபடம் பயிற்சி & திருத்து') : (isEm || isEnglish ? 'Evaluate' : 'விடை திருத்து')}</span>
                     </button>
                     ` : ''}
-                    ${(item.type !== '1m' && !item.noVoice && !(currentSubject && currentSubject.id.startsWith('maths'))) ? `
+                    ${(item.type !== '1m' && !item.noVoice && (!(currentSubject && currentSubject.id.startsWith('maths')) || item.audioScript)) ? `
                     <button type="button" class="audio-btn ${(typeof teacherAudioPlayer !== 'undefined' && teacherAudioPlayer.currentId === item.id) ? (teacherAudioPlayer.isPaused ? 'paused' : 'playing') : ''}" id="audioBtn_${item.id}" onclick="teacherAudioPlayer.toggle('${item.id}')" title="${isEm || isEnglish ? 'Listen Answer' : 'பதிலைக் கேட்க'}">
                       <span id="audioIcon_${item.id}">${(typeof teacherAudioPlayer !== 'undefined' && teacherAudioPlayer.currentId === item.id) ? (teacherAudioPlayer.isPaused ? '▶️' : '⏸️') : '🎧'}</span>
                       <span id="audioText_${item.id}">${(typeof teacherAudioPlayer !== 'undefined' && teacherAudioPlayer.currentId === item.id) ? (teacherAudioPlayer.isPaused ? (isEm || isEnglish ? 'Resume' : 'தொடர்க') : (isEm || isEnglish ? 'Pause' : 'இடைநிறுத்து')) : (isEm || isEnglish ? 'Listen Answer' : 'பதிலைக் கேட்க')}</span>
@@ -11852,12 +11852,19 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
       // NOT for individual 1M, 2M, 3M questions to avoid repetitive fatigue!
       const isMajorQ = this.isMajorOutroQuestion(item);
 
-      let speechText = `${qHeading}, ${formattedQ}. ${aHeading}. ${formattedAns}.`;
-      if (isMajorQ) {
-        const promoOutro = isEnglish
-          ? "To learn 10th standard subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best!"
-          : "10-ஆம் வகுப்பு பாடங்களை எளிதாகக் கற்கவும், நல்ல மதிப்பெண்கள் பெறவும் 'உன்னால் முடியும் Learn Easily' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!";
-        speechText += ` ${promoOutro}`;
+      let speechText = '';
+      if (item.audioScript) {
+        const script = item.audioScript.trim();
+        const hasIntro = /^(question|வினா|here are|இங்கே|rule|விதி)/i.test(script);
+        speechText = hasIntro ? formattedAns : `${qHeading}, ${formattedQ}. ${aHeading}. ${formattedAns}.`;
+      } else {
+        speechText = `${qHeading}, ${formattedQ}. ${aHeading}. ${formattedAns}.`;
+        if (isMajorQ) {
+          const promoOutro = isEnglish
+            ? "To learn 10th standard subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best!"
+            : "10-ஆம் வகுப்பு பாடங்களை எளிதாகக் கற்கவும், நல்ல மதிப்பெண்கள் பெறவும் 'உன்னால் முடியும் Learn Easily' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!";
+          speechText += ` ${promoOutro}`;
+        }
       }
       speechText = speechText.replace(/\.{2,}/g, '.').replace(/\s*\.\s*/g, '. ').trim();
 
@@ -15121,7 +15128,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261126_v138')
+        navigator.serviceWorker.register('./sw.js?v=20261126_v139')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

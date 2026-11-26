@@ -227,10 +227,19 @@ const MATHS_EM_UNIT_5_DATA = {
           subSectionId: "sec_math_em_u5_add_practice",
           q: "Find the distance between the points A(2, 3) and B(5, 7).",
           ans: `<div style="line-height:1.8;">
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:1px solid #86efac; border-radius:10px; padding:12px 14px; margin-bottom:14px;">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                <span style="font-size:20px;">👨‍🏫</span>
+                <b style="color:#166534; font-size:15px;">Teacher Step-by-Step Voice Guide</b>
+              </div>
+              <div style="font-size:13px; color:#14532d; line-height:1.6;">
+                Click the <b>🎧 Listen Answer</b> button above to hear the teacher solve this problem step-by-step with clear classroom voice!
+              </div>
+            </div>
             <b>Given Points:</b> A(x₁, y₁) = (2, 3) and B(x₂, y₂) = (5, 7)<br><br>
             <b>Distance Formula:</b><br>
             d = √[(x₂ - x₁)² + (y₂ - y₁)²]<br><br>
-            <b>Substitute coordinates:</b><br>
+            <b>Substituting coordinates:</b> x₂ = 5, x₁ = 2, y₂ = 7, y₁ = 3<br>
             d = √[(5 - 2)² + (7 - 3)²]<br>
             d = √[3² + 4²]<br>
             d = √[9 + 16]<br>
@@ -239,7 +248,7 @@ const MATHS_EM_UNIT_5_DATA = {
               Distance between A and B = 5 units
             </div>
           </div>`,
-          audioScript: "Given points A(2, 3) and B(5, 7). Distance formula d equals square root of (x2 minus x1) squared plus (y2 minus y1) squared. Substituting gives square root of (5 minus 2) squared plus (7 minus 3) squared, which is square root of 3 squared plus 4 squared, equals square root of 9 plus 16, which is square root of 25. The distance is 5 units."
+          audioScript: "Question: Find the distance between the points A(2, 3) and B(5, 7). Hello students, let us solve this step by step. Distance formula equal to square root of x two minus x one square plus y two minus y one square. Substituting coordinates x two as 5, x one as 2, y two as 7, and y one as 3, this gives d equal to square root of 5 minus 2 square plus 7 minus 3 square. This gives d equal to square root of 3 square plus 4 square, that is d equal to square root of 9 plus 16, that is d equal to square root of 25 equal to 5. Answer is distance equal to 5 units. Well done, keep practicing!"
         },
         {
           id: "m_em_u5_add_q2",

@@ -227,19 +227,28 @@ const MATHS_TM_UNIT_5_DATA = {
           subSectionId: "sec_math_tm_u5_add_practice",
           q: "A(2, 3) மற்றும் B(5, 7) ஆகிய புள்ளிகளுக்கு இடையே உள்ள தொலைவைக் காண்க.",
           ans: `<div style="line-height:1.8;">
+            <div style="background:linear-gradient(135deg,#f0fdf4,#dcfce7); border:1px solid #86efac; border-radius:10px; padding:12px 14px; margin-bottom:14px;">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                <span style="font-size:20px;">👨‍🏫</span>
+                <b style="color:#166534; font-size:15px;">ஆசிரியர் படிப் படியான நேரடி கற்பித்தல் வழிகாட்டி</b>
+              </div>
+              <div style="font-size:13px; color:#14532d; line-height:1.6;">
+                வகுப்பறையில் ஆசிரியர் கற்பிப்பது போன்று முழு விளக்கத்தையும் கேட்க மேலே உள்ள '🎧 பதிலைக் கேட்க' பொத்தானை அழுத்தவும்!
+              </div>
+            </div>
             <b>கொடுக்கப்பட்ட புள்ளிகள்:</b> A(x₁, y₁) = (2, 3) மற்றும் B(x₂, y₂) = (5, 7)<br><br>
             <b>இரு புள்ளிகளுக்கு இடைப்பட்ட தொலைவுச் சூத்திரம்:</b><br>
             d = √[(x₂ - x₁)² + (y₂ - y₁)²]<br><br>
-            <b>மதிப்புகளைப் பிரதியிட:</b><br>
+            <b>ஆயத்தொலைவுகளைப் பிரதியிட:</b> x₂ = 5, x₁ = 2, y₂ = 7, y₁ = 3<br>
             d = √[(5 - 2)² + (7 - 3)²]<br>
             d = √[3² + 4²]<br>
             d = √[9 + 16]<br>
             d = √25 = <b>5 அலகுகள்</b><br><br>
             <div style="padding:10px 14px; background:#f0fdf4; border-left:4px solid #16a34a; border-radius:6px; font-weight:700; color:#15803d;">
-              A மற்றும் B-க்கு இடைப்பட்ட தொலைவு = 5 அலகுகள்
+              விடை: A மற்றும் B புள்ளிகளுக்கு இடைப்பட்ட தொலைவு = 5 அலகுகள்
             </div>
           </div>`,
-          audioScript: "புள்ளிகள் A(2, 3) மற்றும் B(5, 7). தொலைவுச் சூத்திரம் d சமம் square root of (x2 minus x1) squared plus (y2 minus y1) squared. பிரதியிட square root of 3 squared plus 4 squared, அதாவது square root of 9 கூட்டல் 16 சமம் square root of 25. தொலைவு 5 அலகுகள் ஆகும்."
+          audioScript: "வினா: A(2, 3) மற்றும் B(5, 7) ஆகிய புள்ளிகளுக்கு இடையே உள்ள தொலைவைக் காண்க. அன்பு மாணவர்களே, படிப் படியாகத் தீர்ப்போம். இரு புள்ளிகளுக்கு இடைப்பட்ட தொலைவுச் சூத்திரம் d சமம் square root of (x2 minus x1) squared plus (y2 minus y1) squared. x2 ஐ 5 எனவும், x1 ஐ 2 எனவும், y2 ஐ 7 எனவும், y1 ஐ 3 எனவும் ஆயத்தொலைவுகளைப் பிரதியிட: d சமம் square root of (5 minus 2) squared plus (7 minus 3) squared. இது d சமம் square root of 3 squared plus 4 squared தருகிறது. அதாவது d சமம் square root of 9 கூட்டல் 16, d சமம் square root of 25 சமம் 5. விடை: தொலைவு சமம் 5 அலகுகள் ஆகும். மிகச் சிறப்பு மாணவர்களே!"
         },
         {
           id: "m_tm_u5_add_q2",

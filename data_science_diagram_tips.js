@@ -35,6 +35,33 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
           diagram: true,
           q: "What are the essential golden rules, labeling techniques, and presentation guidelines to score full marks in Class 10 Science diagrams?",
           ans: `<div style="line-height:1.8;">
+            <div style="background: linear-gradient(135deg, #0f172a, #1e293b); border: 2px solid #3b82f6; border-radius: 12px; padding: 16px; margin-bottom: 20px; color: #f8fafc; box-shadow: 0 4px 15px rgba(0,0,0,0.25);">
+              <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; border-bottom:1px solid #334155; padding-bottom:10px; margin-bottom:12px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:22px;">🎬</span>
+                  <b style="font-size:16px; color:#38bdf8;">YouTube Shorts / Reel Promo Script (60 Seconds)</b>
+                </div>
+                <span style="background:#2563eb; color:#fff; font-size:12px; font-weight:700; padding:3px 10px; border-radius:20px;">⏱️ 60 Sec Audio</span>
+              </div>
+              <div style="font-size:14px; margin:0 0 12px 0; color:#e2e8f0; line-height:1.7;">
+                <b>Quick 60-Second Video Summary:</b><br>
+                "Here are the 7 Golden Rules to score full marks in Class 10 Science Diagrams!<br>
+                • <b>Rule 1:</b> Always draw with a sharp HB pencil only; never use pens.<br>
+                • <b>Rule 2:</b> Draw ruler-straight pointer lines that never cross each other.<br>
+                • <b>Rule 3:</b> Neatly align all label names on the right-hand side in print letters.<br>
+                • <b>Rule 4:</b> Draw generous diagrams occupying half a page.<br>
+                • <b>Rule 5:</b> Always mark directional arrows on light rays and blood circulation.<br>
+                • <b>Rule 6:</b> Center and underline the figure title below the diagram.<br>
+                • <b>Rule 7:</b> In 7-mark questions, 4 marks are for diagram & labeling, and 3 marks for explanation!"
+              </div>
+              <div style="background:rgba(59, 130, 246, 0.15); border-left:4px solid #60a5fa; border-radius:6px; padding:10px 12px; margin-bottom:14px; font-size:13.5px; color:#93c5fd;">
+                📢 <b>Closing Comment (Promo Outro):</b><br>
+                <i>"For 10th standard students to score high marks, download the <b>Vunnal Mudiyum Learn Easily</b> app and share it with your classmates also! All the best!"</i>
+              </div>
+              <button type="button" onclick="teacherAudioPlayer.play('sci_em_dt_1')" style="width:100%; display:flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg, #2563eb, #1d4ed8); color:#fff; font-weight:700; font-size:14px; padding:11px 16px; border:none; border-radius:8px; cursor:pointer; box-shadow:0 3px 8px rgba(37,99,235,0.4);">
+                <span>▶️</span> <span>Play 60-Second Audio (YouTube Promo / Shorts Voice)</span>
+              </button>
+            </div>
             <b>Class 10 Science Public Examination: Diagram Presentation Master Guide</b><br><br>
             According to the Tamil Nadu State Board (Samacheer Kalvi) evaluation scheme, science diagrams carry high weightage in 4-mark and 7-mark questions (Part IV: Q.No. 33, 34, 35). Follow these 7 golden rules to guarantee 100% marks in every diagram question:<br><br>
             <b>1. The Sharp HB Pencil Only Rule:</b><br>
@@ -61,7 +88,8 @@ const SCIENCE_DIAGRAM_TIPS_EM = {
             <b>7. Mark Breakdown in 7-Mark Questions:</b><br>
             • In Part IV (7-Mark questions), diagrams carry <b>4 Marks for drawing and accurate labeling (minimum 4 to 6 correct labels required)</b>.<br>
             • The remaining <b>3 Marks are allotted for written explanation, working principle, or physiological functions</b>.<br>
-            • Even if you are running out of time, drawing the diagram and labeling 4 parts will secure 4 out of 7 marks instantly!</div>`
+            • Even if you are running out of time, drawing the diagram and labeling 4 parts will secure 4 out of 7 marks instantly!</div>`,
+          audioScript: "Here are the 7 Golden Rules to score full marks in Class 10 Science Diagrams! Rule 1: Always draw outlines and labels with a sharp HB pencil only; never use ballpoint pens. Rule 2: Draw ruler-straight pointer lines that never intersect or cross each other. Rule 3: Neatly align all label names on the right-hand side in clear print letters. Rule 4: Draw generous diagrams occupying half an answer sheet page. Rule 5: Always mark directional arrows on light rays and blood circulation. Rule 6: Write a centered, underlined figure title below every diagram. Rule 7: In 7-mark questions, 4 marks are allotted for the diagram and labeling, and 3 marks for explanation! For 10th standard students to score high marks, download the Vunnal Mudiyum Learn Easily app and share it with your classmates also! All the best!"
         }
       ]
     },
@@ -1093,6 +1121,33 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
           diagram: true,
           q: "அறிவியல் பொதுத்தேர்வில் வரைபட வினாக்களில் முழு மதிப்பெண் பெறுவதற்கான 7 தங்க விதிகள் மற்றும் பாகங்கள் குறிக்கும் முறைகளை விளக்குக.",
           ans: `<div style="line-height:1.8;">
+            <div style="background: linear-gradient(135deg, #0f172a, #1e293b); border: 2px solid #3b82f6; border-radius: 12px; padding: 16px; margin-bottom: 20px; color: #f8fafc; box-shadow: 0 4px 15px rgba(0,0,0,0.25);">
+              <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; border-bottom:1px solid #334155; padding-bottom:10px; margin-bottom:12px;">
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="font-size:22px;">🎬</span>
+                  <b style="font-size:16px; color:#38bdf8;">YouTube Shorts / Reel விளம்பர உரை (60 விநாடிகள்)</b>
+                </div>
+                <span style="background:#2563eb; color:#fff; font-size:12px; font-weight:700; padding:3px 10px; border-radius:20px;">⏱️ 60 விநாடி ஒலி</span>
+              </div>
+              <div style="font-size:14px; margin:0 0 12px 0; color:#e2e8f0; line-height:1.7;">
+                <b>சுருக்கமான 60 விநாடித் திரைப்பதிவு உரை:</b><br>
+                "10-ஆம் வகுப்பு அறிவியல் வரைபடங்களில் முழு மதிப்பெண் பெற 7 தங்க விதிகள்!<br>
+                • <b>விதி 1:</b> கூர்மையான HB பென்சிலை மட்டுமே பயன்படுத்துங்கள், பேனாவைத் தவிருங்கள்.<br>
+                • <b>விதி 2:</b> அளவுகோலால் ஒன்றையொன்று வெட்டாத நேரான வழிகாட்டுக் கோடுகளை வரைக.<br>
+                • <b>விதி 3:</b> அனைத்துப் பாகங்களையும் வலது பக்கத்தில் ஒரே நேர்க்கோட்டில் தெளிவாக எழுதுங்கள்.<br>
+                • <b>விதி 4:</b> அரைப் பக்க அளவிற்குத் தாராளமான அளவில் படம் வரைக.<br>
+                • <b>விதி 5:</b> ஒளிக்கதிர்கள் மற்றும் இரத்த ஓட்டத்திற்குத் திசைக் காட்டும் அம்புக்குறிகள் கட்டாயம்.<br>
+                • <b>விதி 6:</b> படத்தின் கீழ் மையமாகத் தலைப்பை எழுதி அடிக்கோடிடுங்கள்.<br>
+                • <b>விதி 7:</b> 7 மதிப்பெண் வினாவில் 4 மதிப்பெண் படத்திற்கும், 3 மதிப்பெண் விளக்கத்திற்கும் உரியது!"
+              </div>
+              <div style="background:rgba(59, 130, 246, 0.15); border-left:4px solid #60a5fa; border-radius:6px; padding:10px 12px; margin-bottom:14px; font-size:13.5px; color:#93c5fd;">
+                📢 <b>நிறைவுரை (Promo Outro):</b><br>
+                <i>"10-ஆம் வகுப்பு மாணவர்கள் அதிக மதிப்பெண்கள் பெற, <b>உன்னால் முடியும் Learn Easily</b> ஆப் டவுன்லோட் செய்யுங்கள், உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள்! ஆல் தி பெஸ்ட்!"</i>
+              </div>
+              <button type="button" onclick="teacherAudioPlayer.play('sci_tm_dt_1')" style="width:100%; display:flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg, #2563eb, #1d4ed8); color:#fff; font-weight:700; font-size:14px; padding:11px 16px; border:none; border-radius:8px; cursor:pointer; box-shadow:0 3px 8px rgba(37,99,235,0.4);">
+                <span>▶️</span> <span>60 விநாடி விளம்பர ஒலியைக் கேட்க (திரைப்பதிவுக்கு)</span>
+              </button>
+            </div>
             <b>10-ஆம் வகுப்பு அறிவியல் பொதுத்தேர்வு: வரைபட வழிகாட்டல் சிறப்புத் தொகுப்பு</b><br><br>
             அரசுப் பொதுத்தேர்வு வினாத்தாள் பகுதி IV-ல் (வினா எண் 33, 34, 35) கேட்கப்படும் 7 மதிப்பெண் வினாக்களில் வரைபடங்கள் மிக முக்கியமான இடத்தைப் பெறுகின்றன. முழு மதிப்பெண் (100%) பெற பின்வரும் 7 தங்க விதிகளைப் பின்பற்றுங்கள்:<br><br>
             <b>1. கூர்மையான HB பென்சில் மட்டுமே:</b><br>
@@ -1117,7 +1172,8 @@ const SCIENCE_DIAGRAM_TIPS_TM = {
             • வரைபடத்தின் கீழ்ப் பகுதியில் மையமாக <u>படம்: மனித இதயத்தின் உள்ளமைப்பு</u> எனப் படத்தின் பெயரைத் தெளிவாக எழுதி அடிக்கோடிட வேண்டும்.<br><br>
             <b>7. பகுதி IV மதிப்பெண் பங்கீடு (4M படம் + 3M விளக்கம்):</b><br>
             • 7 மதிப்பெண் வினாவில் வரைபடத்திற்கு <b>4 மதிப்பெண்களும் (படம் + குறைந்தபட்சம் 4 சரியான பாகங்கள்)</b>, விளக்கத்திற்கு <b>3 மதிப்பெண்களும்</b> வழக்கமாகப் பிரிக்கப்படுகின்றன.<br>
-            • நேரம் குறைவாக இருந்தாலும், படத்தை வரைந்து 4 பாகங்களைக் குறித்தாலே உடனடியாக 4 மதிப்பெண்களை உறுதி செய்துவிடலாம்!</div>`
+            • நேரம் குறைவாக இருந்தாலும், படத்தை வரைந்து 4 பாகங்களைக் குறித்தாலே உடனடியாக 4 மதிப்பெண்களை உறுதி செய்துவிடலாம்!</div>`,
+          audioScript: "10-ஆம் வகுப்பு அறிவியல் வரைபடங்களில் முழு மதிப்பெண் பெற 7 தங்க விதிகள்! விதி 1: கூர்மையான HB பென்சிலை மட்டுமே பயன்படுத்துங்கள், பேனாவைத் தவிருங்கள். விதி 2: அளவுகோலால் ஒன்றையொன்று வெட்டாத நேரான வழிகாட்டுக் கோடுகளை வரைக. விதி 3: அனைத்துப் பாகங்களையும் வலது பக்கத்தில் ஒரே நேர்க்கோட்டில் தெளிவாக எழுதுங்கள். விதி 4: அரைப் பக்க அளவிற்குத் தாராளமான அளவில் படம் வரைக. விதி 5: ஒளிக்கதிர்கள் மற்றும் இரத்த ஓட்டத்திற்குத் திசைக் காட்டும் அம்புக்குறிகள் கட்டாயம். விதி 6: படத்தின் கீழ் மையமாகத் தலைப்பை எழுதி அடிக்கோடிடுங்கள். விதி 7: 7 மதிப்பெண் வினாவில் 4 மதிப்பெண் படத்திற்கும், 3 மதிப்பெண் விளக்கத்திற்கும் உரியது! 10-ஆம் வகுப்பு மாணவர்கள் அதிக மதிப்பெண்கள் பெற, உன்னால் முடியும் Learn Easily ஆப் டவுன்லோட் செய்யுங்கள், உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள்! ஆல் தி பெஸ்ட்!"
         }
       ]
     },

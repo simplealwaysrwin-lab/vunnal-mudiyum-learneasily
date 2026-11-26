@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -165,22 +165,22 @@
 <script src="data_english_u6.js?v=20261124_v125"></script>
 <script src="data_english_u7.js?v=20261124_v125"></script>
 <script src="data_english_writing.js?v=20261116_v84"></script>
-  <script src="data_maths_tm_u1.js?v=20261125_v133"></script>
-<script src="data_maths_tm_u2.js?v=20261125_v133"></script>
-<script src="data_maths_tm_u3.js?v=20261125_v133"></script>
-<script src="data_maths_tm_u4.js?v=20261125_v133"></script>
-<script src="data_maths_tm_u5.js?v=20261125_v133"></script>
-<script src="data_maths_tm_u6.js?v=20261125_v133"></script>
-<script src="data_maths_tm_u7.js?v=20261125_v133"></script>
-<script src="data_maths_tm_u8.js?v=20261125_v133"></script>
-  <script src="data_maths_em_u1.js?v=20261125_v133"></script>
-<script src="data_maths_em_u2.js?v=20261125_v133"></script>
-<script src="data_maths_em_u3.js?v=20261125_v133"></script>
-<script src="data_maths_em_u4.js?v=20261125_v133"></script>
-<script src="data_maths_em_u5.js?v=20261125_v133"></script>
-<script src="data_maths_em_u6.js?v=20261125_v133"></script>
-<script src="data_maths_em_u7.js?v=20261125_v133"></script>
-<script src="data_maths_em_u8.js?v=20261125_v133"></script>
+  <script src="data_maths_tm_u1.js?v=20261125_v134"></script>
+<script src="data_maths_tm_u2.js?v=20261125_v134"></script>
+<script src="data_maths_tm_u3.js?v=20261125_v134"></script>
+<script src="data_maths_tm_u4.js?v=20261125_v134"></script>
+<script src="data_maths_tm_u5.js?v=20261125_v134"></script>
+<script src="data_maths_tm_u6.js?v=20261125_v134"></script>
+<script src="data_maths_tm_u7.js?v=20261125_v134"></script>
+<script src="data_maths_tm_u8.js?v=20261125_v134"></script>
+  <script src="data_maths_em_u1.js?v=20261125_v134"></script>
+<script src="data_maths_em_u2.js?v=20261125_v134"></script>
+<script src="data_maths_em_u3.js?v=20261125_v134"></script>
+<script src="data_maths_em_u4.js?v=20261125_v134"></script>
+<script src="data_maths_em_u5.js?v=20261125_v134"></script>
+<script src="data_maths_em_u6.js?v=20261125_v134"></script>
+<script src="data_maths_em_u7.js?v=20261125_v134"></script>
+<script src="data_maths_em_u8.js?v=20261125_v134"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
 <script src="data_science_u3.js?v=20261031_v31"></script>
@@ -7610,22 +7610,22 @@ function resumeLastVisitedLesson() {
       lesson.qCount = lesson.questions.length;
     } else if ((lesId === 'math_tm_u1' || lesId === 'math_u1') && typeof MATHS_TM_UNIT_1_DATA !== 'undefined' && MATHS_TM_UNIT_1_DATA.subSections) {
       lesson.subSections = MATHS_TM_UNIT_1_DATA.subSections;
-      lesson.questions = MATHS_TM_UNIT_1_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_TM_UNIT_1_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_TM_UNIT_1_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_em_u1' && typeof MATHS_EM_UNIT_1_DATA !== 'undefined' && MATHS_EM_UNIT_1_DATA.subSections) {
       lesson.subSections = MATHS_EM_UNIT_1_DATA.subSections;
-      lesson.questions = MATHS_EM_UNIT_1_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_EM_UNIT_1_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_EM_UNIT_1_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_tm_u2' && typeof MATHS_TM_UNIT_2_DATA !== 'undefined' && MATHS_TM_UNIT_2_DATA.subSections) {
       lesson.subSections = MATHS_TM_UNIT_2_DATA.subSections;
-      lesson.questions = MATHS_TM_UNIT_2_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_TM_UNIT_2_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_TM_UNIT_2_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_em_u2' && typeof MATHS_EM_UNIT_2_DATA !== 'undefined' && MATHS_EM_UNIT_2_DATA.subSections) {
       lesson.subSections = MATHS_EM_UNIT_2_DATA.subSections;
-      lesson.questions = MATHS_EM_UNIT_2_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_EM_UNIT_2_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_EM_UNIT_2_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'sci_u1' && typeof SCIENCE_UNIT_1_DATA !== 'undefined' && SCIENCE_UNIT_1_DATA.subSections) {
@@ -7684,22 +7684,22 @@ function resumeLastVisitedLesson() {
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_tm_u3' && typeof MATHS_TM_UNIT_3_DATA !== 'undefined' && MATHS_TM_UNIT_3_DATA.subSections) {
       lesson.subSections = MATHS_TM_UNIT_3_DATA.subSections;
-      lesson.questions = MATHS_TM_UNIT_3_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_TM_UNIT_3_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_TM_UNIT_3_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_tm_u4' && typeof MATHS_TM_UNIT_4_DATA !== 'undefined' && MATHS_TM_UNIT_4_DATA.subSections) {
       lesson.subSections = MATHS_TM_UNIT_4_DATA.subSections;
-      lesson.questions = MATHS_TM_UNIT_4_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_TM_UNIT_4_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_TM_UNIT_4_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_em_u3' && typeof MATHS_EM_UNIT_3_DATA !== 'undefined' && MATHS_EM_UNIT_3_DATA.subSections) {
       lesson.subSections = MATHS_EM_UNIT_3_DATA.subSections;
-      lesson.questions = MATHS_EM_UNIT_3_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_EM_UNIT_3_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_EM_UNIT_3_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_em_u4' && typeof MATHS_EM_UNIT_4_DATA !== 'undefined' && MATHS_EM_UNIT_4_DATA.subSections) {
       lesson.subSections = MATHS_EM_UNIT_4_DATA.subSections;
-      lesson.questions = MATHS_EM_UNIT_4_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_EM_UNIT_4_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_EM_UNIT_4_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'sci_u3' && typeof SCIENCE_UNIT_3_DATA !== 'undefined' && SCIENCE_UNIT_3_DATA.subSections) {
@@ -8217,22 +8217,22 @@ function resumeLastVisitedLesson() {
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_tm_u5' && typeof MATHS_TM_UNIT_5_DATA !== 'undefined' && MATHS_TM_UNIT_5_DATA.subSections) {
       lesson.subSections = MATHS_TM_UNIT_5_DATA.subSections;
-      lesson.questions = MATHS_TM_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_TM_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_TM_UNIT_5_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_tm_u6' && typeof MATHS_TM_UNIT_6_DATA !== 'undefined' && MATHS_TM_UNIT_6_DATA.subSections) {
       lesson.subSections = MATHS_TM_UNIT_6_DATA.subSections;
-      lesson.questions = MATHS_TM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_TM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_TM_UNIT_6_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_em_u5' && typeof MATHS_EM_UNIT_5_DATA !== 'undefined' && MATHS_EM_UNIT_5_DATA.subSections) {
       lesson.subSections = MATHS_EM_UNIT_5_DATA.subSections;
-      lesson.questions = MATHS_EM_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_EM_UNIT_5_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_EM_UNIT_5_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_em_u6' && typeof MATHS_EM_UNIT_6_DATA !== 'undefined' && MATHS_EM_UNIT_6_DATA.subSections) {
       lesson.subSections = MATHS_EM_UNIT_6_DATA.subSections;
-      lesson.questions = MATHS_EM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_EM_UNIT_6_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_EM_UNIT_6_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'tam_u7' && typeof TAMIL_UNIT_7_DATA !== 'undefined' && TAMIL_UNIT_7_DATA.subSections) {
@@ -8291,22 +8291,22 @@ function resumeLastVisitedLesson() {
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_tm_u7' && typeof MATHS_TM_UNIT_7_DATA !== 'undefined' && MATHS_TM_UNIT_7_DATA.subSections) {
       lesson.subSections = MATHS_TM_UNIT_7_DATA.subSections;
-      lesson.questions = MATHS_TM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_TM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_TM_UNIT_7_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_tm_u8' && typeof MATHS_TM_UNIT_8_DATA !== 'undefined' && MATHS_TM_UNIT_8_DATA.subSections) {
       lesson.subSections = MATHS_TM_UNIT_8_DATA.subSections;
-      lesson.questions = MATHS_TM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_TM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_TM_UNIT_8_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_em_u7' && typeof MATHS_EM_UNIT_7_DATA !== 'undefined' && MATHS_EM_UNIT_7_DATA.subSections) {
       lesson.subSections = MATHS_EM_UNIT_7_DATA.subSections;
-      lesson.questions = MATHS_EM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_EM_UNIT_7_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_EM_UNIT_7_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'math_em_u8' && typeof MATHS_EM_UNIT_8_DATA !== 'undefined' && MATHS_EM_UNIT_8_DATA.subSections) {
       lesson.subSections = MATHS_EM_UNIT_8_DATA.subSections;
-      lesson.questions = MATHS_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.questions = MATHS_EM_UNIT_8_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, subSectionId: q.subSectionId || s.id, sectionTitle: s.title, author: s.author })));
       lesson.formulas = MATHS_EM_UNIT_8_DATA.formulas || [];
       lesson.qCount = lesson.questions.length;
     }
@@ -8650,6 +8650,26 @@ function resumeLastVisitedLesson() {
     }
 
     // --- OTHERWISE: Render Q&A Bank ---
+    const isEm = Boolean(currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english'));
+    const isEnglish = Boolean(currentSubject && currentSubject.id === 'english');
+    const isMath = Boolean(currentSubject && (currentSubject.id.includes('maths') || currentSubject.id.includes('math')));
+    const isTm = Boolean(currentSubject && (currentSubject.id.endsWith('_tm') || currentSubject.id === 'tamil'));
+    const isScience = Boolean(currentSubject && currentSubject.id.startsWith('science'));
+    const isSocial = Boolean(currentSubject && (currentSubject.id.startsWith('social') || currentSubject.id === 'social_science'));
+
+    const isGraphOrDiagramQuestion = (q) => {
+      if (!q) return false;
+      if (q.diagramSvg || q.diagram || q.diagramImg || q.isGraph) return true;
+      if (typeof q.ans === 'string' && (q.ans.includes('<svg') || q.ans.includes('ai-svg-diagram-wrapper'))) return true;
+      if (isMath) {
+        const secId = (q.subSectionId || '').toLowerCase();
+        const secTitle = (q.sectionTitle || '').toLowerCase();
+        if (secId.includes('graph') || secId.includes('geo')) return true;
+        if (secTitle.includes('graph') || secTitle.includes('geometry') || (q.sectionTitle && (q.sectionTitle.includes('\u0BB5\u0BB0\u0BC8\u0BAA\u0B9F\u0BAE\u0BCD') || q.sectionTitle.includes('\u0BB5\u0B9F\u0BBF\u0BB5\u0BBF\u0BAF\u0BB2\u0BCD')))) return true;
+      }
+      return false;
+    };
+
     let filteredQ = allQuestions;
 
     // Filter by SubSection (unless viewing extra questions filter batch)
@@ -8678,11 +8698,11 @@ function resumeLastVisitedLesson() {
     } else if (currentFilter === 'checkpoints') {
       filteredQ = filteredQ.filter(q => q.checkpoints && q.checkpoints.length > 0);
     } else if (currentFilter === 'diagram') {
-      filteredQ = filteredQ.filter(q => q.diagramSvg || q.diagram || q.diagramImg || q.isGraph || (isMath && q.subSectionId && q.subSectionId.includes('graph')) || (q.ans && (q.ans.includes('<svg') || q.ans.includes('ai-svg-diagram-wrapper'))));
+      filteredQ = filteredQ.filter(isGraphOrDiagramQuestion);
     } else if (currentFilter === 'public' || currentFilter === '2025') {
       filteredQ = filteredQ.filter(q => q.examYear || q.examTag || q.isImportant);
     } else if (currentFilter === 'extra') {
-      filteredQ = filteredQ.filter(q => q.isAdditionalPractice || (q.sectionTag && (q.sectionTag.includes('Additional Practice') || q.sectionTag.includes('à®•à¯‚à®Ÿà¯à®¤à®²à¯ à®µà®¿à®©à®¾') || q.sectionTag.includes('Extra'))) || (q.subSectionId && q.subSectionId.includes('add_practice')) || (q.id && q.id.includes('_add_')));
+      filteredQ = filteredQ.filter(q => q.isAdditionalPractice || (q.sectionTag && (q.sectionTag.includes('Additional Practice') || q.sectionTag.includes('\u0B95\u0BC2\u0B9F\u0BC1\u0BA4\u0BB2\u0BCD \u0BB5\u0BBF\u0BA9\u0BBE') || q.sectionTag.includes('Extra'))) || (q.subSectionId && q.subSectionId.includes('add_practice')) || (q.id && q.id.includes('_add_')));
     }
 
     // Filter by Search Query
@@ -8696,12 +8716,6 @@ function resumeLastVisitedLesson() {
       );
     }
 
-    const isEm = currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english');
-    const isEnglish = currentSubject && currentSubject.id === 'english';
-    const isMath = currentSubject && (currentSubject.id.includes('maths') || currentSubject.id.includes('math'));
-    const isTm = currentSubject && (currentSubject.id.endsWith('_tm') || currentSubject.id === 'tamil');
-    const isScience = currentSubject && currentSubject.id.startsWith('science');
-    const isSocial = currentSubject && (currentSubject.id.startsWith('social') || currentSubject.id === 'social_science');
     const countPublic = allQuestions.filter(q => q.examYear || q.examTag || q.isImportant).length;
     const count1M = allQuestions.filter(q => q.type === '1m' || (q.mark && q.mark.includes('1'))).length;
     const twoMarkQuestions = allQuestions.filter(q => q.type === '2m' || (q.mark && q.mark.includes('2')));
@@ -8710,8 +8724,8 @@ function resumeLastVisitedLesson() {
     const count7M = allQuestions.filter(q => q.type === '7m' || q.type === '5m' || (q.mark && (q.mark.includes('7') || q.mark.includes('4 / 7') || q.mark.includes('5')))).length;
     const count5M = allQuestions.filter(q => q.type === '5m' || q.type === '4m' || (q.mark && (q.mark.includes('5') || q.mark.includes('4')))).length;
     const count8M = allQuestions.filter(q => q.type === '8m' || (q.mark && q.mark.includes('8')) || q.is8Mark || (q.subSectionId && (q.subSectionId.includes('geo') || q.subSectionId.includes('graph') || q.subSectionId.includes('map') || q.subSectionId.includes('timeline')))).length;
-    const countDiag = allQuestions.filter(q => q.diagramSvg || q.diagram || q.diagramImg || q.isGraph || (isMath && q.subSectionId && q.subSectionId.includes('graph')) || (q.ans && (q.ans.includes('<svg') || q.ans.includes('ai-svg-diagram-wrapper')))).length;
-    const countExtra = allQuestions.filter(q => q.isAdditionalPractice || (q.sectionTag && (q.sectionTag.includes('Additional Practice') || q.sectionTag.includes('à®•à¯‚à®Ÿà¯à®¤à®²à¯ à®µà®¿à®©à®¾') || q.sectionTag.includes('Extra'))) || (q.subSectionId && q.subSectionId.includes('add_practice')) || (q.id && q.id.includes('_add_'))).length;
+    const countDiag = allQuestions.filter(isGraphOrDiagramQuestion).length;
+    const countExtra = allQuestions.filter(q => q.isAdditionalPractice || (q.sectionTag && (q.sectionTag.includes('Additional Practice') || q.sectionTag.includes('\u0B95\u0BC2\u0B9F\u0BC1\u0BA4\u0BB2\u0BCD \u0BB5\u0BBF\u0BA9\u0BBE') || q.sectionTag.includes('Extra'))) || (q.subSectionId && q.subSectionId.includes('add_practice')) || (q.id && q.id.includes('_add_'))).length;
     const countCheckpoints = allQuestions.filter(q => q.checkpoints && q.checkpoints.length > 0).length;
     const hasManapaadam = currentLesson && currentLesson.manapaadam && currentLesson.manapaadam.length > 0;
     const manapaadamCount = hasManapaadam ? currentLesson.manapaadam.length : 0;
@@ -9374,7 +9388,7 @@ function resumeLastVisitedLesson() {
                           </div>
                           <div class="diagram-caption">${item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்')}</div>
                         </div>
-                      ` : item.diagramSvg ? `
+                      ` : (item.diagramSvg && typeof item.diagramSvg === 'string') ? `
                         <div class="diagram-box">
                           <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
                             <span style="display:inline-flex; align-items:center; gap:6px;">🎨 ${isEm || isEnglish ? 'Textbook Geometric Illustration' : (isTm ? 'பாட விளக்க வரைபடம்' : 'பாட விளக்க வரைபடம் (Textbook Illustration)')}</span>
@@ -9529,7 +9543,7 @@ function resumeLastVisitedLesson() {
                         </div>
                       `;
                     })()}
-                  ` : item.diagramSvg ? `
+                  ` : (item.diagramSvg && typeof item.diagramSvg === 'string') ? `
 
                     <div class="diagram-box">
                       <div style="font-size:12.5px; font-weight:800; color:var(--primary); margin-bottom:10px; display:flex; align-items:center; justify-content:space-between; gap:6px; flex-wrap:wrap;">
@@ -14847,7 +14861,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261125_v133')
+        navigator.serviceWorker.register('./sw.js?v=20261125_v134')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
@@ -165,22 +165,23 @@
 <script src="data_english_u6.js?v=20261124_v125"></script>
 <script src="data_english_u7.js?v=20261124_v125"></script>
 <script src="data_english_writing.js?v=20261116_v84"></script>
-  <script src="data_maths_tm_u1.js?v=20261125_v134"></script>
-<script src="data_maths_tm_u2.js?v=20261125_v134"></script>
-<script src="data_maths_tm_u3.js?v=20261125_v134"></script>
-<script src="data_maths_tm_u4.js?v=20261125_v134"></script>
-<script src="data_maths_tm_u5.js?v=20261125_v134"></script>
-<script src="data_maths_tm_u6.js?v=20261125_v134"></script>
-<script src="data_maths_tm_u7.js?v=20261125_v134"></script>
-<script src="data_maths_tm_u8.js?v=20261125_v134"></script>
-  <script src="data_maths_em_u1.js?v=20261125_v134"></script>
-<script src="data_maths_em_u2.js?v=20261125_v134"></script>
-<script src="data_maths_em_u3.js?v=20261125_v134"></script>
-<script src="data_maths_em_u4.js?v=20261125_v134"></script>
-<script src="data_maths_em_u5.js?v=20261125_v134"></script>
-<script src="data_maths_em_u6.js?v=20261125_v134"></script>
-<script src="data_maths_em_u7.js?v=20261125_v134"></script>
-<script src="data_maths_em_u8.js?v=20261125_v134"></script>
+  <script src="data_maths_tm_u1.js?v=20261126_v135"></script>
+<script src="data_maths_tm_u2.js?v=20261126_v135"></script>
+<script src="data_maths_tm_u3.js?v=20261126_v135"></script>
+<script src="data_maths_tm_u4.js?v=20261126_v135"></script>
+<script src="data_maths_tm_u5.js?v=20261126_v135"></script>
+<script src="data_maths_tm_u6.js?v=20261126_v135"></script>
+<script src="data_maths_tm_u7.js?v=20261126_v135"></script>
+<script src="data_maths_tm_u8.js?v=20261126_v135"></script>
+  <script src="data_maths_em_u1.js?v=20261126_v135"></script>
+<script src="data_maths_em_u2.js?v=20261126_v135"></script>
+<script src="data_maths_em_u3.js?v=20261126_v135"></script>
+<script src="data_maths_em_u4.js?v=20261126_v135"></script>
+<script src="data_maths_em_u5.js?v=20261126_v135"></script>
+<script src="data_maths_em_u6.js?v=20261126_v135"></script>
+<script src="data_maths_em_u7.js?v=20261126_v135"></script>
+<script src="data_maths_em_u8.js?v=20261126_v135"></script>
+<script src="data_science_diagram_tips.js?v=20261126_v135"></script>
 <script src="data_science_u1.js?v=20261031_v31"></script>
 <script src="data_science_u2.js?v=20261031_v31"></script>
 <script src="data_science_u3.js?v=20261031_v31"></script>
@@ -5193,6 +5194,15 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
         color: '#16a34a',
         lessons: [
           {
+            id: 'sci_diag_tips',
+            unit: '🎨 வரைபடங்கள் (Diagrams)',
+            title: 'அறிவியல் வரைபடக் குறிப்புகள் & முக்கியப் படங்கள் (Science Diagram Tips)',
+            qCount: (typeof SCIENCE_DIAGRAM_TIPS_TM !== 'undefined' && SCIENCE_DIAGRAM_TIPS_TM.subSections) ? SCIENCE_DIAGRAM_TIPS_TM.subSections.reduce((s, x) => s + x.questions.length, 0) : 12,
+            subSections: (typeof SCIENCE_DIAGRAM_TIPS_TM !== 'undefined') ? SCIENCE_DIAGRAM_TIPS_TM.subSections : [],
+            questions: (typeof SCIENCE_DIAGRAM_TIPS_TM !== 'undefined' && SCIENCE_DIAGRAM_TIPS_TM.subSections) ? SCIENCE_DIAGRAM_TIPS_TM.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_DIAGRAM_TIPS_TM !== 'undefined') ? SCIENCE_DIAGRAM_TIPS_TM.formulas : []
+          },
+          {
             id: 'sci_u1',
             unit: 'அலகு 1',
             title: 'இயக்க விதிகள் (Laws of Motion)',
@@ -5410,6 +5420,15 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
         bgColor: '#ecfdf5',
         color: '#059669',
         lessons: [
+          {
+            id: 'sci_em_diag_tips',
+            unit: '🎨 Diagram Master',
+            title: 'Science Diagram Master Tips & High-Scoring Diagrams',
+            qCount: (typeof SCIENCE_DIAGRAM_TIPS_EM !== 'undefined' && SCIENCE_DIAGRAM_TIPS_EM.subSections) ? SCIENCE_DIAGRAM_TIPS_EM.subSections.reduce((s, x) => s + x.questions.length, 0) : 12,
+            subSections: (typeof SCIENCE_DIAGRAM_TIPS_EM !== 'undefined') ? SCIENCE_DIAGRAM_TIPS_EM.subSections : [],
+            questions: (typeof SCIENCE_DIAGRAM_TIPS_EM !== 'undefined' && SCIENCE_DIAGRAM_TIPS_EM.subSections) ? SCIENCE_DIAGRAM_TIPS_EM.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author }))) : [],
+            formulas: (typeof SCIENCE_DIAGRAM_TIPS_EM !== 'undefined') ? SCIENCE_DIAGRAM_TIPS_EM.formulas : []
+          },
           {
             id: 'sci_em_u1',
             unit: 'Unit 1',
@@ -7525,6 +7544,21 @@ function resumeLastVisitedLesson() {
 
       
 
+      ${(currentSubject && currentSubject.id.startsWith('science')) ? `
+        <div style="background:linear-gradient(135deg, #064e3b, #0f172a); border:1.5px solid #10b981; border-radius:14px; padding:16px 20px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; box-shadow:0 8px 24px rgba(16,185,129,0.25);">
+          <div style="display:flex; align-items:center; gap:14px;">
+            <span style="font-size:38px;">🎨</span>
+            <div>
+              <div style="font-size:17px; font-weight:800; color:#34d399;">${isEm ? 'Science Diagram Master Tips & High-Scoring Figures 🔥' : 'அறிவியல் வரைபடக் குறிப்புகள் & முக்கியப் படங்கள் 🔥'}</div>
+              <div style="font-size:12.5px; color:#cbd5e1; margin-top:3px;">${isEm ? 'Public Exam 2026 Revision Guide • 7 Golden Labeling Rules • 4M Diagram + 3M Theory Split • 12 High-Weightage Figures' : 'அரசுப் பொதுத்தேர்வு வரைபட வழிகாட்டல் • 7 தங்க விதிகள் • 4M படம் + 3M விளக்கம் • 12 முக்கிய வரைபடங்கள்'}</div>
+            </div>
+          </div>
+          <button type="button" class="tab-btn" onclick="selectLesson('${isEm ? 'sci_em_diag_tips' : 'sci_diag_tips'}')" style="background:linear-gradient(135deg, #059669, #10b981); color:#fff; font-weight:800; font-size:14px; padding:10px 20px; border-radius:10px; border:none; box-shadow:0 4px 14px rgba(16,185,129,0.4); cursor:pointer;">
+            ${isEm ? '🚀 Open Diagram Tips & Figures ➔' : '🚀 வரைபடக் குறிப்புகள் & படங்கள் ➔'}
+          </button>
+        </div>
+      ` : ''}
+
       ${isSocial ? `
         <div style="background:linear-gradient(135deg, #0f172a, #1e293b); border:1.5px solid #0284c7; border-radius:14px; padding:16px 20px; margin-bottom:20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; box-shadow:0 8px 24px rgba(2,132,199,0.25);">
           <div style="display:flex; align-items:center; gap:14px;">
@@ -7590,6 +7624,19 @@ function resumeLastVisitedLesson() {
   function resolveLessonData(lesson) {
     if (!lesson) return;
     const lesId = (lesson.id === 'math_u1' || lesson.id === 'maths_u1') ? 'math_tm_u1' : lesson.id;
+    if (lesId === 'sci_em_diag_tips' && typeof SCIENCE_DIAGRAM_TIPS_EM !== 'undefined' && SCIENCE_DIAGRAM_TIPS_EM.subSections) {
+      lesson.subSections = SCIENCE_DIAGRAM_TIPS_EM.subSections;
+      lesson.questions = SCIENCE_DIAGRAM_TIPS_EM.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_DIAGRAM_TIPS_EM.formulas || [];
+      lesson.qCount = lesson.questions.length;
+      return;
+    } else if (lesId === 'sci_diag_tips' && typeof SCIENCE_DIAGRAM_TIPS_TM !== 'undefined' && SCIENCE_DIAGRAM_TIPS_TM.subSections) {
+      lesson.subSections = SCIENCE_DIAGRAM_TIPS_TM.subSections;
+      lesson.questions = SCIENCE_DIAGRAM_TIPS_TM.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.formulas = SCIENCE_DIAGRAM_TIPS_TM.formulas || [];
+      lesson.qCount = lesson.questions.length;
+      return;
+    } else 
     if (lesId === 'tam_u1' && typeof TAMIL_UNIT_1_DATA !== 'undefined' && TAMIL_UNIT_1_DATA.subSections) {
       lesson.subSections = TAMIL_UNIT_1_DATA.subSections;
       lesson.questions = TAMIL_UNIT_1_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
@@ -14861,7 +14908,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261125_v134')
+        navigator.serviceWorker.register('./sw.js?v=20261126_v135')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

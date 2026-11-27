@@ -7,7 +7,17 @@ const SOCIAL_EM_UNIT_1_DATA = {
   subject: "Social Science (English Medium)",
   syllabus: "Tamil Nadu State Board Samacheer Kalvi Class 10 Social Science",
 
-  subSections: [
+    // Important Timeline Events from SSLC Public Exam Practice
+  timeline: [
+    { year: "1914", event: "World War I began" },
+    { year: "28 June 1914", event: "Assassination at Sarajevo" },
+    { year: "1917", event: "USA entered World War I" },
+    { year: "11 November 1918", event: "Armistice" },
+    { year: "28 June 1919", event: "Treaty of Versailles" },
+    { year: "1920", event: "League of Nations established" }
+  ],
+
+subSections: [
     // -------------------------------------------------------------
     // Section 1: Scramble for Colonies & Rivalry of Great Powers
     // -------------------------------------------------------------
@@ -687,6 +697,530 @@ const SOCIAL_EM_UNIT_1_DATA = {
           explanation: "Allied Powers (Britain, France, Russia, Italy) vs Central Powers (Germany, Austria-Hungary, Turkey) and the spark at Sarajevo.",
           diagramImg: "images/soc_ww1_map.jpg",
           diagramCaption: "World Map: World War I - Allied and Central Powers (1914)"
+        }
+      ]
+    }
+,
+    // -------------------------------------------------------------
+    // Additional Practice Questions (SSLC Public Exam High-Yield Q&A)
+    // -------------------------------------------------------------
+    {
+      id: "sec_soc_em_1_extra",
+      title: "Additional Practice Questions (SSLC Public Exam High-Yield Q&A)",
+      author: "History Unit 1: Outbreak of World War I and its Aftermath - Additional Practice Guide",
+      isAdditionalPractice: true,
+      questions: [
+        {
+          id: "soc_em_1_extra_1m_1",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "1m",
+          mark: "1 Mark",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (1M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Which country was known as the sick man of Europe?",
+          ans: `<div style="line-height:1.8;">
+Ottoman Empire.<br>
+</div>`,
+          explanation: "Ottoman Empire.",
+          audioScript: "Question: Which country was known as the sick man of Europe?. Answer: Ottoman Empire."
+        },
+        {
+          id: "soc_em_1_extra_1m_2",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "1m",
+          mark: "1 Mark",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (1M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "What was the immediate cause of World War I?",
+          ans: `<div style="line-height:1.8;">
+Assassination of Archduke Franz Ferdinand.<br>
+</div>`,
+          explanation: "Assassination of Archduke Franz Ferdinand.",
+          audioScript: "Question: What was the immediate cause of World War I?. Answer: Assassination of Archduke Franz Ferdinand."
+        },
+        {
+          id: "soc_em_1_extra_1m_3",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "1m",
+          mark: "1 Mark",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (1M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Who assassinated Archduke Franz Ferdinand?",
+          ans: `<div style="line-height:1.8;">
+Gavrilo Princip.<br>
+</div>`,
+          explanation: "Gavrilo Princip.",
+          audioScript: "Question: Who assassinated Archduke Franz Ferdinand?. Answer: Gavrilo Princip."
+        },
+        {
+          id: "soc_em_1_extra_1m_4",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "1m",
+          mark: "1 Mark",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (1M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "In which year did World War I begin?",
+          ans: `<div style="line-height:1.8;">
+1914.<br>
+</div>`,
+          explanation: "1914.",
+          audioScript: "Question: In which year did World War I begin?. Answer: 1914."
+        },
+        {
+          id: "soc_em_1_extra_1m_5",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "1m",
+          mark: "1 Mark",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (1M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Which country was defeated in the Battle of Tannenberg?",
+          ans: `<div style="line-height:1.8;">
+Russia.<br>
+</div>`,
+          explanation: "Russia.",
+          audioScript: "Question: Which country was defeated in the Battle of Tannenberg?. Answer: Russia."
+        },
+        {
+          id: "soc_em_1_extra_1m_6",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "1m",
+          mark: "1 Mark",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (1M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "What was the name of the German unrestricted submarine warfare campaign?",
+          ans: `<div style="line-height:1.8;">
+Unrestricted U-boat warfare.<br>
+</div>`,
+          explanation: "Unrestricted U boat warfare.",
+          audioScript: "Question: What was the name of the German unrestricted submarine warfare campaign?. Answer: Unrestricted U boat warfare."
+        },
+        {
+          id: "soc_em_1_extra_1m_7",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "1m",
+          mark: "1 Mark",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (1M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Which treaty ended the war between Germany and the Allied Powers?",
+          ans: `<div style="line-height:1.8;">
+Treaty of Versailles.<br>
+</div>`,
+          explanation: "Treaty of Versailles.",
+          audioScript: "Question: Which treaty ended the war between Germany and the Allied Powers?. Answer: Treaty of Versailles."
+        },
+        {
+          id: "soc_em_1_extra_1m_8",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "1m",
+          mark: "1 Mark",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (1M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Who was the American President during the end of World War I?",
+          ans: `<div style="line-height:1.8;">
+Woodrow Wilson.<br>
+</div>`,
+          explanation: "Woodrow Wilson.",
+          audioScript: "Question: Who was the American President during the end of World War I?. Answer: Woodrow Wilson."
+        },
+        {
+          id: "soc_em_1_extra_1m_9",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "1m",
+          mark: "1 Mark",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (1M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Where was the League of Nations headquarters located?",
+          ans: `<div style="line-height:1.8;">
+Geneva, Switzerland.<br>
+</div>`,
+          explanation: "Geneva, Switzerland.",
+          audioScript: "Question: Where was the League of Nations headquarters located?. Answer: Geneva, Switzerland."
+        },
+        {
+          id: "soc_em_1_extra_1m_10",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "1m",
+          mark: "1 Mark",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (1M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "In which year was the Treaty of Versailles signed?",
+          ans: `<div style="line-height:1.8;">
+1919.<br>
+</div>`,
+          explanation: "1919.",
+          audioScript: "Question: In which year was the Treaty of Versailles signed?. Answer: 1919."
+        },
+        {
+          id: "soc_em_1_extra_2m_1",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "2m",
+          mark: "2 Marks",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (2M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "What is Militarism?",
+          ans: `<div style="line-height:1.8;">
+Militarism is a policy of maintaining strong armed forces and preparing for war. It increased tension among European nations before World War I.<br>
+</div>`,
+          explanation: "Militarism is a policy of maintaining strong armed forces and preparing for war. It increased tension among European nations before World War I.",
+          audioScript: "Two marks question: What is Militarism?. The key points are: Militarism is a policy of maintaining strong armed forces and preparing for war. It increased tension among European nations before World War I."
+        },
+        {
+          id: "soc_em_1_extra_2m_2",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "2m",
+          mark: "2 Marks",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (2M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "What was the Triple Entente?",
+          ans: `<div style="line-height:1.8;">
+The alliance formed by Britain, France and Russia was known as the Triple Entente.<br>
+</div>`,
+          explanation: "The alliance formed by Britain, France and Russia was known as the Triple Entente.",
+          audioScript: "Two marks question: What was the Triple Entente?. The key points are: The alliance formed by Britain, France and Russia was known as the Triple Entente."
+        },
+        {
+          id: "soc_em_1_extra_2m_3",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "2m",
+          mark: "2 Marks",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (2M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "What was the Triple Alliance?",
+          ans: `<div style="line-height:1.8;">
+The alliance formed by Germany, Austria-Hungary and Italy was known as the Triple Alliance.<br>
+</div>`,
+          explanation: "The alliance formed by Germany, Austria Hungary and Italy was known as the Triple Alliance.",
+          audioScript: "Two marks question: What was the Triple Alliance?. The key points are: The alliance formed by Germany, Austria Hungary and Italy was known as the Triple Alliance."
+        },
+        {
+          id: "soc_em_1_extra_2m_4",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "2m",
+          mark: "2 Marks",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (2M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Why did the United States enter World War I?",
+          ans: `<div style="line-height:1.8;">
+:<br><br>
+• Germany resumed unrestricted submarine warfare.<br>
+• The Zimmermann Telegram proposed a German-Mexican alliance against the United States.<br><br>
+These events led the United States to declare war on Germany in April 1917.<br>
+</div>`,
+          explanation: ": Germany resumed unrestricted submarine warfare. The Zimmermann Telegram proposed a German Mexican alliance against the United States.",
+          audioScript: "Two marks question: Why did the United States enter World War I?. The key points are: : Germany resumed unrestricted submarine warfare. The Zimmermann Telegram proposed a German Mexican alliance against the United States. These events led the United States to declare war on Germany in April 1917."
+        },
+        {
+          id: "soc_em_1_extra_2m_5",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "2m",
+          mark: "2 Marks",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (2M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Mention any two terms of the Treaty of Versailles.",
+          ans: `<div style="line-height:1.8;">
+:<br><br>
+• Germany was held responsible for the war and required to pay reparations.<br>
+• Germany lost territories and had its military strength restricted.<br>
+</div>`,
+          explanation: ": Germany was held responsible for the war and required to pay reparations. Germany lost territories and had its military strength restricted.",
+          audioScript: "Two marks question: Mention any two terms of the Treaty of Versailles.. The key points are: : Germany was held responsible for the war and required to pay reparations. Germany lost territories and had its military strength restricted."
+        },
+        {
+          id: "soc_em_1_extra_2m_6",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "2m",
+          mark: "2 Marks",
+          examYear: "2025/2026",
+          examTag: "Extra Practice (2M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "What was the Zimmermann Telegram?",
+          ans: `<div style="line-height:1.8;">
+It was a secret German communication proposing an alliance with Mexico against the United States in 1917.<br>
+</div>`,
+          explanation: "It was a secret German communication proposing an alliance with Mexico against the United States in 1917.",
+          audioScript: "Two marks question: What was the Zimmermann Telegram?. The key points are: It was a secret German communication proposing an alliance with Mexico against the United States in 1917."
+        },
+        {
+          id: "soc_em_1_extra_5m_1",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "5m",
+          mark: "5 Marks (4 / 5 Marks)",
+          examYear: "2025/2026",
+          examTag: "Extra Detailed (5M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Explain the major causes of the First World War.",
+          ans: `<div style="line-height:1.8;">
+:<br><br>
+The major causes of World War I were:<br><br>
+<b>1. Militarism:</b> European countries increased their military strength and weapons.<br>
+<b>2. Alliance System:</b> Europe was divided into rival military alliances.<br>
+<b>3. Imperialism:</b> European nations competed to acquire colonies and resources.<br>
+<b>4. Nationalism:</b> Extreme national pride created conflicts among nations.<br>
+<b>5. Immediate Cause:</b> Assassination of Archduke Franz Ferdinand on 28 June 1914.<br>
+</div>`,
+          explanation: ": The major causes of World War I were: 1. Militarism: European countries increased their military strength and weapons.",
+          audioScript: "Detailed five marks question: Explain the major causes of the First World War.. Here are the essential points: : The major causes of World War I were: 1. Militarism: European countries increased their military strength and weapons. 2. Alliance System: Europe was divided into rival military alliances. 3. Imperialism: European nations competed to acquire colonies and resources. 4. Nationalism: Extreme national pride created conflicts among nations. 5. Immediate Cause: Assassination of Archduke Franz Ferdinand on 28 June 1914."
+        },
+        {
+          id: "soc_em_1_extra_5m_2",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "5m",
+          mark: "5 Marks (4 / 5 Marks)",
+          examYear: "2025/2026",
+          examTag: "Extra Detailed (5M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Explain the role of the League of Nations.",
+          ans: `<div style="line-height:1.8;">
+:<br><br>
+<b>1.</b> The League of Nations was established in 1920.<br>
+<b>2.</b> Its headquarters was located in Geneva, Switzerland.<br>
+<b>3.</b> It aimed to maintain international peace and security.<br>
+<b>4.</b> It encouraged countries to settle disputes through peaceful negotiations.<br>
+<b>5.</b> It promoted international cooperation in social and humanitarian matters.<br>
+</div>`,
+          explanation: ": 1. The League of Nations was established in 1920. 2. Its headquarters was located in Geneva, Switzerland.",
+          audioScript: "Detailed five marks question: Explain the role of the League of Nations.. Here are the essential points: : 1. The League of Nations was established in 1920. 2. Its headquarters was located in Geneva, Switzerland. 3. It aimed to maintain international peace and security. 4. It encouraged countries to settle disputes through peaceful negotiations. 5. It promoted international cooperation in social and humanitarian matters."
+        },
+        {
+          id: "soc_em_1_extra_5m_3",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "5m",
+          mark: "5 Marks (4 / 5 Marks)",
+          examYear: "2025/2026",
+          examTag: "Extra Detailed (5M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Write a note on the effects of the First World War.",
+          ans: `<div style="line-height:1.8;">
+:<br><br>
+<b>1.</b> Millions of soldiers and civilians lost their lives.<br>
+<b>2.</b> European economies were severely damaged.<br>
+<b>3.</b> German, Austro-Hungarian, Russian and Ottoman empires collapsed.<br>
+<b>4.</b> New nations emerged in Europe.<br>
+<b>5.</b> The League of Nations was established.<br>
+<b>6.</b> The war created political and economic instability.<br>
+</div>`,
+          explanation: ": 1. Millions of soldiers and civilians lost their lives. 2. European economies were severely damaged.",
+          audioScript: "Detailed five marks question: Write a note on the effects of the First World War.. Here are the essential points: : 1. Millions of soldiers and civilians lost their lives. 2. European economies were severely damaged. 3. German, Austro Hungarian, Russian and Ottoman empires collapsed. 4. New nations emerged in Europe. 5. The League of Nations was established. 6. The war created political and economic instability."
+        },
+        {
+          id: "soc_em_1_extra_5m_4",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "5m",
+          mark: "5 Marks (4 / 5 Marks)",
+          examYear: "2025/2026",
+          examTag: "Extra Detailed (5M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Explain the importance of the Treaty of Versailles.",
+          ans: `<div style="line-height:1.8;">
+:<br><br>
+<b>1.</b> It was signed on 28 June 1919.<br>
+<b>2.</b> Germany accepted responsibility for the war under Article 231.<br>
+<b>3.</b> Germany had to pay reparations.<br>
+<b>4.</b> Germany lost territories and its overseas colonies.<br>
+<b>5.</b> Its military strength was restricted.<br>
+<b>6.</b> The treaty created resentment in Germany and contributed to future political tensions.<br>
+</div>`,
+          explanation: ": 1. It was signed on 28 June 1919. 2. Germany accepted responsibility for the war under Article 231.",
+          audioScript: "Detailed five marks question: Explain the importance of the Treaty of Versailles.. Here are the essential points: : 1. It was signed on 28 June 1919. 2. Germany accepted responsibility for the war under Article 231. 3. Germany had to pay reparations. 4. Germany lost territories and its overseas colonies. 5. Its military strength was restricted. 6. The treaty created resentment in Germany and contributed to future political tensions."
+        },
+        {
+          id: "soc_em_1_extra_5m_5",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "5m",
+          mark: "5 Marks (4 / 5 Marks)",
+          examYear: "2025/2026",
+          examTag: "Extra Detailed (5M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Explain Woodrow Wilson's Fourteen Points.",
+          ans: `<div style="line-height:1.8;">
+:<br><br>
+US President Woodrow Wilson proposed Fourteen Points in January 1918.<br><br>
+Important principles included:<br><br>
+<b>1.</b> Open diplomacy.<br>
+<b>2.</b> Freedom of navigation.<br>
+<b>3.</b> Reduction of armaments.<br>
+<b>4.</b> Fair settlement of colonial claims.<br>
+<b>5.</b> Self-determination of peoples.<br>
+<b>6.</b> Establishment of a League of Nations to maintain peace.<br>
+</div>`,
+          explanation: ": US President Woodrow Wilson proposed Fourteen Points in January 1918. Important principles included: 1.",
+          audioScript: "Detailed five marks question: Explain Woodrow Wilson's Fourteen Points.. Here are the essential points: : US President Woodrow Wilson proposed Fourteen Points in January 1918. Important principles included: 1. Open diplomacy. 2. Freedom of navigation. 3. Reduction of armaments. 4. Fair settlement of colonial claims. 5. Self determination of peoples. 6. Establishment of a League of Nations to maintain peace."
+        },
+        {
+          id: "soc_em_1_extra_8m_1",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "8m",
+          mark: "8 Marks (Essay / 7M)",
+          examYear: "2025/2026",
+          examTag: "Extra Essay (8M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Describe the circumstances that led to the outbreak of the First World War.",
+          ans: `<div style="line-height:1.8;">
+:<br><br>
+The First World War began in Europe in 1914. Several political, economic and military factors contributed to its outbreak.<br><br>
+<b>1.</b> Militarism:** European nations increased their military strength and prepared for war.<br><br>
+<b>2.</b> Alliance System:** Two major rival groups emerged:<br><br>
+• Triple Alliance: Germany, Austria-Hungary and Italy (Italy later joined the Allied Powers in 1915).<br>
+• Triple Entente: Britain, France and Russia.<br><br>
+<b>3.</b> Imperialism:** European powers competed for colonies, markets and natural resources.<br><br>
+<b>4.</b> Nationalism:** Extreme national feelings created hostility among European countries.<br><br>
+<b>5.</b> Balkan Crisis:** Rival national interests and conflicts in the Balkan region increased tension.<br><br>
+<b>6.</b> Assassination:** Archduke Franz Ferdinand of Austria-Hungary and his wife were assassinated at Sarajevo on 28 June 1914 by Gavrilo Princip.<br><br>
+<b>7.</b> Declaration of War:** Austria-Hungary declared war on Serbia on 28 July 1914. The alliance system caused the conflict to spread across Europe.<br><br>
+Thus, the First World War broke out in 1914.<br>
+</div>`,
+          explanation: ": The First World War began in Europe in 1914. Several political, economic and military factors contributed to its outbreak.",
+          audioScript: "Important essay question: Describe the circumstances that led to the outbreak of the First World War.. Listen carefully to the comprehensive answer: : The First World War began in Europe in 1914. Several political, economic and military factors contributed to its outbreak. 1. Militarism: European nations increased their military strength and prepared for war. 2. Alliance System: Two major rival groups emerged: Triple Alliance: Germany, Austria Hungary and Italy (Italy later joined the Allied Powers in 1915). Triple Entente: Britain, France and Russia. 3. Imperialism: European powers competed for colonies, markets and natural resources. 4. Nationalism: Extreme national feelings created hostility among European countries. 5. Balkan Crisis: Rival national interests and conflicts in the Balkan region increased tension. 6. Assassination: Archduke Franz Ferdinand of Austria Hungary and his wife were assassinated at Sarajevo on 28 June 1914 by Gavrilo Princip. 7. Declaration of War: Austria Hungary declared war on Serbia on 28 July 1914. The alliance system caused the conflict to spread across Europe. Thus, the First World War broke out in 1914."
+        },
+        {
+          id: "soc_em_1_extra_8m_2",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "8m",
+          mark: "8 Marks (Essay / 7M)",
+          examYear: "2025/2026",
+          examTag: "Extra Essay (8M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Explain the major consequences of the First World War.",
+          ans: `<div style="line-height:1.8;">
+:<br><br>
+<b>1. Human Loss:</b> Millions of soldiers and civilians died, and many were injured.<br>
+<b>2. Economic Destruction:</b> Industries, agriculture and transport systems were severely damaged.<br>
+<b>3. Fall of Empires:</b> German, Austro-Hungarian, Russian and Ottoman empires collapsed.<br>
+<b>4. Formation of New Nations:</b> Several new independent states emerged in Europe.<br>
+<b>5. Treaty of Versailles:</b> Germany was subjected to territorial, military and financial restrictions.<br>
+<b>6. League of Nations:</b> The League of Nations was established to maintain international peace.<br>
+<b>7. Political Changes:</b> Revolutionary movements and new political ideologies gained strength.<br>
+</div>`,
+          explanation: ": 1. Human Loss: Millions of soldiers and civilians died, and many were injured. 2. Economic Destruction: Industries, agriculture and transport systems were severely damaged.",
+          audioScript: "Important essay question: Explain the major consequences of the First World War.. Listen carefully to the comprehensive answer: : 1. Human Loss: Millions of soldiers and civilians died, and many were injured. 2. Economic Destruction: Industries, agriculture and transport systems were severely damaged. 3. Fall of Empires: German, Austro Hungarian, Russian and Ottoman empires collapsed. 4. Formation of New Nations: Several new independent states emerged in Europe. 5. Treaty of Versailles: Germany was subjected to territorial, military and financial restrictions. 6. League of Nations: The League of Nations was established to maintain international peace. 7. Political Changes: Revolutionary movements and new political ideologies gained strength."
+        },
+        {
+          id: "soc_em_1_extra_8m_3",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "8m",
+          mark: "8 Marks (Essay / 7M)",
+          examYear: "2025/2026",
+          examTag: "Extra Essay (8M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          q: "Explain the formation, objectives and failures of the League of Nations.",
+          ans: `<div style="line-height:1.8;">
+:<br><br>
+<br><b style="color:#1e3a8a; font-size:14px;">Formation:</b><br><br>
+• The League of Nations was established in 1920.<br>
+• It was formed following the First World War.<br>
+• Its headquarters was in Geneva, Switzerland.<br><br>
+<br><b style="color:#1e3a8a; font-size:14px;">Objectives:</b><br><br>
+<b>1.</b> To maintain international peace.<br>
+<b>2.</b> To prevent future wars.<br>
+<b>3.</b> To settle international disputes peacefully.<br>
+<b>4.</b> To encourage disarmament.<br>
+<b>5.</b> To promote international cooperation.<br><br>
+<br><b style="color:#1e3a8a; font-size:14px;">Failures:</b><br><br>
+<b>1.</b> The United States did not become a member.<br>
+<b>2.</b> The League had no independent military force.<br>
+<b>3.</b> It failed to prevent Japanese aggression in Manchuria in 1931.<br>
+<b>4.</b> It failed to stop Italian aggression against Ethiopia in 1935.<br>
+<b>5.</b> It could not prevent the outbreak of the Second World War in 1939.<br><br>
+Thus, the League of Nations failed to maintain lasting international peace.<br>
+</div>`,
+          explanation: ": Formation: The League of Nations was established in 1920. It was formed following the First World War.",
+          audioScript: "Important essay question: Explain the formation, objectives and failures of the League of Nations.. Listen carefully to the comprehensive answer: : Formation: The League of Nations was established in 1920. It was formed following the First World War. Its headquarters was in Geneva, Switzerland. Objectives: 1. To maintain international peace. 2. To prevent future wars. 3. To settle international disputes peacefully. 4. To encourage disarmament. 5. To promote international cooperation. Failures: 1. The United States did not become a member. 2. The League had no independent military force. 3. It failed to prevent Japanese aggression in Manchuria in 1931. 4. It failed to stop Italian aggression against Ethiopia in 1935. 5. It could not prevent the outbreak of the Second World War in 1939. Thus, the League of Nations failed to maintain lasting international peace."
+        },
+        {
+          id: "soc_em_1_extra_map_1",
+          subSectionId: "sec_soc_em_1_extra",
+          type: "8m",
+          mark: "8 Marks (Map Practice)",
+          examYear: "2025/2026",
+          examTag: "Extra Map Practice (8M)",
+          sectionTag: "Additional Practice (In-Text)",
+          isImportant: true,
+          isAdditionalPractice: true,
+          isMapQuestion: true,
+          q: "On the given outline map of Europe and the World, mark and locate the following key historic places:<br>Germany, France, Britain, Russia, Austria-Hungary, Serbia, Belgium, Sarajevo, Italy, Ottoman Empire",
+          ans: `<div style="line-height:1.8;">
+  <b style="color:#0284c7; font-size:15px;">Board Exam Map Marking Guide & Key Locations:</b><br><br>
+  <b>1. Germany:</b> Pinpoint accurately on the outline map and label clearly.<br>
+  <b>2. France:</b> Pinpoint accurately on the outline map and label clearly.<br>
+  <b>3. Britain:</b> Pinpoint accurately on the outline map and label clearly.<br>
+  <b>4. Russia:</b> Pinpoint accurately on the outline map and label clearly.<br>
+  <b>5. Austria-Hungary:</b> Pinpoint accurately on the outline map and label clearly.<br>
+  <b>6. Serbia:</b> Pinpoint accurately on the outline map and label clearly.<br>
+  <b>7. Belgium:</b> Pinpoint accurately on the outline map and label clearly.<br>
+  <b>8. Sarajevo:</b> Pinpoint accurately on the outline map and label clearly.<br>
+  <b>9. Italy:</b> Pinpoint accurately on the outline map and label clearly.<br>
+  <b>10. Ottoman Empire:</b> Pinpoint accurately on the outline map and label clearly.<br>
+  <br><div style="background:#eff6ff; border-left:4px solid #2563eb; padding:10px 14px; border-radius:6px; font-size:13px; color:#1e40af;">
+    <b>🎯 Board Exam Tip:</b> Clearly pinpoint each location with a dot or star indicator and write the name in bold block letters. Practice locating opposing alliances and key historical theatres on the world map.
+  </div>
+</div>`,
+          explanation: "Key historic map locations related to History Unit 1.",
+          audioScript: "Map Practice Question: Important places to mark on the map: Germany, France, Britain, Russia, Austria-Hungary, Serbia, Belgium, Sarajevo, Italy, Ottoman Empire. Locate each place precisely with neat labeling for full marks.",
+          diagramImg: "images/soc_ww1_map.jpg",
+          diagramCaption: "World & Europe Map: World War I Locations (Allied & Central Powers)"
         }
       ]
     }

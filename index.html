@@ -190,11 +190,11 @@
 <script src="data_science_em_u2.js?v=20261031_v31"></script>
 <script src="data_science_em_u3.js?v=20261031_v31"></script>
 <script src="data_science_em_u4.js?v=20261031_v31"></script>
-<script src="data_social_u1.js?v=20261110_v65"></script>
+<script src="data_social_u1.js?v=20261127_v140"></script>
 <script src="data_social_u2.js?v=20261111_v68"></script>
 <script src="data_social_u3.js?v=20261110_v65"></script>
 <script src="data_social_u4.js?v=20261110_v65"></script>
-<script src="data_social_em_u1.js?v=20261110_v65"></script>
+<script src="data_social_em_u1.js?v=20261127_v140"></script>
 <script src="data_social_em_u2.js?v=20261111_v68"></script>
 <script src="data_social_em_u3.js?v=20261110_v65"></script>
 <script src="data_social_em_u4.js?v=20261110_v65"></script>
@@ -202,9 +202,9 @@
 <script src="data_science_u6.js?v=20261031_v31"></script>
 <script src="data_science_em_u5.js?v=20261031_v31"></script>
 <script src="data_science_em_u6.js?v=20261031_v31"></script>
-<script src="data_social_u5.js?v=20261110_v65"></script>
+<script src="data_social_u5.js?v=20261127_v140"></script>
 <script src="data_social_u6.js?v=20261111_v67"></script>
-<script src="data_social_em_u5.js?v=20261110_v65"></script>
+<script src="data_social_em_u5.js?v=20261127_v140"></script>
 <script src="data_social_em_u6.js?v=20261111_v67"></script>
 <script src="data_science_u7.js?v=20261114_v75"></script>
 <script src="data_science_u8.js?v=20261031_v33"></script>
@@ -218,9 +218,9 @@
 <script src="data_science_u10.js?v=20261103_v50"></script>
 <script src="data_science_em_u9.js?v=20261114_v74"></script>
 <script src="data_science_em_u10.js?v=20261103_v50"></script>
-<script src="data_social_u9.js?v=20261110_v65"></script>
+<script src="data_social_u9.js?v=20261127_v140"></script>
 <script src="data_social_u10.js?v=20261110_v65"></script>
-<script src="data_social_em_u9.js?v=20261110_v65"></script>
+<script src="data_social_em_u9.js?v=20261127_v140"></script>
 <script src="data_social_em_u10.js?v=20261110_v65"></script>
 <script src="data_science_u11.js?v=20261105_v57"></script>
 <script src="data_science_u12.js?v=20261105_v57"></script>
@@ -7727,6 +7727,7 @@ function resumeLastVisitedLesson() {
     } else if (lesId === 'soc_h1' && typeof SOCIAL_UNIT_1_DATA !== 'undefined' && SOCIAL_UNIT_1_DATA.subSections) {
       lesson.subSections = SOCIAL_UNIT_1_DATA.subSections;
       lesson.questions = SOCIAL_UNIT_1_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.timeline = SOCIAL_UNIT_1_DATA.timeline || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'soc_g1' && typeof SOCIAL_UNIT_2_DATA !== 'undefined' && SOCIAL_UNIT_2_DATA.subSections) {
       lesson.subSections = SOCIAL_UNIT_2_DATA.subSections;
@@ -7745,6 +7746,7 @@ function resumeLastVisitedLesson() {
     } else if (lesId === 'soc_em_h1' && typeof SOCIAL_EM_UNIT_1_DATA !== 'undefined' && SOCIAL_EM_UNIT_1_DATA.subSections) {
       lesson.subSections = SOCIAL_EM_UNIT_1_DATA.subSections;
       lesson.questions = SOCIAL_EM_UNIT_1_DATA.subSections.flatMap(s => s.questions.map(q => ({ ...q, sectionTitle: s.title, author: s.author })));
+      lesson.timeline = SOCIAL_EM_UNIT_1_DATA.timeline || [];
       lesson.qCount = lesson.questions.length;
     } else if (lesId === 'soc_em_g1' && typeof SOCIAL_EM_UNIT_2_DATA !== 'undefined' && SOCIAL_EM_UNIT_2_DATA.subSections) {
       lesson.subSections = SOCIAL_EM_UNIT_2_DATA.subSections;
@@ -15239,7 +15241,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261126_v139')
+        navigator.serviceWorker.register('./sw.js?v=20261127_v140')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

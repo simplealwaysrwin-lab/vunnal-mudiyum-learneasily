@@ -46,9 +46,10 @@ const SCIENCE_EM_UNIT_14_DATA = {
         },
         {
           id: "sci_em_14_3",
+          examYear: "2024, 2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam (2M)",
           q: "Tabulate any four major morphological and functional distinctions between Arteries and Veins.",
           ans: `<div style="line-height:1.7;">
             <div class="chalk-table-responsive">
@@ -89,9 +90,10 @@ const SCIENCE_EM_UNIT_14_DATA = {
         },
         {
           id: "sci_em_14_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important",
+          examTag: "Public Exam 2023 (2M)",
           q: "Define transpiration and state its physiological significance to plants.",
           ans: `<div style="line-height:1.7;">
             • <b>Transpiration:</b> The physiological loss of surplus water in the state of vapour through microscopic stomatal pores on aerial plant parts.<br><br>
@@ -129,9 +131,10 @@ const SCIENCE_EM_UNIT_14_DATA = {
         },
         {
           id: "sci_em_14_7",
+          examYear: "2023",
           type: "7m",
           mark: "4 / 7 Marks",
-          examTag: "Public Exam 7M",
+          examTag: "Public Exam 4M",
           q: "Provide a detailed account of the constituent components of human blood (plasma, erythrocytes, leucocytes, platelets) and their specific physiological functions.",
           ans: `<div style="line-height:1.8;">
             Blood is a fluid connective tissue comprising 55% extracellular plasma and 45% cellular formed elements:<br><br>
@@ -161,6 +164,7 @@ const SCIENCE_EM_UNIT_14_DATA = {
         },
         {
           id: "sci_em_14_8",
+          examYear: "2024, 2022",
           type: "7m",
           mark: "4 / 7 Marks",
           examTag: "Public Exam 7M",
@@ -194,3 +198,29 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 if (typeof window !== 'undefined') { window.SCIENCE_EM_UNIT_14_DATA = SCIENCE_EM_UNIT_14_DATA; }
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_EM_UNIT_14_DATA !== 'undefined' && SCIENCE_EM_UNIT_14_DATA.subSections && SCIENCE_EM_UNIT_14_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_EM_UNIT_14_DATA.subSections[SCIENCE_EM_UNIT_14_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_em_u14_7m_ascent',
+        type: '7m',
+        mark: '7 Marks',
+        examTag: 'Public Exam 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "Explain the mechanism of Ascent of Sap in tall trees through Root Pressure, Capillary Action, and Transpiration Pull. Differentiate between Arteries and Veins.",
+        ans: `<div style="line-height:1.8;">
+          <b>Ascent of Sap in Tall Trees:</b><br><br>
+          <b>1. Root Pressure:</b> Water entry into root cortical cells creates positive hydrostatic pressure pushing water upwards in xylem.<br>
+          <b>2. Capillary Action:</b> Narrow xylem vessels act as capillary tubes physically lifting water through surface tension.<br>
+          <b>3. Transpiration Pull (Cohesion-Tension Theory):</b> Stomatal water loss creates massive negative suction tension. Cohesion between water molecules and adhesion to xylem walls pull up an unbroken water column over 100 meters high.<br><br>
+          <b>Arteries vs Veins:</b><br>
+          • <i>Arteries:</i> Carry blood away from heart; thick elastic walls; no valves; blood flows under high pressure.<br>
+          • <i>Veins:</i> Carry blood towards heart; thin walls with valves preventing backflow; blood flows under steady low pressure.</div>`
+      });
+  }
+})();

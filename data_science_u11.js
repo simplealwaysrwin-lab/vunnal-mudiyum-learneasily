@@ -45,9 +45,10 @@ const SCIENCE_UNIT_11_DATA = {
         },
         {
           id: "sci_11_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "முக்கிய வினா",
+          examTag: "அரசு பொதுத்தேர்வு 2024 (2M)",
           q: "சங்கிலித் தொடராக்கம் (Catenation) என்றால் என்ன? கார்பன் அதிக எண்ணிக்கையிலான சேர்மங்களை உருவாக்க இது எவ்வாறு உதவுகிறது?",
           ans: `<div style="line-height:1.7;">
             <b>சங்கிலித் தொடராக்கம்:</b><br>
@@ -59,9 +60,10 @@ const SCIENCE_UNIT_11_DATA = {
         },
         {
           id: "sci_11_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "அரசு பொதுத்தேர்வு",
+          examTag: "அரசு பொதுத்தேர்வு 2023 (2M)",
           q: "படிவரிசை சேர்மங்கள் (Homologous Series) என்றால் என்ன? அதன் ஏதேனும் இரண்டு முக்கியப் பண்புகளை எழுதுக.",
           ans: `<div style="line-height:1.7;">
             <b>படிவரிசை சேர்மங்கள்:</b><br>
@@ -146,9 +148,10 @@ const SCIENCE_UNIT_11_DATA = {
         },
         {
           id: "sci_11_7",
+          examYear: "2024, 2023, 2022",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "முக்கிய வினா",
+          examTag: "அரசு பொதுத்தேர்வு 4M / 7M",
           q: "தூய எத்தனாயிக் அமிலம் குளிர்காலத்தில் 'கிளேசியல் அசிட்டிக் அமிலம்' என்று அழைக்கப்படுவது ஏன்?",
           ans: `<div style="line-height:1.7;">
             • தூய எத்தனாயிக் அமிலத்தின் (அசிட்டிக் அமிலம்) உறைநிலை <b>16.6°C (290 K)</b> ஆகும்.<br>
@@ -190,3 +193,32 @@ const SCIENCE_UNIT_11_DATA = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = SCIENCE_UNIT_11_DATA;
 }
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_UNIT_11_DATA !== 'undefined' && SCIENCE_UNIT_11_DATA.subSections && SCIENCE_UNIT_11_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_UNIT_11_DATA.subSections[SCIENCE_UNIT_11_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_tm_u11_7m_ethanol',
+        type: '7m',
+        mark: '7 மதிப்பெண்',
+        examTag: 'அரசுப் பொதுத்தேர்வு 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "கரும்புச் சாற்றுக் கழிவிலிருந்து (மொலாசஸ்) எத்தனால் எவ்வாறு தயாரிக்கப்படுகிறது? வேதிவினைகளை எழுதி, எத்தனால் மற்றும் எத்தனாயிக் அமிலத்தின் முக்கியப் பண்புகளை விவரிக்க.",
+        ans: `<div style="line-height:1.8;">
+          <b>மொலாசஸிலிருந்து எத்தனால் தயாரித்தல்:</b><br><br>
+          மொலாசஸ் சுமார் 30% சுக்ரோஸைக் கொண்டுள்ளது.<br>
+          • <b>நீர்த்தல்:</b> நீருடன் கலந்து சர்க்கரை அளவு 8% முதல் 10% ஆகக் குறைக்கப்படுகிறது.<br>
+          • <b>ஈஸ்ட் சேர்த்தல் (303 K):</b> ஈஸ்ட்டில் உள்ள என்சைம்கள் வினையை நிகழ்த்துகின்றன:<br>
+            1. <i>இன்வெர்ட்டேஸ்:</i> <b>C₁₂H₂₂O₁₁ + H₂O ➔ C₆H₁₂O₆ (குளுக்கோஸ்) + C₆H₁₂O₆ (பிரக்டோஸ்)</b><br>
+            2. <i>சைமேஸ்:</i> <b>C₆H₁₂O₆ ➔ 2C₂H₅OH + 2CO₂ ↑</b><br>
+          • பின்னக் காய்ச்சி வடித்தல் மூலம் <b>சரிசெய்யப்பட்ட சாராயம் (95.5% எத்தனால்)</b> பெறப்படுகிறது.<br><br>
+          <b>எத்தனாயிக் அமிலம் தயாரித்தல்:</b><br>
+          • எத்தனாலை ஆக்சிஜனேற்றம் செய்து எத்தனாயிக் அமிலம் பெறப்படுகிறது: <b>C₂H₅OH + 2[O] ➔ CH₃COOH + H₂O</b>.<br>
+          • <i>எஸ்டராக்குதல்:</i> எத்தனாலுடன் வினைபுரிந்து பழமணமுடைய எத்தில் எத்தனோயேட்டை உருவாக்குகிறது: <b>CH₃COOH + C₂H₅OH ➔ CH₃COOC₂H₅ + H₂O</b>.</div>`
+      });
+  }
+})();

@@ -45,9 +45,10 @@ const SCIENCE_EM_UNIT_11_DATA = {
         },
         {
           id: "sci_em_11_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important",
+          examTag: "Public Exam 2024 (2M)",
           q: "What is Catenation? How does it explain the vast number of carbon compounds in existence?",
           ans: `<div style="line-height:1.7;">
             <b>Catenation:</b><br>
@@ -60,9 +61,10 @@ const SCIENCE_EM_UNIT_11_DATA = {
         },
         {
           id: "sci_em_11_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2023 (2M)",
           q: "What is a Homologous Series? State any two characteristic features of a homologous series.",
           ans: `<div style="line-height:1.7;">
             <b>Homologous Series:</b><br>
@@ -189,9 +191,10 @@ const SCIENCE_EM_UNIT_11_DATA = {
         },
         {
           id: "sci_em_11_7",
+          examYear: "2024, 2023, 2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important",
+          examTag: "Public Exam 4M / 7M",
           q: "Why is pure Ethanoic acid commonly referred to as 'Glacial Acetic Acid'?",
           ans: `<div style="line-height:1.7;">
             • Pure anhydrous ethanoic acid (acetic acid) has a freezing point of <b>16.6°C (290 K)</b>.<br>
@@ -252,3 +255,32 @@ const SCIENCE_EM_UNIT_11_DATA = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = SCIENCE_EM_UNIT_11_DATA;
 }
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_EM_UNIT_11_DATA !== 'undefined' && SCIENCE_EM_UNIT_11_DATA.subSections && SCIENCE_EM_UNIT_11_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_EM_UNIT_11_DATA.subSections[SCIENCE_EM_UNIT_11_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_em_u11_7m_ethanol',
+        type: '7m',
+        mark: '7 Marks',
+        examTag: 'Public Exam 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "How is ethanol manufactured from sugarcane molasses? Write the chemical reactions involved and list the important properties and uses of ethanol and ethanoic acid.",
+        ans: `<div style="line-height:1.8;">
+          <b>Manufacture of Ethanol from Molasses:</b><br><br>
+          Molasses contains ~30% fermentable sucrose.<br>
+          • <b>Dilution:</b> Diluted with water to 8%–10% sugar concentration.<br>
+          • <b>Addition of Yeast (303 K):</b> Yeast produces two biocatalytic enzymes:<br>
+            1. <i>Invertase:</i> <b>C₁₂H₂₂O₁₁ + H₂O ➔ C₆H₁₂O₆ (glucose) + C₆H₁₂O₆ (fructose)</b><br>
+            2. <i>Zymase:</i> <b>C₆H₁₂O₆ ➔ 2C₂H₅OH + 2CO₂ ↑</b><br>
+          • <b>Fractional Distillation:</b> Produces <b>Rectified Spirit (95.5% ethanol)</b>.<br><br>
+          <b>Preparation and Properties of Ethanoic Acid:</b><br>
+          • Prepared by alkaline KMnO₄ oxidation of ethanol: <b>C₂H₅OH + 2[O] ➔ CH₃COOH + H₂O</b>.<br>
+          • <i>Esterification:</i> Reacts with ethanol to form sweet ester ethyl ethanoate: <b>CH₃COOH + C₂H₅OH ➔ CH₃COOC₂H₅ + H₂O</b>.</div>`
+      });
+  }
+})();

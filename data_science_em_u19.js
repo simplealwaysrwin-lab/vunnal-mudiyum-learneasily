@@ -46,9 +46,10 @@ const SCIENCE_EM_UNIT_19_DATA = {
         },
         {
           id: "sci_em_19_3",
+          examYear: "2024, 2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam (2M)",
           q: "Define Homologous Organs. Provide two anatomical examples illustrating Divergent Evolution.",
           ans: `<div style="line-height:1.7;">
             • Organs that share a <b>common embryonic developmental origin and anatomical blueprint</b> but are specialized for different physiological functions due to distinct ecological niches are termed <b>Homologous Organs</b>.<br><br>
@@ -58,9 +59,10 @@ const SCIENCE_EM_UNIT_19_DATA = {
         },
         {
           id: "sci_em_19_4",
+          examYear: "2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Key Question",
+          examTag: "Public Exam 2022 (2M)",
           q: "What are Analogous Organs? How do they illustrate Convergent Evolution?",
           ans: `<div style="line-height:1.7;">
             • Organs that perform the <b>same physiological function and appear superficially similar</b> but have fundamentally different anatomical frameworks and embryonic origins are termed <b>Analogous Organs</b>.<br><br>

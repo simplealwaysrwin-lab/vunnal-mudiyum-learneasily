@@ -46,9 +46,10 @@ const SCIENCE_EM_UNIT_13_DATA = {
         },
         {
           id: "sci_em_13_3",
+          examYear: "2024, 2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important",
+          examTag: "Public Exam (2M)",
           q: "Enumerate any four prominent parasitic adaptations observed in the Indian Cattle Leech.",
           ans: `<div style="line-height:1.7;">
             <b>Key Parasitic Adaptations of Leech:</b><br>
@@ -62,9 +63,10 @@ const SCIENCE_EM_UNIT_13_DATA = {
         },
         {
           id: "sci_em_13_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2023 (2M)",
           q: "Write down the dental formula of the rabbit and state the total count of teeth.",
           ans: `<div style="line-height:1.7;">
             The dentition in rabbits is heterodont (differentiated teeth) and diphyodont (two sets: milk and permanent teeth).<br><br>

@@ -1,4 +1,4 @@
-﻿// Class 10 Science - Unit 10: Types of Chemical Reactions
+// Class 10 Science - Unit 10: Types of Chemical Reactions
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SCIENCE_EM_UNIT_10_DATA = {
@@ -45,9 +45,10 @@ const SCIENCE_EM_UNIT_10_DATA = {
         },
         {
           id: "sci_em_10_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important",
+          examTag: "Public Exam 2024 (2M)",
           q: "Differentiate between Reversible and Irreversible reactions.",
           ans: `<div style="line-height:1.7;">
             <table style="width:100%; border-collapse:collapse; margin-top:6px;" border="1" cellpadding="6">
@@ -61,9 +62,10 @@ const SCIENCE_EM_UNIT_10_DATA = {
         },
         {
           id: "sci_em_10_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2023 (2M)",
           q: "State any four factors that affect the rate of a chemical reaction.",
           ans: `<div style="line-height:1.7;">
             1. <b>Nature of Reactants:</b> Ionic substances react faster than covalent substances.<br>
@@ -117,9 +119,10 @@ const SCIENCE_EM_UNIT_10_DATA = {
         },
         {
           id: "sci_em_10_7",
+          examYear: "2024, 2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 4M / 7M",
           q: "What is a double displacement reaction? Illustrate with a balanced chemical equation.",
           ans: `<div style="line-height:1.7;">
             <b>Double Displacement Reaction:</b><br>
@@ -155,3 +158,33 @@ const SCIENCE_EM_UNIT_10_DATA = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = SCIENCE_EM_UNIT_10_DATA;
 }
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_EM_UNIT_10_DATA !== 'undefined' && SCIENCE_EM_UNIT_10_DATA.subSections && SCIENCE_EM_UNIT_10_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_EM_UNIT_10_DATA.subSections[SCIENCE_EM_UNIT_10_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_em_u10_7m_rate',
+        type: '7m',
+        mark: '7 Marks',
+        examTag: 'Public Exam 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "Explain the various factors influencing the rate of a chemical reaction with examples.",
+        ans: `<div style="line-height:1.8;">
+          <b>Factors Influencing the Rate of a Chemical Reaction:</b><br><br>
+          <b>1. Nature of Reactants:</b><br>
+          • Ionic reactions occur instantaneously (e.g., AgNO₃ + NaCl ➔ AgCl↓ + NaNO₃), whereas covalent reactions require bond breaking and occur more slowly.<br><br>
+          <b>2. Concentration of Reactants:</b><br>
+          • Higher concentration increases collision frequency between reacting particles, increasing reaction rate (e.g., zinc dissolves faster in conc. HCl than dil. HCl).<br><br>
+          <b>3. Temperature:</b><br>
+          • Increasing temperature raises the kinetic energy of reactant molecules, enabling more particles to cross activation energy barrier. Rate roughly doubles per 10°C rise.<br><br>
+          <b>4. Surface Area of Solid Reactants:</b><br>
+          • Powdered reactants expose far more surface area than large lumps (e.g., powdered CaCO₃ reacts much faster with HCl than marble chips).<br><br>
+          <b>5. Presence of a Catalyst:</b><br>
+          • Lowers activation energy without being consumed (e.g., MnO₂ accelerates decomposition of H₂O₂ into H₂O and O₂).</div>`
+      });
+  }
+})();

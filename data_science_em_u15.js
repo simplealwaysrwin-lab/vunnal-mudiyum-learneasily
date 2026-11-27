@@ -45,9 +45,10 @@ const SCIENCE_EM_UNIT_15_DATA = {
         },
         {
           id: "sci_em_15_3",
+          examYear: "2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2022 (2M)",
           q: "Name the three major structural components of a multipolar neuron and state their core roles.",
           ans: `<div style="line-height:1.7;">
             A neuron structurally comprises three distinct parts:<br><br>
@@ -72,9 +73,10 @@ const SCIENCE_EM_UNIT_15_DATA = {
         },
         {
           id: "sci_em_15_5",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2023 (2M)",
           q: "Enumerate the three protective meningeal membranes encapsulating the human brain.",
           ans: `<div style="line-height:1.7;">
             The brain is ensheathed within three protective connective tissue meninges:<br><br>
@@ -100,9 +102,10 @@ const SCIENCE_EM_UNIT_15_DATA = {
         },
         {
           id: "sci_em_15_7",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Govt Model",
+          examTag: "Public Exam 2024 (2M)",
           q: "What is a Reflex Arc? Trace the sequence of pathway components involved in a reflex response.",
           ans: `<div style="line-height:1.7;">
             The structural and functional pathway traversed by nerve impulses during a reflex action is designated as a <b>Reflex Arc</b>.<br><br>
@@ -116,6 +119,7 @@ const SCIENCE_EM_UNIT_15_DATA = {
         },
         {
           id: "sci_em_15_8",
+          examYear: "2024, 2023",
           type: "7m",
           mark: "4 / 7 Marks",
           examTag: "Public Exam 7M",

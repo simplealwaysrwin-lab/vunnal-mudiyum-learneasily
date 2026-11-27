@@ -46,9 +46,10 @@ const SCIENCE_UNIT_18_DATA = {
         },
         {
           id: "sci_18_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "அரசு பொதுத்தேர்வு",
+          examTag: "அரசு பொதுத்தேர்வு 2024 (2M)",
           q: "மெண்டல் தனது மரபியல் ஆய்வுகளுக்கு பட்டாணித் தாவரத்தை (Pisum sativum) தேர்ந்தெடுக்கக் காரணங்கள் யாவை?",
           ans: `<div style="line-height:1.7;">
             <b>பட்டாணித் தாவரத்தைத் தேர்ந்தெடுக்கக் காரணங்கள்:</b><br>
@@ -61,9 +62,10 @@ const SCIENCE_UNIT_18_DATA = {
         },
         {
           id: "sci_18_4",
+          examYear: "2023, 2022",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "முக்கிய வினா",
+          examTag: "அரசு பொதுத்தேர்வு 4M",
           q: "ஓங்கு பண்பு (Dominant) மற்றும் ஒடுங்கு பண்பு (Recessive) என்றால் என்ன?",
           ans: `<div style="line-height:1.7;">
             1. <b>ஓங்கு பண்பு (Dominant trait):</b> இரு மாற்று மரபணுக்கள் இணையும் போது (F₁ தலைமுறையில்), வெளிப்படக்கூடிய பண்பு ஓங்கு பண்பு எனப்படும் (எ.கா: நெட்டைத் தன்மை - T).<br><br>
@@ -102,9 +104,10 @@ const SCIENCE_UNIT_18_DATA = {
         },
         {
           id: "sci_18_7",
+          examYear: "2024",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "அரசு மாதிரி",
+          examTag: "அரசு பொதுத்தேர்வு 7M",
           q: "ஆட்டோசோம்கள் மற்றும் அலோசோம் (பால் குரோமோசோம்கள்) இடையே உள்ள வேறுபாடு யாது?",
           ans: `<div style="line-height:1.7;">
             மனித உடலில் உள்ள மொத்த 23 இணை (46) குரோமோசோம்கள் இரு வகைப்படும்:<br><br>
@@ -144,3 +147,29 @@ const SCIENCE_UNIT_18_DATA = {
     }
   ]
 };
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_UNIT_18_DATA !== 'undefined' && SCIENCE_UNIT_18_DATA.subSections && SCIENCE_UNIT_18_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_UNIT_18_DATA.subSections[SCIENCE_UNIT_18_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_tm_u18_7m_dihybrid',
+        type: '7m',
+        mark: '7 மதிப்பெண்',
+        examTag: 'அரசுப் பொதுத்தேர்வு 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "மெண்டலின் இருபண்புக் கலப்பை புன்னட் கட்டகம் (Checkerboard) மூலம் விளக்கி, அதன் புறத்தோற்ற மற்றும் மரபணு வகை விகிதங்களைத் தருவிக்க.",
+        ans: `<div style="line-height:1.8;">
+          <b>மெண்டலின் இருபண்புக் கலப்பு:</b><br><br>
+          விதையின் வடிவம் (உருண்டை R / சுருங்கியது r) மற்றும் நிறம் (மஞ்சள் Y / பச்சை y) ஆகிய இருபண்புக் கலப்பு.<br>
+          • <b>பெற்றோர்:</b> தூய உருண்டை மஞ்சள் (RRYY) × தூய சுருங்கிய பச்சை (rryy)<br>
+          • <b>F₁ தலைமுறை:</b> உருண்டை மஞ்சள் (RrYy).<br>
+          • <b>F₂ கட்டகம்:</b> RY, Ry, rY, ry ஆகிய 4 வகை கேமீட்டுகள் 16 வழிகளில் இணைகின்றன.<br>
+          • <b>புறத்தோற்ற விகிதம்:</b> <b>9 உருண்டை மஞ்சள் : 3 உருண்டை பச்சை : 3 சுருங்கிய மஞ்சள் : 1 சுருங்கிய பச்சை (9 : 3 : 3 : 1)</b>.<br>
+          • <b>முடிவு:</b> <i>சார்பின்றி ஒதுங்குதல் விதி:</i> கேமீட்டுகள் உருவாகும்போது இருஜோடி பண்புகளின் அல்லீல்கள் தனித்துச் சார்பின்றி ஒதுங்குகின்றன.</div>`
+      });
+  }
+})();

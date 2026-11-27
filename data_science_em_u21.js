@@ -45,9 +45,10 @@ const SCIENCE_EM_UNIT_21_DATA = {
         },
         {
           id: "sci_em_21_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2024 (2M)",
           q: "How is Tuberculosis transmitted? Name the preventive vaccine administered in infancy.",
           ans: `<div style="line-height:1.7;">
             • <b>Causative Agent:</b> <i>Mycobacterium tuberculosis</i> invading primarily the pulmonary alveoli.<br>
@@ -58,9 +59,10 @@ const SCIENCE_EM_UNIT_21_DATA = {
         },
         {
           id: "sci_em_21_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Key Question",
+          examTag: "Public Exam 2023 (2M)",
           q: "Enumerate any four modes of transmission of HIV / AIDS.",
           ans: `<div style="line-height:1.7;">
             Human Immunodeficiency Virus (HIV) transmission routes include:<br><br>
@@ -124,9 +126,10 @@ const SCIENCE_EM_UNIT_21_DATA = {
         },
         {
           id: "sci_em_21_7",
+          examYear: "2024, 2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Govt Model",
+          examTag: "Public Exam 4M / 7M",
           q: "Outline two effective vector-control measures to prevent the transmission of Malaria.",
           ans: `<div style="line-height:1.7;">
             <b>Malaria Vector Control Measures:</b><br>
@@ -166,3 +169,30 @@ const SCIENCE_EM_UNIT_21_DATA = {
     }
   ]
 };
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_EM_UNIT_21_DATA !== 'undefined' && SCIENCE_EM_UNIT_21_DATA.subSections && SCIENCE_EM_UNIT_21_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_EM_UNIT_21_DATA.subSections[SCIENCE_EM_UNIT_21_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_em_u21_7m_abuse',
+        type: '7m',
+        mark: '7 Marks',
+        examTag: 'Public Exam 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "What are the adverse physical, mental, and social effects of alcohol and drug abuse? Suggest effective preventive, corrective, and rehabilitation measures.",
+        ans: `<div style="line-height:1.8;">
+          <b>Effects of Alcohol & Drug Abuse and Rehabilitation:</b><br><br>
+          <b>1. Physical Effects:</b> Fatty liver and fatal <b>Liver Cirrhosis</b>, loss of neuromuscular coordination, memory loss, hypertension, cardiomyopathy, peptic ulcers; shared needles spread HIV and Hepatitis B/C.<br>
+          <b>2. Mental and Social Effects:</b> Depression, uncontrollable aggression, domestic violence, academic failure, financial ruin, criminal activities.<br>
+          <b>3. Prevention & Rehabilitation:</b><br>
+          • Education and peer counseling against drug addiction.<br>
+          • Seeking help from trusted parents and school counselors.<br>
+          • Medical de-addiction centers for supervised detoxification.<br>
+          • Psychotherapy, Cognitive Behavioral Therapy (CBT), support groups, and vocational training for social reintegration.</div>`
+      });
+  }
+})();

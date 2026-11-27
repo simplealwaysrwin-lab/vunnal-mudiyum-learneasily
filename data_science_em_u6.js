@@ -1,4 +1,4 @@
-﻿// Class 10 Science - Unit 6: Nuclear Physics
+// Class 10 Science - Unit 6: Nuclear Physics
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SCIENCE_EM_UNIT_6_DATA = {
@@ -48,9 +48,10 @@ const SCIENCE_EM_UNIT_6_DATA = {
         },
         {
           id: "sci_em_6_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "High Yield",
+          examTag: "Public Exam 2024 (2M)",
           q: "Distinguish between natural radioactivity and artificial (induced) radioactivity.",
           ans: `<div style="line-height:1.7;">
             <b>1. Natural Radioactivity:</b><br>
@@ -64,9 +65,10 @@ const SCIENCE_EM_UNIT_6_DATA = {
         },
         {
           id: "sci_em_6_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Board Exam",
+          examTag: "Public Exam 2023 (2M)",
           q: "Mention four radioactive isotopes and their medical diagnostic or therapeutic uses.",
           ans: `<div style="line-height:1.7;">
             1. <b>Radio-Iodine (I-131):</b> Used to diagnose and treat goitre and thyroid cancer.<br>
@@ -78,9 +80,10 @@ const SCIENCE_EM_UNIT_6_DATA = {
         },
         {
           id: "sci_em_6_5",
+          examYear: "2023, 2022",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Board Exam 7M High Yield",
+          examTag: "Public Exam 7M",
           q: "Compare the properties of Alpha, Beta, and Gamma rays. Differentiate between Nuclear Fission and Nuclear Fusion.",
           ans: `<div style="line-height:1.7;">
             <b>1. Comparison of Alpha, Beta, and Gamma Rays:</b><br>

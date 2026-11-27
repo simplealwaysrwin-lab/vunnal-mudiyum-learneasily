@@ -45,9 +45,10 @@ const SCIENCE_EM_UNIT_12_DATA = {
         },
         {
           id: "sci_em_12_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important",
+          examTag: "Public Exam 2024 (2M)",
           q: "What is a Radial Vascular Bundle? Give an example.",
           ans: `<div style="line-height:1.7;">
             <b>Radial Vascular Bundle:</b><br>
@@ -60,9 +61,10 @@ const SCIENCE_EM_UNIT_12_DATA = {
         },
         {
           id: "sci_em_12_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2023 (2M)",
           q: "State any two key anatomical differences between a Dicot Root and a Monocot Root.",
           ans: `<div style="line-height:1.7;">
             <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
@@ -184,9 +186,10 @@ const SCIENCE_EM_UNIT_12_DATA = {
         },
         {
           id: "sci_em_12_7",
+          examYear: "2024, 2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 4M / 7M",
           q: "Differentiate between Aerobic Respiration and Anaerobic Respiration.",
           ans: `<div style="line-height:1.7;">
             <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">

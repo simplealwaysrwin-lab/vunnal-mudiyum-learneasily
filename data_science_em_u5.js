@@ -1,4 +1,4 @@
-﻿// Class 10 Science - Unit 5: Acoustics
+// Class 10 Science - Unit 5: Acoustics
 // Tamil Nadu State Board Samacheer Kalvi Question-Answer Guide (English Medium)
 
 const SCIENCE_EM_UNIT_5_DATA = {
@@ -49,9 +49,10 @@ const SCIENCE_EM_UNIT_5_DATA = {
         },
         {
           id: "sci_em_5_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "High Yield",
+          examTag: "Public Exam 2024 (2M)",
           q: "What is an echo? State two essential conditions required to hear a distinct echo.",
           ans: `<div style="line-height:1.7;">
             <b>Echo:</b> An echo is the sound reproduced due to the reflection of the original sound from a large obstacle such as a high wall, cliff, or mountain.<br><br>
@@ -64,9 +65,10 @@ const SCIENCE_EM_UNIT_5_DATA = {
         },
         {
           id: "sci_em_5_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Board Exam",
+          examTag: "Public Exam 2023 (2M)",
           q: "What are ultrasonic waves? Name two animals that make use of ultrasonic waves.",
           ans: `<div style="line-height:1.7;">
             <b>Ultrasonic Waves:</b> Sound waves having frequencies greater than 20,000 Hz (20 kHz) are called ultrasonic waves. Humans cannot hear them.<br><br>
@@ -78,9 +80,10 @@ const SCIENCE_EM_UNIT_5_DATA = {
         },
         {
           id: "sci_em_5_5",
+          examYear: "2024, 2022",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Board Exam 7M Compulsory",
+          examTag: "Public Exam 7M",
           q: "Explain the working principle of SONAR and describe the medical and industrial applications of ultrasonic waves.",
           ans: `<div style="line-height:1.7;">
             <b>1. SONAR (Sound Navigation And Ranging):</b><br>
@@ -151,9 +154,11 @@ const SCIENCE_EM_UNIT_5_DATA = {
         },
         {
           id: "sci_em_5_8",
+          examYear: "2023",
           type: "4m",
           mark: "4 Marks",
-          examTag: "Compulsory Numerical",
+          examTag: "Public Exam 2023 (Q.22 Compulsory)",
+          isCompulsory: true,
           q: "A ship sends an ultrasonic signal to the seabed and receives the echo after 3 seconds. If the speed of sound in seawater is 1530 m/s, calculate the depth of the sea.",
           ans: `<div style="line-height:1.8;">
             <b>Given Data:</b><br>

@@ -45,9 +45,10 @@ const SCIENCE_EM_UNIT_22_DATA = {
         },
         {
           id: "sci_em_22_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2024 (2M)",
           q: "State any two serious environmental repercussions of extensive Deforestation.",
           ans: `<div style="line-height:1.7;">
             <b>Consequences of Deforestation:</b><br>
@@ -59,9 +60,10 @@ const SCIENCE_EM_UNIT_22_DATA = {
         },
         {
           id: "sci_em_22_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Key Question",
+          examTag: "Public Exam 2023 (2M)",
           q: "What are the primary objectives of Rainwater Harvesting (RWH)?",
           ans: `<div style="line-height:1.7;">
             <b>Key Objectives of Rainwater Harvesting:</b><br>
@@ -100,9 +102,10 @@ const SCIENCE_EM_UNIT_22_DATA = {
         },
         {
           id: "sci_em_22_7",
+          examYear: "2023, 2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Govt Model",
+          examTag: "Public Exam 4M / 7M",
           q: "Why are Renewable Energy resources preferred over conventional Fossil Fuels?",
           ans: `<div style="line-height:1.7;">
             <b>Advantages of Renewable Energy (Solar, Wind, Hydro):</b><br>

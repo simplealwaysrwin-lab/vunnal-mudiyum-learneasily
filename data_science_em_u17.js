@@ -45,9 +45,10 @@ const SCIENCE_EM_UNIT_17_DATA = {
         },
         {
           id: "sci_em_17_3",
+          examYear: "2024, 2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam (2M)",
           q: "Tabulate any two distinct differences between Self-Pollination (Autogamy) and Cross-Pollination (Allogamy).",
           ans: `<div style="line-height:1.7;">
             <div class="chalk-table-responsive">
@@ -121,9 +122,10 @@ const SCIENCE_EM_UNIT_17_DATA = {
         },
         {
           id: "sci_em_17_7",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Govt Model",
+          examTag: "Public Exam 4M",
           q: "Name the four distinct chronological phases of the human menstrual cycle.",
           ans: `<div style="line-height:1.7;">
             The typical 28-day human menstrual cycle proceeds through four successive phases:<br><br>

@@ -47,9 +47,10 @@ const SCIENCE_EM_UNIT_16_DATA = {
         },
         {
           id: "sci_em_16_3",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2023 (2M)",
           q: "What is 'Bolting'? Which phytohormone induces this developmental phenomenon in rosette plants?",
           ans: `<div style="line-height:1.7;">
             • <b>Bolting</b> refers to the rapid internodal elongation of stems just prior to flowering in rosette plants (e.g. Cabbage, Beetroot).<br><br>
@@ -71,9 +72,10 @@ const SCIENCE_EM_UNIT_16_DATA = {
         },
         {
           id: "sci_em_16_5",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2024 (2M)",
           q: "Why is the Pituitary Gland traditionally referred to as the 'Master Gland'?",
           ans: `<div style="line-height:1.7;">
             • The anterior pituitary (adenohypophysis) secretes several tropic hormones, including TSH (Thyroid Stimulating Hormone), ACTH (Adrenocorticotropic Hormone), and Gonadotropins (FSH & LH).<br>
@@ -83,9 +85,10 @@ const SCIENCE_EM_UNIT_16_DATA = {
         },
         {
           id: "sci_em_16_6",
+          examYear: "2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Key Question",
+          examTag: "Public Exam 2022 (2M)",
           q: "Differentiate between Diabetes Mellitus and Diabetes Insipidus based on hormonal etiology and diagnostic manifestations.",
           ans: `<div style="line-height:1.7;">
             <div class="chalk-table-responsive">
@@ -121,9 +124,10 @@ const SCIENCE_EM_UNIT_16_DATA = {
         },
         {
           id: "sci_em_16_7",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Govt Model",
+          examTag: "Public Exam 2023 (2M)",
           q: "Explain why Adrenaline is called the 'Fight or Flight' or 'Emergency Hormone'.",
           ans: `<div style="line-height:1.7;">
             • Secreted by the adrenal medulla during acute stress, fright, or life-threatening emergencies.<br>
@@ -133,6 +137,7 @@ const SCIENCE_EM_UNIT_16_DATA = {
         },
         {
           id: "sci_em_16_8",
+          examYear: "2024, 2022",
           type: "7m",
           mark: "4 / 7 Marks",
           examTag: "Public Exam 7M",
@@ -312,3 +317,30 @@ const SCIENCE_EM_UNIT_16_DATA = {
     }
   ]
 };
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_EM_UNIT_16_DATA !== 'undefined' && SCIENCE_EM_UNIT_16_DATA.subSections && SCIENCE_EM_UNIT_16_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_EM_UNIT_16_DATA.subSections[SCIENCE_EM_UNIT_16_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_em_u16_7m_hormones',
+        type: '7m',
+        mark: '7 Marks',
+        examTag: 'Public Exam 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "Explain the physiological functions of Thyroid hormones (T3 and T4) and Pancreatic hormones (Insulin and Glucagon). What disorders are caused by their hypo/hyper secretion?",
+        ans: `<div style="line-height:1.8;">
+          <b>Functions and Disorders of Endocrine Hormones:</b><br><br>
+          <b>I. Thyroid Hormones (T₃ and Thyroxine T₄):</b><br>
+          • Regulates Basal Metabolic Rate (BMR) and body temperature.<br>
+          • Promotes skeletal growth and brain development (Personality Hormone).<br>
+          • <i>Disorders:</i> Simple Goitre (dietary iodine deficiency), Cretinism (hypothyroidism in infants causing stunted growth and mental retardation), Myxoedema (hypothyroidism in adults), Grave\'s Disease (hyperthyroidism).<br><br>
+          <b>II. Pancreatic Hormones (Islets of Langerhans):</b><br>
+          • <b>Insulin (β-cells):</b> Hypoglycemic hormone; promotes glycogenesis in liver and muscles, lowering blood sugar. Deficiency causes <b>Diabetes Mellitus</b> (hyperglycemia, glycosuria, polyuria, polydipsia, polyphagia).<br>
+          • <b>Glucagon (α-cells):</b> Hyperglycemic hormone; promotes glycogenolysis, raising blood sugar levels.</div>`
+      });
+  }
+})();

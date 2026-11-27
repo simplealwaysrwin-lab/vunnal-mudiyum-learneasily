@@ -1,4 +1,4 @@
-﻿// 10th Standard Science - Unit 8: Periodic Classification of Elements
+// 10th Standard Science - Unit 8: Periodic Classification of Elements
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions (English Medium)
 
 const SCIENCE_EM_UNIT_8_DATA = {
@@ -48,9 +48,10 @@ const SCIENCE_EM_UNIT_8_DATA = {
         },
         {
           id: "sci_em_8_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important",
+          examTag: "Public Exam 2024 (2M)",
           q: "State the Modern Periodic Law.",
           ans: `<div style="line-height:1.7;">
             <b>Modern Periodic Law:</b><br>
@@ -61,9 +62,10 @@ const SCIENCE_EM_UNIT_8_DATA = {
         },
         {
           id: "sci_em_8_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2023 (2M)",
           q: "What is corrosion? Give the chemical equation for rusting of iron.",
           ans: `<div style="line-height:1.7;">
             <b>Definition:</b> The gradual destruction and decay of metals caused by chemical or electrochemical reaction with atmospheric gases, moisture, and chemicals is called <b>corrosion</b>.<br><br>
@@ -140,9 +142,10 @@ const SCIENCE_EM_UNIT_8_DATA = {
         },
         {
           id: "sci_em_8_7",
+          examYear: "2024, 2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important",
+          examTag: "Public Exam 4M",
           q: "What is an Alloy? Give two examples with their uses.",
           ans: `<div style="line-height:1.7;">
             <b>Definition:</b> A homogeneous mixture of two or more metals, or a metal with a non-metal, is called an <b>alloy</b>.<br><br>
@@ -170,3 +173,35 @@ const SCIENCE_EM_UNIT_8_DATA = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = SCIENCE_EM_UNIT_8_DATA;
 }
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_EM_UNIT_8_DATA !== 'undefined' && SCIENCE_EM_UNIT_8_DATA.subSections && SCIENCE_EM_UNIT_8_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_EM_UNIT_8_DATA.subSections[SCIENCE_EM_UNIT_8_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_em_u8_7m_smelting',
+        type: '7m',
+        mark: '7 Marks',
+        examTag: 'Public Exam 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "Explain the smelting process in the extraction of iron from haematite ore in a blast furnace with chemical equations and a neat diagram.",
+        ans: `<div style="line-height:1.8;">
+          <b>Smelting Process in the Extraction of Iron (Blast Furnace):</b><br><br>
+          <b>1. Charge:</b> Roasted haematite ore (<b>Fe₂O₃</b>), Coke (fuel & reducing agent), and Limestone (flux) in a <b>8 : 4 : 1</b> ratio.<br><br>
+          <b>2. Reactions in the Three Temperature Zones:</b><br>
+          • <b>Combustion Zone (1500°C – 1600°C - Lower Part):</b><br>
+            Coke burns in hot air blast: <b>C + O₂ ➔ CO₂ + Heat</b><br>
+            Ascending CO₂ reacts with red-hot coke forming reducing gas: <b>CO₂ + C ➔ 2CO</b><br><br>
+          • <b>Slag Formation Zone (800°C – 1000°C - Middle Part):</b><br>
+            Limestone decomposes and forms slag: <b>CaCO₃ ➔ CaO + CO₂</b><br>
+            <b>CaO + SiO₂ (gangue) ➔ CaSiO₃ (Molten Calcium Silicate Slag)</b><br>
+            Molten slag floats above molten iron due to lower density and prevents re-oxidation.<br><br>
+          • <b>Reduction Zone (400°C – 700°C - Upper Part):</b><br>
+            Carbon monoxide reduces haematite ore to spongy iron: <b>Fe₂O₃ + 3CO ➔ 2Fe + 3CO₂ ↑</b><br>
+            The spongy iron melts and collects at the bottom as <b>Pig Iron (Cast Iron)</b> containing ~4% carbon.</div>`
+      });
+  }
+})();

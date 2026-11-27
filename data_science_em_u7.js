@@ -48,9 +48,10 @@ const SCIENCE_EM_UNIT_7_DATA = {
         },
         {
           id: "sci_em_7_3",
+          examYear: "2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important",
+          examTag: "Public Exam 2022 (2M)",
           q: "Define Atomicity with two examples.",
           ans: `<div style="line-height:1.7;">
             <b>Definition:</b> The number of atoms present in one molecule of an element or compound is called its <b>atomicity</b>.<br><br>
@@ -63,9 +64,10 @@ const SCIENCE_EM_UNIT_7_DATA = {
         },
         {
           id: "sci_em_7_4",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2024 (2M)",
           q: "State Avogadro's Law.",
           ans: `<div style="line-height:1.7;">
             <b>Avogadro's Law:</b><br>
@@ -76,9 +78,10 @@ const SCIENCE_EM_UNIT_7_DATA = {
         },
         {
           id: "sci_em_7_5",
+          examYear: "2023",
           type: "7m",
           mark: "7 Marks",
-          examTag: "Important 5M",
+          examTag: "Public Exam 2023 (4M)",
           q: "List out the postulates of Modern Atomic Theory.",
           ans: `<div style="line-height:1.8;">
             <b>Postulates of Modern Atomic Theory:</b><br><br>
@@ -99,6 +102,7 @@ const SCIENCE_EM_UNIT_7_DATA = {
         },
         {
           id: "sci_em_7_6",
+          examYear: "2024, 2022",
           type: "7m",
           mark: "7 Marks",
           examTag: "Public Exam 7M",
@@ -153,9 +157,11 @@ const SCIENCE_EM_UNIT_7_DATA = {
         },
         {
           id: "sci_em_7_7",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Problem",
+          examTag: "Public Exam 2024 (Q.22 Compulsory)",
+          isCompulsory: true,
           q: "Calculate the number of moles in 1.8 g of water (H₂O). (Atomic mass: H = 1, O = 16)",
           ans: `<div style="line-height:1.7;">
             <b>Solution:</b><br>

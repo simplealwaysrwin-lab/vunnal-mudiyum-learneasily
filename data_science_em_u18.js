@@ -46,9 +46,10 @@ const SCIENCE_EM_UNIT_18_DATA = {
         },
         {
           id: "sci_em_18_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2024 (2M)",
           q: "State any four distinct reasons why Gregor Mendel chose the garden pea (Pisum sativum) for his genetic experiments.",
           ans: `<div style="line-height:1.7;">
             <b>Reasons for Choosing Garden Pea Plant:</b><br>
@@ -61,9 +62,10 @@ const SCIENCE_EM_UNIT_18_DATA = {
         },
         {
           id: "sci_em_18_4",
+          examYear: "2023, 2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Key Question",
+          examTag: "Public Exam 4M",
           q: "Differentiate between Dominant and Recessive alleles/traits with suitable examples.",
           ans: `<div style="line-height:1.7;">
             1. <b>Dominant Trait:</b> The morphological trait that expresses itself phenotypically in both homozygous and heterozygous states (e.g. Tall stem height 'T').<br><br>
@@ -102,9 +104,10 @@ const SCIENCE_EM_UNIT_18_DATA = {
         },
         {
           id: "sci_em_18_7",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Govt Model",
+          examTag: "Public Exam 7M",
           q: "Differentiate between Autosomes and Allosomes (Sex Chromosomes) in human karyotype.",
           ans: `<div style="line-height:1.7;">
             Human diploid somatic cells contain 23 pairs (46) of chromosomes:<br><br>
@@ -144,3 +147,29 @@ const SCIENCE_EM_UNIT_18_DATA = {
     }
   ]
 };
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_EM_UNIT_18_DATA !== 'undefined' && SCIENCE_EM_UNIT_18_DATA.subSections && SCIENCE_EM_UNIT_18_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_EM_UNIT_18_DATA.subSections[SCIENCE_EM_UNIT_18_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_em_u18_7m_dihybrid',
+        type: '7m',
+        mark: '7 Marks',
+        examTag: 'Public Exam 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "Explain Mendel's Dihybrid Cross with a Punnett checkerboard and derive the phenotypic and genotypic ratios.",
+        ans: `<div style="line-height:1.8;">
+          <b>Mendel's Dihybrid Cross:</b><br><br>
+          Cross involving two pairs of traits: Seed Shape (Round R / Wrinkled r) and Seed Color (Yellow Y / Green y).<br>
+          • <b>Parents:</b> Round Yellow (RRYY) × Wrinkled Green (rryy)<br>
+          • <b>F₁:</b> All Round Yellow (RrYy).<br>
+          • <b>F₂ Checkerboard:</b> Gametes RY, Ry, rY, ry combine in 16 combinations.<br>
+          • <b>Phenotypic Ratio:</b> <b>9 Round Yellow : 3 Round Green : 3 Wrinkled Yellow : 1 Wrinkled Green (9 : 3 : 3 : 1)</b>.<br>
+          • <b>Conclusion:</b> <i>Law of Independent Assortment:</i> Alleles of different genes assort independently during gamete formation.</div>`
+      });
+  }
+})();

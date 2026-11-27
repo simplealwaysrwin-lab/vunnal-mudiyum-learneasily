@@ -45,9 +45,10 @@ const SCIENCE_EM_UNIT_20_DATA = {
         },
         {
           id: "sci_em_20_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2024 (2M)",
           q: "Define 'Heterosis' (Hybrid Vigour). What is its commercial agronomic significance?",
           ans: `<div style="line-height:1.7;">
             • <b>Heterosis</b> is the phenotypic superiority and enhanced physiological vigour (growth, yield, resistance to pests and abiotic stress) exhibited by an F₁ hybrid progeny over both of its inbred homozygous parental strains.<br><br>
@@ -98,9 +99,10 @@ const SCIENCE_EM_UNIT_20_DATA = {
         },
         {
           id: "sci_em_20_7",
+          examYear: "2023, 2022",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Govt Model",
+          examTag: "Public Exam 4M / 7M",
           q: "Name two high-yielding semi-dwarf wheat and rice cultivars introduced during the Green Revolution in India.",
           ans: `<div style="line-height:1.7;">
             Key high-yielding cultivars introduced under Dr. M. S. Swaminathan's leadership include:<br><br>
@@ -136,3 +138,29 @@ const SCIENCE_EM_UNIT_20_DATA = {
     }
   ]
 };
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_EM_UNIT_20_DATA !== 'undefined' && SCIENCE_EM_UNIT_20_DATA.subSections && SCIENCE_EM_UNIT_20_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_EM_UNIT_20_DATA.subSections[SCIENCE_EM_UNIT_20_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_em_u20_7m_breeding',
+        type: '7m',
+        mark: '7 Marks',
+        examTag: 'Public Exam 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "Explain Inbreeding, Outbreeding, and Heterosis (Hybrid Vigour) in animal and plant breeding with their objectives and significance.",
+        ans: `<div style="line-height:1.8;">
+          <b>Breeding Methods and Heterosis:</b><br><br>
+          <b>1. Inbreeding:</b> Mating of closely related individuals within the same breed for 4–6 generations. Increases homozygosity to evolve purelines. Continuous inbreeding leads to inbreeding depression.<br>
+          <b>2. Outbreeding:</b> Mating unrelated individuals:<br>
+          • <i>Outcrossing:</i> Same breed with no common ancestors for 4–6 generations.<br>
+          • <i>Cross-Breeding:</i> Mating superior animals of two different breeds (e.g., Hisardale sheep).<br>
+          • <i>Interspecific Hybridisation:</i> Mating two different species (e.g., Mule = Donkey × Horse).<br>
+          <b>3. Heterosis (Hybrid Vigour):</b> The superiority of the F₁ hybrid over both parent strains in growth, yield, and disease resistance.</div>`
+      });
+  }
+})();

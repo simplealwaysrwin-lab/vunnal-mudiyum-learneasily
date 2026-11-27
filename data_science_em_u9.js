@@ -44,9 +44,10 @@ const SCIENCE_EM_UNIT_9_DATA = {
         },
         {
           id: "sci_em_9_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Important",
+          examTag: "Public Exam 2024 (2M)",
           q: "What is a solution? Name its two essential components.",
           ans: `<div style="line-height:1.7;">
             <b>Solution:</b><br>
@@ -59,9 +60,10 @@ const SCIENCE_EM_UNIT_9_DATA = {
         },
         {
           id: "sci_em_9_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2023 (2M)",
           q: "Differentiate between Saturated and Unsaturated solutions.",
           ans: `<div style="line-height:1.7;">
             • <b>Saturated Solution:</b> A solution in which no more solute can be dissolved at a given temperature.<br>
@@ -114,9 +116,11 @@ const SCIENCE_EM_UNIT_9_DATA = {
         },
         {
           id: "sci_em_9_7",
+          examYear: "2023",
           type: "2m",
           mark: "2 Marks",
-          examTag: "Public Exam",
+          examTag: "Public Exam 2023 (Q.22 Compulsory)",
+          isCompulsory: true,
           q: "Distinguish between Hygroscopic and Deliquescent substances.",
           ans: `<div style="line-height:1.7;">
             • <b>Hygroscopic Substances:</b> Substances that absorb moisture from the atmosphere when exposed to air without dissolving or changing their physical state.<br>

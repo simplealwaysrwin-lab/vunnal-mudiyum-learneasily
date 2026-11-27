@@ -45,9 +45,10 @@ const SCIENCE_UNIT_12_DATA = {
         },
         {
           id: "sci_12_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "முக்கிய வினா",
+          examTag: "அரசு பொதுத்தேர்வு 2024 (2M)",
           q: "ஆரப்போக்கு வாஸ்குலார் கற்றை (Radial Vascular Bundle) என்றால் என்ன? ஓர் எடுத்துக்காட்டு தருக.",
           ans: `<div style="line-height:1.7;">
             <b>ஆரப்போக்கு வாஸ்குலார் கற்றை:</b><br>
@@ -59,9 +60,10 @@ const SCIENCE_UNIT_12_DATA = {
         },
         {
           id: "sci_12_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "அரசு பொதுத்தேர்வு",
+          examTag: "அரசு பொதுத்தேர்வு 2023 (2M)",
           q: "இருவிதையிலை தாவர வேருக்கும் ஒருவிதையிலை தாவர வேருக்கும் உள்ள ஏதேனும் இரண்டு முக்கிய வேறுபாடுகளைத் தருக.",
           ans: `<div style="line-height:1.7;">
             <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">
@@ -140,9 +142,10 @@ const SCIENCE_UNIT_12_DATA = {
         },
         {
           id: "sci_12_7",
+          examYear: "2024, 2023",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "அரசு பொதுத்தேர்வு",
+          examTag: "அரசு பொதுத்தேர்வு 4M / 7M",
           q: "காற்று சுவாசம் (Aerobic) மற்றும் காற்றில்லா சுவாசம் (Anaerobic) வேறுபடுத்துக.",
           ans: `<div style="line-height:1.7;">
             <div class="chalk-table-responsive" style="overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;">

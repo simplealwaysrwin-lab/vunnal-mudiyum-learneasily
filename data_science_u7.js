@@ -48,9 +48,10 @@ const SCIENCE_UNIT_7_DATA = {
         },
         {
           id: "sci_7_3",
+          examYear: "2022",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "முக்கிய வினா",
+          examTag: "அரசு பொதுத்தேர்வு 2022 (2M)",
           q: "அணுக்கட்டு எண் (Atomicity) என்றால் என்ன? இரண்டு உதாரணங்கள் தருக.",
           ans: `<div style="line-height:1.7;">
             <b>வரையறை:</b> ஒரு மூலக்கூறில் அடங்கியுள்ள மொத்த அணுக்களின் எண்ணிக்கையே அதன் <b>அணுக்கட்டு எண்</b> எனப்படும்.<br><br>
@@ -63,9 +64,10 @@ const SCIENCE_UNIT_7_DATA = {
         },
         {
           id: "sci_7_4",
+          examYear: "2024",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "அரசு பொதுத்தேர்வு",
+          examTag: "அரசு பொதுத்தேர்வு 2024 (2M)",
           q: "அவகாட்ரோ விதியைக் கூறுக.",
           ans: `<div style="line-height:1.7;">
             <b>அவகாட்ரோ விதி (Avogadro's Law):</b><br>
@@ -76,9 +78,10 @@ const SCIENCE_UNIT_7_DATA = {
         },
         {
           id: "sci_7_5",
+          examYear: "2023",
           type: "7m",
           mark: "5 மதிப்பெண்",
-          examTag: "முக்கிய 5-மதிப்பெண் வினா",
+          examTag: "அரசு பொதுத்தேர்வு 2023 (4M)",
           q: "நவீன அணுக்கொள்கையின் முக்கியக் கோட்பாடுகளைப் பட்டியலிடுக.",
           ans: `<div style="line-height:1.8;">
             <b>நவீன அணுக்கொள்கையின் கோட்பாடுகள் (Modern Atomic Theory):</b><br><br>
@@ -99,6 +102,7 @@ const SCIENCE_UNIT_7_DATA = {
         },
         {
           id: "sci_7_6",
+          examYear: "2024, 2022",
           type: "7m",
           mark: "7 மதிப்பெண்",
           examTag: "அரசு பொதுத்தேர்வு 7M",
@@ -152,9 +156,11 @@ const SCIENCE_UNIT_7_DATA = {
         },
         {
           id: "sci_7_7",
+          examYear: "2024",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "கணக்கீடு",
+          examTag: "அரசு பொதுத்தேர்வு 2024 (Q.22 கட்டாய வினா)",
+          isCompulsory: true,
           q: "1.8 கிராம் நீரில் (H₂O) உள்ள மோல்களின் எண்ணிக்கையைக் கணக்கிடுக. (H = 1, O = 16)",
           ans: `<div style="line-height:1.7;">
             <b>தீர்வு:</b><br>

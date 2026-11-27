@@ -1,4 +1,4 @@
-﻿// 10-ஆம் வகுப்பு அறிவியல் - அலகு 8: தனிமங்களின் ஆவர்த்தன வகைப்பாடு (Periodic Classification of Elements)
+// 10-ஆம் வகுப்பு அறிவியல் - அலகு 8: தனிமங்களின் ஆவர்த்தன வகைப்பாடு (Periodic Classification of Elements)
 // தமிழ்நாடு அரசு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const SCIENCE_UNIT_8_DATA = {
@@ -48,9 +48,10 @@ const SCIENCE_UNIT_8_DATA = {
         },
         {
           id: "sci_8_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "முக்கிய வினா",
+          examTag: "அரசு பொதுத்தேர்வு 2024 (2M)",
           q: "நவீன ஆவர்த்தன விதியைக் கூறுக.",
           ans: `<div style="line-height:1.7;">
             <b>நவீன ஆவர்த்தன விதி (Modern Periodic Law):</b><br>
@@ -61,9 +62,10 @@ const SCIENCE_UNIT_8_DATA = {
         },
         {
           id: "sci_8_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "அரசு பொதுத்தேர்வு",
+          examTag: "அரசு பொதுத்தேர்வு 2023 (2M)",
           q: "உலோக அரிமானம் (Corrosion) என்றால் என்ன? இரும்பு துருப்பிடித்தலுக்கான சமன்பாட்டைத் தருக.",
           ans: `<div style="line-height:1.7;">
             <b>வரையறை:</b> உலோகங்கள் சுற்றுச்சூழல் காரணிகளான காற்று, ஈரப்பதம் மற்றும் வேதிப்பொருட்களுடன் வினையாடி படிப்படியாகச் சிதைவடையும் செயல் <b>அரிமானம்</b> எனப்படும்.<br><br>
@@ -140,9 +142,10 @@ const SCIENCE_UNIT_8_DATA = {
         },
         {
           id: "sci_8_7",
+          examYear: "2024, 2022",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "முக்கிய வினா",
+          examTag: "அரசு பொதுத்தேர்வு 4M",
           q: "உலோகக் கலவை (Alloy) என்றால் என்ன? இரண்டு எடுத்துக்காட்டுகளுடன் பயன்களைக் கூறுக.",
           ans: `<div style="line-height:1.7;">
             <b>வரையறை:</b> இரண்டு அல்லது அதற்கு மேற்பட்ட உலோகங்கள் அல்லது உலோகமும் அலோகமும் சேர்ந்த ஒருபடித்தான கலவை <b>உலோகக் கலவை</b> ஆகும்.<br><br>
@@ -170,3 +173,35 @@ const SCIENCE_UNIT_8_DATA = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = SCIENCE_UNIT_8_DATA;
 }
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_UNIT_8_DATA !== 'undefined' && SCIENCE_UNIT_8_DATA.subSections && SCIENCE_UNIT_8_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_UNIT_8_DATA.subSections[SCIENCE_UNIT_8_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_tm_u8_7m_smelting',
+        type: '7m',
+        mark: '7 மதிப்பெண்',
+        examTag: 'அரசுப் பொதுத்தேர்வு 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "ஹேமடைட் தாதுவிலிருந்து ஊது உலையில் இரும்பு உருக்கிப் பிரித்தெடுக்கும் முறையை வேதிச் சமன்பாடுகள் மற்றும் படத்துடன் விளக்குக.",
+        ans: `<div style="line-height:1.8;">
+          <b>ஊது உலையில் இரும்பு உருக்கிப் பிரித்தெடுத்தல் (Smelting):</b><br><br>
+          <b>1. உலையிலிடு பொருள்:</b> வறுத்தெடுக்கப்பட்ட ஹேமடைட் தாது (<b>Fe₂O₃</b>), கல்கரி (ஒடுக்கி), சுண்ணாம்புக்கல் (இளக்கி) ஆகியவை <b>8 : 4 : 1</b> என்ற விகிதத்தில் இடப்படுகின்றன.<br><br>
+          <b>2. உலையின் மூன்று வெப்ப மண்டல வினைகள்:</b><br>
+          • <b>கீழ் எரிதல் பகுதி (1500°C – 1600°C):</b><br>
+            கல்கரி காற்றில் எரிந்து வெப்பத்தை உமிழ்கிறது: <b>C + O₂ ➔ CO₂ + வெப்பம்</b><br>
+            மேலேறும் CO₂, செஞ்சூடான கரியுடன் இணைந்து CO ஆக மாறுகிறது: <b>CO₂ + C ➔ 2CO</b><br><br>
+          • <b>நடு கசடு உருவாதல் பகுதி (800°C – 1000°C):</b><br>
+            சுண்ணாம்புக்கல் சிதைந்து கசடாக மாறுகிறது: <b>CaCO₃ ➔ CaO + CO₂</b><br>
+            <b>CaO + SiO₂ (கழிவு) ➔ CaSiO₃ (கால்சியம் சிலிகேட் - கசடு)</b><br>
+            கசடு உருகிய இரும்பின் மேல் மிதந்து இரும்பு மீண்டும் ஆக்சிஜனேற்றம் அடைவதைத் தடுக்கிறது.<br><br>
+          • <b>மேல் ஒடுக்கப் பகுதி (400°C – 700°C):</b><br>
+            கார்பன் மோனாக்சைடு இரும்பு ஆக்சைடை ஒடுக்குகிறது: <b>Fe₂O₃ + 3CO ➔ 2Fe + 3CO₂ ↑</b><br>
+            உருகிய இரும்பு அடியில் வடிந்து <b>வார்ப்பிரும்பாக (Cast Iron)</b> சேகரிக்கப்படுகிறது.</div>`
+      });
+  }
+})();

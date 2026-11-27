@@ -1,4 +1,4 @@
-﻿// 10-ஆம் வகுப்பு அறிவியல் - அலகு 10: வேதிவினைகளின் வகைகள் (Types of Chemical Reactions)
+// 10-ஆம் வகுப்பு அறிவியல் - அலகு 10: வேதிவினைகளின் வகைகள் (Types of Chemical Reactions)
 // தமிழ்நாடு அரசு சமச்சீர் கல்வி வினா-விடை வழிகாட்டி (தமிழ் வழி)
 
 const SCIENCE_UNIT_10_DATA = {
@@ -45,9 +45,10 @@ const SCIENCE_UNIT_10_DATA = {
         },
         {
           id: "sci_10_3",
+          examYear: "2024",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "முக்கிய வினா",
+          examTag: "அரசு பொதுத்தேர்வு 2024 (2M)",
           q: "மீள் வினை மற்றும் மீளாத வினை - ஏதேனும் இரண்டு வேறுபாடுகளைத் தருக.",
           ans: `<div style="line-height:1.7;">
             <table style="width:100%; border-collapse:collapse; margin-top:6px;" border="1" cellpadding="6">
@@ -61,9 +62,10 @@ const SCIENCE_UNIT_10_DATA = {
         },
         {
           id: "sci_10_4",
+          examYear: "2023",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "அரசு பொதுத்தேர்வு",
+          examTag: "அரசு பொதுத்தேர்வு 2023 (2M)",
           q: "வேதிவினை வேகத்தைப் பாதிக்கும் ஏதேனும் நான்கு காரணிகளைக் கூறுக.",
           ans: `<div style="line-height:1.7;">
             1. <b>வினைபடு பொருட்களின் தன்மை:</b> அயனிச் சேர்மங்கள் சகப்பிணைப்புச் சேர்மங்களை விட வேகமாக வினையாடுகின்றன.<br>
@@ -117,9 +119,10 @@ const SCIENCE_UNIT_10_DATA = {
         },
         {
           id: "sci_10_7",
+          examYear: "2024, 2022",
           type: "2m",
           mark: "2 மதிப்பெண்",
-          examTag: "அரசு பொதுத்தேர்வு",
+          examTag: "அரசு பொதுத்தேர்வு 4M / 7M",
           q: "இரட்டை இடப்பெயர்ச்சி வினை என்றால் என்ன? ஒரு சமன்பாட்டுடன் விளக்குக.",
           ans: `<div style="line-height:1.7;">
             <b>இரட்டை இடப்பெயர்ச்சி வினை (Double Displacement Reaction):</b><br>
@@ -155,3 +158,33 @@ const SCIENCE_UNIT_10_DATA = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = SCIENCE_UNIT_10_DATA;
 }
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_UNIT_10_DATA !== 'undefined' && SCIENCE_UNIT_10_DATA.subSections && SCIENCE_UNIT_10_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_UNIT_10_DATA.subSections[SCIENCE_UNIT_10_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_tm_u10_7m_rate',
+        type: '7m',
+        mark: '7 மதிப்பெண்',
+        examTag: 'அரசுப் பொதுத்தேர்வு 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "ஒரு வேதிவினையின் வேகத்தைத் தீர்மானிக்கும் பல்வேறு காரணிகளை எடுத்துக்காட்டுகளுடன் விளக்குக.",
+        ans: `<div style="line-height:1.8;">
+          <b>வேதிவினையின் வேகத்தைத் தீர்மானிக்கும் காரணிகள்:</b><br><br>
+          <b>1. வினைபடு பொருட்களின் இயல்பு:</b><br>
+          • அயனிச் சேர்மங்களின் வினைகள் உடனடியாக நிகழ்கின்றன (AgNO₃ + NaCl ➔ AgCl↓ + NaNO₃). சகப்பிணைப்புச் சேர்மங்களின் வினைகள் மெதுவாக நிகழ்கின்றன.<br><br>
+          <b>2. வினைபடு பொருட்களின் செறிவு:</b><br>
+          • செறிவு கூடும்போது துகள்களின் மோதல் எண்ணிக்கை அதிகரித்து வினையின் வேகம் கூடுகிறது.<br><br>
+          <b>3. வெப்பநிலை:</b><br>
+          • வெப்பநிலை உயரும்போது மூலக்கூறுகளின் இயக்க ஆற்றல் அதிகரித்து, ஒவ்வொரு 10°C வெப்பநிலை உயர்வுக்கும் வினையின் வேகம் இருமடங்காகிறது.<br><br>
+          <b>4. புறப்பரப்பளவு:</b><br>
+          • திண்மங்கள் தூளாக்கப்படும்போது புறப்பரப்பளவு பெருமளவு அதிகரிக்கிறது (பளிங்குக்கல் துண்டுகளை விட தூளாக்கப்பட்ட கால்சியம் கார்பனேட் மிக வேகமாக வினைபுரிகிறது).<br><br>
+          <b>5. வினைவேக மாற்றி:</b><br>
+          • வினையின் கிளர்வுறு ஆற்றலைக் குறைத்து வினையின் வேகத்தை அதிகரிக்கிறது (H₂O₂ சிதைவில் MnO₂).</div>`
+      });
+  }
+})();

@@ -1184,11 +1184,17 @@
     border-color: #93c5fd;
   }
   .qa-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: block;
+    width: 100%;
     margin-bottom: 12px;
-    gap: 10px;
+  }
+  @media (max-width: 600px) {
+    .qa-card {
+      padding: 14px 12px;
+    }
+    .qa-header-bar {
+      margin-bottom: 8px;
+    }
   }
   .mark-badge {
     font-size: 11px;
@@ -6308,7 +6314,26 @@ window.IMG_PLANT_B64 = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDA
       .replace(/10\?11/g, '10⁻¹¹')
       .replace(/I"p/g, 'Δp')
       .replace(/I\?/g, 'λ')
-      .replace(/I\?4/g, 'λ⁴');
+      .replace(/I\?4/g, 'λ⁴')
+      .replace(/\\u00E2\\u2020\\u2018|\\u00E2\\u0086\\u0091|â†‘/g, '↑')
+      .replace(/\\u00E2\\u2020\\u201C|\\u00E2\\u0086\\u0093|â†“/g, '↓')
+      .replace(/\\u00E2\\u009D\\u0152|\\u00E2\\u0152\\u008C|â\u009D\u0152|â\u0152\u008C|â\s*Œ/g, '❌')
+      .replace(/\\u00E2\\u0153\\u201D|âœ”/g, '✔')
+      .replace(/\\u00F0\\u0178\\u2018\\s*\\u00EF\\u00B8\\u008F|ðŸ‘\s*ï¸\s*/g, '👁️')
+      .replace(/\\u00F0\\u0178\\u0152\\u0178|ðŸŒŸ/g, '🌟')
+      .replace(/m(?:\\u00E2\\u201A\\u00A0|\\u00E2\\u201A\\u0081|â‚\s*)/g, 'm₁')
+      .replace(/m(?:\\u00E2\\u201A\\u201A|\\u00E2\\u201A\\u0082|â‚‚\s*)/g, 'm₂')
+      .replace(/u(?:\\u00E2\\u201A\\u00A0|\\u00E2\\u201A\\u0081|â‚\s*)/g, 'u₁')
+      .replace(/u(?:\\u00E2\\u201A\\u201A|\\u00E2\\u201A\\u0082|â‚‚\s*)/g, 'u₂')
+      .replace(/v(?:\\u00E2\\u201A\\u00A0|\\u00E2\\u201A\\u0081|â‚\s*)/g, 'v₁')
+      .replace(/v(?:\\u00E2\\u201A\\u201A|\\u00E2\\u201A\\u0082|â‚‚\s*)/g, 'v₂')
+      .replace(/10(?:\\u00E2\\u20AC\\u00B8|\\u00E2\\u0081\\u00B8|â\s*¸)/g, '10⁸')
+      .replace(/(?:\\u00C2\\u00B0|Â°)C/g, '°C')
+      .replace(/(?:\\u00C2\\u00B0|Â°)F/g, '°F')
+      .replace(/s(?:\\u00E2\\u0081\\u00BB|â\s*»)\s*(?:\\u00C2\\u00B9|Â¹)/g, 's⁻¹')
+      .replace(/kg(?:\\u00E2\\u0081\\u00BB|â\s*»)\s*(?:\\u00C2\\u00B9|Â¹)/g, 'kg⁻¹')
+      .replace(/g(?:\\u00E2\\u0081\\u00BB|â\s*»)\s*(?:\\u00C2\\u00B9|Â¹)/g, 'g⁻¹')
+      .replace(/(?:\\u00E2\\u20AC\\u00A2|â€¢)/g, '•');
   }
   window.cleanMathEncoding = cleanMathEncoding;
 
@@ -9335,45 +9360,16 @@ function resumeLastVisitedLesson() {
           const displayQNum = isFiltered ? (globalIdx + 1) : masterQNum;
           return `
             <div class="qa-card" id="card_${item.id}">
-              ${item.sectionTitle ? `
-                <div style="font-size:12px; font-weight:700; color:var(--primary); margin-bottom:6px; display:flex; align-items:center; gap:6px;">
-                  <span>📖 ${item.sectionTitle}</span>
-                  ${item.author ? `<span style="color:var(--text-muted);">• ${item.author}</span>` : ''}
-                </div>
-              ` : ''}
-
-              <div class="qa-top">
-                <div style="display:flex; align-items:flex-start; flex-direction:column; flex:1;">
-                  <div style="display:flex; align-items:flex-start; width:100%;">
-                    <span class="q-num" style="font-size:${contentFontSize}px;">Q${displayQNum}.${isFiltered ? `<span style="font-size:11px; font-weight:600; color:var(--text-muted); margin-left:3px;" title="பாடத்தில் மொத்த வினா எண்">(#${masterQNum})</span>` : ''}</span>
-                    <div class="q-text" style="font-size:${contentFontSize + 1}px;">
-                      ${(() => {
-                        const isMapQ = (item.id && item.id.includes('map')) || (item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்')));
-                        if (isMapQ) {
-                          const qShort = item.q.split('<br>')[0] || item.q;
-                          return `
-                            <div style="font-weight:800; color:var(--text-main); margin-bottom:6px;">
-                              🗺️ ${cleanMathEncoding(qShort)}
-                            </div>
-                            <div style="margin:8px 0;">
-                              <button type="button" class="tab-btn" onclick="openAnswerEvaluationModal('${item.id}')" style="background:linear-gradient(135deg, #0284c7, #0369a1); color:#fff; font-weight:800; font-size:13px; padding:8px 16px; border-radius:20px; border:none; cursor:pointer; box-shadow:0 3px 10px rgba(2,132,199,0.3); display:inline-flex; align-items:center; gap:6px;">
-                                <span>🎯</span>
-                                <span>${isEm || isEnglish ? 'Start 1, 2, 3 Map Quiz (8 Places) ➔' : '1, 2, 3 வரைபட வினாடி வினா தொடங்கு (8 இடங்கள்) ➔'}</span>
-                              </button>
-                            </div>
-                          `;
-                        }
-                        return cleanMathEncoding(item.q);
-                      })()}
-                    </div>
-                  </div>
-                  ${(item.qTamil && !isEm && !isEnglish) ? `
-                    <div style="font-size:${contentFontSize - 2}px; color:#1d4ed8; background:#eff6ff; padding:3px 8px; border-radius:6px; margin:6px 0 0 32px; font-weight:600; display:inline-block; border:1px solid #dbeafe;">
-                      💬 தமிழ் அர்த்தம்: ${item.qTamil}
-                    </div>
+              <div class="qa-header-bar" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+                <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+                  ${item.sectionTitle ? `
+                    <span style="font-size:12px; font-weight:700; color:var(--primary); display:inline-flex; align-items:center; gap:4px;">
+                      📖 ${item.sectionTitle}
+                    </span>
                   ` : ''}
+                  ${item.author ? `<span style="color:var(--text-muted); font-size:11.5px;">• ${item.author}</span>` : ''}
                 </div>
-                <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
+                <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-left:auto;">
                   ${item.examYear ? `
                     <span class="badge-2025">⭐ ${item.examYear} ${isEm || isEnglish ? 'Public Exam' : 'அரசுப் பொதுத்தேர்வு'}</span>
                   ` : ((item.examTag || item.isImportant) ? `
@@ -9391,6 +9387,37 @@ function resumeLastVisitedLesson() {
                     ★
                   </button>
                 </div>
+              </div>
+
+              <div class="qa-top">
+                <div style="display:flex; align-items:flex-start; width:100%;">
+                  <span class="q-num" style="font-size:${contentFontSize}px; flex-shrink:0;">Q${displayQNum}.${isFiltered ? `<span style="font-size:11px; font-weight:600; color:var(--text-muted); margin-left:3px;" title="பாடத்தில் மொத்த வினா எண்">(#${masterQNum})</span>` : ''}</span>
+                  <div class="q-text" style="font-size:${contentFontSize + 1}px; width:100%; word-break:break-word;">
+                    ${(() => {
+                      const isMapQ = isSocial && ((item.id && item.id.includes('map')) || (item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்'))));
+                      if (isMapQ) {
+                        const qShort = item.q.split('<br>')[0] || item.q;
+                        return `
+                          <div style="font-weight:800; color:var(--text-main); margin-bottom:6px;">
+                            🗺️ ${cleanMathEncoding(qShort)}
+                          </div>
+                          <div style="margin:8px 0;">
+                            <button type="button" class="tab-btn" onclick="openAnswerEvaluationModal('${item.id}')" style="background:linear-gradient(135deg, #0284c7, #0369a1); color:#fff; font-weight:800; font-size:13px; padding:8px 16px; border-radius:20px; border:none; cursor:pointer; box-shadow:0 3px 10px rgba(2,132,199,0.3); display:inline-flex; align-items:center; gap:6px;">
+                              <span>🎯</span>
+                              <span>${isEm || isEnglish ? 'Start 1, 2, 3 Map Quiz (8 Places) ➔' : '1, 2, 3 வரைபட வினாடி வினா தொடங்கு (8 இடங்கள்) ➔'}</span>
+                            </button>
+                          </div>
+                        `;
+                      }
+                      return cleanMathEncoding(item.q);
+                    })()}
+                  </div>
+                </div>
+                ${(item.qTamil && !isEm && !isEnglish) ? `
+                  <div style="font-size:${contentFontSize - 2}px; color:#1d4ed8; background:#eff6ff; padding:3px 8px; border-radius:6px; margin:6px 0 0 32px; font-weight:600; display:inline-block; border:1px solid #dbeafe;">
+                    💬 தமிழ் அர்த்தம்: ${item.qTamil}
+                  </div>
+                ` : ''}
               </div>
 
               ${item.options ? `
@@ -9516,7 +9543,7 @@ function resumeLastVisitedLesson() {
                             </button>
                           </div>
                           <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
-                            ${item.diagramSvg}
+                            ${cleanMathEncoding(item.diagramSvg)}
                             <div class="diagram-zoom-hint" onclick="openImageModalFromWrap(this)">
                               <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
                             </div>
@@ -9560,7 +9587,7 @@ function resumeLastVisitedLesson() {
                     </div>
                   ` : `
                     ${(() => {
-                      const isMapQ = (item.id && item.id.includes('map')) || (item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்')));
+                      const isMapQ = isSocial && ((item.id && item.id.includes('map')) || (item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்'))));
                       if (isMapQ) {
                         return `
                           <div style="background:#f8fafc; border:1.5px solid #cbd5e1; border-radius:10px; padding:10px 14px; margin-bottom:8px;">
@@ -9634,7 +9661,7 @@ function resumeLastVisitedLesson() {
 
                                     ${item.diagramImg ? `
                     ${(() => {
-                      const isMapQ = (item.id && item.id.includes('map')) || (item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்')));
+                      const isMapQ = isSocial && ((item.id && item.id.includes('map')) || (item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்'))));
                       const imgSrc = ((isEm || isEnglish) && item.diagramImg === 'images/math_bb_ex1_4.png') ? 'images/math_bb_ex1_4_en.png' : (item.diagramImg && item.diagramImg.startsWith('images/soc_') ? item.diagramImg.replace('images/', '') : item.diagramImg);
                       const caption = item.diagramCaption || (isEm || isEnglish ? 'Diagram' : 'வரைபடம்');
                       if (isMapQ) {
@@ -9680,7 +9707,7 @@ function resumeLastVisitedLesson() {
                             </button>
                           </div>
                           <div class="diagram-img-wrap" onclick="openImageModalFromWrap(this)" style="cursor:zoom-in;">
-                            ${item.diagramSvg}
+                            ${cleanMathEncoding(item.diagramSvg)}
                             <div class="diagram-zoom-hint" onclick="openImageModalFromWrap(this)">
                               <span>🔍 ${isEm || isEnglish ? 'Tap to Zoom Fullscreen' : 'தொட்டுப் பெரிதாகக் காண்க'}</span>
                             </div>
@@ -9791,9 +9818,9 @@ function resumeLastVisitedLesson() {
                     </div>
                     
                     ${item.type !== '1m' ? `
-                    <button type="button" class="ai-eval-btn" onclick="openAnswerEvaluationModal('${item.id}')" title="${(item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்'))) || (item.id && item.id.includes('map')) ? (isEm || isEnglish ? 'Practice Map Marking on Blank Map & Evaluate' : 'வெற்று வரைபடத்தில் குறித்து மதிப்பீடு செய்') : (isEm || isEnglish ? 'Evaluate Answer with AI' : 'உங்கள் விடையை AI மூலம் திருத்து')}">
-                      <span>${(item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்'))) || (item.id && item.id.includes('map')) ? '🗺️' : '📝'}</span>
-                      <span>${(item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்'))) || (item.id && item.id.includes('map')) ? (isEm || isEnglish ? 'Practice & Evaluate Map' : 'வரைபடம் பயிற்சி & திருத்து') : (isEm || isEnglish ? 'Evaluate' : 'விடை திருத்து')}</span>
+                    <button type="button" class="ai-eval-btn" onclick="openAnswerEvaluationModal('${item.id}')" title="${isSocial && ((item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்'))) || (item.id && item.id.includes('map'))) ? (isEm || isEnglish ? 'Practice Map Marking on Blank Map & Evaluate' : 'வெற்று வரைபடத்தில் குறித்து மதிப்பீடு செய்') : (isEm || isEnglish ? 'Evaluate Answer with AI' : 'உங்கள் விடையை AI மூலம் திருத்து')}">
+                      <span>${isSocial && ((item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்'))) || (item.id && item.id.includes('map'))) ? '🗺️' : '📝'}</span>
+                      <span>${isSocial && ((item.mark && (item.mark.includes('Map') || item.mark.includes('வரைபடம்'))) || (item.id && item.id.includes('map'))) ? (isEm || isEnglish ? 'Practice & Evaluate Map' : 'வரைபடம் பயிற்சி & திருத்து') : (isEm || isEnglish ? 'Evaluate' : 'விடை திருத்து')}</span>
                     </button>
                     ` : ''}
                     ${(item.type !== '1m' && !item.noVoice && (!(currentSubject && currentSubject.id.startsWith('maths')) || item.audioScript)) ? `
@@ -11496,10 +11523,94 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
            .replace(/\bTt\b/g, ' T t ')
            .replace(/→/g, isEnglish ? ' gives ' : ' தருகிறது ');
 
-// 0.1 Convert Unicode subscripts & superscripts
+  // 0.08 Proportionality & Physics Middle Dots
+  text = text.replace(/∝/g, isEnglish ? ' is directly proportional to ' : ' நேர்விகிதத்தில் இருக்கும் ');
+  text = text.replace(/([a-zA-Z\d\)])\s*·\s*([a-zA-Z\d\(])/g, isEnglish ? ' $1 into $2 ' : ' $1 பெருக்கல் $2 ')
+             .replace(/·/g, isEnglish ? ' into ' : ' பெருக்கல் ');
+
+  // 0.09 Scientific Units with Powers & Symbols
+  if (isEnglish) {
+    text = text.replace(/\bN\s*m²\s*kg⁻²(?!\w)/gi, ' Newton meter squared kilogram to the power of minus 2 ')
+               .replace(/\bN\s*m²\s*\/\s*kg²\b/gi, ' Newton meter squared per kilogram squared ')
+               .replace(/\bkg\s*m\s*s⁻²(?!\w)/gi, ' kilogram meter per second squared ')
+               .replace(/\bkg\s*m\s*s⁻¹(?!\w)/gi, ' kilogram meter per second ')
+               .replace(/\bm\s*s⁻²(?!\w)/gi, ' meters per second squared ')
+               .replace(/\bm\s*s⁻¹(?!\w)/gi, ' meters per second ')
+               .replace(/\bcal\s*g⁻¹\s*°?C⁻¹(?!\w)/gi, ' calories per gram degree Celsius ')
+               .replace(/\bJ\s*kg⁻¹\s*K⁻¹(?!\w)/gi, ' Joules per kilogram Kelvin ')
+               .replace(/\bkg⁻²(?!\w)/gi, ' kilogram to the power of minus 2 ')
+               .replace(/\bkg⁻¹(?!\w)/gi, ' kilogram to the power of minus 1 ')
+               .replace(/\bg⁻¹(?!\w)/gi, ' per gram ')
+               .replace(/\bN\s*s\b/g, ' Newton second ')
+               .replace(/\bN\s*m\b/g, ' Newton meter ')
+               .replace(/\bm²(?!\w)/g, ' meter squared ')
+               .replace(/\bm³(?!\w)/g, ' cubic meter ')
+               .replace(/\bcm³(?!\w)/g, ' cubic centimeter ');
+  } else {
+    text = text.replace(/\bN\s*m²\s*kg⁻²(?!\w)/gi, ' நியூட்டன் மீட்டர் ஸ்கொயர் கிலோகிராம் அடுக்கு மைனஸ் 2 ')
+               .replace(/\bN\s*m²\s*\/\s*kg²\b/gi, ' நியூட்டன் மீட்டர் ஸ்கொயர் பெர் கிலோகிராம் ஸ்கொயர் ')
+               .replace(/\bkg\s*m\s*s⁻²(?!\w)/gi, ' கிலோகிராம் மீட்டர் பெர் விநாடி ஸ்கொயர் ')
+               .replace(/\bkg\s*m\s*s⁻¹(?!\w)/gi, ' கிலோகிராம் மீட்டர் பெர் விநாடி ')
+               .replace(/\bm\s*s⁻²(?!\w)/gi, ' மீட்டர் பெர் விநாடி ஸ்கொயர் ')
+               .replace(/\bm\s*s⁻¹(?!\w)/gi, ' மீட்டர் பெர் விநாடி ')
+               .replace(/\bcal\s*g⁻¹\s*°?C⁻¹(?!\w)/gi, ' கலோரி பெர் கிராம் டிகிரி செல்சியஸ் ')
+               .replace(/\bJ\s*kg⁻¹\s*K⁻¹(?!\w)/gi, ' ஜூல் பெர் கிலோகிராம் கெல்வின் ')
+               .replace(/\bkg⁻²(?!\w)/gi, ' கிலோகிராம் அடுக்கு மைனஸ் 2 ')
+               .replace(/\bkg⁻¹(?!\w)/gi, ' கிலோகிராம் அடுக்கு மைனஸ் 1 ')
+               .replace(/\bg⁻¹(?!\w)/gi, ' பெர் கிராம் ')
+               .replace(/\bN\s*s\b/g, ' நியூட்டன் விநாடி ')
+               .replace(/\bN\s*m\b/g, ' நியூட்டன் மீட்டர் ')
+               .replace(/\bm²(?!\w)/g, ' மீட்டர் ஸ்கொயர் ')
+               .replace(/\bm³(?!\w)/g, ' கன மீட்டர் ')
+               .replace(/\bcm³(?!\w)/g, ' கன சென்டிமீட்டர் ');
+  }
+
+  // 0.095 Exponents & Powers (e.g. 10⁻¹¹, 10⁻⁴, 10⁸, x⁻², etc.)
+  const parseSuperscriptDigits = (supStr) => {
+    const isNeg = supStr.includes('⁻') || supStr.includes('-');
+    const digits = supStr.replace(/[^⁰¹²³⁴⁵⁶⁷⁸⁹0-9]/g, '')
+      .replace(/⁰/g, '0').replace(/¹/g, '1').replace(/²/g, '2').replace(/³/g, '3').replace(/⁴/g, '4')
+      .replace(/⁵/g, '5').replace(/⁶/g, '6').replace(/⁷/g, '7').replace(/⁸/g, '8').replace(/⁹/g, '9');
+    return { isNeg, digits };
+  };
+
+  // Powers of 10 (e.g. 10⁻¹¹, 10⁻⁴, 10⁻¹⁴, 10⁸, 10⁶)
+  text = text.replace(/10\s*([⁻⁺]?[⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g, (match, p1) => {
+    const { isNeg, digits } = parseSuperscriptDigits(p1);
+    if (isEnglish) {
+      return isNeg ? ` 10 to the power of minus ${digits} ` : ` 10 to the power of ${digits} `;
+    } else {
+      return isNeg ? ` 10 இன் அடுக்கு மைனஸ் ${digits} ` : ` 10 இன் அடுக்கு ${digits} `;
+    }
+  });
+
+  // Base variable or number with negative power (e.g. kg⁻², r⁻¹, x⁻²)
+  text = text.replace(/([a-zA-Z\d\)]+)\s*([⁻][⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g, (match, base, p1) => {
+    const { digits } = parseSuperscriptDigits(p1);
+    if (isEnglish) {
+      return ` ${base} to the power of minus ${digits} `;
+    } else {
+      return ` ${base} இன் அடுக்கு மைனஸ் ${digits} `;
+    }
+  });
+
+  // Base variable or number with positive power of 2+ digits (e.g. 2¹⁰, a¹²)
+  text = text.replace(/([a-zA-Z\d\)]+)\s*([⁰¹²³⁴⁵⁶⁷⁸⁹]{2,})/g, (match, base, p1) => {
+    const { digits } = parseSuperscriptDigits(p1);
+    if (isEnglish) {
+      return ` ${base} to the power of ${digits} `;
+    } else {
+      return ` ${base} இன் அடுக்கு ${digits} `;
+    }
+  });
+
+  // 0.1 Convert Unicode subscripts & superscripts
   text = text.replace(/₀/g, ' 0 ').replace(/₁/g, ' 1 ').replace(/₂/g, ' 2 ').replace(/₃/g, ' 3 ').replace(/₄/g, ' 4 ')
              .replace(/₅/g, ' 5 ').replace(/₆/g, ' 6 ').replace(/₇/g, ' 7 ').replace(/₈/g, ' 8 ').replace(/₉/g, ' 9 ')
-             .replace(/⁰/g, ' 0 ').replace(/¹/g, ' 1 ').replace(/²/g, ' squared ').replace(/³/g, ' cubed ');
+             .replace(/⁰/g, ' 0 ').replace(/¹/g, ' 1 ').replace(/²/g, ' squared ').replace(/³/g, ' cubed ')
+             .replace(/⁴/g, ' 4 ').replace(/⁵/g, ' 5 ').replace(/⁶/g, ' 6 ').replace(/⁷/g, ' 7 ').replace(/⁸/g, ' 8 ').replace(/⁹/g, ' 9 ')
+             .replace(/⁻/g, isEnglish ? ' minus ' : ' மைனஸ் ')
+             .replace(/⁺/g, isEnglish ? ' plus ' : ' கூட்டல் ');
 
   // 0.2 LaTeX math commands
   text = text.replace(/\\times\b/g, ' × ')
@@ -19191,6 +19302,11 @@ Important:
 
   function isMapQuestion(qItem) {
     if (!qItem) return false;
+    const isSocial = Boolean(
+      (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.startsWith('social') || currentSubject.id === 'social_science' || currentSubject.id.startsWith('soc'))) ||
+      ((qItem.id || '').toLowerCase().startsWith('soc_'))
+    );
+    if (!isSocial) return false;
     const mark = (qItem.mark || '').toLowerCase();
     const id = (qItem.id || '').toLowerCase();
     const q = (qItem.q || '').toLowerCase();
@@ -19214,6 +19330,11 @@ Important:
     const qBanner = document.getElementById('evalQuestionCardBanner');
     const isEm = (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.endsWith('_em') || currentSubject.id === 'english')) ||
                  (currentEvalQuestion && currentEvalQuestion.id && currentEvalQuestion.id.includes('_em_'));
+    const isSocial = Boolean(
+      (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.startsWith('social') || currentSubject.id === 'social_science' || currentSubject.id.startsWith('soc'))) ||
+      (currentEvalQuestion && currentEvalQuestion.id && currentEvalQuestion.id.toLowerCase().startsWith('soc_'))
+    );
+    if (!isSocial) mode = 'text';
 
     const modeWrap = document.getElementById('evalModeSwitcherWrap');
     if (modeWrap) modeWrap.style.display = 'none';
@@ -19332,7 +19453,13 @@ Important:
     // Update modal title
     const modalTitle = document.getElementById('evalModalTitle');
     const modalSub = document.getElementById('evalModalSubtitle');
-    const isMap = isMapQuestion(qItem);
+    const isSocial = Boolean(
+      (typeof currentSubject !== 'undefined' && currentSubject && (currentSubject.id.startsWith('social') || currentSubject.id === 'social_science' || currentSubject.id.startsWith('soc'))) ||
+      (qItem && qItem.id && qItem.id.toLowerCase().startsWith('soc_'))
+    );
+    const isMap = isSocial && isMapQuestion(qItem);
+    const bannerMapBtn = document.getElementById('evalBannerMapBtn');
+    if (bannerMapBtn) bannerMapBtn.style.display = isSocial ? 'inline-block' : 'none';
     const modeWrap = document.getElementById('evalModeSwitcherWrap');
     if (modeWrap) modeWrap.style.display = 'none';
 
@@ -19732,7 +19859,7 @@ Important:
       <div id="evalQuestionCardBanner" class="eval-question-banner" style="background:#1e293b; border-left:4px solid #10b981; padding:10px 14px; border-radius:8px; margin-bottom:12px;">
         <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:6px;">
           <div style="font-size:11px; font-weight:800; color:#10b981; text-transform:uppercase;">வினா விவரம் (Question Details):</div>
-          <button type="button" onclick="switchEvalMode('map')" style="background:rgba(2,132,199,0.2); border:1px solid #0284c7; color:#38bdf8; font-size:11.5px; font-weight:800; padding:3px 10px; border-radius:6px; cursor:pointer;">
+          <button type="button" id="evalBannerMapBtn" onclick="switchEvalMode('map')" style="display:none; background:rgba(2,132,199,0.2); border:1px solid #0284c7; color:#38bdf8; font-size:11.5px; font-weight:800; padding:3px 10px; border-radius:6px; cursor:pointer;">
             🗺️ மாதிரி வரைபடம் பயிற்சி செய் (Practice Map) ➔
           </button>
         </div>

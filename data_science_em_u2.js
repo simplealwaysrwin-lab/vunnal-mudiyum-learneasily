@@ -1,4 +1,4 @@
-﻿// 10th Standard Science - Unit 2: Optics (English Medium)
+// 10th Standard Science - Unit 2: Optics (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SCIENCE_EM_UNIT_2_DATA = {
@@ -381,13 +381,13 @@ const SCIENCE_EM_UNIT_2_DATA = {
 
 
 // ==========================================
-// ðŸŒŸ Outside Book Practice Questions & Mock Test 1-Mark Points (Unit 2 EM)
+// 🌟 Outside Book Practice Questions & Mock Test 1-Mark Points (Unit 2 EM)
 // ==========================================
 if (typeof SCIENCE_EM_UNIT_2_DATA !== 'undefined') {
   if (!SCIENCE_EM_UNIT_2_DATA.subSections) SCIENCE_EM_UNIT_2_DATA.subSections = [];
   SCIENCE_EM_UNIT_2_DATA.subSections.push({
     id: "sci_em_u2_outside",
-    title: "ðŸŒŸ Outside Book Practice Questions & Mock Test 1-Mark Points",
+    title: "🌟 Outside Book Practice Questions & Mock Test 1-Mark Points",
     author: "Expert Science Faculty",
     questions: [
       {
@@ -399,11 +399,11 @@ if (typeof SCIENCE_EM_UNIT_2_DATA !== 'undefined') {
              "<b>1. Construction:</b><br>" +
              "A simple microscope consists of a single biconvex lens of short focal length mounted in a metallic or plastic frame provided with a handle.<br><br>" +
              "<b>2. Principle & Image Formation:</b><br>" +
-             "â€¢ An object AB is placed between the optical centre (O) and principal focus (F) of the convex lens (u < f).<br>" +
-             "â€¢ Ray 1 parallel to the principal axis refracts through second focus F'.<br>" +
-             "â€¢ Ray 2 passing straight through optical centre O emerges undeviated.<br>" +
-             "â€¢ Since the refracted rays diverge on the opposite side, they appear to originate from point A' behind the object when extended backwards.<br>" +
-             "â€¢ Thus, a <b>virtual, erect, and magnified image A'B'</b> is produced on the same side of the lens.<br><br>" +
+             "• An object AB is placed between the optical centre (O) and principal focus (F) of the convex lens (u < f).<br>" +
+             "• Ray 1 parallel to the principal axis refracts through second focus F'.<br>" +
+             "• Ray 2 passing straight through optical centre O emerges undeviated.<br>" +
+             "• Since the refracted rays diverge on the opposite side, they appear to originate from point A' behind the object when extended backwards.<br>" +
+             "• Thus, a <b>virtual, erect, and magnified image A'B'</b> is produced on the same side of the lens.<br><br>" +
              "<b>3. Magnifying Power:</b><br>" +
              "<div style='text-align:center; font-size:15px; font-weight:bold; color:#0369a1; padding:6px; background:#f0f9ff; border-radius:6px;'>m = 1 + (D / f)</div>" +
              "where D is the least distance of distinct vision (25 cm) and f is focal length.<br><br>" +
@@ -432,7 +432,7 @@ if (typeof SCIENCE_EM_UNIT_2_DATA !== 'undefined') {
   <line x1="100" y1="140" x2="100" y2="40" stroke="#7c3aed" stroke-width="3.5" stroke-dasharray="5,3"/>
   <polygon points="95,44 100,32 105,44" fill="#7c3aed"/>
   <text x="92" y="28" font-size="12" font-weight="bold" fill="#6d28d9">A'</text><text x="80" y="156" font-size="10" font-weight="bold" fill="#6d28d9">B' (Virtual Image)</text>
-  <text x="420" y="180" font-size="20">ðŸ‘ï¸</text>
+  <text x="420" y="180" font-size="20">👁️</text>
   <rect x="20" y="215" width="420" height="32" rx="6" fill="#f1f5f9"/>
   <text x="230" y="235" font-size="10.5" font-weight="bold" fill="#334155" text-anchor="middle">Nature: Virtual, Erect &amp; Magnified Image</text>
 </svg>`
@@ -444,15 +444,15 @@ if (typeof SCIENCE_EM_UNIT_2_DATA !== 'undefined') {
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Eye Defects and Ray Diagram Corrections:</b><br><br>" +
              "<b>1. Myopia (Short-sightedness):</b><br>" +
-             "â€¢ <b>Symptom:</b> A person can view nearby objects clearly, but distant objects appear blurred.<br>" +
-             "â€¢ <b>Causes:</b> Elongation of the eyeball or excessive curvature of the eye lens (short focal length).<br>" +
-             "â€¢ <b>Image Position:</b> Parallel rays from a distant object focus <b>in front of the retina</b>.<br>" +
-             "â€¢ <b>Correction:</b> Corrected using a <b>concave lens (diverging lens)</b> of suitable focal length.<br><br>" +
+             "• <b>Symptom:</b> A person can view nearby objects clearly, but distant objects appear blurred.<br>" +
+             "• <b>Causes:</b> Elongation of the eyeball or excessive curvature of the eye lens (short focal length).<br>" +
+             "• <b>Image Position:</b> Parallel rays from a distant object focus <b>in front of the retina</b>.<br>" +
+             "• <b>Correction:</b> Corrected using a <b>concave lens (diverging lens)</b> of suitable focal length.<br><br>" +
              "<b>2. Hypermetropia (Long-sightedness):</b><br>" +
-             "â€¢ <b>Symptom:</b> A person can view distant objects clearly, but nearby objects appear blurred.<br>" +
-             "â€¢ <b>Causes:</b> Shortening of the eyeball or increase in focal length of the eye lens.<br>" +
-             "â€¢ <b>Image Position:</b> Rays from a near object focus <b>behind the retina</b>.<br>" +
-             "â€¢ <b>Correction:</b> Corrected using a <b>convex lens (converging lens)</b> of suitable focal length.",
+             "• <b>Symptom:</b> A person can view distant objects clearly, but nearby objects appear blurred.<br>" +
+             "• <b>Causes:</b> Shortening of the eyeball or increase in focal length of the eye lens.<br>" +
+             "• <b>Image Position:</b> Rays from a near object focus <b>behind the retina</b>.<br>" +
+             "• <b>Correction:</b> Corrected using a <b>convex lens (converging lens)</b> of suitable focal length.",
         explanation: "Myopia is corrected by diverging concave lenses (image in front of retina); Hypermetropia is corrected by converging convex lenses (image behind retina).",
         diagramCaption: "Comparative Ray Diagrams for Myopia & Hypermetropia Correction",
         diagramSvg: `<svg viewBox="0 0 460 280" style="max-width:100%; height:auto; display:block; margin:0 auto; background:#f8fafc; border-radius:12px; border:1px solid #cbd5e1;">
@@ -465,7 +465,7 @@ if (typeof SCIENCE_EM_UNIT_2_DATA !== 'undefined') {
     <line x1="20" y1="58" x2="98" y2="58" stroke="#ef4444" stroke-width="1.2"/><line x1="20" y1="72" x2="98" y2="72" stroke="#ef4444" stroke-width="1.2"/>
     <line x1="102" y1="58" x2="160" y2="65" stroke="#ef4444" stroke-width="1.2"/><line x1="102" y1="72" x2="160" y2="65" stroke="#ef4444" stroke-width="1.2"/>
     <circle cx="160" cy="65" r="3" fill="#dc2626"/>
-    <text x="107" y="110" font-size="9.5" fill="#b91c1c" text-anchor="middle">âŒ Focuses in front of retina</text>
+    <text x="107" y="110" font-size="9.5" fill="#b91c1c" text-anchor="middle">❌ Focuses in front of retina</text>
     <ellipse cx="140" cy="165" rx="45" ry="32" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
     <path d="M 52,148 Q 56,165 52,182 L 60,182 Q 56,165 60,148 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
     <line x1="15" y1="158" x2="52" y2="158" stroke="#15803d" stroke-width="1.2"/><line x1="15" y1="172" x2="52" y2="172" stroke="#15803d" stroke-width="1.2"/>
@@ -473,7 +473,7 @@ if (typeof SCIENCE_EM_UNIT_2_DATA !== 'undefined') {
     <path d="M 100,150 Q 106,165 100,180 Q 94,165 100,150 Z" fill="#e0f2fe" stroke="#0284c7"/>
     <line x1="102" y1="154" x2="185" y2="165" stroke="#15803d" stroke-width="1.2"/><line x1="102" y1="176" x2="185" y2="165" stroke="#15803d" stroke-width="1.2"/>
     <circle cx="185" cy="165" r="3" fill="#16a34a"/>
-    <text x="107" y="210" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">âœ” Concave Lens Correction</text>
+    <text x="107" y="210" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">✔ Concave Lens Correction</text>
     <text x="107" y="224" font-size="9" fill="#166534" text-anchor="middle">Sharp focus onto retina</text>
   </g>
   <g transform="translate(235, 35)">
@@ -484,7 +484,7 @@ if (typeof SCIENCE_EM_UNIT_2_DATA !== 'undefined') {
     <line x1="20" y1="65" x2="80" y2="56" stroke="#ef4444" stroke-width="1.2"/><line x1="20" y1="65" x2="80" y2="74" stroke="#ef4444" stroke-width="1.2"/>
     <line x1="84" y1="56" x2="180" y2="65" stroke="#ef4444" stroke-width="1.2"/><line x1="84" y1="74" x2="180" y2="65" stroke="#ef4444" stroke-width="1.2"/>
     <circle cx="180" cy="65" r="3" fill="#dc2626"/>
-    <text x="107" y="110" font-size="9.5" fill="#b91c1c" text-anchor="middle">âŒ Focuses behind retina</text>
+    <text x="107" y="110" font-size="9.5" fill="#b91c1c" text-anchor="middle">❌ Focuses behind retina</text>
     <ellipse cx="120" cy="165" rx="42" ry="32" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
     <path d="M 45,150 Q 51,165 45,180 Q 39,165 45,150 Z" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
     <line x1="15" y1="165" x2="43" y2="158" stroke="#15803d" stroke-width="1.2"/><line x1="15" y1="165" x2="43" y2="172" stroke="#15803d" stroke-width="1.2"/>
@@ -492,7 +492,7 @@ if (typeof SCIENCE_EM_UNIT_2_DATA !== 'undefined') {
     <path d="M 82,150 Q 88,165 82,180 Q 76,165 82,150 Z" fill="#e0f2fe" stroke="#0284c7"/>
     <line x1="84" y1="156" x2="162" y2="165" stroke="#15803d" stroke-width="1.2"/><line x1="84" y1="174" x2="162" y2="165" stroke="#15803d" stroke-width="1.2"/>
     <circle cx="162" cy="165" r="3" fill="#16a34a"/>
-    <text x="107" y="210" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">âœ” Convex Lens Correction</text>
+    <text x="107" y="210" font-size="10" font-weight="bold" fill="#15803d" text-anchor="middle">✔ Convex Lens Correction</text>
     <text x="107" y="224" font-size="9" fill="#166534" text-anchor="middle">Sharp focus onto retina</text>
   </g>
 </svg>`

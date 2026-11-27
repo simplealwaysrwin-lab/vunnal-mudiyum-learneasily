@@ -1,4 +1,4 @@
-﻿// 10th Standard Science - Unit 3: Thermal Physics (English Medium)
+// 10th Standard Science - Unit 3: Thermal Physics (English Medium)
 // Tamil Nadu State Board Samacheer Kalvi Question Bank & Solutions
 
 const SCIENCE_EM_UNIT_3_DATA = {
@@ -152,18 +152,18 @@ const SCIENCE_EM_UNIT_3_DATA = {
 
 
 // ==========================================
-// ðŸŒŸ Outside Book Practice Questions & Mock Test 1-Mark Points (Unit 3 EM)
+// 🌟 Outside Book Practice Questions & Mock Test 1-Mark Points (Unit 3 EM)
 // ==========================================
 if (typeof SCIENCE_EM_UNIT_3_DATA !== 'undefined') {
   if (!SCIENCE_EM_UNIT_3_DATA.subSections) SCIENCE_EM_UNIT_3_DATA.subSections = [];
   SCIENCE_EM_UNIT_3_DATA.subSections.push({
     id: "sci_em_u3_outside",
-    title: "ðŸŒŸ Outside Book Practice Questions & Mock Test 1-Mark Points",
+    title: "🌟 Outside Book Practice Questions & Mock Test 1-Mark Points",
     author: "Expert Science Faculty",
     questions: [
       {
         id: "sci_em_u3_out_5m_1",
-        q: "Explain the three modes of heat transfer â€” Conduction, Convection, and Radiation â€” with examples and a neat diagram.",
+        q: "Explain the three modes of heat transfer — Conduction, Convection, and Radiation — with examples and a neat diagram.",
         type: "7m",
         examTag: "Outside Book / Extra Practice 5-Mark Question",
         ans: "<b>Three Modes of Heat Transfer:</b><br><br>" +
@@ -177,7 +177,7 @@ if (typeof SCIENCE_EM_UNIT_3_DATA !== 'undefined') {
              "• <i>Example:</i> Boiling water in an electric kettle; generation of sea and land breezes.<br><br>" +
              "<b>3. Radiation:</b><br>" +
              "• The process of heat transfer in the form of electromagnetic infrared waves without requiring any material intervening medium.<br>" +
-             "• Radiative heat travels through empty vacuum at the speed of light (3 × 10â¸ m/s).<br>" +
+             "• Radiative heat travels through empty vacuum at the speed of light (3 × 10⁸ m/s).<br>" +
              "• <i>Example:</i> Solar thermal energy reaching Earth across outer space vacuum; warming hands around an electric room heater.",
         explanation: "Conduction occurs in solids without particle motion; Convection occurs in fluids with particle motion; Radiation travels through vacuum as electromagnetic waves.",
         diagramCaption: "Illustration of Conduction, Convection, and Radiation",
@@ -243,16 +243,47 @@ if (typeof SCIENCE_EM_UNIT_3_DATA !== 'undefined') {
       // 12 Mock Test 1-Mark Questions
       { id: "sci_em_u3_out_1m_1", q: "What is the form of energy that flows from a body at higher temperature to one at lower temperature?", options: ["Heat", "Work", "Charge", "Pressure"], ans: "Heat", type: "1m", explanation: "Heat is thermal energy in transit driven by temperature differences." },
       { id: "sci_em_u3_out_1m_2", q: "The degree of hotness or coldness of a physical body is quantitatively measured by:", options: ["Temperature", "Density", "Specific heat", "Internal energy"], ans: "Temperature", type: "1m", explanation: "Temperature indicates the thermal state and direction of heat flow." },
-      { id: "sci_em_u3_out_1m_3", q: "What is the SI unit of temperature?", options: ["Kelvin (K)", "Celsius (Â°C)", "Fahrenheit (Â°F)", "Joule"], ans: "Kelvin (K)", type: "1m", explanation: "Kelvin (K) is the SI base unit for thermodynamic temperature." },
+      { id: "sci_em_u3_out_1m_3", q: "What is the SI unit of temperature?", options: ["Kelvin (K)", "Celsius (°C)", "Fahrenheit (°F)", "Joule"], ans: "Kelvin (K)", type: "1m", explanation: "Kelvin (K) is the SI base unit for thermodynamic temperature." },
       { id: "sci_em_u3_out_1m_4", q: "Heat transfer in solids without the actual bodily motion of molecules is called:", options: ["Conduction", "Convection", "Radiation", "Expansion"], ans: "Conduction", type: "1m", explanation: "Conduction takes place through molecular vibrations in solids." },
       { id: "sci_em_u3_out_1m_5", q: "Heat transfer in liquids and gases through the actual bulk movement of heated particles is called:", options: ["Convection", "Conduction", "Radiation", "Sublimation"], ans: "Convection", type: "1m", explanation: "Convection occurs in fluids due to density gradients." },
       { id: "sci_em_u3_out_1m_6", q: "Heat transfer by means of electromagnetic waves without requiring a material medium is called:", options: ["Radiation", "Conduction", "Convection", "Refraction"], ans: "Radiation", type: "1m", explanation: "Thermal radiation travels across vacuum as infrared rays." },
       { id: "sci_em_u3_out_1m_7", q: "Which mode of heat transfer can take place across an absolute vacuum?", options: ["Radiation only", "Conduction only", "Convection only", "All three"], ans: "Radiation only", type: "1m", explanation: "Only electromagnetic radiation can travel through vacuum." },
       { id: "sci_em_u3_out_1m_8", q: "The amount of heat required to raise the temperature of 1 kg of a substance by 1 K is called:", options: ["Specific heat capacity", "Heat capacity", "Latent heat", "Thermal conductance"], ans: "Specific heat capacity", type: "1m", explanation: "C = Q / (m × ΔT)." },
-      { id: "sci_em_u3_out_1m_9", q: "What is the SI unit of specific heat capacity?", options: ["J kgâ»Â¹ Kâ»Â¹", "J Kâ»Â¹", "J sâ»Â¹", "cal gâ»Â¹"], ans: "J kgâ»Â¹ Kâ»Â¹", type: "1m", explanation: "Joules per kilogram Kelvin." },
+      { id: "sci_em_u3_out_1m_9", q: "What is the SI unit of specific heat capacity?", options: ["J kg⁻¹ K⁻¹", "J K⁻¹", "J s⁻¹", "cal g⁻¹"], ans: "J kg⁻¹ K⁻¹", type: "1m", explanation: "Joules per kilogram Kelvin." },
       { id: "sci_em_u3_out_1m_10", q: "The heat absorbed or released during a change of state at constant temperature is called:", options: ["Latent heat", "Specific heat", "Sensible heat", "Reaction heat"], ans: "Latent heat", type: "1m", explanation: "Latent heat changes physical state without changing temperature." },
-      { id: "sci_em_u3_out_1m_11", q: "What is the normal boiling point of pure water at standard atmospheric pressure?", options: ["100Â°C (373.15 K)", "0Â°C", "273 K", "300 K"], ans: "100Â°C (373.15 K)", type: "1m", explanation: "Water boils at 100Â°C under 1 atmosphere pressure." },
+      { id: "sci_em_u3_out_1m_11", q: "What is the normal boiling point of pure water at standard atmospheric pressure?", options: ["100°C (373.15 K)", "0°C", "273 K", "300 K"], ans: "100°C (373.15 K)", type: "1m", explanation: "Water boils at 100°C under 1 atmosphere pressure." },
       { id: "sci_em_u3_out_1m_12", q: "Which instrument is used to measure temperature accurately?", options: ["Thermometer", "Barometer", "Calorimeter", "Voltmeter"], ans: "Thermometer", type: "1m", explanation: "A thermometer measures temperature." }
     ]
   });
 }
+
+
+// Added Verified Board Exam 7-Mark Question (Public Exam 2026 Checklist)
+(function() {
+  if (typeof SCIENCE_EM_UNIT_3_DATA !== 'undefined' && SCIENCE_EM_UNIT_3_DATA.subSections && SCIENCE_EM_UNIT_3_DATA.subSections.length > 0) {
+    const lastSec = SCIENCE_EM_UNIT_3_DATA.subSections[SCIENCE_EM_UNIT_3_DATA.subSections.length - 1];
+    lastSec.questions.push(
+      {
+        id: 'sci_em_u3_7m_expansion',
+        type: '7m',
+        mark: '7 Marks',
+        examTag: 'Public Exam 7M',
+        isImportant: true,
+        isAdditionalPractice: true,
+        q: "Explain the experiment to determine the real and apparent expansion of a liquid with a neat labeled diagram.",
+        ans: `<div style="line-height:1.8;">
+          <b>Experiment to Measure Real & Apparent Expansion of a Liquid:</b><br><br>
+          <b>1. Experimental Setup:</b><br>
+          • A round-bottom glass container fitted with a narrow graduated stem is filled with the liquid under investigation up to mark <b>L₁</b>.<br>
+          • Heat is applied to the flask using a burner.<br><br>
+          <b>2. Sequence of Observations:</b><br>
+          • Initially, the glass flask receives heat first and expands, causing the liquid level to drop from <b>L₁ to L₂</b>.<br>
+          • On further continuous heating, the liquid absorbs heat energy and expands significantly more than the glass container, rising sharply from <b>L₂ to L₃</b>.<br><br>
+          <b>3. Formulas & Results:</b><br>
+          • <b>Apparent Expansion:</b> L₃ - L₁ (Liquid rise observed without considering container expansion).<br>
+          • <b>Real Expansion:</b> L₃ - L₂ (True expansion taking flask expansion into account).<br>
+          • <b>Relationship:</b> Real Expansion = Apparent Expansion + Expansion of Container.<br>
+          • Real expansion is always greater than apparent expansion (L₃ - L₂ &gt; L₃ - L₁).</div>`
+      });
+  }
+})();

@@ -170,6 +170,104 @@ const SOCIAL_EM_UNIT_17_DATA = {
 • Note Vaikunda Swamigal's distinctive institution: 'Nizhal Thangals' (shrine feeding centers).`,
           ansTamil: "ராமலிங்க அடிகளார், வைகுண்ட சுவாமிகள், ஸ்ரீ நாராயண குரு மற்றும் அய்யன்காளி ஆகியோர் தென்னிந்திய சீர்திருத்தத்திற்கு அளப்பரிய பங்களிப்பு செய்தனர்.",
           audioScript: "Prominent social reform leaders and movements of South India: 1. Raama-linga Adigal, known as Valla-laar: Emphasized compassion or Jeeva-Kaarunya as the highest virtue. Established Samarasa Suddha Sanmaarga Sathya Sangam in 1865 and Sathya Dharma Saalai at Vada-loor in 1867 to feed all people unconditionally. 2. Vaikunda Swaamigal, founder of Ayya Vaazhi: Born near Kanyakumari, championed equality and self-respect, instituted Samathuva Samajam inter-dining, and built community halls called Ni-zhal Thaangals. 3. Sri Narayana Guru of Kerala: Coined the slogan, One Caste, One Religion, One God for All Humanity, built the Shiva temple at Aruvippuram, and founded S N D P Yogam. 4. Ayyankali of Kerala: Championed Dalits right to use public roads and obtain schooling, founding the Sadhu Jana Paari-paalana Sangam in 1907."
+        },
+        {
+          id: "soc_em_17_9",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          isImportant: true,
+          q: "What were the main objectives of the Arya Samaj?",
+          ans: `<div style="line-height:1.8;">
+  • Founded by Swami Dayananda Saraswati in 1875, the Arya Samaj opposed child marriage, the rigid caste system, untouchability, and idol worship.<br>
+  • It championed widow remarriage, women's education, launched the 'Shuddhi' movement, and gave the clarion call <i>"Go back to the Vedas."</i>
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Mention the founder: Swami Dayananda Saraswati (1875).
+• Quote the famous slogan: 'Go back to the Vedas'.`,
+          ansTamil: "1875-ல் சுவாமி தயானந்த சரஸ்வதியால் தொடங்கப்பட்ட ஆரிய சமாஜம் உருவ வழிபாடு, குழந்தைத் திருமணம், சாதிமுறையை எதிர்த்தது; விதவை மறுமணம், பெண் கல்வியை ஆதரித்து 'வேதங்களுக்குத் திரும்புவோம்' என்ற முழக்கத்தை முன்வைத்தது."
+        },
+        {
+          id: "soc_em_17_10",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Important Extra",
+          isImportant: true,
+          q: "Write a note on the Deoband Movement.",
+          ans: `<div style="line-height:1.8;">
+  • The Deoband Movement was an orthodox revivalist movement founded in 1866 by Muslim Ulemas (Muhammad Qasim Nanotavi and Rashid Ahmad Gangohi) at Deoband (Saharanpur, Uttar Pradesh).<br>
+  • Its prime aims were to teach pure Islamic teachings based on Quran and Hadith and to train Muslims to oppose British colonial rule.
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Note the year: 1866 at Deoband, Uttar Pradesh.
+• Highlight that it was a revivalist movement that opposed British rule.`,
+          ansTamil: "1866-ல் உ.பி.யின் தேவ்பந்த் நகரில் மரபுவழி முஸ்லிம் உலமாக்களால் தொடங்கப்பட்ட மீட்பியக்கம். தூய இஸ்லாத்தைப் போதிப்பதும், ஆங்கிலேய ஆட்சியை எதிர்க்க முஸ்லிம்களைத் தயார்படுத்துவதும் இதன் நோக்கமாகும்."
+        },
+        {
+          id: "soc_em_17_11",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          isImportant: true,
+          q: "Who was Jyotiba Phule? Mention his contribution.",
+          ans: `<div style="line-height:1.8;">
+  • Jyotiba Govindrao Phule was a pioneering social reformer from Maharashtra who fought valiantly against caste discrimination, Brahmin supremacy, and untouchability.<br>
+  • Along with his wife Savitribai Phule, he opened the first school for girls in Pune (1848), established the <b>Satyashodhak Samaj</b> (Truth Seekers Society in 1873), and set up shelter homes for widows and orphans.
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Mention his region (Maharashtra), his wife (Savitribai Phule), the first girls' school in Pune, and Satyashodhak Samaj.`,
+          ansTamil: "மகாராஷ்டிராவைச் சேர்ந்த ஜோதிபா பூலே சாதிப் பாகுபாடு மற்றும் தீண்டாமைக்கு எதிராகப் போராடினார். மனைவி சாவித்ரிபாய் பூலேயுடன் புனேவில் பெண்களுக்கான முதல் பள்ளியைத் திறந்தார்; விதவைகள் மற்றும் ஆதரவற்றோருக்கான இல்லங்களை நிறுவினார்."
+        },
+        {
+          id: "soc_em_17_12",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Important Extra",
+          isImportant: true,
+          q: "What is Thiruvarutpa?",
+          ans: `<div style="line-height:1.8;">
+  • Ramalinga Adigal (popularly known as <b>Vallalar</b>) composed thousands of compassionate and devotional Tamil poems celebrating divine light (Arutperunjothi) and universal kindness (Jeevakarunya).<br>
+  • These holy poems were collected, compiled, and published under the renowned title <b>Thiruvarutpa</b> (Songs of Divine Grace).
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Connect 'Thiruvarutpa' to Ramalinga Adigal (Vallalar) and explain that it means 'Songs of Grace'.`,
+          ansTamil: "ராமலிங்க அடிகளார் (வள்ளலார்) இயற்றிய பக்தி மற்றும் ஜீவகாருண்யம் நிறைந்த பல்லாயிரக்கணக்கான பாடல்களின் தொகுப்பே 'திருவருட்பா' (அருட்பாக்கள்) ஆகும்."
+        },
+        {
+          id: "soc_em_17_13",
+          type: "5m",
+          mark: "5 Marks",
+          examTag: "Public Exam 5M",
+          isImportant: true,
+          q: "Explain the social reforms of Raja Rammohan Roy and the Brahmo Samaj.",
+          ans: `<div style="line-height:1.8;">
+  Raja Rammohan Roy, hailed as the 'Father of Indian Renaissance', spearheaded monumental social and religious reforms:<br><br>
+
+  <b>1. Abolition of Sati (1829):</b><br>
+  • Rammohan Roy fought tirelessly against the inhuman custom of <i>Sati</i> (burning alive of widows on their husband's funeral pyre).<br>
+  • His persistent moral and legal campaign influenced Governor-General Lord William Bentinck to pass the historic Anti-Sati Regulation in <b>1829</b>, making Sati punishable by law.<br><br>
+
+  <b>2. Crusade for Women's Rights:</b><br>
+  • Vehemently condemned child marriage and polygamy.<br>
+  • Strongly advocated widow remarriage and demanded inheritance and property rights for women.<br><br>
+
+  <b>3. Religious Reform - Brahmo Samaj (1828):</b><br>
+  • Founded the Brahmo Samaj in Calcutta in 1828 to promote monotheism (worship of one formless Supreme God).<br>
+  • Strongly condemned meaningless rituals, sacrificial slaughter, and idol worship.<br><br>
+
+  <b>4. Promotion of Modern Education:</b><br>
+  • Firmly believed that Western scientific education and English learning would free Indian minds from blind superstitions.<br>
+  • Supported David Hare in establishing the prestigious Hindu College in Calcutta.
+</div>`,
+          detailedSolution: {
+            step1: "Abolition of Sati (1829) with Lord William Bentinck",
+            step2: "Championing women's rights (widow remarriage, anti-polygamy, property rights)",
+            step3: "Monotheistic reform through Brahmo Samaj (1828) and support for Western education"
+          },
+          mistake_warning: `⚠️ To Secure Full Marks (5/5):
+• Include all 4 major dimensions: Abolition of Sati, Women's Rights, Religious Reform (Brahmo Samaj 1828), and Modern Education.
+• Lord William Bentinck's name and the year 1829 must be spelt correctly.`,
+          ansTamil: "1. சதி ஒழிப்பு: 1829-ல் வில்லியம் பெண்டிங் பிரபு மூலம் சதி ஒழிப்புச் சட்டம் கொண்டுவந்தார். 2. பெண்கள் உரிமை: குழந்தைத் திருமணம், பலதார மணத்தை எதிர்த்தார்; விதவை மறுமணத்தை ஆதரித்தார். 3. சமய சீர்திருத்தம்: 1828-ல் பிரம்ம சமாஜத்தை நிறுவி ஒரு கடவுள் வழிபாட்டைப் பரப்பினார். 4. நவீன கல்வி: மேற்கத்திய அறிவியல் மற்றும் ஆங்கிலக் கல்வியை ஆதரித்து இந்து கல்லூரி உருவாக உதவினார்."
         }
       ]
     }

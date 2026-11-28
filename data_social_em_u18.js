@@ -167,6 +167,73 @@ const SOCIAL_EM_UNIT_18_DATA = {
 • Expand and mention ISRO (1969) and INSAT (Indian National Satellite System).
 • Highlighting real-world applications in disaster warning, remote sensing, and tele-education ensures 5 full marks.`,
           ansTamil: "தனிநபர் மற்றும் பொதுத் தகவல் தொடர்புகள்; இஸ்ரோவின் செயற்கைக்கோள்கள் வானிலை, தொலை உணர்வு மற்றும் கல்விக்கு உதவுகின்றன."
+        },
+        {
+          id: "soc_em_18_9",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          isImportant: true,
+          q: "Mention the major inland waterways of India.",
+          ans: `<div style="line-height:1.8;">
+  India's primary National Waterways (NW) maintained by the Inland Waterways Authority of India are:<br>
+  1. <b>National Waterway 1 (NW 1):</b> Ganga-Bhagirathi-Hooghly river system connecting Haldia to Prayagraj (1,620 km).<br>
+  2. <b>National Waterway 2 (NW 2):</b> Brahmaputra river connecting Dhubri to Sadiya (891 km).<br>
+  3. <b>National Waterway 3 (NW 3):</b> West Coast Canal in Kerala connecting Kollam to Kottappuram (205 km).
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• State the river and terminal nodes for all three: NW 1 (Haldia to Prayagraj), NW 2 (Dhubri to Sadiya), NW 3 (Kollam to Kottappuram).`,
+          ansTamil: "1. தேசிய நீர்வழி 1 (NW 1): கங்கை ஆறு (ஹால்தியா முதல் பிரயாக்ராஜ் வரை). 2. தேசிய நீர்வழி 2 (NW 2): பிரம்மபுத்திரா ஆறு (துப்ரி முதல் சாடியா வரை). 3. தேசிய நீர்வழி 3 (NW 3): கேரளா மேற்கு கடற்கரைக் கால்வாய் (கொல்லம் முதல் கோட்டப்புரம் வரை)."
+        },
+        {
+          id: "soc_em_18_10",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          isImportant: true,
+          q: "Distinguish between Internal Trade and International Trade.",
+          ans: `<div style="line-height:1.8;">
+  • <b>Internal Trade:</b> Buying and selling of commodities and services within the political boundaries of the same country; uses domestic currency (e.g., Indian Rupee) and doesn't incur customs duty.<br>
+  • <b>International Trade:</b> Trade conducted between two or more sovereign countries; involves foreign exchange/currencies (e.g., US Dollar) and customs clearance.
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Clearly contrast geographical boundary (within national borders vs between countries) and currency used (domestic vs foreign).`,
+          ansTamil: "உள்நாட்டு வணிகம்: நாட்டின் எல்லைக்குள் நடைபெறுகிறது, உள்ளூர் நாணயத்தைப் பயன்படுத்துகிறது. பன்னாட்டு வணிகம்: நாடுகளுக்கு இடையே நடைபெறுகிறது, வெளிநாட்டு நாணயத்தைப் பயன்படுத்துகிறது."
+        },
+        {
+          id: "soc_em_18_11",
+          type: "5m",
+          mark: "5 Marks",
+          examTag: "Public Exam 5M",
+          isImportant: true,
+          q: "What are the advantages of Roadways over Railways in India?",
+          ans: `<div style="line-height:1.8;">
+  In India, road transport holds several distinct competitive advantages over railway transport:<br><br>
+
+  <b>1. Door-to-Door Service:</b><br>
+  • Roads provide direct connectivity straight to homes, shops, agricultural farms, and factory yards, eliminating intermediate loading and unloading costs.<br><br>
+
+  <b>2. Easy Construction in Rugged Terrains:</b><br>
+  • Roads can negotiate sharp gradients and can easily be built across steep hills, dense forests, and undulating desert tracts where laying railway tracks is virtually impossible.<br><br>
+
+  <b>3. Lower Capital and Maintenance Cost:</b><br>
+  • Constructing and maintaining highways requires significantly less capital expenditure and simpler technology compared to building high-cost railway tracks and signalling systems.<br><br>
+
+  <b>4. Economical for Short Distances:</b><br>
+  • For quick, short-distance transit of small consignments and perishable consumer items (such as fresh vegetables, fruits, and milk), road transport is faster and cheaper.<br><br>
+
+  <b>5. Vital Feeder Service:</b><br>
+  • Road networks serve as an indispensable link connecting remote rural villages and townships to major railway junctions, international airports, and seaports.
+</div>`,
+          detailedSolution: {
+            step1: "Door-to-door delivery advantage reducing multiple handling expenses",
+            step2: "Geographical flexibility to cross mountain slopes and rugged terrains",
+            step3: "Lower capital overhead, speed for short-haul perishable goods, and complementary feeder role"
+          },
+          mistake_warning: `⚠️ To Secure Full Marks (5/5):
+• Write down all 5 specific points: Door-to-Door Service, Easy Construction, Low Cost, Short Distances, and Feeder Service.
+• Give examples of perishable goods (milk, fruits, vegetables).`,
+          ansTamil: "1. வீடு தேடி வரும் சேவை: ஏற்று இறக்கும் செலவைக் குறைக்கிறது. 2. கடின நிலப்பரப்பிலும் சாலை அமைக்கலாம்: மலைப்பகுதிகளில் இரயில் விட சாலை எளிது. 3. குறைந்த செலவு: இரயில் பாதையை விட சாலை அமைக்க குறைந்த மூலதனம் போதும். 4. குறுகிய தூரப் போக்குவரத்து: பால், பழங்கள், காய்கறிகள் போன்ற அழுகும் பொருட்களுக்கு விரைவானது. 5. இணைப்பு சேவை: கிராமங்களை இரயில் மற்றும் விமான நிலையங்களுடன் இணைக்கிறது."
         }
       ]
     }

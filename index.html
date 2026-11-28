@@ -234,10 +234,10 @@
   <script src="data_science_u14.js?v=20261114_v73"></script>
   <script src="data_science_em_u13.js?v=20261114_v73"></script>
   <script src="data_science_em_u14.js?v=20261114_v73"></script>
-  <script src="data_social_u13.js?v=20261114_v73"></script>
-  <script src="data_social_u14.js?v=20261114_v73"></script>
-  <script src="data_social_em_u13.js?v=20261114_v73"></script>
-  <script src="data_social_em_u14.js?v=20261114_v73"></script>
+  <script src="data_social_u13.js?v=20261128_v142"></script>
+  <script src="data_social_u14.js?v=20261128_v142"></script>
+  <script src="data_social_em_u13.js?v=20261128_v142"></script>
+  <script src="data_social_em_u14.js?v=20261128_v142"></script>
   <!-- Science Units 15-23 (TM & EM) -->
   <script src="data_science_u15.js?v=20261120_v106"></script>
   <script src="data_science_u16.js?v=20261120_v106"></script>
@@ -260,12 +260,12 @@
   <!-- Social Lessons 15-27 (TM & EM) -->
   <script src="data_social_u15.js?v=20261119_v99"></script>
   <script src="data_social_u16.js?v=20261119_v99"></script>
-  <script src="data_social_u17.js?v=20261119_v99"></script>
-  <script src="data_social_u18.js?v=20261119_v99"></script>
+  <script src="data_social_u17.js?v=20261128_v142"></script>
+  <script src="data_social_u18.js?v=20261128_v142"></script>
   <script src="data_social_u19.js?v=20261119_v99"></script>
   <script src="data_social_u20.js?v=20261119_v99"></script>
-  <script src="data_social_u21.js?v=20261119_v99"></script>
-  <script src="data_social_u22.js?v=20261119_v99"></script>
+  <script src="data_social_u21.js?v=20261128_v142"></script>
+  <script src="data_social_u22.js?v=20261128_v142"></script>
   <script src="data_social_u23.js?v=20261119_v99"></script>
   <script src="data_social_u24.js?v=20261119_v99"></script>
   <script src="data_social_u25.js?v=20261119_v99"></script>
@@ -273,12 +273,12 @@
   <script src="data_social_u27.js?v=20261119_v99"></script>
   <script src="data_social_em_u15.js?v=20261119_v99"></script>
   <script src="data_social_em_u16.js?v=20261119_v99"></script>
-  <script src="data_social_em_u17.js?v=20261119_v99"></script>
-  <script src="data_social_em_u18.js?v=20261119_v99"></script>
+  <script src="data_social_em_u17.js?v=20261128_v142"></script>
+  <script src="data_social_em_u18.js?v=20261128_v142"></script>
   <script src="data_social_em_u19.js?v=20261119_v99"></script>
   <script src="data_social_em_u20.js?v=20261119_v99"></script>
-  <script src="data_social_em_u21.js?v=20261119_v99"></script>
-  <script src="data_social_em_u22.js?v=20261119_v99"></script>
+  <script src="data_social_em_u21.js?v=20261128_v142"></script>
+  <script src="data_social_em_u22.js?v=20261128_v142"></script>
   <script src="data_social_em_u23.js?v=20261119_v99"></script>
   <script src="data_social_em_u24.js?v=20261119_v99"></script>
   <script src="data_social_em_u25.js?v=20261119_v99"></script>
@@ -8858,6 +8858,8 @@ function resumeLastVisitedLesson() {
                          (isEm || isEnglish ? "5-Mark Detailed Question" : "\u0B90\u0BA8\u0BCD\u0BA4\u0BC1 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BA4\u0BC6\u0BA3\u0BCD \u0BB5\u0BBF\u0BB0\u0BBF\u0BB5\u0BBE\u0BA9 \u0BB5\u0BBF\u0BA9\u0BBE (5M)");
     const effectivePerPage = isScienceExtraOrDiag ? 1 : (isExtraView ? 2 : (isLongAnswerView ? 1 : ((isCheckpointsView || isDiagramView) ? Math.max(filteredQ.length, 1) : QUESTIONS_PER_PAGE)));
     const totalQuestions = filteredQ.length;
+    window.currentFilteredQuestions = filteredQ;
+    window.currentEffectivePerPage = effectivePerPage;
     const totalPages = Math.ceil(totalQuestions / effectivePerPage) || 1;
     if (currentLessonPage > totalPages) currentLessonPage = totalPages;
     if (currentLessonPage < 1) currentLessonPage = 1;
@@ -9969,6 +9971,7 @@ function resumeLastVisitedLesson() {
 
   function openContinuous2MAudioTab() {
     if (window.teacherAudioPlayer) teacherAudioPlayer.stop(false);
+    currentSubSection = 'all';
     currentFilter = '2m_audio';
     currentLessonPage = 1;
     renderLessonGuide();
@@ -11946,6 +11949,22 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
       return false;
     },
 
+    hasQuestionInScript: function(item, formattedQ, formattedAns) {
+      if (!item || !item.audioScript) return false;
+      const script = item.audioScript.trim();
+      if (/^(question|வினா|[^\.\?\:\n]{1,60}(மதிப்பெண்|வினா|mark|question|theorem|தேற்றம்|rule|விதி|பயிற்சி)|here are|இங்கே)/i.test(script)) {
+        return true;
+      }
+      if (formattedQ && formattedQ.length > 8) {
+        const coreQ = formattedQ.replace(/[^\w\u0B80-\u0BFF]/g, '').substring(0, 25);
+        const coreScript = (formattedAns || '').replace(/[^\w\u0B80-\u0BFF]/g, '');
+        if (coreQ.length >= 6 && coreScript.includes(coreQ)) {
+          return true;
+        }
+      }
+      return false;
+    },
+
     executeSpeech: function(item, isEnglish, lang) {
       if (!this.isPlaying || this.currentId !== item.id) return;
       if (!('speechSynthesis' in window)) return;
@@ -11960,24 +11979,24 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
       const formattedQ = this.formatMathForSpeech(rawQ, lang).replace(/[\.,:;\s]+$/, '');
       const formattedAns = this.formatMathForSpeech(rawAns, lang).replace(/[\.,:;\s]+$/, '');
 
-                  // USER REQUIREMENT:
+      // USER REQUIREMENT:
       // Closing conclusion ONLY for 5M, 7M, 8M (& 2M Continuous Voice)
       // NOT for individual 1M, 2M, 3M questions to avoid repetitive fatigue!
       const isMajorQ = this.isMajorOutroQuestion(item);
 
+      const hasIntro = this.hasQuestionInScript(item, formattedQ, formattedAns);
+
       let speechText = '';
       if (item.audioScript) {
-        const script = item.audioScript.trim();
-        const hasIntro = /^(question|வினா|here are|இங்கே|rule|விதி)/i.test(script);
         speechText = hasIntro ? formattedAns : `${qHeading}, ${formattedQ}. ${aHeading}. ${formattedAns}.`;
       } else {
         speechText = `${qHeading}, ${formattedQ}. ${aHeading}. ${formattedAns}.`;
-        if (isMajorQ) {
-          const promoOutro = isEnglish
-            ? "To learn 10th standard subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best!"
-            : "10-ஆம் வகுப்பு பாடங்களை எளிதாகக் கற்கவும், நல்ல மதிப்பெண்கள் பெறவும் 'உன்னால் முடியும் Learn Easily' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!";
-          speechText += ` ${promoOutro}`;
-        }
+      }
+      if (isMajorQ) {
+        const promoOutro = isEnglish
+          ? "To learn 10th standard subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best!"
+          : "10-ஆம் வகுப்பு பாடங்களை எளிதாகக் கற்கவும், நல்ல மதிப்பெண்கள் பெறவும் 'உன்னால் முடியும் Learn Easily' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். ஆல் தி பெஸ்ட்!";
+        speechText += ` ${promoOutro}`;
       }
       speechText = speechText.replace(/\.{2,}/g, '.').replace(/\s*\.\s*/g, '. ').trim();
 
@@ -12220,8 +12239,15 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
           items = (currentLesson && currentLesson.manapaadam) ? currentLesson.manapaadam : [];
         } else {
           mode = '2m';
-          const allQ = (currentLesson && currentLesson.questions) ? currentLesson.questions : [];
-          items = allQ.filter(q => q.type === '2m');
+          const activeList = (window.currentFilteredQuestions && window.currentFilteredQuestions.length > 0)
+            ? window.currentFilteredQuestions.filter(q => q.type === '2m')
+            : [];
+          if (activeList.length > 0) {
+            items = activeList;
+          } else {
+            const allQ = (currentLesson && currentLesson.questions) ? currentLesson.questions : [];
+            items = allQ.filter(q => q.type === '2m');
+          }
         }
       }
 
@@ -12250,9 +12276,20 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
     },
 
     startFromQuestion: function(qId, mode = '2m') {
-      let items = (mode === 'manapaadam')
-        ? ((currentLesson && currentLesson.manapaadam) ? currentLesson.manapaadam : [])
-        : ((currentLesson && currentLesson.questions) ? currentLesson.questions.filter(q => q.type === '2m') : []);
+      let items = [];
+      if (mode === 'manapaadam') {
+        items = (currentLesson && currentLesson.manapaadam) ? currentLesson.manapaadam : [];
+      } else {
+        const activeList = (window.currentFilteredQuestions && window.currentFilteredQuestions.length > 0)
+          ? window.currentFilteredQuestions.filter(q => q.type === '2m')
+          : [];
+        if (activeList.some(q => q.id === qId)) {
+          items = activeList;
+        } else {
+          const allQ = (currentLesson && currentLesson.questions) ? currentLesson.questions : [];
+          items = allQ.filter(q => q.type === '2m');
+        }
+      }
       
       const foundIdx = items.findIndex(q => q.id === qId);
       this.startPlaylist(items, foundIdx >= 0 ? foundIdx : 0, mode);
@@ -12339,7 +12376,15 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
         const formattedQ = teacherAudioPlayer.formatMathForSpeech(rawQ, lang).replace(/[\.,:;\s]+$/, '');
         const formattedAns = teacherAudioPlayer.formatMathForSpeech(rawAns, lang).replace(/[\.,:;\s]+$/, '');
 
-        speechText = `${qPrefix}${formattedQ}. ${ansPrefix}${formattedAns}.`;
+        const hasIntro = (teacherAudioPlayer && teacherAudioPlayer.hasQuestionInScript)
+          ? teacherAudioPlayer.hasQuestionInScript(item, formattedQ, formattedAns)
+          : false;
+
+        if (hasIntro) {
+          speechText = formattedAns;
+        } else {
+          speechText = `${qPrefix}${formattedQ}. ${ansPrefix}${formattedAns}.`;
+        }
       }
 
       speechText = speechText.replace(/\.{2,}/g, '.').replace(/\s*\.\s*/g, '. ').trim();
@@ -12590,18 +12635,23 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
     highlightAndScrollToItem: function(item) {
       this.removeHighlights();
 
-      // If in 2m mode and pagination is active, check if page needs switching
-      if (this.mode === '2m' && currentFilter !== 'manapaadam') {
-        const allFiltered = (currentLesson && currentLesson.questions) 
-          ? (currentFilter === '2m' || currentFilter === '2m_audio' ? currentLesson.questions.filter(q => q.type === '2m') : currentLesson.questions)
-          : [];
-        const idx = allFiltered.findIndex(q => q.id === item.id);
-        if (idx >= 0) {
-          const targetPage = Math.floor(idx / QUESTIONS_PER_PAGE) + 1;
-          if (targetPage !== currentLessonPage) {
-            currentLessonPage = targetPage;
-            renderLessonGuide();
-          }
+      // If the card is already rendered in the current DOM, smoothly highlight and scroll to it
+      const existingCard = document.getElementById(`card_${item.id}`);
+      if (existingCard) {
+        existingCard.classList.add('active-playlist-playing');
+        existingCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // If pagination is active and card is on another page, calculate the exact target page
+      const activeList = window.currentFilteredQuestions || (currentLesson && currentLesson.questions) || [];
+      const perPage = window.currentEffectivePerPage || QUESTIONS_PER_PAGE || 2;
+      const idx = activeList.findIndex(q => q.id === item.id);
+      if (idx >= 0) {
+        const targetPage = Math.floor(idx / perPage) + 1;
+        if (targetPage !== currentLessonPage) {
+          currentLessonPage = targetPage;
+          renderLessonGuide();
         }
       }
 
@@ -12611,7 +12661,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
           cardEl.classList.add('active-playlist-playing');
           cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-      }, 80);
+      }, 100);
     },
 
     removeHighlights: function() {
@@ -15241,7 +15291,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261127_v140')
+        navigator.serviceWorker.register('./sw.js?v=20261128_v142')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

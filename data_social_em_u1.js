@@ -924,12 +924,14 @@ The alliance formed by Britain, France and Russia was known as the Triple Entent
           sectionTag: "Additional Practice (In-Text)",
           isImportant: true,
           isAdditionalPractice: true,
-          q: "What was the Triple Alliance?",
+          q: "Mention any two objectives of the League of Nations.",
           ans: `<div style="line-height:1.8;">
-The alliance formed by Germany, Austria-Hungary and Italy was known as the Triple Alliance.<br>
+<b>Two Objectives of the League of Nations:</b><br>
+1. To avoid war and maintain peace and security in the world.<br>
+2. To promote international cooperation in economic and social affairs.<br>
 </div>`,
-          explanation: "The alliance formed by Germany, Austria Hungary and Italy was known as the Triple Alliance.",
-          audioScript: "Two marks question: What was the Triple Alliance?. The key points are: The alliance formed by Germany, Austria Hungary and Italy was known as the Triple Alliance."
+          explanation: "The two main objectives of the League of Nations were to prevent war and maintain peace, and to foster international socio-economic cooperation.",
+          audioScript: "Two marks question: Mention any two objectives of the League of Nations?. The key points are: First, to avoid war and maintain peace and security in the world. Second, to promote international cooperation in economic and social affairs."
         },
         {
           id: "soc_em_1_extra_2m_4",

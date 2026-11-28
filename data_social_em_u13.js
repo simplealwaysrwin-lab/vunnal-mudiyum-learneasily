@@ -137,6 +137,86 @@ const SOCIAL_EM_UNIT_13_DATA = {
             step2: "Asian containment alliances SEATO and CENTO",
             step3: "Soviet response through the Warsaw Pact (1955) and its eventual dissolution"
           }
+        },
+        {
+          id: "soc_em_13_8",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Important Extra",
+          isImportant: true,
+          q: "What is the Truman Doctrine?",
+          ans: `<div style="line-height:1.8;">
+  • US President Harry S. Truman announced a policy to give financial and military help to countries threatened by Communism (especially Greece and Turkey).<br>
+  • Its main aim was to stop the spread of Soviet Communism (containment of communism).
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Mention the US President 'Truman' and target nations like Greece and Turkey.
+• State the primary objective: halting the spread of Soviet Communism.`,
+          ansTamil: "அமெரிக்க அதிபர் ட்ரூமன், கம்யூனிச அச்சுறுத்தலுக்கு உள்ளான நாடுகளுக்கு (கிரீஸ், துருக்கி) நிதி மற்றும் இராணுவ உதவி வழங்கும் கொள்கையை அறிவித்தார். சோவியத் கம்யூனிசம் பரவுவதைத் தடுப்பதே இதன் முக்கிய நோக்கமாகும்."
+        },
+        {
+          id: "soc_em_13_9",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          isImportant: true,
+          q: "What was the Warsaw Pact?",
+          ans: `<div style="line-height:1.8;">
+  • In 1955, Soviet Russia and Eastern European communist countries formed a military alliance called the <b>Warsaw Pact</b>.<br>
+  • It was created as a mutual defense alliance to counter the US-led NATO alliance.
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• State the foundational year: 1955.
+• Clearly mention that it was created by the Soviet Union to counter the US-led NATO alliance.`,
+          ansTamil: "1955-ல் சோவியத் ரஷ்யா மற்றும் கிழக்கு ஐரோப்பிய நாடுகள் இணைந்து உருவாக்கிய இராணுவக் கூட்டணி வார்சா ஒப்பந்தமாகும். இது அமெரிக்க தலைமையிலான நேட்டோ (NATO) கூட்டணிக்கு எதிராக உருவாக்கப்பட்டது."
+        },
+        {
+          id: "soc_em_13_10",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Important Extra",
+          isImportant: true,
+          q: "What is meant by the 'Third World'?",
+          ans: `<div style="line-height:1.8;">
+  • During the Cold War, capitalist countries led by the USA were called the <b>First World</b>, and communist countries led by the USSR were the <b>Second World</b>.<br>
+  • Newly independent nations in Asia, Africa, and Latin America that did not join either superpower bloc were called the <b>Third World</b>.
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Clearly contrast: First World (USA-led Capitalist), Second World (USSR-led Communist), Third World (Non-aligned newly independent nations of Asia, Africa, Latin America).`,
+          ansTamil: "பனிப்போரின் போது, அமெரிக்கா தலைமையிலான முதலாளித்துவ நாடுகள் 'முதல் உலகம்' எனவும், சோவியத் யூனியன் தலைமையிலான கம்யூனிச நாடுகள் 'இரண்டாம் உலகம்' எனவும் அழைக்கப்பட்டன. எந்த ஒரு முகாமிலும் சேராத ஆசியா, ஆப்பிரிக்கா மற்றும் லத்தீன் அமெரிக்காவின் புதிதாக சுதந்திரம் பெற்ற நாடுகள் 'மூன்றாம் உலகம்' என்று அழைக்கப்பட்டன."
+        },
+        {
+          id: "soc_em_13_11",
+          type: "5m",
+          mark: "5 Marks",
+          examTag: "Public Exam 5M",
+          isImportant: true,
+          q: "Write a short note on the Fall of the Berlin Wall and the End of the Cold War.",
+          ans: `<div style="line-height:1.8;">
+  <b>1. Division of Germany:</b><br>
+  • After World War II, Germany was divided into West Germany (capitalist) and East Germany (communist).<br><br>
+
+  <b>2. Construction of Berlin Wall (1961):</b><br>
+  • In 1961, East Germany built the Berlin Wall to stop people from fleeing to West Berlin.<br><br>
+
+  <b>3. Weakening of Soviet Union:</b><br>
+  • By the late 1980s, the Soviet Union's economy weakened, and people demanded freedom and democracy.<br><br>
+
+  <b>4. Fall of the Wall (1989):</b><br>
+  • On <b>9 November 1989</b>, crowds broke down the Berlin Wall, symbolizing the collapse of European communist barriers.<br><br>
+
+  <b>5. End of Cold War:</b><br>
+  • In 1990, East and West Germany were formally reunited, and in 1991, the Soviet Union collapsed, officially ending the Cold War.
+</div>`,
+          detailedSolution: {
+            step1: "Division of Germany into East and West, and construction of Berlin Wall in 1961",
+            step2: "1980s Soviet economic reforms and popular uprising leading to the fall of the Berlin Wall on 9 November 1989",
+            step3: "Reunification of Germany (1990) and disintegration of USSR (1991) ending the Cold War"
+          },
+          mistake_warning: `⚠️ To Secure Full Marks (5/5):
+• Remember the landmark date: '9 November 1989' for the Fall of the Berlin Wall.
+• State the final outcomes: Reunification of Germany (1990) and dissolution of USSR (1991).`,
+          ansTamil: "1. ஜெர்மனி பிரிவினை: இரண்டாம் உலகப்போருக்குப் பின் ஜெர்மனி மேற்கு மற்றும் கிழக்கு ஜெர்மனியாகப் பிரிக்கப்பட்டது. 2. பெர்லின் சுவர்: மக்கள் தப்பிச் செல்வதைத் தடுக்க 1961-ல் பெர்லின் சுவர் கட்டப்பட்டது. 3. சோவியத் பலவீனம்: 1980-களின் இறுதியில் மக்கள் சுதந்திரம் கோரினர். 4. சுவர் வீழ்ச்சி: 1989 நவம்பர் 9 அன்று பெர்லின் சுவர் இடிக்கப்பட்டது. 5. பனிப்போர் முடிவு: 1990-ல் ஜெர்மனி ஒன்றிணைந்தது; 1991-ல் சோவியத் யூனியன் கலைக்கப்பட்டு பனிப்போர் முடிந்தது."
         }
       ]
     },

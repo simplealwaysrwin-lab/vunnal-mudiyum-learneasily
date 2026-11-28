@@ -163,6 +163,111 @@ const SOCIAL_EM_UNIT_22_DATA = {
 • Write out all four seasons with months: Winter (Jan-Feb), Summer (Mar-May), Southwest Monsoon (Jun-Sep), Northeast Monsoon (Oct-Dec).
 • Explain why Tamil Nadu receives limited rainfall in SW monsoon (leeward/rain shadow effect) and 48% in NE monsoon.`,
           ansTamil: "குளிர், கோடை, தென்மேற்கு மற்றும் வடகிழக்கு பருவங்கள்; வடகிழக்கு பருவக்காற்றால் தமிழ்நாடு 48% மழையைப் பெறுகிறது."
+        },
+        {
+          id: "soc_em_22_9",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          isImportant: true,
+          q: "Why is the Nilgiri Hills called the 'Blue Mountains'?",
+          ans: `<div style="line-height:1.8;">
+  • When viewed from a distance, the Nilgiri hills exhibit a picturesque bluish appearance due to the atmospheric mist and the mass synchronous blooming of <b>Kurinji (Neelakurinji)</b> flowers once every 12 years.<br>
+  • Hence, these hills were christened the <b>Blue Mountains</b> ('Neelam' meaning blue and 'Giri' meaning mountain).
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• State two reasons: Misty atmosphere and blooming of Kurinji flowers once in 12 years.`,
+          ansTamil: "பனிமூட்டமான சூழ்நிலை மற்றும் 12 ஆண்டுகளுக்கு ஒருமுறை பூக்கும் நீலக்குறிஞ்சி மலர்களின் காரணமாக நீலகிரி மலைகள் நீல நிறமாகக் காட்சியளிப்பதால் 'நீல மலை' என அழைக்கப்படுகிறது."
+        },
+        {
+          id: "soc_em_22_10",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          isImportant: true,
+          q: "What is 'Teri'?",
+          ans: `<div style="line-height:1.8;">
+  • The red sand dunes formed by aeolian (wind) deposition along the semi-arid coastal tracts of <b>Ramanathapuram and Thoothukudi</b> districts in Tamil Nadu are locally designated as <b>'Teri'</b> or <b>'Teri tracts'</b>.
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Mention the coastal districts: 'Ramanathapuram and Thoothukudi'.
+• Identify them as red sand dunes.`,
+          ansTamil: "தமிழ்நாட்டின் ராமநாதபுரம் மற்றும் தூத்துக்குடி மாவட்டங்களின் கடலோரப் பகுதிகளில் காணப்படும் சிவப்பு மணல் குன்றுகள் உள்ளூரில் 'தேரி' என்று அழைக்கப்படுகின்றன."
+        },
+        {
+          id: "soc_em_22_11",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Important Extra",
+          isImportant: true,
+          q: "Why are the Eastern Ghats in Tamil Nadu not a continuous mountain range?",
+          ans: `<div style="line-height:1.8;">
+  • Major east-flowing river systems such as the <b>Palar, Pennaiyar, Cauvery, and Vaigai</b> cut across and heavily erode the Eastern Ghats on their journey to drain into the Bay of Bengal.<br>
+  • Because of this continuous fluvial erosion over millions of years, the Eastern Ghats are broken and dissected into discontinuous, isolated hill ranges.
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Name the east-flowing rivers (Palar, Pennaiyar, Cauvery) that dissect the range through river erosion.`,
+          ansTamil: "பாலாறு, தென்பெண்ணையாறு, காவிரி போன்ற கிழக்கு நோக்கிப் பாயும் ஆறுகளால் அரிக்கப்பட்டு துண்டிக்கப்படுவதால், தமிழ்நாட்டில் கிழக்குத் தொடர்ச்சி மலை தொடர்ச்சியற்ற குன்றுகளாக உள்ளது."
+        },
+        {
+          id: "soc_em_22_12",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          isImportant: true,
+          q: "Name the tributaries of River Thamirabarani.",
+          ans: `<div style="line-height:1.8;">
+  The tributaries of River Thamirabarani (the only perennial river originating and flowing entirely within Tamil Nadu) are:<br>
+  • <b>Karaiyar</b><br>
+  • <b>Servalar</b><br>
+  • <b>Manimuthar</b><br>
+  • <b>Gadananathi</b><br>
+  • <b>Pachaiyar</b><br>
+  • <b>Chittar</b><br>
+  • <b>Ramanathi</b>
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Listing any four to six tributaries (Karaiyar, Servalar, Manimuthar, Gadananathi, Chittar, Pachaiyar) secures full 2 marks.`,
+          ansTamil: "காரையாறு, சேர்வலாறு, மணிமுத்தாறு, கடனாநதி, பச்சையாறு, சிற்றாறு மற்றும் ராமநதி ஆகியவை தாமிரபரணி ஆற்றின் துணையாறுகளாகும்."
+        },
+        {
+          id: "soc_em_22_13",
+          type: "5m",
+          mark: "5 Marks",
+          examTag: "Public Exam 5M",
+          isImportant: true,
+          q: "Write a short note on the River Cauvery and its importance to Tamil Nadu.",
+          ans: `<div style="line-height:1.8;">
+  River Cauvery is the lifeline of agriculture and culture in Tamil Nadu:<br><br>
+
+  <b>1. Origin & Course:</b><br>
+  • Originates at Talacauvery in the Brahmagiri hills of Kodagu (Karnataka).<br>
+  • Out of its total length of 805 km, approximately <b>416 km</b> flows through Tamil Nadu.<br><br>
+
+  <b>2. Waterfalls & Dams:</b><br>
+  • Enters Tamil Nadu through Dharmapuri district, cascading down as the magnificent <b>Hogenakkal Falls</b>.<br>
+  • Impounded at Mettur in Salem district by the <b>Mettur Dam (Stanley Reservoir)</b>, the chief irrigation reservoir of the state.<br><br>
+
+  <b>3. Tributaries:</b><br>
+  • Joined by major tributaries within Tamil Nadu: <b>Bhavani</b> (at Kooduthurai), <b>Noyyal</b>, and <b>Amaravathi</b>.<br><br>
+
+  <b>4. Delta Formation:</b><br>
+  • Near Tiruchirappalli (Upper Anicut), it splits into two channels: <b>Kollidam (Coleroon)</b> to the north and <b>Cauvery</b> to the south, encircling the holy island of Srirangam.<br>
+  • Downstream, Karikala Chola constructed the historic <b>Grand Anicut (Kallanai)</b>.<br><br>
+
+  <b>5. Economic Importance:</b><br>
+  • Radiates into hundreds of irrigation canal networks across Thanjavur, Tiruvarur, and Mayiladuthurai.<br>
+  • Due to its vast fertile alluvial soil and paddy yield, the Cauvery Delta is celebrated as the <b>"Garden of Southern India"</b> and the <b>"Granary of Tamil Nadu"</b>.
+</div>`,
+          detailedSolution: {
+            step1: "Origin at Talacauvery, course and entry through Hogenakkal Falls and Mettur Dam",
+            step2: "Tributaries Bhavani, Noyyal, Amaravathi, and delta bifurcation at Srirangam",
+            step3: "Kallanai dam and delta role as the Granary of Tamil Nadu"
+          },
+          mistake_warning: `⚠️ To Secure Full Marks (5/5):
+• Follow the 5 structured sections: Origin & Course, Waterfalls & Dams, Tributaries, Delta Formation, and Economic Importance.
+• Cite key terms: 'Hogenakkal Falls', 'Mettur Dam', 'Kollidam & Cauvery', and 'Granary of Tamil Nadu'.`,
+          ansTamil: "1. தோற்றம்: தலைக்காவிரியில் பிறந்து 416 கி.மீ தமிழகத்தில் பாய்கிறது. 2. நீர்வீழ்ச்சி & அணை: ஒகேனக்கல் நீர்வீழ்ச்சி, மேட்டூர் அணை. 3. துணையாறுகள்: பவானி, நொய்யல், அமராவதி. 4. டெல்டா: கொள்ளிடம், காவிரி என இரண்டாகப் பிரிந்து ஸ்ரீரங்கத்தை உருவாக்குகிறது. 5. முக்கியத்துவம்: தமிழகத்தின் நெற்களஞ்சியமாக விளங்கி வேளாண்மையை வளப்படுத்துகிறது."
         }
       ]
     }

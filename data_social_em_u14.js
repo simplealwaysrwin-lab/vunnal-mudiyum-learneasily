@@ -135,6 +135,107 @@ const SOCIAL_EM_UNIT_14_DATA = {
             step2: "Wind power leadership and Muppandal wind cluster in Kanyakumari",
             step3: "Biomass and Gulf of Khambhat tidal energy prospects"
           }
+        },
+        {
+          id: "soc_em_14_8",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Important Extra",
+          isImportant: true,
+          q: "What are minerals? Name its two types.",
+          ans: `<div style="line-height:1.8;">
+  • Minerals are naturally occurring substances having a definite chemical composition and physical properties, found in the Earth's crust.<br>
+  • They are classified into two major types:<br>
+  1. <b>Metallic minerals:</b> Minerals containing metals in raw form (e.g., Iron ore, Copper, Bauxite, Gold).<br>
+  2. <b>Non-metallic minerals:</b> Minerals that do not contain metal substances (e.g., Mica, Limestone, Gypsum, Coal).
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Give the scientific definition: definite chemical and physical properties found in Earth's crust.
+• Give examples for both Metallic (Iron, Copper) and Non-metallic (Mica, Limestone).`,
+          ansTamil: "புவியின் மேலோட்டில் காணப்படும் குறிப்பிட்ட வேதியியல் மற்றும் இயற்பியல் பண்புகளைக் கொண்ட பொருட்கள் கனிமங்கள் ஆகும். வகைகள்: 1. உலோகக் கனிமங்கள் (இரும்பு, தாமிரம்), 2. அலோகக் கனிமங்கள் (மைக்கா, சுண்ணாம்புக்கல்)."
+        },
+        {
+          id: "soc_em_14_9",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Public Exam",
+          isImportant: true,
+          q: "Why is Iron and Steel called a 'basic' or 'key' industry?",
+          ans: `<div style="line-height:1.8;">
+  • Iron and steel industry provides the essential raw material (iron, steel, machinery) needed to manufacture machines, tools, transport vehicles, bridges, and infrastructure for all other industries.<br>
+  • Since modern industrial progress entirely depends on steel, it is hailed as the <b>basic industry</b> and the <b>backbone of a country's modern economy</b>.
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• State clearly that all other heavy and light industries rely on iron and steel for machinery and tools.`,
+          ansTamil: "மற்ற அனைத்து தொழிலகங்களுக்கும் தேவையான இயந்திரங்கள், கருவிகள், கட்டுமானப் பொருட்களை உற்பத்தி செய்வதால் இரும்பு எஃகு தொழில் 'அடிப்படைத் தொழில்' மற்றும் நாட்டின் முதுகெலும்பாக விளங்குகிறது."
+        },
+        {
+          id: "soc_em_14_10",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Important Extra",
+          isImportant: true,
+          q: "Name any four software centers in India.",
+          ans: `<div style="line-height:1.8;">
+  Four major software and IT technology centers in India are:<br>
+  1. <b>Bengaluru</b> (Silicon Valley of India)<br>
+  2. <b>Chennai</b><br>
+  3. <b>Hyderabad</b><br>
+  4. <b>Pune</b>
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Correct spellings of Bengaluru, Chennai, Hyderabad, and Pune earn full 2 marks.`,
+          ansTamil: "பெங்களூரு, சென்னை, ஹைதராபாத் மற்றும் புனே ஆகியவை இந்தியாவில் உள்ள முக்கிய மென்பொருள் மையங்களாகும்."
+        },
+        {
+          id: "soc_em_14_11",
+          type: "2m",
+          mark: "2 Marks",
+          examTag: "Important Extra",
+          isImportant: true,
+          q: "What is SAIL?",
+          ans: `<div style="line-height:1.8;">
+  • SAIL stands for <b>Steel Authority of India Limited</b>.<br>
+  • It is a premier government public-sector undertaking (Maharatna PSU) established to manage, operate, and develop major public-sector steel plants across India (like Rourkela, Bhilai, Durgapur, Bokaro, and Salem).
+</div>`,
+          mistake_warning: `⚠️ Key Exam Tip:
+• Always write the full expansion: 'Steel Authority of India Limited'.`,
+          ansTamil: "SAIL என்பது Steel Authority of India Limited (இந்திய எஃகு ஆணையம்) ஆகும். இது பொதுத்துறை எஃகு ஆலைகளை நிர்வகிக்கும் மத்திய அரசு நிறுவனமாகும்."
+        },
+        {
+          id: "soc_em_14_12",
+          type: "5m",
+          mark: "5 Marks",
+          examTag: "Public Exam 5M",
+          isImportant: true,
+          q: "Why are most Jute mills concentrated in the Hooghly Basin (West Bengal)?",
+          ans: `<div style="line-height:1.8;">
+  The Hooghly River basin in West Bengal is the premier jute textile manufacturing hub in India due to the following favorable factors:<br><br>
+
+  <b>1. Raw Material Proximity:</b><br>
+  • The fertile Ganga-Brahmaputra delta produces nearly 90% of India's superior quality raw jute fibre crops.<br><br>
+
+  <b>2. Abundant Freshwater Supply:</b><br>
+  • The perennial Hooghly River provides voluminous soft water essential for processing, washing, retting, and dyeing jute.<br><br>
+
+  <b>3. Power Supply:</b><br>
+  • Inexpensive and continuous thermal power and coal are readily accessible from the nearby Raniganj coalfields.<br><br>
+
+  <b>4. Transport & Seaport Access:</b><br>
+  • Well-developed inland waterways on the Hooghly River combined with an extensive railway network and easy export facilities via Kolkata Port.<br><br>
+
+  <b>5. Climate & Inexpensive Labour:</b><br>
+  • Warm and humid deltaic climate suitable for spinning jute yarn, coupled with cheap and abundant manual labour from West Bengal, Bihar, and Odisha.
+</div>`,
+          detailedSolution: {
+            step1: "Ganga-Brahmaputra raw jute production hub (90% of national yield)",
+            step2: "Freshwater supply from Hooghly river and coal power from Raniganj",
+            step3: "Low-cost water transport, Kolkata port export facilities, humid climate, and labour availability"
+          },
+          mistake_warning: `⚠️ To Secure Full Marks (5/5):
+• Structure into the 5 core headings: Raw Material, Water Supply, Power, Transport & Port, Climate & Labour.
+• Mention Raniganj coalfields and Kolkata Port specifically.`,
+          ansTamil: "1. மூலப்பொருள்: கங்கை-பிரம்மபுத்திரா டெல்டா 90% சணலை உற்பத்தி செய்கிறது. 2. நன்னீர்: சணலை நனைக்க, கழுவ ஹூக்ளி ஆற்றின் நன்னீர் கிடைக்கிறது. 3. மின்சாரம்: ராணிகஞ்ச் நிலக்கரி மூலம் மின்சாரம். 4. போக்குவரத்து & துறைமுகம்: ஹூக்ளி நீர்வழி மற்றும் கொல்கத்தா துறைமுக ஏற்றுமதி வசதி. 5. காலநிலை & தொழிலாளர்கள்: ஈரப்பத காலநிலை மற்றும் மலிவான தொழிலாளர்கள் கிடைப்பது."
         }
       ]
     },

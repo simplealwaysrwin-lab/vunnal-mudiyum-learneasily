@@ -234,10 +234,10 @@
   <script src="data_science_u14.js?v=20261114_v73"></script>
   <script src="data_science_em_u13.js?v=20261114_v73"></script>
   <script src="data_science_em_u14.js?v=20261114_v73"></script>
-  <script src="data_social_u13.js?v=20261128_v143"></script>
-  <script src="data_social_u14.js?v=20261128_v143"></script>
-  <script src="data_social_em_u13.js?v=20261128_v143"></script>
-  <script src="data_social_em_u14.js?v=20261128_v143"></script>
+  <script src="data_social_u13.js?v=20261128_v144"></script>
+  <script src="data_social_u14.js?v=20261128_v144"></script>
+  <script src="data_social_em_u13.js?v=20261128_v144"></script>
+  <script src="data_social_em_u14.js?v=20261128_v144"></script>
   <!-- Science Units 15-23 (TM & EM) -->
   <script src="data_science_u15.js?v=20261120_v106"></script>
   <script src="data_science_u16.js?v=20261120_v106"></script>
@@ -260,12 +260,12 @@
   <!-- Social Lessons 15-27 (TM & EM) -->
   <script src="data_social_u15.js?v=20261119_v99"></script>
   <script src="data_social_u16.js?v=20261119_v99"></script>
-  <script src="data_social_u17.js?v=20261128_v143"></script>
-  <script src="data_social_u18.js?v=20261128_v143"></script>
+  <script src="data_social_u17.js?v=20261128_v144"></script>
+  <script src="data_social_u18.js?v=20261128_v144"></script>
   <script src="data_social_u19.js?v=20261119_v99"></script>
   <script src="data_social_u20.js?v=20261119_v99"></script>
-  <script src="data_social_u21.js?v=20261128_v143"></script>
-  <script src="data_social_u22.js?v=20261128_v143"></script>
+  <script src="data_social_u21.js?v=20261128_v144"></script>
+  <script src="data_social_u22.js?v=20261128_v144"></script>
   <script src="data_social_u23.js?v=20261119_v99"></script>
   <script src="data_social_u24.js?v=20261119_v99"></script>
   <script src="data_social_u25.js?v=20261119_v99"></script>
@@ -273,12 +273,12 @@
   <script src="data_social_u27.js?v=20261119_v99"></script>
   <script src="data_social_em_u15.js?v=20261119_v99"></script>
   <script src="data_social_em_u16.js?v=20261119_v99"></script>
-  <script src="data_social_em_u17.js?v=20261128_v143"></script>
-  <script src="data_social_em_u18.js?v=20261128_v143"></script>
+  <script src="data_social_em_u17.js?v=20261128_v144"></script>
+  <script src="data_social_em_u18.js?v=20261128_v144"></script>
   <script src="data_social_em_u19.js?v=20261119_v99"></script>
   <script src="data_social_em_u20.js?v=20261119_v99"></script>
-  <script src="data_social_em_u21.js?v=20261128_v143"></script>
-  <script src="data_social_em_u22.js?v=20261128_v143"></script>
+  <script src="data_social_em_u21.js?v=20261128_v144"></script>
+  <script src="data_social_em_u22.js?v=20261128_v144"></script>
   <script src="data_social_em_u23.js?v=20261119_v99"></script>
   <script src="data_social_em_u24.js?v=20261119_v99"></script>
   <script src="data_social_em_u25.js?v=20261119_v99"></script>
@@ -10990,17 +10990,30 @@ function resumeLastVisitedLesson() {
     }
     // CRITICAL: Filter out any chunks that do NOT contain letters or numbers
     // This strictly prevents bare "." or ".." from ever being sent to TTS (which would speak "dot")
-    // Merge tiny trailing chunks (e.g. 'All the best!' or 'வாழ்த்துகள்!') into the previous chunk
-    // to prevent isolated sub-second speech utterances that sound clipped or cut off!
+    // Merge tiny trailing clauses into previous chunk UNLESS it is an outro/closing wish!
+    const isOutroChunk = (str) => {
+      return /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்/i.test(str);
+    };
+
     const finalMerged = [];
     for (let i = 0; i < result.length; i++) {
       const cur = result[i];
-      if (i > 0 && cur.length < 35 && (finalMerged[finalMerged.length - 1].length + cur.length) <= 180) {
+      if (i > 0 && cur.length < 35 && !isOutroChunk(cur) && (finalMerged[finalMerged.length - 1].length + cur.length) <= 180) {
         finalMerged[finalMerged.length - 1] += ' ' + cur;
       } else {
         finalMerged.push(cur);
       }
     }
+
+    // Ensure every chunk ends with clean punctuation (. ! ?) so TTS speaks with proper sentence pause
+    for (let i = 0; i < finalMerged.length; i++) {
+      let t = finalMerged[i].trim();
+      if (!/[.!?]$/.test(t)) {
+        t = t.replace(/[,:;\s]+$/, '') + '.';
+      }
+      finalMerged[i] = t;
+    }
+
     return finalMerged.filter(r => /[a-zA-Z0-9\u0B80-\u0BFF]/.test(r));
   }
 
@@ -11070,7 +11083,10 @@ function resumeLastVisitedLesson() {
           if (session.isStopped) return;
           if (session.isPaused) return; // Prevent advancing chunk on cancel during pause!
           session.index++;
-          setTimeout(speakNextChunk, 70);
+          const nextChunk = session.chunks[session.index] || '';
+          const isNextOutro = /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்/i.test(nextChunk);
+          const pauseDelay = isNextOutro ? 750 : 80;
+          setTimeout(speakNextChunk, pauseDelay);
         };
 
         utt.onerror = (e) => {
@@ -11078,7 +11094,10 @@ function resumeLastVisitedLesson() {
           if (session.isPaused) return; // Prevent advancing chunk on cancel during pause!
           console.warn('[SpeechQueue] Chunk error, moving to next:', e);
           session.index++;
-          setTimeout(speakNextChunk, 70);
+          const nextChunk = session.chunks[session.index] || '';
+          const isNextOutro = /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்/i.test(nextChunk);
+          const pauseDelay = isNextOutro ? 750 : 80;
+          setTimeout(speakNextChunk, pauseDelay);
         };
 
         try {
@@ -11089,7 +11108,10 @@ function resumeLastVisitedLesson() {
         } catch(err) {
           console.warn('[SpeechQueue] speak error:', err);
           session.index++;
-          setTimeout(speakNextChunk, 70);
+          const nextChunk = session.chunks[session.index] || '';
+          const isNextOutro = /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்/i.test(nextChunk);
+          const pauseDelay = isNextOutro ? 750 : 80;
+          setTimeout(speakNextChunk, pauseDelay);
         }
       };
 
@@ -11992,13 +12014,18 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
       } else {
         speechText = `${qHeading}, ${formattedQ}. ${aHeading}. ${formattedAns}.`;
       }
-      // Voice closing for Extra Questions and all questions (Tamil Medium pure Tamil closing)
+
+      // 1. Ensure the question and answer text ends with a solid full stop '.'
+      speechText = speechText.trim().replace(/[\.,:;\s]+$/, '') + '.';
+
+      // 2. Outro closing comment for Extra Questions and all questions (Tamil Medium pure Tamil closing)
       const tamilClosing = "மாணவர்கள் பொதுத் தேர்வில் நல்ல மதிப்பெண் பெற வாழ்த்துகள்!";
       const englishClosing = "To learn 10th standard subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best for your examination!";
       const outroText = isEnglish ? englishClosing : tamilClosing;
 
+      // Ensure closing comment is separated cleanly by a full stop and space
       if (!speechText.includes("வாழ்த்துகள்") && !speechText.includes("All the best")) {
-        speechText += ` ${outroText}`;
+        speechText = `${speechText} ${outroText}`;
       }
       speechText = speechText.replace(/\.{2,}/g, '.').replace(/\s*\.\s*/g, '. ').trim();
 
@@ -12389,6 +12416,8 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
         }
       }
 
+      // Ensure the continuous item ends cleanly with a full stop '.'
+      speechText = speechText.trim().replace(/[\.,:;\s]+$/, '') + '.';
       speechText = speechText.replace(/\.{2,}/g, '.').replace(/\s*\.\s*/g, '. ').trim();
       const chunks = chunkTextForSpeech(speechText, 120);
 
@@ -12411,7 +12440,10 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
       const isLast = (this.currentIndex >= this.playlist.length - 1);
 
       if (isLast) {
-        this.finishPlaylist();
+        this.nextTimer = setTimeout(() => {
+          if (!this.isPlaying || this.isPaused) return;
+          this.finishPlaylist();
+        }, 800);
       } else {
         const statusEl = document.getElementById('audioDockStatus');
         if (statusEl) {
@@ -15293,7 +15325,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261128_v143')
+        navigator.serviceWorker.register('./sw.js?v=20261128_v144')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 

@@ -234,10 +234,10 @@
   <script src="data_science_u14.js?v=20261114_v73"></script>
   <script src="data_science_em_u13.js?v=20261114_v73"></script>
   <script src="data_science_em_u14.js?v=20261114_v73"></script>
-  <script src="data_social_u13.js?v=20261128_v144"></script>
-  <script src="data_social_u14.js?v=20261128_v144"></script>
-  <script src="data_social_em_u13.js?v=20261128_v144"></script>
-  <script src="data_social_em_u14.js?v=20261128_v144"></script>
+  <script src="data_social_u13.js?v=20261128_v145"></script>
+  <script src="data_social_u14.js?v=20261128_v145"></script>
+  <script src="data_social_em_u13.js?v=20261128_v145"></script>
+  <script src="data_social_em_u14.js?v=20261128_v145"></script>
   <!-- Science Units 15-23 (TM & EM) -->
   <script src="data_science_u15.js?v=20261120_v106"></script>
   <script src="data_science_u16.js?v=20261120_v106"></script>
@@ -260,12 +260,12 @@
   <!-- Social Lessons 15-27 (TM & EM) -->
   <script src="data_social_u15.js?v=20261119_v99"></script>
   <script src="data_social_u16.js?v=20261119_v99"></script>
-  <script src="data_social_u17.js?v=20261128_v144"></script>
-  <script src="data_social_u18.js?v=20261128_v144"></script>
+  <script src="data_social_u17.js?v=20261128_v145"></script>
+  <script src="data_social_u18.js?v=20261128_v145"></script>
   <script src="data_social_u19.js?v=20261119_v99"></script>
   <script src="data_social_u20.js?v=20261119_v99"></script>
-  <script src="data_social_u21.js?v=20261128_v144"></script>
-  <script src="data_social_u22.js?v=20261128_v144"></script>
+  <script src="data_social_u21.js?v=20261128_v145"></script>
+  <script src="data_social_u22.js?v=20261128_v145"></script>
   <script src="data_social_u23.js?v=20261119_v99"></script>
   <script src="data_social_u24.js?v=20261119_v99"></script>
   <script src="data_social_u25.js?v=20261119_v99"></script>
@@ -273,12 +273,12 @@
   <script src="data_social_u27.js?v=20261119_v99"></script>
   <script src="data_social_em_u15.js?v=20261119_v99"></script>
   <script src="data_social_em_u16.js?v=20261119_v99"></script>
-  <script src="data_social_em_u17.js?v=20261128_v144"></script>
-  <script src="data_social_em_u18.js?v=20261128_v144"></script>
+  <script src="data_social_em_u17.js?v=20261128_v145"></script>
+  <script src="data_social_em_u18.js?v=20261128_v145"></script>
   <script src="data_social_em_u19.js?v=20261119_v99"></script>
   <script src="data_social_em_u20.js?v=20261119_v99"></script>
-  <script src="data_social_em_u21.js?v=20261128_v144"></script>
-  <script src="data_social_em_u22.js?v=20261128_v144"></script>
+  <script src="data_social_em_u21.js?v=20261128_v145"></script>
+  <script src="data_social_em_u22.js?v=20261128_v145"></script>
   <script src="data_social_em_u23.js?v=20261119_v99"></script>
   <script src="data_social_em_u24.js?v=20261119_v99"></script>
   <script src="data_social_em_u25.js?v=20261119_v99"></script>
@@ -10992,7 +10992,7 @@ function resumeLastVisitedLesson() {
     // This strictly prevents bare "." or ".." from ever being sent to TTS (which would speak "dot")
     // Merge tiny trailing clauses into previous chunk UNLESS it is an outro/closing wish!
     const isOutroChunk = (str) => {
-      return /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்/i.test(str);
+      return /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்|உன்னால் முடியும்|Learn Easily/i.test(str);
     };
 
     const finalMerged = [];
@@ -11084,7 +11084,7 @@ function resumeLastVisitedLesson() {
           if (session.isPaused) return; // Prevent advancing chunk on cancel during pause!
           session.index++;
           const nextChunk = session.chunks[session.index] || '';
-          const isNextOutro = /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்/i.test(nextChunk);
+          const isNextOutro = /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்|உன்னால் முடியும்|Learn Easily/i.test(nextChunk);
           const pauseDelay = isNextOutro ? 750 : 80;
           setTimeout(speakNextChunk, pauseDelay);
         };
@@ -11095,7 +11095,7 @@ function resumeLastVisitedLesson() {
           console.warn('[SpeechQueue] Chunk error, moving to next:', e);
           session.index++;
           const nextChunk = session.chunks[session.index] || '';
-          const isNextOutro = /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்/i.test(nextChunk);
+          const isNextOutro = /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்|உன்னால் முடியும்|Learn Easily/i.test(nextChunk);
           const pauseDelay = isNextOutro ? 750 : 80;
           setTimeout(speakNextChunk, pauseDelay);
         };
@@ -11109,7 +11109,7 @@ function resumeLastVisitedLesson() {
           console.warn('[SpeechQueue] speak error:', err);
           session.index++;
           const nextChunk = session.chunks[session.index] || '';
-          const isNextOutro = /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்/i.test(nextChunk);
+          const isNextOutro = /வாழ்த்துகள்|All the best|all the best|நல்வாழ்த்துகள்|உன்னால் முடியும்|Learn Easily/i.test(nextChunk);
           const pauseDelay = isNextOutro ? 750 : 80;
           setTimeout(speakNextChunk, pauseDelay);
         }
@@ -12018,13 +12018,13 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
       // 1. Ensure the question and answer text ends with a solid full stop '.'
       speechText = speechText.trim().replace(/[\.,:;\s]+$/, '') + '.';
 
-      // 2. Outro closing comment for Extra Questions and all questions (Tamil Medium pure Tamil closing)
-      const tamilClosing = "மாணவர்கள் பொதுத் தேர்வில் நல்ல மதிப்பெண் பெற வாழ்த்துகள்!";
+      // 2. Outro closing comment with App promotion and Tamil exam wishes
+      const tamilClosing = "10-ஆம் வகுப்பு பாடங்களை எளிதாகக் கற்கவும், நல்ல மதிப்பெண்கள் பெறவும் 'உன்னால் முடியும் Learn Easily' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். மாணவர்கள் பொதுத் தேர்வில் நல்ல மதிப்பெண் பெற வாழ்த்துகள்!";
       const englishClosing = "To learn 10th standard subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best for your examination!";
       const outroText = isEnglish ? englishClosing : tamilClosing;
 
       // Ensure closing comment is separated cleanly by a full stop and space
-      if (!speechText.includes("வாழ்த்துகள்") && !speechText.includes("All the best")) {
+      if (!speechText.includes("வாழ்த்துகள்") && !speechText.includes("All the best") && !speechText.includes("Learn Easily")) {
         speechText = `${speechText} ${outroText}`;
       }
       speechText = speechText.replace(/\.{2,}/g, '.').replace(/\s*\.\s*/g, '. ').trim();
@@ -12574,7 +12574,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
       const promoMsg = isEnglish
         ? "To learn 10th standard subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best for your examination!"
-        : "மாணவர்கள் பொதுத் தேர்வில் நல்ல மதிப்பெண் பெற வாழ்த்துகள்!";
+        : "10-ஆம் வகுப்பு பாடங்களை எளிதாகக் கற்கவும், நல்ல மதிப்பெண்கள் பெறவும் 'உன்னால் முடியும் Learn Easily' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். மாணவர்கள் பொதுத் தேர்வில் நல்ல மதிப்பெண் பெற வாழ்த்துகள்!";
 
       if (this.mode === 'manapaadam') {
         msg = (isEnglish ? 'Memory poems recitation completed! ' : 'அனைத்து மனப்பாடப் பாடல்களும் நிறைவடைந்தன! ') + promoMsg;
@@ -12859,12 +12859,12 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
               const isEn = (lang === 'en');
               const promoClosing = (isEn ? 'Story narration completed! ' : 'கதை விளக்கம் நிறைவடைந்தது! ') + (isEn
                 ? 'To learn 10th std subjects easily and to get good marks, download Vunnal Mudiyum Learn Easily app and share to your classmates. All the best for your examination!'
-                : 'மாணவர்கள் பொதுத் தேர்வில் நல்ல மதிப்பெண் பெற வாழ்த்துகள்!');
+                : '10-ஆம் வகுப்பு பாடங்களை எளிதாகக் கற்கவும், நல்ல மதிப்பெண்கள் பெறவும் \'உன்னால் முடியும் Learn Easily\' ஆப் டவுன்லோட் செய்யுங்கள். உங்கள் வகுப்புத் தோழர்களுக்கும் பகிருங்கள். மாணவர்கள் பொதுத் தேர்வில் நல்ல மதிப்பெண் பெற வாழ்த்துகள்!');
               const statusEl = document.getElementById('audioDockStatus');
               if (statusEl) {
                 statusEl.textContent = isEn
-                  ? 'All the best for your examination!'
-                  : 'மாணவர்கள் பொதுத் தேர்வில் நல்ல மதிப்பெண் பெற வாழ்த்துகள்!';
+                  ? 'To learn 10th lessons easily download Vunnal Mudiyum Learn Easily app! Share to classmates!'
+                  : 'பத்தாம் வகுப்பு பாடங்களை எளிதாகக் கற்க \'உன்னால் முடியும் Learn Easily\' ஆப் டவுன்லோட் செய்யுங்கள். வகுப்புத் தோழர்களுக்கும் பகிருங்கள்!';
               }
 
               const closingChunks = chunkTextForSpeech(promoClosing, isEn ? 200 : 120);
@@ -15325,7 +15325,7 @@ text = text.replace(/Fe[₂2]\s*O[₃3]\s*[\u00B7\u22C5\.]\s*x\s*H[₂2]\s*O/gi,
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        navigator.serviceWorker.register('./sw.js?v=20261128_v144')
+        navigator.serviceWorker.register('./sw.js?v=20261128_v145')
           .then((reg) => {
             console.log('[PWA] Service Worker registered smoothly:', reg.scope);
 
